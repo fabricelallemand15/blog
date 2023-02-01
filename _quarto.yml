@@ -50,6 +50,13 @@ format:
       margin-width: 300px
     code-block-border-left: "#31BAE9"
     code-block-bg: true
+    comments: 
+      giscus: 
+        repo: fabricelallemand15/blog
+        language: fr
+    filters: 
+      - lightbox
+    lightbox: auto
 
 
 
