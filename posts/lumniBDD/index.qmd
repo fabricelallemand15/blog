@@ -1,0 +1,28 @@
+---
+title: "Lumni : cours sur les bases de données"
+subtitle: ""
+description: ""
+date: "2022-07-25"
+categories: [Informatique, NSI, BDD, Vidéothèque]
+image: "lumniBDD.jpg"
+---
+
+<!-- wp:paragraph -->
+<p>La plateforme Lumni propose deux vidéos très bien faites qui couvrent le programme de terminale NSI sur les bases de données.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Vidéo 1 : <a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener">Qu'est-ce qu'une base de données relationnelle ?</a></h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","id":247,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image aligncenter size-large"><a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/07/Capture_lundi-25-juillet-2022_6h58m19s_001_Qu�est-ce-qu�une-base-de-donn�es-relationnelle-Vid�o-Voie-g�n�rale-Lumni-Mozilla-Firefox-1-1024x567.png" alt="" class="wp-image-247"/></a></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2>Vidéo 2 : <a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener">Interrogation d'une base de données relationnelle</a></h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"align":"center","id":248,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image aligncenter size-large"><a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/07/snaptron_9anqpo1xcK-1024x563.jpg" alt="" class="wp-image-248"/></a></figure>
+<!-- /wp:image -->

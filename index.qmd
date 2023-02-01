@@ -1,0 +1,17 @@
+---
+title: "Bienvenue !"
+subtitle: "Mathématiques & Informatique au lycée"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  feed: true
+  page-size: 12
+page-layout: full
+title-block-banner: '#BCD2E8'
+---
+
+

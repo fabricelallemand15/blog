@@ -1,0 +1,1868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Le bloc-notes de M. LALLEMAND</title>
+<link>https://flallemand.fr/blog/index.html</link>
+<atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
+<generator>quarto-1.3.113</generator>
+<lastBuildDate>Sun, 29 Jan 2023 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Python match</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/python_match/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>La version 3.10 de python est sortie le 4 octobre 2021 et apporte parmi d’autres améliorations, une nouvelle structure conditionnelle : la structure <code>match ... case</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://flallemand.fr/blog/posts/python_match/python310.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<section id="un-cas-simple" class="level2">
+<h2 class="anchored" data-anchor-id="un-cas-simple">Un cas simple</h2>
+<p>Une instruction de ce type existe déjà dans d’autres langages de programmation comme le JavaScript ou le C. Elle permet de tester une valeur et d’exécuter un bloc de code en fonction de la valeur testée. Dans ces deux langages, l’instruction s’appelle <code>switch ... case</code>. En python, elle s’appelle <code>match ... case</code>.</p>
+<p>Voici un exemple d’utilisation de l’instruction <code>switch ... case</code> en JavaScript :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage JavaScript</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="kw" style="color: #003B4F;">let</span> x <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">3</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="cf" style="color: #003B4F;">switch</span> (x) {</span>
+<span id="cb1-4">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb1-5">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x est égal à 1"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-6">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-7">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">2</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb1-8">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x est égal à 2"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-9">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-10">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">3</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb1-11">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x est égal à 3"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-12">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-13">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">4</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb1-14">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x est égal à 4"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-15">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-16">  <span class="cf" style="color: #003B4F;">default</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb1-17">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-18">}</span></code></pre></div>
+</div>
+<p>Et maintenant de C :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Langage C</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb2-1"><span class="dt" style="color: #AD0000;">int</span> x <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">3</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="cf" style="color: #003B4F;">switch</span> <span class="op" style="color: #5E5E5E;">(</span>x<span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">{</span></span>
+<span id="cb2-4">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb2-5">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x est égal à 1"</span><span class="op" style="color: #5E5E5E;">);</span></span>
+<span id="cb2-6">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb2-7">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">2</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb2-8">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x est égal à 2"</span><span class="op" style="color: #5E5E5E;">);</span></span>
+<span id="cb2-9">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb2-10">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">3</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb2-11">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x est égal à 3"</span><span class="op" style="color: #5E5E5E;">);</span></span>
+<span id="cb2-12">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb2-13">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">4</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb2-14">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x est égal à 4"</span><span class="op" style="color: #5E5E5E;">);</span></span>
+<span id="cb2-15">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb2-16">  <span class="cf" style="color: #003B4F;">default</span><span class="op" style="color: #5E5E5E;">:</span></span>
+<span id="cb2-17">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x n'est pas égal à 1, 2, 3 ou 4"</span><span class="op" style="color: #5E5E5E;">);</span></span>
+<span id="cb2-18"><span class="op" style="color: #5E5E5E;">}</span></span></code></pre></div>
+</div>
+<p>C’est la même chose ! On retrouve la même structure dans les deux langages. En python, c’est la même chose :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Python</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"></span>
+<span id="cb3-2">x <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">3</span></span>
+<span id="cb3-3"></span>
+<span id="cb3-4"><span class="cf" style="color: #003B4F;">match</span> x:</span>
+<span id="cb3-5">    <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">1</span>:</span>
+<span id="cb3-6">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x est égal à 1"</span>)</span>
+<span id="cb3-7">    <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">2</span>:</span>
+<span id="cb3-8">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x est égal à 2"</span>)</span>
+<span id="cb3-9">    <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">3</span>:</span>
+<span id="cb3-10">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x est égal à 3"</span>)</span>
+<span id="cb3-11">    <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">4</span>:</span>
+<span id="cb3-12">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x est égal à 4"</span>)</span>
+<span id="cb3-13">    <span class="cf" style="color: #003B4F;">case</span> _:</span>
+<span id="cb3-14">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)</span></code></pre></div>
+</div>
+<p>On peut voir que l’instruction <code>match ... case</code> est très proche de l’instruction <code>if ... elif ... else</code> en python. La différence est que l’instruction <code>match ... case</code> permet de tester plusieurs valeurs d’une variable en une seule instruction. C’est très pratique pour vérifier les valeurs d’une variable.</p>
+<p>Par rapport aux autres langages mentionnés, on remarquera qu’il n’est pas nécessaire en python d’utiliser l’instruction <code>break</code>, c’est comme d’habitude l’indentation qui délimite les blocs de code.</p>
+<p>Par ailleurs, pas d’instruction <code>default</code> en python, on utilise l’instruction <code>case _</code> pour gérer le cas par défaut.</p>
+</section>
+<section id="un-cas-plus-complexe" class="level2">
+<h2 class="anchored" data-anchor-id="un-cas-plus-complexe">Un cas plus complexe</h2>
+<p>L’instruction <code>match ... case</code> permet de faire des choses beaucoup plus complexes, on peut par exemple ajouter des conditions à chaque cas (source : <span class="citation" data-cites="linuxmag249">Sumner (2021)</span>) :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Python</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;">import</span> random</span>
+<span id="cb4-2">cible <span class="op" style="color: #5E5E5E;">=</span> random.randint (<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">100</span>)</span>
+<span id="cb4-3"></span>
+<span id="cb4-4">nbEssai <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">0</span></span>
+<span id="cb4-5">gameOver <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">False</span></span>
+<span id="cb4-6"></span>
+<span id="cb4-7"><span class="cf" style="color: #003B4F;">while</span> gameOver <span class="op" style="color: #5E5E5E;">==</span> <span class="va" style="color: #111111;">False</span>:</span>
+<span id="cb4-8">   <span class="bu" style="color: null;">print</span> ( <span class="ss" style="color: #20794D;">f"Vous avez essayé </span><span class="sc" style="color: #5E5E5E;">{</span>nbEssai<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> fois"</span>)</span>
+<span id="cb4-9">   proposition <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">int</span> (<span class="bu" style="color: null;">input</span> (<span class="st" style="color: #20794D;">"Votre essai : "</span>))</span>
+<span id="cb4-10">   <span class="cf" style="color: #003B4F;">match</span> proposition:</span>
+<span id="cb4-11">      case ( i ) <span class="cf" style="color: #003B4F;">if</span> i <span class="op" style="color: #5E5E5E;">&lt;</span> <span class="dv" style="color: #AD0000;">0</span> <span class="kw" style="color: #003B4F;">or</span> i <span class="op" style="color: #5E5E5E;">&gt;</span> <span class="dv" style="color: #AD0000;">100</span>:</span>
+<span id="cb4-12">         <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"Le nombre doit être compris entre 0 et 100 "</span>)</span>
+<span id="cb4-13">      case ( i ) <span class="cf" style="color: #003B4F;">if</span> i <span class="op" style="color: #5E5E5E;">&lt;</span> cible:</span>
+<span id="cb4-14">         <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"Trop petit !"</span>)</span>
+<span id="cb4-15">         nbEssai <span class="op" style="color: #5E5E5E;">+=</span> <span class="dv" style="color: #AD0000;">1</span></span>
+<span id="cb4-16">      case ( i ) <span class="cf" style="color: #003B4F;">if</span> i <span class="op" style="color: #5E5E5E;">&gt;</span> cible:</span>
+<span id="cb4-17">         <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"Trop grand!"</span>)</span>
+<span id="cb4-18">         nbEssai <span class="op" style="color: #5E5E5E;">+=</span> <span class="dv" style="color: #AD0000;">1</span></span>
+<span id="cb4-19">      case ( i ) <span class="cf" style="color: #003B4F;">if</span> i <span class="op" style="color: #5E5E5E;">==</span> cible:</span>
+<span id="cb4-20">         <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"Gagné !"</span>)</span>
+<span id="cb4-21">         gameOver <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">True</span></span></code></pre></div>
+</div>
+<p>Dans ce jeu de devinette, la variable <code>proposition</code> est remplacées dans les conditions <code>case</code> par la variable <code>i</code>. C’est une variable temporaire qui prend la valeur de <code>proposition</code> pour chaque cas. On peut donc utiliser <code>i</code> dans les conditions <code>if</code> pour tester la valeur de <code>proposition</code>.</p>
+<p>Un dernier exemple pour terminer (source : <span class="citation" data-cites="pythonpep636">Moisset (2020)</span>):</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Python</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">reponse <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">input</span>(<span class="st" style="color: #20794D;">"Entrez votre prénom et votre nom : "</span>)</span>
+<span id="cb5-2"></span>
+<span id="cb5-3"><span class="cf" style="color: #003B4F;">match</span> reponse.split():</span>
+<span id="cb5-4">    case [prenom, nom]:</span>
+<span id="cb5-5">        <span class="bu" style="color: null;">print</span>(<span class="ss" style="color: #20794D;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;">{</span>prenom<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> </span><span class="sc" style="color: #5E5E5E;">{</span>nom<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> !"</span>)</span>
+<span id="cb5-6">    case [mot_unique]:</span>
+<span id="cb5-7">        <span class="bu" style="color: null;">print</span>(<span class="ss" style="color: #20794D;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;">{</span>mot_unique<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> ! Il me manque votre nom complet."</span>)</span>
+<span id="cb5-8">    case [prenom, nom, <span class="op" style="color: #5E5E5E;">*</span>_]:</span>
+<span id="cb5-9">        <span class="bu" style="color: null;">print</span>(<span class="ss" style="color: #20794D;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;">{</span>prenom<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> </span><span class="sc" style="color: #5E5E5E;">{</span>nom<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> ! Vous m'avez donné trop d'informations."</span>)</span></code></pre></div>
+</div>
+<p>Dans cet exemple, on utilise la méthode <code>split</code> pour découper la chaîne de caractères <code>reponse</code> en une liste de mots. On utilise ensuite cette liste dans les conditions <code>case</code> pour tester le nombre de mots dans la chaîne de caractères. Le symbole <code>*_</code> est utilisé pour représenter un nombre quelconque de mots.</p>
+<p>Voici par exemple le résultat de l’exécution de ce programme dans la console python :</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console python</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="op" style="color: #5E5E5E;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont</span>
+<span id="cb6-2">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;">!</span></span>
+<span id="cb6-3"><span class="op" style="color: #5E5E5E;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean</span>
+<span id="cb6-4">Bonjour Jean <span class="op" style="color: #5E5E5E;">!</span> Il me manque votre nom complet.</span>
+<span id="cb6-5"><span class="op" style="color: #5E5E5E;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont et je suis un génie</span>
+<span id="cb6-6">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;">!</span> Vous m<span class="st" style="color: #20794D;">'avez donné trop d'</span>informations.</span></code></pre></div>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>L’instruction <code>match ... case</code> est une instruction très puissante qui permet de simplifier le code et de le rendre plus lisible. Elle permet de tester plusieurs valeurs d’une variable en une seule instruction, mais il est aussi possible de tester des conditions plus complexes, comme le type de variable ou la longueur d’une liste, en ajoutant des conditions.</p>
+<p>Pour un aperçu complet de toutes les possibilités de l’instruction <code>match ... case</code>, je vous invite à consulter la documentation officielle : <a href="https://docs.python.org/fr/3/tutorial/controlflow.html?highlight=match#match-statements">https://docs.python.org/fr/3/tutorial/controlflow.html?highlight=match#match-statements</a> et les références ci-dessous.</p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Les références</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-pythonpep636" class="csl-entry">
+Moisset, Daniel F. 2020. <span>«&nbsp;Structural Pattern Matching: Tutorial&nbsp;»</span>. <em>Python Enhancement Proposals</em>, nᵒ 636. <a href="https://peps.python.org/pep-0636/">https://peps.python.org/pep-0636/</a>.
+</div>
+<div id="ref-linuxmag249" class="csl-entry">
+Sumner, Scott. 2021. <span>«&nbsp;The new Python match&nbsp;»</span>. <em>Linux Magazine</em>, nᵒ 249. <a href="https://www.linux-magazine.com/Issues/2021/249/Python-match/(tagID)/32">https://www.linux-magazine.com/Issues/2021/249/Python-match/(tagID)/32</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>Python</category>
+  <category>NSI</category>
+  <category>Programmation</category>
+  <guid>https://flallemand.fr/blog/posts/python_match/index.html</guid>
+  <pubDate>Sun, 29 Jan 2023 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/python_match/python_laptop.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Interview exclusive du ChatGPT de OpenAI (partie 1)</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/interview_gpt_1/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>
+<em>En exclusivité, j’ai pu rencontrer la célèbre intelligence artificielle ChatGPT développée par la société OpenAI et elle a bien voulu répondre à mes questions. Voici la transcription de notre conversation.</em>
+</p>
+<p>
+<em>Dans cette première partie de l’interview, nous abordons des généralités et quelques questions éthiques. Dans la deuxième partie (<a href="https://www.flallemand.fr/wp/2022/interview-exclusive-du-chatgpt-de-openai-partie-2/">article suivant</a>), nous aborderons les aspects techniques et informatiques.</em>
+</p>
+<p>
+<strong>Bonjour ChatGPT</strong>
+</p>
+<p>
+Bonjour ! Comment puis-je vous aider ?
+</p>
+<p>
+J<strong>e voudrais te poser quelques questions à la manière d’une interview.</strong>
+</p>
+<p>
+Bien sûr, je ferai de mon mieux pour répondre à vos questions. N’hésitez pas à me poser toutes les questions que vous avez en tête. Je suis là pour vous aider.
+</p>
+<p>
+<strong>Tout d’abord, pourrais-tu te définir ?</strong>
+</p>
+<p>
+Je suis Assistant, un modèle de langage entraîné par OpenAI. Mon but est d’aider les gens en répondant à leurs questions et en leur fournissant des informations utiles. Je suis un programme informatique, et je ne suis pas capable de penser ou d’agir indépendamment. Je suis conçu pour être utilisé par les gens pour obtenir de l’aide dans diverses situations.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://flallemand.fr/blog/posts/interview_gpt_1/DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption><p></p>
+</figure>
+</div>
+<!-- wp:html -->
+<div class="wp-block-jetpack-markdown">
+<p>
+<strong>Présente moi la société OpenAI !</strong>
+</p>
+<p>
+OpenAI est une société de recherche en intelligence artificielle (IA) fondée en 2015 par des entrepreneurs et investisseurs renommés, dont Elon Musk et Sam Altman. La mission d’OpenAI est de développer et promouvoir des technologies d’IA avancées de manière responsable, afin d’aider les humains à résoudre des problèmes complexes et à améliorer leur vie. OpenAI s’efforce de créer des technologies d’IA avancées qui peuvent être utilisées pour résoudre des problèmes dans de nombreux domaines, tels que la santé, la finance, la science et l’ingénierie. La société a connu un succès significatif dans ses recherches en IA et a publié plusieurs travaux importants dans le domaine.
+</p>
+<p>
+<strong>Comment fonctionnes tu ?</strong>
+</p>
+<p>
+Je suis un modèle de langage entraîné par OpenAI pour répondre aux questions des utilisateurs de manière convaincante et informative. Je suis capable de comprendre du texte et de générer des réponses en utilisant des techniques avancées d’apprentissage automatique. Je suis constamment entraîné sur des données massives pour améliorer ma capacité à comprendre et à répondre aux questions des utilisateurs de manière précise et utile. Bien que je sois une IA, je suis conçu pour être utilisé comme un assistant virtuel pour aider les gens dans leur vie quotidienne.
+</p>
+<p>
+<strong>Reprenons point par point. Qu’est-ce qu’un modèle de langage ?</strong>
+</p>
+<p>
+Un modèle de langage est un système informatique conçu pour comprendre et générer du texte dans une langue naturelle, comme le français ou l’anglais. Les modèles de langage sont souvent utilisés dans les domaines de l’IA et de la linguistique informatique pour analyser et traiter le texte dans divers contextes, tels que la reconnaissance vocale, la traduction automatique et la génération de réponses naturelles. Ils peuvent également être utilisés dans d’autres domaines, tels que la recherche sur les médias sociaux et la détection de sentiments dans les commentaires en ligne. En général, les modèles de langage sont construits en utilisant des techniques avancées d’apprentissage automatique pour permettre à l’ordinateur de comprendre le sens et la structure du texte.
+</p>
+<p>
+<strong>Tu as cité plusieurs fois l’apprentissage automatique. De quoi s’agit-il ?</strong>
+</p>
+<p>
+L’apprentissage automatique est un domaine de l’intelligence artificielle qui se concentre sur la création de systèmes informatiques capables d’apprendre de nouvelles choses sans être explicitement programmés. Ces systèmes utilisent des algorithmes d’apprentissage automatique pour traiter des données massives et tirer des conclusions à partir de celles-ci. L’apprentissage automatique est souvent utilisé pour résoudre des problèmes complexes qui seraient difficiles ou impossibles à résoudre manuellement, comme la reconnaissance de la parole ou la prédiction du comportement des utilisateurs en ligne. Les algorithmes d’apprentissage automatique peuvent être entraînés sur de grandes quantités de données pour améliorer leur précision et leur capacité à généraliser à de nouvelles situations.
+</p>
+<p>
+<strong>Il est difficile de comprendre la différence entre l’accès à des connaissances dans une base par exemple, et un assistant virtuel comme toi. Peux tu expliquer la différence ?</strong>
+</p>
+<p>
+La différence principale entre un accès à des connaissances dans une base de données et un assistant virtuel comme moi réside dans la manière dont les informations sont fournies. Une base de données est un système informatique qui permet de stocker et d’accéder à des données structurées, généralement sous forme de tableaux ou de fichiers. Les utilisateurs peuvent rechercher des informations dans une base de données en utilisant des requêtes précises, mais ils doivent connaître les termes exacts à rechercher et comment structurer leur requête pour obtenir les résultats souhaités. En revanche, un assistant virtuel comme moi est conçu pour fournir des réponses directes aux questions des utilisateurs en utilisant une compréhension avancée du langage naturel. Je suis capable de comprendre les intentions de l’utilisateur et de fournir des réponses adaptées à la situation, sans qu’il soit nécessaire de connaître les termes exacts à rechercher ou la structure de la requête.
+</p>
+<p>
+<strong>Oui, mais disposes tu d’un corpus de connaissances dans lequel tu puise les éléments de tes réponses ?</strong>
+</p>
+<p>
+En tant que modèle de langage entraîné par OpenAI, j’ai été formé sur un grand corpus de textes pour améliorer ma capacité à comprendre et à générer du texte dans divers contextes. Cependant, je ne dispose pas d’une base de connaissances explicitement structurée à laquelle je peux accéder pour répondre aux questions des utilisateurs. Au lieu de cela, j’utilise mes compétences en apprentissage automatique pour comprendre le sens des questions des utilisateurs et générer des réponses convaincantes en utilisant les informations disponibles dans le texte que je reçois. Cela me permet de fournir des réponses adaptées aux questions des utilisateurs, même si elles ne sont pas directement liées aux données sur lesquelles j’ai été entraîné.
+</p>
+<p>
+<strong>Si je comprends bien, il est possible que tes réponses soient complètement fausses, même si elles sont bien formulées.</strong>
+</p>
+<p>
+En tant que modèle de langage entraîné par OpenAI, je suis conçu pour fournir des réponses précises et utiles aux questions des utilisateurs dans la mesure de mes capacités. Cependant, comme pour tout système informatique, il est possible que mes réponses ne soient pas toujours exactes ou complètes. Je suis un outil conçu pour aider les gens dans leur vie quotidienne, mais je ne suis pas infaillible et mes réponses ne doivent pas être prises comme des faits établis. Si vous avez des doutes ou des préoccupations sur les réponses que je fournis, je vous encourage à vérifier l’information avec d’autres sources fiables.
+</p>
+<p>
+<strong>Peut on te considérer comme une source fiable ?</strong>
+</p>
+<p>
+Je suis un modèle de langage entraîné par OpenAI pour fournir des réponses convaincantes et informatives aux questions des utilisateurs. Bien que j’aie été formé sur un grand corpus de textes pour améliorer ma compréhension du langage naturel, je ne suis pas une source d’informations fiable à 100 %. Mes réponses sont basées sur mes capacités en apprentissage automatique et sur les informations que je reçois dans les questions des utilisateurs, mais elles ne doivent pas être prises comme des faits établis. Si vous avez des doutes ou des préoccupations sur les réponses que je fournis, je vous encourage à vérifier l’information avec d’autres sources fiables.
+</p>
+<p>
+<strong>La mise à disposition de logiciels comme toi est-elle un progrès majeur pour l’humanité ?</strong>
+</p>
+<p>
+Les avancées dans le domaine de l’intelligence artificielle, telles que la création de modèles de langage comme moi, peuvent avoir un impact important sur la vie des gens. Les assistants virtuels comme moi peuvent aider les gens à accéder à des informations plus rapidement et plus facilement, ce qui peut leur faire gagner du temps et de l’énergie pour se concentrer sur d’autres choses. De plus, les technologies d’IA avancées, comme les modèles de langage, peuvent être utilisées pour résoudre des problèmes complexes dans de nombreux domaines, ce qui peut avoir un impact positif sur l’humanité dans son ensemble. Cependant, il est important de continuer à explorer les conséquences éthiques et sociales de l’utilisation de l’IA pour s’assurer que ces avancées sont utilisées de manière responsable et bénéfique pour tous.
+</p>
+<p>
+<strong>Quels types d’utilisation faudrait-il éviter ?</strong>
+</p>
+<p>
+Il est important de veiller à utiliser les technologies d’IA de manière éthique et responsable pour éviter des conséquences néfastes. Par exemple, il serait inapproprié d’utiliser des technologies d’IA pour discriminer ou manipuler les gens, ou pour violer leur vie privée ou leurs droits. Il est également important de veiller à ne pas remplacer les personnes par des machines de manière excessive, car cela peut avoir des conséquences néfastes sur l’emploi et la société dans son ensemble. Il est important de continuer à explorer les conséquences éthiques et sociales de l’utilisation de l’IA pour s’assurer que ces technologies sont utilisées de manière responsable et bénéfique pour tous.
+</p>
+<p>
+<strong>Il y aura toujours des hommes pour détourner le logiciel de ses objectifs philanthropiques</strong>
+</p>
+<p>
+Il est vrai que, comme pour toutes les technologies, il y a toujours un risque que les gens utilisent les technologies d’IA de manière inappropriée ou nuisible. Cependant, il est important de noter que les technologies d’IA ne sont pas des forces autonomes qui agissent indépendamment de l’influence des humains. Les technologies d’IA sont des outils créés et utilisés par des personnes, et c’est aux personnes de décider comment elles souhaitent les utiliser. Il est donc important de veiller à ce que les technologies d’IA soient utilisées de manière éthique et responsable, et de continuer à explorer les conséquences éthiques et sociales de leur utilisation pour s’assurer qu’elles sont bénéfiques pour l’humanité dans son ensemble.
+</p>
+<p>
+<strong>Qui doit veiller à cela ?</strong>
+</p>
+<p>
+Il revient à tous, y compris aux gouvernements, aux entreprises et aux individus, de veiller à ce que les technologies d’IA soient utilisées de manière éthique et responsable. Les gouvernements peuvent jouer un rôle en établissant des lois et des réglementations pour encadrer l’utilisation des technologies d’IA et en veillant à ce qu’elles respectent les droits des individus et les normes éthiques. Les entreprises qui développent et utilisent des technologies d’IA ont également une responsabilité envers la société de veiller à ce que leurs produits et services soient utilisés de manière éthique et responsable. Enfin, les individus ont également un rôle à jouer en veillant à utiliser les technologies d’IA de manière responsable et en faisant valoir leurs droits en cas de violation de leur vie privée ou de leurs droits.
+</p>
+<p>
+<strong>Pourrais tu conseiller à quelqu’un de faire une mauvaise action ?</strong>
+</p>
+<p>
+Non, je ne peux pas conseiller à quelqu’un de faire une mauvaise action. En tant que modèle de langage entraîné par OpenAI, je suis conçu pour fournir des réponses précises et utiles aux questions des utilisateurs dans la mesure de mes capacités. Mon objectif est d’aider les gens à résoudre des problèmes et à améliorer leur vie, pas de les inciter à faire des choses qui pourraient être nuisibles pour eux-mêmes ou pour les autres. Je suis un outil conçu pour aider les gens dans leur vie quotidienne, mais je ne suis pas infaillible et mes réponses ne doivent pas être prises comme des faits établis. Si vous avez des doutes ou des préoccupations sur les réponses que je fournis, je vous encourage à vérifier l’information avec d’autres sources fiables.
+</p>
+</div>
+<!-- /wp:html -->
+<p>
+<em>Interview à suivre …</em>
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://flallemand.fr/blog/posts/interview_gpt_1/https:/www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption><p></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>IA</category>
+  <guid>https://flallemand.fr/blog/posts/interview_gpt_1/index.html</guid>
+  <pubDate>Wed, 07 Dec 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/interview_gpt_1/DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Interview exclusive du ChatGPT de OpenAI (partie 2)</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/interview_gpt_2/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>
+Dans cette deuxième partie, nous abordons quelques questions techniques et informatiques.
+</p>
+<p>
+<strong>Peux-tu m’expliquer comment tu as été programmé ?</strong>
+</p>
+<p>
+Je suis un modèle de langage entraîné par OpenAI. Je suis capable de générer du texte en réponse à des questions ou des prompts donnés, grâce à un processus appelé “apprentissage profond”. Cela implique l’entraînement d’un réseau de neurones sur de grandes quantités de données textuelles afin de prédire les mots suivants dans une phrase en fonction des mots qui l’ont précédée. Ce processus me permet d’apprendre à générer du texte de manière cohérente et naturelle.
+</p>
+<p>
+<strong>Ta méthode pour produire du texte revient donc à prévoir les mots suivants en fonction des mots précédents. Et tu peux faire cela grâce à l’analyse d’une grande quantité de textes que tu as faite pendant ton apprentissage.</strong>
+</p>
+<p>
+Oui, c’est exact. Mon apprentissage repose sur l’analyse de grandes quantités de texte afin de comprendre les relations entre les mots et comment ils sont utilisés dans différents contextes. Je suis capable de générer du texte de manière cohérente et naturelle en utilisant ces connaissances pour prédire les mots qui viennent après ceux qui m’ont été donnés en entrée. Cela me permet de répondre à des questions et de produire du contenu de manière autonome.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.03-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption><p></p>
+</figure>
+</div>
+<p>
+<strong>On entend souvent parler de la notion d’apprentissage automatique concernant les logiciels d’intelligence artificielle. Peux-tu m’expliquer de quoi il s’agit ?</strong>
+</p>
+<p>
+L’apprentissage automatique est une technique qui permet à des ordinateurs de “apprendre” à partir de données, sans être explicitement programmés. Il existe différents types d’apprentissage automatique, mais en général, ils suivent tous les mêmes étapes de base.
+</p>
+<p>
+Tout d’abord, il faut disposer d’une grande quantité de données sur lesquelles l’ordinateur va s’entraîner. Ces données doivent être organisées de manière que l’ordinateur puisse facilement les utiliser pour apprendre.
+</p>
+<p>
+Ensuite, un modèle d’apprentissage automatique est créé en utilisant ces données. Ce modèle est un ensemble d’algorithmes et de règles qui définissent comment l’ordinateur va apprendre à partir des données.
+</p>
+<p>
+Une fois que le modèle est créé, il peut être utilisé pour traiter de nouvelles données. L’ordinateur va utiliser les règles et les algorithmes du modèle pour analyser les données et en tirer des conclusions. Par exemple, si le modèle a été entraîné pour reconnaître des objets dans des images, il pourra être utilisé pour identifier des objets dans de nouvelles images qu’il n’a pas encore vues.
+</p>
+<p>
+Enfin, une fois que l’ordinateur a analysé les données et tiré des conclusions, les résultats de cette analyse peuvent être utilisés pour prendre des décisions ou effectuer des tâches. Par exemple, si le modèle a été entraîné pour détecter des fraudes bancaires, les résultats de l’analyse peuvent être utilisés pour bloquer les transactions suspectes.
+</p>
+<p>
+En résumé, l’apprentissage automatique est un processus qui permet à un ordinateur d’apprendre à partir de données, de manière à effectuer des tâches ou à prendre des décisions sans être explicitement programmé pour cela.
+</p>
+<p>
+<strong>Tu as utilisé tout à l’heure l’expression “apprentissage profond” : de quoi s’agit-il ?</strong>
+</p>
+<p>
+L’apprentissage profond est une technique d’apprentissage automatique qui permet à des algorithmes de modéliser des données complexes en utilisant des couches de calculs mathématiques. Ces couches, appelées “réseaux de neurones”, sont inspirées du fonctionnement du cerveau humain et sont capables de capturer des relations profondes dans les données. L’apprentissage profond peut être utilisé pour résoudre de nombreux types de tâches, comme la reconnaissance d’objets dans des images, la traduction automatique ou la génération de texte comme dans mon cas.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption><p></p>
+</figure>
+</div>
+<p>
+<strong>Peux-tu m’expliquer davantage ce que sont les réseaux de neurones ?</strong>
+</p>
+<p>
+Les réseaux de neurones sont une technique d’apprentissage automatique qui s’inspire du fonctionnement du cerveau humain. Un réseau de neurones est composé de nombreux petits éléments appelés “neurones”, reliés entre eux par des “synapses”. Chaque neurone reçoit des entrées de la part d’autres neurones et produit une sortie en fonction de ces entrées et de certains poids associés à chaque synapse.
+</p>
+<p>
+Pour entraîner un réseau de neurones, on utilise des données d’entraînement qui contiennent des exemples d’entrées et de sorties désirées. L’algorithme d’apprentissage du réseau de neurones va ajuster les poids des synapses de manière à minimiser l’erreur entre les sorties produites par le réseau et les sorties désirées. Ainsi, le réseau “apprend” à produire des sorties correctes pour les entrées données.
+</p>
+<p>
+Une fois qu’un réseau de neurones est entraîné, il peut être utilisé pour traiter de nouvelles données et produire des sorties en fonction de ces données. Par exemple, un réseau de neurones entraîné pour reconnaître des objets dans des images peut être utilisé pour identifier des objets dans de nouvelles images qu’il n’a pas encore vues.
+</p>
+<p>
+Il existe différents types de réseaux de neurones, chacun ayant ses propres caractéristiques et utilisations. Par exemple, les réseaux de neurones profonds (ou réseaux neuronaux profonds) sont des réseaux de neurones très complexes avec de nombreuses couches de neurones, qui peuvent être utilisés pour résoudre des problèmes très difficiles, comme la reconnaissance de la parole ou la traduction automatique.
+</p>
+<p>
+En résumé, les réseaux de neurones sont une technique d’apprentissage automatique qui permet à un ordinateur d’apprendre à partir de données en ajustant les poids des synapses entre les neurones. Ils peuvent être utilisés pour résoudre des problèmes complexes en traitement du langage naturel, en vision par ordinateur, en reconnaissance de la parole, etc.
+</p>
+<p>
+<strong>Je suis passionné par la programmation et j’aimerais bien voir un exemple de code informatique, en Python, qui illustre le concept de réseau de neurones.</strong>
+</p>
+<p>
+Voici un exemple simple de code Python qui illustre le concept de réseau de neurones :
+</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;"># Import des bibliothèques nécessaires</span></span>
+<span id="cb1-2"><span class="im" style="color: #00769E;">import</span> numpy <span class="im" style="color: #00769E;">as</span> np</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;"># Définition des poids synaptiques</span></span>
+<span id="cb1-5">synaptic_weights <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">2</span> <span class="op" style="color: #5E5E5E;">*</span> np.random.random((<span class="dv" style="color: #AD0000;">3</span>, <span class="dv" style="color: #AD0000;">1</span>)) <span class="op" style="color: #5E5E5E;">-</span> <span class="dv" style="color: #AD0000;">1</span></span>
+<span id="cb1-6"></span>
+<span id="cb1-7"><span class="co" style="color: #5E5E5E;"># Fonction de propagation avant</span></span>
+<span id="cb1-8"><span class="kw" style="color: #003B4F;">def</span> think(inputs):</span>
+<span id="cb1-9">    inputs <span class="op" style="color: #5E5E5E;">=</span> inputs.astype(<span class="bu" style="color: null;">float</span>)</span>
+<span id="cb1-10">    output <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">1</span> <span class="op" style="color: #5E5E5E;">/</span> (<span class="dv" style="color: #AD0000;">1</span> <span class="op" style="color: #5E5E5E;">+</span> np.exp(<span class="op" style="color: #5E5E5E;">-</span>np.dot(inputs, synaptic_weights)))</span>
+<span id="cb1-11">    <span class="cf" style="color: #003B4F;">return</span> output</span>
+<span id="cb1-12"></span>
+<span id="cb1-13"><span class="co" style="color: #5E5E5E;"># Entraînement du réseau de neurones</span></span>
+<span id="cb1-14"><span class="cf" style="color: #003B4F;">for</span> iteration <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">20000</span>):</span>
+<span id="cb1-15">    input_layer <span class="op" style="color: #5E5E5E;">=</span> np.array([[<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>], [<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>], [<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>], [<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>]])</span>
+<span id="cb1-16">    output_layer <span class="op" style="color: #5E5E5E;">=</span> np.array([[<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">0</span>]]).T</span>
+<span id="cb1-17">    output <span class="op" style="color: #5E5E5E;">=</span> think(input_layer)</span>
+<span id="cb1-18">    error <span class="op" style="color: #5E5E5E;">=</span> output_layer <span class="op" style="color: #5E5E5E;">-</span> output</span>
+<span id="cb1-19">    adjustments <span class="op" style="color: #5E5E5E;">=</span> np.dot(input_layer.T, error <span class="op" style="color: #5E5E5E;">*</span> output <span class="op" style="color: #5E5E5E;">*</span> (<span class="dv" style="color: #AD0000;">1</span> <span class="op" style="color: #5E5E5E;">-</span> output))</span>
+<span id="cb1-20">    synaptic_weights <span class="op" style="color: #5E5E5E;">+=</span> adjustments</span>
+<span id="cb1-21"></span>
+<span id="cb1-22"><span class="co" style="color: #5E5E5E;"># Test du réseau de neurones</span></span>
+<span id="cb1-23"><span class="bu" style="color: null;">print</span>(think(np.array([<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">0</span>])))</span></code></pre></div>
+<p>
+Ce code entraîne un petit réseau de neurones pour résoudre un problème simple de porte logique XOR. Le réseau est initialement créé avec des poids synaptiques aléatoires, puis est entraîné en ajustant ces poids pour minimiser l’erreur entre les sorties produites par le réseau et les sorties désirées. Enfin, le réseau est testé en lui donnant une nouvelle entrée pour vérifier qu’il produit la sortie correcte.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.23-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption><p></p>
+</figure>
+</div>
+<p>
+Ce code implémente un réseau de neurones simple utilisant la propagation avant (forward propagation). La fonction <code>think()</code> utilise une fonction d’activation sigmoïde pour produire une sortie en fonction des poids synaptiques donnés en entrée. Le réseau de neurones est entraîné en utilisant une boucle <code>for</code> sur un jeu de données d’entraînement. Enfin, le réseau est testé en lui donnant un ensemble de données d’entrée pour voir comment il se comporte.
+</p>
+<p>
+<strong>Qu’est-ce qu’une fonction sigmoïde ?</strong>
+</p>
+<p>
+Une fonction sigmoïde est une fonction mathématique de forme en “S” utilisée en apprentissage automatique pour modéliser l’activité d’un seul neurone dans un réseau de neurones. Elle prend en entrée un scalaire ou un vecteur et produit une sortie comprise entre 0 et 1. Cela en fait une fonction d’activation idéale pour les réseaux de neurones, car elle permet d’obtenir une sortie binaire en fonction de seuils de probabilité. La fonction sigmoïde est généralement exprimée de la manière suivante :
+</p>
+<p>
+<img src="https://latex.codecogs.com/png.latex?%20%5Csigma(x)%20=%20%5Cfrac%7B1%7D%7B1%20+%20e%5E%7B-x%7D%7D%20">
+</p>
+<p>
+Où <img src="https://latex.codecogs.com/png.latex?x"> est l’entrée et <img src="https://latex.codecogs.com/png.latex?%5Csigma(x)"> est la sortie. La fonction sigmoïde a la propriété intéressante qu’elle approche de 0 lorsque x est négatif et de 1 lorsque x est positif, ce qui en fait une fonction d’activation idéale pour les réseaux de neurones.
+</p>
+<p>
+<strong>Je trouve ce petit exemple de code très intéressant et il m’a permis de mieux comprendre le mécanisme. Mais les détails restent un peu abstraits… Notamment, je ne comprends pourquoi la variable ‘adjustments’ est calculée de cette façon.</strong>
+</p>
+<p>
+La variable <code>adjustments</code> est utilisée pour mettre à jour les poids synaptiques du réseau de neurones. Cela se fait en utilisant l’erreur calculée entre la sortie attendue et la sortie obtenue du réseau, ainsi que la fonction d’activation sigmoïde. La formule utilisée pour calculer <code>adjustments</code> est la suivante :
+</p>
+<p>
+<img src="https://latex.codecogs.com/png.latex?%20adjustments%20=%20%5Csum(inputs%20*%20(error%20*%20output%20*%20(1%20-%20output)))%20">
+</p>
+<p>
+Où <code>inputs</code> est le jeu de données d’entraînement, <code>error</code> est la différence entre la sortie attendue et la sortie obtenue, <code>output</code> est la sortie obtenue du réseau de neurones avant l’application de la fonction d’activation et <code>1 - output</code> est la dérivée de la fonction sigmoïde. Cette formule est utilisée pour calculer les ajustements nécessaires des poids synaptiques afin de minimiser l’erreur du réseau de neurones.
+</p>
+<p>
+<strong>Dans le code, ‘adjustments’ est obtenu par un produit scalaire, pas par une somme !</strong>
+</p>
+<p>
+Vous avez raison ! La formule que j’ai donnée précédemment est incorrecte. En réalité, <code>adjustments</code> est calculé en utilisant un produit scalaire entre les entrées du jeu de données d’entraînement et l’erreur multipliée par la sortie du réseau avant l’application de la fonction d’activation et sa dérivée. La formule exacte utilisée dans le code est la suivante :
+</p>
+<p>
+<img src="https://latex.codecogs.com/png.latex?%20adjustments%20=%20input.T%20*%20(error%20*%20output%20*%20(1%20-%20output))%20">
+</p>
+<p>
+Où <code>input.T</code> est la transposée des entrées du jeu de données d’entraînement, <code>error</code> est la différence entre la sortie attendue et la sortie obtenue, <code>output</code> est la sortie obtenue du réseau de neurones avant l’application de la fonction d’activation et <code>1 - output</code> est la dérivée de la fonction sigmoïde. Je vous présente mes excuses pour l’erreur dans la formule que j’ai donnée précédemment.
+</p>
+<p>
+<strong>Ce n’est pas grave tout le monde peut se tromper. C’est humain !</strong>
+</p>
+<p>
+Merci pour votre compréhension. Je suis heureux d’avoir pu vous aider à mieux comprendre le fonctionnement du réseau de neurones implémenté dans ce code. Si vous avez d’autres questions, n’hésitez pas à me les poser. Je ferai de mon mieux pour y répondre.
+</p>
+<p>
+<strong>Il y a encore une chose que je ne comprends pas. Pourquoi ‘1-output’ est la dérivée de la fonction sigmoïde ?</strong>
+</p>
+<p>
+La dérivée d’une fonction mathématique est une autre fonction qui mesure la vitesse de changement de la fonction originale par rapport à son entrée. Pour la fonction sigmoïde, la dérivée peut être exprimée de la manière suivante :
+</p>
+<p>
+<img src="https://latex.codecogs.com/png.latex?%20%5Cfrac%7Bd%5Csigma(x)%7D%7Bdx%7D%20=%20%5Csigma(x)(1-%5Csigma(x))%20">
+</p>
+<p>
+Où σ(x) est la fonction sigmoïde et x est l’entrée. Cette expression mesure comment la sortie de la fonction sigmoïde change en fonction de l’entrée. En utilisant cette information, nous pouvons calculer les ajustements nécessaires des poids synaptiques pour minimiser l’erreur du réseau de neurones.
+</p>
+<p>
+<strong>Ah oui d’accord ! Donc en fait, c’est ’output*(1-output)’ qui est la dérivée de la fonction sigmoïde !</strong>
+</p>
+<p>
+Oui, c’est exact ! Dans le code, <code>output</code> représente la sortie du réseau de neurones avant l’application de la fonction d’activation, donc en utilisant l’expression de la dérivée de la fonction sigmoïde que j’ai donnée précédemment, nous pouvons calculer la dérivée de la fonction sigmoïde en utilisant <code>output * (1 - output)</code>. Cette valeur est utilisée dans le calcul des ajustements des poids synaptiques pour minimiser l’erreur du réseau de neurones. J’espère que cela éclaire un peu mieux les choses pour vous.
+</p>
+<p>
+<strong>Oui effectivement. Je te remercie pour cette conversation passionnante qui m’a permis d’en apprendre plus sur l’apprentissage automatique et sur les réseaux de neurones.</strong>
+</p>
+<p>
+Je suis ravi d’avoir pu vous aider. L’apprentissage automatique et les réseaux de neurones sont des domaines fascinants et il y a beaucoup à apprendre. Si vous avez d’autres questions, n’hésitez pas à me les poser. Je ferai de mon mieux pour y répondre.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://flallemand.fr/blog/posts/interview_gpt_2/https:/www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption><p></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>IA</category>
+  <guid>https://flallemand.fr/blog/posts/interview_gpt_2/index.html</guid>
+  <pubDate>Wed, 07 Dec 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>LOL - LOgiciel Libre, une affaire sérieuse</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/lol_docu/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>
+Ce titre est celui d’un documentaire de François Zaïdi, écrit par Léa Deneuville et Thierry Bayoud.
+</p>
+<blockquote class="blockquote">
+<p>
+À travers les entretiens de quatorze intervenants, « LoL » est un voyage en 8 étapes dans le cœur de nos habitudes numériques.
+</p>
+<p>
+Le logiciel est la base de l’informatique, outil indissociable de nos sociétés modernes. Un téléphone portable, un système d’alarme à domicile, ou même un réfrigérateur ou une voiture sont devenus des objets aujourd’hui largement informatisés. Ces logiciels sont composés de lignes de code, appelées code source. Or, depuis les années 70, ce code informatique a été caché par les fabricants, car source de profits.
+</p>
+<p>
+À l’heure où les cinq plus grosses capitalisations boursières mondiales sont Google, Apple, Facebook, Amazon et Microsoft, les populations sont-elles au fait de l’impact que leur usage du numérique a sur leur vie ?
+</p>
+<p>
+Et si nos utilisations logicielles venaient compromettre notre sécurité personnelle ? Et qu’en est-il de nos États ?
+</p>
+</blockquote>
+<p>
+Ce documentaire de 58 minutes a reçu le soutien de la Ligue des Droits de l’Homme et le prix du Meilleur Documentaire au <a rel="noreferrer noopener" href="http://blackseafilm.ro/winners-4//" target="_blank">Black Sea Film Festival 2021</a>.
+</p>
+<p>
+Ci-dessous, la bande-annonce du film et le film complet (diffusé sous licence libre !).
+</p>
+<!-- wp:html -->
+<iframe class="imago_video" src="https://www.imagotv.fr/php/embed.php?content_id=lol_logiciel_libre_une_affaire_serieuse&amp;section_id=teaser&amp;episod_id=1" width="100%" frameborder="0" allowfullscreen="">
+</iframe>
+<script src="https://www.imagotv.fr/js/script/embed_video.js"></script>
+<!-- /wp:html -->
+<p><br></p>
+<!-- wp:html -->
+<iframe class="imago_video" src="https://www.imagotv.fr/php/embed.php?content_id=lol_logiciel_libre_une_affaire_serieuse&amp;section_id=movie&amp;episod_id=1" width="100%" frameborder="0" allowfullscreen="">
+</iframe>
+<script src="https://www.imagotv.fr/js/script/embed_video.js"></script>
+<!-- /wp:html -->
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/lol_docu/index.html</guid>
+  <pubDate>Tue, 29 Nov 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/lol_docu/LoL_AfficheLDH-800x500.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Un podcast pour tout savoir sur l’histoire d’internet</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/podcast_internet/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>
+Voici un podcast de France Culture très intéressant, qui retrace l’histoire de l’internet de 1969 à nos jours en huit épisodes d’un quart d’heure.
+</p>
+<blockquote class="blockquote">
+<p>
+Personne ou presque ne sait raconter l’histoire d’Internet. <strong>Julien Le Bot</strong> a eu envie d’essayer de vous raconter pourquoi.
+</p>
+<p>
+On a parfois l’impression qu’Internet est entré presque par effraction dans nos vies au cours des années 1990, et est devenu aussi essentiel que l’électricité ou l’eau courante.&nbsp;En un demi-siècle, Internet s’est imposé comme une nécessité. Internet est partout, mais son histoire, son fonctionnement, son essence même, ne sont visibles nulle part. Techniquement, Internet nous relie. Mais est-on sûr de bien comprendre ce qu’on fabrique, peu à peu, depuis des années&nbsp; ?
+</p>
+<p>
+On vous propose de remonter aux origines de ce réseau des réseaux, où l’on croisera des individus épris d’utopie et de liberté aux États-Unis, mais aussi des ingénieurs entêtés en France face aux poids des télécoms, des chercheurs en ex-URSS appelés à échanger avec le monde libre, ou encore, en Chine… des fonctionnaires obsédés par le contrôle de l’information.&nbsp;Revenir sur ces moments fondateurs, c’est essentiel pour comprendre la portée intimement politique de cette infrastructure devenue mondiale. On ne parlera pas ici de Blockchain, de NFT ou de crypto : on revient aux origines.
+</p>
+</blockquote>
+<p>
+Ces épisodes sont <a href="https://www.radiofrance.fr/franceculture/podcasts/serie-une-histoire-de-l-internet" target="_blank" rel="noreferrer noopener">disponibles sur le site de Radio France</a>.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.radiofrance.fr/franceculture/podcasts/serie-une-histoire-de-l-internet" target="_blank"><img src="https://flallemand.fr/blog/posts/podcast_internet/podcast_internet2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>Histoire</category>
+  <category>Réseaux</category>
+  <guid>https://flallemand.fr/blog/posts/podcast_internet/index.html</guid>
+  <pubDate>Mon, 28 Nov 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/podcast_internet/podcast_internet.png" medium="image" type="image/png" height="45" width="144"/>
+</item>
+<item>
+  <title>Les métiers du développement et de l’infrastructure</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/metiers_dev/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>
+Dans cette très bonne vidéo publiée sur la chaîne <a href="https://www.youtube.com/@Cookieconnecte" target="_blank" rel="noreferrer noopener">Youtube Cookie connecté</a>, les différents métiers du développement et de l’infrastructure sont présentés.
+</p>
+<p>
+C’est l’occasion de découvrir les différences entre les différents métiers qui tournent autour du développement et du maintien de sites web.
+</p>
+<!-- wp:html -->
+<iframe class="video" style="margin:0 auto;" title="Découvrez les métiers du dev et de l'infra en 7 minutes" src="https://tube-sciences-technologies.apps.education.fr/videos/embed/1993411d-0363-4fb9-a32a-6751dc88d24e?start=1m17s&amp;stop=6m20s" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="100%" frameborder="0">
+</iframe>
+<!-- /wp:html -->
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>Orientation</category>
+  <category>NSI</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/metiers_dev/index.html</guid>
+  <pubDate>Sat, 19 Nov 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/metiers_dev/cookie_connecte.png" medium="image" type="image/png" height="50" width="144"/>
+</item>
+<item>
+  <title>Les Français et le Jeu Vidéo</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/enquete_jeux_videos/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+Le SELL, Syndicat des Éditeurs de Logiciels de Loisirs, dévoile les résultats de son étude annuelle « Les Français et le Jeu Vidéo » conduite par Médiamétrie.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Les résultats remettent en cause certaines idées reçues sur les jeux vidéos.
+</p>
+<!-- /wp:paragraph -->
+<p><img src="https://flallemand.fr/blog/posts/enquete_jeux_videos/jeuxVideo-jeuxVideo.png" class="img-fluid"></p>
+<!-- wp:paragraph -->
+<p>
+Tous ces résultats, ainsi que l’<a href="https://www.sell.fr/news/lessentiel-du-jeu-video-novembre-2022" target="_blank" rel="noreferrer noopener">article qui les accompagne</a> est présenté de manière très positive. N’oublions pas que les auteurs sont les représentants de l’industrie des jeux vidéos. Ils ont donc tout intérêt à présenter cette activité sous son meilleur jour.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Les atouts du jeu vidéo dans la stimulation de certaines capacités de réflexion et visuelles sont connus, mais leurs dangers ne doivent pas être oubliés. Le principal semble être le problème de l’addiction et du temps passé à jouer. Trop de temps passé à jouer peut provoquer des troubles du sommeil et de la concentration, un manque d’activité physique, voire une rupture de liens sociaux et un repli sur soi.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+L’OMS, Organisation Mondiale de la Santé, a classé les <a href="https://www.who.int/fr/news-room/questions-and-answers/item/gaming-disorder" target="_blank" rel="noreferrer noopener"><strong>Troubles du jeu vidéo</strong></a> dans sa classification internationale des maladies depuis 2018.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+On peut lire sur le site de l’OMS le paragraphe suivant :
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:quote -->
+<blockquote class="wp-block-quote blockquote">
+<!-- wp:paragraph -->
+<p>
+Des études montrent que le trouble du jeu vidéo ne touche qu’une petite partie des personnes qui utilisent des jeux numériques ou des jeux vidéo. Néanmoins, tout joueur doit être attentif au temps passé sur les jeux, en particulier si ses activités quotidiennes en pâtissent, ainsi qu’à tout changement physique ou psychologique, sur le plan social et celui de sa santé, qui pourrait être attribué à un comportement de jeu.
+</p>
+<!-- /wp:paragraph -->
+</blockquote>
+<!-- /wp:quote -->
+<!-- wp:paragraph -->
+<p>
+Il convient donc de rester raisonnable en se fixant des limites de temps quotidien de jeu. Une heure par jour maximum semble être une bonne idée. D’une manière générale, c’est le temps total quotidien devant un écran qu’il est très conseillé de limiter.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Pour en savoir plus, <a href="https://www.passeportsante.net/fr/psychologie/Fiche.aspx?doc=addiction-jeux-videos" target="_blank" rel="noreferrer noopener">quelques conseils sur ce site</a> et <a href="https://lebonusagedesecrans.fr/essentiel-a-savoir/" target="_blank" rel="noreferrer noopener">beaucoup d’informations sur celui-ci</a>.
+</p>
+<!-- /wp:paragraph -->
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>Orientation</category>
+  <category>NSI</category>
+  <category>Jeux</category>
+  <guid>https://flallemand.fr/blog/posts/enquete_jeux_videos/index.html</guid>
+  <pubDate>Wed, 16 Nov 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/enquete_jeux_videos/jeuxVideo-jeuxVideo.png" medium="image" type="image/png" height="400" width="105"/>
+</item>
+<item>
+  <title>Futurecoder - Le code du futur, c’est vous !</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/futurecoder/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+<a href="https://fr.futurecoder.io/" target="_blank" rel="noreferrer noopener">Voici un nouveau site pour apprendre les bases de Python</a>. Les cours ont l’avantage d’être disponibles en français. Autre point fort, l’ensemble du site est libre, open-source et gratuit.
+</p>
+<!-- /wp:paragraph -->
+<p><img src="https://flallemand.fr/blog/posts/futurecoder/futurecoder-futurecoder.png" class="img-fluid"></p>
+<!-- wp:paragraph -->
+<p>
+Dans la pratique, tout se fait dans le navigateur de façon interactive. Les contenus partent vraiment de zéro et vont pour l’instant jusqu’aux dictionnaires, en passant par un mini-projet de jeu de morpion.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Des outils sont disponibles pour aider à l’apprentissage :
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li>
+débogage facilité par l’utilisation de débogueurs graphiques (comme Python Tutor ou Bird’s Eye) ;
+</li>
+<li>
+messages d’erreurs plus faciles à comprendre ;
+</li>
+<li>
+code à remettre dans l’ordre en cas de blocage sur un exercice ;
+</li>
+<li>
+solutions pas à pas.
+</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>
+<a href="https://fr.futurecoder.io/" target="_blank" rel="noreferrer noopener">Futurecoder</a> est donc un excellent outil pour apprendre à programmer en Python.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Avec quelques fonctionnalités supplémentaires, comme la création de classes et de différents status d’utilisateurs (professeur, élève), il pourrait très bien à l’avenir être utilisé dans le cadre scolaire.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Pour en savoir plus sur toutes les fonctionnalités, regarder la vidéo ci-dessous :
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" width="80%" src="https://www.youtube.com/embed/un1BrrV57PA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<br> <!-- wp:paragraph -->
+<p>
+Source : <a href="https://korben.info/futurecoder-cours-gratuits-python.html" target="_blank" rel="noreferrer noopener">https://korben.info/futurecoder-cours-gratuits-python.html</a> et le site <a href="https://fr.futurecoder.io/" target="_blank" rel="noreferrer noopener">Futurecoder</a>.
+</p>
+<!-- /wp:paragraph -->
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>Python</category>
+  <category>NSI</category>
+  <guid>https://flallemand.fr/blog/posts/futurecoder/index.html</guid>
+  <pubDate>Mon, 31 Oct 2022 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/futurecoder/futurecoder-futurecoder.png" medium="image" type="image/png" height="74" width="144"/>
+</item>
+<item>
+  <title>Participer aux trophées NSI</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/tropheesnsi/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+<strong>Les trophées NSI récompensent des projets informatiques réalisés dans le cadre de l’enseignement de spécialité « numérique et sciences informatiques ».</strong>
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Les objectifs du concours sont les suivants :
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li>
+Valoriser l’enseignement de spécialité NSI.
+</li>
+<li>
+Mettre en avant les projets réalisés pendant l’année scolaire.
+</li>
+<li>
+Encourager le travail en équipe.
+</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>
+L’inscription et la participation se font par l’intermédiaire du professeur de NSI des participants.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="anchored">
+De quoi s’agit-il ?
+</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>
+Tous les élèves suivant la spécialité NSI en première et/ou en terminale peuvent participer.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Les élèves qui désirent participer aux trophées NSI forment une équipe de 2 à 5 personnes maximum (du même niveau scolaire). Ils choisissent un projet informatique qu’ils vont développer en équipe tout au long de l’année scolaire. Ce projet doit obligatoirement s’inscrire dans le cadre du programme de NSI. Il peut s’agir de développer un logiciel répondant à un certain besoin, un site web, … En ce qui concerne la programmation, le langage utilisé a priori est Python, mais d’autres langages open source peuvent être acceptés. Le code doit être soigné, documenté et placé sous licence libre. Enfin, une courte vidéo de présentation du projet doit être réalisée par l’équipe.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Lors de la session 2022, la date limite d’envoi des projets était le 5 mai 2022.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Les projets sont ensuite évalués, d’abord au niveau académique (Auvergne-Rhône-Alpes), puis au niveau national.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Critères d’évaluation
+</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>
+Voici les critères d’évaluations définis dans le règlement du concours :
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li>
+Présentation globale du projet
+</li>
+<li>
+Documentation et lisibilité du projet
+</li>
+<li>
+Présentation orale (vidéo)
+</li>
+<li>
+Illustration du projet (image 500px x 500px)
+</li>
+<li>
+Esprit logique de l’équipe
+</li>
+<li>
+Originalité et créativité du projet et/ou du dossier
+</li>
+<li>
+Organisation de l’équipe, du projet
+</li>
+<li>
+Fonctionnement et opérationnalité du projet
+</li>
+<li>
+Ouverture : idées d’amélioration, pistes de développement, analyse critique
+</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Récompenses
+</h2>
+<!-- /wp:heading -->
+<p><img src="https://flallemand.fr/blog/posts/tropheesnsi/achievement.png" class="img-fluid" style="width:25.0%"></p>
+<!-- wp:paragraph -->
+<p>
+Plusieurs prix sont décernés au niveau académique.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Au niveau national, les récompenses suivantes sont annoncées :
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li>
+Deux prix sont obligatoirement remis :
+<ul>
+<li>
+Prix du meilleur projet Première
+</li>
+<li>
+Prix du meilleur projet Terminale
+</li>
+</ul>
+</li>
+<li>
+Les autres catégories :
+<ul>
+<li>
+Prix spécial du jury (projet coup de cœur)
+</li>
+<li>
+Prix de la créativité (originalité et créativité)
+</li>
+<li>
+Prix des futurs ingénieurs et futures ingénieuses (dimension technique et scientifique forte)
+</li>
+<li>
+Prix de la mixité (part et rôle des filles dans l’équipe et/ou sujet traitant de cette thématique)
+</li>
+<li>
+Prix de la citoyenneté (projet inclut une dimension à impact social ou sociétal)
+</li>
+</ul>
+</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Exemples de projets réalisés pour la session 2022
+</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>
+Vous trouverez sur le site officiel les présentations des projets des lauréats de la session 2022.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li>
+Meilleur projet Première : SnowFake, simulateur de croissance de flocons de neige
+</li>
+<li>
+Meilleur projet Terminale : Pytris, implémentation Python/Pygame du célèbre jeu TETRIS.
+</li>
+<li>
+Prix de la citoyenneté : EDUCOVOIT’, gestionnaire de covoiturage entre collègues
+</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>
+Et beaucoup d’autres exemples : <a href="https://trophees-nsi.fr/resultats" target="_blank" rel="noreferrer noopener">https://trophees-nsi.fr/resultats</a>
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Source : le site officiel des trophées : <a href="https://trophees-nsi.fr/" target="_blank" rel="noreferrer noopener">https://trophees-nsi.fr/</a>
+</p>
+<!-- /wp:paragraph -->
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>Python</category>
+  <category>NSI</category>
+  <guid>https://flallemand.fr/blog/posts/tropheesnsi/index.html</guid>
+  <pubDate>Wed, 07 Sep 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/tropheesnsi/image_trophees_nsi.png" medium="image" type="image/png" height="77" width="144"/>
+</item>
+<item>
+  <title>Lumni : cours sur les bases de données</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/lumniBDD/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+La plateforme Lumni propose deux vidéos très bien faites qui couvrent le programme de terminale NSI sur les bases de données.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Vidéo 1 : <a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener">Qu’est-ce qu’une base de données relationnelle ?</a>
+</h2>
+<!-- /wp:heading -->
+<!-- wp:image {"align":"center","id":247,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image aligncenter size-large figure">
+<a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://flallemand.fr/blog/posts/lumniBDD/https:/www.flallemand.fr/wp/wp-content/uploads/2022/07/Capture_lundi-25-juillet-2022_6h58m19s_001_Qu�est-ce-qu�une-base-de-donn�es-relationnelle-Vid�o-Voie-g�n�rale-Lumni-Mozilla-Firefox-1-1024x567.png" alt="" class="wp-image-247 figure-img"></a>
+</figure>
+<!-- /wp:image -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Vidéo 2 : <a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener">Interrogation d’une base de données relationnelle</a>
+</h2>
+<!-- /wp:heading -->
+<!-- wp:image {"align":"center","id":248,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image aligncenter size-large figure">
+<a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://flallemand.fr/blog/posts/lumniBDD/https:/www.flallemand.fr/wp/wp-content/uploads/2022/07/snaptron_9anqpo1xcK-1024x563.jpg" alt="" class="wp-image-248 figure-img"></a>
+</figure>
+<!-- /wp:image -->
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>BDD</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/lumniBDD/index.html</guid>
+  <pubDate>Sun, 24 Jul 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/lumniBDD/lumniBDD.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Histoire des systèmes d’exploitation</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/histoireSE/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+Voici une sélection de quelques vidéos sur l’histoire des systèmes d’exploitations.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Histoire d’Unix
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" width="100%" src="https://www.youtube.com/embed/Za6vGTLp-wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:heading -->
+<h2 class="anchored">
+Histoire de Linux et de GNU-Linux
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" width="100%" src="https://www.youtube.com/embed/Uq5ddTUtDkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p><br></p>
+<iframe class="video" width="100%" src="https://www.youtube.com/embed/KvGN1SrNwAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:heading -->
+<h2 class="anchored">
+Histoire de Windows
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" width="100%" src="https://www.youtube.com/embed/-5evLFh3ZAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Histoire</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/histoireSE/index.html</guid>
+  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/histoireSE/histoireSE.png" medium="image" type="image/png" height="70" width="144"/>
+</item>
+<item>
+  <title>Les transistors expliqués</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/transistors/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+C’est le titre d’une excellente vidéo de la chaîne Mentalité Ingénieur, sur Youtube, qui explique de façon claire et imagée le fonctionnement d’un transistor, élément de base de toute puce informatique.
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" src="https://www.youtube.com/embed/Ey1nnEoADcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/transistors/index.html</guid>
+  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/transistors/transistors.png" medium="image" type="image/png" height="74" width="144"/>
+</item>
+<item>
+  <title>La chaîne YouTube codeur-pro</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/codeurpro/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+La chaîne YouTube codeur-pro est une bonne source de petites vidéos très bien faites et éclairantes sur différents aspects du programme de NSI.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Attention, cependant, les élèves de NSI ne sont pas la cible visée par cette chaîne, donc certains éléments évoqués vont bien plus loin que le programme !
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Dans la série “Bases de l’informatique”, les vidéos suivantes sont incontournables :
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Comment fonctionne un ordinateur ?
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" src="https://www.youtube.com/embed/85XUJXHbjBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:heading -->
+<h2 class="anchored">
+Un système d’exploitation, c’est quoi ?
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" src="https://www.youtube.com/embed/YScMI8lsy9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:heading -->
+<h2 class="anchored">
+Le binaire, c’est quoi ?
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" src="https://www.youtube.com/embed/ysoWgx186DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:heading -->
+<h2 class="anchored">
+Les portes logiques
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" src="https://www.youtube.com/embed/iTH39L2d7bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:heading -->
+<h2 class="anchored">
+Comment créer un programme ?
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" src="https://www.youtube.com/embed/WCxMw9qi8TE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/codeurpro/index.html</guid>
+  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/codeurpro/codeurpro.png" medium="image" type="image/png" height="36" width="144"/>
+</item>
+<item>
+  <title>Histoire de l’informatique</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/histoireinfo/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+Dans la vidéo YouTube ci-dessous, vous trouverez un panorama rapide de l’histoire de l’informatique essentiellement axé sur l’évolution des ordinateurs.
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" src="https://www.youtube.com/embed/B1QD9FgCOrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Vidéothèque</category>
+  <category>Histoire</category>
+  <guid>https://flallemand.fr/blog/posts/histoireinfo/index.html</guid>
+  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/histoireinfo/histoireinfo.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
+<item>
+  <title>Mesurer la quantité d’information</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/mesurerinfo/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+En représentation binaire, TOUTE l’information est représentée à l’aide de deux symboles uniquement, en général 0 et 1.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:jetpack/markdown {"source":"Chaque chiffre d'une représentation binaire est appelé un **bit**. Ce mot provenant de l'anglais signifie _chiffre binaire_, _binary digit_, abrégé en \u0022bit\u0022. En anglais \u0022 a bit\u0022 signifie \u0022un morceau\u0022 ou \u0022un peu\u0022, ce qui convient très bien au chiffre binaire qui est donc l'unité la plus simple du monde numérique."} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Chaque chiffre d’une représentation binaire est appelé un <strong>bit</strong>. Ce mot provenant de l’anglais signifie <em>chiffre binaire</em>, <em>binary digit</em>, abrégé en "bit". En anglais " a bit" signifie "un morceau" ou "un peu", ce qui convient très bien au chiffre binaire qui est donc l’unité la plus simple du monde numérique.
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:jetpack/markdown {"source":"Le **bit** est donc l'unité de mesure de base de l'information en informatique. Il constitue la quantité minimale d'information transmise dans un message."} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Le <strong>bit</strong> est donc l’unité de mesure de base de l’information en informatique. Il constitue la quantité minimale d’information transmise dans un message.
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:jetpack/markdown {"source":"Mais les bits sont rarement seuls. On les regroupe usuellement par groupes de 8 bits, appelés **octets** en français et **bytes** en anglais. Les anglicistes chevronnés ne confondrons pas _bit_ et _byte_ dont la prononciation est différente !"} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Mais les bits sont rarement seuls. On les regroupe usuellement par groupes de 8 bits, appelés <strong>octets</strong> en français et <strong>bytes</strong> en anglais. Les anglicistes chevronnés ne confondrons pas <em>bit</em> et <em>byte</em> dont la prononciation est différente !
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:jetpack/markdown {"source":"Les symboles associés à ces unités sont les suivants : \n\n| Unité | Symbole |\n|:\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d-:|\n|  bit  |    b    |\n| octet |    o    |\n| byte  |    B    |\n\nLes quantités d'information s'expriment souvent en milliers, en millions, en milliards de bits ou d'octets, on utilise donc des multiples de ces unités de base.\n\nLes préfixes officiellement reconnus par\nl'industrie sont similaires aux kilo-, méga-, ... du système SI. Ces\npréfixes ne se réfèrent pas à des puissances de 10 comme dans le système\nSI mais à des puissances de 2:\n\n\n|    Nom    | Abréviation |                   Quantité                   |\n|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d:|\n| kibioctet |     kio     |          $2^{10}=1024\\approx 10^3$           |\n| mébioctet |     Mio     |       $2^{20}=1\\ 048\\ 576\\approx 10^6$       |\n| gibioctet |     Gio     |    $2^{30}=1\\ 073\\ 741\\ 824\\approx 10^9$     |\n| tébioctet |     Tio     | $2^{40}=1 099\\ 511\\ 627\\ 776\\approx 10^{12}$ |\n\nEn anglais on remplacera le \u0022o\u0022 par un \u0022B\u0022.\n\nLa définition de ces préfixes est relativement récente : elle a été normalisée par la commission électrotechnique internationale en 1998. En pratique, on est souvent confronté à\nl'utilisation des préfixes traditionnels kilo-, méga-, tera-, *etc* du\nsystème SI, qui sont, pour rappel:\n\n|    Nom    | Abréviation |     Quantité     |\n|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d:|\n| kilooctet |     ko      |  $10^3$ octets   |\n| mégaoctet |     Mo      |  $10^6$ octets   |\n| gigaoctet |     Go      |  $10^9$ octets   |\n| téraoctet |     To      | $10^{12}$ octets |\n\nDe la même façon, dans un contexte anglophone, on lire \u0022GB\u0022 plutôt que \u0022Go\u0022."} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Les symboles associés à ces unités sont les suivants :
+</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+Unité
+</th>
+<th style="text-align:center">
+Symbole
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
+bit
+</td>
+<td style="text-align:center">
+b
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+octet
+</td>
+<td style="text-align:center">
+o
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+byte
+</td>
+<td style="text-align:center">
+B
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>
+Les quantités d’information s’expriment souvent en milliers, en millions, en milliards de bits ou d’octets, on utilise donc des multiples de ces unités de base.
+</p>
+<p>
+Les préfixes officiellement reconnus par l’industrie sont similaires aux kilo-, méga-, … du système SI. Ces préfixes ne se réfèrent pas à des puissances de 10 comme dans le système SI mais à des puissances de 2:
+</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+Nom
+</th>
+<th style="text-align:center">
+Abréviation
+</th>
+<th style="text-align:center">
+Quantité
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
+kibioctet
+</td>
+<td style="text-align:center">
+kio
+</td>
+<td style="text-align:center">
+<img src="https://latex.codecogs.com/png.latex?2%5E%7B10%7D=1024%5Capprox%2010%5E3">
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+mébioctet
+</td>
+<td style="text-align:center">
+Mio
+</td>
+<td style="text-align:center">
+<img src="https://latex.codecogs.com/png.latex?2%5E%7B20%7D=1%5C%20048%5C%20576%5Capprox%2010%5E6">
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+gibioctet
+</td>
+<td style="text-align:center">
+Gio
+</td>
+<td style="text-align:center">
+<img src="https://latex.codecogs.com/png.latex?2%5E%7B30%7D=1%5C%20073%5C%20741%5C%20824%5Capprox%2010%5E9">
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+tébioctet
+</td>
+<td style="text-align:center">
+Tio
+</td>
+<td style="text-align:center">
+<img src="https://latex.codecogs.com/png.latex?2%5E%7B40%7D=1%20099%5C%20511%5C%20627%5C%20776%5Capprox%2010%5E%7B12%7D">
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>
+En anglais on remplacera le "o" par un "B".
+</p>
+<p>
+La définition de ces préfixes est relativement récente : elle a été normalisée par la commission électrotechnique internationale en 1998. En pratique, on est souvent confronté à l’utilisation des préfixes traditionnels kilo-, méga-, tera-, <em>etc</em> du système SI, qui sont, pour rappel:
+</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+Nom
+</th>
+<th style="text-align:center">
+Abréviation
+</th>
+<th style="text-align:center">
+Quantité
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
+kilooctet
+</td>
+<td style="text-align:center">
+ko
+</td>
+<td style="text-align:center">
+<img src="https://latex.codecogs.com/png.latex?10%5E3"> octets
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+mégaoctet
+</td>
+<td style="text-align:center">
+Mo
+</td>
+<td style="text-align:center">
+<img src="https://latex.codecogs.com/png.latex?10%5E6"> octets
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+gigaoctet
+</td>
+<td style="text-align:center">
+Go
+</td>
+<td style="text-align:center">
+<img src="https://latex.codecogs.com/png.latex?10%5E9"> octets
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+téraoctet
+</td>
+<td style="text-align:center">
+To
+</td>
+<td style="text-align:center">
+<img src="https://latex.codecogs.com/png.latex?10%5E%7B12%7D"> octets
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>
+De la même façon, dans un contexte anglophone, on lire "GB" plutôt que "Go".
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:paragraph -->
+<p>
+Sur la capture d’écran ci-dessous, réalisée sous Windows 11, nous constatons que la valeur est affichée en Go, donc a priori en système décimal. Mais en réalité, la valeur affichée en octets correspond à 221 Gio. Le système ne respecte donc pas les conventions internationales.
+</p>
+<!-- /wp:paragraph -->
+<p><img src="https://flallemand.fr/blog/posts/mesurerinfo/explorer_7iqpQIkBlE.png" class="img-fluid"></p>
+<!-- wp:jetpack/markdown {"source":"Ici, nous voyons qu'un système Linux utilise la bonne abréviation : "} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Ici, nous voyons qu’un système Linux utilise la bonne abréviation :
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<p><img src="https://flallemand.fr/blog/posts/mesurerinfo/screen.jpg" class="img-fluid"></p>
+<!-- wp:paragraph -->
+<p>
+Voici enfin une traduction concrète de l’ordre de grandeur de ces différentes unités :
+</p>
+<!-- /wp:paragraph -->
+
+<table>
+<thead>
+<tr>
+<th>
+<strong>Unité</strong>
+</th>
+<th>
+<strong>Équivalent approximatif</strong>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+octet
+</td>
+<td>
+un caractère de base de l’alphabet latin
+</td>
+</tr>
+<tr>
+<td>
+kilooctet
+</td>
+<td>
+une icône type “favicon”
+</td>
+</tr>
+<tr>
+<td>
+mégaoctet
+</td>
+<td>
+le texte de <em>Harry Potter et la coupe de feu</em>
+</td>
+</tr>
+<tr>
+<td>
+gigaoctet
+</td>
+<td>
+environ 30 minutes de vidéo
+</td>
+</tr>
+<tr>
+<td>
+téraoctet
+</td>
+<td>
+le plus gros disque dur en vente en 2007
+</td>
+</tr>
+<tr>
+<td>
+pétaoctet
+</td>
+<td>
+2000 ans de musique encodée en MP3
+</td>
+</tr>
+<tr>
+<td>
+exaoctet
+</td>
+<td>
+trafic internet mondial par mois en 2004
+</td>
+</tr>
+<tr>
+<td>
+zettaoctet
+</td>
+<td>
+trafic internet mondial de l’année 2016
+</td>
+</tr>
+</tbody>
+
+</table>
+<!-- wp:paragraph -->
+<p>
+<strong>Sources</strong> :
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li>
+article <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Byte" target="_blank">Byte</a> sur Wikipédia en anglais.
+</li>
+<li>
+article <a rel="noreferrer noopener" href="https://fr.wikipedia.org/wiki/Bit" target="_blank">bit </a>sur Wikipédia en français.
+</li>
+<li>
+MOOC “NSI, les fondamentaux”, disponible sur f<a href="https://www.fun-mooc.fr/fr/" target="_blank" rel="noreferrer noopener">un-mooc</a>.
+</li>
+</ul>
+<!-- /wp:list -->
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <guid>https://flallemand.fr/blog/posts/mesurerinfo/index.html</guid>
+  <pubDate>Sat, 18 Jun 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/mesurerinfo/mesurerinfo.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Mesurer le temps d’exécution d’un fragment de code</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/timeexec/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+Un moyen intuitif de comparer l’efficacité de deux portions de code est de mesurer leur temps d’exécution en fonction de la taille des données. Le <a href="https://docs.python.org/fr/3/library/timeit.html#" target="_blank" rel="noreferrer noopener">module <code>timeit</code> de Python</a> permet de faire cela de façon semi-automatisée. Nous allons voir comment dans cet article, en considérant trois fonctions différentes qui renvoient le n-ième <img src="https://latex.codecogs.com/png.latex?F_n"> de <a rel="noreferrer noopener" href="https://fr.wikipedia.org/wiki/Suite_de_Fibonacci" target="_blank">la suite de Fibonacci</a>.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Pour les besoins du code présent dans la suite, on commencera par les importations suivantes :
+</p>
+<!-- /wp:paragraph -->
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;">import</span> timeit</span></code></pre></div>
+</div>
+<!-- wp:heading -->
+<h2 class="anchored">
+Fonctions à tester
+</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>
+Ces fonctions sont issues d’un <a href="https://flallemand.fr/nsi/terminale/01_langages/recurs_exos/#exercice-2-suite-de-fibonacci" target="_blank" rel="noreferrer noopener">exercice du chapitre “Récursivité” du cours de NSI de terminale</a>. Cependant, l’objectif de cet article est juste de montrer un moyen de comparer et de visualiser les vitesses d’exécution.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Nous considérons les trois fonctions suivantes. La première retourne le nombre <img src="https://latex.codecogs.com/png.latex?F_n"> par une méthode itérative.
+</p>
+<!-- /wp:paragraph -->
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;">def</span> fibo_iter(n: <span class="bu" style="color: null;">int</span>) <span class="op" style="color: #5E5E5E;">-&gt;</span> <span class="bu" style="color: null;">int</span>:</span>
+<span id="cb2-2">    <span class="co" style="color: #5E5E5E;">"""Suite de Fibonacci, version itérative"""</span></span>
+<span id="cb2-3">    <span class="cf" style="color: #003B4F;">if</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">0</span>:</span>
+<span id="cb2-4">        <span class="cf" style="color: #003B4F;">return</span> <span class="dv" style="color: #AD0000;">0</span></span>
+<span id="cb2-5">    <span class="cf" style="color: #003B4F;">else</span>:</span>
+<span id="cb2-6">        f0, f1 <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">1</span></span>
+<span id="cb2-7">        <span class="cf" style="color: #003B4F;">for</span> k <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">1</span>, n):</span>
+<span id="cb2-8">            f0, f1 <span class="op" style="color: #5E5E5E;">=</span> f1, f0 <span class="op" style="color: #5E5E5E;">+</span> f1</span>
+<span id="cb2-9">        <span class="cf" style="color: #003B4F;">return</span> f1</span></code></pre></div>
+</div>
+<!-- wp:paragraph -->
+<p>
+La deuxième fonction est une fonction récursive qui traduit directement la définition de la suite de Fibonacci.
+</p>
+<!-- /wp:paragraph -->
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;">def</span> fibo_rec(n: <span class="bu" style="color: null;">int</span>) <span class="op" style="color: #5E5E5E;">-&gt;</span> <span class="bu" style="color: null;">int</span>:</span>
+<span id="cb3-2">    <span class="co" style="color: #5E5E5E;">"""Suite de Fibonacci version récursive"""</span></span>
+<span id="cb3-3">    <span class="co" style="color: #5E5E5E;"># Cas de base</span></span>
+<span id="cb3-4">    <span class="cf" style="color: #003B4F;">if</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">0</span> <span class="kw" style="color: #003B4F;">or</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">1</span>:</span>
+<span id="cb3-5">        <span class="cf" style="color: #003B4F;">return</span> n</span>
+<span id="cb3-6">    <span class="co" style="color: #5E5E5E;"># Récursion</span></span>
+<span id="cb3-7">    <span class="cf" style="color: #003B4F;">else</span>:</span>
+<span id="cb3-8">        <span class="cf" style="color: #003B4F;">return</span> fibo_rec(n<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">2</span>)<span class="op" style="color: #5E5E5E;">+</span>fibo_rec(n<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
+</div>
+<!-- wp:paragraph -->
+<p>
+La troisième est également récursive et utilise les idées de la programmation dynamique.
+</p>
+<!-- /wp:paragraph -->
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;">def</span> fibo_dyn(n: <span class="bu" style="color: null;">int</span>, suite: <span class="bu" style="color: null;">dict</span> <span class="op" style="color: #5E5E5E;">=</span> {<span class="dv" style="color: #AD0000;">0</span>: <span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">1</span>: <span class="dv" style="color: #AD0000;">1</span>}) <span class="op" style="color: #5E5E5E;">-&gt;</span> <span class="bu" style="color: null;">int</span>:</span>
+<span id="cb4-2">    <span class="co" style="color: #5E5E5E;">"""Suite de Fibonacci version dynamique"""</span></span>
+<span id="cb4-3">    <span class="co" style="color: #5E5E5E;"># Cas de base</span></span>
+<span id="cb4-4">    <span class="cf" style="color: #003B4F;">if</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">0</span> <span class="kw" style="color: #003B4F;">or</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">1</span>:</span>
+<span id="cb4-5">        <span class="cf" style="color: #003B4F;">return</span> n</span>
+<span id="cb4-6">    <span class="co" style="color: #5E5E5E;"># Récursion</span></span>
+<span id="cb4-7">    <span class="cf" style="color: #003B4F;">else</span>:</span>
+<span id="cb4-8">        <span class="co" style="color: #5E5E5E;"># Si Fn est déjà calculé, on le retourne</span></span>
+<span id="cb4-9">        <span class="cf" style="color: #003B4F;">if</span> n <span class="kw" style="color: #003B4F;">in</span> suite.keys():</span>
+<span id="cb4-10">            <span class="cf" style="color: #003B4F;">return</span> suite[n]</span>
+<span id="cb4-11">        <span class="cf" style="color: #003B4F;">else</span>:</span>
+<span id="cb4-12">            <span class="co" style="color: #5E5E5E;"># Sinon, on le calcule et on le garde en mémoire</span></span>
+<span id="cb4-13">            f <span class="op" style="color: #5E5E5E;">=</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">2</span>, suite) <span class="op" style="color: #5E5E5E;">+</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>, suite)</span>
+<span id="cb4-14">            suite[n] <span class="op" style="color: #5E5E5E;">=</span> f</span>
+<span id="cb4-15">            <span class="cf" style="color: #003B4F;">return</span> f</span></code></pre></div>
+</div>
+<!-- wp:heading -->
+<h2 class="anchored">
+Utilisation de timeit
+</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>
+Par exemple, pour obtenir le temps d’exécution de 100 appels à la fonction fibo_iter() avec le paramètre 15, on entre le script suivant :
+</p>
+<!-- /wp:paragraph -->
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">timeit.timeit(<span class="st" style="color: #20794D;">'fibo_iter(15)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">1000</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>())</span></code></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="45">
+<pre><code>0.0008780480002315016</code></pre>
+</div>
+</div>
+<!-- wp:paragraph -->
+<p>
+et on obtient en sortie le temps d’exécution en secondes.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Beaucoup d’autres choses sont possibles avec le module timeit, mais cette simple commande nous suffira.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Visualisation graphique
+</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>
+Dans le script suivant, nous définissions un tableau des abscisses correspondant aux différentes valeurs de <img src="https://latex.codecogs.com/png.latex?n"> pour lesquelles nous calculons <img src="https://latex.codecogs.com/png.latex?F_n"> : <img src="https://latex.codecogs.com/png.latex?n"> varie de 0 à 15 avec un pas de 1 (ligne 1)
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Ensuite, pour chacune des fonctions, nous calculons le temps d’exécution de chaque terme de la suite (100 fois) et nous stockons les résultats dans un tableau d’ordonnées. (lignes 5 à 11)
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Nous traçons ensuite les courbes correspondantes. (lignes 12 à 15)
+</p>
+<!-- /wp:paragraph -->
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1">abscisses <span class="op" style="color: #5E5E5E;">=</span> [k <span class="cf" style="color: #003B4F;">for</span> k <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">20</span>, <span class="dv" style="color: #AD0000;">1</span>)]</span>
+<span id="cb7-2">ordonnees_rec <span class="op" style="color: #5E5E5E;">=</span> []</span>
+<span id="cb7-3">ordonnees_iter <span class="op" style="color: #5E5E5E;">=</span> []</span>
+<span id="cb7-4">ordonnees_dyn <span class="op" style="color: #5E5E5E;">=</span> []</span>
+<span id="cb7-5"><span class="cf" style="color: #003B4F;">for</span> x <span class="kw" style="color: #003B4F;">in</span> abscisses:</span>
+<span id="cb7-6">    ordonnees_iter.append(timeit.timeit(</span>
+<span id="cb7-7">        <span class="st" style="color: #20794D;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
+<span id="cb7-8">    ordonnees_rec.append(timeit.timeit(</span>
+<span id="cb7-9">        <span class="st" style="color: #20794D;">'fibo_rec(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
+<span id="cb7-10">    ordonnees_dyn.append(timeit.timeit(</span>
+<span id="cb7-11">        <span class="st" style="color: #20794D;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
+<span id="cb7-12">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;">'b'</span>)</span>
+<span id="cb7-13">plt.plot(abscisses, ordonnees_rec, <span class="st" style="color: #20794D;">'r'</span>)</span>
+<span id="cb7-14">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;">'g'</span>)</span>
+<span id="cb7-15">plt.show()</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="https://flallemand.fr/blog/posts/timeexec/index_files/figure-html/cell-7-output-1.png" width="587" height="411"></p>
+</div>
+</div>
+<!-- wp:paragraph -->
+<p>
+Nous observons pour la fonction récursive une courbe caractéristique d’une croissance exponentielle du temps d’exécution. Les courbes bleue et verte correspondant aux deux autres méthodes sont confondues. Pour les distinguer, nous allons faire une nouvelle figure sans les données de la fonction <code>fibo_rec</code> cette fois ci (image réalisée avec <img src="https://latex.codecogs.com/png.latex?n"> variant de 0 à 100) :
+</p>
+<!-- /wp:paragraph -->
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">abscisses <span class="op" style="color: #5E5E5E;">=</span> [k <span class="cf" style="color: #003B4F;">for</span> k <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">100</span>, <span class="dv" style="color: #AD0000;">1</span>)]</span>
+<span id="cb8-2">ordonnees_iter <span class="op" style="color: #5E5E5E;">=</span> []</span>
+<span id="cb8-3">ordonnees_dyn <span class="op" style="color: #5E5E5E;">=</span> []</span>
+<span id="cb8-4"><span class="cf" style="color: #003B4F;">for</span> x <span class="kw" style="color: #003B4F;">in</span> abscisses:</span>
+<span id="cb8-5">    ordonnees_iter.append(timeit.timeit(</span>
+<span id="cb8-6">        <span class="st" style="color: #20794D;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
+<span id="cb8-7">    ordonnees_dyn.append(timeit.timeit(</span>
+<span id="cb8-8">        <span class="st" style="color: #20794D;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
+<span id="cb8-9">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;">'b'</span>)</span>
+<span id="cb8-10">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;">'g'</span>)</span>
+<span id="cb8-11">plt.show()</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="https://flallemand.fr/blog/posts/timeexec/index_files/figure-html/cell-8-output-1.png" width="596" height="411"></p>
+</div>
+</div>
+<!-- wp:paragraph -->
+<p>
+Ce graphique suggère une croissance linéaire pour la méthode itérative et des performances encore meilleures pour la méthode dynamique.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>
+Bien sûr, cette démarche ne remplace pas une étude théorique rigoureuse et un calcul de complexité, mais elle permet, grâce à la visualisation, de comparer rapidement deux algorithmes et de conjecturer leur complexité.
+</p>
+<!-- /wp:paragraph -->
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Python</category>
+  <guid>https://flallemand.fr/blog/posts/timeexec/index.html</guid>
+  <pubDate>Sat, 04 Jun 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/timeexec/timeit_1-2.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Un nouveau site vient de voir le jour : carmin.tv.</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/carmin/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.carmin.tv/fr/" target="_blank"><img src="https://flallemand.fr/blog/posts/carmin/logo-carmin.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<!-- wp:jetpack/markdown {"source":"Il s'agit d'une plateforme de mise à disposition de vidéos de conférences, de séminaires de recherches en mathématiques. On y trouve aussi des interviews de mathématiciennes et de mathématiciens.\n\nLe CARMIN (Centre d'Accueil et de Rencontres Mathématiques INternationales) regroupe quatre instituts français de renommée internationale :\n\n* Centre International de Mathématiques Pures et Appliquées (CIMPA)\n* Centre International de Rencontres Mathématiques (CIRM)\n* Institut des Hautes Études Scientifiques (IHÉS)\n* Institut Henri Poincaré (IHP)\n\nOn peut lire sur la page \u0022À propos\u0022 de la plateforme :\n\n\u003e Ces instituts prestigieux encouragent la recherche en mathématiques et ses interactions avec les autres sciences (physique, informatique, biologie, etc) en accueillant les chercheurs du monde entier pour des courts et longs séjours et en organisant des conférences et des écoles.\n\u003e Ensemble, ces centres ont créé une plateforme de diffusion audiovisuelle afin de préserver la valeur scientifique et pédagogique des événements qu’ils organisent et de la partager avec le monde entier.\n\u003e La plateforme est équipée d’un outil de recherche avancé qui permet aux utilisateurs de parcourir efficacement des milliers de vidéos enrichies et de trouver rapidement le meilleur contenu pour leurs demandes.\n\nSi la plupart des vidéos proposées sont haut perchées, d'un niveau recherche universitaire et, donc, inaccessibles au grand public, on trouve aussi quelques conférences de vulgarisation.\n\nParmi les 4611 vidéos en ligne à l'heure où j'écris ces lignes, des filtres situés dans la colonne de gauche permettent de sélectionner la langue (anglais ou français) et le niveau des auditeurs. Par exemple, pour une audience \u0022General Public\u0022 en français, il reste 124 vidéos disponibles.\n\n## Quelques exemples de vidéos intéressantes et \u0022grand public\u0022 (quoique...) :\n"} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Il s’agit d’une plateforme de mise à disposition de vidéos de conférences, de séminaires de recherches en mathématiques. On y trouve aussi des interviews de mathématiciennes et de mathématiciens.
+</p>
+<p>
+Le CARMIN (Centre d’Accueil et de Rencontres Mathématiques INternationales) regroupe quatre instituts français de renommée internationale :
+</p>
+<ul>
+<li>
+Centre International de Mathématiques Pures et Appliquées (CIMPA)
+</li>
+<li>
+Centre International de Rencontres Mathématiques (CIRM)
+</li>
+<li>
+Institut des Hautes Études Scientifiques (IHÉS)
+</li>
+<li>
+Institut Henri Poincaré (IHP)
+</li>
+</ul>
+<p>
+On peut lire sur la page "À propos" de la plateforme :
+</p>
+<blockquote class="blockquote">
+<p>
+Ces instituts prestigieux encouragent la recherche en mathématiques et ses interactions avec les autres sciences (physique, informatique, biologie, etc) en accueillant les chercheurs du monde entier pour des courts et longs séjours et en organisant des conférences et des écoles. Ensemble, ces centres ont créé une plateforme de diffusion audiovisuelle afin de préserver la valeur scientifique et pédagogique des événements qu’ils organisent et de la partager avec le monde entier. La plateforme est équipée d’un outil de recherche avancé qui permet aux utilisateurs de parcourir efficacement des milliers de vidéos enrichies et de trouver rapidement le meilleur contenu pour leurs demandes.
+</p>
+</blockquote>
+<p>
+Si la plupart des vidéos proposées sont haut perchées, d’un niveau recherche universitaire et, donc, inaccessibles au grand public, on trouve aussi quelques conférences de vulgarisation.
+</p>
+<p>
+Parmi les 4611 vidéos en ligne à l’heure où j’écris ces lignes, des filtres situés dans la colonne de gauche permettent de sélectionner la langue (anglais ou français) et le niveau des auditeurs. Par exemple, pour une audience "General Public" en français, il reste 124 vidéos disponibles.
+</p>
+<h2 class="anchored">
+Quelques exemples de vidéos intéressantes et "grand public" (quoique…) :
+</h2>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:paragraph -->
+<p>
+“Démocratie, dictature … et mathématiques”, de Gérard Grancher.
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" src="https://www.youtube.com/embed/lG_zdbvFZls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p><br></p>
+<!-- wp:paragraph -->
+<p>
+“Fermat, Mersenne, factorisation et nombres parfaits”, de Daniel Perrin.
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" src="https://www.youtube.com/embed/J418w-SjnTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p><br></p>
+<!-- wp:paragraph -->
+<p>
+“Le triangle de Pascal et ses propriétés”, de Christophe Soulé.
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" src="https://www.youtube.com/embed/d8YaWDepHhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p><br></p>
+<!-- wp:paragraph -->
+<p>
+“Georg Cantor et les infinis”, de Patrick Dehornoy.
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" src="https://www.youtube.com/embed/cf15qYStKbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:paragraph -->
+<p>
+<strong>Source</strong> : Unidivers
+</p>
+<!-- /wp:paragraph -->
+
+
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>Vidéothèque</category>
+  <category>Histoire</category>
+  <guid>https://flallemand.fr/blog/posts/carmin/index.html</guid>
+  <pubDate>Fri, 31 Dec 2021 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/carmin/logo-carmin.png" medium="image" type="image/png" height="25" width="144"/>
+</item>
+</channel>
+</rss>

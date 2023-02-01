@@ -1,0 +1,14 @@
+---
+title: "Histoire de l'informatique"
+subtitle: ""
+description: ""
+date: "2022-07-2"
+categories: [Informatique, NSI, Vidéothèque, Histoire]
+image: "histoireinfo.png"
+---
+
+<!-- wp:paragraph -->
+<p>Dans la vidéo YouTube ci-dessous, vous trouverez un panorama rapide de l'histoire de l'informatique essentiellement axé sur l'évolution des ordinateurs.</p>
+<!-- /wp:paragraph -->
+
+<iframe class="video" src="https://www.youtube.com/embed/B1QD9FgCOrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

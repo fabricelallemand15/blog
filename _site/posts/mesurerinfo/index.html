@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.113">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="F. LALLEMAND">
+
+<title>Le bloc-notes de M. LALLEMAND - Mesurer la quantité d’information</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+<style>
+    .quarto-title-block .quarto-title-banner,
+    .quarto-title-block .quarto-title-banner h1,
+    .quarto-title-block .quarto-title-banner h2,
+    .quarto-title-block .quarto-title-banner h3,
+    .quarto-title-block .quarto-title-banner h4,
+    .quarto-title-block .quarto-title-banner h5,
+    .quarto-title-block .quarto-title-banner h6
+    {
+      background: #BCD2E8;
+    }
+    </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Le bloc-notes de M. LALLEMAND</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/MathsLallemand" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.mim-libre.fr/@lallemandfabrice" rel="" target=""><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Mesurer la quantité d’information</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Informatique</div>
+                <div class="quarto-category">NSI</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Auteur·rice</div>
+      <div class="quarto-title-meta-contents">
+               <p>F. LALLEMAND </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Date de publication</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">19 juin 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+En représentation binaire, TOUTE l’information est représentée à l’aide de deux symboles uniquement, en général 0 et 1.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:jetpack/markdown {"source":"Chaque chiffre d'une représentation binaire est appelé un **bit**. Ce mot provenant de l'anglais signifie _chiffre binaire_, _binary digit_, abrégé en \u0022bit\u0022. En anglais \u0022 a bit\u0022 signifie \u0022un morceau\u0022 ou \u0022un peu\u0022, ce qui convient très bien au chiffre binaire qui est donc l'unité la plus simple du monde numérique."} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Chaque chiffre d’une représentation binaire est appelé un <strong>bit</strong>. Ce mot provenant de l’anglais signifie <em>chiffre binaire</em>, <em>binary digit</em>, abrégé en "bit". En anglais " a bit" signifie "un morceau" ou "un peu", ce qui convient très bien au chiffre binaire qui est donc l’unité la plus simple du monde numérique.
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:jetpack/markdown {"source":"Le **bit** est donc l'unité de mesure de base de l'information en informatique. Il constitue la quantité minimale d'information transmise dans un message."} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Le <strong>bit</strong> est donc l’unité de mesure de base de l’information en informatique. Il constitue la quantité minimale d’information transmise dans un message.
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:jetpack/markdown {"source":"Mais les bits sont rarement seuls. On les regroupe usuellement par groupes de 8 bits, appelés **octets** en français et **bytes** en anglais. Les anglicistes chevronnés ne confondrons pas _bit_ et _byte_ dont la prononciation est différente !"} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Mais les bits sont rarement seuls. On les regroupe usuellement par groupes de 8 bits, appelés <strong>octets</strong> en français et <strong>bytes</strong> en anglais. Les anglicistes chevronnés ne confondrons pas <em>bit</em> et <em>byte</em> dont la prononciation est différente !
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:jetpack/markdown {"source":"Les symboles associés à ces unités sont les suivants : \n\n| Unité | Symbole |\n|:\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d-:|\n|  bit  |    b    |\n| octet |    o    |\n| byte  |    B    |\n\nLes quantités d'information s'expriment souvent en milliers, en millions, en milliards de bits ou d'octets, on utilise donc des multiples de ces unités de base.\n\nLes préfixes officiellement reconnus par\nl'industrie sont similaires aux kilo-, méga-, ... du système SI. Ces\npréfixes ne se réfèrent pas à des puissances de 10 comme dans le système\nSI mais à des puissances de 2:\n\n\n|    Nom    | Abréviation |                   Quantité                   |\n|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d:|\n| kibioctet |     kio     |          $2^{10}=1024\\approx 10^3$           |\n| mébioctet |     Mio     |       $2^{20}=1\\ 048\\ 576\\approx 10^6$       |\n| gibioctet |     Gio     |    $2^{30}=1\\ 073\\ 741\\ 824\\approx 10^9$     |\n| tébioctet |     Tio     | $2^{40}=1 099\\ 511\\ 627\\ 776\\approx 10^{12}$ |\n\nEn anglais on remplacera le \u0022o\u0022 par un \u0022B\u0022.\n\nLa définition de ces préfixes est relativement récente : elle a été normalisée par la commission électrotechnique internationale en 1998. En pratique, on est souvent confronté à\nl'utilisation des préfixes traditionnels kilo-, méga-, tera-, *etc* du\nsystème SI, qui sont, pour rappel:\n\n|    Nom    | Abréviation |     Quantité     |\n|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d:|\n| kilooctet |     ko      |  $10^3$ octets   |\n| mégaoctet |     Mo      |  $10^6$ octets   |\n| gigaoctet |     Go      |  $10^9$ octets   |\n| téraoctet |     To      | $10^{12}$ octets |\n\nDe la même façon, dans un contexte anglophone, on lire \u0022GB\u0022 plutôt que \u0022Go\u0022."} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Les symboles associés à ces unités sont les suivants :
+</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+Unité
+</th>
+<th style="text-align:center">
+Symbole
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
+bit
+</td>
+<td style="text-align:center">
+b
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+octet
+</td>
+<td style="text-align:center">
+o
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+byte
+</td>
+<td style="text-align:center">
+B
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>
+Les quantités d’information s’expriment souvent en milliers, en millions, en milliards de bits ou d’octets, on utilise donc des multiples de ces unités de base.
+</p>
+<p>
+Les préfixes officiellement reconnus par l’industrie sont similaires aux kilo-, méga-, … du système SI. Ces préfixes ne se réfèrent pas à des puissances de 10 comme dans le système SI mais à des puissances de 2:
+</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+Nom
+</th>
+<th style="text-align:center">
+Abréviation
+</th>
+<th style="text-align:center">
+Quantité
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
+kibioctet
+</td>
+<td style="text-align:center">
+kio
+</td>
+<td style="text-align:center">
+<span class="math inline">\(2^{10}=1024\approx 10^3\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+mébioctet
+</td>
+<td style="text-align:center">
+Mio
+</td>
+<td style="text-align:center">
+<span class="math inline">\(2^{20}=1\ 048\ 576\approx 10^6\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+gibioctet
+</td>
+<td style="text-align:center">
+Gio
+</td>
+<td style="text-align:center">
+<span class="math inline">\(2^{30}=1\ 073\ 741\ 824\approx 10^9\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+tébioctet
+</td>
+<td style="text-align:center">
+Tio
+</td>
+<td style="text-align:center">
+<span class="math inline">\(2^{40}=1 099\ 511\ 627\ 776\approx 10^{12}\)</span>
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>
+En anglais on remplacera le "o" par un "B".
+</p>
+<p>
+La définition de ces préfixes est relativement récente : elle a été normalisée par la commission électrotechnique internationale en 1998. En pratique, on est souvent confronté à l’utilisation des préfixes traditionnels kilo-, méga-, tera-, <em>etc</em> du système SI, qui sont, pour rappel:
+</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+Nom
+</th>
+<th style="text-align:center">
+Abréviation
+</th>
+<th style="text-align:center">
+Quantité
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">
+kilooctet
+</td>
+<td style="text-align:center">
+ko
+</td>
+<td style="text-align:center">
+<span class="math inline">\(10^3\)</span> octets
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+mégaoctet
+</td>
+<td style="text-align:center">
+Mo
+</td>
+<td style="text-align:center">
+<span class="math inline">\(10^6\)</span> octets
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+gigaoctet
+</td>
+<td style="text-align:center">
+Go
+</td>
+<td style="text-align:center">
+<span class="math inline">\(10^9\)</span> octets
+</td>
+</tr>
+<tr>
+<td style="text-align:center">
+téraoctet
+</td>
+<td style="text-align:center">
+To
+</td>
+<td style="text-align:center">
+<span class="math inline">\(10^{12}\)</span> octets
+</td>
+</tr>
+</tbody>
+
+</table>
+<p>
+De la même façon, dans un contexte anglophone, on lire "GB" plutôt que "Go".
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<!-- wp:paragraph -->
+<p>
+Sur la capture d’écran ci-dessous, réalisée sous Windows 11, nous constatons que la valeur est affichée en Go, donc a priori en système décimal. Mais en réalité, la valeur affichée en octets correspond à 221 Gio. Le système ne respecte donc pas les conventions internationales.
+</p>
+<!-- /wp:paragraph -->
+<p><img src="explorer_7iqpQIkBlE.png" class="img-fluid"></p>
+<!-- wp:jetpack/markdown {"source":"Ici, nous voyons qu'un système Linux utilise la bonne abréviation : "} -->
+<div class="wp-block-jetpack-markdown">
+<p>
+Ici, nous voyons qu’un système Linux utilise la bonne abréviation :
+</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+<p><img src="screen.jpg" class="img-fluid"></p>
+<!-- wp:paragraph -->
+<p>
+Voici enfin une traduction concrète de l’ordre de grandeur de ces différentes unités :
+</p>
+<!-- /wp:paragraph -->
+
+<table>
+<thead>
+<tr>
+<th>
+<strong>Unité</strong>
+</th>
+<th>
+<strong>Équivalent approximatif</strong>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+octet
+</td>
+<td>
+un caractère de base de l’alphabet latin
+</td>
+</tr>
+<tr>
+<td>
+kilooctet
+</td>
+<td>
+une icône type “favicon”
+</td>
+</tr>
+<tr>
+<td>
+mégaoctet
+</td>
+<td>
+le texte de <em>Harry Potter et la coupe de feu</em>
+</td>
+</tr>
+<tr>
+<td>
+gigaoctet
+</td>
+<td>
+environ 30 minutes de vidéo
+</td>
+</tr>
+<tr>
+<td>
+téraoctet
+</td>
+<td>
+le plus gros disque dur en vente en 2007
+</td>
+</tr>
+<tr>
+<td>
+pétaoctet
+</td>
+<td>
+2000 ans de musique encodée en MP3
+</td>
+</tr>
+<tr>
+<td>
+exaoctet
+</td>
+<td>
+trafic internet mondial par mois en 2004
+</td>
+</tr>
+<tr>
+<td>
+zettaoctet
+</td>
+<td>
+trafic internet mondial de l’année 2016
+</td>
+</tr>
+</tbody>
+
+</table>
+<!-- wp:paragraph -->
+<p>
+<strong>Sources</strong> :
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li>
+article <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Byte" target="_blank">Byte</a> sur Wikipédia en anglais.
+</li>
+<li>
+article <a rel="noreferrer noopener" href="https://fr.wikipedia.org/wiki/Bit" target="_blank">bit </a>sur Wikipédia en français.
+</li>
+<li>
+MOOC “NSI, les fondamentaux”, disponible sur f<a href="https://www.fun-mooc.fr/fr/" target="_blank" rel="noreferrer noopener">un-mooc</a>.
+</li>
+</ul>
+<!-- /wp:list -->
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 1 + "px";
+            div.style.height = height + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 1 + "px";
+            gutterDiv.style.height = height + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/flallemand\.fr\/blog/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+  </li>  
+</ul>
+    </div>   
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Mentions légales</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

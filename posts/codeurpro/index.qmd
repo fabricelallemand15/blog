@@ -1,0 +1,50 @@
+---
+title: "La chaîne YouTube codeur-pro"
+subtitle: ""
+description: ""
+date: "2022-07-2"
+categories: [Informatique, NSI, Vidéothèque]
+image: "codeurpro.png"
+---
+
+<!-- wp:paragraph -->
+<p>La chaîne YouTube codeur-pro est une bonne source de petites vidéos très bien faites et éclairantes sur différents aspects du programme de NSI.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Attention, cependant, les élèves de NSI ne sont pas la cible visée par cette chaîne, donc certains éléments évoqués vont bien plus loin que le programme !</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Dans la série "Bases de l'informatique", les vidéos suivantes sont incontournables :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Comment fonctionne un ordinateur ?</h2>
+<!-- /wp:heading -->
+
+<iframe class = "video" src="https://www.youtube.com/embed/85XUJXHbjBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!-- wp:heading -->
+<h2>Un système d'exploitation, c'est quoi ?</h2>
+<!-- /wp:heading -->
+
+<iframe class="video" src="https://www.youtube.com/embed/YScMI8lsy9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!-- wp:heading -->
+<h2>Le binaire, c'est quoi ?</h2>
+<!-- /wp:heading -->
+
+<iframe class="video" src="https://www.youtube.com/embed/ysoWgx186DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!-- wp:heading -->
+<h2>Les portes logiques</h2>
+<!-- /wp:heading -->
+
+<iframe class="video" src="https://www.youtube.com/embed/iTH39L2d7bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<!-- wp:heading -->
+<h2>Comment créer un programme ?</h2>
+<!-- /wp:heading -->
+
+<iframe class="video" src="https://www.youtube.com/embed/WCxMw9qi8TE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

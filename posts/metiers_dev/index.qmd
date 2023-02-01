@@ -1,0 +1,20 @@
+---
+title: "Les métiers du développement et de l'infrastructure"
+subtitle: ""
+description: ""
+date: "2022-11-20"
+categories: [Informatique, Orientation, NSI, Vidéothèque]
+image: "cookie_connecte.png"
+---
+
+
+<p>Dans cette très bonne vidéo publiée sur la chaîne <a href="https://www.youtube.com/@Cookieconnecte" target="_blank" rel="noreferrer noopener">Youtube Cookie connecté</a>, les différents métiers du développement et de l'infrastructure sont présentés.</p>
+
+
+
+<p>C'est l'occasion de découvrir les différences entre les différents métiers qui tournent autour du développement et du maintien de sites web.</p>
+
+
+<!-- wp:html -->
+<iframe class="video" style="margin:0 auto;" title="Découvrez les métiers du dev et de l'infra en 7 minutes" src="https://tube-sciences-technologies.apps.education.fr/videos/embed/1993411d-0363-4fb9-a32a-6751dc88d24e?start=1m17s&amp;stop=6m20s" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="100%" frameborder="0"></iframe>
+<!-- /wp:html -->

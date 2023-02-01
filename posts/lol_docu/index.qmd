@@ -1,0 +1,44 @@
+---
+title: "LOL - LOgiciel Libre, une affaire sérieuse"
+subtitle: "documentaire de François Zaïdi, écrit par Léa Deneuville et Thierry Bayoud"
+description: ""
+date: "2022-11-30"
+categories: [Informatique, Vidéothèque]
+image: "LoL_AfficheLDH-800x500.jpg"
+---
+
+
+<p>Ce titre est celui d'un documentaire  de François Zaïdi, écrit par Léa Deneuville et Thierry Bayoud.</p>
+
+>
+>    <p>À travers les entretiens de quatorze intervenants, « LoL » est un voyage en 8 étapes dans le cœur de nos habitudes numériques.</p>
+>
+>
+>
+>    <p>Le logiciel est la base de l’informatique, outil indissociable de nos sociétés modernes. Un téléphone portable, un système d’alarme à domicile, ou même un réfrigérateur ou une voiture sont devenus des objets aujourd’hui largement informatisés. Ces logiciels sont composés de lignes de code, appelées code source. Or, depuis les années 70, ce code informatique a été caché par les fabricants, car source de profits.</p>
+>
+>
+>
+>    <p>À l’heure où les cinq plus grosses capitalisations boursières mondiales sont Google, Apple, Facebook, Amazon et Microsoft, les populations sont-elles au fait de l’impact que leur usage du numérique a sur leur vie ?</p>
+>
+>
+>
+>    <p>Et si nos utilisations logicielles venaient compromettre notre sécurité personnelle ? Et qu’en est-il de nos États ?</p>
+
+
+<p>Ce documentaire de 58 minutes a reçu le soutien de la Ligue des Droits de l'Homme et le prix du Meilleur Documentaire au <a rel="noreferrer noopener" href="http://blackseafilm.ro/winners-4//" target="_blank">Black Sea Film Festival 2021</a>.</p>
+
+
+
+<p>Ci-dessous, la bande-annonce du film et le film complet (diffusé sous licence libre !).</p>
+
+
+<!-- wp:html -->
+<iframe class="imago_video" src="https://www.imagotv.fr/php/embed.php?content_id=lol_logiciel_libre_une_affaire_serieuse&section_id=teaser&episod_id=1" width="100%" frameborder="0" allowfullscreen></iframe><script src="https://www.imagotv.fr/js/script/embed_video.js"></script>
+<!-- /wp:html -->
+
+<br>
+
+<!-- wp:html -->
+<iframe class="imago_video" src="https://www.imagotv.fr/php/embed.php?content_id=lol_logiciel_libre_une_affaire_serieuse&section_id=movie&episod_id=1" width="100%" frameborder="0" allowfullscreen></iframe><script src="https://www.imagotv.fr/js/script/embed_video.js"></script>
+<!-- /wp:html -->

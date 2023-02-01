@@ -1,0 +1,14 @@
+---
+title: "Les transistors expliqués"
+subtitle: ""
+description: ""
+date: "2022-07-2"
+categories: [Informatique, NSI, Vidéothèque]
+image: "transistors.png"
+---
+
+<!-- wp:paragraph -->
+<p>C'est le titre d'une excellente vidéo de la chaîne Mentalité Ingénieur, sur Youtube, qui explique de façon claire et imagée le fonctionnement d'un transistor, élément de base de toute puce informatique.</p>
+<!-- /wp:paragraph -->
+
+<iframe class="video" src="https://www.youtube.com/embed/Ey1nnEoADcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

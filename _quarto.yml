@@ -1,0 +1,55 @@
+project:
+  type: website
+
+website:
+  title: "Le bloc-notes de M. LALLEMAND"
+  favicon: favicon.png
+  site-url: https://flallemand.fr/blog
+  description: "Le blog de M. LALLEMAND, professeur de mathématiques"
+  repo-url: https://github.com/fabricelallemand15/blog
+  repo-actions: [edit, issue]
+  page-navigation: true
+  navbar:
+    background: light
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/fabricelallemand15/blog
+      - icon: twitter
+        href: https://twitter.com/MathsLallemand
+      - icon: mastodon
+        href: https://mastodon.mim-libre.fr/@lallemandfabrice
+      - icon: rss
+        href: index.xml
+  page-footer: 
+    left:
+      - href: http://creativecommons.org/licenses/by/4.0/
+        text: <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+    right: 
+      - text: "Mentions légales"
+        href: about.qmd
+      - icon: github
+        href: https://github.com/fabricelallemand15/blog
+  cookie-consent: true
+
+bibliography: references.bib
+
+format:
+  html:
+    lang: fr
+    link-external-icon: true
+    theme:
+      light: [flatly, theme_light.scss]
+      dark: [darkly, theme_dark.scss]
+    css: styles.css
+    toc: true
+    biblio-title: "Sources utilisées"
+    grid:
+      sidebar-width: 250px
+      body-width: 1000px
+      margin-width: 300px
+    code-block-border-left: "#31BAE9"
+    code-block-bg: true
+
+
+

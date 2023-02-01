@@ -1,0 +1,70 @@
+---
+title: "Un nouveau site vient de voir le jour : carmin.tv."
+subtitle: ""
+description: ""
+date: "2022-01-1"
+categories: [Mathématiques, Vidéothèque, Histoire]
+image: "logo-carmin.png"
+---
+
+[![](logo-carmin.png)](https://www.carmin.tv/fr/){target="_blank"}
+
+<!-- wp:jetpack/markdown {"source":"Il s'agit d'une plateforme de mise à disposition de vidéos de conférences, de séminaires de recherches en mathématiques. On y trouve aussi des interviews de mathématiciennes et de mathématiciens.\n\nLe CARMIN (Centre d'Accueil et de Rencontres Mathématiques INternationales) regroupe quatre instituts français de renommée internationale :\n\n* Centre International de Mathématiques Pures et Appliquées (CIMPA)\n* Centre International de Rencontres Mathématiques (CIRM)\n* Institut des Hautes Études Scientifiques (IHÉS)\n* Institut Henri Poincaré (IHP)\n\nOn peut lire sur la page \u0022À propos\u0022 de la plateforme :\n\n\u003e Ces instituts prestigieux encouragent la recherche en mathématiques et ses interactions avec les autres sciences (physique, informatique, biologie, etc) en accueillant les chercheurs du monde entier pour des courts et longs séjours et en organisant des conférences et des écoles.\n\u003e Ensemble, ces centres ont créé une plateforme de diffusion audiovisuelle afin de préserver la valeur scientifique et pédagogique des événements qu’ils organisent et de la partager avec le monde entier.\n\u003e La plateforme est équipée d’un outil de recherche avancé qui permet aux utilisateurs de parcourir efficacement des milliers de vidéos enrichies et de trouver rapidement le meilleur contenu pour leurs demandes.\n\nSi la plupart des vidéos proposées sont haut perchées, d'un niveau recherche universitaire et, donc, inaccessibles au grand public, on trouve aussi quelques conférences de vulgarisation.\n\nParmi les 4611 vidéos en ligne à l'heure où j'écris ces lignes, des filtres situés dans la colonne de gauche permettent de sélectionner la langue (anglais ou français) et le niveau des auditeurs. Par exemple, pour une audience \u0022General Public\u0022 en français, il reste 124 vidéos disponibles.\n\n## Quelques exemples de vidéos intéressantes et \u0022grand public\u0022 (quoique...) :\n"} -->
+<div class="wp-block-jetpack-markdown"><p>Il s'agit d'une plateforme de mise à disposition de vidéos de conférences, de séminaires de recherches en mathématiques. On y trouve aussi des interviews de mathématiciennes et de mathématiciens.</p>
+<p>Le CARMIN (Centre d'Accueil et de Rencontres Mathématiques INternationales) regroupe quatre instituts français de renommée internationale :</p>
+<ul>
+<li>Centre International de Mathématiques Pures et Appliquées (CIMPA)</li>
+<li>Centre International de Rencontres Mathématiques (CIRM)</li>
+<li>Institut des Hautes Études Scientifiques (IHÉS)</li>
+<li>Institut Henri Poincaré (IHP)</li>
+</ul>
+<p>On peut lire sur la page &quot;À propos&quot; de la plateforme :</p>
+<blockquote>
+<p>Ces instituts prestigieux encouragent la recherche en mathématiques et ses interactions avec les autres sciences (physique, informatique, biologie, etc) en accueillant les chercheurs du monde entier pour des courts et longs séjours et en organisant des conférences et des écoles.
+Ensemble, ces centres ont créé une plateforme de diffusion audiovisuelle afin de préserver la valeur scientifique et pédagogique des événements qu’ils organisent et de la partager avec le monde entier.
+La plateforme est équipée d’un outil de recherche avancé qui permet aux utilisateurs de parcourir efficacement des milliers de vidéos enrichies et de trouver rapidement le meilleur contenu pour leurs demandes.</p>
+</blockquote>
+<p>Si la plupart des vidéos proposées sont haut perchées, d'un niveau recherche universitaire et, donc, inaccessibles au grand public, on trouve aussi quelques conférences de vulgarisation.</p>
+<p>Parmi les 4611 vidéos en ligne à l'heure où j'écris ces lignes, des filtres situés dans la colonne de gauche permettent de sélectionner la langue (anglais ou français) et le niveau des auditeurs. Par exemple, pour une audience &quot;General Public&quot; en français, il reste 124 vidéos disponibles.</p>
+<h2>Quelques exemples de vidéos intéressantes et &quot;grand public&quot; (quoique...) :</h2>
+</div>
+<!-- /wp:jetpack/markdown -->
+
+<!-- wp:paragraph -->
+<p>"Démocratie, dictature … et mathématiques", de Gérard Grancher.</p>
+<!-- /wp:paragraph -->
+
+<iframe class='video' src="https://www.youtube.com/embed/lG_zdbvFZls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br>
+
+
+<!-- wp:paragraph -->
+<p>"Fermat, Mersenne, factorisation et nombres parfaits", de Daniel Perrin.</p>
+<!-- /wp:paragraph -->
+
+<iframe class='video' src="https://www.youtube.com/embed/J418w-SjnTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br>
+
+
+<!-- wp:paragraph -->
+<p>"Le triangle de Pascal et ses propriétés", de Christophe Soulé.</p>
+<!-- /wp:paragraph -->
+
+<iframe class='video' src="https://www.youtube.com/embed/d8YaWDepHhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br>
+
+
+<!-- wp:paragraph -->
+<p>"Georg Cantor et les infinis", de Patrick Dehornoy.</p>
+<!-- /wp:paragraph -->
+
+
+<iframe class='video' src="https://www.youtube.com/embed/cf15qYStKbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<!-- wp:paragraph -->
+<p><strong>Source</strong> : Unidivers</p>
+<!-- /wp:paragraph -->

@@ -1,0 +1,159 @@
+---
+title: "Mesurer la quantité d’information"
+subtitle: ""
+description: ""
+date: "2022-06-19"
+categories: [Informatique, NSI]
+image: "mesurerinfo.jpg"
+---
+
+<!-- wp:paragraph -->
+<p>En représentation binaire, TOUTE l'information est représentée à l'aide de deux symboles uniquement, en général 0 et 1.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:jetpack/markdown {"source":"Chaque chiffre d'une représentation binaire est appelé un **bit**. Ce mot provenant de l'anglais signifie _chiffre binaire_, _binary digit_, abrégé en \u0022bit\u0022. En anglais \u0022 a bit\u0022 signifie \u0022un morceau\u0022 ou \u0022un peu\u0022, ce qui convient très bien au chiffre binaire qui est donc l'unité la plus simple du monde numérique."} -->
+<div class="wp-block-jetpack-markdown"><p>Chaque chiffre d'une représentation binaire est appelé un <strong>bit</strong>. Ce mot provenant de l'anglais signifie <em>chiffre binaire</em>, <em>binary digit</em>, abrégé en &quot;bit&quot;. En anglais &quot; a bit&quot; signifie &quot;un morceau&quot; ou &quot;un peu&quot;, ce qui convient très bien au chiffre binaire qui est donc l'unité la plus simple du monde numérique.</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+
+<!-- wp:jetpack/markdown {"source":"Le **bit** est donc l'unité de mesure de base de l'information en informatique. Il constitue la quantité minimale d'information transmise dans un message."} -->
+<div class="wp-block-jetpack-markdown"><p>Le <strong>bit</strong> est donc l'unité de mesure de base de l'information en informatique. Il constitue la quantité minimale d'information transmise dans un message.</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+
+<!-- wp:jetpack/markdown {"source":"Mais les bits sont rarement seuls. On les regroupe usuellement par groupes de 8 bits, appelés **octets** en français et **bytes** en anglais. Les anglicistes chevronnés ne confondrons pas _bit_ et _byte_ dont la prononciation est différente !"} -->
+<div class="wp-block-jetpack-markdown"><p>Mais les bits sont rarement seuls. On les regroupe usuellement par groupes de 8 bits, appelés <strong>octets</strong> en français et <strong>bytes</strong> en anglais. Les anglicistes chevronnés ne confondrons pas <em>bit</em> et <em>byte</em> dont la prononciation est différente !</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+
+<!-- wp:jetpack/markdown {"source":"Les symboles associés à ces unités sont les suivants : \n\n| Unité | Symbole |\n|:\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d-:|\n|  bit  |    b    |\n| octet |    o    |\n| byte  |    B    |\n\nLes quantités d'information s'expriment souvent en milliers, en millions, en milliards de bits ou d'octets, on utilise donc des multiples de ces unités de base.\n\nLes préfixes officiellement reconnus par\nl'industrie sont similaires aux kilo-, méga-, ... du système SI. Ces\npréfixes ne se réfèrent pas à des puissances de 10 comme dans le système\nSI mais à des puissances de 2:\n\n\n|    Nom    | Abréviation |                   Quantité                   |\n|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d:|\n| kibioctet |     kio     |          $2^{10}=1024\\approx 10^3$           |\n| mébioctet |     Mio     |       $2^{20}=1\\ 048\\ 576\\approx 10^6$       |\n| gibioctet |     Gio     |    $2^{30}=1\\ 073\\ 741\\ 824\\approx 10^9$     |\n| tébioctet |     Tio     | $2^{40}=1 099\\ 511\\ 627\\ 776\\approx 10^{12}$ |\n\nEn anglais on remplacera le \u0022o\u0022 par un \u0022B\u0022.\n\nLa définition de ces préfixes est relativement récente : elle a été normalisée par la commission électrotechnique internationale en 1998. En pratique, on est souvent confronté à\nl'utilisation des préfixes traditionnels kilo-, méga-, tera-, *etc* du\nsystème SI, qui sont, pour rappel:\n\n|    Nom    | Abréviation |     Quantité     |\n|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d-:|:\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d\u002d:|\n| kilooctet |     ko      |  $10^3$ octets   |\n| mégaoctet |     Mo      |  $10^6$ octets   |\n| gigaoctet |     Go      |  $10^9$ octets   |\n| téraoctet |     To      | $10^{12}$ octets |\n\nDe la même façon, dans un contexte anglophone, on lire \u0022GB\u0022 plutôt que \u0022Go\u0022."} -->
+<div class="wp-block-jetpack-markdown"><p>Les symboles associés à ces unités sont les suivants :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Unité</th>
+<th style="text-align:center">Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit</td>
+<td style="text-align:center">b</td>
+</tr>
+<tr>
+<td style="text-align:center">octet</td>
+<td style="text-align:center">o</td>
+</tr>
+<tr>
+<td style="text-align:center">byte</td>
+<td style="text-align:center">B</td>
+</tr>
+</tbody>
+</table>
+<p>Les quantités d'information s'expriment souvent en milliers, en millions, en milliards de bits ou d'octets, on utilise donc des multiples de ces unités de base.</p>
+<p>Les préfixes officiellement reconnus par
+l'industrie sont similaires aux kilo-, méga-, ... du système SI. Ces
+préfixes ne se réfèrent pas à des puissances de 10 comme dans le système
+SI mais à des puissances de 2:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Nom</th>
+<th style="text-align:center">Abréviation</th>
+<th style="text-align:center">Quantité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">kibioctet</td>
+<td style="text-align:center">kio</td>
+<td style="text-align:center">$2^{10}=1024\approx 10^3$</td>
+</tr>
+<tr>
+<td style="text-align:center">mébioctet</td>
+<td style="text-align:center">Mio</td>
+<td style="text-align:center">$2^{20}=1\ 048\ 576\approx 10^6$</td>
+</tr>
+<tr>
+<td style="text-align:center">gibioctet</td>
+<td style="text-align:center">Gio</td>
+<td style="text-align:center">$2^{30}=1\ 073\ 741\ 824\approx 10^9$</td>
+</tr>
+<tr>
+<td style="text-align:center">tébioctet</td>
+<td style="text-align:center">Tio</td>
+<td style="text-align:center">$2^{40}=1 099\ 511\ 627\ 776\approx 10^{12}$</td>
+</tr>
+</tbody>
+</table>
+<p>En anglais on remplacera le &quot;o&quot; par un &quot;B&quot;.</p>
+<p>La définition de ces préfixes est relativement récente : elle a été normalisée par la commission électrotechnique internationale en 1998. En pratique, on est souvent confronté à
+l'utilisation des préfixes traditionnels kilo-, méga-, tera-, <em>etc</em> du
+système SI, qui sont, pour rappel:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Nom</th>
+<th style="text-align:center">Abréviation</th>
+<th style="text-align:center">Quantité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">kilooctet</td>
+<td style="text-align:center">ko</td>
+<td style="text-align:center">$10^3$ octets</td>
+</tr>
+<tr>
+<td style="text-align:center">mégaoctet</td>
+<td style="text-align:center">Mo</td>
+<td style="text-align:center">$10^6$ octets</td>
+</tr>
+<tr>
+<td style="text-align:center">gigaoctet</td>
+<td style="text-align:center">Go</td>
+<td style="text-align:center">$10^9$ octets</td>
+</tr>
+<tr>
+<td style="text-align:center">téraoctet</td>
+<td style="text-align:center">To</td>
+<td style="text-align:center">$10^{12}$ octets</td>
+</tr>
+</tbody>
+</table>
+<p>De la même façon, dans un contexte anglophone, on lire &quot;GB&quot; plutôt que &quot;Go&quot;.</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+
+<!-- wp:paragraph -->
+<p>Sur la capture d'écran ci-dessous, réalisée sous Windows 11, nous constatons que la valeur est affichée en Go, donc a priori en système décimal. Mais en réalité, la valeur affichée en octets correspond à 221 Gio. Le système ne respecte donc pas les conventions internationales.</p>
+<!-- /wp:paragraph -->
+
+![](explorer_7iqpQIkBlE.png)
+
+<!-- wp:jetpack/markdown {"source":"Ici, nous voyons qu'un système Linux utilise la bonne abréviation : "} -->
+<div class="wp-block-jetpack-markdown"><p>Ici, nous voyons qu'un système Linux utilise la bonne abréviation :</p>
+</div>
+<!-- /wp:jetpack/markdown -->
+
+![](screen.jpg)
+
+<!-- wp:paragraph -->
+<p>Voici enfin une traduction concrète de l'ordre de grandeur de ces différentes unités :</p>
+<!-- /wp:paragraph -->
+
+<table>
+<thead>
+<tr>
+<th><strong>Unité</strong></th><th><strong>Équivalent approximatif</strong></th >
+</tr>
+</thead>
+<tbody><tr><td>octet</td><td>un caractère de base de l'alphabet latin</td></tr><tr><td>kilooctet</td><td>une icône type "favicon"</td></tr><tr><td>mégaoctet</td><td>le texte de <em>Harry Potter et la coupe de feu</em></td></tr><tr><td>gigaoctet</td><td>environ 30 minutes de vidéo</td></tr><tr><td>téraoctet</td><td>le plus gros disque dur en vente en 2007</td></tr><tr><td>pétaoctet</td><td>2000 ans de musique encodée en MP3</td></tr><tr><td>exaoctet</td><td>trafic internet mondial par mois en 2004</td></tr><tr><td>zettaoctet</td><td>trafic internet mondial de l'année 2016</td></tr></tbody></table>
+
+<!-- wp:paragraph -->
+<p><strong>Sources</strong> : </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>article <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Byte" target="_blank">Byte</a> sur Wikipédia en anglais.</li><li>article <a rel="noreferrer noopener" href="https://fr.wikipedia.org/wiki/Bit" target="_blank">bit </a>sur Wikipédia en français.</li><li>MOOC "NSI, les fondamentaux", disponible sur f<a href="https://www.fun-mooc.fr/fr/" target="_blank" rel="noreferrer noopener">un-mooc</a>.</li></ul>
+<!-- /wp:list -->

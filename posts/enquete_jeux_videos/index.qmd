@@ -1,0 +1,49 @@
+---
+title: "Les Français et le Jeu Vidéo"
+subtitle: ""
+description: ""
+date: "2022-11-17"
+categories: [Informatique, Orientation, NSI, Jeux]
+image: "jeuxVideo-jeuxVideo.png"
+---
+
+<!-- wp:paragraph -->
+<p>Le SELL, Syndicat des Éditeurs de Logiciels de Loisirs, dévoile les résultats de son étude annuelle « Les Français et le Jeu Vidéo » conduite par Médiamétrie.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Les résultats remettent en cause certaines idées reçues sur les jeux vidéos.</p>
+<!-- /wp:paragraph -->
+
+![](jeuxVideo-jeuxVideo.png)
+
+
+<!-- wp:paragraph -->
+<p>Tous ces résultats, ainsi que l'<a href="https://www.sell.fr/news/lessentiel-du-jeu-video-novembre-2022" target="_blank" rel="noreferrer noopener">article qui les accompagne</a> est présenté de manière très positive. N'oublions pas que les auteurs sont les représentants de l'industrie des jeux vidéos. Ils ont donc tout intérêt à présenter cette activité sous son meilleur jour.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Les atouts du jeu vidéo dans la stimulation de certaines capacités de réflexion et visuelles sont connus, mais leurs dangers ne doivent pas être oubliés. Le principal semble être le problème de l'addiction et du temps passé à jouer. Trop de temps passé à jouer peut provoquer des troubles du sommeil et de la concentration, un manque d'activité physique, voire une rupture de liens sociaux et un repli sur soi.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>L'OMS, Organisation Mondiale de la Santé, a classé les <a href="https://www.who.int/fr/news-room/questions-and-answers/item/gaming-disorder" target="_blank" rel="noreferrer noopener"><strong>Troubles du jeu vidéo</strong></a> dans sa classification internationale des maladies depuis 2018.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>On peut lire sur le site de l'OMS le paragraphe suivant :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><!-- wp:paragraph -->
+<p>Des études montrent que le trouble du jeu vidéo ne touche qu’une petite partie des personnes qui utilisent des jeux numériques ou des jeux vidéo. Néanmoins, tout joueur doit être attentif au temps passé sur les jeux, en particulier si ses activités quotidiennes en pâtissent, ainsi qu’à tout changement physique ou psychologique, sur le plan social et celui de sa santé, qui pourrait être attribué à un comportement de jeu. </p>
+<!-- /wp:paragraph --></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:paragraph -->
+<p>Il convient donc de rester raisonnable en se fixant des limites de temps quotidien de jeu. Une heure par jour maximum semble être une bonne idée. D'une manière générale, c'est le temps total quotidien devant un écran qu'il est très conseillé de limiter.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pour en savoir plus, <a href="https://www.passeportsante.net/fr/psychologie/Fiche.aspx?doc=addiction-jeux-videos" target="_blank" rel="noreferrer noopener">quelques conseils sur ce site</a> et <a href="https://lebonusagedesecrans.fr/essentiel-a-savoir/" target="_blank" rel="noreferrer noopener">beaucoup d'informations sur celui-ci</a>.</p>
+<!-- /wp:paragraph -->

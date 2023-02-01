@@ -1,0 +1,94 @@
+---
+title: "Participer aux trophées NSI"
+subtitle: ""
+description: ""
+date: "2022-09-8"
+categories: [Informatique, Python, NSI]
+image: "image_trophees_nsi.png"
+---
+
+<!-- wp:paragraph -->
+<p><strong>Les trophées NSI récompensent des projets informatiques réalisés dans le cadre de l'enseignement de spécialité « numérique et sciences informatiques ».</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Les objectifs du concours sont les suivants :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Valoriser l’enseignement de spécialité NSI.</li><li>Mettre en avant les projets réalisés pendant l'année scolaire.</li><li>Encourager le travail en équipe.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>L'inscription et la participation se font par l'intermédiaire du professeur de NSI des participants.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>De quoi s'agit-il ?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tous les élèves suivant la spécialité NSI en première et/ou en terminale peuvent participer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Les élèves qui désirent participer aux trophées NSI forment une équipe de 2 à 5 personnes maximum (du même niveau scolaire). Ils choisissent un projet informatique qu'ils vont développer en équipe tout au long de l'année scolaire. Ce projet doit obligatoirement s'inscrire dans le cadre du programme de NSI. Il peut s'agir de développer un logiciel répondant à un certain besoin, un site web, ... En ce qui concerne la programmation, le langage utilisé a priori est Python, mais d'autres langages open source peuvent être acceptés. Le code doit être soigné, documenté et placé sous licence libre. Enfin, une courte vidéo de présentation du projet doit être réalisée par l'équipe.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lors de la session 2022, la date limite d'envoi des projets était le 5 mai 2022.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Les projets sont ensuite évalués, d'abord au niveau académique (Auvergne-Rhône-Alpes), puis au niveau national. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Critères d'évaluation</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Voici les critères d'évaluations définis dans le règlement du concours :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Présentation globale du projet</li><li>Documentation et lisibilité du projet</li><li>Présentation orale (vidéo)</li><li>Illustration du projet (image 500px x 500px)</li><li>Esprit logique de l'équipe</li><li>Originalité et créativité du projet et/ou du dossier</li><li>Organisation de l'équipe, du projet</li><li>Fonctionnement et opérationnalité du projet</li><li>Ouverture : idées d'amélioration, pistes de développement, analyse critique</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Récompenses</h2>
+<!-- /wp:heading -->
+
+![](achievement.png){width="25%"}
+
+<!-- wp:paragraph -->
+<p>Plusieurs prix sont décernés au niveau académique.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Au niveau national, les récompenses suivantes sont annoncées :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Deux prix sont obligatoirement remis :<ul><li>Prix du meilleur projet Première</li><li>Prix du meilleur projet Terminale</li></ul></li><li>Les autres catégories :<ul><li>Prix spécial du jury (projet coup de cœur)</li><li>Prix de la créativité (originalité et créativité)</li><li>Prix des futurs ingénieurs et futures ingénieuses (dimension technique et scientifique forte)</li><li>Prix de la mixité (part et rôle des filles dans l’équipe et/ou sujet traitant de cette thématique)</li><li>Prix de la citoyenneté (projet inclut une dimension à impact social ou sociétal)</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Exemples de projets réalisés pour la session 2022</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Vous trouverez sur le site officiel les présentations des projets des lauréats de la session 2022.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Meilleur projet Première : SnowFake, simulateur de croissance de flocons de neige</li><li>Meilleur projet Terminale : Pytris, implémentation Python/Pygame du célèbre jeu TETRIS.</li><li>Prix de la citoyenneté : EDUCOVOIT', gestionnaire de covoiturage entre collègues</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Et beaucoup d'autres exemples : <a href="https://trophees-nsi.fr/resultats" target="_blank" rel="noreferrer noopener">https://trophees-nsi.fr/resultats</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Source : le site officiel des trophées : <a href="https://trophees-nsi.fr/" target="_blank" rel="noreferrer noopener">https://trophees-nsi.fr/</a></p>
+<!-- /wp:paragraph -->

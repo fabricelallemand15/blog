@@ -1,0 +1,163 @@
+---
+title: "Mesurer le temps d'exécution d'un fragment de code"
+subtitle: ""
+description: ""
+date: "2022-06-5"
+categories: [Informatique, NSI, Python]
+image: "timeit_1-2.jpg"
+---
+
+<!-- wp:paragraph -->
+<p>Un moyen intuitif de comparer l'efficacité de deux portions de code est de mesurer leur temps d'exécution en fonction de la taille des données. Le <a href="https://docs.python.org/fr/3/library/timeit.html#" target="_blank" rel="noreferrer noopener">module <code>timeit</code> de Python</a> permet de faire cela de façon semi-automatisée. Nous allons voir comment dans cet article, en considérant trois fonctions différentes qui renvoient le n-ième $F_n$ de <a rel="noreferrer noopener" href="https://fr.wikipedia.org/wiki/Suite_de_Fibonacci" target="_blank">la suite de Fibonacci</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pour les besoins du code présent dans la suite, on commencera par les importations suivantes :</p>
+<!-- /wp:paragraph -->
+
+```{python}
+import matplotlib.pyplot as plt
+import timeit
+```
+
+<!-- wp:heading -->
+<h2>Fonctions à tester</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Ces fonctions sont issues d'un <a href="https://flallemand.fr/nsi/terminale/01_langages/recurs_exos/#exercice-2-suite-de-fibonacci" target="_blank" rel="noreferrer noopener">exercice du chapitre "Récursivité" du cours de NSI de terminale</a>. Cependant, l'objectif de cet article est juste de montrer un moyen de comparer et de visualiser les vitesses d'exécution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Nous considérons les trois fonctions suivantes. La première retourne le nombre $F_n$ par une méthode itérative.</p>
+<!-- /wp:paragraph -->
+
+```{python}
+def fibo_iter(n: int) -> int:
+    """Suite de Fibonacci, version itérative"""
+    if n == 0:
+        return 0
+    else:
+        f0, f1 = 0, 1
+        for k in range(1, n):
+            f0, f1 = f1, f0 + f1
+        return f1
+```
+
+<!-- wp:paragraph -->
+<p>La deuxième fonction est une fonction récursive qui traduit directement la définition de la suite de Fibonacci.</p>
+<!-- /wp:paragraph -->
+
+```{python}
+def fibo_rec(n: int) -> int:
+    """Suite de Fibonacci version récursive"""
+    # Cas de base
+    if n == 0 or n == 1:
+        return n
+    # Récursion
+    else:
+        return fibo_rec(n-2)+fibo_rec(n-1)
+```
+
+<!-- wp:paragraph -->
+<p>La troisième est également récursive et utilise les idées de la programmation dynamique.</p>
+<!-- /wp:paragraph -->
+
+```{python}
+def fibo_dyn(n: int, suite: dict = {0: 0, 1: 1}) -> int:
+    """Suite de Fibonacci version dynamique"""
+    # Cas de base
+    if n == 0 or n == 1:
+        return n
+    # Récursion
+    else:
+        # Si Fn est déjà calculé, on le retourne
+        if n in suite.keys():
+            return suite[n]
+        else:
+            # Sinon, on le calcule et on le garde en mémoire
+            f = fibo_dyn(n-2, suite) + fibo_dyn(n-1, suite)
+            suite[n] = f
+            return f
+```
+
+<!-- wp:heading -->
+<h2>Utilisation de timeit</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Par exemple, pour obtenir le temps d'exécution de 100 appels à la fonction fibo_iter() avec le paramètre 15, on entre le script suivant :</p>
+<!-- /wp:paragraph -->
+
+```{python}
+timeit.timeit('fibo_iter(15)', number=1000, globals=globals())
+```
+
+<!-- wp:paragraph -->
+<p>et on obtient en sortie le temps d'exécution en secondes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Beaucoup d'autres choses sont possibles avec le module timeit, mais cette simple commande nous suffira.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Visualisation graphique</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Dans le script suivant, nous définissions un tableau des abscisses correspondant aux différentes valeurs de $n$ pour lesquelles nous calculons $F_n$ : $n$ varie de 0 à 15 avec un pas de 1 (ligne 1)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ensuite, pour chacune des fonctions, nous calculons le temps d'exécution de chaque terme de la suite (100 fois) et nous stockons les résultats dans un tableau d'ordonnées. (lignes 5 à 11)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Nous traçons ensuite les courbes correspondantes. (lignes 12 à 15)</p>
+<!-- /wp:paragraph -->
+
+```{python}
+#| code-line-numbers: "true"
+abscisses = [k for k in range(0, 20, 1)]
+ordonnees_rec = []
+ordonnees_iter = []
+ordonnees_dyn = []
+for x in abscisses:
+    ordonnees_iter.append(timeit.timeit(
+        'fibo_iter(x)', number=100, globals=globals()))
+    ordonnees_rec.append(timeit.timeit(
+        'fibo_rec(x)', number=100, globals=globals()))
+    ordonnees_dyn.append(timeit.timeit(
+        'fibo_dyn(x)', number=100, globals=globals()))
+plt.plot(abscisses, ordonnees_iter, 'b')
+plt.plot(abscisses, ordonnees_rec, 'r')
+plt.plot(abscisses, ordonnees_dyn, 'g')
+plt.show()
+```
+
+<!-- wp:paragraph -->
+<p>Nous observons pour la fonction récursive une courbe caractéristique d'une croissance exponentielle du temps d'exécution. Les courbes bleue et verte correspondant aux deux autres méthodes sont confondues. Pour les distinguer, nous allons faire une nouvelle figure sans les données de la fonction <code>fibo_rec</code> cette fois ci (image réalisée avec $n$ variant de 0 à 100) :</p>
+<!-- /wp:paragraph -->
+
+```{python}
+abscisses = [k for k in range(0, 100, 1)]
+ordonnees_iter = []
+ordonnees_dyn = []
+for x in abscisses:
+    ordonnees_iter.append(timeit.timeit(
+        'fibo_iter(x)', number=100, globals=globals()))
+    ordonnees_dyn.append(timeit.timeit(
+        'fibo_dyn(x)', number=100, globals=globals()))
+plt.plot(abscisses, ordonnees_iter, 'b')
+plt.plot(abscisses, ordonnees_dyn, 'g')
+plt.show()
+```
+
+<!-- wp:paragraph -->
+<p>Ce graphique suggère une croissance linéaire pour la méthode itérative et des performances encore meilleures pour la méthode  dynamique.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Bien sûr, cette démarche ne remplace pas une étude théorique rigoureuse et un calcul de complexité, mais elle permet, grâce à la visualisation, de comparer rapidement deux algorithmes et de conjecturer leur complexité.</p>
+<!-- /wp:paragraph -->

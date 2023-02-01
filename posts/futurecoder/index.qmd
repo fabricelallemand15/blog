@@ -1,0 +1,45 @@
+---
+title: "Futurecoder - Le code du futur, c'est vous !"
+subtitle: ""
+description: ""
+date: "2022-11-1"
+categories: [Informatique, Python, NSI]
+image: "futurecoder-futurecoder.png"
+---
+
+<!-- wp:paragraph -->
+<p><a href="https://fr.futurecoder.io/" target="_blank" rel="noreferrer noopener">Voici un nouveau site pour apprendre les bases de Python</a>. Les cours ont l'avantage d'être disponibles en français. Autre point fort, l'ensemble du site est libre, open-source et gratuit.</p>
+<!-- /wp:paragraph -->
+
+![](futurecoder-futurecoder.png)
+
+<!-- wp:paragraph -->
+<p>Dans la pratique, tout se fait dans le navigateur de façon interactive. Les contenus partent vraiment de zéro et vont pour l'instant jusqu'aux dictionnaires, en passant par un mini-projet de jeu de morpion.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Des outils sont disponibles pour aider à l'apprentissage :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>débogage facilité par l'utilisation de débogueurs graphiques (comme Python Tutor ou Bird's Eye) ;</li><li>messages d'erreurs plus faciles à comprendre ;</li><li>code à remettre dans l'ordre en cas de blocage sur un exercice ;</li><li>solutions pas à pas.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><a href="https://fr.futurecoder.io/" target="_blank" rel="noreferrer noopener">Futurecoder</a> est donc un excellent outil pour apprendre à programmer en Python.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Avec quelques fonctionnalités supplémentaires, comme la création de classes et de différents status d'utilisateurs (professeur, élève), il pourrait très bien à l'avenir être utilisé dans le cadre scolaire.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Pour en savoir plus sur toutes les fonctionnalités, regarder la vidéo ci-dessous :</p>
+<!-- /wp:paragraph -->
+
+<iframe class="video" width="80%" src="https://www.youtube.com/embed/un1BrrV57PA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br>
+<!-- wp:paragraph -->
+<p>Source : <a href="https://korben.info/futurecoder-cours-gratuits-python.html" target="_blank" rel="noreferrer noopener">https://korben.info/futurecoder-cours-gratuits-python.html</a> et le site <a href="https://fr.futurecoder.io/" target="_blank" rel="noreferrer noopener">Futurecoder</a>.</p>
+<!-- /wp:paragraph -->

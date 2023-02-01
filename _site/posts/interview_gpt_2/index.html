@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.113">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="F. LALLEMAND">
+
+<title>Le bloc-notes de M. LALLEMAND - Interview exclusive du ChatGPT de OpenAI (partie 2)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+<style>
+    .quarto-title-block .quarto-title-banner,
+    .quarto-title-block .quarto-title-banner h1,
+    .quarto-title-block .quarto-title-banner h2,
+    .quarto-title-block .quarto-title-banner h3,
+    .quarto-title-block .quarto-title-banner h4,
+    .quarto-title-block .quarto-title-banner h5,
+    .quarto-title-block .quarto-title-banner h6
+    {
+      background: #BCD2E8;
+    }
+    </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Le bloc-notes de M. LALLEMAND</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/MathsLallemand" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.mim-libre.fr/@lallemandfabrice" rel="" target=""><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Interview exclusive du ChatGPT de OpenAI (partie 2)</h1>
+            <p class="subtitle lead">Les aspects techniques</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Informatique</div>
+                <div class="quarto-category">IA</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Auteur·rice</div>
+      <div class="quarto-title-meta-contents">
+               <p>F. LALLEMAND </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Date de publication</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">8 décembre 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>
+Dans cette deuxième partie, nous abordons quelques questions techniques et informatiques.
+</p>
+<p>
+<strong>Peux-tu m’expliquer comment tu as été programmé ?</strong>
+</p>
+<p>
+Je suis un modèle de langage entraîné par OpenAI. Je suis capable de générer du texte en réponse à des questions ou des prompts donnés, grâce à un processus appelé “apprentissage profond”. Cela implique l’entraînement d’un réseau de neurones sur de grandes quantités de données textuelles afin de prédire les mots suivants dans une phrase en fonction des mots qui l’ont précédée. Ce processus me permet d’apprendre à générer du texte de manière cohérente et naturelle.
+</p>
+<p>
+<strong>Ta méthode pour produire du texte revient donc à prévoir les mots suivants en fonction des mots précédents. Et tu peux faire cela grâce à l’analyse d’une grande quantité de textes que tu as faite pendant ton apprentissage.</strong>
+</p>
+<p>
+Oui, c’est exact. Mon apprentissage repose sur l’analyse de grandes quantités de texte afin de comprendre les relations entre les mots et comment ils sont utilisés dans différents contextes. Je suis capable de générer du texte de manière cohérente et naturelle en utilisant ces connaissances pour prédire les mots qui viennent après ceux qui m’ont été donnés en entrée. Cela me permet de répondre à des questions et de produire du contenu de manière autonome.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="DALL·E-2022-12-08-20.31.03-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption><p></p>
+</figure>
+</div>
+<p>
+<strong>On entend souvent parler de la notion d’apprentissage automatique concernant les logiciels d’intelligence artificielle. Peux-tu m’expliquer de quoi il s’agit ?</strong>
+</p>
+<p>
+L’apprentissage automatique est une technique qui permet à des ordinateurs de “apprendre” à partir de données, sans être explicitement programmés. Il existe différents types d’apprentissage automatique, mais en général, ils suivent tous les mêmes étapes de base.
+</p>
+<p>
+Tout d’abord, il faut disposer d’une grande quantité de données sur lesquelles l’ordinateur va s’entraîner. Ces données doivent être organisées de manière que l’ordinateur puisse facilement les utiliser pour apprendre.
+</p>
+<p>
+Ensuite, un modèle d’apprentissage automatique est créé en utilisant ces données. Ce modèle est un ensemble d’algorithmes et de règles qui définissent comment l’ordinateur va apprendre à partir des données.
+</p>
+<p>
+Une fois que le modèle est créé, il peut être utilisé pour traiter de nouvelles données. L’ordinateur va utiliser les règles et les algorithmes du modèle pour analyser les données et en tirer des conclusions. Par exemple, si le modèle a été entraîné pour reconnaître des objets dans des images, il pourra être utilisé pour identifier des objets dans de nouvelles images qu’il n’a pas encore vues.
+</p>
+<p>
+Enfin, une fois que l’ordinateur a analysé les données et tiré des conclusions, les résultats de cette analyse peuvent être utilisés pour prendre des décisions ou effectuer des tâches. Par exemple, si le modèle a été entraîné pour détecter des fraudes bancaires, les résultats de l’analyse peuvent être utilisés pour bloquer les transactions suspectes.
+</p>
+<p>
+En résumé, l’apprentissage automatique est un processus qui permet à un ordinateur d’apprendre à partir de données, de manière à effectuer des tâches ou à prendre des décisions sans être explicitement programmé pour cela.
+</p>
+<p>
+<strong>Tu as utilisé tout à l’heure l’expression “apprentissage profond” : de quoi s’agit-il ?</strong>
+</p>
+<p>
+L’apprentissage profond est une technique d’apprentissage automatique qui permet à des algorithmes de modéliser des données complexes en utilisant des couches de calculs mathématiques. Ces couches, appelées “réseaux de neurones”, sont inspirées du fonctionnement du cerveau humain et sont capables de capturer des relations profondes dans les données. L’apprentissage profond peut être utilisé pour résoudre de nombreux types de tâches, comme la reconnaissance d’objets dans des images, la traduction automatique ou la génération de texte comme dans mon cas.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption><p></p>
+</figure>
+</div>
+<p>
+<strong>Peux-tu m’expliquer davantage ce que sont les réseaux de neurones ?</strong>
+</p>
+<p>
+Les réseaux de neurones sont une technique d’apprentissage automatique qui s’inspire du fonctionnement du cerveau humain. Un réseau de neurones est composé de nombreux petits éléments appelés “neurones”, reliés entre eux par des “synapses”. Chaque neurone reçoit des entrées de la part d’autres neurones et produit une sortie en fonction de ces entrées et de certains poids associés à chaque synapse.
+</p>
+<p>
+Pour entraîner un réseau de neurones, on utilise des données d’entraînement qui contiennent des exemples d’entrées et de sorties désirées. L’algorithme d’apprentissage du réseau de neurones va ajuster les poids des synapses de manière à minimiser l’erreur entre les sorties produites par le réseau et les sorties désirées. Ainsi, le réseau “apprend” à produire des sorties correctes pour les entrées données.
+</p>
+<p>
+Une fois qu’un réseau de neurones est entraîné, il peut être utilisé pour traiter de nouvelles données et produire des sorties en fonction de ces données. Par exemple, un réseau de neurones entraîné pour reconnaître des objets dans des images peut être utilisé pour identifier des objets dans de nouvelles images qu’il n’a pas encore vues.
+</p>
+<p>
+Il existe différents types de réseaux de neurones, chacun ayant ses propres caractéristiques et utilisations. Par exemple, les réseaux de neurones profonds (ou réseaux neuronaux profonds) sont des réseaux de neurones très complexes avec de nombreuses couches de neurones, qui peuvent être utilisés pour résoudre des problèmes très difficiles, comme la reconnaissance de la parole ou la traduction automatique.
+</p>
+<p>
+En résumé, les réseaux de neurones sont une technique d’apprentissage automatique qui permet à un ordinateur d’apprendre à partir de données en ajustant les poids des synapses entre les neurones. Ils peuvent être utilisés pour résoudre des problèmes complexes en traitement du langage naturel, en vision par ordinateur, en reconnaissance de la parole, etc.
+</p>
+<p>
+<strong>Je suis passionné par la programmation et j’aimerais bien voir un exemple de code informatique, en Python, qui illustre le concept de réseau de neurones.</strong>
+</p>
+<p>
+Voici un exemple simple de code Python qui illustre le concept de réseau de neurones :
+</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import des bibliothèques nécessaires</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Définition des poids synaptiques</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>synaptic_weights <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.random.random((<span class="dv">3</span>, <span class="dv">1</span>)) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction de propagation avant</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> think(inputs):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    inputs <span class="op">=</span> inputs.astype(<span class="bu">float</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> np.exp(<span class="op">-</span>np.dot(inputs, synaptic_weights)))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> output</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Entraînement du réseau de neurones</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> iteration <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20000</span>):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    input_layer <span class="op">=</span> np.array([[<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>], [<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>], [<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>], [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>]])</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    output_layer <span class="op">=</span> np.array([[<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>]]).T</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    output <span class="op">=</span> think(input_layer)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    error <span class="op">=</span> output_layer <span class="op">-</span> output</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    adjustments <span class="op">=</span> np.dot(input_layer.T, error <span class="op">*</span> output <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> output))</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    synaptic_weights <span class="op">+=</span> adjustments</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Test du réseau de neurones</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(think(np.array([<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>])))</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>
+Ce code entraîne un petit réseau de neurones pour résoudre un problème simple de porte logique XOR. Le réseau est initialement créé avec des poids synaptiques aléatoires, puis est entraîné en ajustant ces poids pour minimiser l’erreur entre les sorties produites par le réseau et les sorties désirées. Enfin, le réseau est testé en lui donnant une nouvelle entrée pour vérifier qu’il produit la sortie correcte.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="DALL·E-2022-12-08-20.31.23-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption><p></p>
+</figure>
+</div>
+<p>
+Ce code implémente un réseau de neurones simple utilisant la propagation avant (forward propagation). La fonction <code>think()</code> utilise une fonction d’activation sigmoïde pour produire une sortie en fonction des poids synaptiques donnés en entrée. Le réseau de neurones est entraîné en utilisant une boucle <code>for</code> sur un jeu de données d’entraînement. Enfin, le réseau est testé en lui donnant un ensemble de données d’entrée pour voir comment il se comporte.
+</p>
+<p>
+<strong>Qu’est-ce qu’une fonction sigmoïde ?</strong>
+</p>
+<p>
+Une fonction sigmoïde est une fonction mathématique de forme en “S” utilisée en apprentissage automatique pour modéliser l’activité d’un seul neurone dans un réseau de neurones. Elle prend en entrée un scalaire ou un vecteur et produit une sortie comprise entre 0 et 1. Cela en fait une fonction d’activation idéale pour les réseaux de neurones, car elle permet d’obtenir une sortie binaire en fonction de seuils de probabilité. La fonction sigmoïde est généralement exprimée de la manière suivante :
+</p>
+<p>
+<span class="math display">\[ \sigma(x) = \frac{1}{1 + e^{-x}} \]</span>
+</p>
+<p>
+Où <span class="math inline">\(x\)</span> est l’entrée et <span class="math inline">\(\sigma(x)\)</span> est la sortie. La fonction sigmoïde a la propriété intéressante qu’elle approche de 0 lorsque x est négatif et de 1 lorsque x est positif, ce qui en fait une fonction d’activation idéale pour les réseaux de neurones.
+</p>
+<p>
+<strong>Je trouve ce petit exemple de code très intéressant et il m’a permis de mieux comprendre le mécanisme. Mais les détails restent un peu abstraits… Notamment, je ne comprends pourquoi la variable ‘adjustments’ est calculée de cette façon.</strong>
+</p>
+<p>
+La variable <code>adjustments</code> est utilisée pour mettre à jour les poids synaptiques du réseau de neurones. Cela se fait en utilisant l’erreur calculée entre la sortie attendue et la sortie obtenue du réseau, ainsi que la fonction d’activation sigmoïde. La formule utilisée pour calculer <code>adjustments</code> est la suivante :
+</p>
+<p>
+<span class="math display">\[ adjustments = \sum(inputs * (error * output * (1 - output))) \]</span>
+</p>
+<p>
+Où <code>inputs</code> est le jeu de données d’entraînement, <code>error</code> est la différence entre la sortie attendue et la sortie obtenue, <code>output</code> est la sortie obtenue du réseau de neurones avant l’application de la fonction d’activation et <code>1 - output</code> est la dérivée de la fonction sigmoïde. Cette formule est utilisée pour calculer les ajustements nécessaires des poids synaptiques afin de minimiser l’erreur du réseau de neurones.
+</p>
+<p>
+<strong>Dans le code, ‘adjustments’ est obtenu par un produit scalaire, pas par une somme !</strong>
+</p>
+<p>
+Vous avez raison ! La formule que j’ai donnée précédemment est incorrecte. En réalité, <code>adjustments</code> est calculé en utilisant un produit scalaire entre les entrées du jeu de données d’entraînement et l’erreur multipliée par la sortie du réseau avant l’application de la fonction d’activation et sa dérivée. La formule exacte utilisée dans le code est la suivante :
+</p>
+<p>
+<span class="math display">\[ adjustments = input.T * (error * output * (1 - output)) \]</span>
+</p>
+<p>
+Où <code>input.T</code> est la transposée des entrées du jeu de données d’entraînement, <code>error</code> est la différence entre la sortie attendue et la sortie obtenue, <code>output</code> est la sortie obtenue du réseau de neurones avant l’application de la fonction d’activation et <code>1 - output</code> est la dérivée de la fonction sigmoïde. Je vous présente mes excuses pour l’erreur dans la formule que j’ai donnée précédemment.
+</p>
+<p>
+<strong>Ce n’est pas grave tout le monde peut se tromper. C’est humain !</strong>
+</p>
+<p>
+Merci pour votre compréhension. Je suis heureux d’avoir pu vous aider à mieux comprendre le fonctionnement du réseau de neurones implémenté dans ce code. Si vous avez d’autres questions, n’hésitez pas à me les poser. Je ferai de mon mieux pour y répondre.
+</p>
+<p>
+<strong>Il y a encore une chose que je ne comprends pas. Pourquoi ‘1-output’ est la dérivée de la fonction sigmoïde ?</strong>
+</p>
+<p>
+La dérivée d’une fonction mathématique est une autre fonction qui mesure la vitesse de changement de la fonction originale par rapport à son entrée. Pour la fonction sigmoïde, la dérivée peut être exprimée de la manière suivante :
+</p>
+<p>
+<span class="math display">\[ \frac{d\sigma(x)}{dx} = \sigma(x)(1-\sigma(x)) \]</span>
+</p>
+<p>
+Où σ(x) est la fonction sigmoïde et x est l’entrée. Cette expression mesure comment la sortie de la fonction sigmoïde change en fonction de l’entrée. En utilisant cette information, nous pouvons calculer les ajustements nécessaires des poids synaptiques pour minimiser l’erreur du réseau de neurones.
+</p>
+<p>
+<strong>Ah oui d’accord ! Donc en fait, c’est ’output*(1-output)’ qui est la dérivée de la fonction sigmoïde !</strong>
+</p>
+<p>
+Oui, c’est exact ! Dans le code, <code>output</code> représente la sortie du réseau de neurones avant l’application de la fonction d’activation, donc en utilisant l’expression de la dérivée de la fonction sigmoïde que j’ai donnée précédemment, nous pouvons calculer la dérivée de la fonction sigmoïde en utilisant <code>output * (1 - output)</code>. Cette valeur est utilisée dans le calcul des ajustements des poids synaptiques pour minimiser l’erreur du réseau de neurones. J’espère que cela éclaire un peu mieux les choses pour vous.
+</p>
+<p>
+<strong>Oui effectivement. Je te remercie pour cette conversation passionnante qui m’a permis d’en apprendre plus sur l’apprentissage automatique et sur les réseaux de neurones.</strong>
+</p>
+<p>
+Je suis ravi d’avoir pu vous aider. L’apprentissage automatique et les réseaux de neurones sont des domaines fascinants et il y a beaucoup à apprendre. Si vous avez d’autres questions, n’hésitez pas à me les poser. Je ferai de mon mieux pour y répondre.
+</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption><p></p>
+</figure>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 1 + "px";
+            div.style.height = height + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 1 + "px";
+            gutterDiv.style.height = height + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/flallemand\.fr\/blog/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+  </li>  
+</ul>
+    </div>   
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Mentions légales</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
