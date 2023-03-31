@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/networkx/index.html",
       "/posts/python_match/index.html",
       "/posts/interview_gpt_1/index.html",
       "/posts/interview_gpt_2/index.html",
@@ -12,10 +13,10 @@
       "/posts/futurecoder/index.html",
       "/posts/tropheesnsi/index.html",
       "/posts/lumniBDD/index.html",
-      "/posts/histoireSE/index.html",
-      "/posts/transistors/index.html",
       "/posts/codeurpro/index.html",
       "/posts/histoireinfo/index.html",
+      "/posts/histoireSE/index.html",
+      "/posts/transistors/index.html",
       "/posts/mesurerinfo/index.html",
       "/posts/timeexec/index.html",
       "/posts/carmin/index.html"

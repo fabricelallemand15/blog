@@ -9,8 +9,126 @@
 <link>https://flallemand.fr/blog/index.html</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.3.146</generator>
-<lastBuildDate>Sun, 29 Jan 2023 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.3.296</generator>
+<lastBuildDate>Wed, 29 Mar 2023 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Le module networkx</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/networkx/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="le-module-networkx" class="level1">
+<h1>Le module networkx</h1>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> algorithmx</span>
+<span id="cb1-2">canvas <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> algorithmx.jupyter_canvas(buttons<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">canvas.nodes(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>)).add()</span>
+<span id="cb1-5">canvas.edges([(i, i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>)]</span>
+<span id="cb1-6">           <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> [(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>), (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>), (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>)]).add()</span>
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>):</span>
+<span id="cb1-9">    canvas.pause(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>)</span>
+<span id="cb1-10">    canvas.node(i).color(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'green'</span>).highlight().size(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'1.25x'</span>)</span>
+<span id="cb1-11"></span>
+<span id="cb1-12">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>:</span>
+<span id="cb1-13">        canvas.pause(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>)</span>
+<span id="cb1-14">        canvas.edge((i, i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)).traverse(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'green'</span>)</span>
+<span id="cb1-15"></span>
+<span id="cb1-16">canvas</span></code></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"701b8874f29e4182be0485c2d4eb21f8","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>NSI</category>
+  <category>Programmation</category>
+  <guid>https://flallemand.fr/blog/posts/networkx/index.html</guid>
+  <pubDate>Wed, 29 Mar 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/networkx/logo_networkx.png" medium="image" type="image/png" height="145" width="144"/>
+</item>
 <item>
   <title>Python match</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -34,23 +152,127 @@
 <div class="code-with-filename-file">
 <pre><strong>Langage JavaScript</strong></pre>
 </div>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="kw" style="color: #003B4F;">let</span> x <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">3</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">let</span> x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-2"></span>
-<span id="cb1-3"><span class="cf" style="color: #003B4F;">switch</span> (x) {</span>
-<span id="cb1-4">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb1-5">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x est égal à 1"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-6">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-7">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">2</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb1-8">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x est égal à 2"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-9">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-10">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">3</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb1-11">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x est égal à 3"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-12">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-13">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">4</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb1-14">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x est égal à 4"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-15">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb1-16">  <span class="cf" style="color: #003B4F;">default</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb1-17">    <span class="bu" style="color: null;">console</span><span class="op" style="color: #5E5E5E;">.</span><span class="fu" style="color: #4758AB;">log</span>(<span class="st" style="color: #20794D;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)<span class="op" style="color: #5E5E5E;">;</span></span>
+<span id="cb1-3"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">switch</span> (x) {</span>
+<span id="cb1-4">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-5">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 1"</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-7">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-8">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 2"</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-10">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-11">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 3"</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-12">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-13">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-14">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 4"</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-15">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-16">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-17">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb1-18">}</span></code></pre></div>
 </div>
 <p>Et maintenant de C :</p>
@@ -58,24 +280,116 @@
 <div class="code-with-filename-file">
 <pre><strong>Langage C</strong></pre>
 </div>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb2-1"><span class="dt" style="color: #AD0000;">int</span> x <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">3</span><span class="op" style="color: #5E5E5E;">;</span></span>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb2-1"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">int</span> x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
 <span id="cb2-2"></span>
-<span id="cb2-3"><span class="cf" style="color: #003B4F;">switch</span> <span class="op" style="color: #5E5E5E;">(</span>x<span class="op" style="color: #5E5E5E;">)</span> <span class="op" style="color: #5E5E5E;">{</span></span>
-<span id="cb2-4">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">1</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb2-5">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x est égal à 1"</span><span class="op" style="color: #5E5E5E;">);</span></span>
-<span id="cb2-6">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb2-7">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">2</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb2-8">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x est égal à 2"</span><span class="op" style="color: #5E5E5E;">);</span></span>
-<span id="cb2-9">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb2-10">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">3</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb2-11">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x est égal à 3"</span><span class="op" style="color: #5E5E5E;">);</span></span>
-<span id="cb2-12">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb2-13">  <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">4</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb2-14">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x est égal à 4"</span><span class="op" style="color: #5E5E5E;">);</span></span>
-<span id="cb2-15">    <span class="cf" style="color: #003B4F;">break</span><span class="op" style="color: #5E5E5E;">;</span></span>
-<span id="cb2-16">  <span class="cf" style="color: #003B4F;">default</span><span class="op" style="color: #5E5E5E;">:</span></span>
-<span id="cb2-17">    printf<span class="op" style="color: #5E5E5E;">(</span><span class="st" style="color: #20794D;">"x n'est pas égal à 1, 2, 3 ou 4"</span><span class="op" style="color: #5E5E5E;">);</span></span>
-<span id="cb2-18"><span class="op" style="color: #5E5E5E;">}</span></span></code></pre></div>
+<span id="cb2-3"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">switch</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb2-4">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-5">    printf<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 1"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb2-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-7">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-8">    printf<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 2"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb2-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-10">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-11">    printf<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 3"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb2-12">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-13">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-14">    printf<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 4"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb2-15">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb2-16">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-17">    printf<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x n'est pas égal à 1, 2, 3 ou 4"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">);</span></span>
+<span id="cb2-18"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
 </div>
 <p>C’est la même chose ! On retrouve la même structure dans les deux langages. En python, c’est la même chose :</p>
 <div class="code-with-filename">
@@ -83,19 +397,63 @@
 <pre><strong>Python</strong></pre>
 </div>
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"></span>
-<span id="cb3-2">x <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">3</span></span>
+<span id="cb3-2">x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span>
 <span id="cb3-3"></span>
-<span id="cb3-4"><span class="cf" style="color: #003B4F;">match</span> x:</span>
-<span id="cb3-5">    <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">1</span>:</span>
-<span id="cb3-6">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x est égal à 1"</span>)</span>
-<span id="cb3-7">    <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">2</span>:</span>
-<span id="cb3-8">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x est égal à 2"</span>)</span>
-<span id="cb3-9">    <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">3</span>:</span>
-<span id="cb3-10">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x est égal à 3"</span>)</span>
-<span id="cb3-11">    <span class="cf" style="color: #003B4F;">case</span> <span class="dv" style="color: #AD0000;">4</span>:</span>
-<span id="cb3-12">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x est égal à 4"</span>)</span>
-<span id="cb3-13">    <span class="cf" style="color: #003B4F;">case</span> _:</span>
-<span id="cb3-14">        <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)</span></code></pre></div>
+<span id="cb3-4"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">match</span> x:</span>
+<span id="cb3-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>:</span>
+<span id="cb3-6">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 1"</span>)</span>
+<span id="cb3-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>:</span>
+<span id="cb3-8">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 2"</span>)</span>
+<span id="cb3-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>:</span>
+<span id="cb3-10">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 3"</span>)</span>
+<span id="cb3-11">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>:</span>
+<span id="cb3-12">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x est égal à 4"</span>)</span>
+<span id="cb3-13">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">case</span> _:</span>
+<span id="cb3-14">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)</span></code></pre></div>
 </div>
 <p>On peut voir que l’instruction <code>match ... case</code> est très proche de l’instruction <code>if ... elif ... else</code> en python. La différence est que l’instruction <code>match ... case</code> permet de tester plusieurs valeurs d’une variable en une seule instruction. C’est très pratique pour vérifier les valeurs d’une variable.</p>
 <p>Par rapport aux autres langages mentionnés, on remarquera qu’il n’est pas nécessaire en python d’utiliser l’instruction <code>break</code>, c’est comme d’habitude l’indentation qui délimite les blocs de code.</p>
@@ -108,27 +466,121 @@
 <div class="code-with-filename-file">
 <pre><strong>Python</strong></pre>
 </div>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;">import</span> random</span>
-<span id="cb4-2">cible <span class="op" style="color: #5E5E5E;">=</span> random.randint (<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">100</span>)</span>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> random</span>
+<span id="cb4-2">cible <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> random.randint (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
 <span id="cb4-3"></span>
-<span id="cb4-4">nbEssai <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">0</span></span>
-<span id="cb4-5">gameOver <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">False</span></span>
+<span id="cb4-4">nbEssai <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb4-5">gameOver <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
 <span id="cb4-6"></span>
-<span id="cb4-7"><span class="cf" style="color: #003B4F;">while</span> gameOver <span class="op" style="color: #5E5E5E;">==</span> <span class="va" style="color: #111111;">False</span>:</span>
-<span id="cb4-8">   <span class="bu" style="color: null;">print</span> ( <span class="ss" style="color: #20794D;">f"Vous avez essayé </span><span class="sc" style="color: #5E5E5E;">{</span>nbEssai<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> fois"</span>)</span>
-<span id="cb4-9">   proposition <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">int</span> (<span class="bu" style="color: null;">input</span> (<span class="st" style="color: #20794D;">"Votre essai : "</span>))</span>
-<span id="cb4-10">   <span class="cf" style="color: #003B4F;">match</span> proposition:</span>
-<span id="cb4-11">      case ( i ) <span class="cf" style="color: #003B4F;">if</span> i <span class="op" style="color: #5E5E5E;">&lt;</span> <span class="dv" style="color: #AD0000;">0</span> <span class="kw" style="color: #003B4F;">or</span> i <span class="op" style="color: #5E5E5E;">&gt;</span> <span class="dv" style="color: #AD0000;">100</span>:</span>
-<span id="cb4-12">         <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"Le nombre doit être compris entre 0 et 100 "</span>)</span>
-<span id="cb4-13">      case ( i ) <span class="cf" style="color: #003B4F;">if</span> i <span class="op" style="color: #5E5E5E;">&lt;</span> cible:</span>
-<span id="cb4-14">         <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"Trop petit !"</span>)</span>
-<span id="cb4-15">         nbEssai <span class="op" style="color: #5E5E5E;">+=</span> <span class="dv" style="color: #AD0000;">1</span></span>
-<span id="cb4-16">      case ( i ) <span class="cf" style="color: #003B4F;">if</span> i <span class="op" style="color: #5E5E5E;">&gt;</span> cible:</span>
-<span id="cb4-17">         <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"Trop grand!"</span>)</span>
-<span id="cb4-18">         nbEssai <span class="op" style="color: #5E5E5E;">+=</span> <span class="dv" style="color: #AD0000;">1</span></span>
-<span id="cb4-19">      case ( i ) <span class="cf" style="color: #003B4F;">if</span> i <span class="op" style="color: #5E5E5E;">==</span> cible:</span>
-<span id="cb4-20">         <span class="bu" style="color: null;">print</span>(<span class="st" style="color: #20794D;">"Gagné !"</span>)</span>
-<span id="cb4-21">         gameOver <span class="op" style="color: #5E5E5E;">=</span> <span class="va" style="color: #111111;">True</span></span></code></pre></div>
+<span id="cb4-7"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">while</span> gameOver <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>:</span>
+<span id="cb4-8">   <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span> ( <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Vous avez essayé </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>nbEssai<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> fois"</span>)</span>
+<span id="cb4-9">   proposition <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span> (<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">input</span> (<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Votre essai : "</span>))</span>
+<span id="cb4-10">   <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">match</span> proposition:</span>
+<span id="cb4-11">      case ( i ) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>:</span>
+<span id="cb4-12">         <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Le nombre doit être compris entre 0 et 100 "</span>)</span>
+<span id="cb4-13">      case ( i ) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> cible:</span>
+<span id="cb4-14">         <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Trop petit !"</span>)</span>
+<span id="cb4-15">         nbEssai <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb4-16">      case ( i ) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> cible:</span>
+<span id="cb4-17">         <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Trop grand!"</span>)</span>
+<span id="cb4-18">         nbEssai <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb4-19">      case ( i ) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> cible:</span>
+<span id="cb4-20">         <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Gagné !"</span>)</span>
+<span id="cb4-21">         gameOver <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span></code></pre></div>
 </div>
 <p>Dans ce jeu de devinette, la variable <code>proposition</code> est remplacées dans les conditions <code>case</code> par la variable <code>i</code>. C’est une variable temporaire qui prend la valeur de <code>proposition</code> pour chaque cas. On peut donc utiliser <code>i</code> dans les conditions <code>if</code> pour tester la valeur de <code>proposition</code>.</p>
 <p>Un dernier exemple pour terminer (source : <span class="citation" data-cites="pythonpep636">Moisset (2020)</span>):</p>
@@ -136,15 +588,67 @@
 <div class="code-with-filename-file">
 <pre><strong>Python</strong></pre>
 </div>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">reponse <span class="op" style="color: #5E5E5E;">=</span> <span class="bu" style="color: null;">input</span>(<span class="st" style="color: #20794D;">"Entrez votre prénom et votre nom : "</span>)</span>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">reponse <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">input</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Entrez votre prénom et votre nom : "</span>)</span>
 <span id="cb5-2"></span>
-<span id="cb5-3"><span class="cf" style="color: #003B4F;">match</span> reponse.split():</span>
+<span id="cb5-3"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">match</span> reponse.split():</span>
 <span id="cb5-4">    case [prenom, nom]:</span>
-<span id="cb5-5">        <span class="bu" style="color: null;">print</span>(<span class="ss" style="color: #20794D;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;">{</span>prenom<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> </span><span class="sc" style="color: #5E5E5E;">{</span>nom<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> !"</span>)</span>
+<span id="cb5-5">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>prenom<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>nom<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> !"</span>)</span>
 <span id="cb5-6">    case [mot_unique]:</span>
-<span id="cb5-7">        <span class="bu" style="color: null;">print</span>(<span class="ss" style="color: #20794D;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;">{</span>mot_unique<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> ! Il me manque votre nom complet."</span>)</span>
-<span id="cb5-8">    case [prenom, nom, <span class="op" style="color: #5E5E5E;">*</span>_]:</span>
-<span id="cb5-9">        <span class="bu" style="color: null;">print</span>(<span class="ss" style="color: #20794D;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;">{</span>prenom<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> </span><span class="sc" style="color: #5E5E5E;">{</span>nom<span class="sc" style="color: #5E5E5E;">}</span><span class="ss" style="color: #20794D;"> ! Vous m'avez donné trop d'informations."</span>)</span></code></pre></div>
+<span id="cb5-7">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>mot_unique<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> ! Il me manque votre nom complet."</span>)</span>
+<span id="cb5-8">    case [prenom, nom, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>_]:</span>
+<span id="cb5-9">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>prenom<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>nom<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> ! Vous m'avez donné trop d'informations."</span>)</span></code></pre></div>
 </div>
 <p>Dans cet exemple, on utilise la méthode <code>split</code> pour découper la chaîne de caractères <code>reponse</code> en une liste de mots. On utilise ensuite cette liste dans les conditions <code>case</code> pour tester le nombre de mots dans la chaîne de caractères. Le symbole <code>*_</code> est utilisé pour représenter un nombre quelconque de mots.</p>
 <p>Voici par exemple le résultat de l’exécution de ce programme dans la console python :</p>
@@ -152,12 +656,26 @@
 <div class="code-with-filename-file">
 <pre><strong>Console python</strong></pre>
 </div>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="op" style="color: #5E5E5E;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont</span>
-<span id="cb6-2">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;">!</span></span>
-<span id="cb6-3"><span class="op" style="color: #5E5E5E;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean</span>
-<span id="cb6-4">Bonjour Jean <span class="op" style="color: #5E5E5E;">!</span> Il me manque votre nom complet.</span>
-<span id="cb6-5"><span class="op" style="color: #5E5E5E;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont et je suis un génie</span>
-<span id="cb6-6">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;">!</span> Vous m<span class="st" style="color: #20794D;">'avez donné trop d'</span>informations.</span></code></pre></div>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont</span>
+<span id="cb6-2">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span></span>
+<span id="cb6-3"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean</span>
+<span id="cb6-4">Bonjour Jean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span> Il me manque votre nom complet.</span>
+<span id="cb6-5"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont et je suis un génie</span>
+<span id="cb6-6">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span> Vous m<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'avez donné trop d'</span>informations.</span></code></pre></div>
 </div>
 </section>
 <section id="conclusion" class="level2">
@@ -411,29 +929,147 @@ En résumé, les réseaux de neurones sont une technique d’apprentissage autom
 <p>
 Voici un exemple simple de code Python qui illustre le concept de réseau de neurones :
 </p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;"># Import des bibliothèques nécessaires</span></span>
-<span id="cb1-2"><span class="im" style="color: #00769E;">import</span> numpy <span class="im" style="color: #00769E;">as</span> np</span>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Import des bibliothèques nécessaires</span></span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
 <span id="cb1-3"></span>
-<span id="cb1-4"><span class="co" style="color: #5E5E5E;"># Définition des poids synaptiques</span></span>
-<span id="cb1-5">synaptic_weights <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">2</span> <span class="op" style="color: #5E5E5E;">*</span> np.random.random((<span class="dv" style="color: #AD0000;">3</span>, <span class="dv" style="color: #AD0000;">1</span>)) <span class="op" style="color: #5E5E5E;">-</span> <span class="dv" style="color: #AD0000;">1</span></span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Définition des poids synaptiques</span></span>
+<span id="cb1-5">synaptic_weights <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> np.random.random((<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
 <span id="cb1-6"></span>
-<span id="cb1-7"><span class="co" style="color: #5E5E5E;"># Fonction de propagation avant</span></span>
-<span id="cb1-8"><span class="kw" style="color: #003B4F;">def</span> think(inputs):</span>
-<span id="cb1-9">    inputs <span class="op" style="color: #5E5E5E;">=</span> inputs.astype(<span class="bu" style="color: null;">float</span>)</span>
-<span id="cb1-10">    output <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">1</span> <span class="op" style="color: #5E5E5E;">/</span> (<span class="dv" style="color: #AD0000;">1</span> <span class="op" style="color: #5E5E5E;">+</span> np.exp(<span class="op" style="color: #5E5E5E;">-</span>np.dot(inputs, synaptic_weights)))</span>
-<span id="cb1-11">    <span class="cf" style="color: #003B4F;">return</span> output</span>
+<span id="cb1-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Fonction de propagation avant</span></span>
+<span id="cb1-8"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> think(inputs):</span>
+<span id="cb1-9">    inputs <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> inputs.astype(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>)</span>
+<span id="cb1-10">    output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> np.exp(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>np.dot(inputs, synaptic_weights)))</span>
+<span id="cb1-11">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> output</span>
 <span id="cb1-12"></span>
-<span id="cb1-13"><span class="co" style="color: #5E5E5E;"># Entraînement du réseau de neurones</span></span>
-<span id="cb1-14"><span class="cf" style="color: #003B4F;">for</span> iteration <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">20000</span>):</span>
-<span id="cb1-15">    input_layer <span class="op" style="color: #5E5E5E;">=</span> np.array([[<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>], [<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>], [<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>], [<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>]])</span>
-<span id="cb1-16">    output_layer <span class="op" style="color: #5E5E5E;">=</span> np.array([[<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">0</span>]]).T</span>
-<span id="cb1-17">    output <span class="op" style="color: #5E5E5E;">=</span> think(input_layer)</span>
-<span id="cb1-18">    error <span class="op" style="color: #5E5E5E;">=</span> output_layer <span class="op" style="color: #5E5E5E;">-</span> output</span>
-<span id="cb1-19">    adjustments <span class="op" style="color: #5E5E5E;">=</span> np.dot(input_layer.T, error <span class="op" style="color: #5E5E5E;">*</span> output <span class="op" style="color: #5E5E5E;">*</span> (<span class="dv" style="color: #AD0000;">1</span> <span class="op" style="color: #5E5E5E;">-</span> output))</span>
-<span id="cb1-20">    synaptic_weights <span class="op" style="color: #5E5E5E;">+=</span> adjustments</span>
+<span id="cb1-13"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Entraînement du réseau de neurones</span></span>
+<span id="cb1-14"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> iteration <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20000</span>):</span>
+<span id="cb1-15">    input_layer <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>], [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>], [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>], [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]])</span>
+<span id="cb1-16">    output_layer <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]]).T</span>
+<span id="cb1-17">    output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> think(input_layer)</span>
+<span id="cb1-18">    error <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> output_layer <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> output</span>
+<span id="cb1-19">    adjustments <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.dot(input_layer.T, error <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> output))</span>
+<span id="cb1-20">    synaptic_weights <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> adjustments</span>
 <span id="cb1-21"></span>
-<span id="cb1-22"><span class="co" style="color: #5E5E5E;"># Test du réseau de neurones</span></span>
-<span id="cb1-23"><span class="bu" style="color: null;">print</span>(think(np.array([<span class="dv" style="color: #AD0000;">1</span>,<span class="dv" style="color: #AD0000;">0</span>,<span class="dv" style="color: #AD0000;">0</span>])))</span></code></pre></div>
+<span id="cb1-22"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Test du réseau de neurones</span></span>
+<span id="cb1-23"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(think(np.array([<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>])))</span></code></pre></div>
 <p>
 Ce code entraîne un petit réseau de neurones pour résoudre un problème simple de porte logique XOR. Le réseau est initialement créé avec des poids synaptiques aléatoires, puis est entraîné en ajustant ces poids pour minimiser l’erreur entre les sorties produites par le réseau et les sorties désirées. Enfin, le réseau est testé en lui donnant une nouvelle entrée pour vérifier qu’il produit la sortie correcte.
 </p>
@@ -1056,83 +1692,6 @@ Vidéo 2 : <a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnee
   <media:content url="https://flallemand.fr/blog/posts/lumniBDD/lumniBDD.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Histoire des systèmes d’exploitation</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/histoireSE/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-Voici une sélection de quelques vidéos sur l’histoire des systèmes d’exploitations.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Histoire d’Unix
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" width="100%" src="https://www.youtube.com/embed/Za6vGTLp-wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:heading -->
-<h2 class="anchored">
-Histoire de Linux et de GNU-Linux
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" width="100%" src="https://www.youtube.com/embed/Uq5ddTUtDkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<p><br></p>
-<iframe class="video" width="100%" src="https://www.youtube.com/embed/KvGN1SrNwAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:heading -->
-<h2 class="anchored">
-Histoire de Windows
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" width="100%" src="https://www.youtube.com/embed/-5evLFh3ZAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Histoire</category>
-  <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/histoireSE/index.html</guid>
-  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/histoireSE/histoireSE.png" medium="image" type="image/png" height="70" width="144"/>
-</item>
-<item>
-  <title>Les transistors expliqués</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/transistors/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-C’est le titre d’une excellente vidéo de la chaîne Mentalité Ingénieur, sur Youtube, qui explique de façon claire et imagée le fonctionnement d’un transistor, élément de base de toute puce informatique.
-</p>
-<!-- /wp:paragraph -->
-<iframe class="video" src="https://www.youtube.com/embed/Ey1nnEoADcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/transistors/index.html</guid>
-  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/transistors/transistors.png" medium="image" type="image/png" height="74" width="144"/>
-</item>
-<item>
   <title>La chaîne YouTube codeur-pro</title>
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/codeurpro/index.html</link>
@@ -1229,6 +1788,83 @@ Dans la vidéo YouTube ci-dessous, vous trouverez un panorama rapide de l’hist
   <guid>https://flallemand.fr/blog/posts/histoireinfo/index.html</guid>
   <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/histoireinfo/histoireinfo.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
+<item>
+  <title>Histoire des systèmes d’exploitation</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/histoireSE/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+Voici une sélection de quelques vidéos sur l’histoire des systèmes d’exploitations.
+</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading -->
+<h2 class="anchored">
+Histoire d’Unix
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" width="100%" src="https://www.youtube.com/embed/Za6vGTLp-wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:heading -->
+<h2 class="anchored">
+Histoire de Linux et de GNU-Linux
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" width="100%" src="https://www.youtube.com/embed/Uq5ddTUtDkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p><br></p>
+<iframe class="video" width="100%" src="https://www.youtube.com/embed/KvGN1SrNwAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<!-- wp:heading -->
+<h2 class="anchored">
+Histoire de Windows
+</h2>
+<!-- /wp:heading -->
+<iframe class="video" width="100%" src="https://www.youtube.com/embed/-5evLFh3ZAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Histoire</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/histoireSE/index.html</guid>
+  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/histoireSE/histoireSE.png" medium="image" type="image/png" height="70" width="144"/>
+</item>
+<item>
+  <title>Les transistors expliqués</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/transistors/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+C’est le titre d’une excellente vidéo de la chaîne Mentalité Ingénieur, sur Youtube, qui explique de façon claire et imagée le fonctionnement d’un transistor, élément de base de toute puce informatique.
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" src="https://www.youtube.com/embed/Ey1nnEoADcg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/transistors/index.html</guid>
+  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/transistors/transistors.png" medium="image" type="image/png" height="74" width="144"/>
 </item>
 <item>
   <title>Mesurer la quantité d’information</title>
@@ -1608,8 +2244,14 @@ Pour les besoins du code présent dans la suite, on commencera par les importati
 </p>
 <!-- /wp:paragraph -->
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;">as</span> plt</span>
-<span id="cb1-2"><span class="im" style="color: #00769E;">import</span> timeit</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb1-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> timeit</span></code></pre></div>
 </div>
 <!-- wp:heading -->
 <h2 class="anchored">
@@ -1627,15 +2269,57 @@ Nous considérons les trois fonctions suivantes. La première retourne le nombre
 </p>
 <!-- /wp:paragraph -->
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;">def</span> fibo_iter(n: <span class="bu" style="color: null;">int</span>) <span class="op" style="color: #5E5E5E;">-&gt;</span> <span class="bu" style="color: null;">int</span>:</span>
-<span id="cb2-2">    <span class="co" style="color: #5E5E5E;">"""Suite de Fibonacci, version itérative"""</span></span>
-<span id="cb2-3">    <span class="cf" style="color: #003B4F;">if</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">0</span>:</span>
-<span id="cb2-4">        <span class="cf" style="color: #003B4F;">return</span> <span class="dv" style="color: #AD0000;">0</span></span>
-<span id="cb2-5">    <span class="cf" style="color: #003B4F;">else</span>:</span>
-<span id="cb2-6">        f0, f1 <span class="op" style="color: #5E5E5E;">=</span> <span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">1</span></span>
-<span id="cb2-7">        <span class="cf" style="color: #003B4F;">for</span> k <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">1</span>, n):</span>
-<span id="cb2-8">            f0, f1 <span class="op" style="color: #5E5E5E;">=</span> f1, f0 <span class="op" style="color: #5E5E5E;">+</span> f1</span>
-<span id="cb2-9">        <span class="cf" style="color: #003B4F;">return</span> f1</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> fibo_iter(n: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb2-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Suite de Fibonacci, version itérative"""</span></span>
+<span id="cb2-3">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb2-4">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb2-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb2-6">        f0, f1 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb2-7">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, n):</span>
+<span id="cb2-8">            f0, f1 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> f1, f0 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> f1</span>
+<span id="cb2-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> f1</span></code></pre></div>
 </div>
 <!-- wp:paragraph -->
 <p>
@@ -1643,14 +2327,56 @@ La deuxième fonction est une fonction récursive qui traduit directement la dé
 </p>
 <!-- /wp:paragraph -->
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;">def</span> fibo_rec(n: <span class="bu" style="color: null;">int</span>) <span class="op" style="color: #5E5E5E;">-&gt;</span> <span class="bu" style="color: null;">int</span>:</span>
-<span id="cb3-2">    <span class="co" style="color: #5E5E5E;">"""Suite de Fibonacci version récursive"""</span></span>
-<span id="cb3-3">    <span class="co" style="color: #5E5E5E;"># Cas de base</span></span>
-<span id="cb3-4">    <span class="cf" style="color: #003B4F;">if</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">0</span> <span class="kw" style="color: #003B4F;">or</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">1</span>:</span>
-<span id="cb3-5">        <span class="cf" style="color: #003B4F;">return</span> n</span>
-<span id="cb3-6">    <span class="co" style="color: #5E5E5E;"># Récursion</span></span>
-<span id="cb3-7">    <span class="cf" style="color: #003B4F;">else</span>:</span>
-<span id="cb3-8">        <span class="cf" style="color: #003B4F;">return</span> fibo_rec(n<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">2</span>)<span class="op" style="color: #5E5E5E;">+</span>fibo_rec(n<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> fibo_rec(n: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb3-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Suite de Fibonacci version récursive"""</span></span>
+<span id="cb3-3">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Cas de base</span></span>
+<span id="cb3-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>:</span>
+<span id="cb3-5">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> n</span>
+<span id="cb3-6">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Récursion</span></span>
+<span id="cb3-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb3-8">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> fibo_rec(n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span>fibo_rec(n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span></code></pre></div>
 </div>
 <!-- wp:paragraph -->
 <p>
@@ -1658,21 +2384,91 @@ La troisième est également récursive et utilise les idées de la programmatio
 </p>
 <!-- /wp:paragraph -->
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;">def</span> fibo_dyn(n: <span class="bu" style="color: null;">int</span>, suite: <span class="bu" style="color: null;">dict</span> <span class="op" style="color: #5E5E5E;">=</span> {<span class="dv" style="color: #AD0000;">0</span>: <span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">1</span>: <span class="dv" style="color: #AD0000;">1</span>}) <span class="op" style="color: #5E5E5E;">-&gt;</span> <span class="bu" style="color: null;">int</span>:</span>
-<span id="cb4-2">    <span class="co" style="color: #5E5E5E;">"""Suite de Fibonacci version dynamique"""</span></span>
-<span id="cb4-3">    <span class="co" style="color: #5E5E5E;"># Cas de base</span></span>
-<span id="cb4-4">    <span class="cf" style="color: #003B4F;">if</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">0</span> <span class="kw" style="color: #003B4F;">or</span> n <span class="op" style="color: #5E5E5E;">==</span> <span class="dv" style="color: #AD0000;">1</span>:</span>
-<span id="cb4-5">        <span class="cf" style="color: #003B4F;">return</span> n</span>
-<span id="cb4-6">    <span class="co" style="color: #5E5E5E;"># Récursion</span></span>
-<span id="cb4-7">    <span class="cf" style="color: #003B4F;">else</span>:</span>
-<span id="cb4-8">        <span class="co" style="color: #5E5E5E;"># Si Fn est déjà calculé, on le retourne</span></span>
-<span id="cb4-9">        <span class="cf" style="color: #003B4F;">if</span> n <span class="kw" style="color: #003B4F;">in</span> suite.keys():</span>
-<span id="cb4-10">            <span class="cf" style="color: #003B4F;">return</span> suite[n]</span>
-<span id="cb4-11">        <span class="cf" style="color: #003B4F;">else</span>:</span>
-<span id="cb4-12">            <span class="co" style="color: #5E5E5E;"># Sinon, on le calcule et on le garde en mémoire</span></span>
-<span id="cb4-13">            f <span class="op" style="color: #5E5E5E;">=</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">2</span>, suite) <span class="op" style="color: #5E5E5E;">+</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;">-</span><span class="dv" style="color: #AD0000;">1</span>, suite)</span>
-<span id="cb4-14">            suite[n] <span class="op" style="color: #5E5E5E;">=</span> f</span>
-<span id="cb4-15">            <span class="cf" style="color: #003B4F;">return</span> f</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> fibo_dyn(n: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>, suite: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">dict</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>}) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>:</span>
+<span id="cb4-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Suite de Fibonacci version dynamique"""</span></span>
+<span id="cb4-3">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Cas de base</span></span>
+<span id="cb4-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">or</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>:</span>
+<span id="cb4-5">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> n</span>
+<span id="cb4-6">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Récursion</span></span>
+<span id="cb4-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb4-8">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Si Fn est déjà calculé, on le retourne</span></span>
+<span id="cb4-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> n <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> suite.keys():</span>
+<span id="cb4-10">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> suite[n]</span>
+<span id="cb4-11">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb4-12">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Sinon, on le calcule et on le garde en mémoire</span></span>
+<span id="cb4-13">            f <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, suite) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, suite)</span>
+<span id="cb4-14">            suite[n] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> f</span>
+<span id="cb4-15">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> f</span></code></pre></div>
 </div>
 <!-- wp:heading -->
 <h2 class="anchored">
@@ -1685,7 +2481,19 @@ Par exemple, pour obtenir le temps d’exécution de 100 appels à la fonction f
 </p>
 <!-- /wp:paragraph -->
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">timeit.timeit(<span class="st" style="color: #20794D;">'fibo_iter(15)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">1000</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>())</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">timeit.timeit(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'fibo_iter(15)'</span>, number<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span>())</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="45">
 <pre><code>0.0008780480002315016</code></pre>
 </div>
@@ -1721,20 +2529,86 @@ Nous traçons ensuite les courbes correspondantes. (lignes 12 à 15)
 </p>
 <!-- /wp:paragraph -->
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1">abscisses <span class="op" style="color: #5E5E5E;">=</span> [k <span class="cf" style="color: #003B4F;">for</span> k <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">20</span>, <span class="dv" style="color: #AD0000;">1</span>)]</span>
-<span id="cb7-2">ordonnees_rec <span class="op" style="color: #5E5E5E;">=</span> []</span>
-<span id="cb7-3">ordonnees_iter <span class="op" style="color: #5E5E5E;">=</span> []</span>
-<span id="cb7-4">ordonnees_dyn <span class="op" style="color: #5E5E5E;">=</span> []</span>
-<span id="cb7-5"><span class="cf" style="color: #003B4F;">for</span> x <span class="kw" style="color: #003B4F;">in</span> abscisses:</span>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1">abscisses <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [k <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)]</span>
+<span id="cb7-2">ordonnees_rec <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb7-3">ordonnees_iter <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb7-4">ordonnees_dyn <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb7-5"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> abscisses:</span>
 <span id="cb7-6">    ordonnees_iter.append(timeit.timeit(</span>
-<span id="cb7-7">        <span class="st" style="color: #20794D;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
+<span id="cb7-7">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span>()))</span>
 <span id="cb7-8">    ordonnees_rec.append(timeit.timeit(</span>
-<span id="cb7-9">        <span class="st" style="color: #20794D;">'fibo_rec(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
+<span id="cb7-9">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'fibo_rec(x)'</span>, number<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span>()))</span>
 <span id="cb7-10">    ordonnees_dyn.append(timeit.timeit(</span>
-<span id="cb7-11">        <span class="st" style="color: #20794D;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
-<span id="cb7-12">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;">'b'</span>)</span>
-<span id="cb7-13">plt.plot(abscisses, ordonnees_rec, <span class="st" style="color: #20794D;">'r'</span>)</span>
-<span id="cb7-14">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;">'g'</span>)</span>
+<span id="cb7-11">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span>()))</span>
+<span id="cb7-12">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'b'</span>)</span>
+<span id="cb7-13">plt.plot(abscisses, ordonnees_rec, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'r'</span>)</span>
+<span id="cb7-14">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'g'</span>)</span>
 <span id="cb7-15">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1750,16 +2624,66 @@ Nous observons pour la fonction récursive une courbe caractéristique d’une c
 </p>
 <!-- /wp:paragraph -->
 <div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">abscisses <span class="op" style="color: #5E5E5E;">=</span> [k <span class="cf" style="color: #003B4F;">for</span> k <span class="kw" style="color: #003B4F;">in</span> <span class="bu" style="color: null;">range</span>(<span class="dv" style="color: #AD0000;">0</span>, <span class="dv" style="color: #AD0000;">100</span>, <span class="dv" style="color: #AD0000;">1</span>)]</span>
-<span id="cb8-2">ordonnees_iter <span class="op" style="color: #5E5E5E;">=</span> []</span>
-<span id="cb8-3">ordonnees_dyn <span class="op" style="color: #5E5E5E;">=</span> []</span>
-<span id="cb8-4"><span class="cf" style="color: #003B4F;">for</span> x <span class="kw" style="color: #003B4F;">in</span> abscisses:</span>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">abscisses <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [k <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)]</span>
+<span id="cb8-2">ordonnees_iter <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb8-3">ordonnees_dyn <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb8-4"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> abscisses:</span>
 <span id="cb8-5">    ordonnees_iter.append(timeit.timeit(</span>
-<span id="cb8-6">        <span class="st" style="color: #20794D;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
+<span id="cb8-6">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span>()))</span>
 <span id="cb8-7">    ordonnees_dyn.append(timeit.timeit(</span>
-<span id="cb8-8">        <span class="st" style="color: #20794D;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;">=</span><span class="dv" style="color: #AD0000;">100</span>, <span class="bu" style="color: null;">globals</span><span class="op" style="color: #5E5E5E;">=</span><span class="bu" style="color: null;">globals</span>()))</span>
-<span id="cb8-9">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;">'b'</span>)</span>
-<span id="cb8-10">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;">'g'</span>)</span>
+<span id="cb8-8">        <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">globals</span>()))</span>
+<span id="cb8-9">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'b'</span>)</span>
+<span id="cb8-10">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'g'</span>)</span>
 <span id="cb8-11">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">

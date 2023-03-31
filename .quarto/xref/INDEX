@@ -64,5 +64,8 @@
   },
   "posts/carmin/index.qmd": {
     "index.html": "2eda3dd3"
+  },
+  "posts/networkx/index.qmd": {
+    "index.html": "e45b5d49"
   }
 }
