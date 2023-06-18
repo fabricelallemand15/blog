@@ -85,7 +85,7 @@ font-style: inherit;">pass</span></span>
 <p>Voici la fenêtre obtenue avec le code ci-dessus :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fenetre_vide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="fenêtre vide"><img src="https://flallemand.fr/blog/posts/pyxel_tuto1_base/fenetre_vide.png" class="img-fluid figure-img"></a></p>
+<p><a href="fenetre_vide.png" class="lightbox" title="fenêtre vide" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/pyxel_tuto1_base/fenetre_vide.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">fenêtre vide</figcaption>
 </figure>
 </div>

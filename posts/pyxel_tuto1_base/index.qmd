@@ -2,7 +2,7 @@
 title: "Tuto pyxel (avec POO) : code de base"
 subtitle: "Tutoriels Pyxel"
 description: "Structure de base d'une application pyxel"
-date: "2023-06-19"
+date: "2023-06-18"
 categories: [Python, NSI, Programmation, Pyxel, Nuit du code]
 image: "pyxel.png"
 ---
