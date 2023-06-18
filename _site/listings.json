@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/pyxel_tuto1_base/index.html",
       "/posts/networkx/index.html",
       "/posts/python_match/index.html",
       "/posts/interview_gpt_1/index.html",

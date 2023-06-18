@@ -1,0 +1,38 @@
+---
+title: "Tuto pyxel (avec POO) : code de base"
+subtitle: "Tutoriels Pyxel"
+description: "Structure de base d'une application pyxel"
+date: "2023-06-19"
+categories: [Python, NSI, Programmation, Pyxel, Nuit du code]
+image: "pyxel.png"
+---
+
+La structure générale d'une application Pyxel sera toujours la même.
+
+On commence par importer la bibliothèque Pyxel, puis on crée **une classe** `App` qui contient les méthodes `__init__`, `update` et `draw`. Enfin, il faut instancier la classe et lancer l'application avec la méthode `run`.
+
+```python
+import pyxel
+
+class App:
+    def __init__(self):
+        pyxel.init(256, 256, title="Exemple de base", quit_key=pyxel.KEY_Q, fps=30)
+        pyxel.run(self.update, self.draw)
+
+    def update(self):
+        pass
+
+    def draw(self):
+        pass
+
+App()
+```
+
+* `pyxel.init(256, 256, title="Exemple de base", quit_key=pyxel.KEY_Q, fps=30)` : on initialise la fenêtre de l'application avec une taille de 256x256 pixels et on définit le titre de la fenêtre. On définit aussi la touche qui permettra de quitter l'application (ici la touche `Q`) et le nombre d'images par seconde (**f**rames **p**er **s**econd) (30).
+* `pyxel.run(self.update, self.draw)` : on lance l'application en appelant les méthodes `update` et `draw` de la classe `App`.
+* `def update(self):` : cette méthode est appelée à chaque image (donc ici 30 fois par seconde). C'est ici qu'on mettra à jour les données de l'application.
+* `def draw(self):` : cette méthode est appelée à chaque image (donc ici 30 fois par seconde). C'est ici qu'on dessinera les éléments de l'application.
+
+Voici la fenêtre obtenue avec le code ci-dessus :
+
+![fenêtre vide](fenetre_vide.png)

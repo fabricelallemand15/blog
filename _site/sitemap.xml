@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://flallemand.fr/blog/index.html</loc>
-    <lastmod>2023-03-31T18:23:58.310Z</lastmod>
+    <lastmod>2023-02-01T20:34:18.000Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/about.html</loc>
@@ -82,10 +82,14 @@
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/networkx/index.html</loc>
-    <lastmod>2023-03-31T18:23:54.240Z</lastmod>
+    <lastmod>2023-03-31T20:05:23.531Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/post-with-code/index.html</loc>
     <lastmod>2023-03-30T16:08:43.868Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/pyxel_tuto1_base/index.html</loc>
+    <lastmod>2023-06-18T21:04:15.581Z</lastmod>
   </url>
 </urlset>

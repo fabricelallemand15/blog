@@ -67,5 +67,8 @@
   },
   "posts/networkx/index.qmd": {
     "index.html": "e45b5d49"
+  },
+  "posts/pyxel_tuto1_base/index.qmd": {
+    "index.html": "fa689a78"
   }
 }

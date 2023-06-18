@@ -9,8 +9,99 @@
 <link>https://flallemand.fr/blog/index.html</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.3.296</generator>
-<lastBuildDate>Wed, 29 Mar 2023 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.151</generator>
+<lastBuildDate>Sun, 18 Jun 2023 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Tuto pyxel (avec POO) : code de base</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/pyxel_tuto1_base/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>La structure générale d’une application Pyxel sera toujours la même.</p>
+<p>On commence par importer la bibliothèque Pyxel, puis on crée <strong>une classe</strong> <code>App</code> qui contient les méthodes <code>__init__</code>, <code>update</code> et <code>draw</code>. Enfin, il faut instancier la classe et lancer l’application avec la méthode <code>run</code>.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pyxel</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> App:</span>
+<span id="cb1-4">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-5">        pyxel.init(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">256</span>, title<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Exemple de base"</span>, quit_key<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>pyxel.KEY_Q, fps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>)</span>
+<span id="cb1-6">        pyxel.run(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.draw)</span>
+<span id="cb1-7"></span>
+<span id="cb1-8">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">pass</span></span>
+<span id="cb1-10"></span>
+<span id="cb1-11">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-12">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">pass</span></span>
+<span id="cb1-13"></span>
+<span id="cb1-14">App()</span></code></pre></div>
+<ul>
+<li><code>pyxel.init(256, 256, title="Exemple de base", quit_key=pyxel.KEY_Q, fps=30)</code> : on initialise la fenêtre de l’application avec une taille de 256x256 pixels et on définit le titre de la fenêtre. On définit aussi la touche qui permettra de quitter l’application (ici la touche <code>Q</code>) et le nombre d’images par seconde (<strong>f</strong>rames <strong>p</strong>er <strong>s</strong>econd) (30).</li>
+<li><code>pyxel.run(self.update, self.draw)</code> : on lance l’application en appelant les méthodes <code>update</code> et <code>draw</code> de la classe <code>App</code>.</li>
+<li><code>def update(self):</code> : cette méthode est appelée à chaque image (donc ici 30 fois par seconde). C’est ici qu’on mettra à jour les données de l’application.</li>
+<li><code>def draw(self):</code> : cette méthode est appelée à chaque image (donc ici 30 fois par seconde). C’est ici qu’on dessinera les éléments de l’application.</li>
+</ul>
+<p>Voici la fenêtre obtenue avec le code ci-dessus :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fenetre_vide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="fenêtre vide"><img src="https://flallemand.fr/blog/posts/pyxel_tuto1_base/fenetre_vide.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">fenêtre vide</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>Python</category>
+  <category>NSI</category>
+  <category>Programmation</category>
+  <category>Pyxel</category>
+  <category>Nuit du code</category>
+  <guid>https://flallemand.fr/blog/posts/pyxel_tuto1_base/index.html</guid>
+  <pubDate>Sun, 18 Jun 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto1_base/pyxel.png" medium="image" type="image/png" height="61" width="144"/>
+</item>
 <item>
   <title>Le module networkx</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -113,7 +204,7 @@ font-style: inherit;">'green'</span>)</span>
 <span id="cb1-16">canvas</span></code></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"701b8874f29e4182be0485c2d4eb21f8","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"b910207f603842f395dbda38de2f603d","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 </div>

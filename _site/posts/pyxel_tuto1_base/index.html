@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.296">
+<meta name="generator" content="quarto-1.4.151">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="F. LALLEMAND">
-<meta name="description" content="Utilisation du module networkx pour la création et l’analyse de graphes">
+<meta name="description" content="Structure de base d’une application pyxel">
 
-<title>Le bloc-notes de M. LALLEMAND - Le module networkx</title>
+<title>Le bloc-notes de M. LALLEMAND - Tuto pyxel (avec POO) : code de base</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,6 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -87,6 +90,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "panel-placement": "end",
   "type": "overlay",
   "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "Pas de résultats",
     "search-matching-documents-text": "documents trouvés",
@@ -96,7 +104,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "correspondances de plus dans ce document",
     "search-clear-button-title": "Effacer",
     "search-detached-cancel-button-title": "Annuler",
-    "search-submit-button-title": "Envoyer"
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
   }
 }</script>
 
@@ -111,27 +120,19 @@ cookieconsent.run({
   "notice_banner_reject_button_hide":false,
   "preferences_center_close_button_hide":false,
   "website_name":""
+  ,
+"language":"fr"
   });
 });
 </script> 
   
 <style>
-    .quarto-title-block .quarto-title-banner,
-    .quarto-title-block .quarto-title-banner h1,
-    .quarto-title-block .quarto-title-banner h2,
-    .quarto-title-block .quarto-title-banner h3,
-    .quarto-title-block .quarto-title-banner h4,
-    .quarto-title-block .quarto-title-banner h5,
-    .quarto-title-block .quarto-title-banner h6
-    {
-      background: #BCD2E8;
-    }
-    </style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #BCD2E8;
+      }
+</style>
 <script src="https://kit.fontawesome.com/4010eb68d9.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -143,7 +144,7 @@ cookieconsent.run({
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Le bloc-notes de M. LALLEMAND</span>
     </a>
@@ -179,10 +180,10 @@ cookieconsent.run({
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -190,17 +191,19 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Le module networkx</h1>
-            <p class="subtitle lead">Boîte à outil pour les graphes</p>
+      <h1 class="title">Tuto pyxel (avec POO) : code de base</h1>
+            <p class="subtitle lead">Tutoriels Pyxel</p>
                   <div>
         <div class="description">
-          Utilisation du module networkx pour la création et l’analyse de graphes
+          Structure de base d’une application pyxel
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Python</div>
                 <div class="quarto-category">NSI</div>
                 <div class="quarto-category">Programmation</div>
+                <div class="quarto-category">Pyxel</div>
+                <div class="quarto-category">Nuit du code</div>
               </div>
                   </div>
   </div>
@@ -218,7 +221,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Date de publication</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">30 mars 2023</p>
+        <p class="date">19 juin 2023</p>
       </div>
     </div>
     
@@ -230,13 +233,7 @@ cookieconsent.run({
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Sur cette page</h2>
-   
-  <ul>
-  <li><a href="#le-module-networkx" id="toc-le-module-networkx" class="nav-link active" data-scroll-target="#le-module-networkx">Le module networkx</a></li>
-  </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/networkx/index.qmd" class="toc-action">Modifier cette page</a></p><p><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action">Faire part d'un problème</a></p></div></div></nav>
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -244,39 +241,39 @@ cookieconsent.run({
 
 
 
-<section id="le-module-networkx" class="level1">
-<h1>Le module networkx</h1>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> algorithmx</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>canvas <span class="op">=</span> algorithmx.jupyter_canvas(buttons<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>canvas.nodes(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">8</span>)).add()</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>canvas.edges([(i, i<span class="op">+</span><span class="dv">1</span>) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">7</span>)]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>           <span class="op">+</span> [(<span class="dv">1</span>, <span class="dv">3</span>), (<span class="dv">2</span>, <span class="dv">4</span>), (<span class="dv">2</span>, <span class="dv">7</span>)]).add()</span>
+<p>La structure générale d’une application Pyxel sera toujours la même.</p>
+<p>On commence par importer la bibliothèque Pyxel, puis on crée <strong>une classe</strong> <code>App</code> qui contient les méthodes <code>__init__</code>, <code>update</code> et <code>draw</code>. Enfin, il faut instancier la classe et lancer l’application avec la méthode <code>run</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">256</span>, title<span class="op">=</span><span class="st">"Exemple de base"</span>, quit_key<span class="op">=</span>pyxel.KEY_Q, fps<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        pyxel.run(<span class="va">self</span>.update, <span class="va">self</span>.draw)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">8</span>):</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    canvas.pause(<span class="fl">0.5</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    canvas.node(i).color(<span class="st">'green'</span>).highlight().size(<span class="st">'1.25x'</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">8</span>:</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        canvas.pause(<span class="fl">0.5</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        canvas.edge((i, i<span class="op">+</span><span class="dv">1</span>)).traverse(<span class="st">'green'</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>canvas</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"b910207f603842f395dbda38de2f603d","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
-</script>
-</div>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>pyxel.init(256, 256, title="Exemple de base", quit_key=pyxel.KEY_Q, fps=30)</code> : on initialise la fenêtre de l’application avec une taille de 256x256 pixels et on définit le titre de la fenêtre. On définit aussi la touche qui permettra de quitter l’application (ici la touche <code>Q</code>) et le nombre d’images par seconde (<strong>f</strong>rames <strong>p</strong>er <strong>s</strong>econd) (30).</li>
+<li><code>pyxel.run(self.update, self.draw)</code> : on lance l’application en appelant les méthodes <code>update</code> et <code>draw</code> de la classe <code>App</code>.</li>
+<li><code>def update(self):</code> : cette méthode est appelée à chaque image (donc ici 30 fois par seconde). C’est ici qu’on mettra à jour les données de l’application.</li>
+<li><code>def draw(self):</code> : cette méthode est appelée à chaque image (donc ici 30 fois par seconde). C’est ici qu’on dessinera les éléments de l’application.</li>
+</ul>
+<p>Voici la fenêtre obtenue avec le code ci-dessus :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fenetre_vide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="fenêtre vide"><img src="fenetre_vide.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">fenêtre vide</figcaption>
+</figure>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
-<script type="application/vnd.jupyter.widget-state+json">
-{"state":{"b910207f603842f395dbda38de2f603d":{"model_module":"algorithmx-jupyter","model_module_version":"^3.0.0","model_name":"AlgorithmXModel","state":{"_dom_classes":[],"_model_module":"algorithmx-jupyter","_model_module_version":"^3.0.0","_model_name":"AlgorithmXModel","_view_count":null,"_view_module":"algorithmx-jupyter","_view_module_version":"^3.0.0","_view_name":"AlgorithmXView","events":["{\"attrs\": {\"nodes\": {\"1\": {}, \"2\": {}, \"3\": {}, \"4\": {}, \"5\": {}, \"6\": {}, \"7\": {}}}}","{\"attrs\": {\"edges\": {\"1-2\": {\"source\": \"1\", \"target\": \"2\"}, \"2-3\": {\"source\": \"2\", \"target\": \"3\"}, \"3-4\": {\"source\": \"3\", \"target\": \"4\"}, \"4-5\": {\"source\": \"4\", \"target\": \"5\"}, \"5-6\": {\"source\": \"5\", \"target\": \"6\"}, \"6-7\": {\"source\": \"6\", \"target\": \"7\"}, \"1-3\": {\"source\": \"1\", \"target\": \"3\"}, \"2-4\": {\"source\": \"2\", \"target\": \"4\"}, \"2-7\": {\"source\": \"2\", \"target\": \"7\"}}}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"nodes\": {\"1\": {\"color\": \"green\"}}}}","{\"attrs\": {\"nodes\": {\"1\": {\"size\": \"1.25x\"}}}, \"animation\": {\"highlight\": true}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"edges\": {\"1-2\": {\"color\": {\"animtype\": \"traverse\", \"value\": \"green\", \"animsource\": \"1\"}}}}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"nodes\": {\"2\": {\"color\": \"green\"}}}}","{\"attrs\": {\"nodes\": {\"2\": {\"size\": \"1.25x\"}}}, \"animation\": {\"highlight\": true}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"edges\": {\"2-3\": {\"color\": {\"animtype\": \"traverse\", \"value\": \"green\", \"animsource\": \"2\"}}}}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"nodes\": {\"3\": {\"color\": \"green\"}}}}","{\"attrs\": {\"nodes\": {\"3\": {\"size\": \"1.25x\"}}}, \"animation\": {\"highlight\": true}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"edges\": {\"3-4\": {\"color\": {\"animtype\": \"traverse\", \"value\": \"green\", \"animsource\": \"3\"}}}}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"nodes\": {\"4\": {\"color\": \"green\"}}}}","{\"attrs\": {\"nodes\": {\"4\": {\"size\": \"1.25x\"}}}, \"animation\": {\"highlight\": true}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"edges\": {\"4-5\": {\"color\": {\"animtype\": \"traverse\", \"value\": \"green\", \"animsource\": \"4\"}}}}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"nodes\": {\"5\": {\"color\": \"green\"}}}}","{\"attrs\": {\"nodes\": {\"5\": {\"size\": \"1.25x\"}}}, \"animation\": {\"highlight\": true}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"edges\": {\"5-6\": {\"color\": {\"animtype\": \"traverse\", \"value\": \"green\", \"animsource\": \"5\"}}}}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"nodes\": {\"6\": {\"color\": \"green\"}}}}","{\"attrs\": {\"nodes\": {\"6\": {\"size\": \"1.25x\"}}}, \"animation\": {\"highlight\": true}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"edges\": {\"6-7\": {\"color\": {\"animtype\": \"traverse\", \"value\": \"green\", \"animsource\": \"6\"}}}}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"nodes\": {\"7\": {\"color\": \"green\"}}}}","{\"attrs\": {\"nodes\": {\"7\": {\"size\": \"1.25x\"}}}, \"animation\": {\"highlight\": true}}","{\"queues\": {\"0\": {\"pause\": 0.5}}, \"withQ\": 0}","{\"attrs\": {\"edges\": {\"7-8\": {\"color\": {\"animtype\": \"traverse\", \"value\": \"green\", \"animsource\": \"7\"}}}}}"],"layout":"IPY_MODEL_d3d026bcb36148b9bad873db44cfef15","show_buttons":true,"tabbable":null,"tooltip":null}},"d3d026bcb36148b9bad873db44cfef15":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}}},"version_major":2,"version_minor":0}
-</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -318,6 +315,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -386,13 +410,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -471,10 +497,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -484,8 +509,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -498,6 +532,60 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      try { hash = new URL(url).hash; } catch {}
+      const id = hash.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note !== null) {
+        try {
+          const html = processXRef(id, note);
+          instance.setContent(html);
+        } finally {
+          instance.enable();
+          instance.show();
+        }
+      } else {
+        // See if we can fetch this
+        fetch(url.split('#')[0])
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.getElementById(id);
+          if (note !== null) {
+            const html = processXRef(id, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -541,6 +629,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -641,21 +730,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <script src="https://giscus.app/client.js" data-repo="fabricelallemand15/blog" data-repo-id="R_kgDOI4abBQ" data-category="General" data-category-id="DIC_kwDOI4abBc4CT8OX" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="fr" crossorigin="anonymous" async="">
 </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
   </li>  
 </ul>
     </div>   
-    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-center">
+
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/pyxel_tuto1_base/index.qmd" class="toc-action">Modifier cette page</a></p><p><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action">Faire part d'un problème</a></p></div></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../about.html">Mentions légales</a>
+    <a class="nav-link" href="../../about.html">
+<p>Mentions légales</p>
+</a>
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/fabricelallemand15/blog">
@@ -667,6 +764,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});</script>
+
 
 
 

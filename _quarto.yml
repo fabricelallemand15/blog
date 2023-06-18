@@ -38,6 +38,8 @@ format:
   html:
     lang: fr
     link-external-icon: true
+    include-in-header:
+      - ajouts_header.html
     theme:
       light: [flatly, theme_light.scss]
       dark: [darkly, theme_dark.scss]
