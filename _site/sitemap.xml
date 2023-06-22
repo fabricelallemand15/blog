@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://flallemand.fr/blog/politique_conf.html</loc>
-    <lastmod>2023-02-01T21:17:31.611Z</lastmod>
+    <loc>https://flallemand.fr/blog/about.html</loc>
+    <lastmod>2023-06-22T08:35:37.175Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/index.html</loc>
-    <lastmod>2023-02-01T20:34:18.000Z</lastmod>
+    <lastmod>2023-06-22T08:35:40.236Z</lastmod>
   </url>
   <url>
-    <loc>https://flallemand.fr/blog/about.html</loc>
-    <lastmod>2023-02-01T21:17:34.242Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/histoireSE/index.html</loc>
-    <lastmod>2023-02-01T21:17:35.142Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/transistors/index.html</loc>
-    <lastmod>2023-02-01T21:17:35.914Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/lumniBDD/index.html</loc>
-    <lastmod>2023-02-01T21:17:36.677Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/lol_docu/index.html</loc>
-    <lastmod>2023-03-30T19:30:07.406Z</lastmod>
+    <loc>https://flallemand.fr/blog/politique_conf.html</loc>
+    <lastmod>2023-06-22T08:35:41.721Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/carmin/index.html</loc>
-    <lastmod>2023-02-01T21:17:38.289Z</lastmod>
+    <lastmod>2023-06-22T08:35:43.363Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/codeurpro/index.html</loc>
-    <lastmod>2023-02-01T21:17:39.141Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/futurecoder/index.html</loc>
-    <lastmod>2023-02-01T21:17:40.564Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/mesurerinfo/index.html</loc>
-    <lastmod>2023-02-01T21:17:41.644Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/podcast_internet/index.html</loc>
-    <lastmod>2023-02-01T21:17:42.547Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/timeexec/index.html</loc>
-    <lastmod>2023-02-01T21:17:43.811Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/metiers_dev/index.html</loc>
-    <lastmod>2023-02-01T21:17:44.551Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/histoireinfo/index.html</loc>
-    <lastmod>2023-02-01T21:17:45.362Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/interview_gpt_1/index.html</loc>
-    <lastmod>2023-02-01T21:17:46.662Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/python_match/index.html</loc>
-    <lastmod>2023-02-01T21:17:47.622Z</lastmod>
+    <lastmod>2023-06-22T08:35:44.629Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/enquete_jeux_videos/index.html</loc>
-    <lastmod>2023-02-01T21:17:48.397Z</lastmod>
+    <lastmod>2023-06-22T08:35:46.016Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/futurecoder/index.html</loc>
+    <lastmod>2023-06-22T08:35:47.424Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/histoireinfo/index.html</loc>
+    <lastmod>2023-06-22T08:35:48.701Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/histoireSE/index.html</loc>
+    <lastmod>2023-06-22T08:35:50.156Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/interview_gpt_1/index.html</loc>
+    <lastmod>2023-06-22T08:35:51.718Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/interview_gpt_2/index.html</loc>
-    <lastmod>2023-02-01T21:17:49.597Z</lastmod>
+    <lastmod>2023-06-22T08:35:53.206Z</lastmod>
   </url>
   <url>
-    <loc>https://flallemand.fr/blog/posts/tropheesnsi/index.html</loc>
-    <lastmod>2023-02-01T21:17:50.477Z</lastmod>
+    <loc>https://flallemand.fr/blog/posts/lol_docu/index.html</loc>
+    <lastmod>2023-06-22T08:35:54.593Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/lumniBDD/index.html</loc>
+    <lastmod>2023-06-22T08:35:55.873Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/mesurerinfo/index.html</loc>
+    <lastmod>2023-06-22T08:35:57.310Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/metiers_dev/index.html</loc>
+    <lastmod>2023-06-22T08:35:58.583Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/networkx/index.html</loc>
-    <lastmod>2023-03-31T20:05:23.531Z</lastmod>
+    <lastmod>2023-06-22T08:35:59.980Z</lastmod>
   </url>
   <url>
-    <loc>https://flallemand.fr/blog/posts/post-with-code/index.html</loc>
-    <lastmod>2023-03-30T16:08:43.868Z</lastmod>
+    <loc>https://flallemand.fr/blog/posts/podcast_internet/index.html</loc>
+    <lastmod>2023-06-22T08:36:01.559Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/python_match/index.html</loc>
+    <lastmod>2023-06-22T08:36:03.094Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/pyxel_tuto1_base/index.html</loc>
-    <lastmod>2023-06-18T21:08:09.565Z</lastmod>
+    <lastmod>2023-06-22T08:36:04.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</loc>
+    <lastmod>2023-06-22T08:36:05.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/timeexec/index.html</loc>
+    <lastmod>2023-06-22T08:36:07.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/transistors/index.html</loc>
+    <lastmod>2023-06-22T08:36:08.853Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/tropheesnsi/index.html</loc>
+    <lastmod>2023-06-22T08:36:10.238Z</lastmod>
   </url>
 </urlset>

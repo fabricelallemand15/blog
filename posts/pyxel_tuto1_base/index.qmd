@@ -36,3 +36,5 @@ App()
 Voici la fenêtre obtenue avec le code ci-dessus :
 
 ![fenêtre vide](fenetre_vide.png)
+
+**Remarque** : certains calculs de coordonnées des objets de l'applications devront être faits en fonction des dimensions de la fenêtre. Pour cela, on peut utiliser les variables `pyxel.width` et `pyxel.height` qui contiennent respectivement la largeur et la hauteur de la fenêtre.

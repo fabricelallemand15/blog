@@ -70,5 +70,11 @@
   },
   "posts/pyxel_tuto1_base/index.qmd": {
     "index.html": "fa689a78"
+  },
+  "posts/pyxel_tuto2_decor/index.qmd": {
+    "index.html": "d3662d9d"
+  },
+  "posts/pyxel_tuto2_personnage/index.qmd": {
+    "index.html": "7e948c47"
   }
 }
