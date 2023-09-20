@@ -1,99 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://flallemand.fr/blog/posts/tropheesnsi/index.html</loc>
+    <lastmod>2023-01-31T21:36:59.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/timeexec/index.html</loc>
+    <lastmod>2023-02-01T09:33:50.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</loc>
+    <lastmod>2023-06-22T08:47:01.317Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/python_match/index.html</loc>
+    <lastmod>2023-02-01T21:04:35.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/networkx/index.html</loc>
+    <lastmod>2023-03-31T18:40:59.088Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/mesurerinfo/index.html</loc>
+    <lastmod>2023-02-01T09:17:22.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/lol_docu/index.html</loc>
+    <lastmod>2023-01-31T21:57:42.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/interview_gpt_1/index.html</loc>
+    <lastmod>2023-01-31T13:36:53.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/histoireSE/index.html</loc>
+    <lastmod>2023-01-31T21:59:44.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/futurecoder/index.html</loc>
+    <lastmod>2023-01-31T14:15:09.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/codeurpro/index.html</loc>
+    <lastmod>2023-01-31T22:05:22.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/politique_conf.html</loc>
+    <lastmod>2023-01-30T20:14:38.000Z</lastmod>
+  </url>
+  <url>
     <loc>https://flallemand.fr/blog/about.html</loc>
-    <lastmod>2023-06-22T08:35:37.175Z</lastmod>
+    <lastmod>2023-01-30T20:37:06.000Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/index.html</loc>
     <lastmod>2023-02-01T20:34:18.000Z</lastmod>
   </url>
   <url>
-    <loc>https://flallemand.fr/blog/politique_conf.html</loc>
-    <lastmod>2023-06-22T08:35:41.721Z</lastmod>
-  </url>
-  <url>
     <loc>https://flallemand.fr/blog/posts/carmin/index.html</loc>
-    <lastmod>2023-06-22T08:35:43.363Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/codeurpro/index.html</loc>
-    <lastmod>2023-06-22T08:35:44.629Z</lastmod>
+    <lastmod>2023-02-01T20:42:17.000Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/enquete_jeux_videos/index.html</loc>
-    <lastmod>2023-06-22T08:35:46.016Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/futurecoder/index.html</loc>
-    <lastmod>2023-06-22T08:35:47.424Z</lastmod>
+    <lastmod>2023-01-31T14:00:08.000Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/histoireinfo/index.html</loc>
-    <lastmod>2023-06-22T08:35:48.701Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/histoireSE/index.html</loc>
-    <lastmod>2023-06-22T08:35:50.156Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/interview_gpt_1/index.html</loc>
-    <lastmod>2023-06-22T08:35:51.718Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/interview_gpt_2/index.html</loc>
-    <lastmod>2023-06-22T08:35:53.206Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/lol_docu/index.html</loc>
-    <lastmod>2023-06-22T08:35:54.593Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/lumniBDD/index.html</loc>
-    <lastmod>2023-06-22T08:35:55.873Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/mesurerinfo/index.html</loc>
-    <lastmod>2023-06-22T08:35:57.310Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/metiers_dev/index.html</loc>
-    <lastmod>2023-06-22T08:35:58.583Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/networkx/index.html</loc>
-    <lastmod>2023-06-22T08:35:59.980Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/podcast_internet/index.html</loc>
-    <lastmod>2023-06-22T08:36:01.559Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/python_match/index.html</loc>
-    <lastmod>2023-06-22T08:36:03.094Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/pyxel_tuto1_base/index.html</loc>
-    <lastmod>2023-06-22T08:36:04.402Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</loc>
-    <lastmod>2023-06-22T08:47:03.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/timeexec/index.html</loc>
-    <lastmod>2023-06-22T08:36:07.591Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/transistors/index.html</loc>
-    <lastmod>2023-06-22T08:36:08.853Z</lastmod>
-  </url>
-  <url>
-    <loc>https://flallemand.fr/blog/posts/tropheesnsi/index.html</loc>
-    <lastmod>2023-06-22T08:36:10.238Z</lastmod>
+    <lastmod>2023-01-31T22:09:15.000Z</lastmod>
   </url>
   <url>
     <loc>https://flallemand.fr/blog/posts/intel_verre/index.html</loc>
     <lastmod>2023-09-20T20:08:55.467Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/interview_gpt_2/index.html</loc>
+    <lastmod>2023-01-31T13:37:03.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/lumniBDD/index.html</loc>
+    <lastmod>2023-01-31T21:51:58.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/metiers_dev/index.html</loc>
+    <lastmod>2023-01-31T21:58:38.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/podcast_internet/index.html</loc>
+    <lastmod>2023-01-31T13:47:33.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/pyxel_tuto1_base/index.html</loc>
+    <lastmod>2023-06-22T07:41:11.557Z</lastmod>
+  </url>
+  <url>
+    <loc>https://flallemand.fr/blog/posts/transistors/index.html</loc>
+    <lastmod>2023-02-01T07:49:53.000Z</lastmod>
   </url>
 </urlset>
