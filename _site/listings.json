@@ -2,7 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/intel_verre/index.html",
       "/posts/pyxel_tuto2_personnage/index.html",
+      "/posts/pyxel_tuto3_fond/index.html",
       "/posts/pyxel_tuto1_base/index.html",
       "/posts/networkx/index.html",
       "/posts/python_match/index.html",

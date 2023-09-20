@@ -10,7 +10,7 @@ image: "blt_figure.png"
 ::: {.callout-tip}
 ## Objectifs du tutoriel
 
-* Créer une application Pyxel avec un décor de fond issu d'un fichier de ressource au format pyxres ;
+* Créer une application Pyxel avec fond coloré uni ;
 * Créer un personnage qui se déplace avec les touches du clavier ;
 :::
 

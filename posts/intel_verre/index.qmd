@@ -1,0 +1,29 @@
+---
+title: "Intel veut révolutionner les microprocesseurs avec un substrat en verre"
+subtitle: "Actualités"
+description: "Intel a annoncé une nouvelle technologie de fabrication de microprocesseurs qui utilise un substrat en verre au lieu du silicium traditionnel. Cette technologie permettrait de réduire la taille des transistors et d'augmenter la densité des puces, tout en réduisant la consommation d'énergie."
+date: "2023-09-21"
+categories: [NSI, Actualités]
+image: "cpu-3061923_640.jpg"
+---
+
+Les microprocesseurs sont au cœur de nos ordinateurs, smartphones, tablettes et autres appareils électroniques. Ils sont composés de millions, voire de milliards, de transistors qui réalisent des opérations logiques et arithmétiques à une vitesse vertigineuse. Mais ces transistors sont de plus en plus petits et difficiles à fabriquer, ce qui menace la loi de Moore, qui prédit que la puissance des microprocesseurs double tous les deux ans ([voir cours de première NSI](https://pnsi.flallemand.fr/10_vonNeumann/neumann_cours_1.html){target="_blank"}).
+
+![CPU](cpu-3061923_640.jpg){width=50%}
+
+Pour relever ce défi, Intel, le géant américain des semi-conducteurs, a annoncé avoir développé un nouveau substrat en verre pour remplacer le plastique actuellement utilisé. Le substrat est la base sur laquelle sont gravés les circuits des microprocesseurs. Il doit être plat, rigide et résistant à la chaleur et aux contraintes mécaniques.
+
+Le verre présente plusieurs avantages par rapport au plastique. Il est plus stable et supporte des températures plus élevées, ce qui permet de serrer davantage de puces sur un seul substrat sans qu'il se déforme. Il offre aussi une meilleure distribution de l'énergie et une transmission plus rapide des signaux, grâce à l'intégration d'interconnexions optiques qui remplacent le cuivre. Le verre permettrait ainsi de multiplier par dix la densité des interconnexions entre les puces.
+
+Avec ce nouveau substrat en verre, Intel espère pouvoir augmenter considérablement la densité des transistors au sein des microprocesseurs et créer le premier paquet contenant mille milliards de transistors d'ici 2030. Un paquet est un système sur un seul substrat composé de plusieurs puces qui peuvent avoir des fonctions différentes, comme la mémoire, le calcul ou la communication.
+
+Ce projet ambitieux pourrait révolutionner le domaine des microprocesseurs et donner un nouveau souffle à la loi de Moore. Intel prévoit de lancer ses premiers produits commerciaux basés sur ce substrat en verre avant la fin de la décennie. Il faudra toutefois attendre les résultats des tests et des validations pour confirmer les performances et la fiabilité de cette technologie.
+
+La vidéo ci-dessous explique cette innovation (vous pouvez afficher les sous-titres en français) :
+
+<iframe width="840" height="472" src="https://www.youtube.com/embed/_T-mh72VRIY?si=bldJkxFypd7TgN2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+Source : [Futura Sciences](https://www.futura-sciences.com/tech/actualites/processeur-intel-transforme-plafond-verre-tremplin-avenir-processeurs-107780){target="_blank"}
+
+Image : <a href="https://pixabay.com/fr/users/zathris-7597199/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3061923" target="_blank">Dan Williams</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3061923" target="_blank">Pixabay</a>

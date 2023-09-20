@@ -9,8 +9,43 @@
 <link>https://flallemand.fr/blog/index.html</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.4.84</generator>
-<lastBuildDate>Sun, 18 Jun 2023 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.274</generator>
+<lastBuildDate>Wed, 20 Sep 2023 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Intel veut révolutionner les microprocesseurs avec un substrat en verre</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/intel_verre/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Les microprocesseurs sont au cœur de nos ordinateurs, smartphones, tablettes et autres appareils électroniques. Ils sont composés de millions, voire de milliards, de transistors qui réalisent des opérations logiques et arithmétiques à une vitesse vertigineuse. Mais ces transistors sont de plus en plus petits et difficiles à fabriquer, ce qui menace la loi de Moore, qui prédit que la puissance des microprocesseurs double tous les deux ans (<a href="https://pnsi.flallemand.fr/10_vonNeumann/neumann_cours_1.html" target="_blank">voir cours de première NSI</a>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="cpu-3061923_640.jpg" class="lightbox" title="CPU" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<figcaption class="figure-caption">CPU</figcaption>
+</figure>
+</div>
+<p>Pour relever ce défi, Intel, le géant américain des semi-conducteurs, a annoncé avoir développé un nouveau substrat en verre pour remplacer le plastique actuellement utilisé. Le substrat est la base sur laquelle sont gravés les circuits des microprocesseurs. Il doit être plat, rigide et résistant à la chaleur et aux contraintes mécaniques.</p>
+<p>Le verre présente plusieurs avantages par rapport au plastique. Il est plus stable et supporte des températures plus élevées, ce qui permet de serrer davantage de puces sur un seul substrat sans qu’il se déforme. Il offre aussi une meilleure distribution de l’énergie et une transmission plus rapide des signaux, grâce à l’intégration d’interconnexions optiques qui remplacent le cuivre. Le verre permettrait ainsi de multiplier par dix la densité des interconnexions entre les puces.</p>
+<p>Avec ce nouveau substrat en verre, Intel espère pouvoir augmenter considérablement la densité des transistors au sein des microprocesseurs et créer le premier paquet contenant mille milliards de transistors d’ici 2030. Un paquet est un système sur un seul substrat composé de plusieurs puces qui peuvent avoir des fonctions différentes, comme la mémoire, le calcul ou la communication.</p>
+<p>Ce projet ambitieux pourrait révolutionner le domaine des microprocesseurs et donner un nouveau souffle à la loi de Moore. Intel prévoit de lancer ses premiers produits commerciaux basés sur ce substrat en verre avant la fin de la décennie. Il faudra toutefois attendre les résultats des tests et des validations pour confirmer les performances et la fiabilité de cette technologie.</p>
+<p>La vidéo ci-dessous explique cette innovation (vous pouvez afficher les sous-titres en français) :</p>
+<iframe width="840" height="472" src="https://www.youtube.com/embed/_T-mh72VRIY?si=bldJkxFypd7TgN2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<p>Source : <a href="https://www.futura-sciences.com/tech/actualites/processeur-intel-transforme-plafond-verre-tremplin-avenir-processeurs-107780" target="_blank">Futura Sciences</a></p>
+<p>Image : <a href="https://pixabay.com/fr/users/zathris-7597199/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3061923" target="_blank">Dan Williams</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3061923" target="_blank">Pixabay</a></p>
+
+
+
+ ]]></description>
+  <category>NSI</category>
+  <category>Actualités</category>
+  <guid>https://flallemand.fr/blog/posts/intel_verre/index.html</guid>
+  <pubDate>Wed, 20 Sep 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Tuto pyxel (avec POO) : Animer un personnage</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -31,7 +66,7 @@ Objectifs du tutoriel
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Créer une application Pyxel avec un décor de fond issu d’un fichier de ressource au format pyxres ;</li>
+<li>Créer une application Pyxel avec fond coloré uni ;</li>
 <li>Créer un personnage qui se déplace avec les touches du clavier ;</li>
 </ul>
 </div>
@@ -41,7 +76,7 @@ Objectifs du tutoriel
 <p>La fenêtre de jeu est un rectangle de 256 pixels de large sur 128 pixels de haut. L’origine du repère est située en haut à gauche de la fenêtre. Les coordonnées des points sont donc comprises entre 0 et 255 pour les abscisses et entre 0 et 127 pour les ordonnées.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./repere.png" class="lightbox" title="Géométrie de la fenêtre" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/repere.png" class="img-fluid figure-img"></a></p>
+<p><a href="./repere.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Géométrie de la fenêtre"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/repere.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Géométrie de la fenêtre</figcaption>
 </figure>
 </div>
@@ -52,7 +87,7 @@ Objectifs du tutoriel
 <p>Pour ouvrir, modifier ou consulter le contenu d’un tel fichier, il faut utiliser l’éditeur de ressource de Pyxel. Pour cela, on entre <code>pyxel edit jump_games.pyxres</code> dans un terminal, dans le dossier où se trouve le fichier.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./fenetre_pyxres.png" class="lightbox" title="Editeur de ressource" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="./fenetre_pyxres.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Editeur de ressource"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">Editeur de ressource</figcaption>
 </figure>
 </div>
@@ -72,7 +107,7 @@ Objectifs du tutoriel
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./blt_figure.png" class="lightbox" title="Paramètres de blt" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" class="img-fluid figure-img"></a></p>
+<p><a href="./blt_figure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Paramètres de blt"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Paramètres de <code>blt</code></figcaption>
 </figure>
 </div>
@@ -176,7 +211,7 @@ font-style: inherit;">16</span>)</span>
 <p>On obtient :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./fenetre_personnage.png" class="lightbox" title="Personnage en bas à gauche" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_personnage.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="./fenetre_personnage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Personnage en bas à gauche"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_personnage.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">Personnage en bas à gauche</figcaption>
 </figure>
 </div>
@@ -329,7 +364,7 @@ font-style: inherit;">16</span>)</span>
 <p><strong>Remarque</strong> : nous avons également définit un attribut <code>vitesse</code> qui permet de modifier la vitesse de déplacement du personnage : il s’agit du nombre de pixels à ajouter, o à retrancher, à chaque fois que l’on appuie sur une touche fléchée.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./tuto2-1.gif" class="lightbox" title="Personnage qui se déplace" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-1.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="./tuto2-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-1.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">Personnage qui se déplace</figcaption>
 </figure>
 </div>
@@ -339,7 +374,7 @@ font-style: inherit;">16</span>)</span>
 <p>Pour donner une impression d’animation lors du déplacement du personnage, on peut alterner l’affichage de deux images du personnage. Le fichier ressources contient en effet une image du personnage avec les jambes positionnées différemment, comme on peut le voir ci-dessus. On peut donc utiliser la fonction <code>pyxel.frame_count</code> pour alterner l’affichage des deux images à chaque image. Cette fonction renvoie le nombre d’images affichées depuis le début de l’application. Dans le code ci-dessous, on a de plus défini une variable booléenne <code>self.personnage_marche</code> qui vaut <code>True</code> si le personnage est en train de marcher et <code>False</code> sinon (ce qui permet dans ca cas d’arrêter l’animation).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./fenetre_pyxres_2.png" class="lightbox" title="Animation du personnage" data-gallery="quarto-lightbox-gallery-6"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres_2.png" class="img-fluid figure-img"></a></p>
+<p><a href="./fenetre_pyxres_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Animation du personnage"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres_2.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Animation du personnage</figcaption>
 </figure>
 </div>
@@ -573,7 +608,7 @@ font-style: inherit;">16</span>)</span>
 <span id="cb3-38">App()</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./tuto2-3.gif" class="lightbox" title="Personnage qui se déplace" data-gallery="quarto-lightbox-gallery-7"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-3.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="./tuto2-3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-3.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">Personnage qui se déplace</figcaption>
 </figure>
 </div>
@@ -843,7 +878,7 @@ font-style: inherit;">16</span>)</span>
 <span id="cb4-42">App()</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./tuto2-4.gif" class="lightbox" title="Personnage qui se déplace" data-gallery="quarto-lightbox-gallery-8"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-4.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="./tuto2-4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-4.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">Personnage qui se déplace</figcaption>
 </figure>
 </div>
@@ -860,6 +895,1303 @@ font-style: inherit;">16</span>)</span>
   <guid>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</guid>
   <pubDate>Sun, 18 Jun 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" medium="image" type="image/png" height="59" width="144"/>
+</item>
+<item>
+  <title>Tuto pyxel (avec POO) : Ajouter un fond</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/pyxel_tuto3_fond/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Ce tuto fait suite au précédent : <a href="../../posts/pyxel_tuto2_personnage/index.html">Tuto pyxel (avec POO) : Animer un personnage</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objectifs du tutoriel
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Créer un fond constitué de divers éléments ;</li>
+<li>Animer le fond pour simuler un déplacement du personnage.</li>
+</ul>
+</div>
+</div>
+<section id="préparation" class="level2">
+<h2 class="anchored" data-anchor-id="préparation">Préparation</h2>
+<p>Nous allons utiliser le code du tuto précédent comme base de travail.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pyxel</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> App:</span>
+<span id="cb1-4">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-5">        pyxel.init(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">128</span>, title<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Tuto 2"</span>, quit_key<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>pyxel.KEY_Q, fps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>)</span>
+<span id="cb1-6">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on charge le fichier de ressources</span></span>
+<span id="cb1-7">        pyxel.load(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"jump_game.pyxres"</span>)</span>
+<span id="cb1-8">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable définissant l'abscisse initiale du personnage</span></span>
+<span id="cb1-9">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-10">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable définissant la vitesse du personnage</span></span>
+<span id="cb1-11">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb1-12">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable indiquant si un déplacement est en cours</span></span>
+<span id="cb1-13">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb1-14">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable indiquant la direction du personnage</span></span>
+<span id="cb1-15">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-16">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on lance l'application</span></span>
+<span id="cb1-17">        pyxel.run(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.draw)</span>
+<span id="cb1-18">        </span>
+<span id="cb1-19">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-20">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
+<span id="cb1-21">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-22">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-23">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb1-24">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
+<span id="cb1-25">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">min</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse, pyxel.width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)</span>
+<span id="cb1-26">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-27">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb1-28"></span>
+<span id="cb1-29">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-30">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
+<span id="cb1-31">        pyxel.cls(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb1-32">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
+<span id="cb1-33">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche:</span>
+<span id="cb1-34">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>:</span>
+<span id="cb1-35">                pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)</span>
+<span id="cb1-36">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb1-37">                pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)</span>
+<span id="cb1-38">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb1-39">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb1-40">            pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)</span>
+<span id="cb1-41"></span>
+<span id="cb1-42">App()</span></code></pre></div>
+</section>
+<section id="fond-statique" class="level2">
+<h2 class="anchored" data-anchor-id="fond-statique">Fond statique</h2>
+<p>Dans un premiers temps, nous allons dessiner un fond statique.</p>
+<p>L’examen du fichier de ressources nous permet de déterminer les coordonnées des éléments présents : forêt, nuages et montagne. Dans le code suivant, nous faisons quelques calculs afin que la montagne soit centrée dans la fenêtre de l’application. La forêt, elle, doit parcourir toute la longueur de l’écran. Même chose pour le dégradé du ciel.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pyxel</span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> App:</span>
+<span id="cb2-4">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb2-5">        pyxel.init(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">128</span>, title<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Tuto 2"</span>, quit_key<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>pyxel.KEY_Q, fps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>)</span>
+<span id="cb2-6">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on charge le fichier de ressources</span></span>
+<span id="cb2-7">        pyxel.load(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"jump_game.pyxres"</span>)</span>
+<span id="cb2-8">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable définissant l'abscisse initiale du personnage</span></span>
+<span id="cb2-9">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb2-10">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable définissant la vitesse du personnage</span></span>
+<span id="cb2-11">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb2-12">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable indiquant si un déplacement est en cours</span></span>
+<span id="cb2-13">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb2-14">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable indiquant la direction du personnage</span></span>
+<span id="cb2-15">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb2-16">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on lance l'application</span></span>
+<span id="cb2-17">        pyxel.run(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.draw)</span>
+<span id="cb2-18">        </span>
+<span id="cb2-19">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb2-20">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
+<span id="cb2-21">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb2-22">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb2-23">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb2-24">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
+<span id="cb2-25">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">min</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse, pyxel.width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)</span>
+<span id="cb2-26">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb2-27">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb2-28"></span>
+<span id="cb2-29">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb2-30">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
+<span id="cb2-31">        pyxel.cls(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-32">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tracé de la montagne</span></span>
+<span id="cb2-33">        pyxel.blt(pyxel.width<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">80</span>, pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">64</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24</span>)</span>
+<span id="cb2-34">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tracé du ciel dégradé</span></span>
+<span id="cb2-35">        pyxel.blt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">88</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-36">        pyxel.blt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>,pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">88</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-37">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tracé de la forêt</span></span>
+<span id="cb2-38">        pyxel.blt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">48</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-39">        pyxel.blt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>,pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">48</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-40">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tracé des nuages</span></span>
+<span id="cb2-41">        pyxel.blt(pyxel.width<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">80</span>, pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-42">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
+<span id="cb2-43">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche:</span>
+<span id="cb2-44">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>:</span>
+<span id="cb2-45">                pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-46">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb2-47">                pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-48">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb2-49">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb2-50">            pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-51"></span>
+<span id="cb2-52">App()</span></code></pre></div>
+</section>
+<section id="animation-des-nuages" class="level2">
+<h2 class="anchored" data-anchor-id="animation-des-nuages">Animation des nuages</h2>
+<p>Avec le temps qui passe, les nuages se déplacent lentement vers la gauche et d’autres nuages apparaissent sur la droite.</p>
+<p>Afin de mieux organiser notre code, il va devenir fastidieux de tout écrire dans les fonctions <code>update</code> et <code>draw</code></p>
+<p>Nous allons donc définir une classe <code>Nuage</code> qui possède ses propres méthodes <code>update</code> et <code>draw</code>, comme le montre le code ci-dessous. Quelques explications suivent le code.</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pyxel</span>
+<span id="cb3-2"></span>
+<span id="cb3-3">LARGEUR <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">256</span></span>
+<span id="cb3-4">HAUTEUR <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">128</span></span>
+<span id="cb3-5"></span>
+<span id="cb3-6"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> Nuage:</span>
+<span id="cb3-7">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> LARGEUR, y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> HAUTEUR<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>):</span>
+<span id="cb3-8">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> x</span>
+<span id="cb3-9">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> y</span>
+<span id="cb3-10">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.replaced <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb3-11"></span>
+<span id="cb3-12">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb3-13">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb3-14">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-15"></span>
+<span id="cb3-16">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb3-17">        pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.y, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-18"></span>
+<span id="cb3-19"></span>
+<span id="cb3-20"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> App:</span>
+<span id="cb3-21">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb3-22">        pyxel.init(LARGEUR, HAUTEUR, title<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Tuto 2"</span>, quit_key<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>pyxel.KEY_Q, fps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>)</span>
+<span id="cb3-23">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on charge le fichier de ressources</span></span>
+<span id="cb3-24">        pyxel.load(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"jump_game.pyxres"</span>)</span>
+<span id="cb3-25">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable définissant l'abscisse initiale du personnage</span></span>
+<span id="cb3-26">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb3-27">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable définissant la vitesse du personnage</span></span>
+<span id="cb3-28">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb3-29">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable indiquant si un déplacement est en cours</span></span>
+<span id="cb3-30">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb3-31">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># variable indiquant la direction du personnage</span></span>
+<span id="cb3-32">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-33">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># liste des nuages visibles</span></span>
+<span id="cb3-34">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.nuages <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb3-35">        premier_nuage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Nuage(x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pyxel.width<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">80</span>, y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)</span>
+<span id="cb3-36">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.nuages.append(premier_nuage)</span>
+<span id="cb3-37">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on lance l'application</span></span>
+<span id="cb3-38">        pyxel.run(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.draw)</span>
+<span id="cb3-39">        </span>
+<span id="cb3-40">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb3-41">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
+<span id="cb3-42">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">max</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb3-43">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-44">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb3-45">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
+<span id="cb3-46">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">min</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse, pyxel.width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)</span>
+<span id="cb3-47">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb3-48">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb3-49">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> nuage <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.nuages:</span>
+<span id="cb3-50">            nuage.update()</span>
+<span id="cb3-51">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> nuage.x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">and</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">not</span> nuage.replaced:</span>
+<span id="cb3-52">                nouveau_nuage <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Nuage()</span>
+<span id="cb3-53">                <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.nuages.append(nouveau_nuage)</span>
+<span id="cb3-54">                nuage.replaced <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb3-55">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> nuage.x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>:</span>
+<span id="cb3-56">                <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.nuages.remove(nuage)</span>
+<span id="cb3-57"></span>
+<span id="cb3-58">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb3-59">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
+<span id="cb3-60">        pyxel.cls(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-61">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tracé de la montagne</span></span>
+<span id="cb3-62">        pyxel.blt(pyxel.width<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">80</span>, pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">64</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24</span>)</span>
+<span id="cb3-63">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tracé du ciel dégradé</span></span>
+<span id="cb3-64">        pyxel.blt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">88</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-65">        pyxel.blt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>,pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">88</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-66">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tracé de la forêt</span></span>
+<span id="cb3-67">        pyxel.blt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">48</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-68">        pyxel.blt(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>,pyxel.height<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">48</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-69">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Tracé des nuages</span></span>
+<span id="cb3-70">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> nuage <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.nuages:</span>
+<span id="cb3-71">            nuage.draw()</span>
+<span id="cb3-72">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
+<span id="cb3-73">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche:</span>
+<span id="cb3-74">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>:</span>
+<span id="cb3-75">                pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-76">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb3-77">                pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-78">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb3-79">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb3-80">            pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb3-81"></span>
+<span id="cb3-82">App()</span></code></pre></div>
+<ul>
+<li>La ligne <code>if pyxel.frame_count % 10 == 0:</code> permet de faire avancer le nuage de 1 pixel vers la gauche trois fois par seconde, puisque notre application a un framerate de 30 fps.</li>
+<li>Un mécanisme est mis en place pour commencer à faire apparaître un nouveau nuage lorsque le précédent va bientôt disparaître. Nous définissons pour cela dans notre application une liste de nuages <code>nuages</code> qui contient initialement un seul nuage placé au milieu de la fenêtre.</li>
+<li>Dans la méthode <code>update</code> de l’application, chaque nuage de la liste est mis à jour et, dès qu’un nuage a son abscisse inférieure à 10 (et qu’il n’a pas encore été remplacé), un nouveau nuage est créé. L’ancien nuage est alors marqué comme remplacé, afin d’éviter de créer un nouveau nuage à chaque frame : <code>nuage.replaced = True</code>.</li>
+<li>Lorsque le nuage a complètement disparu de la fenêtre, il est retiré de la liste : <code>self.nuages.remove(nuage)</code>.</li>
+</ul>
+</section>
+<section id="animation-de-la-forêt" class="level2">
+<h2 class="anchored" data-anchor-id="animation-de-la-forêt">Animation de la forêt</h2>
+<p>Pour rendre plus réaliste le déplacement du personnage, on peut provoquer un déplacement de la forêt en sens contraire. La montagne et le ciel, eux, peuvent rester fixes, car situés à une grande distance du personnage.</p>
+<p>Dans le code ci-dessous, nous mettons en oeuvre cette idée, tout en reformulant l’ensemble du code afin de définir sous forme de de classes tous les éléments, sauf les éléments fixes.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>NSI</category>
+  <category>Programmation</category>
+  <category>Pyxel</category>
+  <category>Nuit du code</category>
+  <guid>https://flallemand.fr/blog/posts/pyxel_tuto3_fond/index.html</guid>
+  <pubDate>Sun, 18 Jun 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/blt_figure.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Tuto pyxel (avec POO) : code de base</title>
@@ -3157,598 +4489,6 @@ MOOC “NSI, les fondamentaux”, disponible sur f<a href="https://www.fun-mooc.
   <guid>https://flallemand.fr/blog/posts/mesurerinfo/index.html</guid>
   <pubDate>Sat, 18 Jun 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/mesurerinfo/mesurerinfo.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Mesurer le temps d’exécution d’un fragment de code</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/timeexec/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-Un moyen intuitif de comparer l’efficacité de deux portions de code est de mesurer leur temps d’exécution en fonction de la taille des données. Le <a href="https://docs.python.org/fr/3/library/timeit.html#" target="_blank" rel="noreferrer noopener">module <code>timeit</code> de Python</a> permet de faire cela de façon semi-automatisée. Nous allons voir comment dans cet article, en considérant trois fonctions différentes qui renvoient le n-ième <img src="https://latex.codecogs.com/png.latex?F_n"> de <a rel="noreferrer noopener" href="https://fr.wikipedia.org/wiki/Suite_de_Fibonacci" target="_blank">la suite de Fibonacci</a>.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Pour les besoins du code présent dans la suite, on commencera par les importations suivantes :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> timeit</span></code></pre></div>
-</div>
-<!-- wp:heading -->
-<h2 class="anchored">
-Fonctions à tester
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Ces fonctions sont issues d’un <a href="https://flallemand.fr/nsi/terminale/01_langages/recurs_exos/#exercice-2-suite-de-fibonacci" target="_blank" rel="noreferrer noopener">exercice du chapitre “Récursivité” du cours de NSI de terminale</a>. Cependant, l’objectif de cet article est juste de montrer un moyen de comparer et de visualiser les vitesses d’exécution.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Nous considérons les trois fonctions suivantes. La première retourne le nombre <img src="https://latex.codecogs.com/png.latex?F_n"> par une méthode itérative.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_iter(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb2-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci, version itérative"""</span></span>
-<span id="cb2-3">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>:</span>
-<span id="cb2-4">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb2-5">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb2-6">        f0, f1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb2-7">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, n):</span>
-<span id="cb2-8">            f0, f1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f1, f0 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> f1</span>
-<span id="cb2-9">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> f1</span></code></pre></div>
-</div>
-<!-- wp:paragraph -->
-<p>
-La deuxième fonction est une fonction récursive qui traduit directement la définition de la suite de Fibonacci.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_rec(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb3-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci version récursive"""</span></span>
-<span id="cb3-3">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Cas de base</span></span>
-<span id="cb3-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">or</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>:</span>
-<span id="cb3-5">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> n</span>
-<span id="cb3-6">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Récursion</span></span>
-<span id="cb3-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb3-8">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> fibo_rec(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span>fibo_rec(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span></code></pre></div>
-</div>
-<!-- wp:paragraph -->
-<p>
-La troisième est également récursive et utilise les idées de la programmation dynamique.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_dyn(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>, suite: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">dict</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> {<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>}) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb4-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci version dynamique"""</span></span>
-<span id="cb4-3">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Cas de base</span></span>
-<span id="cb4-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">or</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>:</span>
-<span id="cb4-5">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> n</span>
-<span id="cb4-6">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Récursion</span></span>
-<span id="cb4-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb4-8">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Si Fn est déjà calculé, on le retourne</span></span>
-<span id="cb4-9">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> suite.keys():</span>
-<span id="cb4-10">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> suite[n]</span>
-<span id="cb4-11">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb4-12">            <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Sinon, on le calcule et on le garde en mémoire</span></span>
-<span id="cb4-13">            f <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, suite) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, suite)</span>
-<span id="cb4-14">            suite[n] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f</span>
-<span id="cb4-15">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> f</span></code></pre></div>
-</div>
-<!-- wp:heading -->
-<h2 class="anchored">
-Utilisation de timeit
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Par exemple, pour obtenir le temps d’exécution de 100 appels à la fonction fibo_iter() avec le paramètre 15, on entre le script suivant :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">timeit.timeit(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(15)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>())</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="45">
-<pre><code>0.0008780480002315016</code></pre>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-et on obtient en sortie le temps d’exécution en secondes.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Beaucoup d’autres choses sont possibles avec le module timeit, mais cette simple commande nous suffira.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Visualisation graphique
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Dans le script suivant, nous définissions un tableau des abscisses correspondant aux différentes valeurs de <img src="https://latex.codecogs.com/png.latex?n"> pour lesquelles nous calculons <img src="https://latex.codecogs.com/png.latex?F_n"> : <img src="https://latex.codecogs.com/png.latex?n"> varie de 0 à 15 avec un pas de 1 (ligne 1)
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Ensuite, pour chacune des fonctions, nous calculons le temps d’exécution de chaque terme de la suite (100 fois) et nous stockons les résultats dans un tableau d’ordonnées. (lignes 5 à 11)
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Nous traçons ensuite les courbes correspondantes. (lignes 12 à 15)
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1">abscisses <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [k <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)]</span>
-<span id="cb7-2">ordonnees_rec <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-3">ordonnees_iter <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-4">ordonnees_dyn <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-5"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> abscisses:</span>
-<span id="cb7-6">    ordonnees_iter.append(timeit.timeit(</span>
-<span id="cb7-7">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-8">    ordonnees_rec.append(timeit.timeit(</span>
-<span id="cb7-9">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_rec(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-10">    ordonnees_dyn.append(timeit.timeit(</span>
-<span id="cb7-11">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-12">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'b'</span>)</span>
-<span id="cb7-13">plt.plot(abscisses, ordonnees_rec, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'r'</span>)</span>
-<span id="cb7-14">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'g'</span>)</span>
-<span id="cb7-15">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/timeexec/index_files/figure-html/cell-7-output-1.png" width="587" height="411" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-Nous observons pour la fonction récursive une courbe caractéristique d’une croissance exponentielle du temps d’exécution. Les courbes bleue et verte correspondant aux deux autres méthodes sont confondues. Pour les distinguer, nous allons faire une nouvelle figure sans les données de la fonction <code>fibo_rec</code> cette fois ci (image réalisée avec <img src="https://latex.codecogs.com/png.latex?n"> variant de 0 à 100) :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">abscisses <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [k <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)]</span>
-<span id="cb8-2">ordonnees_iter <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb8-3">ordonnees_dyn <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb8-4"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> abscisses:</span>
-<span id="cb8-5">    ordonnees_iter.append(timeit.timeit(</span>
-<span id="cb8-6">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb8-7">    ordonnees_dyn.append(timeit.timeit(</span>
-<span id="cb8-8">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb8-9">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'b'</span>)</span>
-<span id="cb8-10">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'g'</span>)</span>
-<span id="cb8-11">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/timeexec/index_files/figure-html/cell-8-output-1.png" width="596" height="411" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-Ce graphique suggère une croissance linéaire pour la méthode itérative et des performances encore meilleures pour la méthode dynamique.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Bien sûr, cette démarche ne remplace pas une étude théorique rigoureuse et un calcul de complexité, mais elle permet, grâce à la visualisation, de comparer rapidement deux algorithmes et de conjecturer leur complexité.
-</p>
-<!-- /wp:paragraph -->
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Python</category>
-  <guid>https://flallemand.fr/blog/posts/timeexec/index.html</guid>
-  <pubDate>Sat, 04 Jun 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/timeexec/timeit_1-2.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Un nouveau site vient de voir le jour : carmin.tv.</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/carmin/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.carmin.tv/fr/" target="_blank"><img src="https://flallemand.fr/blog/posts/carmin/logo-carmin.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<!-- wp:jetpack/markdown {"source":"Il s'agit d'une plateforme de mise à disposition de vidéos de conférences, de séminaires de recherches en mathématiques. On y trouve aussi des interviews de mathématiciennes et de mathématiciens.\n\nLe CARMIN (Centre d'Accueil et de Rencontres Mathématiques INternationales) regroupe quatre instituts français de renommée internationale :\n\n* Centre International de Mathématiques Pures et Appliquées (CIMPA)\n* Centre International de Rencontres Mathématiques (CIRM)\n* Institut des Hautes Études Scientifiques (IHÉS)\n* Institut Henri Poincaré (IHP)\n\nOn peut lire sur la page \u0022À propos\u0022 de la plateforme :\n\n\u003e Ces instituts prestigieux encouragent la recherche en mathématiques et ses interactions avec les autres sciences (physique, informatique, biologie, etc) en accueillant les chercheurs du monde entier pour des courts et longs séjours et en organisant des conférences et des écoles.\n\u003e Ensemble, ces centres ont créé une plateforme de diffusion audiovisuelle afin de préserver la valeur scientifique et pédagogique des événements qu’ils organisent et de la partager avec le monde entier.\n\u003e La plateforme est équipée d’un outil de recherche avancé qui permet aux utilisateurs de parcourir efficacement des milliers de vidéos enrichies et de trouver rapidement le meilleur contenu pour leurs demandes.\n\nSi la plupart des vidéos proposées sont haut perchées, d'un niveau recherche universitaire et, donc, inaccessibles au grand public, on trouve aussi quelques conférences de vulgarisation.\n\nParmi les 4611 vidéos en ligne à l'heure où j'écris ces lignes, des filtres situés dans la colonne de gauche permettent de sélectionner la langue (anglais ou français) et le niveau des auditeurs. Par exemple, pour une audience \u0022General Public\u0022 en français, il reste 124 vidéos disponibles.\n\n## Quelques exemples de vidéos intéressantes et \u0022grand public\u0022 (quoique...) :\n"} -->
-<div class="wp-block-jetpack-markdown">
-<p>
-Il s’agit d’une plateforme de mise à disposition de vidéos de conférences, de séminaires de recherches en mathématiques. On y trouve aussi des interviews de mathématiciennes et de mathématiciens.
-</p>
-<p>
-Le CARMIN (Centre d’Accueil et de Rencontres Mathématiques INternationales) regroupe quatre instituts français de renommée internationale :
-</p>
-<ul>
-<li>
-Centre International de Mathématiques Pures et Appliquées (CIMPA)
-</li>
-<li>
-Centre International de Rencontres Mathématiques (CIRM)
-</li>
-<li>
-Institut des Hautes Études Scientifiques (IHÉS)
-</li>
-<li>
-Institut Henri Poincaré (IHP)
-</li>
-</ul>
-<p>
-On peut lire sur la page "À propos" de la plateforme :
-</p>
-<blockquote class="blockquote">
-<p>
-Ces instituts prestigieux encouragent la recherche en mathématiques et ses interactions avec les autres sciences (physique, informatique, biologie, etc) en accueillant les chercheurs du monde entier pour des courts et longs séjours et en organisant des conférences et des écoles. Ensemble, ces centres ont créé une plateforme de diffusion audiovisuelle afin de préserver la valeur scientifique et pédagogique des événements qu’ils organisent et de la partager avec le monde entier. La plateforme est équipée d’un outil de recherche avancé qui permet aux utilisateurs de parcourir efficacement des milliers de vidéos enrichies et de trouver rapidement le meilleur contenu pour leurs demandes.
-</p>
-</blockquote>
-<p>
-Si la plupart des vidéos proposées sont haut perchées, d’un niveau recherche universitaire et, donc, inaccessibles au grand public, on trouve aussi quelques conférences de vulgarisation.
-</p>
-<p>
-Parmi les 4611 vidéos en ligne à l’heure où j’écris ces lignes, des filtres situés dans la colonne de gauche permettent de sélectionner la langue (anglais ou français) et le niveau des auditeurs. Par exemple, pour une audience "General Public" en français, il reste 124 vidéos disponibles.
-</p>
-<h2 class="anchored">
-Quelques exemples de vidéos intéressantes et "grand public" (quoique…) :
-</h2>
-</div>
-<!-- /wp:jetpack/markdown -->
-<!-- wp:paragraph -->
-<p>
-“Démocratie, dictature … et mathématiques”, de Gérard Grancher.
-</p>
-<!-- /wp:paragraph -->
-<iframe class="video" src="https://www.youtube.com/embed/lG_zdbvFZls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<p><br></p>
-<!-- wp:paragraph -->
-<p>
-“Fermat, Mersenne, factorisation et nombres parfaits”, de Daniel Perrin.
-</p>
-<!-- /wp:paragraph -->
-<iframe class="video" src="https://www.youtube.com/embed/J418w-SjnTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<p><br></p>
-<!-- wp:paragraph -->
-<p>
-“Le triangle de Pascal et ses propriétés”, de Christophe Soulé.
-</p>
-<!-- /wp:paragraph -->
-<iframe class="video" src="https://www.youtube.com/embed/d8YaWDepHhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<p><br></p>
-<!-- wp:paragraph -->
-<p>
-“Georg Cantor et les infinis”, de Patrick Dehornoy.
-</p>
-<!-- /wp:paragraph -->
-<iframe class="video" src="https://www.youtube.com/embed/cf15qYStKbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:paragraph -->
-<p>
-<strong>Source</strong> : Unidivers
-</p>
-<!-- /wp:paragraph -->
-
-
-
- ]]></description>
-  <category>Mathématiques</category>
-  <category>Vidéothèque</category>
-  <category>Histoire</category>
-  <guid>https://flallemand.fr/blog/posts/carmin/index.html</guid>
-  <pubDate>Fri, 31 Dec 2021 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/carmin/logo-carmin.png" medium="image" type="image/png" height="25" width="144"/>
 </item>
 </channel>
 </rss>

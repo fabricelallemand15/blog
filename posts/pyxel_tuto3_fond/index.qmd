@@ -1,0 +1,232 @@
+---
+title: "Tuto pyxel (avec POO) : Ajouter un fond"
+subtitle: "Tutoriels Pyxel"
+description: "Ajouter un fond à notre application Pyxel"
+date: "2023-06-19"
+draft: true
+categories: [Python, NSI, Programmation, Pyxel, Nuit du code]
+image: "blt_figure.png"
+---
+
+Ce tuto fait suite au précédent : [Tuto pyxel (avec POO) : Animer un personnage](../pyxel_tuto2_personnage/index.qmd).
+
+::: {.callout-tip}
+## Objectifs du tutoriel
+
+* Créer un fond constitué de divers éléments ;
+* Animer le fond pour simuler un déplacement du personnage.
+:::
+
+## Préparation
+
+Nous allons utiliser le code du tuto précédent comme base de travail.
+
+```python
+import pyxel
+
+class App:
+    def __init__(self):
+        pyxel.init(256, 128, title="Tuto 2", quit_key=pyxel.KEY_Q, fps=30)
+        # on charge le fichier de ressources
+        pyxel.load("jump_game.pyxres")
+        # variable définissant l'abscisse initiale du personnage
+        self.x_personnage = 0
+        # variable définissant la vitesse du personnage
+        self.vitesse = 2
+        # variable indiquant si un déplacement est en cours
+        self.personnage_marche = False
+        # variable indiquant la direction du personnage
+        self.direction = 1
+        # on lance l'application
+        pyxel.run(self.update, self.draw)
+        
+    def update(self):
+        if pyxel.btn(pyxel.KEY_LEFT):
+            self.x_personnage = max(self.x_personnage - self.vitesse, 0)
+            self.direction = -1
+            self.personnage_marche = True
+        if pyxel.btn(pyxel.KEY_RIGHT):
+            self.x_personnage = min(self.x_personnage + self.vitesse, pyxel.width - 16)
+            self.direction = 1
+            self.personnage_marche = True
+
+    def draw(self):
+        # on efface l'écran et on remplit la fenêtre de bleu
+        pyxel.cls(12)
+        # on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16
+        if self.personnage_marche:
+            if pyxel.frame_count % 6 < 3:
+                pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, self.direction*16, 16)
+            else:
+                pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 16, 0, self.direction*16, 16)
+            self.personnage_marche = False
+        else:
+            pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, self.direction*16, 16)
+
+App()
+```
+
+## Fond statique
+
+Dans un premiers temps, nous allons dessiner un fond statique.
+
+L'examen du fichier de ressources nous permet de déterminer les coordonnées des éléments présents : forêt, nuages et montagne. Dans le code suivant, nous faisons quelques calculs afin que la montagne soit centrée dans la fenêtre de l'application. La forêt, elle, doit parcourir toute la longueur de l'écran. Même chose pour le dégradé du ciel.
+
+```python
+import pyxel
+
+class App:
+    def __init__(self):
+        pyxel.init(256, 128, title="Tuto 2", quit_key=pyxel.KEY_Q, fps=30)
+        # on charge le fichier de ressources
+        pyxel.load("jump_game.pyxres")
+        # variable définissant l'abscisse initiale du personnage
+        self.x_personnage = 0
+        # variable définissant la vitesse du personnage
+        self.vitesse = 2
+        # variable indiquant si un déplacement est en cours
+        self.personnage_marche = False
+        # variable indiquant la direction du personnage
+        self.direction = 1
+        # on lance l'application
+        pyxel.run(self.update, self.draw)
+        
+    def update(self):
+        if pyxel.btn(pyxel.KEY_LEFT):
+            self.x_personnage = max(self.x_personnage - self.vitesse, 0)
+            self.direction = -1
+            self.personnage_marche = True
+        if pyxel.btn(pyxel.KEY_RIGHT):
+            self.x_personnage = min(self.x_personnage + self.vitesse, pyxel.width - 16)
+            self.direction = 1
+            self.personnage_marche = True
+
+    def draw(self):
+        # on efface l'écran et on remplit la fenêtre de bleu
+        pyxel.cls(12)
+        # Tracé de la montagne
+        pyxel.blt(pyxel.width//2 - 80, pyxel.height-50, 0, 0, 64, 160, 24)
+        # Tracé du ciel dégradé
+        pyxel.blt(0,pyxel.height-32, 0, 0, 88, 160, 32, 12)
+        pyxel.blt(160,pyxel.height-32, 0, 0, 88, 160, 32, 12)
+        # Tracé de la forêt
+        pyxel.blt(0,pyxel.height-16, 0, 0, 48, 160, 16, 12)
+        pyxel.blt(160,pyxel.height-16, 0, 0, 48, 160, 16, 12)
+        # Tracé des nuages
+        pyxel.blt(pyxel.width//2 - 80, pyxel.height//4, 0, 0, 24, 160, 16, 12)
+        # on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16
+        if self.personnage_marche:
+            if pyxel.frame_count % 6 < 3:
+                pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, self.direction*16, 16, 12)
+            else:
+                pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 16, 0, self.direction*16, 16, 12)
+            self.personnage_marche = False
+        else:
+            pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, self.direction*16, 16, 12)
+
+App()
+```
+
+## Animation des nuages
+
+Avec le temps qui passe, les nuages se déplacent lentement vers la gauche et d'autres nuages apparaissent sur la droite.
+
+Afin de mieux organiser notre code, il va devenir fastidieux de tout écrire dans les fonctions `update` et `draw`
+
+Nous allons donc définir une classe `Nuage` qui possède ses propres méthodes `update` et `draw`, comme le montre le code ci-dessous. Quelques explications suivent le code.
+
+```python
+import pyxel
+
+LARGEUR = 256
+HAUTEUR = 128
+
+class Nuage:
+    def __init__(self, x = LARGEUR, y = HAUTEUR//4):
+        self.x = x
+        self.y = y
+        self.replaced = False
+
+    def update(self):
+        if pyxel.frame_count % 10 == 0:
+            self.x = self.x -1
+
+    def draw(self):
+        pyxel.blt(self.x, self.y, 0, 0, 24, 160, 16, 12)
+
+
+class App:
+    def __init__(self):
+        pyxel.init(LARGEUR, HAUTEUR, title="Tuto 2", quit_key=pyxel.KEY_Q, fps=30)
+        # on charge le fichier de ressources
+        pyxel.load("jump_game.pyxres")
+        # variable définissant l'abscisse initiale du personnage
+        self.x_personnage = 0
+        # variable définissant la vitesse du personnage
+        self.vitesse = 2
+        # variable indiquant si un déplacement est en cours
+        self.personnage_marche = False
+        # variable indiquant la direction du personnage
+        self.direction = 1
+        # liste des nuages visibles
+        self.nuages = []
+        premier_nuage = Nuage(x = pyxel.width//2-80, y = pyxel.height//4)
+        self.nuages.append(premier_nuage)
+        # on lance l'application
+        pyxel.run(self.update, self.draw)
+        
+    def update(self):
+        if pyxel.btn(pyxel.KEY_LEFT):
+            self.x_personnage = max(self.x_personnage - self.vitesse, 0)
+            self.direction = -1
+            self.personnage_marche = True
+        if pyxel.btn(pyxel.KEY_RIGHT):
+            self.x_personnage = min(self.x_personnage + self.vitesse, pyxel.width - 16)
+            self.direction = 1
+            self.personnage_marche = True
+        for nuage in self.nuages:
+            nuage.update()
+            if nuage.x < 10 and not nuage.replaced:
+                nouveau_nuage = Nuage()
+                self.nuages.append(nouveau_nuage)
+                nuage.replaced = True
+            if nuage.x < -160:
+                self.nuages.remove(nuage)
+
+    def draw(self):
+        # on efface l'écran et on remplit la fenêtre de bleu
+        pyxel.cls(12)
+        # Tracé de la montagne
+        pyxel.blt(pyxel.width//2 - 80, pyxel.height-50, 0, 0, 64, 160, 24)
+        # Tracé du ciel dégradé
+        pyxel.blt(0,pyxel.height-32, 0, 0, 88, 160, 32, 12)
+        pyxel.blt(160,pyxel.height-32, 0, 0, 88, 160, 32, 12)
+        # Tracé de la forêt
+        pyxel.blt(0,pyxel.height-16, 0, 0, 48, 160, 16, 12)
+        pyxel.blt(160,pyxel.height-16, 0, 0, 48, 160, 16, 12)
+        # Tracé des nuages
+        for nuage in self.nuages:
+            nuage.draw()
+        # on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16
+        if self.personnage_marche:
+            if pyxel.frame_count % 6 < 3:
+                pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, self.direction*16, 16, 12)
+            else:
+                pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 16, 0, self.direction*16, 16, 12)
+            self.personnage_marche = False
+        else:
+            pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, self.direction*16, 16, 12)
+
+App()
+```
+
+* La ligne `if pyxel.frame_count % 10 == 0:` permet de faire avancer le nuage de 1 pixel vers la gauche trois fois par seconde, puisque notre application a un framerate de 30 fps.
+* Un mécanisme est mis en place pour commencer à faire apparaître un nouveau nuage lorsque le précédent va bientôt disparaître. Nous définissons pour cela dans notre application une liste de nuages `nuages` qui contient initialement un seul nuage placé au milieu de la fenêtre.
+* Dans la méthode `update` de l'application, chaque nuage de la liste est mis à jour et, dès qu'un nuage a son abscisse inférieure à 10 (et qu'il n'a pas encore été remplacé), un nouveau nuage est créé. L'ancien nuage est alors marqué comme remplacé, afin d'éviter de créer un nouveau nuage à chaque frame : `nuage.replaced = True`.
+* Lorsque le nuage a complètement disparu de la fenêtre, il est retiré de la liste : `self.nuages.remove(nuage)`.
+
+## Animation de la forêt
+
+Pour rendre plus réaliste le déplacement du personnage, on peut provoquer un déplacement de la forêt en sens contraire. La montagne et le ciel, eux, peuvent rester fixes, car situés à une grande distance du personnage.
+
+Dans le code ci-dessous, nous mettons en oeuvre cette idée, tout en reformulant l'ensemble du code afin de définir sous forme de de classes tous les éléments, sauf les éléments fixes.
