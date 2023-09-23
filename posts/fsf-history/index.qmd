@@ -1,0 +1,33 @@
+---
+title: "L'histoire de la Free Software Foundation (FSF)"
+description: "Une plongée dans le passé du mouvement du logiciel libre"
+date: "2023-09-23"
+categories: [NSI, Informatique, Histoire, Linux]
+image: "fsf-history/img/event/membermeeting.jpg"
+---
+
+Si vous êtes passionné par le logiciel libre et open source, vous avez probablement entendu parler de la Free Software Foundation (FSF). Cette organisation emblématique a joué un rôle central dans la promotion et la défense du logiciel libre depuis sa création en 1985 par Richard Stallman. Dans cet article, je vous propose un résumé de la page officielle de la FSF dédiée à son histoire, que vous pouvez consulter ici : [Lien vers la page officielle de la FSF sur son histoire](https://www.fsf.org/history/){target="_blank"}.
+
+**Vous trouverez aussi sur ce site une traduction de cette page en français, que vous pouvez consulter ici : [Lien vers la version traduite de la page d'histoire de la FSF](https://flallemand.fr/divers/fsf-history/index.html){target="_blank"}.**
+
+### Les débuts de la FSF
+
+La page d'histoire de la FSF nous emmène tout d'abord dans les premiers jours de l'organisation. Nous découvrons comment Richard Stallman, un programmeur visionnaire, a lancé la FSF avec pour objectif de promouvoir et de protéger les logiciels libres. Stallman a posé les bases de ce mouvement en créant la licence publique générale GNU (GPL), qui est devenue la pierre angulaire de la philosophie du logiciel libre.
+
+![Richard Stallman](fsf-history\img\event\rms-bw.jpg)
+
+### La lutte pour la liberté
+
+La page de la FSF met également en lumière les nombreuses batailles juridiques et politiques menées par l'organisation pour défendre les droits des utilisateurs de logiciels libres. Les actions de la FSF ont contribué à préserver la liberté des logiciels en luttant contre les brevets logiciels, les DRM et d'autres menaces potentielles pour la communauté du logiciel libre.
+
+### L'essor du mouvement
+
+Au fil des années, le mouvement du logiciel libre a gagné en popularité et en influence, en grande partie grâce aux efforts inlassables de la FSF. L'article détaille comment l'organisation a collaboré avec d'autres acteurs importants du domaine, notamment la Free Software Community, pour promouvoir la diffusion de logiciels libres et ouvrir la voie à des alternatives gratuites aux logiciels propriétaires.
+
+### L'importance continue de la FSF
+
+Enfin, la page officielle de la FSF souligne l'importance continue de l'organisation dans le paysage actuel du logiciel libre. La FSF continue de jouer un rôle crucial dans la défense des droits des utilisateurs et dans la sensibilisation du public aux enjeux du logiciel libre.
+
+![Respect your freedom](fsf-history\img\event\01100ryf.png)
+
+Pour une version complète de cette page, entièrement traduite en français, je vous invite à consulter le lien : [Lien vers la version traduite de la page d'histoire de la FSF](https://flallemand.fr/divers/fsf-history/index.html){target="_blank"}. Les liens vers lesquels la page renvoie, pour en savoir plus, ne sont pas traduits !

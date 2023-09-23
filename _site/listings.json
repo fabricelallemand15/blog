@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/fsf-history/index.html",
       "/posts/intel_verre/index.html",
       "/posts/pyxel_tuto2_personnage/index.html",
       "/posts/pyxel_tuto1_base/index.html",

@@ -10,7 +10,59 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.4.274</generator>
-<lastBuildDate>Wed, 20 Sep 2023 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 22 Sep 2023 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>L’histoire de la Free Software Foundation (FSF)</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/fsf-history/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Si vous êtes passionné par le logiciel libre et open source, vous avez probablement entendu parler de la Free Software Foundation (FSF). Cette organisation emblématique a joué un rôle central dans la promotion et la défense du logiciel libre depuis sa création en 1985 par Richard Stallman. Dans cet article, je vous propose un résumé de la page officielle de la FSF dédiée à son histoire, que vous pouvez consulter ici : <a href="https://www.fsf.org/history/" target="_blank">Lien vers la page officielle de la FSF sur son histoire</a>.</p>
+<p><strong>Vous trouverez aussi sur ce site une traduction de cette page en français, que vous pouvez consulter ici : <a href="https://flallemand.fr/divers/fsf-history/index.html" target="_blank">Lien vers la version traduite de la page d’histoire de la FSF</a>.</strong></p>
+<section id="les-débuts-de-la-fsf" class="level3">
+<h3 class="anchored" data-anchor-id="les-débuts-de-la-fsf">Les débuts de la FSF</h3>
+<p>La page d’histoire de la FSF nous emmène tout d’abord dans les premiers jours de l’organisation. Nous découvrons comment Richard Stallman, un programmeur visionnaire, a lancé la FSF avec pour objectif de promouvoir et de protéger les logiciels libres. Stallman a posé les bases de ce mouvement en créant la licence publique générale GNU (GPL), qui est devenue la pierre angulaire de la philosophie du logiciel libre.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fsf-history\img\event\rms-bw.jpg" class="lightbox" title="Richard Stallman" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/rms-bw.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Richard Stallman</figcaption>
+</figure>
+</div>
+</section>
+<section id="la-lutte-pour-la-liberté" class="level3">
+<h3 class="anchored" data-anchor-id="la-lutte-pour-la-liberté">La lutte pour la liberté</h3>
+<p>La page de la FSF met également en lumière les nombreuses batailles juridiques et politiques menées par l’organisation pour défendre les droits des utilisateurs de logiciels libres. Les actions de la FSF ont contribué à préserver la liberté des logiciels en luttant contre les brevets logiciels, les DRM et d’autres menaces potentielles pour la communauté du logiciel libre.</p>
+</section>
+<section id="lessor-du-mouvement" class="level3">
+<h3 class="anchored" data-anchor-id="lessor-du-mouvement">L’essor du mouvement</h3>
+<p>Au fil des années, le mouvement du logiciel libre a gagné en popularité et en influence, en grande partie grâce aux efforts inlassables de la FSF. L’article détaille comment l’organisation a collaboré avec d’autres acteurs importants du domaine, notamment la Free Software Community, pour promouvoir la diffusion de logiciels libres et ouvrir la voie à des alternatives gratuites aux logiciels propriétaires.</p>
+</section>
+<section id="limportance-continue-de-la-fsf" class="level3">
+<h3 class="anchored" data-anchor-id="limportance-continue-de-la-fsf">L’importance continue de la FSF</h3>
+<p>Enfin, la page officielle de la FSF souligne l’importance continue de l’organisation dans le paysage actuel du logiciel libre. La FSF continue de jouer un rôle crucial dans la défense des droits des utilisateurs et dans la sensibilisation du public aux enjeux du logiciel libre.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fsf-history\img\event\01100ryf.png" class="lightbox" title="Respect your freedom" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/01100ryf.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Respect your freedom</figcaption>
+</figure>
+</div>
+<p>Pour une version complète de cette page, entièrement traduite en français, je vous invite à consulter le lien : <a href="https://flallemand.fr/divers/fsf-history/index.html" target="_blank">Lien vers la version traduite de la page d’histoire de la FSF</a>. Les liens vers lesquels la page renvoie, pour en savoir plus, ne sont pas traduits !</p>
+
+
+</section>
+
+ ]]></description>
+  <category>NSI</category>
+  <category>Informatique</category>
+  <category>Histoire</category>
+  <category>Linux</category>
+  <guid>https://flallemand.fr/blog/posts/fsf-history/index.html</guid>
+  <pubDate>Fri, 22 Sep 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/membermeeting.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Intel veut révolutionner les microprocesseurs avec un substrat en verre</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -3192,496 +3244,6 @@ MOOC “NSI, les fondamentaux”, disponible sur f<a href="https://www.fun-mooc.
   <guid>https://flallemand.fr/blog/posts/mesurerinfo/index.html</guid>
   <pubDate>Sat, 18 Jun 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/mesurerinfo/mesurerinfo.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Mesurer le temps d’exécution d’un fragment de code</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/timeexec/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-Un moyen intuitif de comparer l’efficacité de deux portions de code est de mesurer leur temps d’exécution en fonction de la taille des données. Le <a href="https://docs.python.org/fr/3/library/timeit.html#" target="_blank" rel="noreferrer noopener">module <code>timeit</code> de Python</a> permet de faire cela de façon semi-automatisée. Nous allons voir comment dans cet article, en considérant trois fonctions différentes qui renvoient le n-ième <img src="https://latex.codecogs.com/png.latex?F_n"> de <a rel="noreferrer noopener" href="https://fr.wikipedia.org/wiki/Suite_de_Fibonacci" target="_blank">la suite de Fibonacci</a>.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Pour les besoins du code présent dans la suite, on commencera par les importations suivantes :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> timeit</span></code></pre></div>
-</div>
-<!-- wp:heading -->
-<h2 class="anchored">
-Fonctions à tester
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Ces fonctions sont issues d’un <a href="https://flallemand.fr/nsi/terminale/01_langages/recurs_exos/#exercice-2-suite-de-fibonacci" target="_blank" rel="noreferrer noopener">exercice du chapitre “Récursivité” du cours de NSI de terminale</a>. Cependant, l’objectif de cet article est juste de montrer un moyen de comparer et de visualiser les vitesses d’exécution.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Nous considérons les trois fonctions suivantes. La première retourne le nombre <img src="https://latex.codecogs.com/png.latex?F_n"> par une méthode itérative.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_iter(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb2-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci, version itérative"""</span></span>
-<span id="cb2-3">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>:</span>
-<span id="cb2-4">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb2-5">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb2-6">        f0, f1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb2-7">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, n):</span>
-<span id="cb2-8">            f0, f1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f1, f0 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> f1</span>
-<span id="cb2-9">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> f1</span></code></pre></div>
-</div>
-<!-- wp:paragraph -->
-<p>
-La deuxième fonction est une fonction récursive qui traduit directement la définition de la suite de Fibonacci.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_rec(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb3-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci version récursive"""</span></span>
-<span id="cb3-3">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Cas de base</span></span>
-<span id="cb3-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">or</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>:</span>
-<span id="cb3-5">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> n</span>
-<span id="cb3-6">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Récursion</span></span>
-<span id="cb3-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb3-8">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> fibo_rec(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span>fibo_rec(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span></code></pre></div>
-</div>
-<!-- wp:paragraph -->
-<p>
-La troisième est également récursive et utilise les idées de la programmation dynamique.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_dyn(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>, suite: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">dict</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> {<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>}) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb4-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci version dynamique"""</span></span>
-<span id="cb4-3">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Cas de base</span></span>
-<span id="cb4-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">or</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>:</span>
-<span id="cb4-5">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> n</span>
-<span id="cb4-6">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Récursion</span></span>
-<span id="cb4-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb4-8">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Si Fn est déjà calculé, on le retourne</span></span>
-<span id="cb4-9">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> suite.keys():</span>
-<span id="cb4-10">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> suite[n]</span>
-<span id="cb4-11">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb4-12">            <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Sinon, on le calcule et on le garde en mémoire</span></span>
-<span id="cb4-13">            f <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, suite) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, suite)</span>
-<span id="cb4-14">            suite[n] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f</span>
-<span id="cb4-15">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> f</span></code></pre></div>
-</div>
-<!-- wp:heading -->
-<h2 class="anchored">
-Utilisation de timeit
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Par exemple, pour obtenir le temps d’exécution de 100 appels à la fonction fibo_iter() avec le paramètre 15, on entre le script suivant :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">timeit.timeit(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(15)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>())</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="45">
-<pre><code>0.0008780480002315016</code></pre>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-et on obtient en sortie le temps d’exécution en secondes.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Beaucoup d’autres choses sont possibles avec le module timeit, mais cette simple commande nous suffira.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Visualisation graphique
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Dans le script suivant, nous définissions un tableau des abscisses correspondant aux différentes valeurs de <img src="https://latex.codecogs.com/png.latex?n"> pour lesquelles nous calculons <img src="https://latex.codecogs.com/png.latex?F_n"> : <img src="https://latex.codecogs.com/png.latex?n"> varie de 0 à 15 avec un pas de 1 (ligne 1)
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Ensuite, pour chacune des fonctions, nous calculons le temps d’exécution de chaque terme de la suite (100 fois) et nous stockons les résultats dans un tableau d’ordonnées. (lignes 5 à 11)
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Nous traçons ensuite les courbes correspondantes. (lignes 12 à 15)
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1">abscisses <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [k <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)]</span>
-<span id="cb7-2">ordonnees_rec <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-3">ordonnees_iter <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-4">ordonnees_dyn <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-5"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> abscisses:</span>
-<span id="cb7-6">    ordonnees_iter.append(timeit.timeit(</span>
-<span id="cb7-7">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-8">    ordonnees_rec.append(timeit.timeit(</span>
-<span id="cb7-9">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_rec(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-10">    ordonnees_dyn.append(timeit.timeit(</span>
-<span id="cb7-11">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-12">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'b'</span>)</span>
-<span id="cb7-13">plt.plot(abscisses, ordonnees_rec, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'r'</span>)</span>
-<span id="cb7-14">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'g'</span>)</span>
-<span id="cb7-15">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/timeexec/index_files/figure-html/cell-7-output-1.png" width="587" height="411" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-Nous observons pour la fonction récursive une courbe caractéristique d’une croissance exponentielle du temps d’exécution. Les courbes bleue et verte correspondant aux deux autres méthodes sont confondues. Pour les distinguer, nous allons faire une nouvelle figure sans les données de la fonction <code>fibo_rec</code> cette fois ci (image réalisée avec <img src="https://latex.codecogs.com/png.latex?n"> variant de 0 à 100) :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">abscisses <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [k <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)]</span>
-<span id="cb8-2">ordonnees_iter <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb8-3">ordonnees_dyn <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb8-4"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> abscisses:</span>
-<span id="cb8-5">    ordonnees_iter.append(timeit.timeit(</span>
-<span id="cb8-6">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb8-7">    ordonnees_dyn.append(timeit.timeit(</span>
-<span id="cb8-8">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb8-9">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'b'</span>)</span>
-<span id="cb8-10">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'g'</span>)</span>
-<span id="cb8-11">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/timeexec/index_files/figure-html/cell-8-output-1.png" width="596" height="411" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-Ce graphique suggère une croissance linéaire pour la méthode itérative et des performances encore meilleures pour la méthode dynamique.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Bien sûr, cette démarche ne remplace pas une étude théorique rigoureuse et un calcul de complexité, mais elle permet, grâce à la visualisation, de comparer rapidement deux algorithmes et de conjecturer leur complexité.
-</p>
-<!-- /wp:paragraph -->
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Python</category>
-  <guid>https://flallemand.fr/blog/posts/timeexec/index.html</guid>
-  <pubDate>Sat, 04 Jun 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/timeexec/timeit_1-2.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
