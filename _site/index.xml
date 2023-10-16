@@ -99,6 +99,183 @@
   <media:content url="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
+  <title>Utiliser pyxelstudio.net pour créer des jeux en python avec pyxel</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/pyxelstudio/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Dans cet article, je vais vous présenter le site pyxelstudio.net et le module pyxel, qui vous permettent de créer facilement des jeux rétro avec python. Je vais vous montrer comment utiliser le site pyxelstudio.net pour éditer et exécuter du code en ligne, sans avoir besoin d’installer python ou pyxel sur votre ordinateur.</p>
+<section id="quest-ce-que-pyxelstudio.net" class="level2">
+<h2 class="anchored" data-anchor-id="quest-ce-que-pyxelstudio.net">Qu’est-ce que pyxelstudio.net ?</h2>
+<p>Pyxelstudio.net est un site web qui vous permet d’écrire et d’exécuter du code python avec le module pyxel directement dans votre navigateur. C’est très pratique si vous voulez rapidement tester vos idées de jeux sans avoir à installer python ou pyxel sur votre ordinateur. Pour accéder au site, il suffit de taper l’adresse <a href="https://www.pyxelstudio.net/">https://www.pyxelstudio.net/</a> dans la barre d’adresse de votre navigateur. Vous arrivez alors sur la page d’accueil du site, qui vous propose plusieurs options. Je vous conseille de créer un compte (en cliquant sur “register”), car cela vous permettra de retrouver vos projets très facilement quand vous passez d’une machine à une autre. Ainsi, vous pouvez créer un nouveau projet, ouvrir un projet existant, ou encore consulter les exemples de jeux réalisés avec pyxel. Ce site a été développé par <a href="https://twitter.com/laurentabbal">Laurent Abbal</a>, professeur de NSI au lycée français international de Tokyo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="pyxelstudio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Page d’accueil de pyxelstudio.net"><img src="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Page d’accueil de <a href="https://www.pyxelstudio.net">pyxelstudio.net</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="comment-créer-un-nouveau-projet" class="level2">
+<h2 class="anchored" data-anchor-id="comment-créer-un-nouveau-projet">Comment créer un nouveau projet ?</h2>
+<p>Pour créer un nouveau projet, cliquez sur le bouton “Create”. Vous arrivez alors sur l’interface principale du site, qui se compose de deux parties : à gauche, l’éditeur de code et à droite la fenêtre d’exécution.</p>
+<ul>
+<li>L’éditeur de code vous permet d’écrire votre code python avec pyxel. Il dispose de la coloration syntaxique pour vous faciliter la tâche.</li>
+<li>La fenêtre d’exécution vous permet de voir le résultat de votre code, après avoir cliqué sur le bouton jaune situé au-dessus de la zone.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="interface.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Vue d’ensemble de la page d’édition de www.pyxelstudio.net"><img src="https://flallemand.fr/blog/posts/pyxelstudio/interface.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Vue d’ensemble de la page d’édition de www.pyxelstudio.net</figcaption>
+</figure>
+</div>
+</section>
+<section id="linterface-de-la-zone-dédition" class="level2">
+<h2 class="anchored" data-anchor-id="linterface-de-la-zone-dédition">L’interface de la zone d’édition</h2>
+<p>Outre l’édition du code et son exécution, différentes actions sont possibles depuis cet écran.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ol type="1">
+<li>Accès au dashboard : liste des projets créés, avec la possibilité de les éditer et de les supprimer.</li>
+<li>Définition du nom du projet.</li>
+<li>Liste des fichiers (fichiers python, fichiers de ressources, etc.) composant le projet.</li>
+<li>Afficher la zone d’édition du code. 5.Éditer le fichier de ressources : par défaut, c’est un fichier nommé res.pyxres, qui permet de définir des graphismes, des sons et de la musique pour le projet.</li>
+<li>Accès à l’édition de la description et de la documentation de votre projet.</li>
+<li>Déclaration des modules python utilisés par votre projet.</li>
+<li>Accès aux paramètres : permet, par exemple, de rendre votre projet public ou privé.</li>
+<li>Afficher un résumé des commandes pyxel existantes.</li>
+<li>Enregistrer le fichier en cours d’édition.</li>
+<li>Générer un lien pour partager le projet.</li>
+</ol>
+<p>Lorsqu’un programme est en cours d’exécution, on trouve deux boutons au-dessus de la zone d’exécution.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ol type="1">
+<li>Mettre le jeu en plein écran.</li>
+<li>Afficher la console : utile pour l’affichage de certaines variables en phase de débogage.</li>
+</ol>
+<p>Pour finir ce petit tour de l’interface du site, regardons de plus près l’affichage de la liste des fichiers d’un projet :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig3.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ol type="1">
+<li>Ces deux boutons permettent respectivement de créer un nouveau fichier et de téléverser un fichier existant.</li>
+<li>Le fichier python de l’application. C’est lui qui contient le code du jeu et le bouton permet de l’éditer.</li>
+<li>Le fichier de ressource, créé automatiquement à la création d’un projet. Initialement vide. Le bouton permet de l’éditer.</li>
+<li>Ces boutons permettent de télécharger les fichiers python et pyxres.</li>
+</ol>
+</section>
+<section id="démonstration" class="level2">
+<h2 class="anchored" data-anchor-id="démonstration">Démonstration</h2>
+<p>Pour vous montrer comment fonctionne le site <a href="https://www.pyxelstudio.net">pyxelstudio.net</a>, écrivons un exemple simple de code pyxel, qui affiche un message “Hello Pyxel!” à l’écran. Ce code est tiré du fichier 01_hello_pyxel.py, qui fait partie des exemples fournis avec le module pyxel. Voici le code :</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pyxel</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> App:</span>
+<span id="cb1-4">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-5">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># initialisation de l'écran avec une taille de 160 x 120 pixels</span></span>
+<span id="cb1-6">        pyxel.init(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">120</span>)</span>
+<span id="cb1-7">        pyxel.run(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.draw)</span>
+<span id="cb1-8">        </span>
+<span id="cb1-9">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># définition de la fonction update, qui est appelée à chaque frame</span></span>
+<span id="cb1-10">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-11">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">pass</span></span>
+<span id="cb1-12"></span>
+<span id="cb1-13">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># définition de la fonction draw, qui est appelée à chaque frame après la fonction update</span></span>
+<span id="cb1-14">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-15">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on efface l'écran avec la couleur 0 (noir)</span></span>
+<span id="cb1-16">        pyxel.cls(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-17">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on affiche le texte "Hello Pyxel!" à la position (55, 41) avec la couleur 7 (blanc)</span></span>
+<span id="cb1-18">        pyxel.text(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">55</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">41</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello Pyxel!"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>)</span>
+<span id="cb1-19">        </span>
+<span id="cb1-20"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on exécute le programme avec les fonctions update et draw</span></span>
+<span id="cb1-21">App()</span></code></pre></div>
+<p>Nous allons copier ce code dans l’éditeur de code du site pyxelstudio.net, puis cliquer sur le bouton “Run” pour l’exécuter. Nous voyons alors apparaître le message “Hello Pyxel!” à l’écran, comme prévu. Voilà, nous venons de réaliser notre première application avec pyxel ! C’était facile, non ?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Copie d’écran de la sortie pyxel du code d’exemple"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig4.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Copie d’écran de la sortie pyxel du code d’exemple</figcaption>
+</figure>
+</div>
+</section>
+<section id="quelles-sont-les-autres-fonctionnalités-du-site" class="level2">
+<h2 class="anchored" data-anchor-id="quelles-sont-les-autres-fonctionnalités-du-site">Quelles sont les autres fonctionnalités du site ?</h2>
+<p>Le site pyxelstudio.net vous offre d’autres possibilités intéressantes, comme le partage de code (voir ci-dessus), la sauvegarde de projets, la visualisation des exemples, etc.</p>
+<p>Si vous voulez partager votre code avec d’autres personnes, vous pouvez cliquer sur le bouton de partage en haut à droite de la zone d’édition. Vous obtenez alors un lien que vous pouvez copier et envoyer à qui vous voulez. La personne qui reçoit le lien peut ainsi ouvrir votre code dans son navigateur et l’exécuter sans avoir à le télécharger. C’est très pratique pour montrer vos créations ou demander de l’aide. Je donnerai dans des articles suivants des conseils et des tutoriels pour la création de jeux avec pyxel dans pyxelstudio.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>NSI</category>
+  <category>Programmation</category>
+  <category>Pyxel</category>
+  <category>Nuit du code</category>
+  <guid>https://flallemand.fr/blog/posts/pyxelstudio/index.html</guid>
+  <pubDate>Thu, 31 Aug 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" medium="image" type="image/png" height="83" width="144"/>
+</item>
+<item>
   <title>Tuto pyxel (avec POO) : Animer un personnage</title>
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</link>
@@ -3139,496 +3316,6 @@ MOOC “NSI, les fondamentaux”, disponible sur f<a href="https://www.fun-mooc.
   <guid>https://flallemand.fr/blog/posts/mesurerinfo/index.html</guid>
   <pubDate>Sat, 18 Jun 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/mesurerinfo/mesurerinfo.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Mesurer le temps d’exécution d’un fragment de code</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/timeexec/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-Un moyen intuitif de comparer l’efficacité de deux portions de code est de mesurer leur temps d’exécution en fonction de la taille des données. Le <a href="https://docs.python.org/fr/3/library/timeit.html#" target="_blank" rel="noreferrer noopener">module <code>timeit</code> de Python</a> permet de faire cela de façon semi-automatisée. Nous allons voir comment dans cet article, en considérant trois fonctions différentes qui renvoient le n-ième <img src="https://latex.codecogs.com/png.latex?F_n"> de <a rel="noreferrer noopener" href="https://fr.wikipedia.org/wiki/Suite_de_Fibonacci" target="_blank">la suite de Fibonacci</a>.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Pour les besoins du code présent dans la suite, on commencera par les importations suivantes :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> plt</span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> timeit</span></code></pre></div>
-</div>
-<!-- wp:heading -->
-<h2 class="anchored">
-Fonctions à tester
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Ces fonctions sont issues d’un <a href="https://flallemand.fr/nsi/terminale/01_langages/recurs_exos/#exercice-2-suite-de-fibonacci" target="_blank" rel="noreferrer noopener">exercice du chapitre “Récursivité” du cours de NSI de terminale</a>. Cependant, l’objectif de cet article est juste de montrer un moyen de comparer et de visualiser les vitesses d’exécution.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Nous considérons les trois fonctions suivantes. La première retourne le nombre <img src="https://latex.codecogs.com/png.latex?F_n"> par une méthode itérative.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_iter(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb2-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci, version itérative"""</span></span>
-<span id="cb2-3">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>:</span>
-<span id="cb2-4">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb2-5">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb2-6">        f0, f1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb2-7">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, n):</span>
-<span id="cb2-8">            f0, f1 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f1, f0 <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> f1</span>
-<span id="cb2-9">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> f1</span></code></pre></div>
-</div>
-<!-- wp:paragraph -->
-<p>
-La deuxième fonction est une fonction récursive qui traduit directement la définition de la suite de Fibonacci.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_rec(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb3-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci version récursive"""</span></span>
-<span id="cb3-3">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Cas de base</span></span>
-<span id="cb3-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">or</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>:</span>
-<span id="cb3-5">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> n</span>
-<span id="cb3-6">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Récursion</span></span>
-<span id="cb3-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb3-8">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> fibo_rec(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span>fibo_rec(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span></code></pre></div>
-</div>
-<!-- wp:paragraph -->
-<p>
-La troisième est également récursive et utilise les idées de la programmation dynamique.
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> fibo_dyn(n: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>, suite: <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">dict</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> {<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>: <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>}) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-&gt;</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span>:</span>
-<span id="cb4-2">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">"""Suite de Fibonacci version dynamique"""</span></span>
-<span id="cb4-3">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Cas de base</span></span>
-<span id="cb4-4">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">or</span> n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>:</span>
-<span id="cb4-5">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> n</span>
-<span id="cb4-6">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Récursion</span></span>
-<span id="cb4-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb4-8">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Si Fn est déjà calculé, on le retourne</span></span>
-<span id="cb4-9">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">if</span> n <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> suite.keys():</span>
-<span id="cb4-10">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> suite[n]</span>
-<span id="cb4-11">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">else</span>:</span>
-<span id="cb4-12">            <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Sinon, on le calcule et on le garde en mémoire</span></span>
-<span id="cb4-13">            f <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, suite) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> fibo_dyn(n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, suite)</span>
-<span id="cb4-14">            suite[n] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> f</span>
-<span id="cb4-15">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">return</span> f</span></code></pre></div>
-</div>
-<!-- wp:heading -->
-<h2 class="anchored">
-Utilisation de timeit
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Par exemple, pour obtenir le temps d’exécution de 100 appels à la fonction fibo_iter() avec le paramètre 15, on entre le script suivant :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">timeit.timeit(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(15)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>())</span></code></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="45">
-<pre><code>0.0008780480002315016</code></pre>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-et on obtient en sortie le temps d’exécution en secondes.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Beaucoup d’autres choses sont possibles avec le module timeit, mais cette simple commande nous suffira.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Visualisation graphique
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Dans le script suivant, nous définissions un tableau des abscisses correspondant aux différentes valeurs de <img src="https://latex.codecogs.com/png.latex?n"> pour lesquelles nous calculons <img src="https://latex.codecogs.com/png.latex?F_n"> : <img src="https://latex.codecogs.com/png.latex?n"> varie de 0 à 15 avec un pas de 1 (ligne 1)
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Ensuite, pour chacune des fonctions, nous calculons le temps d’exécution de chaque terme de la suite (100 fois) et nous stockons les résultats dans un tableau d’ordonnées. (lignes 5 à 11)
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Nous traçons ensuite les courbes correspondantes. (lignes 12 à 15)
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1">abscisses <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [k <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)]</span>
-<span id="cb7-2">ordonnees_rec <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-3">ordonnees_iter <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-4">ordonnees_dyn <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb7-5"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> abscisses:</span>
-<span id="cb7-6">    ordonnees_iter.append(timeit.timeit(</span>
-<span id="cb7-7">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-8">    ordonnees_rec.append(timeit.timeit(</span>
-<span id="cb7-9">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_rec(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-10">    ordonnees_dyn.append(timeit.timeit(</span>
-<span id="cb7-11">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb7-12">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'b'</span>)</span>
-<span id="cb7-13">plt.plot(abscisses, ordonnees_rec, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'r'</span>)</span>
-<span id="cb7-14">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'g'</span>)</span>
-<span id="cb7-15">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/timeexec/index_files/figure-html/cell-7-output-1.png" width="587" height="411" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-Nous observons pour la fonction récursive une courbe caractéristique d’une croissance exponentielle du temps d’exécution. Les courbes bleue et verte correspondant aux deux autres méthodes sont confondues. Pour les distinguer, nous allons faire une nouvelle figure sans les données de la fonction <code>fibo_rec</code> cette fois ci (image réalisée avec <img src="https://latex.codecogs.com/png.latex?n"> variant de 0 à 100) :
-</p>
-<!-- /wp:paragraph -->
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1">abscisses <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [k <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)]</span>
-<span id="cb8-2">ordonnees_iter <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb8-3">ordonnees_dyn <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> []</span>
-<span id="cb8-4"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">in</span> abscisses:</span>
-<span id="cb8-5">    ordonnees_iter.append(timeit.timeit(</span>
-<span id="cb8-6">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_iter(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb8-7">    ordonnees_dyn.append(timeit.timeit(</span>
-<span id="cb8-8">        <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'fibo_dyn(x)'</span>, number<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>, <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">globals</span>()))</span>
-<span id="cb8-9">plt.plot(abscisses, ordonnees_iter, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'b'</span>)</span>
-<span id="cb8-10">plt.plot(abscisses, ordonnees_dyn, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'g'</span>)</span>
-<span id="cb8-11">plt.show()</span></code></pre></div>
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="index_files/figure-html/cell-8-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/timeexec/index_files/figure-html/cell-8-output-1.png" width="596" height="411" class="figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
-<!-- wp:paragraph -->
-<p>
-Ce graphique suggère une croissance linéaire pour la méthode itérative et des performances encore meilleures pour la méthode dynamique.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Bien sûr, cette démarche ne remplace pas une étude théorique rigoureuse et un calcul de complexité, mais elle permet, grâce à la visualisation, de comparer rapidement deux algorithmes et de conjecturer leur complexité.
-</p>
-<!-- /wp:paragraph -->
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Python</category>
-  <guid>https://flallemand.fr/blog/posts/timeexec/index.html</guid>
-  <pubDate>Sat, 04 Jun 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/timeexec/timeit_1-2.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
