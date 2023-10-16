@@ -1,5 +1,5 @@
 ---
-title: "Tuto pyxel (avec POO) : code de base"
+title: "Tuto pyxel : code de base"
 subtitle: "Tutoriels Pyxel"
 description: "Structure de base d'une application pyxel"
 date: "2023-06-18"
@@ -38,3 +38,9 @@ Voici la fenêtre obtenue avec le code ci-dessus :
 ![fenêtre vide](fenetre_vide.png)
 
 **Remarque** : certains calculs de coordonnées des objets de l'applications devront être faits en fonction des dimensions de la fenêtre. Pour cela, on peut utiliser les variables `pyxel.width` et `pyxel.height` qui contiennent respectivement la largeur et la hauteur de la fenêtre.
+
+:::{.callout-tip}
+## Utilisation de Pyxelstudio
+
+Si vous programmez dans pyxelstudio, les paramètres `title` et `quit_key` de la méthode `pyxel.init` ne sont pas pris en compte.
+:::
