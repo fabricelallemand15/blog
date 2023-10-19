@@ -1,0 +1,21 @@
+---
+title: "Tribune du collectif Maths & Sciences"
+subtitle: "Parue dans La Recherche"
+description: "Réforme du lycée : petites failles ou grandes fractures ?"
+date: "2023-10-19"
+categories: [Actualités, Orientation]
+image: "larecherche.png"
+---
+
+[![](larecherche.png){width="30%"}](https://www.larecherche.fr/tribune/r%C3%A9forme-du-lyc%C3%A9e-g%C3%A9n%C3%A9ral-petites-failles-ou-grandes-fractures)
+
+Le collectif [Maths & Sciences](https://collectif-maths-sciences.fr/){target="_blank"} a publié dans le numéro de La Recherche du 17 octobre 2023 une tribune qui analyse de façon très pertinente les conséquences de la réforme du lycée sur l'enseignement des sciences et des mathématiques au lycée.
+
+La tribune est à lire sur le site de La Recherche : [Tribune](https://www.larecherche.fr/tribune/r%C3%A9forme-du-lyc%C3%A9e-g%C3%A9n%C3%A9ral-petites-failles-ou-grandes-fractures){target="_blank"}
+
+## Résumé de la tribune
+
+- **Réforme du lycée**: La réforme de 2019 a supprimé les mathématiques du tronc commun et a créé des spécialités à choisir parmi 13. Cette réforme pose des problèmes de fond en sciences et entraîne des ruptures et des fractures entre les élèves.
+- **Chute des effectifs en sciences**: Depuis la réforme, le nombre d'élèves qui suivent des spécialités scientifiques, notamment en mathématiques, a diminué de manière significative. Les filles sont particulièrement touchées par cette baisse, ainsi que les élèves d'origine sociale défavorisée.
+- **Inégalités territoriales**: Les spécialités émergentes, comme le numérique et les sciences informatiques, sont peu présentes dans les lycées et peinent à attirer les élèves. Les spécialités principales restent dominantes et créent une fracture entre les profils de formation.
+- **Propositions d'amendements**: Le collectif Maths&Sciences et ses partenaires proposent de rééquilibrer le tronc commun en faveur des sciences et de maintenir trois spécialités en terminale pour préserver la polyvalence des élèves. Ils appellent à une évaluation globale de la réforme du lycée.
