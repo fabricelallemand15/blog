@@ -221,7 +221,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Date de publication</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">19 juin 2023</p>
+        <p class="date">2 septembre 2023</p>
       </div>
     </div>
     
@@ -239,7 +239,7 @@ cookieconsent.run({
   <ul>
   <li><a href="#géométrie-générale-de-la-fenêtre" id="toc-géométrie-générale-de-la-fenêtre" class="nav-link active" data-scroll-target="#géométrie-générale-de-la-fenêtre">Géométrie générale de la fenêtre</a></li>
   <li><a href="#le-fichier-de-ressource-pyxres" id="toc-le-fichier-de-ressource-pyxres" class="nav-link" data-scroll-target="#le-fichier-de-ressource-pyxres">Le fichier de ressource pyxres</a></li>
-  <li><a href="#affichage-du-personnage" id="toc-affichage-du-personnage" class="nav-link" data-scroll-target="#affichage-du-personnage">Affichage du personnage</a></li>
+  <li><a href="#affichage-du-personnage-et-du-fond-coloré" id="toc-affichage-du-personnage-et-du-fond-coloré" class="nav-link" data-scroll-target="#affichage-du-personnage-et-du-fond-coloré">Affichage du personnage et du fond coloré</a></li>
   <li><a href="#déplacement-du-personnage" id="toc-déplacement-du-personnage" class="nav-link" data-scroll-target="#déplacement-du-personnage">Déplacement du personnage</a></li>
   <li><a href="#animation-du-déplacement" id="toc-animation-du-déplacement" class="nav-link" data-scroll-target="#animation-du-déplacement">Animation du déplacement</a></li>
   </ul>
@@ -251,7 +251,7 @@ cookieconsent.run({
 
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -267,6 +267,7 @@ Objectifs du tutoriel
 </ul>
 </div>
 </div>
+<p>Nous utiliserons <a href="../../posts/pyxelstudio/index.html">pyxelstudio.net</a> pour coder ce tuto.</p>
 <section id="géométrie-générale-de-la-fenêtre" class="level2">
 <h2 class="anchored" data-anchor-id="géométrie-générale-de-la-fenêtre">Géométrie générale de la fenêtre</h2>
 <p>La fenêtre de jeu est un rectangle de 256 pixels de large sur 128 pixels de haut. L’origine du repère est située en haut à gauche de la fenêtre. Les coordonnées des points sont donc comprises entre 0 et 255 pour les abscisses et entre 0 et 127 pour les ordonnées.</p>
@@ -279,8 +280,8 @@ Objectifs du tutoriel
 </section>
 <section id="le-fichier-de-ressource-pyxres" class="level2">
 <h2 class="anchored" data-anchor-id="le-fichier-de-ressource-pyxres">Le fichier de ressource pyxres</h2>
-<p>Pour ce tuto, nous utiliserons le fichier de ressource <code>jump_games.pyxres</code> issu des exemples de Pyxel.</p>
-<p>Pour ouvrir, modifier ou consulter le contenu d’un tel fichier, il faut utiliser l’éditeur de ressource de Pyxel. Pour cela, on entre <code>pyxel edit jump_games.pyxres</code> dans un terminal, dans le dossier où se trouve le fichier.</p>
+<p>Pour ce tuto, nous utiliserons le fichier de ressource <a href="jump_game.pyxres"><code>jump_games.pyxres</code></a> issu des exemples de Pyxel.</p>
+<p>Pour ouvrir, modifier ou consulter le contenu d’un tel fichier, il faut utiliser l’éditeur de ressource de Pyxel. Pour cela, il faut d’abord charger ce fichier dans pyxelstudio : voir <a href="../../posts/pyxelstudio/index.html">la page dédiée</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./fenetre_pyxres.png" class="lightbox" title="Editeur de ressource" data-gallery="quarto-lightbox-gallery-2"><img src="./fenetre_pyxres.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
@@ -291,8 +292,8 @@ Objectifs du tutoriel
 <p><strong>Astuce utile</strong> : quand on déplace la souris sur l’image, les coordonnées du pointeur sont affichées en haut à droite de la fenêtre. Cela permet de repérer facilement les coordonnées des points.</p>
 <p>Sous l’image se trouve la palette de couleur. Nous disposons de 16 couleurs, numérotées de 0 à 15.</p>
 </section>
-<section id="affichage-du-personnage" class="level2">
-<h2 class="anchored" data-anchor-id="affichage-du-personnage">Affichage du personnage</h2>
+<section id="affichage-du-personnage-et-du-fond-coloré" class="level2">
+<h2 class="anchored" data-anchor-id="affichage-du-personnage-et-du-fond-coloré">Affichage du personnage et du fond coloré</h2>
 <p>Nous constatons que le dessin du personnage occupe le carré de coordonnées (0, 0) à (15, 15). Nous allons donc afficher le personnage en bas à gauche de la fenêtre, avec la commande <code>pyxel.blt(x, y, img, u, v, w, h, [colkey])</code> :</p>
 <ul>
 <li><code>x</code> et <code>y</code> sont les coordonnées du point en haut à gauche de l’image <strong>dans la fenêtre de l’application</strong> ;</li>
@@ -312,7 +313,7 @@ Objectifs du tutoriel
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, title<span class="op">=</span><span class="st">"Tuto 2"</span>, quit_key<span class="op">=</span>pyxel.KEY_Q, fps<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, fps<span class="op">=</span><span class="dv">30</span>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on charge le fichier de ressources</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        pyxel.load(<span class="st">"jump_game.pyxres"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable définissant l'abscisse initiale du personnage</span></span>
@@ -324,10 +325,10 @@ Objectifs du tutoriel
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on efface l'écran et on remplit la fenêtre de bleu (code 12)</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        pyxel.cls(<span class="dv">12</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 255 - 16</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.width <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 127 - 16</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>)</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>On obtient :</p>
@@ -346,7 +347,7 @@ Objectifs du tutoriel
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, title<span class="op">=</span><span class="st">"Tuto 2"</span>, quit_key<span class="op">=</span>pyxel.KEY_Q, fps<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, fps<span class="op">=</span><span class="dv">30</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on charge le fichier de ressources</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        pyxel.load(<span class="st">"jump_game.pyxres"</span>)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable définissant l'abscisse initiale du personnage</span></span>
@@ -358,18 +359,20 @@ Objectifs du tutoriel
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">max</span>(<span class="va">self</span>.x_personnage <span class="op">-</span> <span class="va">self</span>.vitesse, <span class="dv">0</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x_personnage <span class="op">+</span> <span class="va">self</span>.vitesse, pyxel.width <span class="op">-</span> <span class="dv">16</span>)</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        pyxel.cls(<span class="dv">12</span>)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Remarque</strong> : nous avons également définit un attribut <code>vitesse</code> qui permet de modifier la vitesse de déplacement du personnage : il s’agit du nombre de pixels à ajouter, o à retrancher, à chaque fois que l’on appuie sur une touche fléchée.</p>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            <span class="co"># si on appuie sur la touche gauche, on déplace le personnage vers la gauche</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">max</span>(<span class="va">self</span>.x_personnage <span class="op">-</span> <span class="va">self</span>.vitesse, <span class="dv">0</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>            <span class="co"># si on appuie sur la touche droite, on déplace le personnage vers la droite</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x_personnage <span class="op">+</span> <span class="va">self</span>.vitesse, pyxel.width <span class="op">-</span> <span class="dv">16</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        pyxel.cls(<span class="dv">12</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Remarque</strong> : nous avons également défini un attribut <code>vitesse</code> qui permet de modifier la vitesse de déplacement du personnage : il s’agit du nombre de pixels à ajouter, ou à retrancher, à chaque fois que l’on appuie sur une touche fléchée.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./tuto2-1.gif" class="lightbox" title="Personnage qui se déplace" data-gallery="quarto-lightbox-gallery-5"><img src="./tuto2-1.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
@@ -379,7 +382,8 @@ Objectifs du tutoriel
 </section>
 <section id="animation-du-déplacement" class="level2">
 <h2 class="anchored" data-anchor-id="animation-du-déplacement">Animation du déplacement</h2>
-<p>Pour donner une impression d’animation lors du déplacement du personnage, on peut alterner l’affichage de deux images du personnage. Le fichier ressources contient en effet une image du personnage avec les jambes positionnées différemment, comme on peut le voir ci-dessus. On peut donc utiliser la fonction <code>pyxel.frame_count</code> pour alterner l’affichage des deux images à chaque image. Cette fonction renvoie le nombre d’images affichées depuis le début de l’application. Dans le code ci-dessous, on a de plus défini une variable booléenne <code>self.personnage_marche</code> qui vaut <code>True</code> si le personnage est en train de marcher et <code>False</code> sinon (ce qui permet dans ca cas d’arrêter l’animation).</p>
+<p>Pour donner une impression d’animation lors du déplacement du personnage, on peut alterner l’affichage de deux images du personnage. Le fichier ressources contient en effet une image du personnage avec les jambes positionnées différemment, comme on peut le voir ci-dessous.</p>
+<p>Pour ce faire, on peut utiliser la fonction <code>pyxel.frame_count</code> pour alterner l’affichage des deux images à chaque image. Cette fonction renvoie le nombre d’images affichées depuis le début de l’application. Dans le code ci-dessous, on a de plus défini une variable booléenne <code>self.personnage_marche</code> qui vaut <code>True</code> si le personnage est en train de marcher et <code>False</code> sinon (ce qui permet dans ce cas d’arrêter l’animation).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./fenetre_pyxres_2.png" class="lightbox" title="Animation du personnage" data-gallery="quarto-lightbox-gallery-6"><img src="./fenetre_pyxres_2.png" class="img-fluid figure-img"></a></p>
@@ -390,7 +394,7 @@ Objectifs du tutoriel
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, title<span class="op">=</span><span class="st">"Tuto 2"</span>, quit_key<span class="op">=</span>pyxel.KEY_Q, fps<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, fps<span class="op">=</span><span class="dv">30</span>)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on charge le fichier de ressources</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        pyxel.load(<span class="st">"jump_game.pyxres"</span>)</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable définissant l'abscisse initiale du personnage</span></span>
@@ -430,13 +434,26 @@ Objectifs du tutoriel
 <figcaption class="figure-caption">Personnage qui se déplace</figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explications
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>frame_count</code> est le nombre d’images affichées depuis le lancement du jeu. On calcule <code>frame_count % 6</code> pour obtenir le reste de la division euclidienne de <code>frame_count</code> par 6. On obtient donc un nombre entre 0 et 5. On affiche le premier personnage si ce nombre est inférieur à 3 et le second sinon. On obtient donc un changement d’image <strong>toutes les 3 images</strong>.</p>
+</div>
+</div>
 <p>Une dernière amélioration serait souhaitable : lorsque le personnage se déplace vers la gauche, il semble reculer. On peut modifier le code de telle façon qu’il se retourne vers la gauche et regarde toujours dans la direction où il se déplace. Pour cela, il suffit de modifier le paramètre <code>w</code> de la fonction <code>pyxel.blt</code> en lui donnant la valeur <code>-16</code> lorsque le personnage se déplace vers la gauche.</p>
 <p>On définit pour cela encore un nouvel attribut “direction” qui vaut 1 lorsque le personnage se déplace vers la droite et -1 lorsqu’il se déplace vers la gauche. On multiplie donc <code>self.direction</code> par <code>16</code> pour obtenir la valeur de <code>w</code> à donner à la fonction <code>pyxel.blt</code>.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">256</span>, title<span class="op">=</span><span class="st">"Tuto 2"</span>, quit_key<span class="op">=</span>pyxel.KEY_Q, fps<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, fps<span class="op">=</span><span class="dv">30</span>)</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on charge le fichier de ressources</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        pyxel.load(<span class="st">"jump_game.pyxres"</span>)</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable définissant l'abscisse initiale du personnage</span></span>
@@ -456,7 +473,7 @@ Objectifs du tutoriel
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x_personnage <span class="op">+</span> <span class="va">self</span>.vitesse, <span class="dv">255</span> <span class="op">-</span> <span class="dv">16</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x_personnage <span class="op">+</span> <span class="va">self</span>.vitesse, pyxel.width <span class="op">-</span> <span class="dv">16</span>)</span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
@@ -466,12 +483,12 @@ Objectifs du tutoriel
 <span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 255 - 16</span></span>
 <span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.personnage_marche:</span>
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> pyxel.frame_count <span class="op">%</span> <span class="dv">6</span> <span class="op">&lt;</span> <span class="dv">3</span>:</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x_personnage, <span class="dv">239</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
 <span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x_personnage, <span class="dv">239</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
 <span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>            pyxel.blt(<span class="va">self</span>.x_personnage, <span class="dv">239</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>            pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
 <span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
@@ -479,6 +496,19 @@ Objectifs du tutoriel
 <p><a href="./tuto2-4.gif" class="lightbox" title="Personnage qui se déplace" data-gallery="quarto-lightbox-gallery-8"><img src="./tuto2-4.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">Personnage qui se déplace</figcaption>
 </figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+En conclusion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nous avons vu dans ce tuto comment animer un personnage dans une application Pyxel en utilisant les touches du clavier. Nous avons également vu comment utiliser le fichier de ressources pour afficher une image du personnage avec les jambes positionnées différemment et ainsi donner une impression de marche. Nous avons enfin vu comment faire en sorte que le personnage regarde toujours dans la direction où il se déplace.</p>
+</div>
 </div>
 
 
@@ -996,7 +1026,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

@@ -1431,183 +1431,6 @@ font-style: inherit;">12</span>)</span>
   <media:content url="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>Utiliser pyxelstudio.net pour créer des jeux en python avec pyxel</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxelstudio/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Dans cet article, je vais vous présenter le site pyxelstudio.net et le module pyxel, qui vous permettent de créer facilement des jeux rétro avec python. Je vais vous montrer comment utiliser le site pyxelstudio.net pour éditer et exécuter du code en ligne, sans avoir besoin d’installer python ou pyxel sur votre ordinateur.</p>
-<section id="quest-ce-que-pyxelstudio.net" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-que-pyxelstudio.net">Qu’est-ce que pyxelstudio.net ?</h2>
-<p>Pyxelstudio.net est un site web qui vous permet d’écrire et d’exécuter du code python avec le module pyxel directement dans votre navigateur. C’est très pratique si vous voulez rapidement tester vos idées de jeux sans avoir à installer python ou pyxel sur votre ordinateur. Pour accéder au site, il suffit de taper l’adresse <a href="https://www.pyxelstudio.net/">https://www.pyxelstudio.net/</a> dans la barre d’adresse de votre navigateur. Vous arrivez alors sur la page d’accueil du site, qui vous propose plusieurs options. Je vous conseille de créer un compte (en cliquant sur “register”), car cela vous permettra de retrouver vos projets très facilement quand vous passez d’une machine à une autre. Ainsi, vous pouvez créer un nouveau projet, ouvrir un projet existant, ou encore consulter les exemples de jeux réalisés avec pyxel. Ce site a été développé par <a href="https://twitter.com/laurentabbal">Laurent Abbal</a>, professeur de NSI au lycée français international de Tokyo.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="pyxelstudio.png" class="lightbox" title="Page d’accueil de pyxelstudio.net" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Page d’accueil de <a href="https://www.pyxelstudio.net">pyxelstudio.net</a></figcaption>
-</figure>
-</div>
-</section>
-<section id="comment-créer-un-nouveau-projet" class="level2">
-<h2 class="anchored" data-anchor-id="comment-créer-un-nouveau-projet">Comment créer un nouveau projet ?</h2>
-<p>Pour créer un nouveau projet, cliquez sur le bouton “Create”. Vous arrivez alors sur l’interface principale du site, qui se compose de deux parties : à gauche, l’éditeur de code et à droite la fenêtre d’exécution.</p>
-<ul>
-<li>L’éditeur de code vous permet d’écrire votre code python avec pyxel. Il dispose de la coloration syntaxique pour vous faciliter la tâche.</li>
-<li>La fenêtre d’exécution vous permet de voir le résultat de votre code, après avoir cliqué sur le bouton jaune situé au-dessus de la zone.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="interface.png" class="lightbox" title="Vue d’ensemble de la page d’édition de www.pyxelstudio.net" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/pyxelstudio/interface.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Vue d’ensemble de la page d’édition de www.pyxelstudio.net</figcaption>
-</figure>
-</div>
-</section>
-<section id="linterface-de-la-zone-dédition" class="level2">
-<h2 class="anchored" data-anchor-id="linterface-de-la-zone-dédition">L’interface de la zone d’édition</h2>
-<p>Outre l’édition du code et son exécution, différentes actions sont possibles depuis cet écran.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<ol type="1">
-<li>Accès au dashboard : liste des projets créés, avec la possibilité de les éditer et de les supprimer.</li>
-<li>Définition du nom du projet.</li>
-<li>Liste des fichiers (fichiers python, fichiers de ressources, etc.) composant le projet.</li>
-<li>Afficher la zone d’édition du code. 5.Éditer le fichier de ressources : par défaut, c’est un fichier nommé res.pyxres, qui permet de définir des graphismes, des sons et de la musique pour le projet.</li>
-<li>Accès à l’édition de la description et de la documentation de votre projet.</li>
-<li>Déclaration des modules python utilisés par votre projet.</li>
-<li>Accès aux paramètres : permet, par exemple, de rendre votre projet public ou privé.</li>
-<li>Afficher un résumé des commandes pyxel existantes.</li>
-<li>Enregistrer le fichier en cours d’édition.</li>
-<li>Générer un lien pour partager le projet.</li>
-</ol>
-<p>Lorsqu’un programme est en cours d’exécution, on trouve deux boutons au-dessus de la zone d’exécution.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<ol type="1">
-<li>Mettre le jeu en plein écran.</li>
-<li>Afficher la console : utile pour l’affichage de certaines variables en phase de débogage.</li>
-</ol>
-<p>Pour finir ce petit tour de l’interface du site, regardons de plus près l’affichage de la liste des fichiers d’un projet :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig3.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<ol type="1">
-<li>Ces deux boutons permettent respectivement de créer un nouveau fichier et de téléverser un fichier existant.</li>
-<li>Le fichier python de l’application. C’est lui qui contient le code du jeu et le bouton permet de l’éditer.</li>
-<li>Le fichier de ressource, créé automatiquement à la création d’un projet. Initialement vide. Le bouton permet de l’éditer.</li>
-<li>Ces boutons permettent de télécharger les fichiers python et pyxres.</li>
-</ol>
-</section>
-<section id="démonstration" class="level2">
-<h2 class="anchored" data-anchor-id="démonstration">Démonstration</h2>
-<p>Pour vous montrer comment fonctionne le site <a href="https://www.pyxelstudio.net">pyxelstudio.net</a>, écrivons un exemple simple de code pyxel, qui affiche un message “Hello Pyxel!” à l’écran. Ce code est tiré du fichier 01_hello_pyxel.py, qui fait partie des exemples fournis avec le module pyxel. Voici le code :</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pyxel</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">class</span> App:</span>
-<span id="cb1-4">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-5">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># initialisation de l'écran avec une taille de 160 x 120 pixels</span></span>
-<span id="cb1-6">        pyxel.init(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">120</span>)</span>
-<span id="cb1-7">        pyxel.run(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.draw)</span>
-<span id="cb1-8">        </span>
-<span id="cb1-9">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># définition de la fonction update, qui est appelée à chaque frame</span></span>
-<span id="cb1-10">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-11">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">pass</span></span>
-<span id="cb1-12"></span>
-<span id="cb1-13">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># définition de la fonction draw, qui est appelée à chaque frame après la fonction update</span></span>
-<span id="cb1-14">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-15">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on efface l'écran avec la couleur 0 (noir)</span></span>
-<span id="cb1-16">        pyxel.cls(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb1-17">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on affiche le texte "Hello Pyxel!" à la position (55, 41) avec la couleur 7 (blanc)</span></span>
-<span id="cb1-18">        pyxel.text(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">55</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">41</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Hello Pyxel!"</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">7</span>)</span>
-<span id="cb1-19">        </span>
-<span id="cb1-20"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on exécute le programme avec les fonctions update et draw</span></span>
-<span id="cb1-21">App()</span></code></pre></div>
-<p>Nous allons copier ce code dans l’éditeur de code du site pyxelstudio.net, puis cliquer sur le bouton “Run” pour l’exécuter. Nous voyons alors apparaître le message “Hello Pyxel!” à l’écran, comme prévu. Voilà, nous venons de réaliser notre première application avec pyxel ! C’était facile, non ?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fig4.png" class="lightbox" title="Copie d’écran de la sortie pyxel du code d’exemple" data-gallery="quarto-lightbox-gallery-6"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig4.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Copie d’écran de la sortie pyxel du code d’exemple</figcaption>
-</figure>
-</div>
-</section>
-<section id="quelles-sont-les-autres-fonctionnalités-du-site" class="level2">
-<h2 class="anchored" data-anchor-id="quelles-sont-les-autres-fonctionnalités-du-site">Quelles sont les autres fonctionnalités du site ?</h2>
-<p>Le site pyxelstudio.net vous offre d’autres possibilités intéressantes, comme le partage de code (voir ci-dessus), la sauvegarde de projets, la visualisation des exemples, etc.</p>
-<p>Si vous voulez partager votre code avec d’autres personnes, vous pouvez cliquer sur le bouton de partage en haut à droite de la zone d’édition. Vous obtenez alors un lien que vous pouvez copier et envoyer à qui vous voulez. La personne qui reçoit le lien peut ainsi ouvrir votre code dans son navigateur et l’exécuter sans avoir à le télécharger. C’est très pratique pour montrer vos créations ou demander de l’aide. Je donnerai dans des articles suivants des conseils et des tutoriels pour la création de jeux avec pyxel dans pyxelstudio.</p>
-
-
-</section>
-
- ]]></description>
-  <category>Python</category>
-  <category>NSI</category>
-  <category>Programmation</category>
-  <category>Pyxel</category>
-  <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxelstudio/index.html</guid>
-  <pubDate>Thu, 31 Aug 2023 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" medium="image" type="image/png" height="83" width="144"/>
-</item>
-<item>
   <title>Tuto pyxel (avec POO) : Animer un personnage</title>
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</link>
@@ -1616,7 +1439,7 @@ font-style: inherit;"># on exécute le programme avec les fonctions update et dr
 
 
 
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1632,6 +1455,7 @@ Objectifs du tutoriel
 </ul>
 </div>
 </div>
+<p>Nous utiliserons <a href="../../posts/pyxelstudio/index.html">pyxelstudio.net</a> pour coder ce tuto.</p>
 <section id="géométrie-générale-de-la-fenêtre" class="level2">
 <h2 class="anchored" data-anchor-id="géométrie-générale-de-la-fenêtre">Géométrie générale de la fenêtre</h2>
 <p>La fenêtre de jeu est un rectangle de 256 pixels de large sur 128 pixels de haut. L’origine du repère est située en haut à gauche de la fenêtre. Les coordonnées des points sont donc comprises entre 0 et 255 pour les abscisses et entre 0 et 127 pour les ordonnées.</p>
@@ -1644,8 +1468,8 @@ Objectifs du tutoriel
 </section>
 <section id="le-fichier-de-ressource-pyxres" class="level2">
 <h2 class="anchored" data-anchor-id="le-fichier-de-ressource-pyxres">Le fichier de ressource pyxres</h2>
-<p>Pour ce tuto, nous utiliserons le fichier de ressource <code>jump_games.pyxres</code> issu des exemples de Pyxel.</p>
-<p>Pour ouvrir, modifier ou consulter le contenu d’un tel fichier, il faut utiliser l’éditeur de ressource de Pyxel. Pour cela, on entre <code>pyxel edit jump_games.pyxres</code> dans un terminal, dans le dossier où se trouve le fichier.</p>
+<p>Pour ce tuto, nous utiliserons le fichier de ressource <a href="jump_game.pyxres"><code>jump_games.pyxres</code></a> issu des exemples de Pyxel.</p>
+<p>Pour ouvrir, modifier ou consulter le contenu d’un tel fichier, il faut utiliser l’éditeur de ressource de Pyxel. Pour cela, il faut d’abord charger ce fichier dans pyxelstudio : voir <a href="../../posts/pyxelstudio/index.html">la page dédiée</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./fenetre_pyxres.png" class="lightbox" title="Editeur de ressource" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
@@ -1656,8 +1480,8 @@ Objectifs du tutoriel
 <p><strong>Astuce utile</strong> : quand on déplace la souris sur l’image, les coordonnées du pointeur sont affichées en haut à droite de la fenêtre. Cela permet de repérer facilement les coordonnées des points.</p>
 <p>Sous l’image se trouve la palette de couleur. Nous disposons de 16 couleurs, numérotées de 0 à 15.</p>
 </section>
-<section id="affichage-du-personnage" class="level2">
-<h2 class="anchored" data-anchor-id="affichage-du-personnage">Affichage du personnage</h2>
+<section id="affichage-du-personnage-et-du-fond-coloré" class="level2">
+<h2 class="anchored" data-anchor-id="affichage-du-personnage-et-du-fond-coloré">Affichage du personnage et du fond coloré</h2>
 <p>Nous constatons que le dessin du personnage occupe le carré de coordonnées (0, 0) à (15, 15). Nous allons donc afficher le personnage en bas à gauche de la fenêtre, avec la commande <code>pyxel.blt(x, y, img, u, v, w, h, [colkey])</code> :</p>
 <ul>
 <li><code>x</code> et <code>y</code> sont les coordonnées du point en haut à gauche de l’image <strong>dans la fenêtre de l’application</strong> ;</li>
@@ -1691,13 +1515,7 @@ font-style: inherit;">self</span>):</span>
 background-color: null;
 font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">128</span>, title<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tuto 2"</span>, quit_key<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>pyxel.KEY_Q, fps<span class="op" style="color: #5E5E5E;
+font-style: inherit;">128</span>, fps<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -1743,16 +1561,16 @@ background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb1-17">        <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
+font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu (code 12)</span></span>
 <span id="cb1-18">        pyxel.cls(<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">12</span>)</span>
 <span id="cb1-19">        <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 255 - 16</span></span>
+font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 127 - 16</span></span>
 <span id="cb1-20">        pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.width <span class="op" style="color: #5E5E5E;
+font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -1799,13 +1617,7 @@ font-style: inherit;">self</span>):</span>
 background-color: null;
 font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">128</span>, title<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tuto 2"</span>, quit_key<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>pyxel.KEY_Q, fps<span class="op" style="color: #5E5E5E;
+font-style: inherit;">128</span>, fps<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -1853,7 +1665,10 @@ font-style: inherit;">self</span>):</span>
 <span id="cb2-16">        <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
-<span id="cb2-17">            <span class="va" style="color: #111111;
+<span id="cb2-17">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># si on appuie sur la touche gauche, on déplace le personnage vers la gauche</span></span>
+<span id="cb2-18">            <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -1868,10 +1683,13 @@ background-color: null;
 font-style: inherit;">self</span>.vitesse, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>)</span>
-<span id="cb2-18">        <span class="cf" style="color: #003B4F;
+<span id="cb2-19">        <span class="cf" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
-<span id="cb2-19">            <span class="va" style="color: #111111;
+<span id="cb2-20">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># si on appuie sur la touche droite, on déplace le personnage vers la droite</span></span>
+<span id="cb2-21">            <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -1888,22 +1706,22 @@ background-color: null;
 font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">16</span>)</span>
-<span id="cb2-20"></span>
-<span id="cb2-21">    <span class="kw" style="color: #003B4F;
+<span id="cb2-22"></span>
+<span id="cb2-23">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
-<span id="cb2-22">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
-<span id="cb2-23">        pyxel.cls(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
 <span id="cb2-24">        <span class="co" style="color: #5E5E5E;
 background-color: null;
+font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
+<span id="cb2-25">        pyxel.cls(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb2-26">        <span class="co" style="color: #5E5E5E;
+background-color: null;
 font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
-<span id="cb2-25">        pyxel.blt(<span class="va" style="color: #111111;
+<span id="cb2-27">        pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -1920,9 +1738,9 @@ background-color: null;
 font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">16</span>)</span>
-<span id="cb2-26"></span>
-<span id="cb2-27">App()</span></code></pre></div>
-<p><strong>Remarque</strong> : nous avons également définit un attribut <code>vitesse</code> qui permet de modifier la vitesse de déplacement du personnage : il s’agit du nombre de pixels à ajouter, o à retrancher, à chaque fois que l’on appuie sur une touche fléchée.</p>
+<span id="cb2-28"></span>
+<span id="cb2-29">App()</span></code></pre></div>
+<p><strong>Remarque</strong> : nous avons également défini un attribut <code>vitesse</code> qui permet de modifier la vitesse de déplacement du personnage : il s’agit du nombre de pixels à ajouter, ou à retrancher, à chaque fois que l’on appuie sur une touche fléchée.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./tuto2-1.gif" class="lightbox" title="Personnage qui se déplace" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-1.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
@@ -1932,7 +1750,8 @@ font-style: inherit;">16</span>)</span>
 </section>
 <section id="animation-du-déplacement" class="level2">
 <h2 class="anchored" data-anchor-id="animation-du-déplacement">Animation du déplacement</h2>
-<p>Pour donner une impression d’animation lors du déplacement du personnage, on peut alterner l’affichage de deux images du personnage. Le fichier ressources contient en effet une image du personnage avec les jambes positionnées différemment, comme on peut le voir ci-dessus. On peut donc utiliser la fonction <code>pyxel.frame_count</code> pour alterner l’affichage des deux images à chaque image. Cette fonction renvoie le nombre d’images affichées depuis le début de l’application. Dans le code ci-dessous, on a de plus défini une variable booléenne <code>self.personnage_marche</code> qui vaut <code>True</code> si le personnage est en train de marcher et <code>False</code> sinon (ce qui permet dans ca cas d’arrêter l’animation).</p>
+<p>Pour donner une impression d’animation lors du déplacement du personnage, on peut alterner l’affichage de deux images du personnage. Le fichier ressources contient en effet une image du personnage avec les jambes positionnées différemment, comme on peut le voir ci-dessous.</p>
+<p>Pour ce faire, on peut utiliser la fonction <code>pyxel.frame_count</code> pour alterner l’affichage des deux images à chaque image. Cette fonction renvoie le nombre d’images affichées depuis le début de l’application. Dans le code ci-dessous, on a de plus défini une variable booléenne <code>self.personnage_marche</code> qui vaut <code>True</code> si le personnage est en train de marcher et <code>False</code> sinon (ce qui permet dans ce cas d’arrêter l’animation).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./fenetre_pyxres_2.png" class="lightbox" title="Animation du personnage" data-gallery="quarto-lightbox-gallery-6"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres_2.png" class="img-fluid figure-img"></a></p>
@@ -1957,13 +1776,7 @@ font-style: inherit;">self</span>):</span>
 background-color: null;
 font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">128</span>, title<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tuto 2"</span>, quit_key<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>pyxel.KEY_Q, fps<span class="op" style="color: #5E5E5E;
+font-style: inherit;">128</span>, fps<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -2173,6 +1986,19 @@ font-style: inherit;">16</span>)</span>
 <figcaption class="figure-caption">Personnage qui se déplace</figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Explications
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>frame_count</code> est le nombre d’images affichées depuis le lancement du jeu. On calcule <code>frame_count % 6</code> pour obtenir le reste de la division euclidienne de <code>frame_count</code> par 6. On obtient donc un nombre entre 0 et 5. On affiche le premier personnage si ce nombre est inférieur à 3 et le second sinon. On obtient donc un changement d’image <strong>toutes les 3 images</strong>.</p>
+</div>
+</div>
 <p>Une dernière amélioration serait souhaitable : lorsque le personnage se déplace vers la gauche, il semble reculer. On peut modifier le code de telle façon qu’il se retourne vers la gauche et regarde toujours dans la direction où il se déplace. Pour cela, il suffit de modifier le paramètre <code>w</code> de la fonction <code>pyxel.blt</code> en lui donnant la valeur <code>-16</code> lorsque le personnage se déplace vers la gauche.</p>
 <p>On définit pour cela encore un nouvel attribut “direction” qui vaut 1 lorsque le personnage se déplace vers la droite et -1 lorsqu’il se déplace vers la gauche. On multiplie donc <code>self.direction</code> par <code>16</code> pour obtenir la valeur de <code>w</code> à donner à la fonction <code>pyxel.blt</code>.</p>
 <div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
@@ -2193,13 +2019,7 @@ font-style: inherit;">self</span>):</span>
 background-color: null;
 font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">256</span>, title<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tuto 2"</span>, quit_key<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>pyxel.KEY_Q, fps<span class="op" style="color: #5E5E5E;
+font-style: inherit;">128</span>, fps<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
 background-color: null;
@@ -2313,9 +2133,7 @@ font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5
 background-color: null;
 font-style: inherit;">+</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.vitesse, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">255</span> <span class="op" style="color: #5E5E5E;
+font-style: inherit;">self</span>.vitesse, pyxel.width <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -2367,9 +2185,11 @@ background-color: null;
 font-style: inherit;">3</span>:</span>
 <span id="cb4-35">                pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.x_personnage, <span class="dv" style="color: #AD0000;
+font-style: inherit;">self</span>.x_personnage, pyxel.height<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">239</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -2389,9 +2209,11 @@ background-color: null;
 font-style: inherit;">else</span>:</span>
 <span id="cb4-37">                pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.x_personnage, <span class="dv" style="color: #AD0000;
+font-style: inherit;">self</span>.x_personnage, pyxel.height<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">239</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -2418,9 +2240,11 @@ background-color: null;
 font-style: inherit;">else</span>:</span>
 <span id="cb4-40">            pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.x_personnage, <span class="dv" style="color: #AD0000;
+font-style: inherit;">self</span>.x_personnage, pyxel.height<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">239</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -2443,6 +2267,19 @@ font-style: inherit;">16</span>)</span>
 <figcaption class="figure-caption">Personnage qui se déplace</figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+En conclusion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nous avons vu dans ce tuto comment animer un personnage dans une application Pyxel en utilisant les touches du clavier. Nous avons également vu comment utiliser le fichier de ressources pour afficher une image du personnage avec les jambes positionnées différemment et ainsi donner une impression de marche. Nous avons enfin vu comment faire en sorte que le personnage regarde toujours dans la direction où il se déplace.</p>
+</div>
+</div>
 
 
 </section>
@@ -2454,8 +2291,185 @@ font-style: inherit;">16</span>)</span>
   <category>Pyxel</category>
   <category>Nuit du code</category>
   <guid>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</guid>
-  <pubDate>Sun, 18 Jun 2023 22:00:00 GMT</pubDate>
+  <pubDate>Fri, 01 Sep 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" medium="image" type="image/png" height="59" width="144"/>
+</item>
+<item>
+  <title>Utiliser pyxelstudio.net pour créer des jeux en python avec pyxel</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/pyxelstudio/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Dans cet article, je vais vous présenter le site pyxelstudio.net et le module pyxel, qui vous permettent de créer facilement des jeux rétro avec python. Je vais vous montrer comment utiliser le site pyxelstudio.net pour éditer et exécuter du code en ligne, sans avoir besoin d’installer python ou pyxel sur votre ordinateur.</p>
+<section id="quest-ce-que-pyxelstudio.net" class="level2">
+<h2 class="anchored" data-anchor-id="quest-ce-que-pyxelstudio.net">Qu’est-ce que pyxelstudio.net ?</h2>
+<p>Pyxelstudio.net est un site web qui vous permet d’écrire et d’exécuter du code python avec le module pyxel directement dans votre navigateur. C’est très pratique si vous voulez rapidement tester vos idées de jeux sans avoir à installer python ou pyxel sur votre ordinateur. Pour accéder au site, il suffit de taper l’adresse <a href="https://www.pyxelstudio.net/">https://www.pyxelstudio.net/</a> dans la barre d’adresse de votre navigateur. Vous arrivez alors sur la page d’accueil du site, qui vous propose plusieurs options. Je vous conseille de créer un compte (en cliquant sur “register”), car cela vous permettra de retrouver vos projets très facilement quand vous passez d’une machine à une autre. Ainsi, vous pouvez créer un nouveau projet, ouvrir un projet existant, ou encore consulter les exemples de jeux réalisés avec pyxel. Ce site a été développé par <a href="https://twitter.com/laurentabbal">Laurent Abbal</a>, professeur de NSI au lycée français international de Tokyo.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="pyxelstudio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Page d’accueil de pyxelstudio.net"><img src="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Page d’accueil de <a href="https://www.pyxelstudio.net">pyxelstudio.net</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="comment-créer-un-nouveau-projet" class="level2">
+<h2 class="anchored" data-anchor-id="comment-créer-un-nouveau-projet">Comment créer un nouveau projet ?</h2>
+<p>Pour créer un nouveau projet, cliquez sur le bouton “Create”. Vous arrivez alors sur l’interface principale du site, qui se compose de deux parties : à gauche, l’éditeur de code et à droite la fenêtre d’exécution.</p>
+<ul>
+<li>L’éditeur de code vous permet d’écrire votre code python avec pyxel. Il dispose de la coloration syntaxique pour vous faciliter la tâche.</li>
+<li>La fenêtre d’exécution vous permet de voir le résultat de votre code, après avoir cliqué sur le bouton jaune situé au-dessus de la zone.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="interface.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Vue d’ensemble de la page d’édition de www.pyxelstudio.net"><img src="https://flallemand.fr/blog/posts/pyxelstudio/interface.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Vue d’ensemble de la page d’édition de www.pyxelstudio.net</figcaption>
+</figure>
+</div>
+</section>
+<section id="linterface-de-la-zone-dédition" class="level2">
+<h2 class="anchored" data-anchor-id="linterface-de-la-zone-dédition">L’interface de la zone d’édition</h2>
+<p>Outre l’édition du code et son exécution, différentes actions sont possibles depuis cet écran.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ol type="1">
+<li>Accès au dashboard : liste des projets créés, avec la possibilité de les éditer et de les supprimer.</li>
+<li>Définition du nom du projet.</li>
+<li>Liste des fichiers (fichiers python, fichiers de ressources, etc.) composant le projet.</li>
+<li>Afficher la zone d’édition du code. 5.Éditer le fichier de ressources : par défaut, c’est un fichier nommé res.pyxres, qui permet de définir des graphismes, des sons et de la musique pour le projet.</li>
+<li>Accès à l’édition de la description et de la documentation de votre projet.</li>
+<li>Déclaration des modules python utilisés par votre projet.</li>
+<li>Accès aux paramètres : permet, par exemple, de rendre votre projet public ou privé.</li>
+<li>Afficher un résumé des commandes pyxel existantes.</li>
+<li>Enregistrer le fichier en cours d’édition.</li>
+<li>Générer un lien pour partager le projet.</li>
+</ol>
+<p>Lorsqu’un programme est en cours d’exécution, on trouve deux boutons au-dessus de la zone d’exécution.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ol type="1">
+<li>Mettre le jeu en plein écran.</li>
+<li>Afficher la console : utile pour l’affichage de certaines variables en phase de débogage.</li>
+</ol>
+<p>Pour finir ce petit tour de l’interface du site, regardons de plus près l’affichage de la liste des fichiers d’un projet :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig3.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ol type="1">
+<li>Ces deux boutons permettent respectivement de créer un nouveau fichier et de téléverser un fichier existant.</li>
+<li>Le fichier python de l’application. C’est lui qui contient le code du jeu et le bouton permet de l’éditer.</li>
+<li>Le fichier de ressource, créé automatiquement à la création d’un projet. Initialement vide. Le bouton permet de l’éditer.</li>
+<li>Ces boutons permettent de télécharger les fichiers python et pyxres.</li>
+</ol>
+</section>
+<section id="démonstration" class="level2">
+<h2 class="anchored" data-anchor-id="démonstration">Démonstration</h2>
+<p>Pour vous montrer comment fonctionne le site <a href="https://www.pyxelstudio.net">pyxelstudio.net</a>, écrivons un exemple simple de code pyxel, qui affiche un message “Hello Pyxel!” à l’écran. Ce code est tiré du fichier 01_hello_pyxel.py, qui fait partie des exemples fournis avec le module pyxel. Voici le code :</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pyxel</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> App:</span>
+<span id="cb1-4">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-5">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># initialisation de l'écran avec une taille de 160 x 120 pixels</span></span>
+<span id="cb1-6">        pyxel.init(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">120</span>)</span>
+<span id="cb1-7">        pyxel.run(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.draw)</span>
+<span id="cb1-8">        </span>
+<span id="cb1-9">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># définition de la fonction update, qui est appelée à chaque frame</span></span>
+<span id="cb1-10">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-11">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">pass</span></span>
+<span id="cb1-12"></span>
+<span id="cb1-13">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># définition de la fonction draw, qui est appelée à chaque frame après la fonction update</span></span>
+<span id="cb1-14">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-15">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on efface l'écran avec la couleur 0 (noir)</span></span>
+<span id="cb1-16">        pyxel.cls(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>)</span>
+<span id="cb1-17">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on affiche le texte "Hello Pyxel!" à la position (55, 41) avec la couleur 7 (blanc)</span></span>
+<span id="cb1-18">        pyxel.text(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">55</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">41</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello Pyxel!"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>)</span>
+<span id="cb1-19">        </span>
+<span id="cb1-20"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># on exécute le programme avec les fonctions update et draw</span></span>
+<span id="cb1-21">App()</span></code></pre></div>
+<p>Nous allons copier ce code dans l’éditeur de code du site pyxelstudio.net, puis cliquer sur le bouton “Run” pour l’exécuter. Nous voyons alors apparaître le message “Hello Pyxel!” à l’écran, comme prévu. Voilà, nous venons de réaliser notre première application avec pyxel ! C’était facile, non ?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Copie d’écran de la sortie pyxel du code d’exemple"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig4.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Copie d’écran de la sortie pyxel du code d’exemple</figcaption>
+</figure>
+</div>
+</section>
+<section id="quelles-sont-les-autres-fonctionnalités-du-site" class="level2">
+<h2 class="anchored" data-anchor-id="quelles-sont-les-autres-fonctionnalités-du-site">Quelles sont les autres fonctionnalités du site ?</h2>
+<p>Le site pyxelstudio.net vous offre d’autres possibilités intéressantes, comme le partage de code (voir ci-dessus), la sauvegarde de projets, la visualisation des exemples, etc.</p>
+<p>Si vous voulez partager votre code avec d’autres personnes, vous pouvez cliquer sur le bouton de partage en haut à droite de la zone d’édition. Vous obtenez alors un lien que vous pouvez copier et envoyer à qui vous voulez. La personne qui reçoit le lien peut ainsi ouvrir votre code dans son navigateur et l’exécuter sans avoir à le télécharger. C’est très pratique pour montrer vos créations ou demander de l’aide. Je donnerai dans des articles suivants des conseils et des tutoriels pour la création de jeux avec pyxel dans pyxelstudio.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>NSI</category>
+  <category>Programmation</category>
+  <category>Pyxel</category>
+  <category>Nuit du code</category>
+  <guid>https://flallemand.fr/blog/posts/pyxelstudio/index.html</guid>
+  <pubDate>Thu, 31 Aug 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
   <title>Tuto pyxel : code de base</title>
@@ -2531,7 +2545,7 @@ font-style: inherit;">pass</span></span>
 <p>Voici la fenêtre obtenue avec le code ci-dessus :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fenetre_vide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="fenêtre vide"><img src="https://flallemand.fr/blog/posts/pyxel_tuto1_base/fenetre_vide.png" class="img-fluid figure-img"></a></p>
+<p><a href="fenetre_vide.png" class="lightbox" title="fenêtre vide" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/pyxel_tuto1_base/fenetre_vide.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">fenêtre vide</figcaption>
 </figure>
 </div>

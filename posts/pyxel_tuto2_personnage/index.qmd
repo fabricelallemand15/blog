@@ -2,17 +2,19 @@
 title: "Tuto pyxel (avec POO) : Animer un personnage"
 subtitle: "Tutoriels Pyxel"
 description: "Animer un personnage dans une application Pyxel"
-date: "2023-06-19"
+date: "2023-09-02"
 categories: [Python, NSI, Programmation, Pyxel, Nuit du code]
 image: "blt_figure.png"
 ---
 
-::: {.callout-tip}
+::: {.callout-important}
 ## Objectifs du tutoriel
 
 * Créer une application Pyxel avec fond coloré uni ;
 * Créer un personnage qui se déplace avec les touches du clavier ;
 :::
+
+Nous utiliserons [pyxelstudio.net](../pyxelstudio/index.qmd) pour coder ce tuto.
 
 ## Géométrie générale de la fenêtre
 
@@ -22,9 +24,9 @@ La fenêtre de jeu est un rectangle de 256 pixels de large sur 128 pixels de hau
 
 ## Le fichier de ressource pyxres
 
-Pour ce tuto, nous utiliserons le fichier de ressource `jump_games.pyxres` issu des exemples de Pyxel.
+Pour ce tuto, nous utiliserons le fichier de ressource [`jump_games.pyxres`](jump_game.pyxres) issu des exemples de Pyxel.
 
-Pour ouvrir, modifier ou consulter le contenu d'un tel fichier, il faut utiliser l'éditeur de ressource de Pyxel. Pour cela, on entre `pyxel edit jump_games.pyxres` dans un terminal, dans le dossier où se trouve le fichier.
+Pour ouvrir, modifier ou consulter le contenu d'un tel fichier, il faut utiliser l'éditeur de ressource de Pyxel. Pour cela, il faut d'abord charger ce fichier dans pyxelstudio : voir [la page dédiée](../pyxelstudio/index.qmd).
 
 ![Editeur de ressource](./fenetre_pyxres.png){width=50%}
 
@@ -34,7 +36,7 @@ On peut voir et faire défiler l'ensemble des images du fichier de ressources da
 
 Sous l'image se trouve la palette de couleur. Nous disposons de 16 couleurs, numérotées de 0 à 15.
 
-## Affichage du personnage
+## Affichage du personnage et du fond coloré
 
 Nous constatons que le dessin du personnage occupe le carré de coordonnées (0, 0) à (15, 15). Nous allons donc afficher le personnage en bas à gauche de la fenêtre, avec la commande `pyxel.blt(x, y, img, u, v, w, h, [colkey])` :
 
@@ -53,7 +55,7 @@ import pyxel
 
 class App:
     def __init__(self):
-        pyxel.init(256, 128, title="Tuto 2", quit_key=pyxel.KEY_Q, fps=30)
+        pyxel.init(256, 128, fps=30)
         # on charge le fichier de ressources
         pyxel.load("jump_game.pyxres")
         # variable définissant l'abscisse initiale du personnage
@@ -65,10 +67,10 @@ class App:
         pass
 
     def draw(self):
-        # on efface l'écran et on remplit la fenêtre de bleu
+        # on efface l'écran et on remplit la fenêtre de bleu (code 12)
         pyxel.cls(12)
-        # on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 255 - 16
-        pyxel.blt(self.x_personnage, pyxel.width - 16, 0, 0, 0, 16, 16)
+        # on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 127 - 16
+        pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, 16, 16)
 
 App()
 ```
@@ -88,7 +90,7 @@ import pyxel
 
 class App:
     def __init__(self):
-        pyxel.init(256, 128, title="Tuto 2", quit_key=pyxel.KEY_Q, fps=30)
+        pyxel.init(256, 128, fps=30)
         # on charge le fichier de ressources
         pyxel.load("jump_game.pyxres")
         # variable définissant l'abscisse initiale du personnage
@@ -100,8 +102,10 @@ class App:
         
     def update(self):
         if pyxel.btn(pyxel.KEY_LEFT):
+            # si on appuie sur la touche gauche, on déplace le personnage vers la gauche
             self.x_personnage = max(self.x_personnage - self.vitesse, 0)
         if pyxel.btn(pyxel.KEY_RIGHT):
+            # si on appuie sur la touche droite, on déplace le personnage vers la droite
             self.x_personnage = min(self.x_personnage + self.vitesse, pyxel.width - 16)
 
     def draw(self):
@@ -113,13 +117,15 @@ class App:
 App()
 ```
 
-**Remarque** : nous avons également définit un attribut `vitesse` qui permet de modifier la vitesse de déplacement du personnage : il s'agit du nombre de pixels à ajouter, o à retrancher, à chaque fois que l'on appuie sur une touche fléchée.
+**Remarque** : nous avons également défini un attribut `vitesse` qui permet de modifier la vitesse de déplacement du personnage : il s'agit du nombre de pixels à ajouter, ou à retrancher, à chaque fois que l'on appuie sur une touche fléchée.
 
 ![Personnage qui se déplace](./tuto2-1.gif){width=50%}
 
 ## Animation du déplacement
 
-Pour donner une impression d'animation lors du déplacement du personnage, on peut alterner l'affichage de deux images du personnage. Le fichier ressources contient en effet une image du personnage avec les jambes positionnées différemment, comme on peut le voir ci-dessus. On peut donc utiliser la fonction `pyxel.frame_count` pour alterner l'affichage des deux images à chaque image. Cette fonction renvoie le nombre d'images affichées depuis le début de l'application. Dans le code ci-dessous, on a de plus défini une variable booléenne `self.personnage_marche` qui vaut `True` si le personnage est en train de marcher et `False` sinon (ce qui permet dans ca cas d'arrêter l'animation).
+Pour donner une impression d'animation lors du déplacement du personnage, on peut alterner l'affichage de deux images du personnage. Le fichier ressources contient en effet une image du personnage avec les jambes positionnées différemment, comme on peut le voir ci-dessous. 
+
+Pour ce faire, on peut utiliser la fonction `pyxel.frame_count` pour alterner l'affichage des deux images à chaque image. Cette fonction renvoie le nombre d'images affichées depuis le début de l'application. Dans le code ci-dessous, on a de plus défini une variable booléenne `self.personnage_marche` qui vaut `True` si le personnage est en train de marcher et `False` sinon (ce qui permet dans ce cas d'arrêter l'animation).
 
 ![Animation du personnage](./fenetre_pyxres_2.png)
 
@@ -128,7 +134,7 @@ import pyxel
 
 class App:
     def __init__(self):
-        pyxel.init(256, 128, title="Tuto 2", quit_key=pyxel.KEY_Q, fps=30)
+        pyxel.init(256, 128, fps=30)
         # on charge le fichier de ressources
         pyxel.load("jump_game.pyxres")
         # variable définissant l'abscisse initiale du personnage
@@ -166,6 +172,11 @@ App()
 
 ![Personnage qui se déplace](./tuto2-3.gif){width=50%}
 
+:::{.callout-tip}
+## Explications
+`frame_count` est le nombre d'images affichées depuis le lancement du jeu. On calcule `frame_count % 6` pour obtenir le reste de la division euclidienne de `frame_count` par 6. On obtient donc un nombre entre 0 et 5. On affiche le premier personnage si ce nombre est inférieur à 3 et le second sinon. On obtient donc un changement d'image **toutes les 3 images**.
+:::
+
 Une dernière amélioration serait souhaitable : lorsque le personnage se déplace vers la gauche, il semble reculer. On peut modifier le code de telle façon qu'il se retourne vers la gauche et regarde toujours dans la direction où il se déplace. Pour cela, il suffit de modifier le paramètre `w` de la fonction `pyxel.blt` en lui donnant la valeur `-16` lorsque le personnage se déplace vers la gauche.
 
 On définit pour cela encore un nouvel attribut "direction" qui vaut 1 lorsque le personnage se déplace vers la droite et -1 lorsqu'il se déplace vers la gauche. On multiplie donc `self.direction` par `16` pour obtenir la valeur de `w` à donner à la fonction `pyxel.blt`.
@@ -175,7 +186,7 @@ import pyxel
 
 class App:
     def __init__(self):
-        pyxel.init(256, 256, title="Tuto 2", quit_key=pyxel.KEY_Q, fps=30)
+        pyxel.init(256, 128, fps=30)
         # on charge le fichier de ressources
         pyxel.load("jump_game.pyxres")
         # variable définissant l'abscisse initiale du personnage
@@ -195,7 +206,7 @@ class App:
             self.direction = -1
             self.personnage_marche = True
         if pyxel.btn(pyxel.KEY_RIGHT):
-            self.x_personnage = min(self.x_personnage + self.vitesse, 255 - 16)
+            self.x_personnage = min(self.x_personnage + self.vitesse, pyxel.width - 16)
             self.direction = 1
             self.personnage_marche = True
 
@@ -205,14 +216,20 @@ class App:
         # on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 255 - 16
         if self.personnage_marche:
             if pyxel.frame_count % 6 < 3:
-                pyxel.blt(self.x_personnage, 239, 0, 0, 0, self.direction*16, 16)
+                pyxel.blt(self.x_personnage, pyxel.height-16, 0, 0, 0, self.direction*16, 16)
             else:
-                pyxel.blt(self.x_personnage, 239, 0, 16, 0, self.direction*16, 16)
+                pyxel.blt(self.x_personnage, pyxel.height-16, 0, 16, 0, self.direction*16, 16)
             self.personnage_marche = False
         else:
-            pyxel.blt(self.x_personnage, 239, 0, 0, 0, self.direction*16, 16)
+            pyxel.blt(self.x_personnage, pyxel.height-16, 0, 0, 0, self.direction*16, 16)
 
 App()
 ```
 
 ![Personnage qui se déplace](./tuto2-4.gif){width=50%}
+
+:::{.callout-note}
+## En conclusion
+
+Nous avons vu dans ce tuto comment animer un personnage dans une application Pyxel en utilisant les touches du clavier. Nous avons également vu comment utiliser le fichier de ressources pour afficher une image du personnage avec les jambes positionnées différemment et ainsi donner une impression de marche. Nous avons enfin vu comment faire en sorte que le personnage regarde toujours dans la direction où il se déplace.
+:::
