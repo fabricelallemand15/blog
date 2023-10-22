@@ -1,5 +1,5 @@
 ---
-title: "Tuto pyxel (avec POO) : Animer un personnage"
+title: "Tuto pyxel : Animer un personnage"
 subtitle: "Tutoriels Pyxel"
 description: "Animer un personnage dans une application Pyxel"
 date: "2023-09-02"
