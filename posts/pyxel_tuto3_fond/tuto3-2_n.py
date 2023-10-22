@@ -23,12 +23,12 @@ class Personnage:
     def draw(self):
         if self.personnage_marche:
             if pyxel.frame_count % 6 < 3:
-                pyxel.blt(self.x, pyxel.height-16, 0, 0, 0, self.direction*16, 16)
+                pyxel.blt(self.x, pyxel.height-16, 0, 0, 0, self.direction*16, 16, 12)
             else:
-                pyxel.blt(self.x, pyxel.height-16, 0, 16, 0, self.direction*16, 16)
+                pyxel.blt(self.x, pyxel.height-16, 0, 16, 0, self.direction*16, 16, 12)
             self.personnage_marche = False
         else:
-            pyxel.blt(self.x, pyxel.height-16, 0, 0, 0, self.direction*16, 16)
+            pyxel.blt(self.x, pyxel.height-16, 0, 0, 0, self.direction*16, 16, 12)
     
 
 class App:
@@ -43,6 +43,11 @@ class App:
 
     def draw(self):
         pyxel.cls(12)
+         # Tracé de la montagne
+        pyxel.blt(pyxel.width//2 - 80, pyxel.height-50, 0, 0, 64, 160, 24)
+        # Tracé du ciel dégradé
+        pyxel.blt(0,pyxel.height-32, 0, 0, 88, 160, 32, 12)
+        pyxel.blt(160,pyxel.height-32, 0, 0, 88, 160, 32, 12)
         self.personnage.draw()
 
 App()

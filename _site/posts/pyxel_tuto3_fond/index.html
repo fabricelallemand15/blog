@@ -80,6 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -218,7 +221,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Date de publication</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">3 septembre 2023</p>
+        <p class="date">22 octobre 2023</p>
       </div>
     </div>
     
@@ -235,7 +238,7 @@ cookieconsent.run({
    
   <ul>
   <li><a href="#préparation" id="toc-préparation" class="nav-link active" data-scroll-target="#préparation">Préparation</a></li>
-  <li><a href="#fond-statique" id="toc-fond-statique" class="nav-link" data-scroll-target="#fond-statique">Fond statique</a></li>
+  <li><a href="#fond-statique-montagne-et-ciel" id="toc-fond-statique-montagne-et-ciel" class="nav-link" data-scroll-target="#fond-statique-montagne-et-ciel">Fond statique : Montagne et ciel</a></li>
   <li><a href="#animation-des-nuages" id="toc-animation-des-nuages" class="nav-link" data-scroll-target="#animation-des-nuages">Animation des nuages</a></li>
   <li><a href="#animation-de-la-forêt" id="toc-animation-de-la-forêt" class="nav-link" data-scroll-target="#animation-de-la-forêt">Animation de la forêt</a></li>
   </ul>
@@ -247,7 +250,7 @@ cookieconsent.run({
 
 
 
-<p>Ce tuto fait suite au précédent : <a href="../../posts/pyxel_tuto2_personnage/index.html">Tuto pyxel (avec POO) : Animer un personnage</a>.</p>
+<p>Ce tuto fait suite au précédent : <a href="../../posts/pyxel_tuto2_personnage/index.html">Tuto pyxel : Animer un personnage</a>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -268,163 +271,249 @@ Objectifs du tutoriel
 <h2 class="anchored" data-anchor-id="préparation">Préparation</h2>
 <p>Nous reprenons le code du tuto précédent comme base de travail, mais nous allons le réorganiser. Plusieurs nouveaux éléments vont en effet devoir être ajoutés au fur et à mesure du développement du jeu, et certains d’entre eux devront, comme le personnage, être animés ou voir certaines de leurs propriétés modifiées au cours du temps. Nous allons donc définir des <strong>classes</strong> pour chacun de ces éléments, afin de pouvoir les manipuler plus facilement et pour rendre notre code plus lisible. Chacune de ces classes comportera au moins trois méthodes : <code>__init__</code> pour initialiser l’objet et ses paramètres de départ, puis <code>update</code> et <code>draw</code>. La première sera appelée à chaque frame pour mettre à jour les propriétés de l’objet, la seconde sera appelée pour afficher l’objet à l’écran.</p>
 <p>Voici donc le code de départ, réorganisé avec la création d’une classe <code>Personnage</code>. Les méthodes <code>update</code> et <code>draw</code> de cette classe sont appelées depuis les méthodes <code>update</code> et <code>draw</code> de l’application.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Personnage:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.y <span class="op">=</span> pyxel.height <span class="op">-</span> <span class="dv">16</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.marche <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.vitesse <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x <span class="op">=</span> <span class="bu">max</span>(<span class="va">self</span>.x <span class="op">-</span> <span class="va">self</span>.vitesse, <span class="dv">0</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x <span class="op">+</span> <span class="va">self</span>.vitesse, pyxel.width <span class="op">-</span> <span class="dv">16</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.personnage_marche:</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> pyxel.frame_count <span class="op">%</span> <span class="dv">6</span> <span class="op">&lt;</span> <span class="dv">3</span>:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x, pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x, pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>            pyxel.blt(<span class="va">self</span>.x, pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, fps<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        pyxel.load(<span class="st">"jump_game.pyxres"</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.personnage <span class="op">=</span> Personnage()</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        pyxel.run(<span class="va">self</span>.update, <span class="va">self</span>.draw)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.personnage.update()</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        pyxel.cls(<span class="dv">12</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.personnage.draw()</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="fond-statique" class="level2">
-<h2 class="anchored" data-anchor-id="fond-statique">Fond statique</h2>
-<p>Dans un premiers temps, nous allons dessiner un fond statique.</p>
-<p>L’examen du fichier de ressources nous permet de déterminer les coordonnées des éléments présents : forêt, nuages et montagne. Dans le code suivant, nous faisons quelques calculs afin que la montagne soit centrée dans la fenêtre de l’application. La forêt, elle, doit parcourir toute la longueur de l’écran. Même chose pour le dégradé du ciel.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, title<span class="op">=</span><span class="st">"Tuto 2"</span>, quit_key<span class="op">=</span>pyxel.KEY_Q, fps<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on charge le fichier de ressources</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        pyxel.load(<span class="st">"jump_game.pyxres"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable définissant l'abscisse initiale du personnage</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable définissant la vitesse du personnage</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.vitesse <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable indiquant si un déplacement est en cours</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable indiquant la direction du personnage</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on lance l'application</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        pyxel.run(<span class="va">self</span>.update, <span class="va">self</span>.draw)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">max</span>(<span class="va">self</span>.x_personnage <span class="op">-</span> <span class="va">self</span>.vitesse, <span class="dv">0</span>)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x_personnage <span class="op">+</span> <span class="va">self</span>.vitesse, pyxel.width <span class="op">-</span> <span class="dv">16</span>)</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        pyxel.cls(<span class="dv">12</span>)</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tracé de la montagne</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(pyxel.width<span class="op">//</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">80</span>, pyxel.height<span class="op">-</span><span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">64</span>, <span class="dv">160</span>, <span class="dv">24</span>)</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tracé du ciel dégradé</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="dv">0</span>,pyxel.height<span class="op">-</span><span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">88</span>, <span class="dv">160</span>, <span class="dv">32</span>, <span class="dv">12</span>)</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="dv">160</span>,pyxel.height<span class="op">-</span><span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">88</span>, <span class="dv">160</span>, <span class="dv">32</span>, <span class="dv">12</span>)</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tracé de la forêt</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="dv">0</span>,pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">48</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="dv">160</span>,pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">48</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tracé des nuages</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(pyxel.width<span class="op">//</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">80</span>, pyxel.height<span class="op">//</span><span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">24</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.personnage_marche:</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> pyxel.frame_count <span class="op">%</span> <span class="dv">6</span> <span class="op">&lt;</span> <span class="dv">3</span>:</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>            pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="fond-statique-montagne-et-ciel" class="level2">
+<h2 class="anchored" data-anchor-id="fond-statique-montagne-et-ciel">Fond statique : Montagne et ciel</h2>
+<p>L’objectif est de créer le fond de la fenêtre de jeu à l’aide de quatre composantes :</p>
+<ul>
+<li>une montagne : elle sera fixe et située au milieu de la fenêtre ;</li>
+<li>un ciel dégradé : il sera fixe et situé sous la montagne ;</li>
+<li>des nuages : ils seront animés, situés au-dessus de la montagne et défileront dans le ciel ;</li>
+<li>une forêt : elle sera animée, située derrière le personnage et défilera dans le bas de la fenêtre lorsque le personnage se déplace.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Idée à retenir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>D’une manière générale, les objets statiques (dont la position ne change pas et dont les propriétés ne changent pas) peuvent être définis directement dans la classe <code>App</code>. Par contre, pour les objets dynamiques (soit parce qu’ils se déplacent, soit parce que leurs propriétés changent), on crée une classe indépendante dotée (au moins) des trois méthodes <code>__init__</code>, <code>update</code> et <code>draw</code>.</p>
+</div>
+</div>
+<p>L’examen du fichier de ressources nous permet de déterminer les coordonnées de la zone de l’image correspondant à ces éléments.</p>
+<ul>
+<li>Montagne : le coin supérieur gauche a pour coordonnées 0 et 64, l’image a une largeur de 160 pixels et une hauteur de 24 pixels.</li>
+<li>Ciel : le coin supérieur gauche a pour coordonnées 0 et 88, l’image a une largeur de 160 pixels et une hauteur de 32 pixels.</li>
+</ul>
+<p>On ajoute donc ces deux éléments à l’arrière plan de la fenêtre de jeu en modifiant comme suit la méthode <code>draw</code> de la classe <code>App</code> :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> draw(<span class="va">self</span>): <span class="co"># classe App</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>        pyxel.cls(<span class="dv">12</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>         <span class="co"># Tracé de la montagne</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>        pyxel.blt(pyxel.width<span class="op">//</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">80</span>, pyxel.height<span class="op">-</span><span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">64</span>, <span class="dv">160</span>, <span class="dv">24</span>)</span>
+<span id="cb2-5"><a href="#cb2-5"></a>        <span class="co"># Tracé du ciel dégradé</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>        pyxel.blt(<span class="dv">0</span>,pyxel.height<span class="op">-</span><span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">88</span>, <span class="dv">160</span>, <span class="dv">32</span>, <span class="dv">12</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>        pyxel.blt(<span class="dv">160</span>,pyxel.height<span class="op">-</span><span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">88</span>, <span class="dv">160</span>, <span class="dv">32</span>, <span class="dv">12</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a>        <span class="va">self</span>.personnage.draw()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Explications</strong> :</p>
+<ul>
+<li>Ligne 4 : <code>pyxel.width//2 - 80</code> est l’abscisse du coin supérieur gauche de l’image dans la fenêtre de jeu. <code>pyxel.width//2</code> est l’abscisse du milieu de la fenêtre, <code>80</code> est la moitié de la largeur de l’image. L’ordonnée <code>pyxel.height-50</code> est choisie par tâtonnement pour que la montagne soit bien positionnée verticalement dans la fenêtre.</li>
+<li>Lignes 6 et 7 : la largeur de la fenêtre est 256 pixels, la largeur de l’image est 160 pixels, il faut donc répéter l’image deux fois pour remplir toute la largeur de la fenêtre. On a ajouté ici le dernier paramètre <code>12</code> à la fonction <code>blt</code> pour que la couleur 12 (bleu) soit transparente. Cela permet de voir la montagne à travers le ciel dégradé.</li>
+</ul>
+<p>Comme le montre l’image ci-dessous, il faut aussi ajouter un dernier paramètre à la fonction <code>blt</code> pour que la couleur 12 (bleu) soit transparente également pour le personnage (dons dans la méthode <code>draw</code> de la classe <code>Personnage</code>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fond_personnage.png" class="lightbox" title="La couleur bleue derrière le personnage devient transparente" data-gallery="quarto-lightbox-gallery-1"><img src="fond_personnage.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<figcaption class="figure-caption">La couleur bleue derrière le personnage devient transparente</figcaption>
+</figure>
+</div>
 </section>
 <section id="animation-des-nuages" class="level2">
 <h2 class="anchored" data-anchor-id="animation-des-nuages">Animation des nuages</h2>
-<p>Avec le temps qui passe, les nuages se déplacent lentement vers la gauche et d’autres nuages apparaissent sur la droite.</p>
-<p>Afin de mieux organiser notre code, il va devenir fastidieux de tout écrire dans les fonctions <code>update</code> et <code>draw</code></p>
-<p>Nous allons donc définir une classe <code>Nuage</code> qui possède ses propres méthodes <code>update</code> et <code>draw</code>, comme le montre le code ci-dessous. Quelques explications suivent le code.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>LARGEUR <span class="op">=</span> <span class="dv">256</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>HAUTEUR <span class="op">=</span> <span class="dv">128</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Nuage:</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x <span class="op">=</span> LARGEUR, y <span class="op">=</span> HAUTEUR<span class="op">//</span><span class="dv">4</span>):</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">=</span> x</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.y <span class="op">=</span> y</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.replaced <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.frame_count <span class="op">%</span> <span class="dv">10</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x <span class="op">=</span> <span class="va">self</span>.x <span class="op">-</span><span class="dv">1</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x, <span class="va">self</span>.y, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">24</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        pyxel.init(LARGEUR, HAUTEUR, title<span class="op">=</span><span class="st">"Tuto 2"</span>, quit_key<span class="op">=</span>pyxel.KEY_Q, fps<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on charge le fichier de ressources</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        pyxel.load(<span class="st">"jump_game.pyxres"</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable définissant l'abscisse initiale du personnage</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable définissant la vitesse du personnage</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.vitesse <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable indiquant si un déplacement est en cours</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># variable indiquant la direction du personnage</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        <span class="co"># liste des nuages visibles</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nuages <span class="op">=</span> []</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        premier_nuage <span class="op">=</span> Nuage(x <span class="op">=</span> pyxel.width<span class="op">//</span><span class="dv">2</span><span class="op">-</span><span class="dv">80</span>, y <span class="op">=</span> pyxel.height<span class="op">//</span><span class="dv">4</span>)</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.nuages.append(premier_nuage)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on lance l'application</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        pyxel.run(<span class="va">self</span>.update, <span class="va">self</span>.draw)</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">max</span>(<span class="va">self</span>.x_personnage <span class="op">-</span> <span class="va">self</span>.vitesse, <span class="dv">0</span>)</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x_personnage <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x_personnage <span class="op">+</span> <span class="va">self</span>.vitesse, pyxel.width <span class="op">-</span> <span class="dv">16</span>)</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> nuage <span class="kw">in</span> <span class="va">self</span>.nuages:</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>            nuage.update()</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> nuage.x <span class="op">&lt;</span> <span class="dv">10</span> <span class="kw">and</span> <span class="kw">not</span> nuage.replaced:</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>                nouveau_nuage <span class="op">=</span> Nuage()</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.nuages.append(nouveau_nuage)</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>                nuage.replaced <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> nuage.x <span class="op">&lt;</span> <span class="op">-</span><span class="dv">160</span>:</span>
-<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.nuages.remove(nuage)</span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>        pyxel.cls(<span class="dv">12</span>)</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tracé de la montagne</span></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(pyxel.width<span class="op">//</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">80</span>, pyxel.height<span class="op">-</span><span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">64</span>, <span class="dv">160</span>, <span class="dv">24</span>)</span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tracé du ciel dégradé</span></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="dv">0</span>,pyxel.height<span class="op">-</span><span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">88</span>, <span class="dv">160</span>, <span class="dv">32</span>, <span class="dv">12</span>)</span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="dv">160</span>,pyxel.height<span class="op">-</span><span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">88</span>, <span class="dv">160</span>, <span class="dv">32</span>, <span class="dv">12</span>)</span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tracé de la forêt</span></span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="dv">0</span>,pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">48</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="dv">160</span>,pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">48</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Tracé des nuages</span></span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> nuage <span class="kw">in</span> <span class="va">self</span>.nuages:</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>            nuage.draw()</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.personnage_marche:</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> pyxel.frame_count <span class="op">%</span> <span class="dv">6</span> <span class="op">&lt;</span> <span class="dv">3</span>:</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>                pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.personnage_marche <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>            pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Avec le temps qui passe, les nuages se déplacent lentement vers la gauche et d’autres nuages apparaissent sur la droite. Lorsqu’un nuage a complètement disparu de la fenêtre, il est retiré de la liste des nuages.</p>
+<p>Nous allons définir une classe <code>Nuage</code> qui possède ses propres méthodes <code>update</code> et <code>draw</code>, comme le montre le code ci-dessous.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span> Nuage:</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y):</span>
+<span id="cb3-3"><a href="#cb3-3"></a>        <span class="va">self</span>.x <span class="op">=</span> x</span>
+<span id="cb3-4"><a href="#cb3-4"></a>        <span class="va">self</span>.y <span class="op">=</span> y</span>
+<span id="cb3-5"><a href="#cb3-5"></a>        <span class="va">self</span>.replaced <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
+<span id="cb3-8"><a href="#cb3-8"></a>        <span class="cf">if</span> pyxel.frame_count <span class="op">%</span> <span class="dv">10</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb3-9"><a href="#cb3-9"></a>            <span class="va">self</span>.x <span class="op">=</span> <span class="va">self</span>.x <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
+<span id="cb3-12"><a href="#cb3-12"></a>        pyxel.blt(<span class="va">self</span>.x, <span class="va">self</span>.y, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">24</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Explications</strong> :</p>
 <ul>
-<li>La ligne <code>if pyxel.frame_count % 10 == 0:</code> permet de faire avancer le nuage de 1 pixel vers la gauche trois fois par seconde, puisque notre application a un framerate de 30 fps.</li>
-<li>Un mécanisme est mis en place pour commencer à faire apparaître un nouveau nuage lorsque le précédent va bientôt disparaître. Nous définissons pour cela dans notre application une liste de nuages <code>nuages</code> qui contient initialement un seul nuage placé au milieu de la fenêtre.</li>
-<li>Dans la méthode <code>update</code> de l’application, chaque nuage de la liste est mis à jour et, dès qu’un nuage a son abscisse inférieure à 10 (et qu’il n’a pas encore été remplacé), un nouveau nuage est créé. L’ancien nuage est alors marqué comme remplacé, afin d’éviter de créer un nouveau nuage à chaque frame : <code>nuage.replaced = True</code>.</li>
-<li>Lorsque le nuage a complètement disparu de la fenêtre, il est retiré de la liste : <code>self.nuages.remove(nuage)</code>.</li>
+<li>Ligne 8 : <code>if pyxel.frame_count % 10 == 0:</code> permet de faire avancer le nuage de 1 pixel vers la gauche trois fois par seconde, puisque notre application a un framerate de 30 fps.</li>
+<li>Ligne 5 : Un attribut booléen <code>replaced</code> est ajouté à la classe <code>Nuage</code> pour indiquer si le nuage a été remplacé par un nouveau nuage. Cela permet de ne pas créer un nouveau nuage à chaque frame (voir plus loin).</li>
 </ul>
+<p>L’idée est de faire apparaître un nouveau nuage dans le ciel dès que le nuage précédent s’approche du bord gauche de l’écran. Pour cela, il sera nécessaire de définir une liste de nuages dans la classe <code>App</code> et de la mettre à jour à chaque frame. Voici le code modifié de la méthode <code>__init__</code> de la classe <code>App</code>, dans lequel on initialise la liste des nuages avec un seul nuage placé au milieu de la fenêtre (lignes 6, 7 et 8).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>): <span class="co"># class App</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>    pyxel.init(<span class="dv">256</span>, <span class="dv">128</span>, fps<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    pyxel.load(<span class="st">"jump_game.pyxres"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="va">self</span>.personnage <span class="op">=</span> Personnage()</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="co"># liste des nuages visibles</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="va">self</span>.nuages <span class="op">=</span> []</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    premier_nuage <span class="op">=</span> Nuage(x <span class="op">=</span> pyxel.width<span class="op">//</span><span class="dv">2</span><span class="op">-</span><span class="dv">80</span>, y <span class="op">=</span> pyxel.height<span class="op">//</span><span class="dv">4</span>)</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    <span class="va">self</span>.nuages.append(premier_nuage)</span>
+<span id="cb4-9"><a href="#cb4-9"></a>    pyxel.run(<span class="va">self</span>.update, <span class="va">self</span>.draw)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>On modifie ensuite la méthode <code>update</code> de la classe <code>App</code> pour mettre à jour la liste des nuages et faire apparaître un nouveau nuage dès que le nuage précédent s’approche du bord gauche de la fenêtre.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> update(<span class="va">self</span>): <span class="co"># class App</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>        <span class="va">self</span>.personnage.update()</span>
+<span id="cb5-3"><a href="#cb5-3"></a>        <span class="cf">for</span> nuage <span class="kw">in</span> <span class="va">self</span>.nuages:</span>
+<span id="cb5-4"><a href="#cb5-4"></a>            nuage.update()</span>
+<span id="cb5-5"><a href="#cb5-5"></a>            <span class="cf">if</span> nuage.x <span class="op">&lt;</span> <span class="dv">10</span> <span class="kw">and</span> <span class="kw">not</span> nuage.replaced:</span>
+<span id="cb5-6"><a href="#cb5-6"></a>                nouveau_nuage <span class="op">=</span> Nuage(pyxel.width, pyxel.height<span class="op">//</span><span class="dv">4</span>)</span>
+<span id="cb5-7"><a href="#cb5-7"></a>                <span class="va">self</span>.nuages.append(nouveau_nuage)</span>
+<span id="cb5-8"><a href="#cb5-8"></a>                nuage.replaced <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>            <span class="cf">if</span> nuage.x <span class="op">&lt;</span> <span class="op">-</span><span class="dv">160</span>:</span>
+<span id="cb5-10"><a href="#cb5-10"></a>                <span class="va">self</span>.nuages.remove(nuage)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Explications</strong> :</p>
+<ul>
+<li>Lignes 3 et 4 : la boucle <code>for nuage in self.nuages</code> permet de parcourir la liste des nuages et d’appliquer la méthode <code>update</code> à chacun d’entre eux.</li>
+<li>Lignes 5 à 8 : chaque nuage de la liste est mis à jour et, dès qu’un nuage a son abscisse inférieure à 10 (et qu’il n’a pas encore été remplacé), un nouveau nuage est créé. L’ancien nuage est alors marqué comme remplacé, afin d’éviter de créer un nouveau nuage à chaque frame : <code>nuage.replaced = True</code>.</li>
+<li>Lignes 9 et 10 : lorsque le nuage a complètement disparu de la fenêtre, il est retiré de la liste : <code>self.nuages.remove(nuage)</code>.</li>
+</ul>
+<p>Dernière étape, on modifie la méthode <code>draw</code> de la classe <code>App</code> pour afficher tous les nuages de la liste.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> draw(<span class="va">self</span>): <span class="co"># class App</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>        pyxel.cls(<span class="dv">12</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a>         <span class="co"># Tracé de la montagne</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>        pyxel.blt(pyxel.width<span class="op">//</span><span class="dv">2</span> <span class="op">-</span> <span class="dv">80</span>, pyxel.height<span class="op">-</span><span class="dv">50</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">64</span>, <span class="dv">160</span>, <span class="dv">24</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>        <span class="co"># Tracé du ciel dégradé</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>        pyxel.blt(<span class="dv">0</span>,pyxel.height<span class="op">-</span><span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">88</span>, <span class="dv">160</span>, <span class="dv">32</span>, <span class="dv">12</span>)</span>
+<span id="cb6-7"><a href="#cb6-7"></a>        pyxel.blt(<span class="dv">160</span>,pyxel.height<span class="op">-</span><span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">88</span>, <span class="dv">160</span>, <span class="dv">32</span>, <span class="dv">12</span>)</span>
+<span id="cb6-8"><a href="#cb6-8"></a>        <span class="co"># Tracé des nuages</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>        <span class="cf">for</span> nuage <span class="kw">in</span> <span class="va">self</span>.nuages:</span>
+<span id="cb6-10"><a href="#cb6-10"></a>            nuage.draw()</span>
+<span id="cb6-11"><a href="#cb6-11"></a>        <span class="va">self</span>.personnage.draw()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="tuto3_1_c.gif" class="lightbox" title="Animation des nuages" data-gallery="quarto-lightbox-gallery-2"><img src="tuto3_1_c.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<figcaption class="figure-caption">Animation des nuages</figcaption>
+</figure>
+</div>
 </section>
 <section id="animation-de-la-forêt" class="level2">
 <h2 class="anchored" data-anchor-id="animation-de-la-forêt">Animation de la forêt</h2>
-<p>Pour rendre plus réaliste le déplacement du personnage, on peut provoquer un déplacement de la forêt en sens contraire. La montagne et le ciel, eux, peuvent rester fixes, car situés à une grande distance du personnage.</p>
-<p>Dans le code ci-dessous, nous mettons en oeuvre cette idée, tout en reformulant l’ensemble du code afin de définir sous forme de de classes tous les éléments, sauf les éléments fixes.</p>
+<p>Pour rendre plus réaliste le déplacement du personnage, on peut provoquer un déplacement de la forêt en sens contraire du déplacement du personnage. La montagne et le ciel, eux, peuvent rester fixes, car situés à une grande distance du personnage. Cela donne un effet de profondeur à la scène.</p>
+<p>Dans le fichier de ressources, la forêt est constituée d’une image de largeur 160 pixels et de hauteur 16 pixels. Nous allons donc avoir besoin de répéter cette image pour remplir toute la largeur de la fenêtre. De plus, comme la forêt est animée, il faut prendre garde à créer une nouvelle copie de l’image à chaque fois que l’image précédente ne rempli plus totalement la largeur de la fenêtre.</p>
+<p>Pour cela, on va créer une classe <code>Foret</code> qui possède ses propres méthodes <code>update</code> et <code>draw</code>, comme le montre le code ci-dessous.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">class</span> Foret:</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb7-3"><a href="#cb7-3"></a>        <span class="va">self</span>.x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>        <span class="va">self</span>.vitesse <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>        <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>    <span class="kw">def</span> update(<span class="va">self</span>):</span>
+<span id="cb7-8"><a href="#cb7-8"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
+<span id="cb7-9"><a href="#cb7-9"></a>            <span class="va">self</span>.x <span class="op">=</span> <span class="va">self</span>.x <span class="op">+</span> <span class="va">self</span>.vitesse</span>
+<span id="cb7-10"><a href="#cb7-10"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a>        <span class="cf">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
+<span id="cb7-12"><a href="#cb7-12"></a>            <span class="va">self</span>.x <span class="op">=</span> <span class="va">self</span>.x <span class="op">-</span> <span class="va">self</span>.vitesse</span>
+<span id="cb7-13"><a href="#cb7-13"></a>            <span class="va">self</span>.direction <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a>    </span>
+<span id="cb7-15"><a href="#cb7-15"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
+<span id="cb7-16"><a href="#cb7-16"></a>        k <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-17"><a href="#cb7-17"></a>        <span class="cf">while</span> <span class="va">self</span>.x <span class="op">-</span> k<span class="op">*</span><span class="dv">160</span> <span class="op">&gt;</span> <span class="op">-</span><span class="dv">160</span> :</span>
+<span id="cb7-18"><a href="#cb7-18"></a>            pyxel.blt(<span class="va">self</span>.x <span class="op">-</span> k<span class="op">*</span><span class="dv">160</span>,pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">48</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
+<span id="cb7-19"><a href="#cb7-19"></a>            k <span class="op">=</span> k <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a>        k <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a>        <span class="cf">while</span> <span class="va">self</span>.x <span class="op">+</span> k<span class="op">*</span><span class="dv">160</span> <span class="op">&lt;</span> pyxel.width :</span>
+<span id="cb7-22"><a href="#cb7-22"></a>            pyxel.blt(<span class="va">self</span>.x <span class="op">+</span> k<span class="op">*</span><span class="dv">160</span>,pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">48</span>, <span class="dv">160</span>, <span class="dv">16</span>, <span class="dv">12</span>)</span>
+<span id="cb7-23"><a href="#cb7-23"></a>            k <span class="op">=</span> k <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Explications</strong> :</p>
+<ul>
+<li>Ligne 3 : <code>self.x</code> est l’abscisse du coin supérieur gauche de l’image dans la fenêtre de jeu. On initialise cette abscisse à 0.</li>
+<li>Ligne 8 : <code>if pyxel.btn(pyxel.KEY_LEFT):</code> permet de faire avancer la forêt vers la droite lorsque la touche <code>flèche gauche</code> est enfoncée.</li>
+<li>Ligne 10 : <code>if pyxel.btn(pyxel.KEY_RIGHT):</code> permet de faire avancer la forêt vers la gauche lorsque la touche <code>flèche droite</code> est enfoncée.</li>
+<li>Lignes 17 à 23 : on utilise une boucle <code>while</code> pour répéter l’image de la forêt autant de fois que nécessaire pour remplir toute la largeur de la fenêtre. La variable <code>k</code> permet de compter le nombre de répétitions nécessaires. On commence par répéter l’image vers la gauche, puis vers la droite.</li>
+</ul>
+<p>Pour intégrer cet objet <code>Foret</code> à notre application, il faut maintenant ajouter une ligne à chacune des méthodes de la classe <code>App</code> :</p>
+<ul>
+<li><p>Dans la méthode <code>__init__</code>, on crée un objet <code>Foret</code> et on l’ajoute à la liste des attributs de la classe <code>App</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="va">self</span>.foret <span class="op">=</span> Foret()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avertissement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Attention</strong> : il faut ajouter cette ligne <strong>après</strong> la ligne <code>pyxel.init(256, 128, fps=30)</code> et <strong>avant</strong> la ligne <code>pyxel.run(self.update, self.draw)</code>.</p>
+</div>
+</div>
+<ul>
+<li><p>Dans la méthode <code>update</code>, on met à jour l’objet <code>Foret</code>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="va">self</span>.foret.update()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Dans la méthode <code>draw</code>, on affiche l’objet <code>Foret</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="va">self</span>.foret.draw()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avertissement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Attention</strong> : il faut ajouter cette ligne <strong>avant</strong> la ligne <code>self.personnage.draw()</code> : sinon, la forêt sera dessinée <strong>devant</strong> le personnage.</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="tuto3_2.gif" class="lightbox" title="Animation de la forêt" data-gallery="quarto-lightbox-gallery-3"><img src="tuto3_2.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<figcaption class="figure-caption">Animation de la forêt</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -941,6 +1030,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
 
 
 
