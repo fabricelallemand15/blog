@@ -1,8 +1,8 @@
 ---
-title: "Tuto pyxel (avec POO) : Ajouter un fond"
+title: "Tuto pyxel : Ajouter un fond"
 subtitle: "Tutoriels Pyxel"
 description: "Ajouter un fond à notre application Pyxel"
-date: "2023-10-18"
+date: "2023-09-3"
 categories: [Python, NSI, Programmation, Pyxel, Nuit du code]
 image: "blt_figure.png"
 ---
@@ -18,14 +18,16 @@ Ce tuto fait suite au précédent : [Tuto pyxel (avec POO) : Animer un personnag
 
 ## Préparation
 
-Nous allons utiliser le code du tuto précédent comme base de travail.
+Nous reprenons le code du tuto précédent comme base de travail, mais nous allons le réorganiser. Plusieurs nouveaux éléments vont en effet devoir être ajoutés au fur et à mesure du développement du jeu, et certains d'entre eux devront, comme le personnage, être animés ou voir certaines de leurs propriétés modifiées au cours du temps. Nous allons donc définir des **classes** pour chacun de ces éléments, afin de pouvoir les manipuler plus facilement et pour rendre notre code plus lisible. Chacune de ces classes comportera au moins trois méthodes : `__init__` pour initialiser l'objet et ses paramètres de départ, puis `update` et `draw`. La première sera appelée à chaque frame pour mettre à jour les propriétés de l'objet, la seconde sera appelée pour afficher l'objet à l'écran.
+
+Voici donc le code de départ, réorganisé avec la création d'une classe `Personnage`. Les méthodes `update` et `draw` de cette classe sont appelées depuis les méthodes `update` et `draw` de l'application.
 
 ```python
 import pyxel
 
 class App:
     def __init__(self):
-        pyxel.init(256, 128, title="Tuto 2", quit_key=pyxel.KEY_Q, fps=30)
+        pyxel.init(256, 128, fps=30)
         # on charge le fichier de ressources
         pyxel.load("jump_game.pyxres")
         # variable définissant l'abscisse initiale du personnage
@@ -52,15 +54,15 @@ class App:
     def draw(self):
         # on efface l'écran et on remplit la fenêtre de bleu
         pyxel.cls(12)
-        # on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16
+        # on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 255 - 16
         if self.personnage_marche:
             if pyxel.frame_count % 6 < 3:
-                pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, self.direction*16, 16)
+                pyxel.blt(self.x_personnage, pyxel.height-16, 0, 0, 0, self.direction*16, 16)
             else:
-                pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 16, 0, self.direction*16, 16)
+                pyxel.blt(self.x_personnage, pyxel.height-16, 0, 16, 0, self.direction*16, 16)
             self.personnage_marche = False
         else:
-            pyxel.blt(self.x_personnage, pyxel.height - 16, 0, 0, 0, self.direction*16, 16)
+            pyxel.blt(self.x_personnage, pyxel.height-16, 0, 0, 0, self.direction*16, 16)
 
 App()
 ```
