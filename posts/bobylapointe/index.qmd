@@ -1,0 +1,93 @@
+---
+title: "Boby Lapointe, poète mathématicien"
+subtitle: "Boby Lapointe, le poète mathématicien : génie de l'absurde et inventeur du système bibi-binaire"
+description: "Boby Lapointe, bien connu pour ses chansons truffées de jeux de mots et d’humour absurde, est un personnage inclassable du paysage artistique français des années 1950 et 1960. Ce chanteur et parolier, né en 1922 à Pézenas et disparu en 1972, a marqué plusieurs générations avec des textes décalés et une fantaisie débordante. Mais peu de gens savent que derrière cet esprit facétieux se cachait un véritable passionné de mathématiques, au point qu’il a même inventé un système de numération qu’il a nommé « bibi-binaire »."
+date: "2024-10-01"
+categories: [Informatique, Histoire, Mathématiques, Vidéothèque]
+image: "Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png"
+---
+
+Dans une vidéo de France Musique intitulée *Boby Lapointe : la science du poète mathématicien* (disponible sur YouTube [ici](https://www.youtube.com/watch?v=yNEA-xmxG4A){target=_blank}), cet aspect méconnu de son génie est exploré, mettant en lumière son invention et son approche atypique des nombres.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yNEA-xmxG4A?si=QdaNZxqSP9SmiWAW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### L'artiste des jeux de mots et des jeux de nombres
+
+Le talent de Boby Lapointe en tant que parolier est incontestable : ses chansons telles que « Ta Katie t’a quitté », « Framboise » ou « La maman des poissons » sont de véritables trésors de la chanson française. Ses textes regorgent de calembours, de contrepèteries et de jeux de mots complexes.
+
+Cette passion pour le langage trouve un parallèle dans sa fascination pour les mathématiques, où il voyait également un jeu d’esprit. Formé à l'École Nationale Supérieure d'Aéronautique, Boby Lapointe était un vrai scientifique. Cette formation explique en partie son goût pour les défis intellectuels.
+
+### Le système bibi-binaire : une invention ludique et sérieuse
+
+L’une des contributions majeures de Lapointe à la culture mathématique reste sans doute son système de numération « bibi-binaire ». Ce terme, que l’on pourrait croire sorti tout droit de l’un de ses textes absurdes, désigne pourtant un concept bien réel et sérieux.
+
+La numération bibi-binaire est un jeu sur la représentation des nombres en base 16. Le système bibi-binaire vise à rendre plus accessible la lecture des nombres hexadécimaux pour les néophytes ou à les manipuler plus aisément.
+
+Dans cette vidéo de France Musique, on comprend mieux comment ce système est né, non pas d’une démarche purement théorique, mais d’un désir ludique de simplifier des concepts complexes et de les rendre accessibles à tous. Pour Lapointe, les mathématiques étaient un terrain de jeu tout aussi fertile que la langue française.
+
+Boby Lapointe est un artiste à multiples facettes, capable de jongler avec les mots comme avec les chiffres. Son invention du système de numération bibi-binaire témoigne de sa créativité, nourrie par une curiosité intellectuelle et un amour des mathématiques.
+
+Au-delà des chansons, Boby Lapointe nous laisse une leçon précieuse : les mathématiques et l’art ne sont pas des disciplines opposées. Au contraire, elles peuvent se nourrir mutuellement pour engendrer des créations inédites, porteuses d'une originalité déconcertante.
+
+### Principe du système bibi-binaire
+
+Le système bibi-binaire est basé sur la numération hexadécimale (base 16). L'idée ingénieuse de Boby Lapointe a été d'attribuer à chaque chiffre hexadécimal une syllabe composée d'une consonne et d'une voyelle.
+
+Voici comment fonctionnent ces attributions :
+
+* Les consonnes H, B, K, D correspondent respectivement aux paires de bits 00, 01, 10, 11 pour les chiffres de poids fort.
+* Les voyelles O, A, E, I correspondent à ces mêmes paires de bits pour les chiffres de poids faible.
+
+Ainsi, chaque chiffre hexadécimal est représenté par une syllabe unique.
+
+![Table de correspondance entre le Bibinaire et les autres notations](Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png)
+
+#### Tableau de conversion
+
+Voici le tableau complet des correspondances :
+
+| Décimal | Hexadécimal | Bibi-binaire |
+|:-------:|:-----------:|:------------:|
+| 0       | 0           | HO           |
+| 1       | 1           | HA           |
+| 2       | 2           | HE           |
+| 3       | 3           | HI           |
+| 4       | 4           | BO           |
+| 5       | 5           | BA           |
+| 6       | 6           | BE           |
+| 7       | 7           | BI           |
+| 8       | 8           | KO           |
+| 9       | 9           | KA           |
+| 10      | A           | KE           |
+| 11      | B           | KI           |
+| 12      | C           | DO           |
+| 13      | D           | DA           |
+| 14      | E           | DE           |
+| 15      | F           | DI           |
+
+: {.striped .hover}
+
+## Exemples d'utilisation
+
+Voyons maintenant quelques exemples pour mieux comprendre ce système :
+
+1. Le nombre 71 en décimal s'écrit 47 en hexadécimal, ce qui donne BOBI en bibi-binaire.
+
+2. L'année 2018 s'écrit 7E2 en hexadécimal, soit BIDEHE en bibi-binaire.
+
+3. Un nombre plus grand comme 584 623 705 671 s'écrit 881E49CE47 en hexadécimal, ce qui donne la phrase mélodieuse "KOKOHADEBOKADODEBOBI" en bibi-binaire.
+
+Le principal intérêt du bibi-binaire est de créer des noms de nombres agréables à l'oreille, dans l'esprit des jeux de mots chers à Boby Lapointe. Il permet également de représenter de grands nombres de manière plus concise que le système décimal.
+
+Cependant, malgré son originalité, ce système reste peu pratique pour une utilisation quotidienne. Il demeure néanmoins un bel exemple de la créativité mathématique de Boby Lapointe, mêlant rigueur et fantaisie.
+
+### Bonus : la playlist Boby Lapointe
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jjD9WzW6dK4?si=afNs9IqkhWi-3VYh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Pour aller plus loin :
+
+* [Article sur le site de France Musique accompagnant la vidéo mentionnée ici](https://www.radiofrance.fr/francemusique/boby-lapointe-du-jeu-de-mots-a-l-equation-mathematique-9184903){target=_blank}
+* [https://fr.vikidia.org/wiki/Syst%C3%A8me_bibi-binaire](https://fr.vikidia.org/wiki/Syst%C3%A8me_bibi-binaire){target=_blank}
+* [https://graner.name/nicolas/nombres/bibibinaire.php](https://graner.name/nicolas/nombres/bibibinaire.php){target=_blank}
+* [https://pi.ac3j.fr/boby-lapointe/](https://pi.ac3j.fr/boby-lapointe/){target=_blank}

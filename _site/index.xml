@@ -6,16 +6,191 @@
       version="2.0">
 <channel>
 <title>Le bloc-notes de M. LALLEMAND</title>
-<link>https://flallemand.fr/blog/index.html</link>
+<link>https://flallemand.fr/blog/</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.4.274</generator>
-<lastBuildDate>Sat, 21 Oct 2023 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.5.57</generator>
+<lastBuildDate>Mon, 30 Sep 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Boby Lapointe, poète mathématicien</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/bobylapointe/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Dans une vidéo de France Musique intitulée <em>Boby Lapointe : la science du poète mathématicien</em> (disponible sur YouTube <a href="https://www.youtube.com/watch?v=yNEA-xmxG4A" target="_blank">ici</a>), cet aspect méconnu de son génie est exploré, mettant en lumière son invention et son approche atypique des nombres.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yNEA-xmxG4A?si=QdaNZxqSP9SmiWAW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<section id="lartiste-des-jeux-de-mots-et-des-jeux-de-nombres" class="level3">
+<h3 class="anchored" data-anchor-id="lartiste-des-jeux-de-mots-et-des-jeux-de-nombres">L’artiste des jeux de mots et des jeux de nombres</h3>
+<p>Le talent de Boby Lapointe en tant que parolier est incontestable : ses chansons telles que « Ta Katie t’a quitté », « Framboise » ou « La maman des poissons » sont de véritables trésors de la chanson française. Ses textes regorgent de calembours, de contrepèteries et de jeux de mots complexes.</p>
+<p>Cette passion pour le langage trouve un parallèle dans sa fascination pour les mathématiques, où il voyait également un jeu d’esprit. Formé à l’École Nationale Supérieure d’Aéronautique, Boby Lapointe était un vrai scientifique. Cette formation explique en partie son goût pour les défis intellectuels.</p>
+</section>
+<section id="le-système-bibi-binaire-une-invention-ludique-et-sérieuse" class="level3">
+<h3 class="anchored" data-anchor-id="le-système-bibi-binaire-une-invention-ludique-et-sérieuse">Le système bibi-binaire : une invention ludique et sérieuse</h3>
+<p>L’une des contributions majeures de Lapointe à la culture mathématique reste sans doute son système de numération « bibi-binaire ». Ce terme, que l’on pourrait croire sorti tout droit de l’un de ses textes absurdes, désigne pourtant un concept bien réel et sérieux.</p>
+<p>La numération bibi-binaire est un jeu sur la représentation des nombres en base 16. Le système bibi-binaire vise à rendre plus accessible la lecture des nombres hexadécimaux pour les néophytes ou à les manipuler plus aisément.</p>
+<p>Dans cette vidéo de France Musique, on comprend mieux comment ce système est né, non pas d’une démarche purement théorique, mais d’un désir ludique de simplifier des concepts complexes et de les rendre accessibles à tous. Pour Lapointe, les mathématiques étaient un terrain de jeu tout aussi fertile que la langue française.</p>
+<p>Boby Lapointe est un artiste à multiples facettes, capable de jongler avec les mots comme avec les chiffres. Son invention du système de numération bibi-binaire témoigne de sa créativité, nourrie par une curiosité intellectuelle et un amour des mathématiques.</p>
+<p>Au-delà des chansons, Boby Lapointe nous laisse une leçon précieuse : les mathématiques et l’art ne sont pas des disciplines opposées. Au contraire, elles peuvent se nourrir mutuellement pour engendrer des créations inédites, porteuses d’une originalité déconcertante.</p>
+</section>
+<section id="principe-du-système-bibi-binaire" class="level3">
+<h3 class="anchored" data-anchor-id="principe-du-système-bibi-binaire">Principe du système bibi-binaire</h3>
+<p>Le système bibi-binaire est basé sur la numération hexadécimale (base 16). L’idée ingénieuse de Boby Lapointe a été d’attribuer à chaque chiffre hexadécimal une syllabe composée d’une consonne et d’une voyelle.</p>
+<p>Voici comment fonctionnent ces attributions :</p>
+<ul>
+<li>Les consonnes H, B, K, D correspondent respectivement aux paires de bits 00, 01, 10, 11 pour les chiffres de poids fort.</li>
+<li>Les voyelles O, A, E, I correspondent à ces mêmes paires de bits pour les chiffres de poids faible.</li>
+</ul>
+<p>Ainsi, chaque chiffre hexadécimal est représenté par une syllabe unique.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Table de correspondance entre le Bibinaire et les autres notations"><img src="https://flallemand.fr/blog/posts/bobylapointe/Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" class="img-fluid figure-img" alt="Table de correspondance entre le Bibinaire et les autres notations"></a></p>
+<figcaption>Table de correspondance entre le Bibinaire et les autres notations</figcaption>
+</figure>
+</div>
+<section id="tableau-de-conversion" class="level4">
+<h4 class="anchored" data-anchor-id="tableau-de-conversion">Tableau de conversion</h4>
+<p>Voici le tableau complet des correspondances :</p>
+<table class="table-striped table-hover caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Décimal</th>
+<th style="text-align: center;">Hexadécimal</th>
+<th style="text-align: center;">Bibi-binaire</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">HO</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">HA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">HE</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">HI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">BO</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">BA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">BE</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">BI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">KO</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">KA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">KE</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">B</td>
+<td style="text-align: center;">KI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">C</td>
+<td style="text-align: center;">DO</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">D</td>
+<td style="text-align: center;">DA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">DE</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">DI</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="exemples-dutilisation" class="level2">
+<h2 class="anchored" data-anchor-id="exemples-dutilisation">Exemples d’utilisation</h2>
+<p>Voyons maintenant quelques exemples pour mieux comprendre ce système :</p>
+<ol type="1">
+<li><p>Le nombre 71 en décimal s’écrit 47 en hexadécimal, ce qui donne BOBI en bibi-binaire.</p></li>
+<li><p>L’année 2018 s’écrit 7E2 en hexadécimal, soit BIDEHE en bibi-binaire.</p></li>
+<li><p>Un nombre plus grand comme 584 623 705 671 s’écrit 881E49CE47 en hexadécimal, ce qui donne la phrase mélodieuse “KOKOHADEBOKADODEBOBI” en bibi-binaire.</p></li>
+</ol>
+<p>Le principal intérêt du bibi-binaire est de créer des noms de nombres agréables à l’oreille, dans l’esprit des jeux de mots chers à Boby Lapointe. Il permet également de représenter de grands nombres de manière plus concise que le système décimal.</p>
+<p>Cependant, malgré son originalité, ce système reste peu pratique pour une utilisation quotidienne. Il demeure néanmoins un bel exemple de la créativité mathématique de Boby Lapointe, mêlant rigueur et fantaisie.</p>
+<section id="bonus-la-playlist-boby-lapointe" class="level3">
+<h3 class="anchored" data-anchor-id="bonus-la-playlist-boby-lapointe">Bonus : la playlist Boby Lapointe</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jjD9WzW6dK4?si=afNs9IqkhWi-3VYh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="pour-aller-plus-loin" class="level3">
+<h3 class="anchored" data-anchor-id="pour-aller-plus-loin">Pour aller plus loin :</h3>
+<ul>
+<li><a href="https://www.radiofrance.fr/francemusique/boby-lapointe-du-jeu-de-mots-a-l-equation-mathematique-9184903" target="_blank">Article sur le site de France Musique accompagnant la vidéo mentionnée ici</a></li>
+<li><a href="https://fr.vikidia.org/wiki/Syst%C3%A8me_bibi-binaire" target="_blank">https://fr.vikidia.org/wiki/Syst%C3%A8me_bibi-binaire</a></li>
+<li><a href="https://graner.name/nicolas/nombres/bibibinaire.php" target="_blank">https://graner.name/nicolas/nombres/bibibinaire.php</a></li>
+<li><a href="https://pi.ac3j.fr/boby-lapointe/" target="_blank">https://pi.ac3j.fr/boby-lapointe/</a></li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>Histoire</category>
+  <category>Mathématiques</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/bobylapointe/</guid>
+  <pubDate>Mon, 30 Sep 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/bobylapointe/Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" medium="image" type="image/png" height="23" width="144"/>
+</item>
 <item>
   <title>Tuto pyxel : Ajouter un fond</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxel_tuto3_fond/index.html</link>
+  <link>https://flallemand.fr/blog/posts/pyxel_tuto3_fond/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -47,10 +222,12 @@ font-style: inherit;">import</span> pyxel</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> Personnage:</span>
 <span id="cb1-4"></span>
 <span id="cb1-5">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -103,11 +280,13 @@ font-style: inherit;">False</span></span>
 <span id="cb1-12"></span>
 <span id="cb1-13">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb1-14">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
 <span id="cb1-15">            <span class="va" style="color: #111111;
 background-color: null;
@@ -142,6 +321,7 @@ background-color: null;
 font-style: inherit;">True</span></span>
 <span id="cb1-18">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
 <span id="cb1-19">            <span class="va" style="color: #111111;
 background-color: null;
@@ -177,16 +357,19 @@ font-style: inherit;">True</span></span>
 <span id="cb1-22">    </span>
 <span id="cb1-23">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb1-24">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.personnage_marche:</span>
 <span id="cb1-25">            <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
@@ -219,6 +402,7 @@ background-color: null;
 font-style: inherit;">16</span>)</span>
 <span id="cb1-27">            <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span>:</span>
 <span id="cb1-28">                pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
@@ -250,6 +434,7 @@ background-color: null;
 font-style: inherit;">False</span></span>
 <span id="cb1-30">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span>:</span>
 <span id="cb1-31">            pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
@@ -276,9 +461,11 @@ font-style: inherit;">16</span>)</span>
 <span id="cb1-33"></span>
 <span id="cb1-34"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> App:</span>
 <span id="cb1-35">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -309,6 +496,7 @@ font-style: inherit;">self</span>.draw)</span>
 <span id="cb1-40">        </span>
 <span id="cb1-41">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -318,6 +506,7 @@ font-style: inherit;">self</span>.personnage.update()</span>
 <span id="cb1-43"></span>
 <span id="cb1-44">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -360,6 +549,7 @@ Idée à retenir
 <p>On ajoute donc ces deux éléments à l’arrière plan de la fenêtre de jeu en modifiant comme suit la méthode <code>draw</code> de la classe <code>App</code> :</p>
 <div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>): <span class="co" style="color: #5E5E5E;
@@ -446,8 +636,8 @@ font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
 <p>Comme le montre l’image ci-dessous, il faut aussi ajouter un dernier paramètre à la fonction <code>blt</code> pour que la couleur 12 (bleu) soit transparente également pour le personnage (dons dans la méthode <code>draw</code> de la classe <code>Personnage</code>).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fond_personnage.png" class="lightbox" title="La couleur bleue derrière le personnage devient transparente" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/fond_personnage.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">La couleur bleue derrière le personnage devient transparente</figcaption>
+<p><a href="fond_personnage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="La couleur bleue derrière le personnage devient transparente"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/fond_personnage.png" class="img-fluid figure-img" style="width:50.0%" alt="La couleur bleue derrière le personnage devient transparente"></a></p>
+<figcaption>La couleur bleue derrière le personnage devient transparente</figcaption>
 </figure>
 </div>
 </section>
@@ -457,9 +647,11 @@ font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
 <p>Nous allons définir une classe <code>Nuage</code> qui possède ses propres méthodes <code>update</code> et <code>draw</code>, comme le montre le code ci-dessous.</p>
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> Nuage:</span>
 <span id="cb3-2">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -485,11 +677,13 @@ font-style: inherit;">False</span></span>
 <span id="cb3-6"></span>
 <span id="cb3-7">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb3-8">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
@@ -513,6 +707,7 @@ font-style: inherit;">1</span></span>
 <span id="cb3-10"></span>
 <span id="cb3-11">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -541,6 +736,7 @@ font-style: inherit;">12</span>)</span></code></pre></div>
 <p>L’idée est de faire apparaître un nouveau nuage dans le ciel dès que le nuage précédent s’approche du bord gauche de l’écran. Pour cela, il sera nécessaire de définir une liste de nuages dans la classe <code>App</code> et de la mettre à jour à chaque frame. Voici le code modifié de la méthode <code>__init__</code> de la classe <code>App</code>, dans lequel on initialise la liste des nuages avec un seul nuage placé au milieu de la fenêtre (lignes 6, 7 et 8).</p>
 <div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -603,6 +799,7 @@ font-style: inherit;">self</span>.draw)</span></code></pre></div>
 <p>On modifie ensuite la méthode <code>update</code> de la classe <code>App</code> pour mettre à jour la liste des nuages et faire apparaître un nouveau nuage dès que le nuage précédent s’approche du bord gauche de la fenêtre.</p>
 <div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>): <span class="co" style="color: #5E5E5E;
@@ -613,22 +810,27 @@ background-color: null;
 font-style: inherit;">self</span>.personnage.update()</span>
 <span id="cb5-3">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> nuage <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.nuages:</span>
 <span id="cb5-4">            nuage.update()</span>
 <span id="cb5-5">            <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> nuage.x <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">and</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">not</span> nuage.replaced:</span>
 <span id="cb5-6">                nouveau_nuage <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -647,6 +849,7 @@ background-color: null;
 font-style: inherit;">True</span></span>
 <span id="cb5-9">            <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> nuage.x <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span> <span class="op" style="color: #5E5E5E;
@@ -666,6 +869,7 @@ font-style: inherit;">self</span>.nuages.remove(nuage)</span></code></pre></div>
 <p>Dernière étape, on modifie la méthode <code>draw</code> de la classe <code>App</code> pour afficher tous les nuages de la liste.</p>
 <div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>): <span class="co" style="color: #5E5E5E;
@@ -746,8 +950,10 @@ background-color: null;
 font-style: inherit;"># Tracé des nuages</span></span>
 <span id="cb6-9">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> nuage <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.nuages:</span>
@@ -757,8 +963,8 @@ background-color: null;
 font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tuto3_1_c.gif" class="lightbox" title="Animation des nuages" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_1_c.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Animation des nuages</figcaption>
+<p><a href="tuto3_1_c.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="Animation des nuages"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_1_c.gif" class="img-fluid figure-img" style="width:50.0%" alt="Animation des nuages"></a></p>
+<figcaption>Animation des nuages</figcaption>
 </figure>
 </div>
 </section>
@@ -769,9 +975,11 @@ font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
 <p>Pour cela, on va créer une classe <code>Foret</code> qui possède ses propres méthodes <code>update</code> et <code>draw</code>, comme le montre le code ci-dessous.</p>
 <div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> Foret:</span>
 <span id="cb7-2">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -801,11 +1009,13 @@ font-style: inherit;">1</span></span>
 <span id="cb7-6"></span>
 <span id="cb7-7">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb7-8">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
 <span id="cb7-9">            <span class="va" style="color: #111111;
 background-color: null;
@@ -827,6 +1037,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb7-11">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
 <span id="cb7-12">            <span class="va" style="color: #111111;
 background-color: null;
@@ -851,6 +1062,7 @@ font-style: inherit;">1</span></span>
 <span id="cb7-14">    </span>
 <span id="cb7-15">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -861,6 +1073,7 @@ background-color: null;
 font-style: inherit;">0</span></span>
 <span id="cb7-17">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">while</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.x <span class="op" style="color: #5E5E5E;
@@ -915,6 +1128,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb7-21">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">while</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.x <span class="op" style="color: #5E5E5E;
@@ -1012,8 +1226,8 @@ Avertissement
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tuto3_2.gif" class="lightbox" title="Animation de la forêt" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_2.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Animation de la forêt</figcaption>
+<p><a href="tuto3_2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="Animation de la forêt"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_2.gif" class="img-fluid figure-img" style="width:50.0%" alt="Animation de la forêt"></a></p>
+<figcaption>Animation de la forêt</figcaption>
 </figure>
 </div>
 
@@ -1026,22 +1240,63 @@ Avertissement
   <category>Programmation</category>
   <category>Pyxel</category>
   <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxel_tuto3_fond/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/pyxel_tuto3_fond/</guid>
   <pubDate>Sat, 21 Oct 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/rendu_final.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
+  <title>Tuto pyxel : Ajouter un fond</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/pyxel_tuto4_objets/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Ce tuto fait suite au précédent : <a href="../../posts/pyxel_tuto2_personnage/index.html">Tuto pyxel : Animer un personnage</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objectifs du tutoriel
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Créer un fond constitué de divers éléments ;</li>
+<li>Animer le fond pour simuler un déplacement du personnage.</li>
+</ul>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>Python</category>
+  <category>NSI</category>
+  <category>Programmation</category>
+  <category>Pyxel</category>
+  <category>Nuit du code</category>
+  <guid>https://flallemand.fr/blog/posts/pyxel_tuto4_objets/</guid>
+  <pubDate>Sat, 21 Oct 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto4_objets/rendu_final.png" medium="image" type="image/png"/>
+</item>
+<item>
   <title>Tribune du collectif Maths &amp; Sciences</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/tribuneMS/index.html</link>
+  <link>https://flallemand.fr/blog/posts/tribuneMS/</link>
   <description><![CDATA[ 
+
 
 
 
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.larecherche.fr/tribune/r%C3%A9forme-du-lyc%C3%A9e-g%C3%A9n%C3%A9ral-petites-failles-ou-grandes-fractures"><img src="https://flallemand.fr/blog/posts/tribuneMS/larecherche.png" class="img-fluid figure-img" style="width:30.0%"></a></p>
+<p><img src="https://flallemand.fr/blog/posts/tribuneMS/larecherche.png" class="img-fluid figure-img" style="width:30.0%"></p>
 </figure>
 </div>
 <p>Le collectif <a href="https://collectif-maths-sciences.fr/" target="_blank">Maths &amp; Sciences</a> a publié dans le numéro de La Recherche du 17 octobre 2023 une tribune qui analyse de façon très pertinente les conséquences de la réforme du lycée sur l’enseignement des sciences et des mathématiques au lycée.</p>
@@ -1061,15 +1316,16 @@ Avertissement
  ]]></description>
   <category>Actualités</category>
   <category>Orientation</category>
-  <guid>https://flallemand.fr/blog/posts/tribuneMS/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/tribuneMS/</guid>
   <pubDate>Wed, 18 Oct 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/tribuneMS/larecherche.png" medium="image" type="image/png" height="152" width="144"/>
 </item>
 <item>
   <title>L’histoire de la Free Software Foundation (FSF)</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/fsf-history/index.html</link>
+  <link>https://flallemand.fr/blog/posts/fsf-history/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1081,8 +1337,8 @@ Avertissement
 <p>La page d’histoire de la FSF nous emmène tout d’abord dans les premiers jours de l’organisation. Nous découvrons comment Richard Stallman, un programmeur visionnaire, a lancé la FSF avec pour objectif de promouvoir et de protéger les logiciels libres. Stallman a posé les bases de ce mouvement en créant la licence publique générale GNU (GPL), qui est devenue la pierre angulaire de la philosophie du logiciel libre.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fsf-history\img\event\rms-bw.jpg" class="lightbox" title="Richard Stallman" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/rms-bw.jpg" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Richard Stallman</figcaption>
+<p><a href="fsf-history\img\event\rms-bw.jpg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="Richard Stallman"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/rms-bw.jpg" class="img-fluid figure-img" alt="Richard Stallman"></a></p>
+<figcaption>Richard Stallman</figcaption>
 </figure>
 </div>
 </section>
@@ -1099,8 +1355,8 @@ Avertissement
 <p>Enfin, la page officielle de la FSF souligne l’importance continue de l’organisation dans le paysage actuel du logiciel libre. La FSF continue de jouer un rôle crucial dans la défense des droits des utilisateurs et dans la sensibilisation du public aux enjeux du logiciel libre.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fsf-history\img\event\01100ryf.png" class="lightbox" title="Respect your freedom" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/01100ryf.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Respect your freedom</figcaption>
+<p><a href="fsf-history\img\event\01100ryf.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="Respect your freedom"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/01100ryf.png" class="img-fluid figure-img" alt="Respect your freedom"></a></p>
+<figcaption>Respect your freedom</figcaption>
 </figure>
 </div>
 <p>Pour une version complète de cette page, entièrement traduite en français, je vous invite à consulter le lien : <a href="https://flallemand.fr/divers/fsf-history/index.html" target="_blank">Lien vers la version traduite de la page d’histoire de la FSF</a>. Les liens vers lesquels la page renvoie, pour en savoir plus, ne sont pas traduits !</p>
@@ -1113,14 +1369,14 @@ Avertissement
   <category>Informatique</category>
   <category>Histoire</category>
   <category>Linux</category>
-  <guid>https://flallemand.fr/blog/posts/fsf-history/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/fsf-history/</guid>
   <pubDate>Fri, 22 Sep 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/membermeeting.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Intel veut révolutionner les microprocesseurs avec un substrat en verre</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/intel_verre/index.html</link>
+  <link>https://flallemand.fr/blog/posts/intel_verre/</link>
   <description><![CDATA[ 
 
 
@@ -1148,14 +1404,14 @@ Avertissement
  ]]></description>
   <category>NSI</category>
   <category>Actualités</category>
-  <guid>https://flallemand.fr/blog/posts/intel_verre/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/intel_verre/</guid>
   <pubDate>Wed, 20 Sep 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Tuto pyxel : Animer un personnage</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</link>
+  <link>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/</link>
   <description><![CDATA[ 
 
 
@@ -1225,9 +1481,11 @@ font-style: inherit;">import</span> pyxel</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> App:</span>
 <span id="cb1-4">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -1269,15 +1527,18 @@ font-style: inherit;">self</span>.draw)</span>
 <span id="cb1-12">        </span>
 <span id="cb1-13">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb1-14">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">pass</span></span>
 <span id="cb1-15"></span>
 <span id="cb1-16">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -1327,9 +1588,11 @@ font-style: inherit;">import</span> pyxel</span>
 <span id="cb2-2"></span>
 <span id="cb2-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> App:</span>
 <span id="cb2-4">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -1381,11 +1644,13 @@ font-style: inherit;">self</span>.draw)</span>
 <span id="cb2-14">        </span>
 <span id="cb2-15">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb2-16">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
 <span id="cb2-17">            <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1407,6 +1672,7 @@ background-color: null;
 font-style: inherit;">0</span>)</span>
 <span id="cb2-19">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
 <span id="cb2-20">            <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1431,6 +1697,7 @@ font-style: inherit;">16</span>)</span>
 <span id="cb2-22"></span>
 <span id="cb2-23">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -1486,9 +1753,11 @@ font-style: inherit;">import</span> pyxel</span>
 <span id="cb3-2"></span>
 <span id="cb3-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> App:</span>
 <span id="cb3-4">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -1550,11 +1819,13 @@ font-style: inherit;">self</span>.draw)</span>
 <span id="cb3-16">        </span>
 <span id="cb3-17">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb3-18">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
 <span id="cb3-19">            <span class="va" style="color: #111111;
 background-color: null;
@@ -1580,6 +1851,7 @@ background-color: null;
 font-style: inherit;">True</span></span>
 <span id="cb3-21">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
 <span id="cb3-22">            <span class="va" style="color: #111111;
 background-color: null;
@@ -1608,6 +1880,7 @@ font-style: inherit;">True</span></span>
 <span id="cb3-24"></span>
 <span id="cb3-25">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -1622,11 +1895,13 @@ background-color: null;
 font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
 <span id="cb3-29">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.personnage_marche:</span>
 <span id="cb3-30">            <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
@@ -1655,6 +1930,7 @@ background-color: null;
 font-style: inherit;">16</span>)</span>
 <span id="cb3-32">            <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span>:</span>
 <span id="cb3-33">                pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
@@ -1682,6 +1958,7 @@ background-color: null;
 font-style: inherit;">False</span></span>
 <span id="cb3-35">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span>:</span>
 <span id="cb3-36">            pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
@@ -1729,9 +2006,11 @@ font-style: inherit;">import</span> pyxel</span>
 <span id="cb4-2"></span>
 <span id="cb4-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> App:</span>
 <span id="cb4-4">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -1803,11 +2082,13 @@ font-style: inherit;">self</span>.draw)</span>
 <span id="cb4-18">        </span>
 <span id="cb4-19">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb4-20">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
 <span id="cb4-21">            <span class="va" style="color: #111111;
 background-color: null;
@@ -1842,6 +2123,7 @@ background-color: null;
 font-style: inherit;">True</span></span>
 <span id="cb4-24">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
 <span id="cb4-25">            <span class="va" style="color: #111111;
 background-color: null;
@@ -1877,6 +2159,7 @@ font-style: inherit;">True</span></span>
 <span id="cb4-28"></span>
 <span id="cb4-29">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -1891,11 +2174,13 @@ background-color: null;
 font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 255 - 16</span></span>
 <span id="cb4-33">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.personnage_marche:</span>
 <span id="cb4-34">            <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
@@ -1928,6 +2213,7 @@ background-color: null;
 font-style: inherit;">16</span>)</span>
 <span id="cb4-36">            <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span>:</span>
 <span id="cb4-37">                pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
@@ -1959,6 +2245,7 @@ background-color: null;
 font-style: inherit;">False</span></span>
 <span id="cb4-39">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">else</span>:</span>
 <span id="cb4-40">            pyxel.blt(<span class="va" style="color: #111111;
 background-color: null;
@@ -2012,14 +2299,14 @@ En conclusion
   <category>Programmation</category>
   <category>Pyxel</category>
   <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/</guid>
   <pubDate>Fri, 01 Sep 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" medium="image" type="image/png" height="59" width="144"/>
 </item>
 <item>
   <title>Utiliser pyxelstudio.net pour créer des jeux en python avec pyxel</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxelstudio/index.html</link>
+  <link>https://flallemand.fr/blog/posts/pyxelstudio/</link>
   <description><![CDATA[ 
 
 
@@ -2102,9 +2389,11 @@ font-style: inherit;">import</span> pyxel</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> App:</span>
 <span id="cb1-4">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -2129,11 +2418,13 @@ background-color: null;
 font-style: inherit;"># définition de la fonction update, qui est appelée à chaque frame</span></span>
 <span id="cb1-10">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb1-11">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">pass</span></span>
 <span id="cb1-12"></span>
 <span id="cb1-13">    <span class="co" style="color: #5E5E5E;
@@ -2141,6 +2432,7 @@ background-color: null;
 font-style: inherit;"># définition de la fonction draw, qui est appelée à chaque frame après la fonction update</span></span>
 <span id="cb1-14">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
@@ -2189,14 +2481,14 @@ font-style: inherit;"># on exécute le programme avec les fonctions update et dr
   <category>Programmation</category>
   <category>Pyxel</category>
   <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxelstudio/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/pyxelstudio/</guid>
   <pubDate>Thu, 31 Aug 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
   <title>Tuto pyxel : code de base</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxel_tuto1_base/index.html</link>
+  <link>https://flallemand.fr/blog/posts/pyxel_tuto1_base/</link>
   <description><![CDATA[ 
 
 
@@ -2210,9 +2502,11 @@ font-style: inherit;">import</span> pyxel</span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">class</span> App:</span>
 <span id="cb1-4">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
@@ -2241,20 +2535,24 @@ font-style: inherit;">self</span>.draw)</span>
 <span id="cb1-7"></span>
 <span id="cb1-8">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb1-9">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">pass</span></span>
 <span id="cb1-10"></span>
 <span id="cb1-11">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>):</span>
 <span id="cb1-12">        <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">pass</span></span>
 <span id="cb1-13"></span>
 <span id="cb1-14">App()</span></code></pre></div>
@@ -2294,14 +2592,14 @@ Utilisation de Pyxelstudio
   <category>Programmation</category>
   <category>Pyxel</category>
   <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxel_tuto1_base/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/pyxel_tuto1_base/</guid>
   <pubDate>Sat, 17 Jun 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto1_base/pyxel.png" medium="image" type="image/png" height="61" width="144"/>
 </item>
 <item>
   <title>Python match</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/python_match/index.html</link>
+  <link>https://flallemand.fr/blog/posts/python_match/</link>
   <description><![CDATA[ 
 
 
@@ -2323,6 +2621,7 @@ Utilisation de Pyxelstudio
 </div>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">let</span> x <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
@@ -2333,9 +2632,11 @@ font-style: inherit;">;</span></span>
 <span id="cb1-2"></span>
 <span id="cb1-3"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">switch</span> (x) {</span>
 <span id="cb1-4">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
@@ -2354,11 +2655,13 @@ background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb1-6">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb1-7">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
@@ -2377,11 +2680,13 @@ background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb1-9">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb1-10">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
@@ -2400,11 +2705,13 @@ background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb1-12">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb1-13">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span><span class="op" style="color: #5E5E5E;
@@ -2423,11 +2730,13 @@ background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb1-15">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb1-16">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span></span>
@@ -2461,6 +2770,7 @@ font-style: inherit;">;</span></span>
 <span id="cb2-2"></span>
 <span id="cb2-3"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">switch</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span>x<span class="op" style="color: #5E5E5E;
@@ -2470,6 +2780,7 @@ background-color: null;
 font-style: inherit;">{</span></span>
 <span id="cb2-4">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
@@ -2484,11 +2795,13 @@ background-color: null;
 font-style: inherit;">);</span></span>
 <span id="cb2-6">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb2-7">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
@@ -2503,11 +2816,13 @@ background-color: null;
 font-style: inherit;">);</span></span>
 <span id="cb2-9">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb2-10">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
@@ -2522,11 +2837,13 @@ background-color: null;
 font-style: inherit;">);</span></span>
 <span id="cb2-12">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb2-13">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span><span class="op" style="color: #5E5E5E;
@@ -2541,11 +2858,13 @@ background-color: null;
 font-style: inherit;">);</span></span>
 <span id="cb2-15">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb2-16">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span></span>
@@ -2574,9 +2893,11 @@ font-style: inherit;">3</span></span>
 <span id="cb3-3"></span>
 <span id="cb3-4"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">match</span> x:</span>
 <span id="cb3-5">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>:</span>
@@ -2587,6 +2908,7 @@ background-color: null;
 font-style: inherit;">"x est égal à 1"</span>)</span>
 <span id="cb3-7">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>:</span>
@@ -2597,6 +2919,7 @@ background-color: null;
 font-style: inherit;">"x est égal à 2"</span>)</span>
 <span id="cb3-9">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>:</span>
@@ -2607,6 +2930,7 @@ background-color: null;
 font-style: inherit;">"x est égal à 3"</span>)</span>
 <span id="cb3-11">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>:</span>
@@ -2617,6 +2941,7 @@ background-color: null;
 font-style: inherit;">"x est égal à 4"</span>)</span>
 <span id="cb3-13">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">case</span> _:</span>
 <span id="cb3-14">        <span class="bu" style="color: null;
 background-color: null;
@@ -2659,6 +2984,7 @@ font-style: inherit;">False</span></span>
 <span id="cb4-6"></span>
 <span id="cb4-7"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">while</span> gameOver <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="va" style="color: #111111;
@@ -2686,15 +3012,18 @@ background-color: null;
 font-style: inherit;">"Votre essai : "</span>))</span>
 <span id="cb4-10">   <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">match</span> proposition:</span>
 <span id="cb4-11">      case ( i ) <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">or</span> i <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
@@ -2707,6 +3036,7 @@ background-color: null;
 font-style: inherit;">"Le nombre doit être compris entre 0 et 100 "</span>)</span>
 <span id="cb4-13">      case ( i ) <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;</span> cible:</span>
@@ -2722,6 +3052,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb4-16">      case ( i ) <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;</span> cible:</span>
@@ -2737,6 +3068,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb4-19">      case ( i ) <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> cible:</span>
@@ -2767,6 +3099,7 @@ font-style: inherit;">"Entrez votre prénom et votre nom : "</span>)</span>
 <span id="cb5-2"></span>
 <span id="cb5-3"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">match</span> reponse.split():</span>
 <span id="cb5-4">    case [prenom, nom]:</span>
 <span id="cb5-5">        <span class="bu" style="color: null;
@@ -2867,14 +3200,14 @@ Sumner, Scott. 2021. <span>«&nbsp;The new Python match&nbsp;»</span>. <em>Linu
   <category>Python</category>
   <category>NSI</category>
   <category>Programmation</category>
-  <guid>https://flallemand.fr/blog/posts/python_match/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/python_match/</guid>
   <pubDate>Sun, 29 Jan 2023 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/python_match/python_laptop.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Interview exclusive du ChatGPT de OpenAI (partie 1)</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/interview_gpt_1/index.html</link>
+  <link>https://flallemand.fr/blog/posts/interview_gpt_1/</link>
   <description><![CDATA[ 
 
 
@@ -2997,7 +3330,7 @@ Non, je ne peux pas conseiller à quelqu’un de faire une mauvaise action. En t
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_1/https:/www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption>
 </figure>
 </div>
@@ -3007,14 +3340,14 @@ Non, je ne peux pas conseiller à quelqu’un de faire une mauvaise action. En t
  ]]></description>
   <category>Informatique</category>
   <category>IA</category>
-  <guid>https://flallemand.fr/blog/posts/interview_gpt_1/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/interview_gpt_1/</guid>
   <pubDate>Wed, 07 Dec 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/interview_gpt_1/DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Interview exclusive du ChatGPT de OpenAI (partie 2)</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/interview_gpt_2/index.html</link>
+  <link>https://flallemand.fr/blog/posts/interview_gpt_2/</link>
   <description><![CDATA[ 
 
 
@@ -3131,6 +3464,7 @@ background-color: null;
 font-style: inherit;"># Fonction de propagation avant</span></span>
 <span id="cb1-8"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> think(inputs):</span>
 <span id="cb1-9">    inputs <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -3152,6 +3486,7 @@ background-color: null;
 font-style: inherit;">-</span>np.dot(inputs, synaptic_weights)))</span>
 <span id="cb1-11">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> output</span>
 <span id="cb1-12"></span>
 <span id="cb1-13"><span class="co" style="color: #5E5E5E;
@@ -3159,8 +3494,10 @@ background-color: null;
 font-style: inherit;"># Entraînement du réseau de neurones</span></span>
 <span id="cb1-14"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> iteration <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
@@ -3319,7 +3656,7 @@ Je suis ravi d’avoir pu vous aider. L’apprentissage automatique et les rése
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/https:/www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
 <figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
 </figure>
 </div>
@@ -3329,14 +3666,14 @@ Je suis ravi d’avoir pu vous aider. L’apprentissage automatique et les rése
  ]]></description>
   <category>Informatique</category>
   <category>IA</category>
-  <guid>https://flallemand.fr/blog/posts/interview_gpt_2/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/interview_gpt_2/</guid>
   <pubDate>Wed, 07 Dec 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>LOL - LOgiciel Libre, une affaire sérieuse</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/lol_docu/index.html</link>
+  <link>https://flallemand.fr/blog/posts/lol_docu/</link>
   <description><![CDATA[ 
 
 
@@ -3382,14 +3719,14 @@ Ci-dessous, la bande-annonce du film et le film complet (diffusé sous licence l
  ]]></description>
   <category>Informatique</category>
   <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/lol_docu/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/lol_docu/</guid>
   <pubDate>Tue, 29 Nov 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/lol_docu/LoL_AfficheLDH-800x500.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Un podcast pour tout savoir sur l’histoire d’internet</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/podcast_internet/index.html</link>
+  <link>https://flallemand.fr/blog/posts/podcast_internet/</link>
   <description><![CDATA[ 
 
 
@@ -3424,14 +3761,14 @@ Ces épisodes sont <a href="https://www.radiofrance.fr/franceculture/podcasts/se
   <category>Informatique</category>
   <category>Histoire</category>
   <category>Réseaux</category>
-  <guid>https://flallemand.fr/blog/posts/podcast_internet/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/podcast_internet/</guid>
   <pubDate>Mon, 28 Nov 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/podcast_internet/podcast_internet.png" medium="image" type="image/png" height="45" width="144"/>
 </item>
 <item>
   <title>Les métiers du développement et de l’infrastructure</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/metiers_dev/index.html</link>
+  <link>https://flallemand.fr/blog/posts/metiers_dev/</link>
   <description><![CDATA[ 
 
 
@@ -3455,14 +3792,14 @@ C’est l’occasion de découvrir les différences entre les différents métie
   <category>Orientation</category>
   <category>NSI</category>
   <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/metiers_dev/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/metiers_dev/</guid>
   <pubDate>Sat, 19 Nov 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/metiers_dev/cookie_connecte.png" medium="image" type="image/png" height="50" width="144"/>
 </item>
 <item>
   <title>Les Français et le Jeu Vidéo</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/enquete_jeux_videos/index.html</link>
+  <link>https://flallemand.fr/blog/posts/enquete_jeux_videos/</link>
   <description><![CDATA[ 
 
 
@@ -3530,14 +3867,14 @@ Pour en savoir plus, <a href="https://www.passeportsante.net/fr/psychologie/Fich
   <category>Orientation</category>
   <category>NSI</category>
   <category>Jeux</category>
-  <guid>https://flallemand.fr/blog/posts/enquete_jeux_videos/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/enquete_jeux_videos/</guid>
   <pubDate>Wed, 16 Nov 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/enquete_jeux_videos/jeuxVideo-jeuxVideo.png" medium="image" type="image/png" height="400" width="105"/>
 </item>
 <item>
   <title>Futurecoder - Le code du futur, c’est vous !</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/futurecoder/index.html</link>
+  <link>https://flallemand.fr/blog/posts/futurecoder/</link>
   <description><![CDATA[ 
 
 
@@ -3608,14 +3945,14 @@ Source : <a href="https://korben.info/futurecoder-cours-gratuits-python.html" ta
   <category>Informatique</category>
   <category>Python</category>
   <category>NSI</category>
-  <guid>https://flallemand.fr/blog/posts/futurecoder/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/futurecoder/</guid>
   <pubDate>Mon, 31 Oct 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/futurecoder/futurecoder-futurecoder.png" medium="image" type="image/png" height="74" width="144"/>
 </item>
 <item>
   <title>Participer aux trophées NSI</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/tropheesnsi/index.html</link>
+  <link>https://flallemand.fr/blog/posts/tropheesnsi/</link>
   <description><![CDATA[ 
 
 
@@ -3810,14 +4147,14 @@ Source : le site officiel des trophées : <a href="https://trophees-nsi.fr/" tar
   <category>Informatique</category>
   <category>Python</category>
   <category>NSI</category>
-  <guid>https://flallemand.fr/blog/posts/tropheesnsi/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/tropheesnsi/</guid>
   <pubDate>Wed, 07 Sep 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/tropheesnsi/image_trophees_nsi.png" medium="image" type="image/png" height="77" width="144"/>
 </item>
 <item>
   <title>Lumni : cours sur les bases de données</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/lumniBDD/index.html</link>
+  <link>https://flallemand.fr/blog/posts/lumniBDD/</link>
   <description><![CDATA[ 
 
 
@@ -3835,7 +4172,7 @@ Vidéo 1 : <a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-r
 <!-- /wp:heading -->
 <!-- wp:image {"align":"center","id":247,"sizeSlug":"large","linkDestination":"custom"} -->
 <figure class="wp-block-image aligncenter size-large figure">
-<a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://flallemand.fr/blog/posts/lumniBDD/https:/www.flallemand.fr/wp/wp-content/uploads/2022/07/Capture_lundi-25-juillet-2022_6h58m19s_001_Qu�est-ce-qu�une-base-de-donn�es-relationnelle-Vid�o-Voie-g�n�rale-Lumni-Mozilla-Firefox-1-1024x567.png" alt="" class="wp-image-247 figure-img"></a>
+<a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/07/Capture_lundi-25-juillet-2022_6h58m19s_001_Qu�est-ce-qu�une-base-de-donn�es-relationnelle-Vid�o-Voie-g�n�rale-Lumni-Mozilla-Firefox-1-1024x567.png" alt="" class="wp-image-247 figure-img"></a>
 </figure>
 <!-- /wp:image -->
 <!-- wp:heading -->
@@ -3845,7 +4182,7 @@ Vidéo 2 : <a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnee
 <!-- /wp:heading -->
 <!-- wp:image {"align":"center","id":248,"sizeSlug":"large","linkDestination":"custom"} -->
 <figure class="wp-block-image aligncenter size-large figure">
-<a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://flallemand.fr/blog/posts/lumniBDD/https:/www.flallemand.fr/wp/wp-content/uploads/2022/07/snaptron_9anqpo1xcK-1024x563.jpg" alt="" class="wp-image-248 figure-img"></a>
+<a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/07/snaptron_9anqpo1xcK-1024x563.jpg" alt="" class="wp-image-248 figure-img"></a>
 </figure>
 <!-- /wp:image -->
 
@@ -3856,14 +4193,14 @@ Vidéo 2 : <a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnee
   <category>NSI</category>
   <category>BDD</category>
   <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/lumniBDD/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/lumniBDD/</guid>
   <pubDate>Sun, 24 Jul 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/lumniBDD/lumniBDD.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>La chaîne YouTube codeur-pro</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/codeurpro/index.html</link>
+  <link>https://flallemand.fr/blog/posts/codeurpro/</link>
   <description><![CDATA[ 
 
 
@@ -3926,87 +4263,9 @@ Comment créer un programme ?
   <category>Informatique</category>
   <category>NSI</category>
   <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/codeurpro/index.html</guid>
+  <guid>https://flallemand.fr/blog/posts/codeurpro/</guid>
   <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/codeurpro/codeurpro.png" medium="image" type="image/png" height="36" width="144"/>
-</item>
-<item>
-  <title>Histoire de l’informatique</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/histoireinfo/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-Dans la vidéo YouTube ci-dessous, vous trouverez un panorama rapide de l’histoire de l’informatique essentiellement axé sur l’évolution des ordinateurs.
-</p>
-<!-- /wp:paragraph -->
-<iframe class="video" src="https://www.youtube.com/embed/B1QD9FgCOrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Vidéothèque</category>
-  <category>Histoire</category>
-  <guid>https://flallemand.fr/blog/posts/histoireinfo/index.html</guid>
-  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/histoireinfo/histoireinfo.png" medium="image" type="image/png" height="73" width="144"/>
-</item>
-<item>
-  <title>Histoire des systèmes d’exploitation</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/histoireSE/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-Voici une sélection de quelques vidéos sur l’histoire des systèmes d’exploitations.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Histoire d’Unix
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" width="100%" src="https://www.youtube.com/embed/Za6vGTLp-wg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:heading -->
-<h2 class="anchored">
-Histoire de Linux et de GNU-Linux
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" width="100%" src="https://www.youtube.com/embed/Uq5ddTUtDkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<p><br></p>
-<iframe class="video" width="100%" src="https://www.youtube.com/embed/KvGN1SrNwAo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:heading -->
-<h2 class="anchored">
-Histoire de Windows
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" width="100%" src="https://www.youtube.com/embed/-5evLFh3ZAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Histoire</category>
-  <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/histoireSE/index.html</guid>
-  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/histoireSE/histoireSE.png" medium="image" type="image/png" height="70" width="144"/>
 </item>
 </channel>
 </rss>

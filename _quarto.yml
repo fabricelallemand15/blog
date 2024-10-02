@@ -56,8 +56,6 @@ format:
       giscus: 
         repo: fabricelallemand15/blog
         language: fr
-    filters: 
-      - lightbox
     lightbox: auto
 
 

@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.523">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="F. LALLEMAND">
-<meta name="description" content="Une plongée dans le passé du mouvement du logiciel libre">
+<meta name="description" content="Ajouter un fond à notre application Pyxel">
 
-<title>Le bloc-notes de M. LALLEMAND - L’histoire de la Free Software Foundation (FSF)</title>
+<title>Tuto pyxel : Ajouter un fond – Le bloc-notes de M. LALLEMAND</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -46,9 +46,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -118,7 +115,7 @@ cookieconsent.run({
     </a>
   </div>
             <div id="quarto-search" class="" title="Recherche"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -149,7 +146,7 @@ cookieconsent.run({
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
@@ -159,17 +156,19 @@ cookieconsent.run({
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">L’histoire de la Free Software Foundation (FSF)</h1>
+      <h1 class="title">Tuto pyxel : Ajouter un fond</h1>
+            <p class="subtitle lead">Tutoriels Pyxel</p>
                   <div>
         <div class="description">
-          Une plongée dans le passé du mouvement du logiciel libre
+          Ajouter un fond à notre application Pyxel
         </div>
       </div>
                           <div class="quarto-categories">
+                <div class="quarto-category">Python</div>
                 <div class="quarto-category">NSI</div>
-                <div class="quarto-category">Informatique</div>
-                <div class="quarto-category">Histoire</div>
-                <div class="quarto-category">Linux</div>
+                <div class="quarto-category">Programmation</div>
+                <div class="quarto-category">Pyxel</div>
+                <div class="quarto-category">Nuit du code</div>
               </div>
                   </div>
   </div>
@@ -187,7 +186,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Date de publication</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">23 septembre 2023</p>
+        <p class="date">22 octobre 2023</p>
       </div>
     </div>
     
@@ -198,17 +197,8 @@ cookieconsent.run({
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Sur cette page</h2>
-   
-  <ul>
-  <li><a href="#les-débuts-de-la-fsf" id="toc-les-débuts-de-la-fsf" class="nav-link active" data-scroll-target="#les-débuts-de-la-fsf">Les débuts de la FSF</a></li>
-  <li><a href="#la-lutte-pour-la-liberté" id="toc-la-lutte-pour-la-liberté" class="nav-link" data-scroll-target="#la-lutte-pour-la-liberté">La lutte pour la liberté</a></li>
-  <li><a href="#lessor-du-mouvement" id="toc-lessor-du-mouvement" class="nav-link" data-scroll-target="#lessor-du-mouvement">L’essor du mouvement</a></li>
-  <li><a href="#limportance-continue-de-la-fsf" id="toc-limportance-continue-de-la-fsf" class="nav-link" data-scroll-target="#limportance-continue-de-la-fsf">L’importance continue de la FSF</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/fsf-history/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -217,39 +207,25 @@ cookieconsent.run({
 
 
 
-<p>Si vous êtes passionné par le logiciel libre et open source, vous avez probablement entendu parler de la Free Software Foundation (FSF). Cette organisation emblématique a joué un rôle central dans la promotion et la défense du logiciel libre depuis sa création en 1985 par Richard Stallman. Dans cet article, je vous propose un résumé de la page officielle de la FSF dédiée à son histoire, que vous pouvez consulter ici : <a href="https://www.fsf.org/history/" target="_blank">Lien vers la page officielle de la FSF sur son histoire</a>.</p>
-<p><strong>Vous trouverez aussi sur ce site une traduction de cette page en français, que vous pouvez consulter ici : <a href="https://flallemand.fr/divers/fsf-history/index.html" target="_blank">Lien vers la version traduite de la page d’histoire de la FSF</a>.</strong></p>
-<section id="les-débuts-de-la-fsf" class="level3">
-<h3 class="anchored" data-anchor-id="les-débuts-de-la-fsf">Les débuts de la FSF</h3>
-<p>La page d’histoire de la FSF nous emmène tout d’abord dans les premiers jours de l’organisation. Nous découvrons comment Richard Stallman, un programmeur visionnaire, a lancé la FSF avec pour objectif de promouvoir et de protéger les logiciels libres. Stallman a posé les bases de ce mouvement en créant la licence publique générale GNU (GPL), qui est devenue la pierre angulaire de la philosophie du logiciel libre.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fsf-history\img\event\rms-bw.jpg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="Richard Stallman"><img src="fsf-history\img\event\rms-bw.jpg" class="img-fluid figure-img" alt="Richard Stallman"></a></p>
-<figcaption>Richard Stallman</figcaption>
-</figure>
+<p>Ce tuto fait suite au précédent : <a href="../../posts/pyxel_tuto2_personnage/index.html">Tuto pyxel : Animer un personnage</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</section>
-<section id="la-lutte-pour-la-liberté" class="level3">
-<h3 class="anchored" data-anchor-id="la-lutte-pour-la-liberté">La lutte pour la liberté</h3>
-<p>La page de la FSF met également en lumière les nombreuses batailles juridiques et politiques menées par l’organisation pour défendre les droits des utilisateurs de logiciels libres. Les actions de la FSF ont contribué à préserver la liberté des logiciels en luttant contre les brevets logiciels, les DRM et d’autres menaces potentielles pour la communauté du logiciel libre.</p>
-</section>
-<section id="lessor-du-mouvement" class="level3">
-<h3 class="anchored" data-anchor-id="lessor-du-mouvement">L’essor du mouvement</h3>
-<p>Au fil des années, le mouvement du logiciel libre a gagné en popularité et en influence, en grande partie grâce aux efforts inlassables de la FSF. L’article détaille comment l’organisation a collaboré avec d’autres acteurs importants du domaine, notamment la Free Software Community, pour promouvoir la diffusion de logiciels libres et ouvrir la voie à des alternatives gratuites aux logiciels propriétaires.</p>
-</section>
-<section id="limportance-continue-de-la-fsf" class="level3">
-<h3 class="anchored" data-anchor-id="limportance-continue-de-la-fsf">L’importance continue de la FSF</h3>
-<p>Enfin, la page officielle de la FSF souligne l’importance continue de l’organisation dans le paysage actuel du logiciel libre. La FSF continue de jouer un rôle crucial dans la défense des droits des utilisateurs et dans la sensibilisation du public aux enjeux du logiciel libre.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fsf-history\img\event\01100ryf.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="Respect your freedom"><img src="fsf-history\img\event\01100ryf.png" class="img-fluid figure-img" alt="Respect your freedom"></a></p>
-<figcaption>Respect your freedom</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+Objectifs du tutoriel
 </div>
-<p>Pour une version complète de cette page, entièrement traduite en français, je vous invite à consulter le lien : <a href="https://flallemand.fr/divers/fsf-history/index.html" target="_blank">Lien vers la version traduite de la page d’histoire de la FSF</a>. Les liens vers lesquels la page renvoie, pour en savoir plus, ne sont pas traduits !</p>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Créer un fond constitué de divers éléments ;</li>
+<li>Animer le fond pour simuler un déplacement du personnage.</li>
+</ul>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -431,18 +407,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -474,7 +439,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/flallemand\.fr\/blog");
@@ -482,10 +469,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // default icon
           link.classList.add("external");
       }
@@ -524,7 +516,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -539,27 +535,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
@@ -574,10 +549,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             break;
           }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -586,8 +565,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -826,7 +812,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 
-<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/pyxel_tuto4_objets/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -844,7 +830,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":false,"openEffect":"zoom"});</script>
 
 
 

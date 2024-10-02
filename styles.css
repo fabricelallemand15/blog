@@ -14,18 +14,22 @@ iframe {
     aspect-ratio: 16/9;
     width: 100%;
 }
-table {
+.table {
     margin: 0 auto;
     display: block;
     width: fit-content;
     margin-bottom: 1em;
 }
+thead {
+    background-color: rgb(238, 210, 83);
+    color: rgb(0, 0, 0);
+}
 table, th, td {
     border: 1px solid rgb(120, 120, 120);
     border-collapse: collapse;
 }
-th {
-    background-color: beige;
+.th {
+    background-color: rgb(238, 153, 83);
     color: rgb(0, 0, 0);
     padding: 0.5em;
 }

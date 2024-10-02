@@ -13,5 +13,3 @@ listing:
 page-layout: full
 title-block-banner: '#BCD2E8'
 ---
-
-
