@@ -1245,46 +1245,6 @@ Avertissement
   <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/rendu_final.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
-  <title>Tuto pyxel : Ajouter un fond</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxel_tuto4_objets/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Ce tuto fait suite au précédent : <a href="../../posts/pyxel_tuto2_personnage/index.html">Tuto pyxel : Animer un personnage</a>.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectifs du tutoriel
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Créer un fond constitué de divers éléments ;</li>
-<li>Animer le fond pour simuler un déplacement du personnage.</li>
-</ul>
-</div>
-</div>
-
-
-
- ]]></description>
-  <category>Python</category>
-  <category>NSI</category>
-  <category>Programmation</category>
-  <category>Pyxel</category>
-  <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxel_tuto4_objets/</guid>
-  <pubDate>Sat, 21 Oct 2023 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto4_objets/rendu_final.png" medium="image" type="image/png"/>
-</item>
-<item>
   <title>Tribune du collectif Maths &amp; Sciences</title>
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/tribuneMS/</link>
@@ -4266,6 +4226,34 @@ Comment créer un programme ?
   <guid>https://flallemand.fr/blog/posts/codeurpro/</guid>
   <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/codeurpro/codeurpro.png" medium="image" type="image/png" height="36" width="144"/>
+</item>
+<item>
+  <title>Histoire de l’informatique</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/histoireinfo/</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- wp:paragraph -->
+<p>
+Dans la vidéo YouTube ci-dessous, vous trouverez un panorama rapide de l’histoire de l’informatique essentiellement axé sur l’évolution des ordinateurs.
+</p>
+<!-- /wp:paragraph -->
+<iframe class="video" src="https://www.youtube.com/embed/B1QD9FgCOrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+
+
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Vidéothèque</category>
+  <category>Histoire</category>
+  <guid>https://flallemand.fr/blog/posts/histoireinfo/</guid>
+  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/histoireinfo/histoireinfo.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 </channel>
 </rss>
