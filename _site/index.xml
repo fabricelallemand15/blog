@@ -10,7 +10,69 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 30 Sep 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 02 Oct 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Découvrir les liens entre les maths et la musique</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/mathsmusique/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>France Musique nous propose une série captivante de huit épisodes explorant les liens surprenants entre la musique et les mathématiques. Diffusée pendant l’été 2024 tous les mercredis à 8 h 10, cette série intitulée « Musique + maths » est animée par Pierre-Yves Georges et promet de réconcilier même les plus réticents avec les mathématiques.</p>
+<p><a href="LogoFranceMusiqueMaths.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/mathsmusique/LogoFranceMusiqueMaths.png" class="img-fluid"></a></p>
+<section id="un-voyage-à-travers-lhistoire-et-les-concepts" class="level1">
+<h1>Un voyage à travers l’histoire et les concepts</h1>
+<section id="de-la-forge-antique-aux-compositeurs-modernes" class="level2">
+<h2 class="anchored" data-anchor-id="de-la-forge-antique-aux-compositeurs-modernes">De la forge antique aux compositeurs modernes</h2>
+<p>Le premier épisode nous plonge dans les origines lointaines de cette relation, remontant jusqu’à une forge antique. Ce point de départ inattendu ouvre la voie à une exploration fascinante de l’évolution de ce lien au fil des siècles.</p>
+</section>
+<section id="les-grands-noms-à-la-croisée-des-disciplines" class="level2">
+<h2 class="anchored" data-anchor-id="les-grands-noms-à-la-croisée-des-disciplines">Les grands noms à la croisée des disciplines</h2>
+<p>La série met en lumière des personnalités emblématiques qui ont marqué à la fois le monde de la musique et celui des mathématiques :</p>
+<ul>
+<li>Johann Sebastian Bach, dont l’œuvre continue d’être étudiée pour sa dimension mathématique.</li>
+<li>Ernest Ansermet, chef d’orchestre renommé qui était initialement professeur de mathématiques.</li>
+<li>Albert Einstein, célèbre physicien, mais aussi mélomane passionné, dont la musique aurait peut-être inspiré certaines théories révolutionnaires.</li>
+</ul>
+<p><a href="EinsteinViolon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/mathsmusique/EinsteinViolon.png" class="img-fluid"></a></p>
+</section>
+</section>
+<section id="des-concepts-mathématiques-en-musique" class="level1">
+<h1>Des concepts mathématiques en musique</h1>
+<section id="probabilités-et-hasard-en-composition" class="level2">
+<h2 class="anchored" data-anchor-id="probabilités-et-hasard-en-composition">Probabilités et hasard en composition</h2>
+<p>Plusieurs épisodes explorent comment les concepts mathématiques ont influencé la création musicale :</p>
+<ul>
+<li>Iannis Xenakis, compositeur d’origine grecque, a intégré les probabilités dans ses compositions.</li>
+<li>De Mozart à Pierre Boulez, le hasard, notion mathématique, a joué un rôle important dans la composition.</li>
+</ul>
+</section>
+<section id="la-beauté-des-mathématiques-en-musique" class="level2">
+<h2 class="anchored" data-anchor-id="la-beauté-des-mathématiques-en-musique">La beauté des mathématiques en musique</h2>
+<p>Le pianiste Kit Armstrong, également diplômé en mathématiques fondamentales, partage sa vision sur la beauté et l’émotion présentes tant dans les mathématiques que dans la musique.</p>
+</section>
+</section>
+<section id="un-outil-pédagogique-inattendu" class="level1">
+<h1>Un outil pédagogique inattendu</h1>
+<p>Un épisode particulièrement intéressant pour les parents et les enseignants suggère que la musique pourrait être un excellent moyen d’améliorer les performances en mathématiques des enfants.</p>
+<p>Cette série de podcasts propose une perspective unique sur l’interconnexion entre deux domaines apparemment distincts. Elle invite les auditeurs à découvrir comment la rigueur mathématique et la créativité musicale se complètent et s’enrichissent mutuellement.</p>
+<p>Que vous soyez passionné de musique, de mathématiques, ou simplement curieux, ces huit épisodes promettent des découvertes intéressantes et une nouvelle appréciation de ces deux disciplines.</p>
+<p>Lien : <a href="https://www.radiofrance.fr/francemusique/podcasts/musique-maths" target="_blank">https://www.radiofrance.fr/francemusique/podcasts/musique-maths</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>Histoire</category>
+  <category>Mathématiques</category>
+  <category>Podcast</category>
+  <guid>https://flallemand.fr/blog/posts/mathsmusique/</guid>
+  <pubDate>Wed, 02 Oct 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/mathsmusique/LogoFranceMusiqueMaths.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Boby Lapointe, poète mathématicien</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -4226,34 +4288,6 @@ Comment créer un programme ?
   <guid>https://flallemand.fr/blog/posts/codeurpro/</guid>
   <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/codeurpro/codeurpro.png" medium="image" type="image/png" height="36" width="144"/>
-</item>
-<item>
-  <title>Histoire de l’informatique</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/histoireinfo/</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-Dans la vidéo YouTube ci-dessous, vous trouverez un panorama rapide de l’histoire de l’informatique essentiellement axé sur l’évolution des ordinateurs.
-</p>
-<!-- /wp:paragraph -->
-<iframe class="video" src="https://www.youtube.com/embed/B1QD9FgCOrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Vidéothèque</category>
-  <category>Histoire</category>
-  <guid>https://flallemand.fr/blog/posts/histoireinfo/</guid>
-  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/histoireinfo/histoireinfo.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 </channel>
 </rss>

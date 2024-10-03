@@ -1,0 +1,51 @@
+---
+title: "Découvrir les liens entre les maths et la musique"
+subtitle: "Découvrez la fascinante intersection entre musique et mathématiques avec France Musique !"
+date: "2024-10-03"
+categories: [Histoire, Mathématiques, Podcast]
+image: "LogoFranceMusiqueMaths.png"
+---
+
+France Musique nous propose une série captivante de huit épisodes explorant les liens surprenants entre la musique et les mathématiques. Diffusée pendant l'été 2024 tous les mercredis à 8 h 10, cette série intitulée « Musique + maths » est animée par Pierre-Yves Georges et promet de réconcilier même les plus réticents avec les mathématiques.
+
+![](LogoFranceMusiqueMaths.png)
+
+# Un voyage à travers l'histoire et les concepts
+
+## De la forge antique aux compositeurs modernes
+
+Le premier épisode nous plonge dans les origines lointaines de cette relation, remontant jusqu'à une forge antique. Ce point de départ inattendu ouvre la voie à une exploration fascinante de l'évolution de ce lien au fil des siècles.
+
+## Les grands noms à la croisée des disciplines
+
+La série met en lumière des personnalités emblématiques qui ont marqué à la fois le monde de la musique et celui des mathématiques :
+
+* Johann Sebastian Bach, dont l'œuvre continue d'être étudiée pour sa dimension mathématique.
+* Ernest Ansermet, chef d'orchestre renommé qui était initialement professeur de mathématiques.
+* Albert Einstein, célèbre physicien, mais aussi mélomane passionné, dont la musique aurait peut-être inspiré certaines théories révolutionnaires.
+
+![](EinsteinViolon.png)
+
+# Des concepts mathématiques en musique
+
+## Probabilités et hasard en composition
+
+Plusieurs épisodes explorent comment les concepts mathématiques ont influencé la création musicale :
+
+* Iannis Xenakis, compositeur d'origine grecque, a intégré les probabilités dans ses compositions.
+* De Mozart à Pierre Boulez, le hasard, notion mathématique, a joué un rôle important dans la composition.
+
+## La beauté des mathématiques en musique
+
+Le pianiste Kit Armstrong, également diplômé en mathématiques fondamentales, partage sa vision sur la beauté et l'émotion présentes tant dans les mathématiques que dans la musique.
+
+# Un outil pédagogique inattendu
+
+Un épisode particulièrement intéressant pour les parents et les enseignants suggère que la musique pourrait être un excellent moyen d'améliorer les performances en mathématiques des enfants.
+
+Cette série de podcasts propose une perspective unique sur l'interconnexion entre deux domaines apparemment distincts. Elle invite les auditeurs à découvrir comment la rigueur mathématique et la créativité musicale se complètent et s'enrichissent mutuellement.
+
+Que vous soyez passionné de musique, de mathématiques, ou simplement curieux, ces huit épisodes promettent des découvertes intéressantes et une nouvelle appréciation de ces deux disciplines.
+
+Lien :
+[https://www.radiofrance.fr/francemusique/podcasts/musique-maths](https://www.radiofrance.fr/francemusique/podcasts/musique-maths){target=_blank}
