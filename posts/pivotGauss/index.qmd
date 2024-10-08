@@ -1,0 +1,239 @@
+---
+title: "La méthode du pivot de Gauss : résoudre des systèmes linéaires comme un pro !"
+date: "2024-10-08"
+categories: [Mathématiques, Python, Programmation]
+---
+
+## C'est quoi cette histoire de pivot ?
+
+La méthode du pivot de Gauss, c'est une technique super efficace pour résoudre des systèmes d'équations linéaires. L'idée, c'est de transformer notre système initial en un système équivalent, mais beaucoup plus simple à résoudre. Comment ? En éliminant progressivement les variables, une par une, jusqu'à obtenir un système triangulaire.
+
+Imaginez que vous essayez de démêler un nœud de câbles. Vous commencez par un bout, vous dégagez un câble, puis un autre, et ainsi de suite jusqu'à ce que tout soit bien ordonné. C'est exactement ce que fait la méthode de Gauss avec nos équations !
+
+## Un exemple pour mieux comprendre
+
+Allez, on se lance dans un exemple concret. On va résoudre un système de trois équations à trois inconnues. Attachez vos ceintures, ça va décoiffer !
+
+Soit le système suivant :
+
+$$
+\begin{cases}
+2&x &+& y &-& &z &=& 8 \\
+-3&x &-& y &+& 2&z &=& -11 \\
+-2&x &+& y &+& 2&z &=& -3
+\end{cases}
+$$
+
+### Étape 1 : On choisit notre pivot
+
+On va utiliser la première équation comme pivot pour éliminer $x$ dans les autres équations. 
+
+### Étape 2 : On élimine $x$ dans la deuxième et la troisième équation
+
+- Pour la deuxième équation, on ajoute 3/2 fois la première équation
+- Pour la troisième équation, on ajoute 1 fois la première équation
+
+On obtient le système équivalent :
+
+$$
+\begin{cases}
+2&x &+& &y &-& &z &=& 8 \\
+& &&\frac{1}{2}&y &+& \frac{1}{2}&z &=& 1 \\
+& &&2&y &+& &z &=& 5
+\end{cases}
+$$
+
+### Étape 3 : On élimine $y$ dans la troisième équation
+
+Maintenant, on utilise la deuxième équation comme pivot pour éliminer $y$ dans la troisième équation. On multiplie la deuxième équation par $-4$ et on l'ajoute à la troisième équation :
+
+$$
+\begin{cases}
+2& &+ &&y &- &&z &= 8 \\
+&&&\frac{1}{2}&y &+ &\frac{1}{2}&z &= 1 \\
+&& &&&-&&z &= 1
+\end{cases}
+$$
+
+### Étape 4 : On résout !
+
+Et voilà, on a notre système triangulaire ! C'est comme avoir dénoué tous nos câbles. Maintenant, on peut facilement trouver nos inconnues :
+
+1. De la dernière équation : $z = -1$
+2. De la deuxième équation : $\frac{1}{2}y + \frac{1}{2}(-1) = 1$, donc $y = 3$
+3. De la première équation : $2x + 3 + 1 = 8$, donc $x = 2$
+
+Notre solution est donc $(x, y, z) = (2, 3, -1)$.
+
+## Généralisation et équivalence des systèmes
+
+Maintenant que nous avons vu un exemple concret, parlons un peu de ce qui se passe en coulisses. La magie de la méthode du pivot de Gauss repose sur l'utilisation d'opérations élémentaires qui nous permettent de passer d'un système à un autre équivalent.
+
+Mais qu'est-ce qu'un système équivalent ? C'est simple : deux systèmes sont équivalents s'ils ont exactement les mêmes solutions. En d'autres termes, peu importe lequel des deux systèmes, vous résolvez, vous obtiendrez le même résultat final.
+
+Les opérations élémentaires que nous utilisons sont :
+
+1. Échanger deux équations
+2. Multiplier une équation par un nombre non nul
+3. Ajouter à une équation un multiple d'une autre équation
+
+Ces opérations sont comme des tours de magie mathématiques : elles transforment notre système, mais sans jamais changer ses solutions. C'est un peu comme si vous réarrangiez les pièces d'un puzzle sans changer l'image finale.
+
+Pourquoi est-ce si important ? Eh bien, cela signifie que nous pouvons manipuler notre système initial pour le rendre plus simple à résoudre, sans craindre de perdre ou de modifier les solutions en cours de route. C'est ce qui nous permet de passer d'un système compliqué à un système triangulaire facile à résoudre, comme nous l'avons fait dans notre exemple.
+
+Dans le cas général, pour un système de $n$ équations à $n$ inconnues, nous appliquons ces opérations de manière systématique :
+
+1. On choisit un pivot (généralement le premier coefficient non nul de la première colonne) et on échange l'équation correspondante avec la première équation
+2. On utilise ce pivot pour éliminer la première variable dans toutes les équations suivantes
+3. On répète le processus avec la deuxième équation comme nouveau pivot, et ainsi de suite.
+
+À chaque étape, nous créons un nouveau système équivalent, jusqu'à obtenir un système triangulaire que nous pouvons résoudre facilement par substitution inverse.
+
+Cette approche nous permet de résoudre des systèmes de plus en plus grands et complexes, tout en gardant la certitude que nos manipulations préservent les solutions originales. C'est la beauté et la puissance de la méthode du pivot de Gauss !
+
+## Automatisons tout ça avec Python !
+
+Maintenant que vous êtes des pros du pivot de Gauss, que diriez-vous d'automatiser tout ça avec un peu de code Python ? C'est parti !
+
+Mais avant de plonger dans le code, parlons un peu de la façon dont nous allons représenter notre système d'équations en Python.
+
+### Représentation du système en Python
+
+En Python, nous allons utiliser un tableau NumPy pour représenter notre système d'équations. Pourquoi NumPy ? Parce que c'est super efficace pour les calculs numériques et ça nous facilite la vie pour manipuler nos équations.
+
+Voici comment ça marche :
+
+- Chaque ligne du tableau représente une équation du système.
+- Les colonnes représentent les coefficients des variables et le terme constant.
+- La dernière colonne contient les termes constants (les nombres à droite du signe égal dans nos équations).
+
+Par exemple, notre système initial :
+
+$$
+\begin{cases}
+2&x& +& y& -& &z& =& 8 \\
+-3&x& -& y& +& 2&z& =& -11 \\
+-2&x& +& y& +& 2&z& =& -3
+\end{cases}
+$$
+
+sera représenté par le tableau NumPy suivant :
+
+```python
+systeme = np.array([
+    [2,  1, -1,  8],
+    [-3, -1,  2, -11],
+    [-2,  1,  2, -3]
+], dtype=float)
+```
+
+### Accès aux coefficients
+
+Pour accéder aux différents coefficients dans notre tableau NumPy, on utilise l'indexation. Voici comment ça marche :
+
+- `systeme[i, j]` nous donne l'élément à la i-ème ligne et j-ème colonne.
+- Les indices commencent à 0 (comme d'habitude en Python).
+- Pour un système de n équations à n inconnues :
+  - `systeme[i, j]` pour i < n et j < n donne le coefficient de la (j+1)-ème variable dans la (i+1)-ème équation.
+  - `systeme[i, n]` donne le terme constant de la (i+1)-ème équation.
+
+Par exemple :
+
+- `systeme[0, 0]` vaut 2 (coefficient de $x$ dans la première équation)
+- `systeme[1, 2]` vaut 2 (coefficient de $z$ dans la deuxième équation)
+- `systeme[2, 3]` vaut $-3$ (terme constant de la troisième équation).
+
+Cette représentation nous permet de manipuler facilement notre système d'équations en utilisant les opérations de NumPy, ce qui rend notre implémentation de la méthode du pivot de Gauss à la fois simple et efficace.
+
+Maintenant que nous avons compris comment représenter et manipuler notre système, passons au code !
+
+```{python}
+import numpy as np
+
+def echanger_equations(systeme, i, j):
+    systeme[i], systeme[j] = systeme[j].copy(), systeme[i].copy()
+
+def multiplier_equation(systeme, i, facteur):
+    systeme[i] *= facteur
+
+def ajouter_multiple_equation(systeme, i, j, facteur):
+    systeme[i] += facteur * systeme[j]
+
+def pivot_gauss(systeme):
+    n, m = systeme.shape
+    for i in range(min(n, m - 1)):
+        # Trouver le pivot maximal
+        pivot = i + np.argmax(np.abs(systeme[i:, i]))
+        if systeme[pivot, i] == 0:
+            raise ValueError("Le système n'a pas de solution unique!")
+        
+        # Échanger les équations
+        if pivot != i:
+            echanger_equations(systeme, i, pivot)
+        
+        # Éliminer les variables
+        for j in range(i + 1, n):
+            facteur = -systeme[j, i] / systeme[i, i]
+            ajouter_multiple_equation(systeme, j, i, facteur)
+    
+    return systeme
+
+# Exemple d'utilisation
+systeme = np.array([
+    [2, 1, -1, 8],
+    [-3, -1, 2, -11],
+    [-2, 1, 2, -3]
+], dtype=float)
+
+print("Système initial :")
+print(systeme)
+
+resultat = pivot_gauss(systeme)
+print("\nSystème après pivot de Gauss :")
+print(resultat)
+```
+
+Expliquons un peu ce code :
+
+1. `echanger_equations`, `multiplier_equation`, et `ajouter_multiple_equation` sont nos opérations élémentaires sur les équations. Elles utilisent l'indexation NumPy pour accéder et modifier les coefficients.
+2. `pivot_gauss` est notre fonction principale qui applique la méthode du pivot de Gauss. Elle utilise `systeme.shape` pour obtenir les dimensions de notre tableau.
+3. Dans `pivot_gauss`, on utilise `np.argmax` pour trouver l'indice du coefficient de plus grande valeur absolue, ce qui nous donne notre meilleur pivot pour minimiser les erreurs d'arrondi.
+4. Les opérations d'élimination utilisent l'indexation pour accéder aux coefficients appropriés et les modifier.
+
+Et voilà ! Avec ce code, vous pouvez résoudre des systèmes linéaires plus rapidement qu'il n'en faut pour dire "Carl Friedrich Gauss" !
+
+Résolvons par exemple le système de cinq équations à cinq inconnues suivant :
+
+$$
+\begin{cases}
+2&x& +& &y& -& &z& +& 2&w& -& 3&v& =& 8 \\
+-3&x& -& &y& +& 2&z& -& &w& +& 4&v& =& -11 \\
+-2&x& +& &y& +& 2&z& +& &w& -& 2&v& =& -3 \\
+&x& -& &y& +& & z& -& & w & +& & v& =& 2 \\
+4&x& -& 2&y& +& 3&z& -& 2&w& +& & v& =& 3
+\end{cases}
+$$
+
+```{python}
+systeme = np.array([
+    [2, 1, -1, 2, -3, 8],
+    [-3, -1, 2, -1, 4, -11],
+    [-2, 1, 2, 1, -2, -3],
+    [1, -1, 1, -1, 1, 2],
+    [4, -2, 3, -2, 1, 3]
+], dtype=float)
+
+resultat = pivot_gauss(systeme)
+print("Système après pivot de Gauss :")
+print(resultat)
+```
+
+Il n'y a plus qu'à remonter les équations pour trouver les valeurs de $x$, $y$, $z$, $w$, et $v$.
+
+On trouve en arrondissant les valeurs : $x=-2$, $y=-17$, $z=-3$, $w=4$, $v=-6$.
+
+## Conclusion
+
+La méthode du pivot de Gauss, c'est comme avoir un super-pouvoir pour résoudre des systèmes d'équations. Que vous le fassiez à la main ou avec Python, vous avez maintenant les outils pour dompter ces systèmes linéaires rebelles !
+
+Alors, la prochaine fois que quelqu'un vous parle de systèmes d'équations, vous pourrez fièrement dire : "Pas de panique, j'ai Gauss de mon côté !" 😎

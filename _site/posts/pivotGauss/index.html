@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="F. LALLEMAND">
+
+<title>La méthode du pivot de Gauss : résoudre des systèmes linéaires comme un pro ! – Le bloc-notes de M. LALLEMAND</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"fr"
+  });
+});
+</script> 
+  
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #BCD2E8;
+      }
+</style>
+<script src="https://kit.fontawesome.com/4010eb68d9.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Le bloc-notes de M. LALLEMAND</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/MathsLallemand"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.mim-libre.fr/\@lallemandfabrice"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">La méthode du pivot de Gauss : résoudre des systèmes linéaires comme un pro !</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Mathématiques</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Programmation</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Auteur·rice</div>
+      <div class="quarto-title-meta-contents">
+               <p>F. LALLEMAND </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Date de publication</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">8 octobre 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#cest-quoi-cette-histoire-de-pivot" id="toc-cest-quoi-cette-histoire-de-pivot" class="nav-link active" data-scroll-target="#cest-quoi-cette-histoire-de-pivot">C’est quoi cette histoire de pivot ?</a></li>
+  <li><a href="#un-exemple-pour-mieux-comprendre" id="toc-un-exemple-pour-mieux-comprendre" class="nav-link" data-scroll-target="#un-exemple-pour-mieux-comprendre">Un exemple pour mieux comprendre</a>
+  <ul class="collapse">
+  <li><a href="#étape-1-on-choisit-notre-pivot" id="toc-étape-1-on-choisit-notre-pivot" class="nav-link" data-scroll-target="#étape-1-on-choisit-notre-pivot">Étape 1 : On choisit notre pivot</a></li>
+  <li><a href="#étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation" id="toc-étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation" class="nav-link" data-scroll-target="#étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation">Étape 2 : On élimine <span class="math inline">\(x\)</span> dans la deuxième et la troisième équation</a></li>
+  <li><a href="#étape-3-on-élimine-y-dans-la-troisième-équation" id="toc-étape-3-on-élimine-y-dans-la-troisième-équation" class="nav-link" data-scroll-target="#étape-3-on-élimine-y-dans-la-troisième-équation">Étape 3 : On élimine <span class="math inline">\(y\)</span> dans la troisième équation</a></li>
+  <li><a href="#étape-4-on-résout" id="toc-étape-4-on-résout" class="nav-link" data-scroll-target="#étape-4-on-résout">Étape 4 : On résout !</a></li>
+  </ul></li>
+  <li><a href="#généralisation-et-équivalence-des-systèmes" id="toc-généralisation-et-équivalence-des-systèmes" class="nav-link" data-scroll-target="#généralisation-et-équivalence-des-systèmes">Généralisation et équivalence des systèmes</a></li>
+  <li><a href="#automatisons-tout-ça-avec-python" id="toc-automatisons-tout-ça-avec-python" class="nav-link" data-scroll-target="#automatisons-tout-ça-avec-python">Automatisons tout ça avec Python !</a>
+  <ul class="collapse">
+  <li><a href="#représentation-du-système-en-python" id="toc-représentation-du-système-en-python" class="nav-link" data-scroll-target="#représentation-du-système-en-python">Représentation du système en Python</a></li>
+  <li><a href="#accès-aux-coefficients" id="toc-accès-aux-coefficients" class="nav-link" data-scroll-target="#accès-aux-coefficients">Accès aux coefficients</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/pivotGauss/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="cest-quoi-cette-histoire-de-pivot" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-cette-histoire-de-pivot">C’est quoi cette histoire de pivot ?</h2>
+<p>La méthode du pivot de Gauss, c’est une technique super efficace pour résoudre des systèmes d’équations linéaires. L’idée, c’est de transformer notre système initial en un système équivalent, mais beaucoup plus simple à résoudre. Comment ? En éliminant progressivement les variables, une par une, jusqu’à obtenir un système triangulaire.</p>
+<p>Imaginez que vous essayez de démêler un nœud de câbles. Vous commencez par un bout, vous dégagez un câble, puis un autre, et ainsi de suite jusqu’à ce que tout soit bien ordonné. C’est exactement ce que fait la méthode de Gauss avec nos équations !</p>
+</section>
+<section id="un-exemple-pour-mieux-comprendre" class="level2">
+<h2 class="anchored" data-anchor-id="un-exemple-pour-mieux-comprendre">Un exemple pour mieux comprendre</h2>
+<p>Allez, on se lance dans un exemple concret. On va résoudre un système de trois équations à trois inconnues. Attachez vos ceintures, ça va décoiffer !</p>
+<p>Soit le système suivant :</p>
+<p><span class="math display">\[
+\begin{cases}
+2&amp;x &amp;+&amp; y &amp;-&amp; &amp;z &amp;=&amp; 8 \\
+-3&amp;x &amp;-&amp; y &amp;+&amp; 2&amp;z &amp;=&amp; -11 \\
+-2&amp;x &amp;+&amp; y &amp;+&amp; 2&amp;z &amp;=&amp; -3
+\end{cases}
+\]</span></p>
+<section id="étape-1-on-choisit-notre-pivot" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-on-choisit-notre-pivot">Étape 1 : On choisit notre pivot</h3>
+<p>On va utiliser la première équation comme pivot pour éliminer <span class="math inline">\(x\)</span> dans les autres équations.</p>
+</section>
+<section id="étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation">Étape 2 : On élimine <span class="math inline">\(x\)</span> dans la deuxième et la troisième équation</h3>
+<ul>
+<li>Pour la deuxième équation, on ajoute 3/2 fois la première équation</li>
+<li>Pour la troisième équation, on ajoute 1 fois la première équation</li>
+</ul>
+<p>On obtient le système équivalent :</p>
+<p><span class="math display">\[
+\begin{cases}
+2&amp;x &amp;+&amp; &amp;y &amp;-&amp; &amp;z &amp;=&amp; 8 \\
+&amp; &amp;&amp;\frac{1}{2}&amp;y &amp;+&amp; \frac{1}{2}&amp;z &amp;=&amp; 1 \\
+&amp; &amp;&amp;2&amp;y &amp;+&amp; &amp;z &amp;=&amp; 5
+\end{cases}
+\]</span></p>
+</section>
+<section id="étape-3-on-élimine-y-dans-la-troisième-équation" class="level3">
+<h3 class="anchored" data-anchor-id="étape-3-on-élimine-y-dans-la-troisième-équation">Étape 3 : On élimine <span class="math inline">\(y\)</span> dans la troisième équation</h3>
+<p>Maintenant, on utilise la deuxième équation comme pivot pour éliminer <span class="math inline">\(y\)</span> dans la troisième équation. On multiplie la deuxième équation par <span class="math inline">\(-4\)</span> et on l’ajoute à la troisième équation :</p>
+<p><span class="math display">\[
+\begin{cases}
+2&amp; &amp;+ &amp;&amp;y &amp;- &amp;&amp;z &amp;= 8 \\
+&amp;&amp;&amp;\frac{1}{2}&amp;y &amp;+ &amp;\frac{1}{2}&amp;z &amp;= 1 \\
+&amp;&amp; &amp;&amp;&amp;-&amp;&amp;z &amp;= 1
+\end{cases}
+\]</span></p>
+</section>
+<section id="étape-4-on-résout" class="level3">
+<h3 class="anchored" data-anchor-id="étape-4-on-résout">Étape 4 : On résout !</h3>
+<p>Et voilà, on a notre système triangulaire ! C’est comme avoir dénoué tous nos câbles. Maintenant, on peut facilement trouver nos inconnues :</p>
+<ol type="1">
+<li>De la dernière équation : <span class="math inline">\(z = -1\)</span></li>
+<li>De la deuxième équation : <span class="math inline">\(\frac{1}{2}y + \frac{1}{2}(-1) = 1\)</span>, donc <span class="math inline">\(y = 3\)</span></li>
+<li>De la première équation : <span class="math inline">\(2x + 3 + 1 = 8\)</span>, donc <span class="math inline">\(x = 2\)</span></li>
+</ol>
+<p>Notre solution est donc <span class="math inline">\((x, y, z) = (2, 3, -1)\)</span>.</p>
+</section>
+</section>
+<section id="généralisation-et-équivalence-des-systèmes" class="level2">
+<h2 class="anchored" data-anchor-id="généralisation-et-équivalence-des-systèmes">Généralisation et équivalence des systèmes</h2>
+<p>Maintenant que nous avons vu un exemple concret, parlons un peu de ce qui se passe en coulisses. La magie de la méthode du pivot de Gauss repose sur l’utilisation d’opérations élémentaires qui nous permettent de passer d’un système à un autre équivalent.</p>
+<p>Mais qu’est-ce qu’un système équivalent ? C’est simple : deux systèmes sont équivalents s’ils ont exactement les mêmes solutions. En d’autres termes, peu importe lequel des deux systèmes, vous résolvez, vous obtiendrez le même résultat final.</p>
+<p>Les opérations élémentaires que nous utilisons sont :</p>
+<ol type="1">
+<li>Échanger deux équations</li>
+<li>Multiplier une équation par un nombre non nul</li>
+<li>Ajouter à une équation un multiple d’une autre équation</li>
+</ol>
+<p>Ces opérations sont comme des tours de magie mathématiques : elles transforment notre système, mais sans jamais changer ses solutions. C’est un peu comme si vous réarrangiez les pièces d’un puzzle sans changer l’image finale.</p>
+<p>Pourquoi est-ce si important ? Eh bien, cela signifie que nous pouvons manipuler notre système initial pour le rendre plus simple à résoudre, sans craindre de perdre ou de modifier les solutions en cours de route. C’est ce qui nous permet de passer d’un système compliqué à un système triangulaire facile à résoudre, comme nous l’avons fait dans notre exemple.</p>
+<p>Dans le cas général, pour un système de <span class="math inline">\(n\)</span> équations à <span class="math inline">\(n\)</span> inconnues, nous appliquons ces opérations de manière systématique :</p>
+<ol type="1">
+<li>On choisit un pivot (généralement le premier coefficient non nul de la première colonne) et on échange l’équation correspondante avec la première équation</li>
+<li>On utilise ce pivot pour éliminer la première variable dans toutes les équations suivantes</li>
+<li>On répète le processus avec la deuxième équation comme nouveau pivot, et ainsi de suite.</li>
+</ol>
+<p>À chaque étape, nous créons un nouveau système équivalent, jusqu’à obtenir un système triangulaire que nous pouvons résoudre facilement par substitution inverse.</p>
+<p>Cette approche nous permet de résoudre des systèmes de plus en plus grands et complexes, tout en gardant la certitude que nos manipulations préservent les solutions originales. C’est la beauté et la puissance de la méthode du pivot de Gauss !</p>
+</section>
+<section id="automatisons-tout-ça-avec-python" class="level2">
+<h2 class="anchored" data-anchor-id="automatisons-tout-ça-avec-python">Automatisons tout ça avec Python !</h2>
+<p>Maintenant que vous êtes des pros du pivot de Gauss, que diriez-vous d’automatiser tout ça avec un peu de code Python ? C’est parti !</p>
+<p>Mais avant de plonger dans le code, parlons un peu de la façon dont nous allons représenter notre système d’équations en Python.</p>
+<section id="représentation-du-système-en-python" class="level3">
+<h3 class="anchored" data-anchor-id="représentation-du-système-en-python">Représentation du système en Python</h3>
+<p>En Python, nous allons utiliser un tableau NumPy pour représenter notre système d’équations. Pourquoi NumPy ? Parce que c’est super efficace pour les calculs numériques et ça nous facilite la vie pour manipuler nos équations.</p>
+<p>Voici comment ça marche :</p>
+<ul>
+<li>Chaque ligne du tableau représente une équation du système.</li>
+<li>Les colonnes représentent les coefficients des variables et le terme constant.</li>
+<li>La dernière colonne contient les termes constants (les nombres à droite du signe égal dans nos équations).</li>
+</ul>
+<p>Par exemple, notre système initial :</p>
+<p><span class="math display">\[
+\begin{cases}
+2&amp;x&amp; +&amp; y&amp; -&amp; &amp;z&amp; =&amp; 8 \\
+-3&amp;x&amp; -&amp; y&amp; +&amp; 2&amp;z&amp; =&amp; -11 \\
+-2&amp;x&amp; +&amp; y&amp; +&amp; 2&amp;z&amp; =&amp; -3
+\end{cases}
+\]</span></p>
+<p>sera représenté par le tableau NumPy suivant :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>systeme <span class="op">=</span> np.array([</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>,  <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>,  <span class="dv">8</span>],</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>,  <span class="dv">2</span>, <span class="op">-</span><span class="dv">11</span>],</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">2</span>,  <span class="dv">1</span>,  <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>], dtype<span class="op">=</span><span class="bu">float</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="accès-aux-coefficients" class="level3">
+<h3 class="anchored" data-anchor-id="accès-aux-coefficients">Accès aux coefficients</h3>
+<p>Pour accéder aux différents coefficients dans notre tableau NumPy, on utilise l’indexation. Voici comment ça marche :</p>
+<ul>
+<li><code>systeme[i, j]</code> nous donne l’élément à la i-ème ligne et j-ème colonne.</li>
+<li>Les indices commencent à 0 (comme d’habitude en Python).</li>
+<li>Pour un système de n équations à n inconnues :
+<ul>
+<li><code>systeme[i, j]</code> pour i &lt; n et j &lt; n donne le coefficient de la (j+1)-ème variable dans la (i+1)-ème équation.</li>
+<li><code>systeme[i, n]</code> donne le terme constant de la (i+1)-ème équation.</li>
+</ul></li>
+</ul>
+<p>Par exemple :</p>
+<ul>
+<li><code>systeme[0, 0]</code> vaut 2 (coefficient de <span class="math inline">\(x\)</span> dans la première équation)</li>
+<li><code>systeme[1, 2]</code> vaut 2 (coefficient de <span class="math inline">\(z\)</span> dans la deuxième équation)</li>
+<li><code>systeme[2, 3]</code> vaut <span class="math inline">\(-3\)</span> (terme constant de la troisième équation).</li>
+</ul>
+<p>Cette représentation nous permet de manipuler facilement notre système d’équations en utilisant les opérations de NumPy, ce qui rend notre implémentation de la méthode du pivot de Gauss à la fois simple et efficace.</p>
+<p>Maintenant que nous avons compris comment représenter et manipuler notre système, passons au code !</p>
+<div id="58fcff1e" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> echanger_equations(systeme, i, j):</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    systeme[i], systeme[j] <span class="op">=</span> systeme[j].copy(), systeme[i].copy()</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> multiplier_equation(systeme, i, facteur):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    systeme[i] <span class="op">*=</span> facteur</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ajouter_multiple_equation(systeme, i, j, facteur):</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    systeme[i] <span class="op">+=</span> facteur <span class="op">*</span> systeme[j]</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pivot_gauss(systeme):</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    n, m <span class="op">=</span> systeme.shape</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">min</span>(n, m <span class="op">-</span> <span class="dv">1</span>)):</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Trouver le pivot maximal</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        pivot <span class="op">=</span> i <span class="op">+</span> np.argmax(np.<span class="bu">abs</span>(systeme[i:, i]))</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> systeme[pivot, i] <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Le système n'a pas de solution unique!"</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Échanger les équations</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> pivot <span class="op">!=</span> i:</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>            echanger_equations(systeme, i, pivot)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Éliminer les variables</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i <span class="op">+</span> <span class="dv">1</span>, n):</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            facteur <span class="op">=</span> <span class="op">-</span>systeme[j, i] <span class="op">/</span> systeme[i, i]</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>            ajouter_multiple_equation(systeme, j, i, facteur)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> systeme</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple d'utilisation</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>systeme <span class="op">=</span> np.array([</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">8</span>],</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">11</span>],</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>]</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Système initial :"</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(systeme)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>resultat <span class="op">=</span> pivot_gauss(systeme)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Système après pivot de Gauss :"</span>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Système initial :
+[[  2.   1.  -1.   8.]
+ [ -3.  -1.   2. -11.]
+ [ -2.   1.   2.  -3.]]
+
+Système après pivot de Gauss :
+[[ -3.          -1.           2.         -11.        ]
+ [  0.           1.66666667   0.66666667   4.33333333]
+ [  0.           0.           0.2         -0.2       ]]</code></pre>
+</div>
+</div>
+<p>Expliquons un peu ce code :</p>
+<ol type="1">
+<li><code>echanger_equations</code>, <code>multiplier_equation</code>, et <code>ajouter_multiple_equation</code> sont nos opérations élémentaires sur les équations. Elles utilisent l’indexation NumPy pour accéder et modifier les coefficients.</li>
+<li><code>pivot_gauss</code> est notre fonction principale qui applique la méthode du pivot de Gauss. Elle utilise <code>systeme.shape</code> pour obtenir les dimensions de notre tableau.</li>
+<li>Dans <code>pivot_gauss</code>, on utilise <code>np.argmax</code> pour trouver l’indice du coefficient de plus grande valeur absolue, ce qui nous donne notre meilleur pivot pour minimiser les erreurs d’arrondi.</li>
+<li>Les opérations d’élimination utilisent l’indexation pour accéder aux coefficients appropriés et les modifier.</li>
+</ol>
+<p>Et voilà ! Avec ce code, vous pouvez résoudre des systèmes linéaires plus rapidement qu’il n’en faut pour dire “Carl Friedrich Gauss” !</p>
+<p>Résolvons par exemple le système de cinq équations à cinq inconnues suivant :</p>
+<p><span class="math display">\[
+\begin{cases}
+2&amp;x&amp; +&amp; &amp;y&amp; -&amp; &amp;z&amp; +&amp; 2&amp;w&amp; -&amp; 3&amp;v&amp; =&amp; 8 \\
+-3&amp;x&amp; -&amp; &amp;y&amp; +&amp; 2&amp;z&amp; -&amp; &amp;w&amp; +&amp; 4&amp;v&amp; =&amp; -11 \\
+-2&amp;x&amp; +&amp; &amp;y&amp; +&amp; 2&amp;z&amp; +&amp; &amp;w&amp; -&amp; 2&amp;v&amp; =&amp; -3 \\
+&amp;x&amp; -&amp; &amp;y&amp; +&amp; &amp; z&amp; -&amp; &amp; w &amp; +&amp; &amp; v&amp; =&amp; 2 \\
+4&amp;x&amp; -&amp; 2&amp;y&amp; +&amp; 3&amp;z&amp; -&amp; 2&amp;w&amp; +&amp; &amp; v&amp; =&amp; 3
+\end{cases}
+\]</span></p>
+<div id="69c3237c" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>systeme <span class="op">=</span> np.array([</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>],</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">11</span>],</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    [<span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>],</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>],</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">4</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">3</span>]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>resultat <span class="op">=</span> pivot_gauss(systeme)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Système après pivot de Gauss :"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Système après pivot de Gauss :
+[[ 4.         -2.          3.         -2.          1.          3.        ]
+ [ 0.         -2.5         4.25       -2.5         4.75       -8.75      ]
+ [ 0.          0.          3.5         0.         -1.5        -1.5       ]
+ [ 0.          0.          0.          1.          0.68571429 -0.11428571]
+ [ 0.          0.          0.          0.         -0.45714286  2.74285714]]</code></pre>
+</div>
+</div>
+<p>Il n’y a plus qu’à remonter les équations pour trouver les valeurs de <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span>, <span class="math inline">\(w\)</span>, et <span class="math inline">\(v\)</span>.</p>
+<p>On trouve en arrondissant les valeurs : <span class="math inline">\(x=-2\)</span>, <span class="math inline">\(y=-17\)</span>, <span class="math inline">\(z=-3\)</span>, <span class="math inline">\(w=4\)</span>, <span class="math inline">\(v=-6\)</span>.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>La méthode du pivot de Gauss, c’est comme avoir un super-pouvoir pour résoudre des systèmes d’équations. Que vous le fassiez à la main ou avec Python, vous avez maintenant les outils pour dompter ces systèmes linéaires rebelles !</p>
+<p>Alors, la prochaine fois que quelqu’un vous parle de systèmes d’équations, vous pourrez fièrement dire : “Pas de panique, j’ai Gauss de mon côté !” 😎</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/flallemand\.fr\/blog");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="fabricelallemand15/blog" data-repo-id="R_kgDOI4abBQ" data-category="General" data-category-id="DIC_kwDOI4abBc4CT8OX" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="fr" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/pivotGauss/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>Mentions légales</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

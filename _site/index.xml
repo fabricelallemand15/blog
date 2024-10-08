@@ -10,7 +10,521 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 02 Oct 2024 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 07 Oct 2024 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>La méthode du pivot de Gauss : résoudre des systèmes linéaires comme un pro !</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/pivotGauss/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="cest-quoi-cette-histoire-de-pivot" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-cette-histoire-de-pivot">C’est quoi cette histoire de pivot ?</h2>
+<p>La méthode du pivot de Gauss, c’est une technique super efficace pour résoudre des systèmes d’équations linéaires. L’idée, c’est de transformer notre système initial en un système équivalent, mais beaucoup plus simple à résoudre. Comment ? En éliminant progressivement les variables, une par une, jusqu’à obtenir un système triangulaire.</p>
+<p>Imaginez que vous essayez de démêler un nœud de câbles. Vous commencez par un bout, vous dégagez un câble, puis un autre, et ainsi de suite jusqu’à ce que tout soit bien ordonné. C’est exactement ce que fait la méthode de Gauss avec nos équations !</p>
+</section>
+<section id="un-exemple-pour-mieux-comprendre" class="level2">
+<h2 class="anchored" data-anchor-id="un-exemple-pour-mieux-comprendre">Un exemple pour mieux comprendre</h2>
+<p>Allez, on se lance dans un exemple concret. On va résoudre un système de trois équations à trois inconnues. Attachez vos ceintures, ça va décoiffer !</p>
+<p>Soit le système suivant :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x%20&amp;+&amp;%20y%20&amp;-&amp;%20&amp;z%20&amp;=&amp;%208%20%5C%5C%0A-3&amp;x%20&amp;-&amp;%20y%20&amp;+&amp;%202&amp;z%20&amp;=&amp;%20-11%20%5C%5C%0A-2&amp;x%20&amp;+&amp;%20y%20&amp;+&amp;%202&amp;z%20&amp;=&amp;%20-3%0A%5Cend%7Bcases%7D%0A"></p>
+<section id="étape-1-on-choisit-notre-pivot" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-on-choisit-notre-pivot">Étape 1 : On choisit notre pivot</h3>
+<p>On va utiliser la première équation comme pivot pour éliminer <img src="https://latex.codecogs.com/png.latex?x"> dans les autres équations.</p>
+</section>
+<section id="étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation">Étape 2 : On élimine <img src="https://latex.codecogs.com/png.latex?x"> dans la deuxième et la troisième équation</h3>
+<ul>
+<li>Pour la deuxième équation, on ajoute 3/2 fois la première équation</li>
+<li>Pour la troisième équation, on ajoute 1 fois la première équation</li>
+</ul>
+<p>On obtient le système équivalent :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x%20&amp;+&amp;%20&amp;y%20&amp;-&amp;%20&amp;z%20&amp;=&amp;%208%20%5C%5C%0A&amp;%20&amp;&amp;%5Cfrac%7B1%7D%7B2%7D&amp;y%20&amp;+&amp;%20%5Cfrac%7B1%7D%7B2%7D&amp;z%20&amp;=&amp;%201%20%5C%5C%0A&amp;%20&amp;&amp;2&amp;y%20&amp;+&amp;%20&amp;z%20&amp;=&amp;%205%0A%5Cend%7Bcases%7D%0A"></p>
+</section>
+<section id="étape-3-on-élimine-y-dans-la-troisième-équation" class="level3">
+<h3 class="anchored" data-anchor-id="étape-3-on-élimine-y-dans-la-troisième-équation">Étape 3 : On élimine <img src="https://latex.codecogs.com/png.latex?y"> dans la troisième équation</h3>
+<p>Maintenant, on utilise la deuxième équation comme pivot pour éliminer <img src="https://latex.codecogs.com/png.latex?y"> dans la troisième équation. On multiplie la deuxième équation par <img src="https://latex.codecogs.com/png.latex?-4"> et on l’ajoute à la troisième équation :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;%20&amp;+%20&amp;&amp;y%20&amp;-%20&amp;&amp;z%20&amp;=%208%20%5C%5C%0A&amp;&amp;&amp;%5Cfrac%7B1%7D%7B2%7D&amp;y%20&amp;+%20&amp;%5Cfrac%7B1%7D%7B2%7D&amp;z%20&amp;=%201%20%5C%5C%0A&amp;&amp;%20&amp;&amp;&amp;-&amp;&amp;z%20&amp;=%201%0A%5Cend%7Bcases%7D%0A"></p>
+</section>
+<section id="étape-4-on-résout" class="level3">
+<h3 class="anchored" data-anchor-id="étape-4-on-résout">Étape 4 : On résout !</h3>
+<p>Et voilà, on a notre système triangulaire ! C’est comme avoir dénoué tous nos câbles. Maintenant, on peut facilement trouver nos inconnues :</p>
+<ol type="1">
+<li>De la dernière équation : <img src="https://latex.codecogs.com/png.latex?z%20=%20-1"></li>
+<li>De la deuxième équation : <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B2%7Dy%20+%20%5Cfrac%7B1%7D%7B2%7D(-1)%20=%201">, donc <img src="https://latex.codecogs.com/png.latex?y%20=%203"></li>
+<li>De la première équation : <img src="https://latex.codecogs.com/png.latex?2x%20+%203%20+%201%20=%208">, donc <img src="https://latex.codecogs.com/png.latex?x%20=%202"></li>
+</ol>
+<p>Notre solution est donc <img src="https://latex.codecogs.com/png.latex?(x,%20y,%20z)%20=%20(2,%203,%20-1)">.</p>
+</section>
+</section>
+<section id="généralisation-et-équivalence-des-systèmes" class="level2">
+<h2 class="anchored" data-anchor-id="généralisation-et-équivalence-des-systèmes">Généralisation et équivalence des systèmes</h2>
+<p>Maintenant que nous avons vu un exemple concret, parlons un peu de ce qui se passe en coulisses. La magie de la méthode du pivot de Gauss repose sur l’utilisation d’opérations élémentaires qui nous permettent de passer d’un système à un autre équivalent.</p>
+<p>Mais qu’est-ce qu’un système équivalent ? C’est simple : deux systèmes sont équivalents s’ils ont exactement les mêmes solutions. En d’autres termes, peu importe lequel des deux systèmes, vous résolvez, vous obtiendrez le même résultat final.</p>
+<p>Les opérations élémentaires que nous utilisons sont :</p>
+<ol type="1">
+<li>Échanger deux équations</li>
+<li>Multiplier une équation par un nombre non nul</li>
+<li>Ajouter à une équation un multiple d’une autre équation</li>
+</ol>
+<p>Ces opérations sont comme des tours de magie mathématiques : elles transforment notre système, mais sans jamais changer ses solutions. C’est un peu comme si vous réarrangiez les pièces d’un puzzle sans changer l’image finale.</p>
+<p>Pourquoi est-ce si important ? Eh bien, cela signifie que nous pouvons manipuler notre système initial pour le rendre plus simple à résoudre, sans craindre de perdre ou de modifier les solutions en cours de route. C’est ce qui nous permet de passer d’un système compliqué à un système triangulaire facile à résoudre, comme nous l’avons fait dans notre exemple.</p>
+<p>Dans le cas général, pour un système de <img src="https://latex.codecogs.com/png.latex?n"> équations à <img src="https://latex.codecogs.com/png.latex?n"> inconnues, nous appliquons ces opérations de manière systématique :</p>
+<ol type="1">
+<li>On choisit un pivot (généralement le premier coefficient non nul de la première colonne) et on échange l’équation correspondante avec la première équation</li>
+<li>On utilise ce pivot pour éliminer la première variable dans toutes les équations suivantes</li>
+<li>On répète le processus avec la deuxième équation comme nouveau pivot, et ainsi de suite.</li>
+</ol>
+<p>À chaque étape, nous créons un nouveau système équivalent, jusqu’à obtenir un système triangulaire que nous pouvons résoudre facilement par substitution inverse.</p>
+<p>Cette approche nous permet de résoudre des systèmes de plus en plus grands et complexes, tout en gardant la certitude que nos manipulations préservent les solutions originales. C’est la beauté et la puissance de la méthode du pivot de Gauss !</p>
+</section>
+<section id="automatisons-tout-ça-avec-python" class="level2">
+<h2 class="anchored" data-anchor-id="automatisons-tout-ça-avec-python">Automatisons tout ça avec Python !</h2>
+<p>Maintenant que vous êtes des pros du pivot de Gauss, que diriez-vous d’automatiser tout ça avec un peu de code Python ? C’est parti !</p>
+<p>Mais avant de plonger dans le code, parlons un peu de la façon dont nous allons représenter notre système d’équations en Python.</p>
+<section id="représentation-du-système-en-python" class="level3">
+<h3 class="anchored" data-anchor-id="représentation-du-système-en-python">Représentation du système en Python</h3>
+<p>En Python, nous allons utiliser un tableau NumPy pour représenter notre système d’équations. Pourquoi NumPy ? Parce que c’est super efficace pour les calculs numériques et ça nous facilite la vie pour manipuler nos équations.</p>
+<p>Voici comment ça marche :</p>
+<ul>
+<li>Chaque ligne du tableau représente une équation du système.</li>
+<li>Les colonnes représentent les coefficients des variables et le terme constant.</li>
+<li>La dernière colonne contient les termes constants (les nombres à droite du signe égal dans nos équations).</li>
+</ul>
+<p>Par exemple, notre système initial :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x&amp;%20+&amp;%20y&amp;%20-&amp;%20&amp;z&amp;%20=&amp;%208%20%5C%5C%0A-3&amp;x&amp;%20-&amp;%20y&amp;%20+&amp;%202&amp;z&amp;%20=&amp;%20-11%20%5C%5C%0A-2&amp;x&amp;%20+&amp;%20y&amp;%20+&amp;%202&amp;z&amp;%20=&amp;%20-3%0A%5Cend%7Bcases%7D%0A"></p>
+<p>sera représenté par le tableau NumPy suivant :</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1">systeme <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([</span>
+<span id="cb1-2">    [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>],</span>
+<span id="cb1-3">    [<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>],</span>
+<span id="cb1-4">    [<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>]</span>
+<span id="cb1-5">], dtype<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>)</span></code></pre></div>
+</section>
+<section id="accès-aux-coefficients" class="level3">
+<h3 class="anchored" data-anchor-id="accès-aux-coefficients">Accès aux coefficients</h3>
+<p>Pour accéder aux différents coefficients dans notre tableau NumPy, on utilise l’indexation. Voici comment ça marche :</p>
+<ul>
+<li><code>systeme[i, j]</code> nous donne l’élément à la i-ème ligne et j-ème colonne.</li>
+<li>Les indices commencent à 0 (comme d’habitude en Python).</li>
+<li>Pour un système de n équations à n inconnues :
+<ul>
+<li><code>systeme[i, j]</code> pour i &lt; n et j &lt; n donne le coefficient de la (j+1)-ème variable dans la (i+1)-ème équation.</li>
+<li><code>systeme[i, n]</code> donne le terme constant de la (i+1)-ème équation.</li>
+</ul></li>
+</ul>
+<p>Par exemple :</p>
+<ul>
+<li><code>systeme[0, 0]</code> vaut 2 (coefficient de <img src="https://latex.codecogs.com/png.latex?x"> dans la première équation)</li>
+<li><code>systeme[1, 2]</code> vaut 2 (coefficient de <img src="https://latex.codecogs.com/png.latex?z"> dans la deuxième équation)</li>
+<li><code>systeme[2, 3]</code> vaut <img src="https://latex.codecogs.com/png.latex?-3"> (terme constant de la troisième équation).</li>
+</ul>
+<p>Cette représentation nous permet de manipuler facilement notre système d’équations en utilisant les opérations de NumPy, ce qui rend notre implémentation de la méthode du pivot de Gauss à la fois simple et efficace.</p>
+<p>Maintenant que nous avons compris comment représenter et manipuler notre système, passons au code !</p>
+<div id="58fcff1e" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb2-2"></span>
+<span id="cb2-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> echanger_equations(systeme, i, j):</span>
+<span id="cb2-4">    systeme[i], systeme[j] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> systeme[j].copy(), systeme[i].copy()</span>
+<span id="cb2-5"></span>
+<span id="cb2-6"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> multiplier_equation(systeme, i, facteur):</span>
+<span id="cb2-7">    systeme[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*=</span> facteur</span>
+<span id="cb2-8"></span>
+<span id="cb2-9"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> ajouter_multiple_equation(systeme, i, j, facteur):</span>
+<span id="cb2-10">    systeme[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> facteur <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> systeme[j]</span>
+<span id="cb2-11"></span>
+<span id="cb2-12"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> pivot_gauss(systeme):</span>
+<span id="cb2-13">    n, m <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> systeme.shape</span>
+<span id="cb2-14">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">min</span>(n, m <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)):</span>
+<span id="cb2-15">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Trouver le pivot maximal</span></span>
+<span id="cb2-16">        pivot <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> np.argmax(np.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">abs</span>(systeme[i:, i]))</span>
+<span id="cb2-17">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> systeme[pivot, i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb2-18">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">ValueError</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Le système n'a pas de solution unique!"</span>)</span>
+<span id="cb2-19">        </span>
+<span id="cb2-20">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Échanger les équations</span></span>
+<span id="cb2-21">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> pivot <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> i:</span>
+<span id="cb2-22">            echanger_equations(systeme, i, pivot)</span>
+<span id="cb2-23">        </span>
+<span id="cb2-24">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Éliminer les variables</span></span>
+<span id="cb2-25">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> j <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(i <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, n):</span>
+<span id="cb2-26">            facteur <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>systeme[j, i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> systeme[i, i]</span>
+<span id="cb2-27">            ajouter_multiple_equation(systeme, j, i, facteur)</span>
+<span id="cb2-28">    </span>
+<span id="cb2-29">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> systeme</span>
+<span id="cb2-30"></span>
+<span id="cb2-31"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Exemple d'utilisation</span></span>
+<span id="cb2-32">systeme <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([</span>
+<span id="cb2-33">    [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>],</span>
+<span id="cb2-34">    [<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>],</span>
+<span id="cb2-35">    [<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>]</span>
+<span id="cb2-36">], dtype<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>)</span>
+<span id="cb2-37"></span>
+<span id="cb2-38"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Système initial :"</span>)</span>
+<span id="cb2-39"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(systeme)</span>
+<span id="cb2-40"></span>
+<span id="cb2-41">resultat <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pivot_gauss(systeme)</span>
+<span id="cb2-42"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Système après pivot de Gauss :"</span>)</span>
+<span id="cb2-43"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(resultat)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Système initial :
+[[  2.   1.  -1.   8.]
+ [ -3.  -1.   2. -11.]
+ [ -2.   1.   2.  -3.]]
+
+Système après pivot de Gauss :
+[[ -3.          -1.           2.         -11.        ]
+ [  0.           1.66666667   0.66666667   4.33333333]
+ [  0.           0.           0.2         -0.2       ]]</code></pre>
+</div>
+</div>
+<p>Expliquons un peu ce code :</p>
+<ol type="1">
+<li><code>echanger_equations</code>, <code>multiplier_equation</code>, et <code>ajouter_multiple_equation</code> sont nos opérations élémentaires sur les équations. Elles utilisent l’indexation NumPy pour accéder et modifier les coefficients.</li>
+<li><code>pivot_gauss</code> est notre fonction principale qui applique la méthode du pivot de Gauss. Elle utilise <code>systeme.shape</code> pour obtenir les dimensions de notre tableau.</li>
+<li>Dans <code>pivot_gauss</code>, on utilise <code>np.argmax</code> pour trouver l’indice du coefficient de plus grande valeur absolue, ce qui nous donne notre meilleur pivot pour minimiser les erreurs d’arrondi.</li>
+<li>Les opérations d’élimination utilisent l’indexation pour accéder aux coefficients appropriés et les modifier.</li>
+</ol>
+<p>Et voilà ! Avec ce code, vous pouvez résoudre des systèmes linéaires plus rapidement qu’il n’en faut pour dire “Carl Friedrich Gauss” !</p>
+<p>Résolvons par exemple le système de cinq équations à cinq inconnues suivant :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x&amp;%20+&amp;%20&amp;y&amp;%20-&amp;%20&amp;z&amp;%20+&amp;%202&amp;w&amp;%20-&amp;%203&amp;v&amp;%20=&amp;%208%20%5C%5C%0A-3&amp;x&amp;%20-&amp;%20&amp;y&amp;%20+&amp;%202&amp;z&amp;%20-&amp;%20&amp;w&amp;%20+&amp;%204&amp;v&amp;%20=&amp;%20-11%20%5C%5C%0A-2&amp;x&amp;%20+&amp;%20&amp;y&amp;%20+&amp;%202&amp;z&amp;%20+&amp;%20&amp;w&amp;%20-&amp;%202&amp;v&amp;%20=&amp;%20-3%20%5C%5C%0A&amp;x&amp;%20-&amp;%20&amp;y&amp;%20+&amp;%20&amp;%20z&amp;%20-&amp;%20&amp;%20w%20&amp;%20+&amp;%20&amp;%20v&amp;%20=&amp;%202%20%5C%5C%0A4&amp;x&amp;%20-&amp;%202&amp;y&amp;%20+&amp;%203&amp;z&amp;%20-&amp;%202&amp;w&amp;%20+&amp;%20&amp;%20v&amp;%20=&amp;%203%0A%5Cend%7Bcases%7D%0A"></p>
+<div id="69c3237c" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">systeme <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([</span>
+<span id="cb4-2">    [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>],</span>
+<span id="cb4-3">    [<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>],</span>
+<span id="cb4-4">    [<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>],</span>
+<span id="cb4-5">    [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>],</span>
+<span id="cb4-6">    [<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>]</span>
+<span id="cb4-7">], dtype<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">float</span>)</span>
+<span id="cb4-8"></span>
+<span id="cb4-9">resultat <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> pivot_gauss(systeme)</span>
+<span id="cb4-10"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Système après pivot de Gauss :"</span>)</span>
+<span id="cb4-11"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(resultat)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Système après pivot de Gauss :
+[[ 4.         -2.          3.         -2.          1.          3.        ]
+ [ 0.         -2.5         4.25       -2.5         4.75       -8.75      ]
+ [ 0.          0.          3.5         0.         -1.5        -1.5       ]
+ [ 0.          0.          0.          1.          0.68571429 -0.11428571]
+ [ 0.          0.          0.          0.         -0.45714286  2.74285714]]</code></pre>
+</div>
+</div>
+<p>Il n’y a plus qu’à remonter les équations pour trouver les valeurs de <img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?y">, <img src="https://latex.codecogs.com/png.latex?z">, <img src="https://latex.codecogs.com/png.latex?w">, et <img src="https://latex.codecogs.com/png.latex?v">.</p>
+<p>On trouve en arrondissant les valeurs : <img src="https://latex.codecogs.com/png.latex?x=-2">, <img src="https://latex.codecogs.com/png.latex?y=-17">, <img src="https://latex.codecogs.com/png.latex?z=-3">, <img src="https://latex.codecogs.com/png.latex?w=4">, <img src="https://latex.codecogs.com/png.latex?v=-6">.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>La méthode du pivot de Gauss, c’est comme avoir un super-pouvoir pour résoudre des systèmes d’équations. Que vous le fassiez à la main ou avec Python, vous avez maintenant les outils pour dompter ces systèmes linéaires rebelles !</p>
+<p>Alors, la prochaine fois que quelqu’un vous parle de systèmes d’équations, vous pourrez fièrement dire : “Pas de panique, j’ai Gauss de mon côté !” 😎</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>Python</category>
+  <category>Programmation</category>
+  <guid>https://flallemand.fr/blog/posts/pivotGauss/</guid>
+  <pubDate>Mon, 07 Oct 2024 22:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Découvrir les liens entre les maths et la musique</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -4218,76 +4732,6 @@ Vidéo 2 : <a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnee
   <guid>https://flallemand.fr/blog/posts/lumniBDD/</guid>
   <pubDate>Sun, 24 Jul 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/lumniBDD/lumniBDD.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>La chaîne YouTube codeur-pro</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/codeurpro/</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-La chaîne YouTube codeur-pro est une bonne source de petites vidéos très bien faites et éclairantes sur différents aspects du programme de NSI.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Attention, cependant, les élèves de NSI ne sont pas la cible visée par cette chaîne, donc certains éléments évoqués vont bien plus loin que le programme !
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Dans la série “Bases de l’informatique”, les vidéos suivantes sont incontournables :
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Comment fonctionne un ordinateur ?
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" src="https://www.youtube.com/embed/85XUJXHbjBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:heading -->
-<h2 class="anchored">
-Un système d’exploitation, c’est quoi ?
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" src="https://www.youtube.com/embed/YScMI8lsy9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:heading -->
-<h2 class="anchored">
-Le binaire, c’est quoi ?
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" src="https://www.youtube.com/embed/ysoWgx186DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:heading -->
-<h2 class="anchored">
-Les portes logiques
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" src="https://www.youtube.com/embed/iTH39L2d7bg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<!-- wp:heading -->
-<h2 class="anchored">
-Comment créer un programme ?
-</h2>
-<!-- /wp:heading -->
-<iframe class="video" src="https://www.youtube.com/embed/WCxMw9qi8TE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/codeurpro/</guid>
-  <pubDate>Fri, 01 Jul 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/codeurpro/codeurpro.png" medium="image" type="image/png" height="36" width="144"/>
 </item>
 </channel>
 </rss>
