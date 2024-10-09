@@ -165,7 +165,7 @@ font-style: inherit;">float</span>)</span></code></pre></div>
 </ul>
 <p>Cette représentation nous permet de manipuler facilement notre système d’équations en utilisant les opérations de NumPy, ce qui rend notre implémentation de la méthode du pivot de Gauss à la fois simple et efficace.</p>
 <p>Maintenant que nous avons compris comment représenter et manipuler notre système, passons au code !</p>
-<div id="58fcff1e" class="cell" data-execution_count="1">
+<div id="6739fac9" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
@@ -385,7 +385,7 @@ Système après pivot de Gauss :
 <p>Et voilà ! Avec ce code, vous pouvez résoudre des systèmes linéaires plus rapidement qu’il n’en faut pour dire “Carl Friedrich Gauss” !</p>
 <p>Résolvons par exemple le système de cinq équations à cinq inconnues suivant :</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x&amp;%20+&amp;%20&amp;y&amp;%20-&amp;%20&amp;z&amp;%20+&amp;%202&amp;w&amp;%20-&amp;%203&amp;v&amp;%20=&amp;%208%20%5C%5C%0A-3&amp;x&amp;%20-&amp;%20&amp;y&amp;%20+&amp;%202&amp;z&amp;%20-&amp;%20&amp;w&amp;%20+&amp;%204&amp;v&amp;%20=&amp;%20-11%20%5C%5C%0A-2&amp;x&amp;%20+&amp;%20&amp;y&amp;%20+&amp;%202&amp;z&amp;%20+&amp;%20&amp;w&amp;%20-&amp;%202&amp;v&amp;%20=&amp;%20-3%20%5C%5C%0A&amp;x&amp;%20-&amp;%20&amp;y&amp;%20+&amp;%20&amp;%20z&amp;%20-&amp;%20&amp;%20w%20&amp;%20+&amp;%20&amp;%20v&amp;%20=&amp;%202%20%5C%5C%0A4&amp;x&amp;%20-&amp;%202&amp;y&amp;%20+&amp;%203&amp;z&amp;%20-&amp;%202&amp;w&amp;%20+&amp;%20&amp;%20v&amp;%20=&amp;%203%0A%5Cend%7Bcases%7D%0A"></p>
-<div id="69c3237c" class="cell" data-execution_count="2">
+<div id="7b802c41" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">systeme <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> np.array([</span>
@@ -514,6 +514,12 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>La méthode du pivot de Gauss, c’est comme avoir un super-pouvoir pour résoudre des systèmes d’équations. Que vous le fassiez à la main ou avec Python, vous avez maintenant les outils pour dompter ces systèmes linéaires rebelles !</p>
 <p>Alors, la prochaine fois que quelqu’un vous parle de systèmes d’équations, vous pourrez fièrement dire : “Pas de panique, j’ai Gauss de mon côté !” 😎</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Carl_Friedrich_Gauss_1840_by_Jensen.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Carl Friedrich Gauss"><img src="https://flallemand.fr/blog/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Carl Friedrich Gauss"></a></p>
+<figcaption>Carl Friedrich Gauss</figcaption>
+</figure>
+</div>
 
 
 </section>
@@ -524,6 +530,7 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div>
   <category>Programmation</category>
   <guid>https://flallemand.fr/blog/posts/pivotGauss/</guid>
   <pubDate>Mon, 07 Oct 2024 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Découvrir les liens entre les maths et la musique</title>

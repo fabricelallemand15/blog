@@ -2,6 +2,7 @@
 title: "La méthode du pivot de Gauss : résoudre des systèmes linéaires comme un pro !"
 date: "2024-10-08"
 categories: [Mathématiques, Python, Programmation]
+image: Carl_Friedrich_Gauss_1840_by_Jensen.jpg
 ---
 
 ## C'est quoi cette histoire de pivot ?
@@ -237,3 +238,5 @@ On trouve en arrondissant les valeurs : $x=-2$, $y=-17$, $z=-3$, $w=4$, $v=-6$.
 La méthode du pivot de Gauss, c'est comme avoir un super-pouvoir pour résoudre des systèmes d'équations. Que vous le fassiez à la main ou avec Python, vous avez maintenant les outils pour dompter ces systèmes linéaires rebelles !
 
 Alors, la prochaine fois que quelqu'un vous parle de systèmes d'équations, vous pourrez fièrement dire : "Pas de panique, j'ai Gauss de mon côté !" 😎
+
+![Carl Friedrich Gauss](Carl_Friedrich_Gauss_1840_by_Jensen.jpg){width=50%}
