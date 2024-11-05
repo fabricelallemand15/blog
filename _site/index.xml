@@ -9,8 +9,215 @@
 <link>https://flallemand.fr/blog/</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 07 Oct 2024 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.6.32</generator>
+<lastBuildDate>Mon, 04 Nov 2024 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Record battu pour les nombres premiers !</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="la-découverte-dun-nombre-premier-record-une-nouvelle-ère-pour-gimps" class="level2">
+<h2 class="anchored" data-anchor-id="la-découverte-dun-nombre-premier-record-une-nouvelle-ère-pour-gimps">La Découverte d’un Nombre Premier Record : Une Nouvelle ère pour GIMPS</h2>
+<p>Le 21 octobre 2024, le projet GIMPS (Great Internet Mersenne Prime Search) a annoncé la découverte d’un nouveau nombre premier de Mersenne, 2<sup>136279841</sup>-1, composé de 41 024 320 chiffres. Cette découverte marque un tournant dans l’histoire de GIMPS, car elle met fin à 28 années de domination des ordinateurs personnels dans la recherche de ces nombres rares.</p>
+<p>En effet, ce nombre premier record a été découvert grâce à l’utilisation de GPUs (processeurs graphiques), une technologie initialement utilisée pour les cartes vidéo et le minage de cryptomonnaies, mais qui est aujourd’hui au cœur de la révolution de l’intelligence artificielle. Mihai Preda, un contributeur de GIMPS, a développé un logiciel de recherche de nombres premiers de Mersenne compatible avec les GPUs en 2017. Luke Durant, un ancien employé de NVIDIA et fervent partisan des GPUs, a vu en cette technologie une opportunité unique pour GIMPS.</p>
+<p>Durant a mis en place une infrastructure pour exécuter et maintenir une suite de logiciels GIMPS sur plusieurs serveurs GPU, créant ainsi un “supercalculateur cloud”. Ce réseau, composé de milliers de GPUs répartis dans 24 centres de données et 17 pays, a permis à Durant de découvrir le nouveau nombre premier après près d’un an de recherche. Le 11 octobre 2024, un GPU NVIDIA A100 à Dublin, en Irlande, a signalé que M136279841 était probablement premier, et le 12 octobre, un GPU NVIDIA H100 à San Antonio, au Texas, a confirmé sa primalité à l’aide d’un <strong>test de Lucas-Lehmer</strong>.</p>
+<p>Une fois le nombre premier probable identifié, plusieurs tests de Lucas-Lehmer ont été effectués par différents contributeurs de GIMPS utilisant différents programmes et matériels pour confirmer la découverte. Cette collaboration a impliqué Aaron Blosser utilisant Prime95 sur des CPUs Intel, ainsi que Durant, James Heinrich, Serge Batalov, Ken Kriesel et Preda utilisant PRPLL/GpuOwl sur des GPUs AMD et NVIDIA. La primalité du nombre a été confirmée le 19 octobre par Serge Batalov utilisant Mlucas sur un CPU Intel.</p>
+<p><strong>GIMPS</strong>, fondé en 1996 par George Woltman, est un projet collaboratif qui rassemble des milliers de bénévoles à la recherche de <strong>nombres premiers de Mersenne</strong>. Ces nombres premiers, nommés d’après le moine français Marin Mersenne, sont de la forme 2<sup>P</sup>-1, où P est un nombre premier. GIMPS a permis de découvrir les 18 derniers nombres premiers de Mersenne, dont le nouveau record. Le projet offre une récompense de 3 000 $ à toute personne découvrant un nouveau nombre premier.</p>
+<p>Luke Durant, le découvreur du 52e nombre premier de Mersenne, est l’un des contributeurs les plus prolifiques de GIMPS. Son investissement dans le projet, qui a impliqué des dépenses considérables pour l’utilisation de GPUs dans le cloud, témoigne de son engagement envers la recherche mathématique. Durant prévoit de faire don de sa récompense de 3 000 $ au département de mathématiques de l’Alabama School of Math and Science.</p>
+<p>Cette découverte marque une étape importante dans l’histoire de GIMPS et de la recherche de nombres premiers. L’utilisation de GPUs dans le cloud ouvre de nouvelles perspectives pour le projet et pourrait accélérer la découverte de futurs nombres premiers de Mersenne. La collaboration entre les bénévoles et l’utilisation de technologies innovantes ont permis de repousser les limites de la connaissance mathématique.</p>
+</section>
+<section id="que-sont-les-nombres-premiers-de-mersenne" class="level2">
+<h2 class="anchored" data-anchor-id="que-sont-les-nombres-premiers-de-mersenne">Que sont les nombres premiers de Mersenne ?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Marin_mersenne.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Marin Mersenne"><img src="https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/Marin_mersenne.jpg" class="img-fluid figure-img" alt="Marin Mersenne"></a></p>
+<figcaption>Marin Mersenne</figcaption>
+</figure>
+</div>
+<p>Les nombres premiers de Mersenne sont des nombres premiers de la forme <img src="https://latex.codecogs.com/png.latex?2%5EP-1">, où <img src="https://latex.codecogs.com/png.latex?P"> est un nombre premier. Ils sont nommés d’après le moine français Marin Mersenne, qui a étudié ces nombres au 17e siècle. Les nombres premiers de Mersenne sont particulièrement intéressants pour les mathématiciens en raison de leur forme simple et de leurs propriétés mathématiques. Ils ont des applications dans divers domaines des mathématiques et de l’informatique, notamment la cryptographie et la théorie des nombres.</p>
+<p>Tous les nombres de la forme <img src="https://latex.codecogs.com/png.latex?2%5EP-1"> ne sont pas des nombres premiers de Mersenne. Par exemple, <img src="https://latex.codecogs.com/png.latex?2%5E%7B11%7D-1=2047"> n’est pas un nombre premier, car il peut être décomposé en <img src="https://latex.codecogs.com/png.latex?23%20%5Ctimes%2089">. La recherche de nombres premiers de Mersenne est un domaine actif de la recherche mathématique, et de nombreux projets, dont GIMPS, sont dédiés à leur découverte.</p>
+</section>
+<section id="quelques-explications-sur-le-teste-de-lucas-lehmer" class="level2">
+<h2 class="anchored" data-anchor-id="quelques-explications-sur-le-teste-de-lucas-lehmer">Quelques explications sur le teste de Lucas-Lehmer</h2>
+<p>Le test de Lucas-Lehmer est une méthode utilisée pour déterminer si un nombre de Mersenne est premier. Il repose sur une suite récurrente définie par la relation de récurrence suivante :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AS_0%20=%204,%20%5Cquad%20S_%7Bn+1%7D%20=%20S_n%5E2%20-%202%0A"></p>
+<p>Un nombre de Mersenne <img src="https://latex.codecogs.com/png.latex?2%5EP-1"> est premier si et seulement si <img src="https://latex.codecogs.com/png.latex?S_%7BP-2%7D%20%5Cequiv%200%20%5Cpmod%7B2%5EP-1%7D">. Autrement dit, si <img src="https://latex.codecogs.com/png.latex?S_%7BP-2%7D"> est divisible par <img src="https://latex.codecogs.com/png.latex?2%5EP-1">, alors le nombre de Mersenne est premier.</p>
+<p>Le test de Lucas-Lehmer est particulièrement efficace pour les nombres de Mersenne, car il permet de vérifier leur primalité en un temps polynomial par rapport à la taille du nombre. Cela en fait un outil précieux pour la recherche de nombres premiers de Mersenne.</p>
+<p>Voici une fonction Python qui implémente le test de Lucas-Lehmer pour vérifier si un nombre de Mersenne est premier :</p>
+<div id="c98066b0" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> lucas_lehmer(p):</span>
+<span id="cb1-2">    s <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span>
+<span id="cb1-3">    m <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> _ <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>):</span>
+<span id="cb1-5">        s <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (s<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> m</span>
+<span id="cb1-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> s <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># test avec p = 7 (nombre de Mersenne 2^7 - 1 = 127 premier)</span></span>
+<span id="cb1-9">p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span></span>
+<span id="cb1-10"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> lucas_lehmer(p):</span>
+<span id="cb1-11">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Le nombre de Mersenne 2^</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>p<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> - 1 est premier."</span>)</span>
+<span id="cb1-12"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb1-13">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Le nombre de Mersenne 2^</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>p<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> - 1 n'est pas premier."</span>)</span>
+<span id="cb1-14"></span>
+<span id="cb1-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># test avec p = 11 (nombre de Mersenne 2^11 - 1 = 2047 = 23 * 89)</span></span>
+<span id="cb1-16">p <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span></span>
+<span id="cb1-17"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> lucas_lehmer(p):</span>
+<span id="cb1-18">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Le nombre de Mersenne 2^</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>p<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> - 1 est premier."</span>)</span>
+<span id="cb1-19"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb1-20">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Le nombre de Mersenne 2^</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>p<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> - 1 n'est pas premier."</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Le nombre de Mersenne 2^7 - 1 est premier.
+Le nombre de Mersenne 2^11 - 1 n'est pas premier.</code></pre>
+</div>
+</div>
+<p>Dans cette fonction, <code>p</code> est l’exposant du nombre de Mersenne, et la fonction renvoie <code>True</code> si le nombre de Mersenne est premier et <code>False</code> sinon.</p>
+<p>Évidemment, pour des nombres de Mersenne de taille importante, il est nécessaire d’utiliser des algorithmes et des implémentations plus sophistiqués pour effectuer le test de Lucas-Lehmer de manière efficace.</p>
+</section>
+<section id="vous-aussi-participez-à-la-recherche-de-nombres-premiers" class="level2">
+<h2 class="anchored" data-anchor-id="vous-aussi-participez-à-la-recherche-de-nombres-premiers">Vous aussi, participez à la recherche de nombres premiers !</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="site_GIMPS.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Le site de GIMPS"><img src="https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/site_GIMPS.png" class="img-fluid figure-img" alt="Le site de GIMPS"></a></p>
+<figcaption>Le site de GIMPS</figcaption>
+</figure>
+</div>
+<p>Si vous êtes passionné par les mathématiques et que vous souhaitez contribuer à la recherche de nombres premiers, vous pouvez <a href="https://www.mersenne.org/download/" target="_blank">rejoindre le projet GIMPS en téléchargeant le logiciel Prime95</a> sur votre ordinateur. Le logiciel utilise la puissance de calcul de votre CPU pour effectuer des tests de primalité sur des nombres de Mersenne. En participant à ce projet, vous contribuerez à l’avancement de la recherche mathématique et aurez peut-être la chance de découvrir le prochain nombre premier record ! Vous pourrez alors entrer dans l’histoire des mathématiques en tant que découvreur d’un nombre premier de Mersenne et recevoir une récompense de 3 000 $.</p>
+</section>
+<section id="pour-aller-plus-loin" class="level2">
+<h2 class="anchored" data-anchor-id="pour-aller-plus-loin">Pour aller plus loin</h2>
+<p>Deux vidéos qui parlent de cette découverte :</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zsyGRDrDfbI?si=n9MWwEbTHPKS8myR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yp4ilFOtoeg?si=trjqYgmFML3T-jhD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+
+
+</section>
+
+ ]]></description>
+  <category>Actualités</category>
+  <category>Mathématiques</category>
+  <guid>https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/</guid>
+  <pubDate>Mon, 04 Nov 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/Marin_mersenne.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>La méthode du pivot de Gauss : résoudre des systèmes linéaires comme un pro !</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -4693,52 +4900,6 @@ Source : le site officiel des trophées : <a href="https://trophees-nsi.fr/" tar
   <guid>https://flallemand.fr/blog/posts/tropheesnsi/</guid>
   <pubDate>Wed, 07 Sep 2022 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/tropheesnsi/image_trophees_nsi.png" medium="image" type="image/png" height="77" width="144"/>
-</item>
-<item>
-  <title>Lumni : cours sur les bases de données</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/lumniBDD/</link>
-  <description><![CDATA[ 
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-La plateforme Lumni propose deux vidéos très bien faites qui couvrent le programme de terminale NSI sur les bases de données.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Vidéo 1 : <a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener">Qu’est-ce qu’une base de données relationnelle ?</a>
-</h2>
-<!-- /wp:heading -->
-<!-- wp:image {"align":"center","id":247,"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image aligncenter size-large figure">
-<a href="http://www.lumni.fr/video/qu-est-ce-qu-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/07/Capture_lundi-25-juillet-2022_6h58m19s_001_Qu�est-ce-qu�une-base-de-donn�es-relationnelle-Vid�o-Voie-g�n�rale-Lumni-Mozilla-Firefox-1-1024x567.png" alt="" class="wp-image-247 figure-img"></a>
-</figure>
-<!-- /wp:image -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Vidéo 2 : <a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener">Interrogation d’une base de données relationnelle</a>
-</h2>
-<!-- /wp:heading -->
-<!-- wp:image {"align":"center","id":248,"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image aligncenter size-large figure">
-<a href="http://www.lumni.fr/video/interrogation-d-une-base-de-donnees-relationnelle" target="_blank" rel="noreferrer noopener"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/07/snaptron_9anqpo1xcK-1024x563.jpg" alt="" class="wp-image-248 figure-img"></a>
-</figure>
-<!-- /wp:image -->
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>NSI</category>
-  <category>BDD</category>
-  <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/lumniBDD/</guid>
-  <pubDate>Sun, 24 Jul 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/lumniBDD/lumniBDD.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
