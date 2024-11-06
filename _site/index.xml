@@ -49,7 +49,7 @@
 <p>Un nombre de Mersenne <img src="https://latex.codecogs.com/png.latex?2%5EP-1"> est premier si et seulement si <img src="https://latex.codecogs.com/png.latex?S_%7BP-2%7D%20%5Cequiv%200%20%5Cpmod%7B2%5EP-1%7D">. Autrement dit, si <img src="https://latex.codecogs.com/png.latex?S_%7BP-2%7D"> est divisible par <img src="https://latex.codecogs.com/png.latex?2%5EP-1">, alors le nombre de Mersenne est premier.</p>
 <p>Le test de Lucas-Lehmer est particulièrement efficace pour les nombres de Mersenne, car il permet de vérifier leur primalité en un temps polynomial par rapport à la taille du nombre. Cela en fait un outil précieux pour la recherche de nombres premiers de Mersenne.</p>
 <p>Voici une fonction Python qui implémente le test de Lucas-Lehmer pour vérifier si un nombre de Mersenne est premier :</p>
-<div id="c98066b0" class="cell" data-execution_count="1">
+<div id="eaec5ff4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
@@ -1426,7 +1426,7 @@ font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
 <p>Comme le montre l’image ci-dessous, il faut aussi ajouter un dernier paramètre à la fonction <code>blt</code> pour que la couleur 12 (bleu) soit transparente également pour le personnage (dons dans la méthode <code>draw</code> de la classe <code>Personnage</code>).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fond_personnage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="" title="La couleur bleue derrière le personnage devient transparente"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/fond_personnage.png" class="img-fluid figure-img" style="width:50.0%" alt="La couleur bleue derrière le personnage devient transparente"></a></p>
+<p><a href="fond_personnage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="La couleur bleue derrière le personnage devient transparente"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/fond_personnage.png" class="img-fluid figure-img" style="width:50.0%" alt="La couleur bleue derrière le personnage devient transparente"></a></p>
 <figcaption>La couleur bleue derrière le personnage devient transparente</figcaption>
 </figure>
 </div>
@@ -1753,7 +1753,7 @@ background-color: null;
 font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tuto3_1_c.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="" title="Animation des nuages"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_1_c.gif" class="img-fluid figure-img" style="width:50.0%" alt="Animation des nuages"></a></p>
+<p><a href="tuto3_1_c.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Animation des nuages"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_1_c.gif" class="img-fluid figure-img" style="width:50.0%" alt="Animation des nuages"></a></p>
 <figcaption>Animation des nuages</figcaption>
 </figure>
 </div>
@@ -2016,7 +2016,7 @@ Avertissement
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="tuto3_2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="" title="Animation de la forêt"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_2.gif" class="img-fluid figure-img" style="width:50.0%" alt="Animation de la forêt"></a></p>
+<p><a href="tuto3_2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Animation de la forêt"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_2.gif" class="img-fluid figure-img" style="width:50.0%" alt="Animation de la forêt"></a></p>
 <figcaption>Animation de la forêt</figcaption>
 </figure>
 </div>
@@ -2044,11 +2044,7 @@ Avertissement
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://flallemand.fr/blog/posts/tribuneMS/larecherche.png" class="img-fluid figure-img" style="width:30.0%"></p>
-</figure>
-</div>
+<p><a href="https://www.larecherche.fr/tribune/r%C3%A9forme-du-lyc%C3%A9e-g%C3%A9n%C3%A9ral-petites-failles-ou-grandes-fractures"><img src="https://flallemand.fr/blog/posts/tribuneMS/larecherche.png" class="img-fluid" style="width:30.0%"></a></p>
 <p>Le collectif <a href="https://collectif-maths-sciences.fr/" target="_blank">Maths &amp; Sciences</a> a publié dans le numéro de La Recherche du 17 octobre 2023 une tribune qui analyse de façon très pertinente les conséquences de la réforme du lycée sur l’enseignement des sciences et des mathématiques au lycée.</p>
 <p>La tribune est à lire sur le site de La Recherche : <a href="https://www.larecherche.fr/tribune/r%C3%A9forme-du-lyc%C3%A9e-g%C3%A9n%C3%A9ral-petites-failles-ou-grandes-fractures" target="_blank">Tribune</a></p>
 <section id="résumé-de-la-tribune" class="level2">
@@ -2087,7 +2083,7 @@ Avertissement
 <p>La page d’histoire de la FSF nous emmène tout d’abord dans les premiers jours de l’organisation. Nous découvrons comment Richard Stallman, un programmeur visionnaire, a lancé la FSF avec pour objectif de promouvoir et de protéger les logiciels libres. Stallman a posé les bases de ce mouvement en créant la licence publique générale GNU (GPL), qui est devenue la pierre angulaire de la philosophie du logiciel libre.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fsf-history\img\event\rms-bw.jpg" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1" title="Richard Stallman"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/rms-bw.jpg" class="img-fluid figure-img" alt="Richard Stallman"></a></p>
+<p><a href="fsf-history\img\event\rms-bw.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Richard Stallman"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/rms-bw.jpg" class="img-fluid figure-img" alt="Richard Stallman"></a></p>
 <figcaption>Richard Stallman</figcaption>
 </figure>
 </div>
@@ -2105,7 +2101,7 @@ Avertissement
 <p>Enfin, la page officielle de la FSF souligne l’importance continue de l’organisation dans le paysage actuel du logiciel libre. La FSF continue de jouer un rôle crucial dans la défense des droits des utilisateurs et dans la sensibilisation du public aux enjeux du logiciel libre.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fsf-history\img\event\01100ryf.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2" title="Respect your freedom"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/01100ryf.png" class="img-fluid figure-img" alt="Respect your freedom"></a></p>
+<p><a href="fsf-history\img\event\01100ryf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Respect your freedom"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/01100ryf.png" class="img-fluid figure-img" alt="Respect your freedom"></a></p>
 <figcaption>Respect your freedom</figcaption>
 </figure>
 </div>
@@ -2132,11 +2128,12 @@ Avertissement
 
 
 
+
 <p>Les microprocesseurs sont au cœur de nos ordinateurs, smartphones, tablettes et autres appareils électroniques. Ils sont composés de millions, voire de milliards, de transistors qui réalisent des opérations logiques et arithmétiques à une vitesse vertigineuse. Mais ces transistors sont de plus en plus petits et difficiles à fabriquer, ce qui menace la loi de Moore, qui prédit que la puissance des microprocesseurs double tous les deux ans (<a href="https://pnsi.flallemand.fr/10_vonNeumann/neumann_cours_1.html" target="_blank">voir cours de première NSI</a>).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="cpu-3061923_640.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="CPU"><img src="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">CPU</figcaption>
+<p><a href="cpu-3061923_640.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="CPU"><img src="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" class="img-fluid figure-img" style="width:50.0%" alt="CPU"></a></p>
+<figcaption>CPU</figcaption>
 </figure>
 </div>
 <p>Pour relever ce défi, Intel, le géant américain des semi-conducteurs, a annoncé avoir développé un nouveau substrat en verre pour remplacer le plastique actuellement utilisé. Le substrat est la base sur laquelle sont gravés les circuits des microprocesseurs. Il doit être plat, rigide et résistant à la chaleur et aux contraintes mécaniques.</p>
@@ -2167,6 +2164,7 @@ Avertissement
 
 
 
+
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2189,8 +2187,8 @@ Objectifs du tutoriel
 <p>La fenêtre de jeu est un rectangle de 256 pixels de large sur 128 pixels de haut. L’origine du repère est située en haut à gauche de la fenêtre. Les coordonnées des points sont donc comprises entre 0 et 255 pour les abscisses et entre 0 et 127 pour les ordonnées.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./repere.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Géométrie de la fenêtre"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/repere.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Géométrie de la fenêtre</figcaption>
+<p><a href="./repere.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Géométrie de la fenêtre"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/repere.png" class="img-fluid figure-img" alt="Géométrie de la fenêtre"></a></p>
+<figcaption>Géométrie de la fenêtre</figcaption>
 </figure>
 </div>
 </section>
@@ -2200,8 +2198,8 @@ Objectifs du tutoriel
 <p>Pour ouvrir, modifier ou consulter le contenu d’un tel fichier, il faut utiliser l’éditeur de ressource de Pyxel. Pour cela, il faut d’abord charger ce fichier dans pyxelstudio : voir <a href="../../posts/pyxelstudio/index.html">la page dédiée</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./fenetre_pyxres.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Editeur de ressource"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Editeur de ressource</figcaption>
+<p><a href="./fenetre_pyxres.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Editeur de ressource"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres.png" class="img-fluid figure-img" style="width:50.0%" alt="Editeur de ressource"></a></p>
+<figcaption>Editeur de ressource</figcaption>
 </figure>
 </div>
 <p>On peut voir et faire défiler l’ensemble des images du fichier de ressources dans la partie droite de l’éditeur. Dans la partie gauche, on zoome sur un carré de 16 pixels de côté, avec possibilité de modifier l’image à la souris.</p>
@@ -2220,8 +2218,8 @@ Objectifs du tutoriel
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./blt_figure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Paramètres de blt"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Paramètres de <code>blt</code></figcaption>
+<p><a href="./blt_figure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Paramètres de blt"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" class="img-fluid figure-img" alt="Paramètres de blt"></a></p>
+<figcaption>Paramètres de <code>blt</code></figcaption>
 </figure>
 </div>
 <p>Voici le code obtenu :</p>
@@ -2323,8 +2321,8 @@ font-style: inherit;">16</span>)</span>
 <p>On obtient :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./fenetre_personnage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Personnage en bas à gauche"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_personnage.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Personnage en bas à gauche</figcaption>
+<p><a href="./fenetre_personnage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Personnage en bas à gauche"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_personnage.png" class="img-fluid figure-img" style="width:50.0%" alt="Personnage en bas à gauche"></a></p>
+<figcaption>Personnage en bas à gauche</figcaption>
 </figure>
 </div>
 </section>
@@ -2482,8 +2480,8 @@ font-style: inherit;">16</span>)</span>
 <p><strong>Remarque</strong> : nous avons également défini un attribut <code>vitesse</code> qui permet de modifier la vitesse de déplacement du personnage : il s’agit du nombre de pixels à ajouter, ou à retrancher, à chaque fois que l’on appuie sur une touche fléchée.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./tuto2-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-1.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Personnage qui se déplace</figcaption>
+<p><a href="./tuto2-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-1.gif" class="img-fluid figure-img" style="width:50.0%" alt="Personnage qui se déplace"></a></p>
+<figcaption>Personnage qui se déplace</figcaption>
 </figure>
 </div>
 </section>
@@ -2493,8 +2491,8 @@ font-style: inherit;">16</span>)</span>
 <p>Pour ce faire, on peut utiliser la fonction <code>pyxel.frame_count</code> pour alterner l’affichage des deux images à chaque image. Cette fonction renvoie le nombre d’images affichées depuis le début de l’application. Dans le code ci-dessous, on a de plus défini une variable booléenne <code>self.personnage_marche</code> qui vaut <code>True</code> si le personnage est en train de marcher et <code>False</code> sinon (ce qui permet dans ce cas d’arrêter l’animation).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./fenetre_pyxres_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Animation du personnage"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres_2.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Animation du personnage</figcaption>
+<p><a href="./fenetre_pyxres_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Animation du personnage"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres_2.png" class="img-fluid figure-img" alt="Animation du personnage"></a></p>
+<figcaption>Animation du personnage</figcaption>
 </figure>
 </div>
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
@@ -2731,8 +2729,8 @@ font-style: inherit;">16</span>)</span>
 <span id="cb3-38">App()</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./tuto2-3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-3.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Personnage qui se déplace</figcaption>
+<p><a href="./tuto2-3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-3.gif" class="img-fluid figure-img" style="width:50.0%" alt="Personnage qui se déplace"></a></p>
+<figcaption>Personnage qui se déplace</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -3022,8 +3020,8 @@ font-style: inherit;">16</span>)</span>
 <span id="cb4-42">App()</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="./tuto2-4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-4.gif" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Personnage qui se déplace</figcaption>
+<p><a href="./tuto2-4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-4.gif" class="img-fluid figure-img" style="width:50.0%" alt="Personnage qui se déplace"></a></p>
+<figcaption>Personnage qui se déplace</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -3062,14 +3060,15 @@ En conclusion
 
 
 
+
 <p>Dans cet article, je vais vous présenter le site pyxelstudio.net et le module pyxel, qui vous permettent de créer facilement des jeux rétro avec python. Je vais vous montrer comment utiliser le site pyxelstudio.net pour éditer et exécuter du code en ligne, sans avoir besoin d’installer python ou pyxel sur votre ordinateur.</p>
 <section id="quest-ce-que-pyxelstudio.net" class="level2">
 <h2 class="anchored" data-anchor-id="quest-ce-que-pyxelstudio.net">Qu’est-ce que pyxelstudio.net ?</h2>
 <p>Pyxelstudio.net est un site web qui vous permet d’écrire et d’exécuter du code python avec le module pyxel directement dans votre navigateur. C’est très pratique si vous voulez rapidement tester vos idées de jeux sans avoir à installer python ou pyxel sur votre ordinateur. Pour accéder au site, il suffit de taper l’adresse <a href="https://www.pyxelstudio.net/">https://www.pyxelstudio.net/</a> dans la barre d’adresse de votre navigateur. Vous arrivez alors sur la page d’accueil du site, qui vous propose plusieurs options. Je vous conseille de créer un compte (en cliquant sur “register”), car cela vous permettra de retrouver vos projets très facilement quand vous passez d’une machine à une autre. Ainsi, vous pouvez créer un nouveau projet, ouvrir un projet existant, ou encore consulter les exemples de jeux réalisés avec pyxel. Ce site a été développé par <a href="https://twitter.com/laurentabbal">Laurent Abbal</a>, professeur de NSI au lycée français international de Tokyo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="pyxelstudio.png" class="lightbox" title="Page d’accueil de pyxelstudio.net" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Page d’accueil de <a href="https://www.pyxelstudio.net">pyxelstudio.net</a></figcaption>
+<p><a href="pyxelstudio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Page d’accueil de pyxelstudio.net"><img src="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" class="img-fluid figure-img" alt="Page d’accueil de pyxelstudio.net"></a></p>
+<figcaption>Page d’accueil de <a href="https://www.pyxelstudio.net">pyxelstudio.net</a></figcaption>
 </figure>
 </div>
 </section>
@@ -3082,19 +3081,15 @@ En conclusion
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="interface.png" class="lightbox" title="Vue d’ensemble de la page d’édition de www.pyxelstudio.net" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/pyxelstudio/interface.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Vue d’ensemble de la page d’édition de www.pyxelstudio.net</figcaption>
+<p><a href="interface.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Vue d’ensemble de la page d’édition de www.pyxelstudio.net"><img src="https://flallemand.fr/blog/posts/pyxelstudio/interface.png" class="img-fluid figure-img" alt="Vue d’ensemble de la page d’édition de www.pyxelstudio.net"></a></p>
+<figcaption>Vue d’ensemble de la page d’édition de www.pyxelstudio.net</figcaption>
 </figure>
 </div>
 </section>
 <section id="linterface-de-la-zone-dédition" class="level2">
 <h2 class="anchored" data-anchor-id="linterface-de-la-zone-dédition">L’interface de la zone d’édition</h2>
 <p>Outre l’édition du code et son exécution, différentes actions sont possibles depuis cet écran.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig1.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig1.png" class="img-fluid"></a></p>
 <ol type="1">
 <li>Accès au dashboard : liste des projets créés, avec la possibilité de les éditer et de les supprimer.</li>
 <li>Définition du nom du projet.</li>
@@ -3108,21 +3103,13 @@ En conclusion
 <li>Générer un lien pour partager le projet.</li>
 </ol>
 <p>Lorsqu’un programme est en cours d’exécution, on trouve deux boutons au-dessus de la zone d’exécution.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig2.png" class="img-fluid"></a></p>
 <ol type="1">
 <li>Mettre le jeu en plein écran.</li>
 <li>Afficher la console : utile pour l’affichage de certaines variables en phase de débogage.</li>
 </ol>
 <p>Pour finir ce petit tour de l’interface du site, regardons de plus près l’affichage de la liste des fichiers d’un projet :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig3.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig3.png" class="img-fluid"></a></p>
 <ol type="1">
 <li>Ces deux boutons permettent respectivement de créer un nouveau fichier et de téléverser un fichier existant.</li>
 <li>Le fichier python de l’application. C’est lui qui contient le code du jeu et le bouton permet de l’éditer.</li>
@@ -3212,8 +3199,8 @@ font-style: inherit;"># on exécute le programme avec les fonctions update et dr
 <p>Nous allons copier ce code dans l’éditeur de code du site pyxelstudio.net, puis cliquer sur le bouton “Run” pour l’exécuter. Nous voyons alors apparaître le message “Hello Pyxel!” à l’écran, comme prévu. Voilà, nous venons de réaliser notre première application avec pyxel ! C’était facile, non ?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fig4.png" class="lightbox" title="Copie d’écran de la sortie pyxel du code d’exemple" data-gallery="quarto-lightbox-gallery-6"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig4.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">Copie d’écran de la sortie pyxel du code d’exemple</figcaption>
+<p><a href="fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Copie d’écran de la sortie pyxel du code d’exemple"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig4.png" class="img-fluid figure-img" alt="Copie d’écran de la sortie pyxel du code d’exemple"></a></p>
+<figcaption>Copie d’écran de la sortie pyxel du code d’exemple</figcaption>
 </figure>
 </div>
 </section>
@@ -3240,6 +3227,7 @@ font-style: inherit;"># on exécute le programme avec les fonctions update et dr
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/pyxel_tuto1_base/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -3315,8 +3303,8 @@ font-style: inherit;">pass</span></span>
 <p>Voici la fenêtre obtenue avec le code ci-dessus :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fenetre_vide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="fenêtre vide"><img src="https://flallemand.fr/blog/posts/pyxel_tuto1_base/fenetre_vide.png" class="img-fluid figure-img"></a></p>
-<figcaption class="figure-caption">fenêtre vide</figcaption>
+<p><a href="fenetre_vide.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="fenêtre vide"><img src="https://flallemand.fr/blog/posts/pyxel_tuto1_base/fenetre_vide.png" class="img-fluid figure-img" alt="fenêtre vide"></a></p>
+<figcaption>fenêtre vide</figcaption>
 </figure>
 </div>
 <p><strong>Remarque</strong> : certains calculs de coordonnées des objets de l’applications devront être faits en fonction des dimensions de la fenêtre. Pour cela, on peut utiliser les variables <code>pyxel.width</code> et <code>pyxel.height</code> qui contiennent respectivement la largeur et la hauteur de la fenêtre.</p>
@@ -3355,10 +3343,11 @@ Utilisation de Pyxelstudio
 
 
 
+
 <p>La version 3.10 de python est sortie le 4 octobre 2021 et apporte parmi d’autres améliorations, une nouvelle structure conditionnelle : la structure <code>match ... case</code>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="python310.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/python_match/python310.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p><a href="python310.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/python_match/python310.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
 </figure>
 </div>
 <section id="un-cas-simple" class="level2">
@@ -3369,7 +3358,7 @@ Utilisation de Pyxelstudio
 <div class="code-with-filename-file">
 <pre><strong>Langage JavaScript</strong></pre>
 </div>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+<div class="sourceCode" id="cb1" data-filename="Langage JavaScript" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">let</span> x <span class="op" style="color: #5E5E5E;
@@ -3508,7 +3497,7 @@ font-style: inherit;">;</span></span>
 <div class="code-with-filename-file">
 <pre><strong>Langage C</strong></pre>
 </div>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb2-1"><span class="dt" style="color: #AD0000;
+<div class="sourceCode" id="cb2" data-filename="Langage C" style="background: #f1f3f5;"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb2-1"><span class="dt" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">int</span> x <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -3634,7 +3623,7 @@ font-style: inherit;">}</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>Python</strong></pre>
 </div>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"></span>
+<div class="sourceCode" id="cb3" data-filename="Python" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"></span>
 <span id="cb3-2">x <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
@@ -3710,7 +3699,7 @@ font-style: inherit;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)</span></code><
 <div class="code-with-filename-file">
 <pre><strong>Python</strong></pre>
 </div>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
+<div class="sourceCode" id="cb4" data-filename="Python" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> random</span>
 <span id="cb4-2">cible <span class="op" style="color: #5E5E5E;
@@ -3839,7 +3828,7 @@ font-style: inherit;">True</span></span></code></pre></div>
 <div class="code-with-filename-file">
 <pre><strong>Python</strong></pre>
 </div>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">reponse <span class="op" style="color: #5E5E5E;
+<div class="sourceCode" id="cb5" data-filename="Python" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">reponse <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="bu" style="color: null;
 background-color: null;
@@ -3908,7 +3897,7 @@ font-style: inherit;"> ! Vous m'avez donné trop d'informations."</span>)</span>
 <div class="code-with-filename-file">
 <pre><strong>Console python</strong></pre>
 </div>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="op" style="color: #5E5E5E;
+<div class="sourceCode" id="cb6" data-filename="Console python" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont</span>
 <span id="cb6-2">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;
@@ -3939,7 +3928,7 @@ font-style: inherit;">'avez donné trop d'</span>informations.</span></code></pr
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Les références</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Les références</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-pythonpep636" class="csl-entry">
 Moisset, Daniel F. 2020. <span>«&nbsp;Structural Pattern Matching: Tutorial&nbsp;»</span>. <em>Python Enhancement Proposals</em>, nᵒ 636. <a href="https://peps.python.org/pep-0636/">https://peps.python.org/pep-0636/</a>.
 </div>
@@ -3959,6 +3948,7 @@ Sumner, Scott. 2021. <span>«&nbsp;The new Python match&nbsp;»</span>. <em>Linu
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/interview_gpt_1/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -3989,8 +3979,8 @@ Je suis Assistant, un modèle de langage entraîné par OpenAI. Mon but est d’
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_1/DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption>
+<p><a href="DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_1/DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" class="img-fluid figure-img" style="width:50.0%" alt="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"></a></p>
+<figcaption>An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption>
 </figure>
 </div>
 <!-- wp:html -->
@@ -4080,8 +4070,8 @@ Non, je ne peux pas conseiller à quelqu’un de faire une mauvaise action. En t
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption>
+<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"></a></p>
+<figcaption>An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption>
 </figure>
 </div>
 
@@ -4103,6 +4093,7 @@ Non, je ne peux pas conseiller à quelqu’un de faire une mauvaise action. En t
 
 
 
+
 <p>
 Dans cette deuxième partie, nous abordons quelques questions techniques et informatiques.
 </p>
@@ -4120,8 +4111,8 @@ Oui, c’est exact. Mon apprentissage repose sur l’analyse de grandes quantit�
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="DALL·E-2022-12-08-20.31.03-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.03-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
+<p><a href="DALL·E-2022-12-08-20.31.03-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.03-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="Image évoquant un réseau neuronal créée par DALL-E 2"></a></p>
+<figcaption>Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
 </figure>
 </div>
 <p>
@@ -4153,8 +4144,8 @@ L’apprentissage profond est une technique d’apprentissage automatique qui pe
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
+<p><a href="DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="Image évoquant un réseau neuronal créée par DALL-E 2"></a></p>
+<figcaption>Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
 </figure>
 </div>
 <p>
@@ -4331,8 +4322,8 @@ Ce code entraîne un petit réseau de neurones pour résoudre un problème simpl
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="DALL·E-2022-12-08-20.31.23-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.23-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
+<p><a href="DALL·E-2022-12-08-20.31.23-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.23-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="Image évoquant un réseau neuronal créée par DALL-E 2"></a></p>
+<figcaption>Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
 </figure>
 </div>
 <p>
@@ -4406,8 +4397,8 @@ Je suis ravi d’avoir pu vous aider. L’apprentissage automatique et les rése
 </p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
-<figcaption class="figure-caption">Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
+<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="Image évoquant un réseau neuronal créée par DALL-E 2"></a></p>
+<figcaption>Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
 </figure>
 </div>
 
@@ -4425,6 +4416,7 @@ Je suis ravi d’avoir pu vous aider. L’apprentissage automatique et les rése
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/lol_docu/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -4482,6 +4474,7 @@ Ci-dessous, la bande-annonce du film et le film complet (diffusé sous licence l
 
 
 
+
 <p>
 Voici un podcast de France Culture très intéressant, qui retrace l’histoire de l’internet de 1969 à nos jours en huit épisodes d’un quart d’heure.
 </p>
@@ -4499,11 +4492,7 @@ On vous propose de remonter aux origines de ce réseau des réseaux, où l’on 
 <p>
 Ces épisodes sont <a href="https://www.radiofrance.fr/franceculture/podcasts/serie-une-histoire-de-l-internet" target="_blank" rel="noreferrer noopener">disponibles sur le site de Radio France</a>.
 </p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.radiofrance.fr/franceculture/podcasts/serie-une-histoire-de-l-internet" target="_blank"><img src="https://flallemand.fr/blog/posts/podcast_internet/podcast_internet2.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="https://www.radiofrance.fr/franceculture/podcasts/serie-une-histoire-de-l-internet" target="_blank"><img src="https://flallemand.fr/blog/posts/podcast_internet/podcast_internet2.png" class="img-fluid"></a></p>
 
 
 
@@ -4520,6 +4509,7 @@ Ces épisodes sont <a href="https://www.radiofrance.fr/franceculture/podcasts/se
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/metiers_dev/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -4555,6 +4545,7 @@ C’est l’occasion de découvrir les différences entre les différents métie
 
 
 
+
 <!-- wp:paragraph -->
 <p>
 Le SELL, Syndicat des Éditeurs de Logiciels de Loisirs, dévoile les résultats de son étude annuelle « Les Français et le Jeu Vidéo » conduite par Médiamétrie.
@@ -4565,11 +4556,7 @@ Le SELL, Syndicat des Éditeurs de Logiciels de Loisirs, dévoile les résultats
 Les résultats remettent en cause certaines idées reçues sur les jeux vidéos.
 </p>
 <!-- /wp:paragraph -->
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="jeuxVideo-jeuxVideo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/enquete_jeux_videos/jeuxVideo-jeuxVideo.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="jeuxVideo-jeuxVideo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/enquete_jeux_videos/jeuxVideo-jeuxVideo.png" class="img-fluid"></a></p>
 <!-- wp:paragraph -->
 <p>
 Tous ces résultats, ainsi que l’<a href="https://www.sell.fr/news/lessentiel-du-jeu-video-novembre-2022" target="_blank" rel="noreferrer noopener">article qui les accompagne</a> est présenté de manière très positive. N’oublions pas que les auteurs sont les représentants de l’industrie des jeux vidéos. Ils ont donc tout intérêt à présenter cette activité sous son meilleur jour.
@@ -4630,16 +4617,13 @@ Pour en savoir plus, <a href="https://www.passeportsante.net/fr/psychologie/Fich
 
 
 
+
 <!-- wp:paragraph -->
 <p>
 <a href="https://fr.futurecoder.io/" target="_blank" rel="noreferrer noopener">Voici un nouveau site pour apprendre les bases de Python</a>. Les cours ont l’avantage d’être disponibles en français. Autre point fort, l’ensemble du site est libre, open-source et gratuit.
 </p>
 <!-- /wp:paragraph -->
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="futurecoder-futurecoder.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/futurecoder/futurecoder-futurecoder.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="futurecoder-futurecoder.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/futurecoder/futurecoder-futurecoder.png" class="img-fluid"></a></p>
 <!-- wp:paragraph -->
 <p>
 Dans la pratique, tout se fait dans le navigateur de façon interactive. Les contenus partent vraiment de zéro et vont pour l’instant jusqu’aux dictionnaires, en passant par un mini-projet de jeu de morpion.
@@ -4704,6 +4688,7 @@ Source : <a href="https://korben.info/futurecoder-cours-gratuits-python.html" ta
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/tropheesnsi/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -4807,11 +4792,7 @@ Ouverture : idées d’amélioration, pistes de développement, analyse critique
 Récompenses
 </h2>
 <!-- /wp:heading -->
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="achievement.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/tropheesnsi/achievement.png" class="img-fluid figure-img" style="width:25.0%"></a></p>
-</figure>
-</div>
+<p><a href="achievement.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/tropheesnsi/achievement.png" class="img-fluid" style="width:25.0%"></a></p>
 <!-- wp:paragraph -->
 <p>
 Plusieurs prix sont décernés au niveau académique.

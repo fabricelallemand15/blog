@@ -18,7 +18,11 @@ website:
       - icon: twitter
         href: https://twitter.com/MathsLallemand
       - icon: mastodon
-        href: https://mastodon.mim-libre.fr/\@lallemandfabrice
+        href: https://mastodon.mim-libre.fr/@lallemandfabrice
+      - icon: instagram
+        href: https://www.instagram.com/flallemandprof/
+      - icon: youtube
+        href: https://www.youtube.com/@flallemandmath
       - icon: rss
         href: index.xml
   page-footer: 
@@ -41,8 +45,8 @@ format:
     include-in-header:
       - ajouts_header.html
     theme:
-      light: [flatly, theme_light.scss]
-      dark: [darkly, theme_dark.scss]
+      light: flatly
+      # dark: darkly
     css: styles.css
     toc: true
     biblio-title: "Sources utilisées"

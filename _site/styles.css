@@ -36,3 +36,9 @@ table, th, td {
 td {
     padding: 0.5em;
 }
+.quarto-title-block .quarto-title-banner {
+    background: #ffffff;
+}
+.navbar {
+    background-color: #fff;
+}
