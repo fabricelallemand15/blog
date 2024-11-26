@@ -1,5 +1,5 @@
 ---
-title: "Tuto pyxel : PLuie de cerises et score"
+title: "Tuto pyxel : Pluie de cerises et score"
 subtitle: "Tutoriels Pyxel"
 description: "Faire pleuvoir des cerises dans notre application Pyxel"
 date: "2024-11-26"

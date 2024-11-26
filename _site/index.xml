@@ -9,10 +9,10 @@
 <link>https://flallemand.fr/blog/</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.6.32</generator>
+<generator>quarto-1.6.37</generator>
 <lastBuildDate>Mon, 25 Nov 2024 23:00:00 GMT</lastBuildDate>
 <item>
-  <title>Tuto pyxel : PLuie de cerises et score</title>
+  <title>Tuto pyxel : Pluie de cerises et score</title>
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/</link>
   <description><![CDATA[ 
