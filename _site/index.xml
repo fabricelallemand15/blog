@@ -10,7 +10,405 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.6.32</generator>
-<lastBuildDate>Mon, 04 Nov 2024 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 25 Nov 2024 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Tuto pyxel : PLuie de cerises et score</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Ce tuto fait suite au précédent : <a href="../../posts/pyxel_tuto3_fond/index.html">Tuto pyxel : Ajouter un fond</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Objectifs du tutoriel
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Créer un objet Cerise qui tombe du ciel ;</li>
+<li>Générer une pluie de cerises à intervalles aléatoires ;</li>
+<li>Détecter les collisions entre le personnage et les cerises ;</li>
+<li>Afficher le score du joueur.</li>
+</ul>
+</div>
+</div>
+<section id="création-de-lobjet-cerise" class="level2">
+<h2 class="anchored" data-anchor-id="création-de-lobjet-cerise">Création de l’objet Cerise</h2>
+<p>Nous allons commencer par créer une classe <code>Cerise</code> qui permettra de gérer le comportement et l’affichage des cerises. Chaque cerise aura une position <img src="https://latex.codecogs.com/png.latex?(x,%20y)"> et une vitesse de chute.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">class</span> Cerise:</span>
+<span id="cb1-2">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, x, y):</span>
+<span id="cb1-3">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> x</span>
+<span id="cb1-4">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> y</span>
+<span id="cb1-5">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Vitesse de chute de la cerise</span></span>
+<span id="cb1-6"></span>
+<span id="cb1-7">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-8">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.vitesse <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># La cerise tombe</span></span>
+<span id="cb1-9"></span>
+<span id="cb1-10">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):</span>
+<span id="cb1-11">        pyxel.blt(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.x, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.y, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">32</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#Affichage de la cerise</span></span></code></pre></div>
+<p>Explications :</p>
+<ul>
+<li>Lignes 2-4 : Le constructeur <code>__init__</code> initialise la position <img src="https://latex.codecogs.com/png.latex?(x,%20y)"> de la cerise et sa vitesse de chute.</li>
+<li>Ligne 7 : La méthode <code>update</code> met à jour la position verticale <img src="https://latex.codecogs.com/png.latex?y"> de la cerise en fonction de sa vitesse, simulant ainsi la chute.</li>
+<li>Ligne 10 : La méthode <code>draw</code> affiche la cerise à l’écran à l’aide de <code>pyxel.blt</code>. On suppose ici que les coordonnées de la cerise dans le fichier de ressources sont (32, 0) et que ses dimensions sont 16x16 pixels. La couleur 12 (bleu) est rendue transparente.</li>
+</ul>
+</section>
+<section id="gestion-de-la-pluie-de-cerises" class="level2">
+<h2 class="anchored" data-anchor-id="gestion-de-la-pluie-de-cerises">Gestion de la pluie de cerises</h2>
+<p>Maintenant, nous allons gérer la pluie de cerises dans la classe <code>App</code>. Nous utiliserons une liste <code>self.cerises</code> pour stocker les cerises actuellement présentes à l’écran et la fonction <code>pyxel.rndi</code> pour générer des cerises à des positions horizontales aléatoires.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Idée à retenir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>L’utilisation de <code>pyxel.rndi</code> permet de générer des nombres entiers aléatoires. C’est très pratique pour créer des événements aléatoires dans un jeu.</p>
+</div>
+</div>
+<p>On ajoute ces éléments dans la méthode <code>__init__</code> de la classe <code>App</code>:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># classe App</span></span>
+<span id="cb2-2">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ... (code précédent)</span></span>
+<span id="cb2-3">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.cerises <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [] <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># liste des cerises</span></span>
+<span id="cb2-4">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb2-5">        pyxel.run(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.draw)</span></code></pre></div>
+<p>Ensuite, on modifie la méthode <code>update</code> pour ajouter une nouvelle cerise à un intervalle aléatoire, mettre à jour chaque cerise, et supprimer celles qui sortent de l’écran :</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># classe App</span></span>
+<span id="cb3-2">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage.update()</span>
+<span id="cb3-3">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.foret.update()</span>
+<span id="cb3-4">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> nuage <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.nuages:</span>
+<span id="cb3-5">            nuage.update()</span>
+<span id="cb3-6">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ... (code précédent pour la gestion des nuages)</span></span>
+<span id="cb3-7"></span>
+<span id="cb3-8"></span>
+<span id="cb3-9">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%</span> pyxel.rndi(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">30</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">60</span>) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Générer une cerise toutes les 1 à 2 secondes (à 30 fps)</span></span>
+<span id="cb3-10">            <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.cerises.append(Cerise(pyxel.rndi(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, pyxel.width <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>), <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>))  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Position aléatoire en x</span></span>
+<span id="cb3-11">            </span>
+<span id="cb3-12">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> cerise <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.cerises:</span>
+<span id="cb3-13">            cerise.update()</span>
+<span id="cb3-14">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> cerise.y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> pyxel.height:</span>
+<span id="cb3-15">                <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.cerises.remove(cerise)</span></code></pre></div>
+<p>Explications :</p>
+<ul>
+<li>Ligne 8&nbsp;: on génère une nouvelle cerise à un intervalle aléatoire compris entre 30 et 60&nbsp;frames. Sachant que le jeu tourne à 30&nbsp;fps, cela correspond à une nouvelle cerise toutes les 1&nbsp;à 2&nbsp;secondes.</li>
+<li>Ligne 9&nbsp;: la cerise apparaît juste au-dessus de la fenêtre à une abscisse aléatoire.</li>
+<li>Lignes 11 à&nbsp;13&nbsp;: la boucle <code>for</code> met à jour la position verticale de chaque cerise et les supprime lorsqu’elles passent en dessous du bas de la fenêtre.</li>
+</ul>
+</section>
+<section id="détection-des-collisions" class="level2">
+<h2 class="anchored" data-anchor-id="détection-des-collisions">Détection des collisions</h2>
+<p>Pour détecter les collisions entre le personnage et les cerises, nous allons ajouter du code dans la méthode <code>update</code> de la classe <code>App</code>.</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># class App</span></span>
+<span id="cb4-2">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ... (code précédent)</span></span>
+<span id="cb4-3">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> cerise <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.cerises:</span>
+<span id="cb4-4">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#... (code précédent pour la gestion des cerises)</span></span>
+<span id="cb4-5"></span>
+<span id="cb4-6">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> (</span>
+<span id="cb4-7">                <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">abs</span>(cerise.x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage.x_personnage) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">and</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">abs</span>(cerise.y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> (pyxel.height <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span></span>
+<span id="cb4-8">            ):  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Collision détectée !</span></span>
+<span id="cb4-9">                <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.cerises.remove(cerise)</span>
+<span id="cb4-10">                <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span></code></pre></div>
+<p>Explications :</p>
+<ul>
+<li>Lignes 6 à 8 : On teste si la distance entre le personnage et la cerise est inférieure à 16 pixels, ce qui signifie une collision. Si une collision est détectée, la cerise est retirée de l’écran et le score du joueur est incrémenté.</li>
+</ul>
+</section>
+<section id="affichage-du-score" class="level2">
+<h2 class="anchored" data-anchor-id="affichage-du-score">Affichage du score</h2>
+<p>Enfin, nous allons afficher le score en haut à gauche de l’écran. Pour cela, nous modifions la méthode <code>draw</code> de la classe <code>App</code>.</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>):  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># classe App</span></span>
+<span id="cb5-2">        pyxel.cls(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span>
+<span id="cb5-3"></span>
+<span id="cb5-4">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ... (code précédent pour le dessin du fond)</span></span>
+<span id="cb5-5"></span>
+<span id="cb5-6">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> cerise <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.cerises:</span>
+<span id="cb5-7">            cerise.draw()</span>
+<span id="cb5-8">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.personnage.draw()</span>
+<span id="cb5-9">        pyxel.text(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Score: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>score<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>, pyxel.COLOR_WHITE) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Affichage du score</span></span></code></pre></div>
+<p>Explications :</p>
+<ul>
+<li>Ligne 8: on affiche le score à l’écran en blanc aux coordonnées (5, 5)</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Dans ce tutoriel, nous avons appris à faire pleuvoir des cerises dans notre application Pyxel. Nous avons créé une classe <code>Cerise</code> pour gérer les cerises, généré une pluie de cerises à intervalles aléatoires, détecté les collisions entre le personnage et les cerises, et affiché le score du joueur. Vous pouvez maintenant tester votre jeu et voir si vous pouvez attraper toutes les cerises !</p>
+<p><a href="image_jeu.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/image_jeu.gif" class="img-fluid" style="width:50.0%"></a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>Python</category>
+  <category>NSI</category>
+  <category>Programmation</category>
+  <category>Pyxel</category>
+  <category>Nuit du code</category>
+  <guid>https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/</guid>
+  <pubDate>Mon, 25 Nov 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/image_jeu.png" medium="image" type="image/png" height="77" width="144"/>
+</item>
 <item>
   <title>Record battu pour les nombres premiers !</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -4682,205 +5080,6 @@ Source : <a href="https://korben.info/futurecoder-cours-gratuits-python.html" ta
   <guid>https://flallemand.fr/blog/posts/futurecoder/</guid>
   <pubDate>Mon, 31 Oct 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/futurecoder/futurecoder-futurecoder.png" medium="image" type="image/png" height="74" width="144"/>
-</item>
-<item>
-  <title>Participer aux trophées NSI</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/tropheesnsi/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-<strong>Les trophées NSI récompensent des projets informatiques réalisés dans le cadre de l’enseignement de spécialité « numérique et sciences informatiques ».</strong>
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Les objectifs du concours sont les suivants :
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>
-Valoriser l’enseignement de spécialité NSI.
-</li>
-<li>
-Mettre en avant les projets réalisés pendant l’année scolaire.
-</li>
-<li>
-Encourager le travail en équipe.
-</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>
-L’inscription et la participation se font par l’intermédiaire du professeur de NSI des participants.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-De quoi s’agit-il ?
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Tous les élèves suivant la spécialité NSI en première et/ou en terminale peuvent participer.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Les élèves qui désirent participer aux trophées NSI forment une équipe de 2 à 5 personnes maximum (du même niveau scolaire). Ils choisissent un projet informatique qu’ils vont développer en équipe tout au long de l’année scolaire. Ce projet doit obligatoirement s’inscrire dans le cadre du programme de NSI. Il peut s’agir de développer un logiciel répondant à un certain besoin, un site web, … En ce qui concerne la programmation, le langage utilisé a priori est Python, mais d’autres langages open source peuvent être acceptés. Le code doit être soigné, documenté et placé sous licence libre. Enfin, une courte vidéo de présentation du projet doit être réalisée par l’équipe.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Lors de la session 2022, la date limite d’envoi des projets était le 5 mai 2022.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Les projets sont ensuite évalués, d’abord au niveau académique (Auvergne-Rhône-Alpes), puis au niveau national.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Critères d’évaluation
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Voici les critères d’évaluations définis dans le règlement du concours :
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>
-Présentation globale du projet
-</li>
-<li>
-Documentation et lisibilité du projet
-</li>
-<li>
-Présentation orale (vidéo)
-</li>
-<li>
-Illustration du projet (image 500px x 500px)
-</li>
-<li>
-Esprit logique de l’équipe
-</li>
-<li>
-Originalité et créativité du projet et/ou du dossier
-</li>
-<li>
-Organisation de l’équipe, du projet
-</li>
-<li>
-Fonctionnement et opérationnalité du projet
-</li>
-<li>
-Ouverture : idées d’amélioration, pistes de développement, analyse critique
-</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Récompenses
-</h2>
-<!-- /wp:heading -->
-<p><a href="achievement.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/tropheesnsi/achievement.png" class="img-fluid" style="width:25.0%"></a></p>
-<!-- wp:paragraph -->
-<p>
-Plusieurs prix sont décernés au niveau académique.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Au niveau national, les récompenses suivantes sont annoncées :
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>
-Deux prix sont obligatoirement remis :
-<ul>
-<li>
-Prix du meilleur projet Première
-</li>
-<li>
-Prix du meilleur projet Terminale
-</li>
-</ul>
-</li>
-<li>
-Les autres catégories :
-<ul>
-<li>
-Prix spécial du jury (projet coup de cœur)
-</li>
-<li>
-Prix de la créativité (originalité et créativité)
-</li>
-<li>
-Prix des futurs ingénieurs et futures ingénieuses (dimension technique et scientifique forte)
-</li>
-<li>
-Prix de la mixité (part et rôle des filles dans l’équipe et/ou sujet traitant de cette thématique)
-</li>
-<li>
-Prix de la citoyenneté (projet inclut une dimension à impact social ou sociétal)
-</li>
-</ul>
-</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:heading -->
-<h2 class="anchored">
-Exemples de projets réalisés pour la session 2022
-</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>
-Vous trouverez sur le site officiel les présentations des projets des lauréats de la session 2022.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>
-Meilleur projet Première : SnowFake, simulateur de croissance de flocons de neige
-</li>
-<li>
-Meilleur projet Terminale : Pytris, implémentation Python/Pygame du célèbre jeu TETRIS.
-</li>
-<li>
-Prix de la citoyenneté : EDUCOVOIT’, gestionnaire de covoiturage entre collègues
-</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>
-Et beaucoup d’autres exemples : <a href="https://trophees-nsi.fr/resultats" target="_blank" rel="noreferrer noopener">https://trophees-nsi.fr/resultats</a>
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Source : le site officiel des trophées : <a href="https://trophees-nsi.fr/" target="_blank" rel="noreferrer noopener">https://trophees-nsi.fr/</a>
-</p>
-<!-- /wp:paragraph -->
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>Python</category>
-  <category>NSI</category>
-  <guid>https://flallemand.fr/blog/posts/tropheesnsi/</guid>
-  <pubDate>Wed, 07 Sep 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/tropheesnsi/image_trophees_nsi.png" medium="image" type="image/png" height="77" width="144"/>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,137 @@
+---
+title: "Tuto pyxel : PLuie de cerises et score"
+subtitle: "Tutoriels Pyxel"
+description: "Faire pleuvoir des cerises dans notre application Pyxel"
+date: "2024-11-26"
+categories: [Python, NSI, Programmation, Pyxel, Nuit du code]
+image: "image_jeu.png"
+---
+
+Ce tuto fait suite au précédent : [Tuto pyxel : Ajouter un fond](../pyxel_tuto3_fond/index.qmd).
+
+::: {.callout-tip}
+## Objectifs du tutoriel
+
+*   Créer un objet Cerise qui tombe du ciel ;
+*   Générer une pluie de cerises à intervalles aléatoires ;
+*   Détecter les collisions entre le personnage et les cerises ;
+*   Afficher le score du joueur.
+:::
+
+## Création de l'objet Cerise
+
+Nous allons commencer par créer une classe `Cerise` qui permettra de gérer le comportement et l'affichage des cerises.  Chaque cerise aura une position $(x, y)$ et une vitesse de chute.
+
+```python
+class Cerise:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.vitesse = 1  # Vitesse de chute de la cerise
+
+    def update(self):
+        self.y += self.vitesse # La cerise tombe
+
+    def draw(self):
+        pyxel.blt(self.x, self.y, 0, 32, 0, 16, 16, 12) #Affichage de la cerise
+```
+
+Explications :
+
+*   Lignes 2-4 :  Le constructeur `__init__` initialise la position $(x, y)$ de la cerise et sa vitesse de chute.
+*   Ligne 7 : La méthode `update` met à jour la position verticale $y$ de la cerise en fonction de sa vitesse, simulant ainsi la chute.
+*   Ligne 10 : La méthode `draw` affiche la cerise à l'écran à l'aide de `pyxel.blt`.  On suppose ici que les coordonnées de la cerise dans le fichier de ressources sont (32, 0) et que ses dimensions sont 16x16 pixels. La couleur 12 (bleu) est rendue transparente.
+
+## Gestion de la pluie de cerises
+
+Maintenant, nous allons gérer la pluie de cerises dans la classe `App`. Nous utiliserons une liste `self.cerises` pour stocker les cerises actuellement présentes à l'écran et la fonction `pyxel.rndi` pour générer des cerises à des positions horizontales aléatoires.
+
+::: {.callout-tip}
+## Idée à retenir
+
+L'utilisation de `pyxel.rndi` permet de générer des nombres entiers aléatoires. C'est très pratique pour créer des événements aléatoires dans un jeu.
+:::
+
+On ajoute ces éléments dans la méthode `__init__` de la classe `App`:
+
+```python
+    def __init__(self):  # classe App
+        # ... (code précédent)
+        self.cerises = [] # liste des cerises
+        self.score = 0
+        pyxel.run(self.update, self.draw)
+```
+
+Ensuite, on modifie la méthode `update` pour ajouter une nouvelle cerise à un intervalle aléatoire, mettre à jour chaque cerise, et supprimer celles qui sortent de l'écran :
+
+```python
+    def update(self):  # classe App
+        self.personnage.update()
+        self.foret.update()
+        for nuage in self.nuages:
+            nuage.update()
+            # ... (code précédent pour la gestion des nuages)
+
+
+        if pyxel.frame_count % pyxel.rndi(30, 60) == 0:  # Générer une cerise toutes les 1 à 2 secondes (à 30 fps)
+            self.cerises.append(Cerise(pyxel.rndi(0, pyxel.width - 16), -16))  # Position aléatoire en x
+            
+        for cerise in self.cerises:
+            cerise.update()
+            if cerise.y > pyxel.height:
+                self.cerises.remove(cerise)
+
+```
+
+Explications :
+
+*   Ligne 8 : on génère une nouvelle cerise à un intervalle aléatoire compris entre 30 et 60 frames. Sachant que le jeu tourne à 30 fps, cela correspond à une nouvelle cerise toutes les 1 à 2 secondes.
+*   Ligne 9 : la cerise apparaît juste au-dessus de la fenêtre à une abscisse aléatoire.
+*   Lignes 11 à 13 : la boucle `for` met à jour la position verticale de chaque cerise et les supprime lorsqu'elles passent en dessous du bas de la fenêtre.
+
+## Détection des collisions
+
+Pour détecter les collisions entre le personnage et les cerises, nous allons ajouter du code dans la méthode `update` de la classe `App`.
+
+```python
+    def update(self):  # class App
+        # ... (code précédent)
+        for cerise in self.cerises:
+            #... (code précédent pour la gestion des cerises)
+
+            if (
+                abs(cerise.x - self.personnage.x_personnage) < 16 and abs(cerise.y - (pyxel.height - 16)) < 16
+            ):  # Collision détectée !
+                self.cerises.remove(cerise)
+                self.score += 1
+```
+
+Explications :
+
+*   Lignes 6 à 8 : On teste si la distance entre le personnage et la cerise est inférieure à 16 pixels, ce qui signifie une collision. Si une collision est détectée, la cerise est retirée de l'écran et le score du joueur est incrémenté.
+
+## Affichage du score
+
+Enfin, nous allons afficher le score en haut à gauche de l'écran. Pour cela, nous modifions la méthode `draw` de la classe `App`.
+
+```python
+    def draw(self):  # classe App
+        pyxel.cls(12)
+
+        # ... (code précédent pour le dessin du fond)
+
+        for cerise in self.cerises:
+            cerise.draw()
+        self.personnage.draw()
+        pyxel.text(5, 5, f"Score: {self.score}", pyxel.COLOR_WHITE) # Affichage du score
+```
+
+Explications :
+
+*   Ligne 8: on affiche le score à l'écran en blanc aux coordonnées (5, 5)
+
+## Conclusion
+
+Dans ce tutoriel, nous avons appris à faire pleuvoir des cerises dans notre application Pyxel. Nous avons créé une classe `Cerise` pour gérer les cerises, généré une pluie de cerises à intervalles aléatoires, détecté les collisions entre le personnage et les cerises, et affiché le score du joueur.  Vous pouvez maintenant tester votre jeu et voir si vous pouvez attraper toutes les cerises !
+
+![](image_jeu.gif){width="50%"}
