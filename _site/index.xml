@@ -10,7 +10,106 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Wed, 18 Dec 2024 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 25 Dec 2024 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Les algorithmes : une épopée à travers le temps</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/2024_12_19_algos_interview/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Les algorithmes, autrefois domaine réservé des mathématiciens, ont connu une ascension fulgurante depuis les années 1970 avec la démocratisation de l’informatique. Aujourd’hui, ils sont omniprésents, façonnant notre quotidien et alimentant les avancées de l’intelligence artificielle. Mais que sont-ils exactement ? Comment ont-ils évolué ? Et quels défis posent-ils à notre société ?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="rb_18131.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image de rawpixel.com sur Freepik"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/rb_18131.png" class="img-fluid figure-img" style="width:50.0%" alt="Image de rawpixel.com sur Freepik"></a></p>
+<figcaption>Image de rawpixel.com sur Freepik</figcaption>
+</figure>
+</div>
+</section>
+<section id="définition-et-rôle-des-algorithmes" class="level2">
+<h2 class="anchored" data-anchor-id="définition-et-rôle-des-algorithmes">Définition et rôle des algorithmes</h2>
+<p>Comme l’explique Claire Mathieu, directrice de recherche CNRS et experte en algorithmique, dans une interview pour le site de l’EPI (<a href="https://www.epi.asso.fr/revue/articles/a2410d.htm#_ts1734600136930" class="uri">https://www.epi.asso.fr/revue/articles/a2410d.htm#_ts1734600136930</a>){target=_blank}, un algorithme est une méthode, une suite d’instructions élémentaires, qui permet de résoudre un problème pas à pas. C’est un concept simple, mais d’une puissance extraordinaire. Pensez à la méthode d’addition avec retenue que vous avez apprise à l’école primaire : c’est un algorithme qui vous permet de réaliser n’importe quelle addition.</p>
+<p>La recherche en algorithmique consiste à concevoir de nouveaux algorithmes ou à analyser ceux qui existent déjà pour comprendre leurs propriétés et les améliorer. Claire Mathieu, par exemple, se spécialise dans les algorithmes d’approximation. Ces algorithmes sont conçus pour trouver des solutions suffisamment bonnes à des problèmes complexes, pour lesquels la recherche de la solution optimale serait trop longue ou impossible. Imaginez un déménageur qui doit optimiser le remplissage de son camion : une solution approximative, mais rapide est bien plus utile qu’une solution parfaite qui prendrait des heures à calculer. Ces problèmes sont dits « NP-difficiles », comme l’explique l’article.</p>
+</section>
+<section id="une-histoire-riche-et-des-avancées-majeures" class="level2">
+<h2 class="anchored" data-anchor-id="une-histoire-riche-et-des-avancées-majeures">Une histoire riche et des avancées majeures</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>L’histoire des algorithmes ne date pas d’hier. Elle remonte à des siècles, avec des figures comme Al-Khwarizmi au 9e siècle, dont le nom a donné le mot « algorithme ». Il a formalisé des méthodes de résolution de problèmes mathématiques, posant les bases de ce qui allait devenir une discipline majeure.</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="1983_CPA_5426.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Al-Khwarizmi"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/1983_CPA_5426.jpg" class="img-fluid figure-img" style="width:30.0%" alt="Al-Khwarizmi"></a></p>
+<figcaption><a href="https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE" target="_blank">Al-Khwarizmi</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Un tournant majeur a eu lieu après la Seconde Guerre mondiale, avec la nécessité de résoudre des problèmes logistiques complexes pour la reconstruction. C’est à cette époque, en 1947, que George Dantzig a inventé l’<a href="https://fr.wikipedia.org/wiki/Algorithme_du_simplexe" target="_blank">algorithme du simplexe</a>, un outil puissant pour l’optimisation linéaire, encore utilisé aujourd’hui.</p>
+<p>Mais c’est dans les années 1970 que les algorithmes ont véritablement pris leur essor, portés par la puissance croissante des ordinateurs. En 1971, Stephen Cook a formalisé la notion de « NP-difficulté », un concept clé de la théorie de la complexité, qui a révolutionné l’approche des problèmes algorithmiques. Richard Karp, en 1972, a ensuite identifié 21 problèmes « NP-complets », jetant les bases d’une conjecture fondamentale, « P est différent de NP », qui reste à ce jour un des grands mystères non résolus de l’informatique.</p>
+</section>
+<section id="des-découvertes-récentes-et-des-impacts-concrets" class="level2">
+<h2 class="anchored" data-anchor-id="des-découvertes-récentes-et-des-impacts-concrets">Des découvertes récentes et des impacts concrets</h2>
+<p>Parmi les avancées plus récentes, l’algorithme de chiffrement RSA, inventé en 1978 par Rivest, Shamir et Adleman, a révolutionné la sécurité des communications sur Internet. Il permet d’échanger des messages chiffrés sans avoir à échanger une clé secrète au préalable, grâce à l’utilisation d’une clé publique et d’une clé privée.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="RSA.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source Intersitices.info)"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/RSA.jpg" class="img-fluid figure-img" style="width:50.0%" alt="RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source Intersitices.info)"></a></p>
+<figcaption>RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source <a href="https://interstices.info/nombres-premiers-et-cryptologie-lalgorithme-rsa/" target="_blank">Intersitices.info</a>)</figcaption>
+</figure>
+</div>
+<p>L’arrivée du big data a également nécessité de nouveaux types d’algorithmes, capables de traiter des flux massifs de données. L’algorithme de Flajolet et Martin, datant de 1985, est un exemple marquant. Il permet d’estimer le nombre d’éléments distincts dans un flux de données, ce qui est crucial pour des applications comme la détection d’anomalies dans le trafic réseau.</p>
+<p>L’impact des algorithmes ne se limite pas à l’informatique. En biologie moléculaire, par exemple, ils ont permis d’accélérer le séquençage des génomes, ouvrant des perspectives inédites pour la recherche médicale.</p>
+</section>
+<section id="des-défis-éthiques-et-sociétaux" class="level2">
+<h2 class="anchored" data-anchor-id="des-défis-éthiques-et-sociétaux">Des défis éthiques et sociétaux</h2>
+<p>L’omniprésence des algorithmes dans notre société soulève des questions éthiques et sociétales importantes. Comme le souligne Claire Mathieu, la rapidité et l’efficacité ne suffisent plus. Les algorithmes doivent aussi être transparents et équitables. Mais comment garantir cette transparence ? Ouvrir le code ne suffit pas. Il faut, selon Claire Mathieu, une réflexion approfondie, impliquant scientifiques et citoyens, pour définir ce qu’est un algorithme transparent et quelles garanties sont attendues.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="lemonde.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Article paru dans le journal Le Monde en 2018"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/lemonde.png" class="img-fluid figure-img" style="width:50.0%" alt="Article paru dans le journal Le Monde en 2018"></a></p>
+<figcaption><a href="https://www.lemonde.fr/pixels/article/2018/02/12/une-etude-demontre-les-biais-de-la-reconnaissance-faciale-plus-efficace-sur-les-hommes-blancs_5255663_4408996.html" target="_blank">Article paru dans le journal Le Monde en 2018</a></figcaption>
+</figure>
+</div>
+<p>Les algorithmes peuvent même influencer le fonctionnement démocratique, comme le montre l’exemple du redécoupage électoral aux États-Unis. L’utilisation d’algorithmes pour optimiser ce redécoupage, en fonction de lois conçues avant l’ère numérique, pose des risques de manipulation des résultats électoraux.</p>
+</section>
+<section id="les-enjeux-de-demain" class="level2">
+<h2 class="anchored" data-anchor-id="les-enjeux-de-demain">Les enjeux de demain</h2>
+<p>L’intelligence artificielle et les réseaux de neurones profonds ouvrent de nouveaux défis pour l’algorithmique. Comprendre comment les résultats de ces algorithmes dépendent des données d’entrée est un enjeu majeur. Claire Mathieu suggère d’appliquer ces algorithmes à des problèmes classiques déjà bien étudiés pour mieux les comprendre.</p>
+<p>Enfin, la lutte contre le réchauffement climatique va, selon elle, devenir un domaine d’application crucial pour l’algorithmique. Il faudra inventer des algorithmes moins gourmands en ressources et en énergie, et capables de nous aider à réduire notre empreinte carbone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="2148884835.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Image de fr.freepik.com"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/2148884835.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Image de fr.freepik.com"></a></p>
+<figcaption>Image de fr.freepik.com</figcaption>
+</figure>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>En conclusion, les algorithmes sont bien plus que de simples outils techniques. Ils sont au cœur d’une épopée scientifique et sociétale qui façonne notre présent et notre futur. Les comprendre, les maîtriser et les utiliser de manière éthique est un défi majeur pour les années à venir. L’interview de Claire Mathieu nous offre un éclairage précieux sur cette histoire et sur les enjeux qui nous attendent.</p>
+<p><a href="futur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/futur.png" class="img-fluid"></a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>Algorithmique</category>
+  <category>Informatique</category>
+  <category>IA</category>
+  <category>Société</category>
+  <guid>https://flallemand.fr/blog/posts/2024_12_19_algos_interview/</guid>
+  <pubDate>Wed, 25 Dec 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/rb_18131.png" medium="image" type="image/png" height="90" width="144"/>
+</item>
 <item>
   <title>Nos amis Google, Wikipédia et ChatGPT sont-ils vraiment impartiaux ?</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -4978,78 +5077,6 @@ C’est l’occasion de découvrir les différences entre les différents métie
   <guid>https://flallemand.fr/blog/posts/metiers_dev/</guid>
   <pubDate>Sat, 19 Nov 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/metiers_dev/cookie_connecte.png" medium="image" type="image/png" height="50" width="144"/>
-</item>
-<item>
-  <title>Les Français et le Jeu Vidéo</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/enquete_jeux_videos/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<!-- wp:paragraph -->
-<p>
-Le SELL, Syndicat des Éditeurs de Logiciels de Loisirs, dévoile les résultats de son étude annuelle « Les Français et le Jeu Vidéo » conduite par Médiamétrie.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Les résultats remettent en cause certaines idées reçues sur les jeux vidéos.
-</p>
-<!-- /wp:paragraph -->
-<p><a href="jeuxVideo-jeuxVideo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/enquete_jeux_videos/jeuxVideo-jeuxVideo.png" class="img-fluid"></a></p>
-<!-- wp:paragraph -->
-<p>
-Tous ces résultats, ainsi que l’<a href="https://www.sell.fr/news/lessentiel-du-jeu-video-novembre-2022" target="_blank" rel="noreferrer noopener">article qui les accompagne</a> est présenté de manière très positive. N’oublions pas que les auteurs sont les représentants de l’industrie des jeux vidéos. Ils ont donc tout intérêt à présenter cette activité sous son meilleur jour.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Les atouts du jeu vidéo dans la stimulation de certaines capacités de réflexion et visuelles sont connus, mais leurs dangers ne doivent pas être oubliés. Le principal semble être le problème de l’addiction et du temps passé à jouer. Trop de temps passé à jouer peut provoquer des troubles du sommeil et de la concentration, un manque d’activité physique, voire une rupture de liens sociaux et un repli sur soi.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-L’OMS, Organisation Mondiale de la Santé, a classé les <a href="https://www.who.int/fr/news-room/questions-and-answers/item/gaming-disorder" target="_blank" rel="noreferrer noopener"><strong>Troubles du jeu vidéo</strong></a> dans sa classification internationale des maladies depuis 2018.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-On peut lire sur le site de l’OMS le paragraphe suivant :
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:quote -->
-<blockquote class="wp-block-quote blockquote">
-<!-- wp:paragraph -->
-<p>
-Des études montrent que le trouble du jeu vidéo ne touche qu’une petite partie des personnes qui utilisent des jeux numériques ou des jeux vidéo. Néanmoins, tout joueur doit être attentif au temps passé sur les jeux, en particulier si ses activités quotidiennes en pâtissent, ainsi qu’à tout changement physique ou psychologique, sur le plan social et celui de sa santé, qui pourrait être attribué à un comportement de jeu.
-</p>
-<!-- /wp:paragraph -->
-</blockquote>
-<!-- /wp:quote -->
-<!-- wp:paragraph -->
-<p>
-Il convient donc de rester raisonnable en se fixant des limites de temps quotidien de jeu. Une heure par jour maximum semble être une bonne idée. D’une manière générale, c’est le temps total quotidien devant un écran qu’il est très conseillé de limiter.
-</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>
-Pour en savoir plus, <a href="https://www.passeportsante.net/fr/psychologie/Fiche.aspx?doc=addiction-jeux-videos" target="_blank" rel="noreferrer noopener">quelques conseils sur ce site</a> et <a href="https://lebonusagedesecrans.fr/essentiel-a-savoir/" target="_blank" rel="noreferrer noopener">beaucoup d’informations sur celui-ci</a>.
-</p>
-<!-- /wp:paragraph -->
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>Orientation</category>
-  <category>NSI</category>
-  <category>Jeux</category>
-  <guid>https://flallemand.fr/blog/posts/enquete_jeux_videos/</guid>
-  <pubDate>Wed, 16 Nov 2022 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/enquete_jeux_videos/jeuxVideo-jeuxVideo.png" medium="image" type="image/png" height="400" width="105"/>
 </item>
 </channel>
 </rss>

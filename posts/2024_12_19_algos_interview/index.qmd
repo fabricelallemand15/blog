@@ -1,0 +1,63 @@
+---
+title: "Les algorithmes : une épopée à travers le temps"
+description: "Découvrez l'histoire des algorithmes, de leurs origines mathématiques à leur omniprésence dans notre société moderne, et les enjeux éthiques et sociétaux qu'ils soulèvent."
+date: "2024-12-26"
+categories: [Algorithmique, Informatique, IA, Société]
+image: "rb_18131.png"
+---
+
+## Introduction
+
+Les algorithmes, autrefois domaine réservé des mathématiciens, ont connu une ascension fulgurante depuis les années 1970 avec la démocratisation de l'informatique. Aujourd'hui, ils sont omniprésents, façonnant notre quotidien et alimentant les avancées de l'intelligence artificielle. Mais que sont-ils exactement ? Comment ont-ils évolué ? Et quels défis posent-ils à notre société ?
+
+![Image de rawpixel.com sur Freepik](rb_18131.png){width="50%"}
+
+## Définition et rôle des algorithmes
+
+Comme l'explique Claire Mathieu, directrice de recherche CNRS et experte en algorithmique, dans une interview pour le site de l'EPI (<https://www.epi.asso.fr/revue/articles/a2410d.htm#_ts1734600136930>){target=_blank}, un algorithme est une méthode, une suite d'instructions élémentaires, qui permet de résoudre un problème pas à pas. C'est un concept simple, mais d'une puissance extraordinaire. Pensez à la méthode d'addition avec retenue que vous avez apprise à l'école primaire : c'est un algorithme qui vous permet de réaliser n'importe quelle addition.
+
+La recherche en algorithmique consiste à concevoir de nouveaux algorithmes ou à analyser ceux qui existent déjà pour comprendre leurs propriétés et les améliorer. Claire Mathieu, par exemple, se spécialise dans les algorithmes d'approximation. Ces algorithmes sont conçus pour trouver des solutions suffisamment bonnes à des problèmes complexes, pour lesquels la recherche de la solution optimale serait trop longue ou impossible. Imaginez un déménageur qui doit optimiser le remplissage de son camion : une solution approximative, mais rapide est bien plus utile qu'une solution parfaite qui prendrait des heures à calculer. Ces problèmes sont dits « NP-difficiles », comme l'explique l'article.
+
+## Une histoire riche et des avancées majeures
+
+::: {layout-ncol=2}
+L'histoire des algorithmes ne date pas d'hier. Elle remonte à des siècles, avec des figures comme Al-Khwarizmi au 9e siècle, dont le nom a donné le mot « algorithme ». Il a formalisé des méthodes de résolution de problèmes mathématiques, posant les bases de ce qui allait devenir une discipline majeure.
+
+![[Al-Khwarizmi](https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE){target=_blank}](1983_CPA_5426.jpg){width="30%"}
+::: 
+
+Un tournant majeur a eu lieu après la Seconde Guerre mondiale, avec la nécessité de résoudre des problèmes logistiques complexes pour la reconstruction. C'est à cette époque, en 1947, que George Dantzig a inventé l'[algorithme du simplexe](https://fr.wikipedia.org/wiki/Algorithme_du_simplexe){target=_blank}, un outil puissant pour l'optimisation linéaire, encore utilisé aujourd'hui.
+
+Mais c'est dans les années 1970 que les algorithmes ont véritablement pris leur essor, portés par la puissance croissante des ordinateurs. En 1971, Stephen Cook a formalisé la notion de « NP-difficulté », un concept clé de la théorie de la complexité, qui a révolutionné l'approche des problèmes algorithmiques. Richard Karp, en 1972, a ensuite identifié 21 problèmes « NP-complets », jetant les bases d'une conjecture fondamentale, « P est différent de NP », qui reste à ce jour un des grands mystères non résolus de l'informatique.
+
+## Des découvertes récentes et des impacts concrets
+
+Parmi les avancées plus récentes, l'algorithme de chiffrement RSA, inventé en 1978 par Rivest, Shamir et Adleman, a révolutionné la sécurité des communications sur Internet. Il permet d'échanger des messages chiffrés sans avoir à échanger une clé secrète au préalable, grâce à l'utilisation d'une clé publique et d'une clé privée.
+
+![RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source [Intersitices.info](https://interstices.info/nombres-premiers-et-cryptologie-lalgorithme-rsa/){target=_blank})](RSA.jpg){width="50%"}
+
+L'arrivée du big data a également nécessité de nouveaux types d'algorithmes, capables de traiter des flux massifs de données. L'algorithme de Flajolet et Martin, datant de 1985, est un exemple marquant. Il permet d'estimer le nombre d'éléments distincts dans un flux de données, ce qui est crucial pour des applications comme la détection d'anomalies dans le trafic réseau.
+
+L'impact des algorithmes ne se limite pas à l'informatique. En biologie moléculaire, par exemple, ils ont permis d'accélérer le séquençage des génomes, ouvrant des perspectives inédites pour la recherche médicale.
+
+## Des défis éthiques et sociétaux
+
+L'omniprésence des algorithmes dans notre société soulève des questions éthiques et sociétales importantes. Comme le souligne Claire Mathieu, la rapidité et l'efficacité ne suffisent plus. Les algorithmes doivent aussi être transparents et équitables. Mais comment garantir cette transparence ? Ouvrir le code ne suffit pas. Il faut, selon Claire Mathieu, une réflexion approfondie, impliquant scientifiques et citoyens, pour définir ce qu'est un algorithme transparent et quelles garanties sont attendues.
+
+![[Article paru dans le journal Le Monde en 2018](https://www.lemonde.fr/pixels/article/2018/02/12/une-etude-demontre-les-biais-de-la-reconnaissance-faciale-plus-efficace-sur-les-hommes-blancs_5255663_4408996.html){target=_blank}](lemonde.png){width="50%"}
+
+Les algorithmes peuvent même influencer le fonctionnement démocratique, comme le montre l'exemple du redécoupage électoral aux États-Unis. L'utilisation d'algorithmes pour optimiser ce redécoupage, en fonction de lois conçues avant l'ère numérique, pose des risques de manipulation des résultats électoraux.
+
+## Les enjeux de demain
+
+L'intelligence artificielle et les réseaux de neurones profonds ouvrent de nouveaux défis pour l'algorithmique. Comprendre comment les résultats de ces algorithmes dépendent des données d'entrée est un enjeu majeur. Claire Mathieu suggère d'appliquer ces algorithmes à des problèmes classiques déjà bien étudiés pour mieux les comprendre.
+
+Enfin, la lutte contre le réchauffement climatique va, selon elle, devenir un domaine d'application crucial pour l'algorithmique. Il faudra inventer des algorithmes moins gourmands en ressources et en énergie, et capables de nous aider à réduire notre empreinte carbone.
+
+![Image de fr.freepik.com](2148884835.jpg){width="50%"}
+
+## Conclusion
+
+En conclusion, les algorithmes sont bien plus que de simples outils techniques. Ils sont au cœur d'une épopée scientifique et sociétale qui façonne notre présent et notre futur. Les comprendre, les maîtriser et les utiliser de manière éthique est un défi majeur pour les années à venir. L'interview de Claire Mathieu nous offre un éclairage précieux sur cette histoire et sur les enjeux qui nous attendent.
+
+![](futur.png)
