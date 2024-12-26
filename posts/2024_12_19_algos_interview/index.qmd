@@ -2,6 +2,7 @@
 title: "Les algorithmes : une épopée à travers le temps"
 description: "Découvrez l'histoire des algorithmes, de leurs origines mathématiques à leur omniprésence dans notre société moderne, et les enjeux éthiques et sociétaux qu'ils soulèvent."
 date: "2024-12-26"
+date-modified: "2024-12-26"
 categories: [Algorithmique, Informatique, IA, Société]
 image: "rb_18131.png"
 ---
@@ -14,7 +15,9 @@ Les algorithmes, autrefois domaine réservé des mathématiciens, ont connu une 
 
 ## Définition et rôle des algorithmes
 
-Comme l'explique Claire Mathieu, directrice de recherche CNRS et experte en algorithmique, dans une interview pour le site de l'EPI (<https://www.epi.asso.fr/revue/articles/a2410d.htm#_ts1734600136930>){target=_blank}, un algorithme est une méthode, une suite d'instructions élémentaires, qui permet de résoudre un problème pas à pas. C'est un concept simple, mais d'une puissance extraordinaire. Pensez à la méthode d'addition avec retenue que vous avez apprise à l'école primaire : c'est un algorithme qui vous permet de réaliser n'importe quelle addition.
+Comme l'explique Claire Mathieu, directrice de recherche CNRS et experte en algorithmique, dans [une interview pour le site de l'EPI](https://www.epi.asso.fr/revue/articles/a2410d.htm#_ts1734600136930){target=_blank}, un algorithme est une méthode, une suite d'instructions élémentaires, qui permet de résoudre un problème pas à pas. C'est un concept simple, mais d'une puissance extraordinaire. Pensez à la méthode d'addition avec retenue que vous avez apprise à l'école primaire : c'est un algorithme qui vous permet de réaliser n'importe quelle addition.
+
+![Claire MATHIEU](clairemathieucdf1.jpg){width="30%"}
 
 La recherche en algorithmique consiste à concevoir de nouveaux algorithmes ou à analyser ceux qui existent déjà pour comprendre leurs propriétés et les améliorer. Claire Mathieu, par exemple, se spécialise dans les algorithmes d'approximation. Ces algorithmes sont conçus pour trouver des solutions suffisamment bonnes à des problèmes complexes, pour lesquels la recherche de la solution optimale serait trop longue ou impossible. Imaginez un déménageur qui doit optimiser le remplissage de son camion : une solution approximative, mais rapide est bien plus utile qu'une solution parfaite qui prendrait des heures à calculer. Ces problèmes sont dits « NP-difficiles », comme l'explique l'article.
 
@@ -28,15 +31,62 @@ L'histoire des algorithmes ne date pas d'hier. Elle remonte à des siècles, ave
 
 Un tournant majeur a eu lieu après la Seconde Guerre mondiale, avec la nécessité de résoudre des problèmes logistiques complexes pour la reconstruction. C'est à cette époque, en 1947, que George Dantzig a inventé l'[algorithme du simplexe](https://fr.wikipedia.org/wiki/Algorithme_du_simplexe){target=_blank}, un outil puissant pour l'optimisation linéaire, encore utilisé aujourd'hui.
 
-Mais c'est dans les années 1970 que les algorithmes ont véritablement pris leur essor, portés par la puissance croissante des ordinateurs. En 1971, Stephen Cook a formalisé la notion de « NP-difficulté », un concept clé de la théorie de la complexité, qui a révolutionné l'approche des problèmes algorithmiques. Richard Karp, en 1972, a ensuite identifié 21 problèmes « NP-complets », jetant les bases d'une conjecture fondamentale, « P est différent de NP », qui reste à ce jour un des grands mystères non résolus de l'informatique.
+::: {.callout-tip}
+## L'algorithme du simplexe : trouver le meilleur chemin
+
+Imaginez que vous êtes dans un labyrinthe en 3D avec de nombreuses salles reliées par des couloirs. Chaque salle représente une solution possible à un problème et la hauteur de la salle représente la qualité de cette solution (plus c'est haut, mieux c'est). Votre objectif est de trouver la salle la plus haute, la meilleure solution.
+
+L'algorithme du simplexe, c'est un peu comme une méthode pour explorer ce labyrinthe de manière intelligente.
+
+Voici comment il fonctionne :
+
+1. **Point de départ :** Vous commencez dans une salle au hasard, une solution initiale.
+2. **Regarder autour :** Vous regardez toutes les salles voisines, celles directement connectées à la vôtre par un couloir.
+3. **Monter :** Si une salle voisine est plus haute que la vôtre, vous vous y déplacez. C'est comme si vous choisissiez la meilleure solution parmi celles qui sont immédiatement accessibles.
+4. **Répéter :** Vous répétez les étapes 2 et 3, en vous déplaçant de salle en salle, toujours vers une salle plus haute.
+5. **Sommet :** Vous continuez à monter jusqu'à atteindre une salle pour laquelle aucune des salles voisines n'est plus haute. Vous avez trouvé un sommet, une solution optimale localement !
+
+**En résumé :** L'algorithme du simplexe trouve la meilleure solution en se déplaçant de proche en proche, en choisissant toujours la meilleure option parmi les solutions voisines, jusqu'à atteindre un sommet. Il est possible que l'on se retrouve bloqué dans un optimum local, qui n'est pas la solution optimale globale, dans ce cas, l'algorithme recommence en partant d'un nouveau point de départ.
+
+**C'est comme un alpiniste qui gravit une montagne en suivant toujours le chemin le plus ascendant, jusqu'à atteindre un sommet.** Bien sûr, dans la réalité, les problèmes traités par l'algorithme du simplexe sont bien plus complexes que des labyrinthes en 3D, mais le principe reste le même. C'est une méthode puissante pour trouver la meilleure solution à des problèmes d'optimisation, utilisée dans de nombreux domaines comme la logistique, la finance ou la production industrielle.
+:::
+
+Mais c'est dans les années 1970 que les algorithmes ont véritablement pris leur essor, portés par la puissance croissante des ordinateurs. En 1971, Stephen Cook a formalisé la notion de « NP-difficulté », un concept clé de la théorie de la complexité, qui a révolutionné l'approche des problèmes algorithmiques. [Richard Karp, en 1972, a ensuite identifié 21 problèmes « NP-complets »](https://fr.wikipedia.org/wiki/21_probl%C3%A8mes_NP-complets_de_Karp){target=_blank}, jetant les bases d'une conjecture fondamentale, « P est différent de NP », qui reste à ce jour un des grands mystères non résolus de l'informatique.
+
+::: {.callout-tip}
+## Problèmes NP-complets et la grande question P vs NP
+
+En informatique, il y a des problèmes faciles à résoudre et des problèmes difficiles. Pour les classer, on s'intéresse à deux grandes catégories : P et NP.
+
+**P : Les problèmes "faciles"**
+
+Imaginez que vous avez une liste de nombres et que vous voulez la trier par ordre croissant. C'est un problème "facile", car il existe des algorithmes rapides pour le faire, même si la liste est très longue. On dit que ce problème appartient à la catégorie P (pour "Polynomial"). En gros, le temps nécessaire pour le résoudre augmente de manière raisonnable avec la taille du problème.
+
+**NP : Les problèmes "vérifiables"**
+
+Maintenant, imaginez un puzzle complexe, comme un Sudoku géant. Si quelqu'un vous donne une solution, vous pouvez facilement vérifier si elle est correcte en regardant si les règles du jeu sont respectées. Mais trouver la solution vous-même peut être très long et difficile ! On dit que ce problème appartient à la catégorie NP (pour "Non-déterministe Polynomial"). En gros, on peut vérifier une solution rapidement, mais trouver la solution peut prendre un temps qui explose avec la taille du problème.
+
+**NP-complets : Les problèmes les plus difficiles de NP**
+
+Parmi les problèmes NP, il y a une sous-catégorie spéciale : les problèmes NP-complets. Ce sont les plus difficiles de tous les problèmes NP. Si vous trouvez un algorithme rapide pour résoudre un seul problème NP-complet, alors vous aurez trouvé un algorithme rapide pour résoudre *tous* les problèmes NP !
+
+**P = NP : Le grand mystère**
+
+C'est là qu'arrive la grande question à un million de dollars : **P est-il égal à NP ?** Autrement dit, est-ce que tous les problèmes dont on peut vérifier la solution rapidement (NP) peuvent aussi être résolus rapidement (P) ?
+
+*   **Si P = NP :** Cela voudrait dire qu'il existe des algorithmes rapides, encore inconnus, pour résoudre tous les problèmes NP, y compris les NP-complets. Ce serait une révolution, car de nombreux problèmes importants, comme l'optimisation de tournées de livraison ou la recherche de nouveaux médicaments, deviendraient beaucoup plus faciles à résoudre.
+*   **Si P ≠ NP :** Cela voudrait dire que certains problèmes sont fondamentalement difficiles à résoudre, même si on peut vérifier une solution rapidement. C'est ce que pense la plupart des informaticiens, mais personne n'a encore réussi à le prouver.
+
+**En résumé :** La question P vs NP est l'un des plus grands mystères de l'informatique et des mathématiques. Sa résolution aurait des conséquences majeures sur de nombreux domaines scientifiques et industriels. C'est un défi qui stimule la recherche depuis des décennies !
+:::
 
 ## Des découvertes récentes et des impacts concrets
 
-Parmi les avancées plus récentes, l'algorithme de chiffrement RSA, inventé en 1978 par Rivest, Shamir et Adleman, a révolutionné la sécurité des communications sur Internet. Il permet d'échanger des messages chiffrés sans avoir à échanger une clé secrète au préalable, grâce à l'utilisation d'une clé publique et d'une clé privée.
+Parmi les avancées plus récentes, l'algorithme de chiffrement RSA, inventé en 1978 par Rivest, Shamir et Adleman, a révolutionné la sécurité des communications sur Internet. Il permet d'échanger des messages chiffrés sans avoir à échanger une clé secrète au préalable, grâce à l'utilisation d'une clé publique et d'une clé privée (pour en savoir plus, suivre le lien situé sous la photo ci-dessous).
 
 ![RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source [Intersitices.info](https://interstices.info/nombres-premiers-et-cryptologie-lalgorithme-rsa/){target=_blank})](RSA.jpg){width="50%"}
 
-L'arrivée du big data a également nécessité de nouveaux types d'algorithmes, capables de traiter des flux massifs de données. L'algorithme de Flajolet et Martin, datant de 1985, est un exemple marquant. Il permet d'estimer le nombre d'éléments distincts dans un flux de données, ce qui est crucial pour des applications comme la détection d'anomalies dans le trafic réseau.
+L'arrivée du big data a également nécessité de nouveaux types d'algorithmes, capables de traiter des flux massifs de données. [L'algorithme de Flajolet et Martin](https://fr.wikipedia.org/wiki/Algorithme_de_Flajolet_et_Martin){target=_blank}, datant de 1985, est un exemple marquant. Il permet d'estimer le nombre d'éléments distincts dans un flux de données, ce qui est crucial pour des applications comme la détection d'anomalies dans le trafic réseau.
 
 L'impact des algorithmes ne se limite pas à l'informatique. En biologie moléculaire, par exemple, ils ont permis d'accélérer le séquençage des génomes, ouvrant des perspectives inédites pour la recherche médicale.
 

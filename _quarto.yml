@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Le bloc-notes de M. LALLEMAND"
+  title: "Le bloc-notes Maths, Info, Lycée"
   favicon: favicon.png
   site-url: https://flallemand.fr/blog
   description: "Le blog de M. LALLEMAND, professeur de mathématiques"
@@ -11,6 +11,7 @@ website:
   page-navigation: true
   navbar:
     background: light
+    logo: avatar.png
     right:
       - about.qmd
       - icon: github
