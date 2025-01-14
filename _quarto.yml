@@ -16,8 +16,6 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/fabricelallemand15/blog
-      - icon: twitter
-        href: https://twitter.com/MathsLallemand
       - icon: mastodon
         href: https://mastodon.mim-libre.fr/@lallemandfabrice
       - icon: instagram
