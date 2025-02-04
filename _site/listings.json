@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/tutoIA_podcast/index.html",
       "/posts/2024_12_19_algos_interview/index.html",
       "/posts/2024_18_12_biais_sites/index.html",
       "/posts/pyxel_tuto4_cerises/index.html",

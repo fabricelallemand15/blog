@@ -9,8 +9,168 @@
 <link>https://flallemand.fr/blog/</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 25 Dec 2024 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.7.13</generator>
+<lastBuildDate>Mon, 03 Feb 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Tuto IA pour les profs : Créer des exercices à partir de podcasts.</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/tutoIA_podcast/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="tuto-ia-pour-les-profs-créer-des-exercices-à-partir-de-podcasts." class="level1">
+<h1>Tuto IA pour les profs : Créer des exercices à partir de podcasts.</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Les podcasts sont un excellent moyen d’apprendre et de s’informer. Ils sont également un excellent moyen de pratiquer l’écoute et la compréhension orale. Dans ce tutoriel, nous allons voir comment utiliser l’intelligence artificielle pour créer des exercices à partir de podcasts.</p>
+<p>Pour ce faire, nous allons utiliser l’IA Gemini de Google, dans sa version “2.0 Flash Thinking”, accessible entièrement gratuitement dans le <a href="https://aistudio.google.com" target="_blank">Google AI Studio</a>.</p>
+<p><a href="Wavy_Tech-07_Single-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/Wavy_Tech-07_Single-03.jpg" class="img-fluid" style="width:40.0%"></a></p>
+</section>
+<section id="étape-1-télécharger-le-podcast" class="level2">
+<h2 class="anchored" data-anchor-id="étape-1-télécharger-le-podcast">Étape 1 : Télécharger le podcast</h2>
+<p>Pour permettre à l’IA de travailler sur le podcast, nous devons d’abord le télécharger. Nous allons prendre comme exemple un podcast de France Culture sur l’intelligence artificielle, dont la page est la suivante : <a href="https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100" target="_blank">https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100</a>.</p>
+<p>Le site de France Culture ne permet pas de télécharger directement le podcast, mais vous pouvez utiliser un outil comme <code>youtube-dl</code> pour le faire. Par exemple, pour télécharger le podcast en format mp3, vous pouvez utiliser la commande suivante :</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">youtube-dl</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-x</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100</span></code></pre></div>
+<p>Mais il est aussi possible d’utiliser l’IA pour télécharger le podcast. En effet, l’adresse du fichier mp3 est souvent présente dans le code source de la page web. Vous pouvez donc utiliser une IA pour extraire cette adresse et télécharger le fichier. Voici comment procéder.</p>
+<ul>
+<li>Charger la page du podcast dans votre navigateur. Faire un clic droit sur la page, puis sélectionner “Afficher le code source de la page” (ou équivalent).</li>
+<li>Un nouvel onglet s’ouvre contenant le code source de la page. Avec le clavier, faire <code>Ctrl + A</code> pour tout sélectionner, puis <code>Ctrl + C</code> pour copier.</li>
+<li>Dans Gemini, créer un nouveau prompt et entrer le texte suivant :</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Extrait du code source HTML ci-dessous l’URL du fichier mp3 du podcast de 59 minutes de France Culture sur l’IA forte.</p>
+</div>
+</div>
+<p>Sauter une ligne, puis coller le code source copié précédemment avec <code>Ctrl + V</code> et valider avec <code>Ctrl + Entrée</code>.</p>
+<p><a href="reponse_url.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_url.png" class="img-fluid"></a></p>
+<ul>
+<li>L’IA va alors extraire l’URL du fichier MP3 du podcast. Vous pouvez ensuite copier-coller cette URL dans votre navigateur internet pour ouvrir et télécharger le fichier (clic droit).</li>
+</ul>
+<p>Il existe aussi des outils en ligne et des logiciels pour télécharger des fichiers audio à partir d’une URL.</p>
+<p>Supposons maintenant que vous avez téléchargé le podcast et que vous avez le fichier MP3 sur votre ordinateur.</p>
+</section>
+<section id="étape-2-résumé-du-podcast" class="level2">
+<h2 class="anchored" data-anchor-id="étape-2-résumé-du-podcast">Étape 2 : Résumé du podcast</h2>
+<p>Demander directement une transcription du podcast est possible, mais avec un fichier d’une heure, le texte à générer serait très long, et même trop long pour l’IA.</p>
+<p>Nous allons donc plutôt lui demander un résumé structuré. Sachant que les IA donnent de bien meilleurs résultats si on leur demande de travailler étape par étape, il est préférable de faire un prompt bien détaillé. Voici comment procéder :</p>
+<ul>
+<li>Dans le Google AI Studio, créez un nouveau prompt et choisir le modèle “2.0 Flash Thinking”.</li>
+<li>Entrez le texte suivant :</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Voici le fichier audio d’un podcast. Je souhaite un résumé structuré de ce podcast. Pour cela, je te demande de suivre les étapes suivantes :</p>
+<ol type="1">
+<li>Liste des invités de l’émission en précisant leurs fonctions.</li>
+<li>Résumé de l’introduction : quelle est la thématique abordée ?</li>
+<li>Résumé des points principaux abordés. Structure ta réponse en suivant bien le plan de l’émission. Indique des repères temporels pour que je puisse retrouver les passages dans le podcast.</li>
+<li>Résumé de la conclusion.</li>
+</ol>
+</div>
+</div>
+<p>Ensuite, charger le fichier MP3 en cliquant sur le petit symbole (+) situé en bas à droite.</p>
+<p>Valider le prompt avec <code>Ctrl + Entrée</code>, puis attendre que l’IA génère la transcription (c’est un peu long).</p>
+<p><a href="reponse_ia_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_ia_1.png" class="img-fluid" style="width:80.0%"></a></p>
+</section>
+<section id="étape-3-création-dexercices" class="level2">
+<h2 class="anchored" data-anchor-id="étape-3-création-dexercices">Étape 3 : Création d’exercices</h2>
+<p>L’exploitation pédagogique va dépendre de la discipline concernée et des envies du professeur !</p>
+<p>Voici quelques idées d’exercices que vous pourriez créer à partir du résumé généré par l’IA :</p>
+<ul>
+<li><strong>Questions de compréhension</strong> : Créer des questions de compréhension sur les points principaux abordés dans le podcast.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Je suis professeur et je veux vérifier que mes élèves ont bien écouté ce podcast et l’ont bien compris. Pour cela, je souhaite créer des questions de compréhension. Peux-tu me proposer 5 questions sur les points principaux abordés dans le podcast ?</p>
+</div>
+</div>
+<p>En réponse, l’IA propose des questions qui peuvent être pertinentes ou pas, il faut faire le tri. Lors de mon test, elle a introduit des repères temporels pour quelques questions, mais ces repères sont fantaisistes :</p>
+<p><a href="reponse_ia_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_ia_2.png" class="img-fluid" style="width:80.0%"></a></p>
+<ul>
+<li><strong>Texte à trous</strong> : Créer un texte à trous à partir du résumé du podcast. Les élèves devront compléter les trous avec les mots manquants.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Je suis professeur et je veux créer un texte à trous à partir du résumé du podcast. Peux-tu me proposer un texte à trous avec 10 mots manquants ? Indique la solution en dessous du texte.</p>
+</div>
+</div>
+<p><a href="reponse_ia_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_ia_3.png" class="img-fluid" style="width:80.0%"></a></p>
+<ul>
+<li><strong>QCM</strong> : Créer un QCM à partir du résumé du podcast. Les élèves devront choisir la bonne réponse parmi plusieurs propositions.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Je suis professeur et je veux créer un QCM à partir du résumé du podcast. Peux-tu me proposer 5 questions avec chacune une unique bonne réponse. Indique quelle est la bonne réponse pour chaque question.</p>
+</div>
+</div>
+<p><a href="reponse_ia_4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_ia_4.png" class="img-fluid" style="width:80.0%"></a></p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Les exemples présentés dans cet article ne sont que quelques idées d’exercices que vous pourriez créer à partir d’un podcast. Selon les disciplines, beaucoup d’autres types d’exercices sont possibles. L’IA peut vous aider à générer des exercices rapidement et facilement, mais il est important de vérifier la qualité des réponses générées.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>IA</category>
+  <category>Tutos</category>
+  <category>Podcast</category>
+  <guid>https://flallemand.fr/blog/posts/tutoIA_podcast/</guid>
+  <pubDate>Mon, 03 Feb 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/tutoIA_podcast/Wavy_Tech-07_Single-03.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Les algorithmes : une épopée à travers le temps</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -5101,38 +5261,6 @@ Ces épisodes sont <a href="https://www.radiofrance.fr/franceculture/podcasts/se
   <guid>https://flallemand.fr/blog/posts/podcast_internet/</guid>
   <pubDate>Mon, 28 Nov 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/podcast_internet/podcast_internet.png" medium="image" type="image/png" height="45" width="144"/>
-</item>
-<item>
-  <title>Les métiers du développement et de l’infrastructure</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/metiers_dev/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>
-Dans cette très bonne vidéo publiée sur la chaîne <a href="https://www.youtube.com/@Cookieconnecte" target="_blank" rel="noreferrer noopener">Youtube Cookie connecté</a>, les différents métiers du développement et de l’infrastructure sont présentés.
-</p>
-<p>
-C’est l’occasion de découvrir les différences entre les différents métiers qui tournent autour du développement et du maintien de sites web.
-</p>
-<!-- wp:html -->
-<iframe class="video" style="margin:0 auto;" title="Découvrez les métiers du dev et de l'infra en 7 minutes" src="https://tube-sciences-technologies.apps.education.fr/videos/embed/1993411d-0363-4fb9-a32a-6751dc88d24e?start=1m17s&amp;stop=6m20s" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" width="100%" frameborder="0">
-</iframe>
-<!-- /wp:html -->
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>Orientation</category>
-  <category>NSI</category>
-  <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/metiers_dev/</guid>
-  <pubDate>Sat, 19 Nov 2022 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/metiers_dev/cookie_connecte.png" medium="image" type="image/png" height="50" width="144"/>
 </item>
 </channel>
 </rss>
