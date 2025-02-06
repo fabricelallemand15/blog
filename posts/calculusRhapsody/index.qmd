@@ -1,0 +1,49 @@
+---
+title: "Calculus Rhapsody : Quand l'analyse devient une chanson entraînante !"
+subtitle: ""
+description: ""
+date: "2025-02-06"
+categories: [Mathématiques, Humour, Vidéothèque]
+image: "image_video.png"
+---
+
+<blockquote style="margin-left: 100px; font-style: italic;">
+I'm just a constant nobody loves me...<br>
+...<br>
+Multiply the integral by pi!<br>
+Pi tastes real good with whipped cream!<br>
+...<br>
+Oh baby... can't define that point baby<br>
+It's undefined<br>
+Goes to positive and negative infinity<br>
+</blockquote>
+
+Avez-vous déjà imaginé apprendre l'analyse en écoutant une chanson ? "Calculus Rhapsody" le fait de manière ludique et mémorable. Cette chanson aborde les concepts fondamentaux du calcul différentiel et intégral d'une manière non conventionnelle.
+
+La vidéo est ancienne (2009), mais toujours d'actualité. Elle est une parodie de la célèbre chanson "Bohemian Rhapsody" de Queen, avec des paroles adaptées au cours d'analyse. La chanson est interprétée par un groupe d'étudiants en mathématiques de l'Université de Northwestern. On devine qu'ils ont un peu souffert pour apprendre leur cours d'analyse, mais ils ont réussi à en faire une chanson entraînante et éducative.
+
+<blockquote style="margin-left: 100px; font-style: italic;">
+I'm a just a limit,<br>
+Defined analytically<br>
+Function's continuous,<br>
+There's no holes,<br>
+No sharp points,<br>
+Or asymptotes<br>
+Any way this graph goes,<br>
+It is differentiable for me..<br>
+</blockquote>
+
+La chanson est un mélange d'humour, de musique et de mathématiques. On prend particulièrement plaisir à comprendre les paroles et à les associer aux concepts mathématiques connus. Toutes ces notions devraient parler à un élève français en fin de terminale, spécialité mathématiques.
+
+<blockquote style="margin-left: 100px; font-style: italic;">
+All year, in Calculus<br>
+We've learned so many things<br>
+About which we are gonna sing<br>
+We can find derivatives<br>
+And integrals<br>
+And the area enclosed between two curves...<br>
+</blockquote>
+
+Voici la vidéo de "Calculus Rhapsody" :
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uqwC41RDPyg?si=cxEiDTsfgaaoJBuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -10,7 +10,43 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.7.13</generator>
-<lastBuildDate>Mon, 03 Feb 2025 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 05 Feb 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Calculus Rhapsody : Quand l’analyse devient une chanson entraînante !</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/calculusRhapsody/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<blockquote style="margin-left: 100px; font-style: italic;" class="blockquote">
+I’m just a constant nobody loves me…<br> …<br> Multiply the integral by pi!<br> Pi tastes real good with whipped cream!<br> …<br> Oh baby… can’t define that point baby<br> It’s undefined<br> Goes to positive and negative infinity<br>
+</blockquote>
+<p>Avez-vous déjà imaginé apprendre l’analyse en écoutant une chanson ? “Calculus Rhapsody” le fait de manière ludique et mémorable. Cette chanson aborde les concepts fondamentaux du calcul différentiel et intégral d’une manière non conventionnelle.</p>
+<p>La vidéo est ancienne (2009), mais toujours d’actualité. Elle est une parodie de la célèbre chanson “Bohemian Rhapsody” de Queen, avec des paroles adaptées au cours d’analyse. La chanson est interprétée par un groupe d’étudiants en mathématiques de l’Université de Northwestern. On devine qu’ils ont un peu souffert pour apprendre leur cours d’analyse, mais ils ont réussi à en faire une chanson entraînante et éducative.</p>
+<blockquote style="margin-left: 100px; font-style: italic;" class="blockquote">
+I’m a just a limit,<br> Defined analytically<br> Function’s continuous,<br> There’s no holes,<br> No sharp points,<br> Or asymptotes<br> Any way this graph goes,<br> It is differentiable for me..<br>
+</blockquote>
+<p>La chanson est un mélange d’humour, de musique et de mathématiques. On prend particulièrement plaisir à comprendre les paroles et à les associer aux concepts mathématiques connus. Toutes ces notions devraient parler à un élève français en fin de terminale, spécialité mathématiques.</p>
+<blockquote style="margin-left: 100px; font-style: italic;" class="blockquote">
+All year, in Calculus<br> We’ve learned so many things<br> About which we are gonna sing<br> We can find derivatives<br> And integrals<br> And the area enclosed between two curves…<br>
+</blockquote>
+<p>Voici la vidéo de “Calculus Rhapsody” :</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uqwC41RDPyg?si=cxEiDTsfgaaoJBuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+
+
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>Humour</category>
+  <category>Vidéothèque</category>
+  <guid>https://flallemand.fr/blog/posts/calculusRhapsody/</guid>
+  <pubDate>Wed, 05 Feb 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/calculusRhapsody/image_video.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
 <item>
   <title>Tuto IA pour les profs : Créer des exercices à partir de podcasts.</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -5222,45 +5258,6 @@ Ci-dessous, la bande-annonce du film et le film complet (diffusé sous licence l
   <guid>https://flallemand.fr/blog/posts/lol_docu/</guid>
   <pubDate>Tue, 29 Nov 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/lol_docu/LoL_AfficheLDH-800x500.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Un podcast pour tout savoir sur l’histoire d’internet</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/podcast_internet/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>
-Voici un podcast de France Culture très intéressant, qui retrace l’histoire de l’internet de 1969 à nos jours en huit épisodes d’un quart d’heure.
-</p>
-<blockquote class="blockquote">
-<p>
-Personne ou presque ne sait raconter l’histoire d’Internet. <strong>Julien Le Bot</strong> a eu envie d’essayer de vous raconter pourquoi.
-</p>
-<p>
-On a parfois l’impression qu’Internet est entré presque par effraction dans nos vies au cours des années 1990, et est devenu aussi essentiel que l’électricité ou l’eau courante.&nbsp;En un demi-siècle, Internet s’est imposé comme une nécessité. Internet est partout, mais son histoire, son fonctionnement, son essence même, ne sont visibles nulle part. Techniquement, Internet nous relie. Mais est-on sûr de bien comprendre ce qu’on fabrique, peu à peu, depuis des années&nbsp; ?
-</p>
-<p>
-On vous propose de remonter aux origines de ce réseau des réseaux, où l’on croisera des individus épris d’utopie et de liberté aux États-Unis, mais aussi des ingénieurs entêtés en France face aux poids des télécoms, des chercheurs en ex-URSS appelés à échanger avec le monde libre, ou encore, en Chine… des fonctionnaires obsédés par le contrôle de l’information.&nbsp;Revenir sur ces moments fondateurs, c’est essentiel pour comprendre la portée intimement politique de cette infrastructure devenue mondiale. On ne parlera pas ici de Blockchain, de NFT ou de crypto : on revient aux origines.
-</p>
-</blockquote>
-<p>
-Ces épisodes sont <a href="https://www.radiofrance.fr/franceculture/podcasts/serie-une-histoire-de-l-internet" target="_blank" rel="noreferrer noopener">disponibles sur le site de Radio France</a>.
-</p>
-<p><a href="https://www.radiofrance.fr/franceculture/podcasts/serie-une-histoire-de-l-internet" target="_blank"><img src="https://flallemand.fr/blog/posts/podcast_internet/podcast_internet2.png" class="img-fluid"></a></p>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>Histoire</category>
-  <category>Réseaux</category>
-  <guid>https://flallemand.fr/blog/posts/podcast_internet/</guid>
-  <pubDate>Mon, 28 Nov 2022 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/podcast_internet/podcast_internet.png" medium="image" type="image/png" height="45" width="144"/>
 </item>
 </channel>
 </rss>
