@@ -7,6 +7,8 @@ categories: [Mathématiques, Humour, Vidéothèque]
 image: "image_video.png"
 ---
 
+![Calculus Rhapsody](image_video.png){width="60%"}
+
 <blockquote style="margin-left: 100px; font-style: italic;">
 I'm just a constant nobody loves me...<br>
 ...<br>
