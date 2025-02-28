@@ -1,0 +1,40 @@
+---
+title: "Harold Hotelling : Un mathématicien au service de l'économie"
+description: ""
+date: "2025-02-28"
+categories: [Mathématiques, Histoire, Podcast]
+image: "Harold_Hotelling.jpg"
+---
+
+Voici une ressource qui, je l'espère, élargira votre perspective sur les mathématiques et leur application dans le monde réel. Il s'agit d'un podcast de France Culture consacré à **Harold Hotelling**, un économiste et mathématicien dont l'œuvre, bien que parfois méconnue, a profondément influencé la pensée économique du 20e siècle.
+
+![Harold Hotelling](Harold_Hotelling.jpg){width="25%"}
+
+Lien vers le podcast : [Harold Hotelling : Un pionnier de l'économie redécouvert](https://www.radiofrance.fr/franceculture/podcasts/entendez-vous-l-eco/entendez-vous-l-eco-emission-du-jeudi-27-fevrier-2025-8713597){target="_blank"}
+
+### Harold Hotelling : Un pionnier de l'économie redécouvert
+
+**Marion Gaspard** le décrit comme une figure du "Hall of Fame des économistes du 20e siècle". Ce podcast met en lumière la récente redécouverte de Hotelling, grâce notamment aux travaux d'analyse et d'exploration de ses archives menés par Marion Gaspard et Antoine Missmer.
+
+**Hotelling était convaincu que les mathématiques pouvaient et devaient être utilisées pour éclairer et résoudre des problèmes économiques et sociaux concrets**. Il aspirait à mettre "les outils mathématiques au service du bien-être du plus grand nombre à travers une science économique plus claire, plus transparente et débarrassée de ces fausses croyances". Pour Hotelling, "les mathématiques peuvent aller partout sur n'importe quel terrain et résoudre toutes les équations, y compris sociales et environnementales du moment qu'elle se confronte au réel".
+
+### Thèmes abordés dans le podcast
+
+Le podcast explore plusieurs contributions majeures de Hotelling :
+
+*   **Le principe de différenciation minimale** : Ce concept, souvent illustré par la métaphore des marchands de glace cherchant la position optimale sur une plage pour maximiser leur clientèle, permet de comprendre les dynamiques de concurrence spatiale.
+*   **La règle de Hotelling** : Il s'agit d'un modèle mathématique qui cherche à prédire l'évolution du prix des ressources naturelles épuisables. **Antoine Missmer** précise que, selon ce modèle, le prix d'une ressource épuisable a tendance à croître au rythme du taux d'intérêt du marché. Cette règle a des implications importantes pour la gestion des ressources naturelles et la politique environnementale.
+*   **L'économie spatiale** : Hotelling a été un pionnier dans l'analyse de la localisation des entreprises et des activités économiques. Ses travaux aident à comprendre pourquoi des commerces similaires ont tendance à se regrouper.
+*   **L'économie des ressources naturelles** : Hotelling est réputé pour avoir proposé un modèle mathématique d'épuisement des ressources naturelles. Il s'intéressait particulièrement à la question de la dépréciation des actifs miniers et à leur valorisation fiscale.
+
+![Photo d'une exploitation pétrolière californienne en 1925. ©Getty](640x340_sc_sc_gettyimages-3066394.jpg){width="60%"}
+
+### L'actualité de Hotelling
+
+L'intérêt de Hotelling pour les problèmes concrets et sa conviction que les mathématiques peuvent éclairer les enjeux économiques et sociaux rendent son œuvre toujours pertinente aujourd'hui.
+
+L'émission souligne que l'œuvre d'Hotelling a connu une période d'oubli relatif, notamment en raison de la technicité de ses articles, de l'évolution des priorités économiques et environnementales, et de l'utilisation de concepts mathématiques qui ont pu être perçus comme "démodés" après la Seconde Guerre mondiale. Cependant, sa redécouverte récente témoigne de la richesse et de la profondeur de sa pensée.
+
+Je vous encourage vivement à écouter ce podcast. Il offre une perspective intéressante sur l'application des mathématiques à des problèmes complexes et met en lumière l'œuvre d'un économiste et mathématicien qui a marqué son époque et dont les idées continuent de résonner aujourd'hui.
+
+Lien vers le podcast : [Harold Hotelling : Un pionnier de l'économie redécouvert](https://www.radiofrance.fr/franceculture/podcasts/entendez-vous-l-eco/entendez-vous-l-eco-emission-du-jeudi-27-fevrier-2025-8713597){target="_blank"}

@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Hotelling/index.html",
       "/posts/calculusRhapsody/index.html",
       "/posts/tutoIA_podcast/index.html",
       "/posts/2024_12_19_algos_interview/index.html",
