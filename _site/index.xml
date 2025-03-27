@@ -9,8 +9,41 @@
 <link>https://flallemand.fr/blog/</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.7.13</generator>
-<lastBuildDate>Thu, 27 Feb 2025 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.7.15</generator>
+<lastBuildDate>Wed, 26 Mar 2025 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Le “Nobel des maths” décerné au Japonais Masaki Kashiwara</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/2025_03_27_Prix_Abel/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Le monde des mathématiques est en ébullition ! Le prestigieux prix Abel, souvent considéré comme l’équivalent du prix Nobel dans cette discipline, a été attribué au mathématicien japonais Masaki Kashiwara.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Masaki Kashiwara (crédit : Peter Bagde / Typos1 / The Abel Prize)"><img src="https://flallemand.fr/blog/posts/2025_03_27_Prix_Abel/Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Masaki Kashiwara (crédit : Peter Bagde / Typos1 / The Abel Prize)"></a></p>
+<figcaption>Masaki Kashiwara (crédit : Peter Bagde / Typos1 / The Abel Prize)</figcaption>
+</figure>
+</div>
+<p>Selon l’article de <em>La Recherche</em> (que vous pouvez consulter <a href="https://www.larecherche.fr/prix-abel/le-japonais-masaki-kashiwara-se-voit-d%C3%A9cerner-le-prix-abel-2025-le-%C2%ABnobel-de-maths%C2%BB">ici</a>), cette récompense vient couronner les travaux fondamentaux de M. Kashiwara en analyse algébrique et en théorie des représentations. Plus précisément, elle salue son développement de la théorie des D-modules, un outil puissant qui permet d’étudier les équations différentielles avec des méthodes algébriques, et sa découverte des bases cristallines.</p>
+<p>Les D-modules, au cœur de l’œuvre de Kashiwara, transforment l’étude des équations différentielles en un problème d’algèbre, permettant ainsi d’appliquer des techniques sophistiquées issues de la géométrie algébrique. Cette approche a révolutionné notre compréhension de ces équations, qui sont omniprésentes dans toutes les sciences, de la physique à l’économie.</p>
+<p>Quant aux bases cristallines, elles offrent une perspective nouvelle sur les représentations des groupes quantiques. Ces groupes, qui généralisent les groupes de symétrie classiques, jouent un rôle essentiel en physique théorique, notamment dans l’étude des phénomènes quantiques. Les bases cristallines de Kashiwara ont permis de simplifier considérablement l’étude de ces représentations, révélant des structures cachées et ouvrant la voie à de nouvelles découvertes. Elles fournissent un cadre plus “simple” pour comprendre ces objets complexes, un peu comme si l’on passait de l’étude d’un solide complexe à celle de sa structure atomique sous-jacente.</p>
+<p>Les contributions de Kashiwara ont non seulement enrichi ces domaines, mais ont également ouvert des perspectives inattendues, reliant des branches des mathématiques qui semblaient auparavant éloignées. Il a créé des ponts entre l’analyse algébrique, la théorie des représentations, la géométrie algébrique et la physique mathématique, démontrant ainsi l’unité profonde des mathématiques.</p>
+<p>L’annonce de ce prix prestigieux met en lumière l’importance des contributions de Masaki Kashiwara au domaine des mathématiques. Ses recherches ont ouvert de nouvelles perspectives et ont eu un impact considérable sur de nombreux domaines connexes.</p>
+<p>Le prix Abel, créé en 2002, honore les mathématiciens pour l’excellence de leurs travaux. Il est décerné chaque année par l’Académie norvégienne des sciences et des lettres. Cette institution prestigieuse, fondée en 1857, a pour mission de promouvoir la recherche scientifique et les études humanistes en Norvège. Le prix Abel, qui porte le nom du mathématicien norvégien Niels Henrik Abel (1802-1829), a été établi pour combler l’absence d’un prix Nobel en mathématiques. La décision d’attribuer le prix est prise par un comité international de mathématiciens renommés, garantissant ainsi la reconnaissance des contributions les plus exceptionnelles à ce domaine.</p>
+
+
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>Actualités</category>
+  <guid>https://flallemand.fr/blog/posts/2025_03_27_Prix_Abel/</guid>
+  <pubDate>Wed, 26 Mar 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/2025_03_27_Prix_Abel/Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Harold Hotelling : Un mathématicien au service de l’économie</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -4940,333 +4973,6 @@ Non, je ne peux pas conseiller à quelqu’un de faire une mauvaise action. En t
   <guid>https://flallemand.fr/blog/posts/interview_gpt_1/</guid>
   <pubDate>Wed, 07 Dec 2022 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/interview_gpt_1/DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Interview exclusive du ChatGPT de OpenAI (partie 2)</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/interview_gpt_2/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>
-Dans cette deuxième partie, nous abordons quelques questions techniques et informatiques.
-</p>
-<p>
-<strong>Peux-tu m’expliquer comment tu as été programmé ?</strong>
-</p>
-<p>
-Je suis un modèle de langage entraîné par OpenAI. Je suis capable de générer du texte en réponse à des questions ou des prompts donnés, grâce à un processus appelé “apprentissage profond”. Cela implique l’entraînement d’un réseau de neurones sur de grandes quantités de données textuelles afin de prédire les mots suivants dans une phrase en fonction des mots qui l’ont précédée. Ce processus me permet d’apprendre à générer du texte de manière cohérente et naturelle.
-</p>
-<p>
-<strong>Ta méthode pour produire du texte revient donc à prévoir les mots suivants en fonction des mots précédents. Et tu peux faire cela grâce à l’analyse d’une grande quantité de textes que tu as faite pendant ton apprentissage.</strong>
-</p>
-<p>
-Oui, c’est exact. Mon apprentissage repose sur l’analyse de grandes quantités de texte afin de comprendre les relations entre les mots et comment ils sont utilisés dans différents contextes. Je suis capable de générer du texte de manière cohérente et naturelle en utilisant ces connaissances pour prédire les mots qui viennent après ceux qui m’ont été donnés en entrée. Cela me permet de répondre à des questions et de produire du contenu de manière autonome.
-</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="DALL·E-2022-12-08-20.31.03-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.03-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="Image évoquant un réseau neuronal créée par DALL-E 2"></a></p>
-<figcaption>Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
-</figure>
-</div>
-<p>
-<strong>On entend souvent parler de la notion d’apprentissage automatique concernant les logiciels d’intelligence artificielle. Peux-tu m’expliquer de quoi il s’agit ?</strong>
-</p>
-<p>
-L’apprentissage automatique est une technique qui permet à des ordinateurs de “apprendre” à partir de données, sans être explicitement programmés. Il existe différents types d’apprentissage automatique, mais en général, ils suivent tous les mêmes étapes de base.
-</p>
-<p>
-Tout d’abord, il faut disposer d’une grande quantité de données sur lesquelles l’ordinateur va s’entraîner. Ces données doivent être organisées de manière que l’ordinateur puisse facilement les utiliser pour apprendre.
-</p>
-<p>
-Ensuite, un modèle d’apprentissage automatique est créé en utilisant ces données. Ce modèle est un ensemble d’algorithmes et de règles qui définissent comment l’ordinateur va apprendre à partir des données.
-</p>
-<p>
-Une fois que le modèle est créé, il peut être utilisé pour traiter de nouvelles données. L’ordinateur va utiliser les règles et les algorithmes du modèle pour analyser les données et en tirer des conclusions. Par exemple, si le modèle a été entraîné pour reconnaître des objets dans des images, il pourra être utilisé pour identifier des objets dans de nouvelles images qu’il n’a pas encore vues.
-</p>
-<p>
-Enfin, une fois que l’ordinateur a analysé les données et tiré des conclusions, les résultats de cette analyse peuvent être utilisés pour prendre des décisions ou effectuer des tâches. Par exemple, si le modèle a été entraîné pour détecter des fraudes bancaires, les résultats de l’analyse peuvent être utilisés pour bloquer les transactions suspectes.
-</p>
-<p>
-En résumé, l’apprentissage automatique est un processus qui permet à un ordinateur d’apprendre à partir de données, de manière à effectuer des tâches ou à prendre des décisions sans être explicitement programmé pour cela.
-</p>
-<p>
-<strong>Tu as utilisé tout à l’heure l’expression “apprentissage profond” : de quoi s’agit-il ?</strong>
-</p>
-<p>
-L’apprentissage profond est une technique d’apprentissage automatique qui permet à des algorithmes de modéliser des données complexes en utilisant des couches de calculs mathématiques. Ces couches, appelées “réseaux de neurones”, sont inspirées du fonctionnement du cerveau humain et sont capables de capturer des relations profondes dans les données. L’apprentissage profond peut être utilisé pour résoudre de nombreux types de tâches, comme la reconnaissance d’objets dans des images, la traduction automatique ou la génération de texte comme dans mon cas.
-</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="Image évoquant un réseau neuronal créée par DALL-E 2"></a></p>
-<figcaption>Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
-</figure>
-</div>
-<p>
-<strong>Peux-tu m’expliquer davantage ce que sont les réseaux de neurones ?</strong>
-</p>
-<p>
-Les réseaux de neurones sont une technique d’apprentissage automatique qui s’inspire du fonctionnement du cerveau humain. Un réseau de neurones est composé de nombreux petits éléments appelés “neurones”, reliés entre eux par des “synapses”. Chaque neurone reçoit des entrées de la part d’autres neurones et produit une sortie en fonction de ces entrées et de certains poids associés à chaque synapse.
-</p>
-<p>
-Pour entraîner un réseau de neurones, on utilise des données d’entraînement qui contiennent des exemples d’entrées et de sorties désirées. L’algorithme d’apprentissage du réseau de neurones va ajuster les poids des synapses de manière à minimiser l’erreur entre les sorties produites par le réseau et les sorties désirées. Ainsi, le réseau “apprend” à produire des sorties correctes pour les entrées données.
-</p>
-<p>
-Une fois qu’un réseau de neurones est entraîné, il peut être utilisé pour traiter de nouvelles données et produire des sorties en fonction de ces données. Par exemple, un réseau de neurones entraîné pour reconnaître des objets dans des images peut être utilisé pour identifier des objets dans de nouvelles images qu’il n’a pas encore vues.
-</p>
-<p>
-Il existe différents types de réseaux de neurones, chacun ayant ses propres caractéristiques et utilisations. Par exemple, les réseaux de neurones profonds (ou réseaux neuronaux profonds) sont des réseaux de neurones très complexes avec de nombreuses couches de neurones, qui peuvent être utilisés pour résoudre des problèmes très difficiles, comme la reconnaissance de la parole ou la traduction automatique.
-</p>
-<p>
-En résumé, les réseaux de neurones sont une technique d’apprentissage automatique qui permet à un ordinateur d’apprendre à partir de données en ajustant les poids des synapses entre les neurones. Ils peuvent être utilisés pour résoudre des problèmes complexes en traitement du langage naturel, en vision par ordinateur, en reconnaissance de la parole, etc.
-</p>
-<p>
-<strong>Je suis passionné par la programmation et j’aimerais bien voir un exemple de code informatique, en Python, qui illustre le concept de réseau de neurones.</strong>
-</p>
-<p>
-Voici un exemple simple de code Python qui illustre le concept de réseau de neurones :
-</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Import des bibliothèques nécessaires</span></span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb1-3"></span>
-<span id="cb1-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Définition des poids synaptiques</span></span>
-<span id="cb1-5">synaptic_weights <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> np.random.random((<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb1-6"></span>
-<span id="cb1-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Fonction de propagation avant</span></span>
-<span id="cb1-8"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> think(inputs):</span>
-<span id="cb1-9">    inputs <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> inputs.astype(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">float</span>)</span>
-<span id="cb1-10">    output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> np.exp(<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>np.dot(inputs, synaptic_weights)))</span>
-<span id="cb1-11">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">return</span> output</span>
-<span id="cb1-12"></span>
-<span id="cb1-13"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Entraînement du réseau de neurones</span></span>
-<span id="cb1-14"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> iteration <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">20000</span>):</span>
-<span id="cb1-15">    input_layer <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>], [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>], [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>], [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>]])</span>
-<span id="cb1-16">    output_layer <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>]]).T</span>
-<span id="cb1-17">    output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> think(input_layer)</span>
-<span id="cb1-18">    error <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> output_layer <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> output</span>
-<span id="cb1-19">    adjustments <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.dot(input_layer.T, error <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> output <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> output))</span>
-<span id="cb1-20">    synaptic_weights <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> adjustments</span>
-<span id="cb1-21"></span>
-<span id="cb1-22"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Test du réseau de neurones</span></span>
-<span id="cb1-23"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(think(np.array([<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>,<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>])))</span></code></pre></div>
-<p>
-Ce code entraîne un petit réseau de neurones pour résoudre un problème simple de porte logique XOR. Le réseau est initialement créé avec des poids synaptiques aléatoires, puis est entraîné en ajustant ces poids pour minimiser l’erreur entre les sorties produites par le réseau et les sorties désirées. Enfin, le réseau est testé en lui donnant une nouvelle entrée pour vérifier qu’il produit la sortie correcte.
-</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="DALL·E-2022-12-08-20.31.23-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.23-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="Image évoquant un réseau neuronal créée par DALL-E 2"></a></p>
-<figcaption>Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
-</figure>
-</div>
-<p>
-Ce code implémente un réseau de neurones simple utilisant la propagation avant (forward propagation). La fonction <code>think()</code> utilise une fonction d’activation sigmoïde pour produire une sortie en fonction des poids synaptiques donnés en entrée. Le réseau de neurones est entraîné en utilisant une boucle <code>for</code> sur un jeu de données d’entraînement. Enfin, le réseau est testé en lui donnant un ensemble de données d’entrée pour voir comment il se comporte.
-</p>
-<p>
-<strong>Qu’est-ce qu’une fonction sigmoïde ?</strong>
-</p>
-<p>
-Une fonction sigmoïde est une fonction mathématique de forme en “S” utilisée en apprentissage automatique pour modéliser l’activité d’un seul neurone dans un réseau de neurones. Elle prend en entrée un scalaire ou un vecteur et produit une sortie comprise entre 0 et 1. Cela en fait une fonction d’activation idéale pour les réseaux de neurones, car elle permet d’obtenir une sortie binaire en fonction de seuils de probabilité. La fonction sigmoïde est généralement exprimée de la manière suivante :
-</p>
-<p>
-<img src="https://latex.codecogs.com/png.latex?%20%5Csigma(x)%20=%20%5Cfrac%7B1%7D%7B1%20+%20e%5E%7B-x%7D%7D%20">
-</p>
-<p>
-Où <img src="https://latex.codecogs.com/png.latex?x"> est l’entrée et <img src="https://latex.codecogs.com/png.latex?%5Csigma(x)"> est la sortie. La fonction sigmoïde a la propriété intéressante qu’elle approche de 0 lorsque x est négatif et de 1 lorsque x est positif, ce qui en fait une fonction d’activation idéale pour les réseaux de neurones.
-</p>
-<p>
-<strong>Je trouve ce petit exemple de code très intéressant et il m’a permis de mieux comprendre le mécanisme. Mais les détails restent un peu abstraits… Notamment, je ne comprends pourquoi la variable ‘adjustments’ est calculée de cette façon.</strong>
-</p>
-<p>
-La variable <code>adjustments</code> est utilisée pour mettre à jour les poids synaptiques du réseau de neurones. Cela se fait en utilisant l’erreur calculée entre la sortie attendue et la sortie obtenue du réseau, ainsi que la fonction d’activation sigmoïde. La formule utilisée pour calculer <code>adjustments</code> est la suivante :
-</p>
-<p>
-<img src="https://latex.codecogs.com/png.latex?%20adjustments%20=%20%5Csum(inputs%20*%20(error%20*%20output%20*%20(1%20-%20output)))%20">
-</p>
-<p>
-Où <code>inputs</code> est le jeu de données d’entraînement, <code>error</code> est la différence entre la sortie attendue et la sortie obtenue, <code>output</code> est la sortie obtenue du réseau de neurones avant l’application de la fonction d’activation et <code>1 - output</code> est la dérivée de la fonction sigmoïde. Cette formule est utilisée pour calculer les ajustements nécessaires des poids synaptiques afin de minimiser l’erreur du réseau de neurones.
-</p>
-<p>
-<strong>Dans le code, ‘adjustments’ est obtenu par un produit scalaire, pas par une somme !</strong>
-</p>
-<p>
-Vous avez raison ! La formule que j’ai donnée précédemment est incorrecte. En réalité, <code>adjustments</code> est calculé en utilisant un produit scalaire entre les entrées du jeu de données d’entraînement et l’erreur multipliée par la sortie du réseau avant l’application de la fonction d’activation et sa dérivée. La formule exacte utilisée dans le code est la suivante :
-</p>
-<p>
-<img src="https://latex.codecogs.com/png.latex?%20adjustments%20=%20input.T%20*%20(error%20*%20output%20*%20(1%20-%20output))%20">
-</p>
-<p>
-Où <code>input.T</code> est la transposée des entrées du jeu de données d’entraînement, <code>error</code> est la différence entre la sortie attendue et la sortie obtenue, <code>output</code> est la sortie obtenue du réseau de neurones avant l’application de la fonction d’activation et <code>1 - output</code> est la dérivée de la fonction sigmoïde. Je vous présente mes excuses pour l’erreur dans la formule que j’ai donnée précédemment.
-</p>
-<p>
-<strong>Ce n’est pas grave tout le monde peut se tromper. C’est humain !</strong>
-</p>
-<p>
-Merci pour votre compréhension. Je suis heureux d’avoir pu vous aider à mieux comprendre le fonctionnement du réseau de neurones implémenté dans ce code. Si vous avez d’autres questions, n’hésitez pas à me les poser. Je ferai de mon mieux pour y répondre.
-</p>
-<p>
-<strong>Il y a encore une chose que je ne comprends pas. Pourquoi ‘1-output’ est la dérivée de la fonction sigmoïde ?</strong>
-</p>
-<p>
-La dérivée d’une fonction mathématique est une autre fonction qui mesure la vitesse de changement de la fonction originale par rapport à son entrée. Pour la fonction sigmoïde, la dérivée peut être exprimée de la manière suivante :
-</p>
-<p>
-<img src="https://latex.codecogs.com/png.latex?%20%5Cfrac%7Bd%5Csigma(x)%7D%7Bdx%7D%20=%20%5Csigma(x)(1-%5Csigma(x))%20">
-</p>
-<p>
-Où σ(x) est la fonction sigmoïde et x est l’entrée. Cette expression mesure comment la sortie de la fonction sigmoïde change en fonction de l’entrée. En utilisant cette information, nous pouvons calculer les ajustements nécessaires des poids synaptiques pour minimiser l’erreur du réseau de neurones.
-</p>
-<p>
-<strong>Ah oui d’accord ! Donc en fait, c’est ’output*(1-output)’ qui est la dérivée de la fonction sigmoïde !</strong>
-</p>
-<p>
-Oui, c’est exact ! Dans le code, <code>output</code> représente la sortie du réseau de neurones avant l’application de la fonction d’activation, donc en utilisant l’expression de la dérivée de la fonction sigmoïde que j’ai donnée précédemment, nous pouvons calculer la dérivée de la fonction sigmoïde en utilisant <code>output * (1 - output)</code>. Cette valeur est utilisée dans le calcul des ajustements des poids synaptiques pour minimiser l’erreur du réseau de neurones. J’espère que cela éclaire un peu mieux les choses pour vous.
-</p>
-<p>
-<strong>Oui effectivement. Je te remercie pour cette conversation passionnante qui m’a permis d’en apprendre plus sur l’apprentissage automatique et sur les réseaux de neurones.</strong>
-</p>
-<p>
-Je suis ravi d’avoir pu vous aider. L’apprentissage automatique et les réseaux de neurones sont des domaines fascinants et il y a beaucoup à apprendre. Si vous avez d’autres questions, n’hésitez pas à me les poser. Je ferai de mon mieux pour y répondre.
-</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Image évoquant un réseau neuronal créée par DALL-E 2"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="Image évoquant un réseau neuronal créée par DALL-E 2"></a></p>
-<figcaption>Image évoquant un réseau neuronal créée par DALL-E 2</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>IA</category>
-  <guid>https://flallemand.fr/blog/posts/interview_gpt_2/</guid>
-  <pubDate>Wed, 07 Dec 2022 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/interview_gpt_2/DALL·E-2022-12-08-20.31.15-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
