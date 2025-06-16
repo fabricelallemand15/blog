@@ -3,7 +3,7 @@ title: 'Tableaux de variations faciles en LaTeX'
 subtitle: "Utilisation du package `tablvar`"
 date: "2025-06-16"
 categories: [Mathématiques, LaTeX]
-image: "chap9-1-img1.png"
+image: "fig1.png"
 ---
 
 Il existe de nombreux outils pour créer des tableaux de variations et de signes en LaTeX, mais beaucoup sont soit trop complexes, soit peu flexibles. Dans cet article, je vais présenter une solution simple et efficace : le package **`tablvar`**, avec des exemples concrets. L'essentiel est issu de la [documentation officielle](https://ctan.org/pkg/tablvar){target="_blank"}.
