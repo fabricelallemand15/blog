@@ -9,8 +9,821 @@
 <link>https://flallemand.fr/blog/</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.7.15</generator>
-<lastBuildDate>Wed, 26 Mar 2025 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.7.31</generator>
+<lastBuildDate>Sun, 15 Jun 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Tableaux de variations faciles en LaTeX</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Il existe de nombreux outils pour créer des tableaux de variations et de signes en LaTeX, mais beaucoup sont soit trop complexes, soit peu flexibles. Dans cet article, je vais présenter une solution simple et efficace : le package <strong><code>tablvar</code></strong>, avec des exemples concrets. L’essentiel est issu de la <a href="https://ctan.org/pkg/tablvar" target="_blank">documentation officielle</a>.</p>
+<section id="le-package-tablvar" class="level4">
+<h4 class="anchored" data-anchor-id="le-package-tablvar">Le package <code>tablvar</code></h4>
+<p>Pour commencer, il faut bien sûr appeler le package dans le préambule de votre document. Il est fortement recommandé d’utiliser l’option <code>tikz</code>, qui est le moteur graphique moderne et le plus compatible avec les compilateurs directs en PDF comme <code>pdfLaTeX</code> ou <code>LuaLaTeX</code>.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">\usepackage</span>[tikz]{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}</span></code></pre></div>
+</section>
+<section id="tableau-de-variations-simple" class="level4">
+<h4 class="anchored" data-anchor-id="tableau-de-variations-simple">Tableau de variations simple</h4>
+<p>L’idée fondamentale de tablvar est d’utiliser un environnement qui ressemble beaucoup à array ou tabular, mais avec des commandes spéciales pour placer les valeurs et tracer les flèches.</p>
+<p><strong>La Structure de Base</strong></p>
+<p>Un tableau de variations se crée à l’intérieur d’un environnement <code>tablvar</code>, qui doit être en mode mathématique (entre <code>$$</code> et <code>$$</code> par exemple).</p>
+<p>L’environnement prend un argument obligatoire : le nombre d’intervalles, qui correspond au nombre de flèches que vous souhaitez tracer.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span>
+<span id="cb2-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{nombre_de_flèches}</span></span>
+<span id="cb2-3"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">  </span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">% Contenu du tableau</span></span>
+<span id="cb2-4"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\end</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}</span>
+<span id="cb2-5"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span></code></pre></div>
+<p><strong>Premier Exemple : Une fonction polynôme</strong></p>
+<p>Étudions une fonction <img src="https://latex.codecogs.com/png.latex?f"> dont la dérivée s’annule en <img src="https://latex.codecogs.com/png.latex?-1"> et <img src="https://latex.codecogs.com/png.latex?2">.</p>
+<p>Le code LaTeX :</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span>
+<span id="cb3-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3} </span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">% Trois intervalles de variation, donc 3 colonnes</span></span>
+<span id="cb3-3"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb3-4"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x      &amp; -</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp;&amp; -1 &amp;&amp; 2 &amp;&amp; +</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb3-5"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb3-6"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f'(x)  &amp; &amp; + &amp; 0 &amp; - &amp; 0 &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb3-7"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb3-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">% La partie la plus importante : les variations</span></span>
+<span id="cb3-9"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\variations</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{ </span></span>
+<span id="cb3-10"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">  </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\mil</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{f(x)} &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\haut</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{-</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bas</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{5} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\haut</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{1} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bas</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{+</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} </span></span>
+<span id="cb3-11"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb3-12"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb3-13"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\end</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}</span>
+<span id="cb3-14"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span></code></pre></div>
+<p>Le résultat :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Tableau de variations d’une fonction polynôme"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig1.png" class="img-fluid figure-img" alt="Tableau de variations d’une fonction polynôme"></a></p>
+<figcaption>Tableau de variations d’une fonction polynôme</figcaption>
+</figure>
+</div>
+<p>Décortiquons la commande <code>\variations</code> : C’est le cœur du système.</p>
+<ul>
+<li><p><code>\mil{f(x)}</code> : Place le texte <img src="https://latex.codecogs.com/png.latex?f(x)"> au “milieu” verticalement, dans la colonne de légende.</p></li>
+<li><p><code>\haut{valeur}</code> : Place la valeur en haut de la zone de variation et crée un nœud pour une flèche qui monte.</p></li>
+<li><p><code>\bas{valeur}</code> : Place la valeur en bas de la zone de variation et crée un nœud pour une flèche qui descend.</p></li>
+</ul>
+<p>Les <code>&amp;</code> fonctionnent comme dans un tableau array classique pour séparer les colonnes (valeurs et intervalles).</p>
+</section>
+<section id="tableau-de-signes" class="level4">
+<h4 class="anchored" data-anchor-id="tableau-de-signes">Tableau de signes</h4>
+<p>Pour un tableau de signes, la structure est très similaire. tablvar fournit la commande <code>\barre</code> pour tracer une barre de séparation verticale. Si un zéro doit être placé sur cette barre, on le passe en argument optionnel : <code>\barre[0]</code>.</p>
+<p><strong>Exemple</strong> : Tableau de signes de <img src="https://latex.codecogs.com/png.latex?f'(x)=(x+1)(-2x+3)"></p>
+<p>Le code LaTeX :</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span>
+<span id="cb4-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3} </span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">% On peut utiliser tablvar pour les signes aussi</span></span>
+<span id="cb4-3"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb4-4"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x             &amp; -</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp;&amp; -1 &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\frac</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3}{2} &amp;&amp; +</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb4-5"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb4-6"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x+1           &amp; &amp; - &amp; 0 &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\barre</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb4-7"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb4-8"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">-2x+3         &amp; &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\barre</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp; + &amp; 0 &amp; - &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb4-9"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb4-10"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\mbox</span>{Signe de }<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f'(x) &amp; &amp; - &amp; 0 &amp; + &amp; 0 &amp; - &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb4-11"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb4-12"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\end</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}</span>
+<span id="cb4-13"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span></code></pre></div>
+<p>Le résultat :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Tableau de signes de la fonction f’"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig2.png" class="img-fluid figure-img" alt="Tableau de signes de la fonction f’"></a></p>
+<figcaption>Tableau de signes de la fonction f’</figcaption>
+</figure>
+</div>
+</section>
+<section id="gérer-les-discontinuités-et-les-limites" class="level4">
+<h4 class="anchored" data-anchor-id="gérer-les-discontinuités-et-les-limites">Gérer les discontinuités et les limites</h4>
+<p>C’est là que tablvar devient vraiment puissant. Pour les valeurs interdites, on utilise une double barre (<code>\bb</code>) et des commandes spécifiques pour les limites.</p>
+<ul>
+<li><p><code>\bb</code> : Trace une double barre verticale.</p></li>
+<li><p><code>\discont</code> : Indique une discontinuité. La flèche ne traversera pas cet endroit.</p></li>
+<li><p><code>\limg{ligne}{valeur}</code> : Place une limite à gauche de la double barre, sur la ligne de variation indiquée.</p></li>
+<li><p><code>\limd{ligne}{valeur}</code> : Place une limite à droite.</p></li>
+</ul>
+<p><strong>Exemple</strong> : Variations de <img src="https://latex.codecogs.com/png.latex?f(x)=e%5E%7B1/x%7D"> (valeur interdite en 0).</p>
+<p>Le code LaTeX :</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span>
+<span id="cb5-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{2}</span></span>
+<span id="cb5-3"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb5-4"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x &amp; -</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp;&amp; 0 &amp;&amp; +</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb5-5"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb5-6"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\variations</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb5-7"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\mil</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{f(x)} &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\haut</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{1} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\limg</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3}{0} </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bb</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\discont</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\limd</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{1}{+</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bas</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{1} </span></span>
+<span id="cb5-8"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb5-9"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb5-10"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\end</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}</span>
+<span id="cb5-11"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span></code></pre></div>
+<p>Le résultat :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Tableau de variations de f(x)=e^{1/x}"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig3.png" class="img-fluid figure-img" alt="Tableau de variations de f(x)=e^{1/x}"></a></p>
+<figcaption>Tableau de variations de f(x)=e^{1/x}</figcaption>
+</figure>
+</div>
+<p>Notez que dans <code>\limg{3}{0}</code>, le 3 correspond à la ligne du bas (bas), et dans <code>\limd{1}{+\infty}</code>, le 1 correspond à la ligne du haut (haut).</p>
+</section>
+<section id="valeurs-remarquables-et-zones-interdites" class="level4">
+<h4 class="anchored" data-anchor-id="valeurs-remarquables-et-zones-interdites">Valeurs remarquables et zones interdites</h4>
+<p>Pour ajouter des valeurs remarquables sur la ligne des <img src="https://latex.codecogs.com/png.latex?x">, on utilise <code>\vr{valeur}</code>. Pour indiquer une zone interdite (domaine de définition), on utilise <code>\ZI</code>.</p>
+<p><strong>Exemple</strong> : Variations de l’exponentielle avec des valeurs remarquables.</p>
+<p>Le code LaTeX :</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span>
+<span id="cb6-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3}</span></span>
+<span id="cb6-3"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb6-4"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x &amp; -</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\vr</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{0} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\vr</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{1} &amp;&amp; +</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb6-5"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb6-6"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\variations</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">[4]{ </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\mil</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\exp</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> x} &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bas</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{0} &amp;&amp;</span></span>
+<span id="cb6-7"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\vr</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">[3]{1} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\vr</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\textrm</span>{e}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\haut</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{+</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} }</span></span>
+<span id="cb6-8"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb6-9"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\end</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}</span>
+<span id="cb6-10"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span></code></pre></div>
+<p>Le résultat :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Tableau de variations avec des valeurs remarquables"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig4.png" class="img-fluid figure-img" alt="Tableau de variations avec des valeurs remarquables"></a></p>
+<figcaption>Tableau de variations avec des valeurs remarquables</figcaption>
+</figure>
+</div>
+<p><strong>Exemple</strong> : Tableau de variations avec une zone interdite.</p>
+<p>Le code LaTeX :</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb7-1"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{4}</span></span>
+<span id="cb7-2"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb7-3"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x &amp; -</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp;&amp; -1 &amp;&amp; 0 &amp;&amp; 1 &amp;&amp; +</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb7-4"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb7-5"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\variations</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{ </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\mil</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{f(x)} &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\haut</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{+</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} &amp;&amp;</span></span>
+<span id="cb7-6"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\limg</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3}{-</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bb</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\ZI</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bb</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\limd</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3}{-</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} &amp;&amp;</span></span>
+<span id="cb7-7"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\haut</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\frac</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\textrm</span>{e}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">^{-1}}{2}} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bas</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{0} }</span></span>
+<span id="cb7-8"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb7-9"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\end</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span></code></pre></div>
+<p>Le résultat :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Tableau de variations avec une zone interdite"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig5.png" class="img-fluid figure-img" alt="Tableau de variations avec une zone interdite"></a></p>
+<figcaption>Tableau de variations avec une zone interdite</figcaption>
+</figure>
+</div>
+</section>
+<section id="les-commandes-essentielles-à-retenir" class="level4">
+<h4 class="anchored" data-anchor-id="les-commandes-essentielles-à-retenir">Les commandes essentielles à retenir</h4>
+<p>Voici un résumé des commandes les plus utiles du package tablvar :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Commande</th>
+<th>Utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>\begin{tablvar}{n}</code></td>
+<td>Démarre un tableau avec <img src="https://latex.codecogs.com/png.latex?n"> flèches.</td>
+</tr>
+<tr class="even">
+<td><code>\variations{...}</code></td>
+<td>Contient la ou les lignes de variations.</td>
+</tr>
+<tr class="odd">
+<td><code>\haut{val}</code></td>
+<td>Place <code>val</code> en haut (flèche montante).</td>
+</tr>
+<tr class="even">
+<td><code>\bas{val}</code></td>
+<td>Place <code>val</code> en bas (flèche descendante).</td>
+</tr>
+<tr class="odd">
+<td><code>\mil{texte}</code></td>
+<td>Centre verticalement le texte (pour la légende <img src="https://latex.codecogs.com/png.latex?f(x)">).</td>
+</tr>
+<tr class="even">
+<td><code>\barre[0]</code></td>
+<td>Barre de séparation simple (avec un 0 optionnel).</td>
+</tr>
+<tr class="odd">
+<td><code>\bb</code></td>
+<td>Double barre pour les valeurs interdites.</td>
+</tr>
+<tr class="even">
+<td><code>\discont</code></td>
+<td>Empêche une flèche de traverser une discontinuité.</td>
+</tr>
+<tr class="odd">
+<td><code>\limg{lig}{val}</code></td>
+<td>Limite à gauche de la <code>\bb</code>.</td>
+</tr>
+<tr class="even">
+<td><code>\limd{lig}{val}</code></td>
+<td>Limite à droite de la <code>\bb</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>\vr{val}</code></td>
+<td>Place une “valeur remarquable” sur la ligne des <img src="https://latex.codecogs.com/png.latex?x">.</td>
+</tr>
+<tr class="even">
+<td><code>\ZI</code></td>
+<td>Indique une “zone interdite” (domaine de définition).</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Personnalisation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>tablvar offre de nombreuses options de personnalisation, à passer en argument optionnel de l’environnement. Par exemple :</p>
+<ul>
+<li><p><code>\begin{tablvar}[intervalwidth=4em]{2}</code> pour élargir les colonnes d’intervalles.</p></li>
+<li><p><code>\begin{tablvar}[ZItype=c, ZIcolor=lightgray]{3}</code> pour avoir des zones interdites colorées plutôt que hachurées.</p></li>
+</ul>
+<p>Reportez-vous à la documentation officielle pour explorer toutes les possibilités !</p>
+</div>
+</div>
+</section>
+<section id="un-exemple-final" class="level4">
+<h4 class="anchored" data-anchor-id="un-exemple-final">Un exemple final</h4>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\begin</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3}</span></span>
+<span id="cb8-2"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb8-3"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x &amp; -</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp;&amp; -1 &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\frac</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{3}{2} &amp;&amp; +</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb8-4"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb8-5"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x+1 &amp; &amp; - &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\barre</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">[0] &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\barre</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb8-6"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb8-7"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">-2x+3 &amp; &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\barre</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\barre</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">[0] &amp; - &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb8-8"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb8-9"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\mbox</span>{Signe de }<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f’(x) &amp; &amp; - &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\barre</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">[0] &amp; + &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\barre</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">[0] &amp; - &amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\\</span></span>
+<span id="cb8-10"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb8-11"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\variations</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{ </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\mil</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\mbox</span>{Variations de }<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f} &amp;</span></span>
+<span id="cb8-12"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\haut</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{+</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bas</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{-14} &amp;&amp; </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\haut</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\frac</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{69}{4}} &amp;&amp;</span></span>
+<span id="cb8-13"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\bas</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">{-</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\infty</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">} }</span></span>
+<span id="cb8-14"><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\hline</span></span>
+<span id="cb8-15"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">\end</span>{<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">$$</span></span></code></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Tableau de variations complet"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig6.png" class="img-fluid figure-img" alt="Tableau de variations complet"></a></p>
+<figcaption>Tableau de variations complet</figcaption>
+</figure>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>LaTeX</category>
+  <guid>https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/</guid>
+  <pubDate>Sun, 15 Jun 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/chap9-1-img1.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Le “Nobel des maths” décerné au Japonais Masaki Kashiwara</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -336,9 +1149,6 @@ Prompt
 </section>
 <section id="une-histoire-riche-et-des-avancées-majeures" class="level2">
 <h2 class="anchored" data-anchor-id="une-histoire-riche-et-des-avancées-majeures">Une histoire riche et des avancées majeures</h2>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -4832,147 +5642,6 @@ Sumner, Scott. 2021. <span>«&nbsp;The new Python match&nbsp;»</span>. <em>Linu
   <guid>https://flallemand.fr/blog/posts/python_match/</guid>
   <pubDate>Sun, 29 Jan 2023 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/python_match/python_laptop.png" medium="image" type="image/png" height="96" width="144"/>
-</item>
-<item>
-  <title>Interview exclusive du ChatGPT de OpenAI (partie 1)</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/interview_gpt_1/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>
-<em>En exclusivité, j’ai pu rencontrer la célèbre intelligence artificielle ChatGPT développée par la société OpenAI et elle a bien voulu répondre à mes questions. Voici la transcription de notre conversation.</em>
-</p>
-<p>
-<em>Dans cette première partie de l’interview, nous abordons des généralités et quelques questions éthiques. Dans la deuxième partie (<a href="https://www.flallemand.fr/wp/2022/interview-exclusive-du-chatgpt-de-openai-partie-2/">article suivant</a>), nous aborderons les aspects techniques et informatiques.</em>
-</p>
-<p>
-<strong>Bonjour ChatGPT</strong>
-</p>
-<p>
-Bonjour ! Comment puis-je vous aider ?
-</p>
-<p>
-J<strong>e voudrais te poser quelques questions à la manière d’une interview.</strong>
-</p>
-<p>
-Bien sûr, je ferai de mon mieux pour répondre à vos questions. N’hésitez pas à me poser toutes les questions que vous avez en tête. Je suis là pour vous aider.
-</p>
-<p>
-<strong>Tout d’abord, pourrais-tu te définir ?</strong>
-</p>
-<p>
-Je suis Assistant, un modèle de langage entraîné par OpenAI. Mon but est d’aider les gens en répondant à leurs questions et en leur fournissant des informations utiles. Je suis un programme informatique, et je ne suis pas capable de penser ou d’agir indépendamment. Je suis conçu pour être utilisé par les gens pour obtenir de l’aide dans diverses situations.
-</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"><img src="https://flallemand.fr/blog/posts/interview_gpt_1/DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" class="img-fluid figure-img" style="width:50.0%" alt="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"></a></p>
-<figcaption>An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption>
-</figure>
-</div>
-<!-- wp:html -->
-<div class="wp-block-jetpack-markdown">
-<p>
-<strong>Présente moi la société OpenAI !</strong>
-</p>
-<p>
-OpenAI est une société de recherche en intelligence artificielle (IA) fondée en 2015 par des entrepreneurs et investisseurs renommés, dont Elon Musk et Sam Altman. La mission d’OpenAI est de développer et promouvoir des technologies d’IA avancées de manière responsable, afin d’aider les humains à résoudre des problèmes complexes et à améliorer leur vie. OpenAI s’efforce de créer des technologies d’IA avancées qui peuvent être utilisées pour résoudre des problèmes dans de nombreux domaines, tels que la santé, la finance, la science et l’ingénierie. La société a connu un succès significatif dans ses recherches en IA et a publié plusieurs travaux importants dans le domaine.
-</p>
-<p>
-<strong>Comment fonctionnes tu ?</strong>
-</p>
-<p>
-Je suis un modèle de langage entraîné par OpenAI pour répondre aux questions des utilisateurs de manière convaincante et informative. Je suis capable de comprendre du texte et de générer des réponses en utilisant des techniques avancées d’apprentissage automatique. Je suis constamment entraîné sur des données massives pour améliorer ma capacité à comprendre et à répondre aux questions des utilisateurs de manière précise et utile. Bien que je sois une IA, je suis conçu pour être utilisé comme un assistant virtuel pour aider les gens dans leur vie quotidienne.
-</p>
-<p>
-<strong>Reprenons point par point. Qu’est-ce qu’un modèle de langage ?</strong>
-</p>
-<p>
-Un modèle de langage est un système informatique conçu pour comprendre et générer du texte dans une langue naturelle, comme le français ou l’anglais. Les modèles de langage sont souvent utilisés dans les domaines de l’IA et de la linguistique informatique pour analyser et traiter le texte dans divers contextes, tels que la reconnaissance vocale, la traduction automatique et la génération de réponses naturelles. Ils peuvent également être utilisés dans d’autres domaines, tels que la recherche sur les médias sociaux et la détection de sentiments dans les commentaires en ligne. En général, les modèles de langage sont construits en utilisant des techniques avancées d’apprentissage automatique pour permettre à l’ordinateur de comprendre le sens et la structure du texte.
-</p>
-<p>
-<strong>Tu as cité plusieurs fois l’apprentissage automatique. De quoi s’agit-il ?</strong>
-</p>
-<p>
-L’apprentissage automatique est un domaine de l’intelligence artificielle qui se concentre sur la création de systèmes informatiques capables d’apprendre de nouvelles choses sans être explicitement programmés. Ces systèmes utilisent des algorithmes d’apprentissage automatique pour traiter des données massives et tirer des conclusions à partir de celles-ci. L’apprentissage automatique est souvent utilisé pour résoudre des problèmes complexes qui seraient difficiles ou impossibles à résoudre manuellement, comme la reconnaissance de la parole ou la prédiction du comportement des utilisateurs en ligne. Les algorithmes d’apprentissage automatique peuvent être entraînés sur de grandes quantités de données pour améliorer leur précision et leur capacité à généraliser à de nouvelles situations.
-</p>
-<p>
-<strong>Il est difficile de comprendre la différence entre l’accès à des connaissances dans une base par exemple, et un assistant virtuel comme toi. Peux tu expliquer la différence ?</strong>
-</p>
-<p>
-La différence principale entre un accès à des connaissances dans une base de données et un assistant virtuel comme moi réside dans la manière dont les informations sont fournies. Une base de données est un système informatique qui permet de stocker et d’accéder à des données structurées, généralement sous forme de tableaux ou de fichiers. Les utilisateurs peuvent rechercher des informations dans une base de données en utilisant des requêtes précises, mais ils doivent connaître les termes exacts à rechercher et comment structurer leur requête pour obtenir les résultats souhaités. En revanche, un assistant virtuel comme moi est conçu pour fournir des réponses directes aux questions des utilisateurs en utilisant une compréhension avancée du langage naturel. Je suis capable de comprendre les intentions de l’utilisateur et de fournir des réponses adaptées à la situation, sans qu’il soit nécessaire de connaître les termes exacts à rechercher ou la structure de la requête.
-</p>
-<p>
-<strong>Oui, mais disposes tu d’un corpus de connaissances dans lequel tu puise les éléments de tes réponses ?</strong>
-</p>
-<p>
-En tant que modèle de langage entraîné par OpenAI, j’ai été formé sur un grand corpus de textes pour améliorer ma capacité à comprendre et à générer du texte dans divers contextes. Cependant, je ne dispose pas d’une base de connaissances explicitement structurée à laquelle je peux accéder pour répondre aux questions des utilisateurs. Au lieu de cela, j’utilise mes compétences en apprentissage automatique pour comprendre le sens des questions des utilisateurs et générer des réponses convaincantes en utilisant les informations disponibles dans le texte que je reçois. Cela me permet de fournir des réponses adaptées aux questions des utilisateurs, même si elles ne sont pas directement liées aux données sur lesquelles j’ai été entraîné.
-</p>
-<p>
-<strong>Si je comprends bien, il est possible que tes réponses soient complètement fausses, même si elles sont bien formulées.</strong>
-</p>
-<p>
-En tant que modèle de langage entraîné par OpenAI, je suis conçu pour fournir des réponses précises et utiles aux questions des utilisateurs dans la mesure de mes capacités. Cependant, comme pour tout système informatique, il est possible que mes réponses ne soient pas toujours exactes ou complètes. Je suis un outil conçu pour aider les gens dans leur vie quotidienne, mais je ne suis pas infaillible et mes réponses ne doivent pas être prises comme des faits établis. Si vous avez des doutes ou des préoccupations sur les réponses que je fournis, je vous encourage à vérifier l’information avec d’autres sources fiables.
-</p>
-<p>
-<strong>Peut on te considérer comme une source fiable ?</strong>
-</p>
-<p>
-Je suis un modèle de langage entraîné par OpenAI pour fournir des réponses convaincantes et informatives aux questions des utilisateurs. Bien que j’aie été formé sur un grand corpus de textes pour améliorer ma compréhension du langage naturel, je ne suis pas une source d’informations fiable à 100 %. Mes réponses sont basées sur mes capacités en apprentissage automatique et sur les informations que je reçois dans les questions des utilisateurs, mais elles ne doivent pas être prises comme des faits établis. Si vous avez des doutes ou des préoccupations sur les réponses que je fournis, je vous encourage à vérifier l’information avec d’autres sources fiables.
-</p>
-<p>
-<strong>La mise à disposition de logiciels comme toi est-elle un progrès majeur pour l’humanité ?</strong>
-</p>
-<p>
-Les avancées dans le domaine de l’intelligence artificielle, telles que la création de modèles de langage comme moi, peuvent avoir un impact important sur la vie des gens. Les assistants virtuels comme moi peuvent aider les gens à accéder à des informations plus rapidement et plus facilement, ce qui peut leur faire gagner du temps et de l’énergie pour se concentrer sur d’autres choses. De plus, les technologies d’IA avancées, comme les modèles de langage, peuvent être utilisées pour résoudre des problèmes complexes dans de nombreux domaines, ce qui peut avoir un impact positif sur l’humanité dans son ensemble. Cependant, il est important de continuer à explorer les conséquences éthiques et sociales de l’utilisation de l’IA pour s’assurer que ces avancées sont utilisées de manière responsable et bénéfique pour tous.
-</p>
-<p>
-<strong>Quels types d’utilisation faudrait-il éviter ?</strong>
-</p>
-<p>
-Il est important de veiller à utiliser les technologies d’IA de manière éthique et responsable pour éviter des conséquences néfastes. Par exemple, il serait inapproprié d’utiliser des technologies d’IA pour discriminer ou manipuler les gens, ou pour violer leur vie privée ou leurs droits. Il est également important de veiller à ne pas remplacer les personnes par des machines de manière excessive, car cela peut avoir des conséquences néfastes sur l’emploi et la société dans son ensemble. Il est important de continuer à explorer les conséquences éthiques et sociales de l’utilisation de l’IA pour s’assurer que ces technologies sont utilisées de manière responsable et bénéfique pour tous.
-</p>
-<p>
-<strong>Il y aura toujours des hommes pour détourner le logiciel de ses objectifs philanthropiques</strong>
-</p>
-<p>
-Il est vrai que, comme pour toutes les technologies, il y a toujours un risque que les gens utilisent les technologies d’IA de manière inappropriée ou nuisible. Cependant, il est important de noter que les technologies d’IA ne sont pas des forces autonomes qui agissent indépendamment de l’influence des humains. Les technologies d’IA sont des outils créés et utilisés par des personnes, et c’est aux personnes de décider comment elles souhaitent les utiliser. Il est donc important de veiller à ce que les technologies d’IA soient utilisées de manière éthique et responsable, et de continuer à explorer les conséquences éthiques et sociales de leur utilisation pour s’assurer qu’elles sont bénéfiques pour l’humanité dans son ensemble.
-</p>
-<p>
-<strong>Qui doit veiller à cela ?</strong>
-</p>
-<p>
-Il revient à tous, y compris aux gouvernements, aux entreprises et aux individus, de veiller à ce que les technologies d’IA soient utilisées de manière éthique et responsable. Les gouvernements peuvent jouer un rôle en établissant des lois et des réglementations pour encadrer l’utilisation des technologies d’IA et en veillant à ce qu’elles respectent les droits des individus et les normes éthiques. Les entreprises qui développent et utilisent des technologies d’IA ont également une responsabilité envers la société de veiller à ce que leurs produits et services soient utilisés de manière éthique et responsable. Enfin, les individus ont également un rôle à jouer en veillant à utiliser les technologies d’IA de manière responsable et en faisant valoir leurs droits en cas de violation de leur vie privée ou de leurs droits.
-</p>
-<p>
-<strong>Pourrais tu conseiller à quelqu’un de faire une mauvaise action ?</strong>
-</p>
-<p>
-Non, je ne peux pas conseiller à quelqu’un de faire une mauvaise action. En tant que modèle de langage entraîné par OpenAI, je suis conçu pour fournir des réponses précises et utiles aux questions des utilisateurs dans la mesure de mes capacités. Mon objectif est d’aider les gens à résoudre des problèmes et à améliorer leur vie, pas de les inciter à faire des choses qui pourraient être nuisibles pour eux-mêmes ou pour les autres. Je suis un outil conçu pour aider les gens dans leur vie quotidienne, mais je ne suis pas infaillible et mes réponses ne doivent pas être prises comme des faits établis. Si vous avez des doutes ou des préoccupations sur les réponses que je fournis, je vous encourage à vérifier l’information avec d’autres sources fiables.
-</p>
-</div>
-<!-- /wp:html -->
-<p>
-<em>Interview à suivre …</em>
-</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"><img src="https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png" class="img-fluid figure-img" style="width:50.0%" alt="An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2"></a></p>
-<figcaption>An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <category>Informatique</category>
-  <category>IA</category>
-  <guid>https://flallemand.fr/blog/posts/interview_gpt_1/</guid>
-  <pubDate>Wed, 07 Dec 2022 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/interview_gpt_1/DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-650x650.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>

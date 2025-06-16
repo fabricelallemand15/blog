@@ -1,0 +1,236 @@
+---
+title: 'Tableaux de variations faciles en LaTeX'
+subtitle: "Utilisation du package `tablvar`"
+date: "2025-06-16"
+categories: [Mathématiques, LaTeX]
+image: "chap9-1-img1.png"
+---
+
+Il existe de nombreux outils pour créer des tableaux de variations et de signes en LaTeX, mais beaucoup sont soit trop complexes, soit peu flexibles. Dans cet article, je vais présenter une solution simple et efficace : le package **`tablvar`**, avec des exemples concrets. L'essentiel est issu de la [documentation officielle](https://ctan.org/pkg/tablvar){target="_blank"}.
+
+#### Le package `tablvar`
+
+Pour commencer, il faut bien sûr appeler le package dans le préambule de votre document. Il est fortement recommandé d'utiliser l'option `tikz`, qui est le moteur graphique moderne et le plus compatible avec les compilateurs directs en PDF comme `pdfLaTeX` ou `LuaLaTeX`.
+
+```latex
+\usepackage[tikz]{tablvar}
+```
+
+#### Tableau de variations simple
+
+L'idée fondamentale de tablvar est d'utiliser un environnement qui ressemble beaucoup à array ou tabular, mais avec des commandes spéciales pour placer les valeurs et tracer les flèches.
+
+**La Structure de Base**
+
+Un tableau de variations se crée à l'intérieur d'un environnement `tablvar`, qui doit être en mode mathématique (entre `$$` et `$$` par exemple).
+
+L'environnement prend un argument obligatoire : le nombre d'intervalles, qui correspond au nombre de flèches que vous souhaitez tracer.
+
+```latex    
+$$
+\begin{tablvar}{nombre_de_flèches}
+  % Contenu du tableau
+\end{tablvar}
+$$
+```
+ 
+**Premier Exemple : Une fonction polynôme**
+
+Étudions une fonction $f$ dont la dérivée s'annule en $-1$ et $2$.
+
+Le code LaTeX :
+      
+```latex
+$$
+\begin{tablvar}{3} % Trois intervalles de variation, donc 3 colonnes
+\hline
+x      & -\infty && -1 && 2 && +\infty \\
+\hline
+f'(x)  & & + & 0 & - & 0 & + & \\
+\hline
+% La partie la plus importante : les variations
+\variations{ 
+  \mil{f(x)} & \haut{-\infty} && \bas{5} && \haut{1} && \bas{+\infty} 
+}
+\hline
+\end{tablvar}
+$$
+```
+
+Le résultat :
+
+![Tableau de variations d'une fonction polynôme](fig1.png)
+
+Décortiquons la commande `\variations` :
+C'est le cœur du système.
+
+* `\mil{f(x)}` : Place le texte $f(x)$ au "milieu" verticalement, dans la colonne de légende.
+
+* `\haut{valeur}` : Place la valeur en haut de la zone de variation et crée un nœud pour une flèche qui monte.
+
+* `\bas{valeur}` : Place la valeur en bas de la zone de variation et crée un nœud pour une flèche qui descend.
+
+Les `&` fonctionnent comme dans un tableau array classique pour séparer les colonnes (valeurs et intervalles).
+
+#### Tableau de signes
+
+Pour un tableau de signes, la structure est très similaire. tablvar fournit la commande `\barre` pour tracer une barre de séparation verticale. Si un zéro doit être placé sur cette barre, on le passe en argument optionnel : `\barre[0]`.
+
+**Exemple** : Tableau de signes de $f'(x)=(x+1)(-2x+3)$      
+
+Le code LaTeX :
+
+```latex      
+$$
+\begin{tablvar}{3} % On peut utiliser tablvar pour les signes aussi
+\hline
+x             & -\infty && -1 && \frac{3}{2} && +\infty \\
+\hline
+x+1           & & - & 0 & + & \barre & + & \\
+\hline
+-2x+3         & & + & \barre & + & 0 & - & \\
+\hline
+\mbox{Signe de }f'(x) & & - & 0 & + & 0 & - & \\
+\hline
+\end{tablvar}
+$$
+```
+
+Le résultat :
+
+![Tableau de signes de la fonction f'](fig2.png)
+
+#### Gérer les discontinuités et les limites
+
+C'est là que tablvar devient vraiment puissant. Pour les valeurs interdites, on utilise une double barre (`\bb`) et des commandes spécifiques pour les limites.
+
+* `\bb` : Trace une double barre verticale.
+
+* `\discont` : Indique une discontinuité. La flèche ne traversera pas cet endroit.
+
+* `\limg{ligne}{valeur}` : Place une limite à gauche de la double barre, sur la ligne de variation indiquée.
+
+* `\limd{ligne}{valeur}` : Place une limite à droite.
+
+**Exemple** : Variations de $f(x)=e^{1/x}$ (valeur interdite en 0).
+
+Le code LaTeX :
+
+```latex
+$$
+\begin{tablvar}{2}
+\hline
+x & -\infty && 0 && +\infty \\
+\hline
+\variations{
+    \mil{f(x)} & \haut{1} && \limg{3}{0} \bb \discont \limd{1}{+\infty} && \bas{1} 
+}
+\hline
+\end{tablvar}
+$$
+```
+
+Le résultat :
+
+![Tableau de variations de f(x)=e^{1/x}](fig3.png)
+
+Notez que dans `\limg{3}{0}`, le 3 correspond à la ligne du bas (bas), et dans `\limd{1}{+\infty}`, le 1 correspond à la ligne du haut (haut).
+
+#### Valeurs remarquables et zones interdites
+
+Pour ajouter des valeurs remarquables sur la ligne des $x$, on utilise `\vr{valeur}`. Pour indiquer une zone interdite (domaine de définition), on utilise `\ZI`.
+
+**Exemple** : Variations de l'exponentielle avec des valeurs remarquables.
+
+Le code LaTeX :
+
+```latex
+$$
+\begin{tablvar}{3}
+\hline
+x & -\infty && \vr{0} && \vr{1} && +\infty \\
+\hline
+\variations[4]{ \mil{\exp x} & \bas{0} &&
+\vr[3]{1} && \vr{\textrm{e}} && \haut{+\infty} }
+\hline
+\end{tablvar}
+$$
+```
+
+Le résultat :
+
+![Tableau de variations avec des valeurs remarquables](fig4.png)
+
+**Exemple** : Tableau de variations avec une zone interdite.
+
+Le code LaTeX :
+
+```latex
+$$\begin{tablvar}{4}
+\hline
+x & -\infty && -1 && 0 && 1 && +\infty \\
+\hline
+\variations{ \mil{f(x)} & \haut{+\infty} &&
+\limg{3}{-\infty} \bb & \ZI & \bb \limd{3}{-\infty} &&
+\haut{\frac{\textrm{e}^{-1}}{2}} && \bas{0} }
+\hline
+\end{tablvar}$$
+```
+
+Le résultat :
+
+![Tableau de variations avec une zone interdite](fig5.png)
+
+#### Les commandes essentielles à retenir
+
+Voici un résumé des commandes les plus utiles du package tablvar :
+
+| Commande              | Utilisation                                                      |
+|-----------------------|------------------------------------------------------------------|
+| `\begin{tablvar}{n}`  | Démarre un tableau avec $n$ flèches.                               |
+| `\variations{...}`    | Contient la ou les lignes de variations.                         |
+| `\haut{val}`          | Place `val` en haut (flèche montante).                             |
+| `\bas{val}`           | Place `val` en bas (flèche descendante).                           |
+| `\mil{texte}`         | Centre verticalement le texte (pour la légende $f(x)$).            |
+| `\barre[0]`           | Barre de séparation simple (avec un 0 optionnel).                |
+| `\bb`                 | Double barre pour les valeurs interdites.                        |
+| `\discont`            | Empêche une flèche de traverser une discontinuité.               |
+| `\limg{lig}{val}`     | Limite à gauche de la `\bb`.                                     |
+| `\limd{lig}{val}`     | Limite à droite de la `\bb`.                                     |
+| `\vr{val}`            | Place une "valeur remarquable" sur la ligne des $x$.               |
+| `\ZI`                 | Indique une "zone interdite" (domaine de définition).            |
+
+::: {.callout-tip}
+## Personnalisation
+
+tablvar offre de nombreuses options de personnalisation, à passer en argument optionnel de l'environnement. Par exemple :
+
+* `\begin{tablvar}[intervalwidth=4em]{2}` pour élargir les colonnes d'intervalles.
+
+* `\begin{tablvar}[ZItype=c, ZIcolor=lightgray]{3}` pour avoir des zones interdites colorées plutôt que hachurées.
+
+Reportez-vous à la documentation officielle pour explorer toutes les possibilités !
+:::
+
+#### Un exemple final
+
+```latex
+$$\begin{tablvar}{3}
+\hline
+x & -\infty && -1 && \frac{3}{2} && +\infty \\
+\hline
+x+1 & & - & \barre[0] & + & \barre & + & \\
+\hline
+-2x+3 & & + & \barre & + & \barre[0] & - & \\
+\hline
+\mbox{Signe de }f’(x) & & - & \barre[0] & + & \barre[0] & - & \\
+\hline
+\variations{ \mil{\mbox{Variations de }f} &
+\haut{+\infty} && \bas{-14} && \haut{\frac{69}{4}} &&
+\bas{-\infty} }
+\hline
+\end{tablvar}$$
+```
+
+![Tableau de variations complet](fig6.png)
+    
