@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="F. LALLEMAND">
+
+<title>Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 1 – Le bloc-notes Maths, Info, Lycée</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"fr"
+  });
+});
+</script> 
+  
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #BCD2E8;
+      }
+</style>
+<script src="https://kit.fontawesome.com/4010eb68d9.js" crossorigin="anonymous"></script>
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//sitelf.fr/matomo/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript></noscript></head><body class="nav-fixed quarto-light"><p><img referrerpolicy="no-referrer-when-downgrade" src="//sitelf.fr/matomo/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt=""></p>
+  <!-- End Matomo Code -->
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.mim-libre.fr/@lallemandfabrice"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@flallemandmath"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 1</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">NSI</div>
+                <div class="quarto-category">Annales</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Auteur·rice</div>
+      <div class="quarto-title-meta-contents">
+               <p>F. LALLEMAND </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Date de publication</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">18 juin 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#corrigé-de-lexercice-1-6-points" id="toc-corrigé-de-lexercice-1-6-points" class="nav-link active" data-scroll-target="#corrigé-de-lexercice-1-6-points">Corrigé de l’Exercice 1 (6 points)</a>
+  <ul class="collapse">
+  <li><a href="#partie-a" id="toc-partie-a" class="nav-link" data-scroll-target="#partie-a">Partie A</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
+  </ul></li>
+  <li><a href="#partie-b" id="toc-partie-b" class="nav-link" data-scroll-target="#partie-b">Partie B</a>
+  <ul class="collapse">
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
+  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
+  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#corrigé-de-lexercice-2-6-points" id="toc-corrigé-de-lexercice-2-6-points" class="nav-link" data-scroll-target="#corrigé-de-lexercice-2-6-points">Corrigé de l’Exercice 2 (6 points)</a>
+  <ul class="collapse">
+  <li><a href="#question-1-1" id="toc-question-1-1" class="nav-link" data-scroll-target="#question-1-1">Question 1</a></li>
+  <li><a href="#question-2-1" id="toc-question-2-1" class="nav-link" data-scroll-target="#question-2-1">Question 2</a></li>
+  <li><a href="#question-3-1" id="toc-question-3-1" class="nav-link" data-scroll-target="#question-3-1">Question 3</a></li>
+  <li><a href="#question-4-1" id="toc-question-4-1" class="nav-link" data-scroll-target="#question-4-1">Question 4</a></li>
+  <li><a href="#question-5-1" id="toc-question-5-1" class="nav-link" data-scroll-target="#question-5-1">Question 5</a></li>
+  <li><a href="#question-6-1" id="toc-question-6-1" class="nav-link" data-scroll-target="#question-6-1">Question 6</a></li>
+  <li><a href="#question-7-1" id="toc-question-7-1" class="nav-link" data-scroll-target="#question-7-1">Question 7</a></li>
+  <li><a href="#question-8-1" id="toc-question-8-1" class="nav-link" data-scroll-target="#question-8-1">Question 8</a></li>
+  <li><a href="#question-9-1" id="toc-question-9-1" class="nav-link" data-scroll-target="#question-9-1">Question 9</a></li>
+  <li><a href="#question-10-1" id="toc-question-10-1" class="nav-link" data-scroll-target="#question-10-1">Question 10</a></li>
+  </ul></li>
+  <li><a href="#corrigé-de-lexercice-3-8-points" id="toc-corrigé-de-lexercice-3-8-points" class="nav-link" data-scroll-target="#corrigé-de-lexercice-3-8-points">Corrigé de l’Exercice 3 (8 points)</a>
+  <ul class="collapse">
+  <li><a href="#partie-a-réseau-local" id="toc-partie-a-réseau-local" class="nav-link" data-scroll-target="#partie-a-réseau-local">Partie A : Réseau local</a>
+  <ul class="collapse">
+  <li><a href="#question-1-2" id="toc-question-1-2" class="nav-link" data-scroll-target="#question-1-2">Question 1</a></li>
+  <li><a href="#question-2-2" id="toc-question-2-2" class="nav-link" data-scroll-target="#question-2-2">Question 2</a></li>
+  <li><a href="#question-3-2" id="toc-question-3-2" class="nav-link" data-scroll-target="#question-3-2">Question 3</a></li>
+  <li><a href="#question-4-2" id="toc-question-4-2" class="nav-link" data-scroll-target="#question-4-2">Question 4</a></li>
+  </ul></li>
+  <li><a href="#partie-b-routage-rip" id="toc-partie-b-routage-rip" class="nav-link" data-scroll-target="#partie-b-routage-rip">Partie B : Routage RIP</a>
+  <ul class="collapse">
+  <li><a href="#question-5-2" id="toc-question-5-2" class="nav-link" data-scroll-target="#question-5-2">Question 5</a></li>
+  <li><a href="#question-6-2" id="toc-question-6-2" class="nav-link" data-scroll-target="#question-6-2">Question 6</a></li>
+  <li><a href="#question-7-2" id="toc-question-7-2" class="nav-link" data-scroll-target="#question-7-2">Question 7</a></li>
+  </ul></li>
+  <li><a href="#partie-c-routage-ospf" id="toc-partie-c-routage-ospf" class="nav-link" data-scroll-target="#partie-c-routage-ospf">Partie C : Routage OSPF</a>
+  <ul class="collapse">
+  <li><a href="#question-8-2" id="toc-question-8-2" class="nav-link" data-scroll-target="#question-8-2">Question 8</a></li>
+  <li><a href="#question-9-2" id="toc-question-9-2" class="nav-link" data-scroll-target="#question-9-2">Question 9</a></li>
+  </ul></li>
+  <li><a href="#partie-d-arbres-binaires-de-recherche" id="toc-partie-d-arbres-binaires-de-recherche" class="nav-link" data-scroll-target="#partie-d-arbres-binaires-de-recherche">Partie D : Arbres binaires de recherche</a>
+  <ul class="collapse">
+  <li><a href="#question-10-2" id="toc-question-10-2" class="nav-link" data-scroll-target="#question-10-2">Question 10</a></li>
+  <li><a href="#question-11" id="toc-question-11" class="nav-link" data-scroll-target="#question-11">Question 11</a></li>
+  <li><a href="#question-12" id="toc-question-12" class="nav-link" data-scroll-target="#question-12">Question 12</a></li>
+  <li><a href="#question-13" id="toc-question-13" class="nav-link" data-scroll-target="#question-13">Question 13</a></li>
+  <li><a href="#question-14" id="toc-question-14" class="nav-link" data-scroll-target="#question-14">Question 14</a></li>
+  <li><a href="#question-15" id="toc-question-15" class="nav-link" data-scroll-target="#question-15">Question 15</a></li>
+  <li><a href="#question-16" id="toc-question-16" class="nav-link" data-scroll-target="#question-16">Question 16</a></li>
+  <li><a href="#question-17" id="toc-question-17" class="nav-link" data-scroll-target="#question-17">Question 17</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2025-06-18-NSIMetropoleJ1/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="corrigé-de-lexercice-1-6-points" class="level1">
+<h1>Corrigé de l’Exercice 1 (6 points)</h1>
+<p>Cet exercice évalue les compétences sur les bases de données relationnelles et le langage SQL.</p>
+<section id="partie-a" class="level2">
+<h2 class="anchored" data-anchor-id="partie-a">Partie A</h2>
+<p>Dans cette partie, nous travaillons avec une unique table <code>inventaire</code>.</p>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>Expliquer pourquoi l’attribut <code>num_ser</code> ne peut pas être une clé primaire de la relation <code>inventaire</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Clé primaire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une clé primaire est un attribut (ou un ensemble d’attributs) qui permet d’identifier de manière <strong>unique</strong> chaque enregistrement (ou tuple) dans une table. Par conséquent, la valeur d’une clé primaire ne peut pas être présente en double dans la table.</p>
+</div>
+</div>
+<p>L’attribut <code>num_ser</code> ne peut pas être une clé primaire car ses valeurs ne sont pas uniques dans la table. On observe que la valeur <code>81757532</code> apparaît deux fois dans la colonne <code>num_ser</code> : pour la guitare avec <code>id=4</code> et pour celle avec <code>id=8</code>. Une clé primaire ne peut pas contenir de doublons.</p>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>Donner, sous forme de tableau, le résultat de la requête suivante appliquée à l’extrait de table précédent.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> marque, modele</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> inventaire</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> annee <span class="op">=</span> <span class="dv">1956</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>La requête sélectionne les attributs <code>marque</code> et <code>modele</code> pour tous les enregistrements où l’année est <code>1956</code>. En examinant la table <code>inventaire</code>, deux lignes correspondent à ce critère : celle avec <code>id=1</code> et celle avec <code>id=7</code>.</p>
+<p>Le résultat est donc :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">marque</th>
+<th style="text-align: left;">modele</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Gibson</td>
+<td style="text-align: left;">Les Paul Goldtop</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fender</td>
+<td style="text-align: left;">Stratocaster</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>Écrire une requête SQL permettant d’obtenir toutes les années du modèle Les Paul Standard dans la collection.</p>
+<p>Pour sélectionner les années, on utilise <code>SELECT annee</code>. Pour ne garder que celles correspondant au modèle ‘Les Paul Standard’, on utilise une clause <code>WHERE</code>. Il est judicieux d’utiliser <code>DISTINCT</code> pour éviter d’afficher des doublons si plusieurs guitares de ce modèle ont été fabriquées la même année.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Clause <code>DISTINCT</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La clause <code>DISTINCT</code> s’utilise avec <code>SELECT</code> pour éliminer les lignes en double dans le résultat d’une requête.</p>
+</div>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> annee</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> inventaire</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> modele <span class="op">=</span> <span class="st">'Les Paul Standard'</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>Écrire une requête SQL permettant d’obtenir tous les modèles de guitares de la marque Gibson par ordre croissant de l’année dans la collection.</p>
+<p>Il faut filtrer les guitares de marque ‘Gibson’ avec <code>WHERE</code> et trier le résultat par année croissante avec <code>ORDER BY</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> modele</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> inventaire</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> marque <span class="op">=</span> <span class="st">'Gibson'</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> annee <span class="kw">ASC</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Note : <code>ASC</code> (pour ascendant) est l’ordre de tri par défaut et peut être omis.</em></p>
+</section>
+<section id="question-5" class="level3">
+<h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
+<p>Maud a fait une erreur de saisie pour la guitare d’identifiant <code>id=1</code>. L’année est en réalité 1957. Écrire une requête SQL permettant de corriger cette erreur de saisie.</p>
+<p>La modification d’un enregistrement existant se fait avec la commande <code>UPDATE</code>. On spécifie la table à modifier, les colonnes et leurs nouvelles valeurs avec <code>SET</code>, et l’enregistrement à modifier avec <code>WHERE</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Syntaxe <code>UPDATE</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>UPDATE nom_de_la_table SET colonne1 = valeur1, colonne2 = valeur2, ... WHERE condition;</code> La clause <code>WHERE</code> est importante pour ne pas modifier toutes les lignes de la table.</p>
+</div>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> inventaire</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> annee <span class="op">=</span> <span class="dv">1957</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">1</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="partie-b" class="level2">
+<h2 class="anchored" data-anchor-id="partie-b">Partie B</h2>
+<p>Dans cette partie, la base de données est normalisée en trois tables : <code>marque</code>, <code>modele</code> et <code>guitare</code>.</p>
+<section id="question-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<p>Expliquer brièvement, en justifiant, dans quel ordre les trois tables doivent être créées.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Clé étrangère
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une clé étrangère est un attribut dans une table qui fait référence à la clé primaire d’une autre table. Pour pouvoir créer une contrainte de clé étrangère, la table référencée doit déjà exister.</p>
+</div>
+</div>
+<p>L’ordre de création des tables est contraint par les clés étrangères.</p>
+<ul>
+<li>La table <code>modele</code> contient une clé étrangère <code>id_marque</code> qui référence la clé primaire de la table <code>marque</code>. La table <code>marque</code> doit donc être créée avant la table <code>modele</code>.</li>
+<li>La table <code>guitare</code> contient une clé étrangère <code>id_modele</code> qui référence la clé primaire de la table <code>modele</code>. La table <code>modele</code> doit donc être créée avant la table <code>guitare</code>.</li>
+</ul>
+<p>L’ordre de création est donc : 1. <code>marque</code> 2. <code>modele</code> 3. <code>guitare</code></p>
+</section>
+<section id="question-7" class="level3">
+<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+<p>Écrire une requête SQL permettant d’obtenir le numéro de série et l’année de toutes les guitares Les Paul Standard de la collection.</p>
+<p>Les informations <code>num_ser</code> et <code>annee</code> sont dans la table <code>guitare</code>, mais le nom du modèle ‘Les Paul Standard’ est dans la table <code>modele</code>. Il faut donc effectuer une jointure entre ces deux tables.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> G.num_ser, G.annee</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> guitare <span class="kw">AS</span> G</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> modele <span class="kw">AS</span> M <span class="kw">ON</span> G.id_modele <span class="op">=</span> M.<span class="kw">id</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> M.nom <span class="op">=</span> <span class="st">'Les Paul Standard'</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Note : l’utilisation d’alias (<code>AS G</code>, <code>AS M</code>) rend la requête plus lisible.</em></p>
+</section>
+<section id="question-8" class="level3">
+<h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+<p>Écrire une requête SQL permettant de retirer de la collection la guitare d’identifiant <code>id=3</code>.</p>
+<p>La suppression d’un enregistrement se fait avec la commande <code>DELETE FROM</code>. Il est essentiel de spécifier la ligne à supprimer avec une clause <code>WHERE</code>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> <span class="kw">FROM</span> guitare</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">3</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-9" class="level3">
+<h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+<p>Écrire l’ensemble des requêtes SQL permettant d’ajouter la guitare suivante :</p>
+<ul>
+<li>marque : BC Rich</li>
+<li>modèle : Mockingbird</li>
+<li>année : 1992</li>
+<li>numéro de série : 92R</li>
+<li>prix : 5000.</li>
+</ul>
+<p>L’ajout doit se faire en respectant les contraintes de clés étrangères. On doit d’abord insérer la nouvelle marque, puis le nouveau modèle (en le liant à la marque), et enfin la nouvelle guitare (en la liant au modèle). Les identifiants à utiliser sont fournis.</p>
+<ol type="1">
+<li><p><strong>Insertion de la marque :</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> marque (<span class="kw">id</span>, nom) <span class="kw">VALUES</span> (<span class="dv">3</span>, <span class="st">'BC Rich'</span>);</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Insertion du modèle :</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> modele (<span class="kw">id</span>, nom, id_marque) <span class="kw">VALUES</span> (<span class="dv">5</span>, <span class="st">'Mockingbird'</span>, <span class="dv">3</span>);</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Insertion de la guitare :</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> guitare (<span class="kw">id</span>, id_modele, annee, num_ser, prix) <span class="kw">VALUES</span> (<span class="dv">9</span>, <span class="dv">5</span>, <span class="dv">1992</span>, <span class="st">'92R'</span>, <span class="dv">5000</span>);</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+<section id="question-10" class="level3">
+<h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+<p>Écrire une requête SQL permettant de calculer la valeur totale des modèles Stratocaster de la collection de Slash.</p>
+<p>Il faut utiliser la fonction d’agrégation <code>SUM()</code> sur la colonne <code>prix</code> de la table <code>guitare</code>. Comme pour la question 7, une jointure avec la table <code>modele</code> est nécessaire pour filtrer sur le nom du modèle ‘Stratocaster’.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">SUM</span>(G.prix)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> guitare <span class="kw">AS</span> G</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> modele <span class="kw">AS</span> M <span class="kw">ON</span> G.id_modele <span class="op">=</span> M.<span class="kw">id</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> M.nom <span class="op">=</span> <span class="st">'Stratocaster'</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="corrigé-de-lexercice-2-6-points" class="level1">
+<h1>Corrigé de l’Exercice 2 (6 points)</h1>
+<p>Cet exercice porte sur l’algorithmique, la programmation orientée objet, l’utilisation de structures de données comme la file, et la simulation d’un ordonnanceur de tâches.</p>
+<section id="question-1-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
+<p>Donner le code Python qui permet d’instancier deux variables <code>tache1</code> et <code>tache2</code> représentant les tâches.</p>
+<p>Le constructeur de la classe <code>Tache</code> est <code>__init__(self, numero, nom, duree)</code>. Il suffit de l’appeler avec les bonnes valeurs pour chaque tâche.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tache1 <span class="op">=</span> Tache(<span class="dv">1</span>, <span class="st">"Répondre aux e-mails"</span>, <span class="dv">45</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>tache2 <span class="op">=</span> Tache(<span class="dv">2</span>, <span class="st">"Ranger ma chambre"</span>, <span class="dv">60</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-2-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
+<p>Recopier et compléter le code de la méthode <code>avancer</code> de la classe <code>Tache</code>.</p>
+<p>La méthode <code>avancer</code> doit diminuer l’attribut <code>duree_restante</code> de la valeur <code>n</code> passée en paramètre.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> avancer(<span class="va">self</span>, n):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.duree_restante <span class="op">-=</span> n</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-3-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-1">Question 3</h3>
+<p>Recopier et compléter le code de la méthode <code>est_terminee</code> de la classe <code>Tache</code>.</p>
+<p>Une tâche est terminée si sa durée restante est négative ou nulle. La méthode doit donc renvoyer le résultat de la comparaison <code>self.duree_restante &lt;= 0</code>.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> est_terminee(<span class="va">self</span>):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">self</span>.duree_restante <span class="op">&lt;=</span> <span class="dv">0</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-4-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-1">Question 4</h3>
+<p>Représenter l’état de la file <code>f</code> lorsqu’on lui ajoute successivement la tâche numéro 6 avec la priorité 2, puis la tâche numéro 7 avec la priorité 4.</p>
+<p>La file initiale est : <code>[début] (&lt;t3&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]</code></p>
+<ol type="1">
+<li><p><strong>Ajout de <code>(&lt;t6&gt;, 2)</code> :</strong> La priorité 2 est inférieure à 3 et supérieure à 1. L’élément s’insère donc après tous les éléments de priorité 3 et avant tous ceux de priorité 1. État intermédiaire : <code>[début] (&lt;t3&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t6&gt;, 2) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]</code></p></li>
+<li><p><strong>Ajout de <code>(&lt;t7&gt;, 4)</code> :</strong> La priorité 4 est la même que celle de <code>&lt;t3&gt;</code>. Selon la condition 2, les éléments de même priorité sont rangés par ordre d’insertion. <code>&lt;t7&gt;</code> est inséré après <code>&lt;t3&gt;</code>, qui était déjà dans la file. État final : <code>[début] (&lt;t3&gt;, 4) (&lt;t7&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t6&gt;, 2) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]</code></p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : File (Queue)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une file est une structure de données de type FIFO (First-In, First-Out, ou “premier entré, premier sorti”). Les nouveaux éléments sont ajoutés à la fin (enfiler) et les éléments sont retirés depuis le début (défiler). Dans cet exercice, la file est utilisée pour implémenter une file de priorité, où l’ordre est maintenu par une fonction d’ajout spécifique.</p>
+</div>
+</div>
+</section>
+<section id="question-5-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-1">Question 5</h3>
+<p>En repartant de la file <code>f</code> suivante : <code>[début](&lt;t3&gt;, 4)(&lt;t1&gt;, 3)(&lt;t2&gt;, 3)(&lt;t4&gt;, 1)(&lt;t5&gt;, 1)[fin]</code> donner la valeur de <code>f.defiler()[0]</code> et représenter le contenu de la file <code>f</code> après l’exécution de cette instruction.</p>
+<ul>
+<li><code>f.defiler()</code> retire et renvoie le premier élément de la file, qui est le tuple <code>(&lt;t3&gt;, 4)</code>.</li>
+<li>L’opérateur <code>[0]</code> sélectionne le premier élément de ce tuple, soit <code>&lt;t3&gt;</code>.</li>
+<li>Après cette opération, la file ne contient plus cet élément.</li>
+</ul>
+<p><strong>Valeur renvoyée :</strong> <code>&lt;t3&gt;</code></p>
+<p><strong>Contenu de la file <code>f</code> après :</strong> <code>[début] (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]</code></p>
+</section>
+<section id="question-6-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-1">Question 6</h3>
+<p>En repartant de la file <code>f</code> suivante : <code>[début](&lt;t3&gt;, 4)(&lt;t1&gt;, 3)(&lt;t2&gt;, 3)(&lt;t4&gt;, 1)(&lt;t5&gt;, 1)[fin]</code> donner la valeur de <code>f.examiner()[1]</code> et représenter le contenu de la file <code>f</code> après l’exécution de cette instruction.</p>
+<ul>
+<li><code>f.examiner()</code> renvoie le premier élément de la file sans le retirer. Cet élément est le tuple <code>(&lt;t3&gt;, 4)</code>.</li>
+<li>L’opérateur <code>[1]</code> sélectionne le deuxième élément de ce tuple, soit <code>4</code>.</li>
+<li>La file reste inchangée.</li>
+</ul>
+<p><strong>Valeur renvoyée :</strong> <code>4</code></p>
+<p><strong>Contenu de la file <code>f</code> après :</strong> <code>[début] (&lt;t3&gt;, 4) (&lt;t1&gt;, 3) (&lt;t2&gt;, 3) (&lt;t4&gt;, 1) (&lt;t5&gt;, 1) [fin]</code></p>
+</section>
+<section id="question-7-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-1">Question 7</h3>
+<p>Recopier et compléter le code de la fonction <code>ajouter_file_prio</code>.</p>
+<p>L’algorithme consiste à transférer les éléments de <code>f</code> vers <code>f_aux</code> jusqu’à trouver le bon emplacement pour <code>(t, p)</code>, insérer <code>(t, p)</code>, transférer le reste de <code>f</code>, puis tout retransférer dans <code>f</code>.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ajouter_file_prio(f, t, p):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    f_aux <span class="op">=</span> File()</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. Défiler les éléments de f de priorité &gt;= p vers f_aux</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="kw">not</span> f.est_vide() <span class="kw">and</span> f.examiner()[<span class="dv">1</span>] <span class="op">&gt;=</span> p:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        f_aux.enfiler(f.defiler())</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. Enfiler le nouvel élément dans f_aux</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    f_aux.enfiler((t, p))</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 3. Défiler le reste de f vers f_aux</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="kw">not</span> f.est_vide():</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        f_aux.enfiler(f.defiler())</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. Reconstruire f en défilant f_aux</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="kw">not</span> f_aux.est_vide():</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>        f.enfiler(f_aux.defiler())</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-8-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-1">Question 8</h3>
+<p>Donner le coût d’exécution temporel dans le pire des cas de la fonction <code>ajouter_file_prio</code>, en fonction du nombre <code>m</code> d’éléments de la file <code>f</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Complexité temporelle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La complexité temporelle mesure l’évolution du temps d’exécution d’un algorithme en fonction de la taille de ses données d’entrée. On l’exprime souvent avec la notation “Grand O”, notée <span class="math inline">\(O(...)\)</span>. Une complexité <span class="math inline">\(O(m)\)</span> signifie que le temps est proportionnel à la taille <span class="math inline">\(m\)</span> des données.</p>
+</div>
+</div>
+<p>Dans le pire des cas (par exemple, lors de l’insertion d’un élément de la plus faible priorité), la fonction parcourt la totalité de la file <code>f</code> plusieurs fois :</p>
+<ol type="1">
+<li>La première boucle <code>while</code> parcourt les <code>m</code> éléments de <code>f</code>.</li>
+<li>La deuxième boucle <code>while</code> (qui défile le reste de <code>f</code>) ne s’exécute pas.</li>
+<li>La troisième boucle <code>while</code> parcourt les <code>m + 1</code> éléments de <code>f_aux</code> pour les remettre dans <code>f</code>.</li>
+</ol>
+<p>Chaque élément est donc défilé et enfilé un nombre constant de fois. Le nombre total d’opérations (<code>enfiler</code>, <code>defiler</code>) est proportionnel à <code>m</code>. Le coût d’exécution est donc linéaire par rapport au nombre d’éléments <code>m</code> dans la file.</p>
+<p>La complexité temporelle est en <span class="math inline">\(O(m)\)</span>.</p>
+</section>
+<section id="question-9-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-1">Question 9</h3>
+<p>Indiquer pour chaque bloc de 25 minutes la tâche qui avance, en suivant le modèle proposé, jusqu’à la fin de toutes les tâches.</p>
+<p>Le point important à ne pas oublier est le fonctionnement de la file de priorité et de l’ordonnanceur :</p>
+<ol type="1">
+<li><strong>Priorité absolue :</strong> L’ordonnanceur choisit <strong>toujours</strong> la tâche qui est en tête de file, c’est-à-dire celle qui a la plus haute priorité. Tant qu’il reste des tâches de priorité 4, aucune tâche de priorité 3 ne sera exécutée.</li>
+<li><strong>Règle de ré-insertion (FIFO pour les priorités égales) :</strong> Lorsqu’une tâche non terminée est ré-insérée dans la file, elle est placée <strong>après</strong> toutes les autres tâches ayant la même priorité. C’est la condition 2 de l’énoncé.</li>
+</ol>
+<p>Cela signifie que les tâches de même priorité seront traitées en mode “tourniquet” (Round-Robin), mais seulement une fois que toutes les tâches de priorité supérieure sont terminées.</p>
+<section id="déroulement-détaillé-de-lordonnancement" class="level4">
+<h4 class="anchored" data-anchor-id="déroulement-détaillé-de-lordonnancement">Déroulement détaillé de l’ordonnancement</h4>
+<p>Recréons la table de suivi de l’état de la file et des tâches, pas à pas.</p>
+<p><strong>État initial :</strong></p>
+<ul>
+<li><strong>Tâches et durées restantes :</strong> t3(90), t7(20), t1(45), t2(60), t6(60), t4(30), t5(30).</li>
+<li><strong>File <code>f</code> :</strong> <code>[ (t3, 4), (t7, 4), (t1, 3), (t2, 3), (t6, 2), (t4, 1), (t5, 1) ]</code></li>
+<li><strong>Planning :</strong> <code>[]</code></li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Session</th>
+<th style="text-align: left;">Tâche traitée</th>
+<th style="text-align: left;">Durée restante avant</th>
+<th style="text-align: left;">Opération</th>
+<th style="text-align: left;">Durée restante après</th>
+<th style="text-align: left;">File après ré-insertion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>1</strong></td>
+<td style="text-align: left;"><code>&lt;t3&gt;</code></td>
+<td style="text-align: left;">90</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Ré-insérée après <code>&lt;t7&gt;</code>.</td>
+<td style="text-align: left;">65</td>
+<td style="text-align: left;"><code>[ (t7, 4), (t3, 4), (t1, 3), ... ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>2</strong></td>
+<td style="text-align: left;"><code>&lt;t7&gt;</code></td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">Avance de 25. <strong>Terminée</strong>.</td>
+<td style="text-align: left;">-5</td>
+<td style="text-align: left;"><code>[ (t3, 4), (t1, 3), (t2, 3), ... ]</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>3</strong></td>
+<td style="text-align: left;"><code>&lt;t3&gt;</code></td>
+<td style="text-align: left;">65</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Seule P4, revient en tête.</td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;"><code>[ (t3, 4), (t1, 3), (t2, 3), ... ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>4</strong></td>
+<td style="text-align: left;"><code>&lt;t3&gt;</code></td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Seule P4, revient en tête.</td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;"><code>[ (t3, 4), (t1, 3), (t2, 3), ... ]</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>5</strong></td>
+<td style="text-align: left;"><code>&lt;t3&gt;</code></td>
+<td style="text-align: left;">15</td>
+<td style="text-align: left;">Avance de 25. <strong>Terminée</strong>.</td>
+<td style="text-align: left;">-10</td>
+<td style="text-align: left;"><code>[ (t1, 3), (t2, 3), (t6, 2), ... ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><em>Toutes les tâches de priorité 4 sont finies.</em></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>6</strong></td>
+<td style="text-align: left;"><code>&lt;t1&gt;</code></td>
+<td style="text-align: left;">45</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Ré-insérée après <code>&lt;t2&gt;</code>.</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;"><code>[ (t2, 3), (t1, 3), (t6, 2), ... ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>7</strong></td>
+<td style="text-align: left;"><code>&lt;t2&gt;</code></td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Ré-insérée après <code>&lt;t1&gt;</code>.</td>
+<td style="text-align: left;">35</td>
+<td style="text-align: left;"><code>[ (t1, 3), (t2, 3), (t6, 2), ... ]</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>8</strong></td>
+<td style="text-align: left;"><code>&lt;t1&gt;</code></td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">Avance de 25. <strong>Terminée</strong>.</td>
+<td style="text-align: left;">-5</td>
+<td style="text-align: left;"><code>[ (t2, 3), (t6, 2), (t4, 1), ... ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>9</strong></td>
+<td style="text-align: left;"><code>&lt;t2&gt;</code></td>
+<td style="text-align: left;">35</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Seule P3, revient en tête.</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><code>[ (t2, 3), (t6, 2), (t4, 1), ... ]</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>10</strong></td>
+<td style="text-align: left;"><code>&lt;t2&gt;</code></td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Avance de 25. <strong>Terminée</strong>.</td>
+<td style="text-align: left;">-15</td>
+<td style="text-align: left;"><code>[ (t6, 2), (t4, 1), (t5, 1) ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><em>Toutes les tâches de priorité 3 sont finies.</em></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>11</strong></td>
+<td style="text-align: left;"><code>&lt;t6&gt;</code></td>
+<td style="text-align: left;">60</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Seule P2, revient en tête.</td>
+<td style="text-align: left;">35</td>
+<td style="text-align: left;"><code>[ (t6, 2), (t4, 1), (t5, 1) ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>12</strong></td>
+<td style="text-align: left;"><code>&lt;t6&gt;</code></td>
+<td style="text-align: left;">35</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Seule P2, revient en tête.</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><code>[ (t6, 2), (t4, 1), (t5, 1) ]</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>13</strong></td>
+<td style="text-align: left;"><code>&lt;t6&gt;</code></td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">Avance de 25. <strong>Terminée</strong>.</td>
+<td style="text-align: left;">-15</td>
+<td style="text-align: left;"><code>[ (t4, 1), (t5, 1) ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><em>Toutes les tâches de priorité 2 sont finies.</em></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>14</strong></td>
+<td style="text-align: left;"><code>&lt;t4&gt;</code></td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Ré-insérée après <code>&lt;t5&gt;</code>.</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>[ (t5, 1), (t4, 1) ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>15</strong></td>
+<td style="text-align: left;"><code>&lt;t5&gt;</code></td>
+<td style="text-align: left;">30</td>
+<td style="text-align: left;">Avance de 25. Non terminée. Ré-insérée après <code>&lt;t4&gt;</code>.</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>[ (t4, 1), (t5, 1) ]</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>16</strong></td>
+<td style="text-align: left;"><code>&lt;t4&gt;</code></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Avance de 25. <strong>Terminée</strong>.</td>
+<td style="text-align: left;">-20</td>
+<td style="text-align: left;"><code>[ (t5, 1) ]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>17</strong></td>
+<td style="text-align: left;"><code>&lt;t5&gt;</code></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Avance de 25. <strong>Terminée</strong>.</td>
+<td style="text-align: left;">-20</td>
+<td style="text-align: left;"><code>[ ]</code> (File vide)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="résultat-final" class="level4">
+<h4 class="anchored" data-anchor-id="résultat-final">Résultat final</h4>
+<p>La séquence correcte des tâches effectuées par tranche de 25 minutes est donc :</p>
+<p><code>t3</code>, <code>t7</code>, <code>t3</code>, <code>t3</code>, <code>t3</code>, <code>t1</code>, <code>t2</code>, <code>t1</code>, <code>t2</code>, <code>t2</code>, <code>t6</code>, <code>t6</code>, <code>t6</code>, <code>t4</code>, <code>t5</code>, <code>t4</code>, <code>t5</code>.</p>
+</section>
+</section>
+<section id="question-10-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-1">Question 10</h3>
+<p>Écrire le code d’une fonction <code>planning</code> qui prend en paramètre une file de priorité <code>f</code> et qui renvoie une liste de tâches, dans l’ordre où elles vont être effectuées.</p>
+<p>Cette fonction doit implémenter l’algorithme Pomodoro décrit précédemment.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> planning(f):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Simule l'ordonnancement Pomodoro et renvoie la liste des tâches</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">    traitées à chaque session.</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    plan <span class="op">=</span> []</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="kw">not</span> f.est_vide():</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 1. Défiler la tâche la plus prioritaire</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        element <span class="op">=</span> f.defiler()</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        tache <span class="op">=</span> element[<span class="dv">0</span>]</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        priorite <span class="op">=</span> element[<span class="dv">1</span>]</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 2. L'ajouter au planning de la session</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        plan.append(tache)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 3. Avancer la tâche</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>        tache.avancer(<span class="dv">25</span>)</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 4. Si elle n'est pas terminée, la ré-insérer dans la file</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> tache.est_terminee():</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>            ajouter_file_prio(f, tache, priorite)</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> plan </span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="corrigé-de-lexercice-3-8-points" class="level1">
+<h1>Corrigé de l’Exercice 3 (8 points)</h1>
+<p>Cet exercice aborde l’architecture réseau (adressage IP, routage) et les structures de données (arbres binaires de recherche).</p>
+<section id="partie-a-réseau-local" class="level2">
+<h2 class="anchored" data-anchor-id="partie-a-réseau-local">Partie A : Réseau local</h2>
+<section id="question-1-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-2">Question 1</h3>
+<p>Indiquer les deux seules adresses IP valides pour cette nouvelle borne, parmi les quatre adresses IP proposées.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Adressage IP et Masque de sous-réseau
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le réseau du café 1 est <code>192.168.20.0</code> avec un masque <code>255.255.255.0</code> (ou <code>/24</code>).</p>
+<ul>
+<li>L’<strong>adresse du réseau</strong> est <code>192.168.20.0</code>. Elle ne peut pas être attribuée à une machine.</li>
+<li>L’<strong>adresse de diffusion</strong> (broadcast) est <code>192.168.20.255</code>. Elle ne peut pas être attribuée à une machine.</li>
+<li>Les <strong>adresses valides pour les hôtes</strong> vont donc de <code>192.168.20.1</code> à <code>192.168.20.254</code>. Le dernier octet d’une adresse IPv4 doit être compris entre 0 et 255.</li>
+</ul>
+</div>
+</div>
+<p>Analysons les propositions :</p>
+<ul>
+<li><ol type="a">
+<li><code>192.168.20.2</code> : Valide. Elle est dans la plage <code>192.168.20.1</code> - <code>192.168.20.254</code>.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li><code>192.168.20.157</code> : Valide. Elle est dans la plage <code>192.168.20.1</code> - <code>192.168.20.254</code>.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li><code>192.168.20.261</code> : Invalide. Le dernier octet (261) est supérieur à 255.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li><code>192.168.24.10</code> : Invalide. Elle n’appartient pas au réseau <code>192.168.20.0</code> car le troisième octet (24) est différent.</li>
+</ol></li>
+</ul>
+<p>Les deux adresses valides sont <strong>(a) <code>192.168.20.2</code></strong> et <strong>(b) <code>192.168.20.157</code></strong>.</p>
+</section>
+<section id="question-2-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-2">Question 2</h3>
+<p>Déterminer l’adresse de diffusion du réseau du café 1.</p>
+<p>Pour un réseau d’adresse <code>192.168.20.0</code> et de masque <code>255.255.255.0</code>, l’adresse de diffusion est celle où tous les bits de la partie hôte (le dernier octet ici) sont à 1. En binaire, <code>11111111</code> correspond à 255 en décimal. L’adresse de diffusion est donc <strong><code>192.168.20.255</code></strong>.</p>
+</section>
+<section id="question-3-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-2">Question 3</h3>
+<p>Déterminer combien de machines informatiques il est encore possible de connecter au réseau du café 1 après l’installation de la troisième borne de commande.</p>
+<p>Un masque <code>/24</code> laisse 8 bits pour la partie hôte, ce qui permet <span class="math inline">\(2^8 = 256\)</span> adresses au total. En retirant l’adresse réseau et l’adresse de diffusion, il y a <span class="math inline">\(256 - 2 = 254\)</span> adresses disponibles pour les machines.</p>
+<p>Machines déjà connectées sur le réseau <code>192.168.20.0</code> (d’après le schéma) :</p>
+<ul>
+<li>L’interface du routeur 2 : <code>192.168.20.1</code></li>
+<li>Borne de commande 1 : <code>192.168.20.10</code></li>
+<li>Borne de commande 2 : <code>192.168.20.11</code></li>
+</ul>
+<p>Cela fait 3 adresses utilisées. Si on ajoute une troisième borne, il y aura 4 adresses utilisées. Le nombre de machines qu’il est encore possible de connecter est donc : <span class="math inline">\(254 - 4 = 250\)</span>.</p>
+<p>Il est encore possible de connecter <strong>250</strong> machines.</p>
+</section>
+<section id="question-4-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-4-2">Question 4</h3>
+<p>Expliquer quelle est la longueur maximale du masque de sous-réseau que l’on pourrait choisir pour le réseau local du café 1.</p>
+<p>Le réseau a besoin de 8 adresses IP (ce qui inclut l’adresse de réseau et de diffusion). Il nous faut donc trouver le plus petit nombre de bits <code>n</code> pour la partie hôte tel que <span class="math inline">\(2^n \ge 8\)</span>.</p>
+<ul>
+<li><span class="math inline">\(2^2 = 4\)</span> (insuffisant)</li>
+<li><span class="math inline">\(2^3 = 8\)</span> (suffisant)</li>
+</ul>
+<p>Il faut donc réserver <strong>3 bits</strong> pour la partie hôte. La longueur du masque sera alors <span class="math inline">\(32 - 3 = 29\)</span> bits. La longueur maximale du masque est <strong>29 bits</strong>.</p>
+</section>
+</section>
+<section id="partie-b-routage-rip" class="level2">
+<h2 class="anchored" data-anchor-id="partie-b-routage-rip">Partie B : Routage RIP</h2>
+<section id="question-5-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-5-2">Question 5</h3>
+<p>Recopier et compléter les deux dernières lignes de la table de routage du routeur 2.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Protocole RIP (Routing Information Protocol)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le protocole RIP utilise le <strong>nombre de sauts</strong> (hops) comme métrique pour choisir le meilleur chemin. Un saut correspond au passage d’un routeur. Le chemin avec le moins de sauts est privilégié.</p>
+</div>
+</div>
+<ul>
+<li><strong>Destination <code>192.168.30.0</code> (Réseau Café 2) :</strong>
+<ul>
+<li>Chemin : Routeur 2 <span class="math inline">\(\rightarrow\)</span> Routeur 3.</li>
+<li>Le prochain routeur est le R3. Son interface sur le lien est <code>172.16.4.2</code>.</li>
+<li>L’interface de sortie sur R2 est <code>172.16.4.1</code>.</li>
+<li>Nombre de sauts pour atteindre un réseau directement connecté au routeur suivant : 1.</li>
+</ul></li>
+<li><strong>Destination <code>172.16.1.0</code> (lien entre R1 et R4) :</strong>
+<ul>
+<li>Chemin : Routeur 2 <span class="math inline">\(\rightarrow\)</span> Routeur 1.</li>
+<li>Le prochain routeur est le R1. Son interface sur le lien est <code>172.16.3.2</code>.</li>
+<li>L’interface de sortie sur R2 est <code>172.16.3.1</code>.</li>
+<li>Nombre de sauts : 1.</li>
+</ul></li>
+</ul>
+<p>Table complétée :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Réseau destination</th>
+<th style="text-align: left;">Interface de sortie</th>
+<th style="text-align: left;">Prochain routeur</th>
+<th style="text-align: left;">Nombre de sauts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong><code>192.168.30.0</code></strong></td>
+<td style="text-align: left;"><code>172.16.4.1</code></td>
+<td style="text-align: left;"><code>172.16.4.2</code></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong><code>172.16.1.0</code></strong></td>
+<td style="text-align: left;"><code>172.16.3.1</code></td>
+<td style="text-align: left;"><code>172.16.3.2</code></td>
+<td style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="question-6-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-6-2">Question 6</h3>
+<p>Identifier, dans la table de routage du routeur 2, le réseau de destination que l’on peut atteindre d’une autre façon et indiquer comment cette ligne pourrait être modifiée.</p>
+<p>Le réseau <code>192.168.10.0</code> (Siège Social) est atteint en 2 sauts via le chemin R2 <span class="math inline">\(\rightarrow\)</span> R1 <span class="math inline">\(\rightarrow\)</span> R4. Il existe un chemin alternatif : R2 <span class="math inline">\(\rightarrow\)</span> R3 <span class="math inline">\(\rightarrow\)</span> R4. Ce chemin a également 2 sauts. Le protocole RIP considère ces deux chemins comme équivalents en coût. La ligne pourrait donc être modifiée pour utiliser cette seconde route.</p>
+<ul>
+<li><p><strong>Réseau de destination :</strong> <code>192.168.10.0</code></p></li>
+<li><p><strong>Modification possible :</strong></p>
+<ul>
+<li>Interface de sortie : <code>172.16.4.1</code> (vers le routeur 3)</li>
+<li>Prochain routeur : <code>172.16.4.2</code> (l’adresse du routeur 3)</li>
+<li>Nombre de sauts : 2 (inchangé)</li>
+</ul></li>
+</ul>
+</section>
+<section id="question-7-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-7-2">Question 7</h3>
+<p>Recopier et compléter la ligne à ajouter à la table de routage du routeur 2.</p>
+<p>Une adresse non référencée doit être routée par défaut vers Internet. Le routeur connecté à Internet est le R1. Le routeur 2 doit donc envoyer ces paquets au routeur 1. La destination “autre” correspond à la route par défaut <code>0.0.0.0</code>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Réseau destination</th>
+<th style="text-align: left;">Interface de sortie</th>
+<th style="text-align: left;">Prochain routeur</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">autre (<code>0.0.0.0/0</code>)</td>
+<td style="text-align: left;"><code>172.16.3.1</code></td>
+<td style="text-align: left;"><code>172.16.3.2</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="partie-c-routage-ospf" class="level2">
+<h2 class="anchored" data-anchor-id="partie-c-routage-ospf">Partie C : Routage OSPF</h2>
+<section id="question-8-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-8-2">Question 8</h3>
+<p>Recopier et compléter la dernière colonne du tableau ci-dessous.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Protocole OSPF (Open Shortest Path First)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le protocole OSPF utilise un <strong>coût</strong> comme métrique, qui est généralement inversement proportionnel au débit de la liaison. Le chemin avec le coût total le plus faible est choisi. La formule donnée est : <span class="math inline">\(\text{coût} = \frac{10^9}{\text{débit}}\)</span>.</p>
+</div>
+</div>
+<ul>
+<li><strong>Fast Ethernet (100 Mbit/s = <span class="math inline">\(10^8\)</span> bit/s) :</strong> <span class="math inline">\(\text{coût} = \frac{10^9}{10^8} = 10\)</span></li>
+<li><strong>Fibre optique (1 Gbit/s = <span class="math inline">\(10^9\)</span> bit/s) :</strong> <span class="math inline">\(\text{coût} = \frac{10^9}{10^9} = 1\)</span></li>
+</ul>
+<p>Tableau complété :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Type de connexion</th>
+<th style="text-align: left;">Débit en bit.s⁻¹</th>
+<th style="text-align: left;">coût</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ethernet</td>
+<td style="text-align: left;">10 Mbit.s⁻¹ = <span class="math inline">\(10^7\)</span> bit.s⁻¹</td>
+<td style="text-align: left;">100</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fast Ethernet</td>
+<td style="text-align: left;">100 Mbit.s⁻¹ = <span class="math inline">\(10^8\)</span> bit.s⁻¹</td>
+<td style="text-align: left;"><strong>10</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fibre optique</td>
+<td style="text-align: left;">1 Gbit.s⁻¹ = <span class="math inline">\(10^9\)</span> bit.s⁻¹</td>
+<td style="text-align: left;"><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="question-9-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-9-2">Question 9</h3>
+<p>Déterminer la route dont le coût est minimal pour aller du routeur 1 jusqu’au routeur 4 et calculer son coût au sens du protocole OSPF.</p>
+<p>Calculons le coût des routes possibles de R1 à R4 en utilisant le schéma de la Figure 2 et les coûts de la question 8 :</p>
+<ul>
+<li><p><strong>Route 1 (directe) :</strong> R1 <span class="math inline">\(\rightarrow\)</span> R4.</p>
+<ul>
+<li>Liaison : Ethernet.</li>
+<li>Coût = 100.</li>
+</ul></li>
+<li><p><strong>Route 2 (indirecte) :</strong> R1 <span class="math inline">\(\rightarrow\)</span> R2 <span class="math inline">\(\rightarrow\)</span> R3 <span class="math inline">\(\rightarrow\)</span> R4.</p>
+<ul>
+<li>Liaisons : R1-R2 (Fast Ethernet) + R2-R3 (Fast Ethernet) + R3-R4 (Fibre).</li>
+<li>Coût = <span class="math inline">\(10 + 10 + 1 = 21\)</span>.</li>
+</ul></li>
+</ul>
+<p>La route au coût minimal est <strong>R1 <span class="math inline">\(\rightarrow\)</span> R2 <span class="math inline">\(\rightarrow\)</span> R3 <span class="math inline">\(\rightarrow\)</span> R4</strong>, avec un coût total de <strong>21</strong>.</p>
+</section>
+</section>
+<section id="partie-d-arbres-binaires-de-recherche" class="level2">
+<h2 class="anchored" data-anchor-id="partie-d-arbres-binaires-de-recherche">Partie D : Arbres binaires de recherche</h2>
+<section id="question-10-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-10-2">Question 10</h3>
+<p>Donner la chaîne de caractères renvoyée par <code>ip_bin('192.168.20.12')</code>.</p>
+<p>Il faut convertir chaque octet en binaire sur 8 bits :</p>
+<ul>
+<li><code>192</code> = <code>11000000</code></li>
+<li><code>168</code> = <code>10101000</code></li>
+<li><code>20</code> = <code>00010100</code></li>
+<li><code>12</code> = <code>00001100</code></li>
+</ul>
+<p>La chaîne renvoyée est : <strong><code>'11000000.10101000.00010100.00001100'</code></strong></p>
+</section>
+<section id="question-11" class="level3">
+<h3 class="anchored" data-anchor-id="question-11">Question 11</h3>
+<p>Expliquer dans quel cas la fonction <code>precede</code> exécutera la dernière instruction <code>return</code> de la ligne 7.</p>
+<p>L’instruction <code>return</code> de la ligne 7 est exécutée uniquement si la boucle <code>for</code> se termine sans qu’aucune des conditions <code>if</code> ou <code>elif</code> ne soit jamais vraie. Cela signifie que pour tous les indices <code>i</code> de 0 à 34, <code>ip_1[i]</code> est égal à <code>ip_2[i]</code>.</p>
+<p>Ce cas se produit donc lorsque les deux chaînes de caractères <code>ip_1</code> et <code>ip_2</code> sont <strong>strictement identiques</strong>.</p>
+</section>
+<section id="question-12" class="level3">
+<h3 class="anchored" data-anchor-id="question-12">Question 12</h3>
+<p>Recopier et compléter les lignes 4, 6 et 7 du code de la fonction <code>precede</code>.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> precede(ip_1, ip_2):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">35</span>):</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ip_1[i] <span class="op">&lt;</span> ip_2[i]:</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span>   <span class="co"># ligne 4</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> ip_1[i] <span class="op">&gt;</span> ip_2[i]:</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span>  <span class="co"># ligne 6</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span>          <span class="co"># ligne 7 (si les IPs sont égales)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-13" class="level3">
+<h3 class="anchored" data-anchor-id="question-13">Question 13</h3>
+<p>Citer un attribut et citer une méthode de la classe <code>Abr</code>.</p>
+<ul>
+<li><strong>Attribut :</strong> <code>adresse_ip</code> (ou <code>interface</code>, <code>passerelle</code>, <code>cout</code>, <code>gauche</code>, <code>droite</code>).</li>
+<li><strong>Méthode :</strong> <code>est_vide</code> (ou <code>__init__</code>, <code>modifie</code>).</li>
+</ul>
+</section>
+<section id="question-14" class="level3">
+<h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
+<p>Recopier et compléter la ligne 14 du code de la classe <code>Abr</code>.</p>
+<p>Par convention, un arbre vide est une instance où <code>adresse_ip</code> est une chaîne vide.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> est_vide(<span class="va">self</span>):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">self</span>.adresse_ip <span class="op">==</span> <span class="st">''</span> <span class="co"># ligne 14</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-15" class="level3">
+<h3 class="anchored" data-anchor-id="question-15">Question 15</h3>
+<p>Justifier, en mobilisant des connaissances de cours, l’intérêt qu’il peut y avoir à représenter la table de routage par un arbre binaire de recherche.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Arbre binaire de recherche (ABR)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un ABR est une structure de données qui permet des opérations de recherche, d’insertion et de suppression efficaces. Dans un ABR équilibré contenant <span class="math inline">\(n\)</span> éléments, la complexité de ces opérations est en moyenne de <span class="math inline">\(O(\log n)\)</span>.</p>
+</div>
+</div>
+<p>L’intérêt principal d’utiliser un arbre binaire de recherche (ABR) pour une table de routage est la <strong>rapidité de la recherche</strong>. Un routeur doit consulter sa table de routage pour chaque paquet qu’il traite, une opération qui doit être extrêmement rapide. Dans un ABR équilibré, la recherche d’une adresse de destination a une complexité temporelle de <span class="math inline">\(O(\log n)\)</span>, où <span class="math inline">\(n\)</span> est le nombre de routes dans la table. C’est beaucoup plus efficace qu’une recherche dans une liste non triée, qui aurait une complexité de <span class="math inline">\(O(n)\)</span>. Pour les grands routeurs d’Internet qui gèrent des centaines de milliers de routes, cette différence est importante pour les performances.</p>
+</section>
+<section id="question-16" class="level3">
+<h3 class="anchored" data-anchor-id="question-16">Question 16</h3>
+<p>Réécrire le code de la fonction <code>modifie</code> en évitant cette répétition.</p>
+<p>Les lignes d’affectation des attributs sont exécutées que le nœud soit vide ou non. On peut donc les factoriser.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> modifie(<span class="va">self</span>, adresse_ip, interface, passerelle, cout):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On mémorise si le nœud était vide avant la modification.</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    etait_vide <span class="op">=</span> <span class="va">self</span>.est_vide()</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Opérations de mise à jour des données, qui ont lieu dans tous les cas.</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.adresse_ip <span class="op">=</span> adresse_ip</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.interface <span class="op">=</span> interface</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.passerelle <span class="op">=</span> passerelle</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.cout <span class="op">=</span> cout</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Opération de création des enfants, qui n'a lieu QUE si le nœud</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># était initialement vide.</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> etait_vide:</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.gauche <span class="op">=</span> Abr(<span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="dv">0</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.droite <span class="op">=</span> Abr(<span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="dv">0</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-17" class="level3">
+<h3 class="anchored" data-anchor-id="question-17">Question 17</h3>
+<p>Recopier et compléter la ligne 35 du code de la fonction <code>rechercher</code>.</p>
+<p>La fonction <code>rechercher</code> navigue dans l’ABR. Si l’adresse cherchée (<code>adresse_ip</code>) précède l’adresse du nœud courant (<code>self.adresse_ip</code>), il faut chercher dans le sous-arbre gauche.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rechercher(<span class="va">self</span>, adresse_ip):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="va">self</span>.est_vide() <span class="kw">or</span> adresse_ip <span class="op">==</span> <span class="va">self</span>.adresse_ip:</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> precede(adresse_ip, <span class="va">self</span>.adresse_ip): <span class="co"># ligne 35</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.gauche.rechercher(adresse_ip)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.droite.rechercher(adresse_ip)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/flallemand\.fr\/blog");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "fabricelallemand15/blog";
+    script.dataset.repoId = "R_kgDOI4abBQ";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOI4abBc4CT8OX";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2025-06-18-NSIMetropoleJ1/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>Mentions légales</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

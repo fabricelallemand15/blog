@@ -1,0 +1,668 @@
+---
+title: 'Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 1'
+date: "2025-06-18"
+categories: [NSI, Annales]
+image: "img1.png"
+---
+
+# Corrigé de l'Exercice 1 (6 points)
+
+Cet exercice évalue les compétences sur les bases de données relationnelles et le langage SQL.
+
+## Partie A
+
+Dans cette partie, nous travaillons avec une unique table `inventaire`.
+
+### Question 1
+
+Expliquer pourquoi l'attribut `num_ser` ne peut pas être une clé primaire de la relation `inventaire`.
+
+::: {.callout-tip}
+#### Rappel : Clé primaire
+Une clé primaire est un attribut (ou un ensemble d'attributs) qui permet d'identifier de manière **unique** chaque enregistrement (ou tuple) dans une table. Par conséquent, la valeur d'une clé primaire ne peut pas être présente en double dans la table.
+:::
+
+L'attribut `num_ser` ne peut pas être une clé primaire car ses valeurs ne sont pas uniques dans la table. On observe que la valeur `81757532` apparaît deux fois dans la colonne `num_ser` : pour la guitare avec `id=4` et pour celle avec `id=8`. Une clé primaire ne peut pas contenir de doublons.
+
+### Question 2
+
+Donner, sous forme de tableau, le résultat de la requête suivante appliquée à l'extrait de table précédent.
+
+```sql
+SELECT marque, modele
+FROM inventaire
+WHERE annee = 1956
+```
+
+La requête sélectionne les attributs `marque` et `modele` pour tous les enregistrements où l'année est `1956`. En examinant la table `inventaire`, deux lignes correspondent à ce critère : celle avec `id=1` et celle avec `id=7`.
+
+Le résultat est donc :
+
+| marque | modele |
+| :--- | :--- |
+| Gibson | Les Paul Goldtop |
+| Fender | Stratocaster |
+
+### Question 3
+
+Écrire une requête SQL permettant d'obtenir toutes les années du modèle Les Paul Standard dans la collection.
+
+Pour sélectionner les années, on utilise `SELECT annee`. Pour ne garder que celles correspondant au modèle 'Les Paul Standard', on utilise une clause `WHERE`. Il est judicieux d'utiliser `DISTINCT` pour éviter d'afficher des doublons si plusieurs guitares de ce modèle ont été fabriquées la même année.
+
+::: {.callout-tip}
+#### Clause `DISTINCT`
+La clause `DISTINCT` s'utilise avec `SELECT` pour éliminer les lignes en double dans le résultat d'une requête.
+:::
+
+```sql
+SELECT DISTINCT annee
+FROM inventaire
+WHERE modele = 'Les Paul Standard';
+```
+
+### Question 4
+
+Écrire une requête SQL permettant d'obtenir tous les modèles de guitares de la marque Gibson par ordre croissant de l'année dans la collection.
+
+Il faut filtrer les guitares de marque 'Gibson' avec `WHERE` et trier le résultat par année croissante avec `ORDER BY`.
+
+```sql
+SELECT modele
+FROM inventaire
+WHERE marque = 'Gibson'
+ORDER BY annee ASC;
+```
+
+*Note : `ASC` (pour ascendant) est l'ordre de tri par défaut et peut être omis.*
+
+### Question 5
+
+Maud a fait une erreur de saisie pour la guitare d'identifiant `id=1`. L'année est en réalité 1957. Écrire une requête SQL permettant de corriger cette erreur de saisie.
+
+La modification d'un enregistrement existant se fait avec la commande `UPDATE`. On spécifie la table à modifier, les colonnes et leurs nouvelles valeurs avec `SET`, et l'enregistrement à modifier avec `WHERE`.
+
+::: {.callout-tip}
+#### Syntaxe `UPDATE`
+`UPDATE nom_de_la_table SET colonne1 = valeur1, colonne2 = valeur2, ... WHERE condition;`
+La clause `WHERE` est importante pour ne pas modifier toutes les lignes de la table.
+:::
+
+```sql
+UPDATE inventaire
+SET annee = 1957
+WHERE id = 1;
+```
+
+## Partie B
+
+Dans cette partie, la base de données est normalisée en trois tables : `marque`, `modele` et `guitare`.
+
+### Question 6
+
+Expliquer brièvement, en justifiant, dans quel ordre les trois tables doivent être créées.
+
+::: {.callout-tip}
+#### Rappel : Clé étrangère
+Une clé étrangère est un attribut dans une table qui fait référence à la clé primaire d'une autre table. Pour pouvoir créer une contrainte de clé étrangère, la table référencée doit déjà exister.
+:::
+
+L'ordre de création des tables est contraint par les clés étrangères.
+
+- La table `modele` contient une clé étrangère `id_marque` qui référence la clé primaire de la table `marque`. La table `marque` doit donc être créée avant la table `modele`.
+- La table `guitare` contient une clé étrangère `id_modele` qui référence la clé primaire de la table `modele`. La table `modele` doit donc être créée avant la table `guitare`.
+
+L'ordre de création est donc :
+1.  `marque`
+2.  `modele`
+3.  `guitare`
+
+### Question 7
+
+Écrire une requête SQL permettant d'obtenir le numéro de série et l'année de toutes les guitares Les Paul Standard de la collection.
+
+Les informations `num_ser` et `annee` sont dans la table `guitare`, mais le nom du modèle 'Les Paul Standard' est dans la table `modele`. Il faut donc effectuer une jointure entre ces deux tables.
+
+```sql
+SELECT G.num_ser, G.annee
+FROM guitare AS G
+JOIN modele AS M ON G.id_modele = M.id
+WHERE M.nom = 'Les Paul Standard';
+```
+
+*Note : l'utilisation d'alias (`AS G`, `AS M`) rend la requête plus lisible.*
+
+### Question 8
+
+Écrire une requête SQL permettant de retirer de la collection la guitare d'identifiant `id=3`.
+
+La suppression d'un enregistrement se fait avec la commande `DELETE FROM`. Il est essentiel de spécifier la ligne à supprimer avec une clause `WHERE`.
+
+```sql
+DELETE FROM guitare
+WHERE id = 3;
+```
+
+### Question 9
+
+Écrire l'ensemble des requêtes SQL permettant d'ajouter la guitare suivante :
+
+- marque : BC Rich
+- modèle : Mockingbird
+- année : 1992
+- numéro de série : 92R
+- prix : 5000.
+
+L'ajout doit se faire en respectant les contraintes de clés étrangères. On doit d'abord insérer la nouvelle marque, puis le nouveau modèle (en le liant à la marque), et enfin la nouvelle guitare (en la liant au modèle). Les identifiants à utiliser sont fournis.
+
+1.  **Insertion de la marque :**
+
+    ```sql
+    INSERT INTO marque (id, nom) VALUES (3, 'BC Rich');
+    ```
+
+2.  **Insertion du modèle :**
+
+    ```sql
+    INSERT INTO modele (id, nom, id_marque) VALUES (5, 'Mockingbird', 3);
+    ```
+
+3.  **Insertion de la guitare :**
+
+    ```sql
+    INSERT INTO guitare (id, id_modele, annee, num_ser, prix) VALUES (9, 5, 1992, '92R', 5000);
+    ```
+
+### Question 10
+
+Écrire une requête SQL permettant de calculer la valeur totale des modèles Stratocaster de la collection de Slash.
+
+Il faut utiliser la fonction d'agrégation `SUM()` sur la colonne `prix` de la table `guitare`. Comme pour la question 7, une jointure avec la table `modele` est nécessaire pour filtrer sur le nom du modèle 'Stratocaster'.
+
+```sql
+SELECT SUM(G.prix)
+FROM guitare AS G
+JOIN modele AS M ON G.id_modele = M.id
+WHERE M.nom = 'Stratocaster';
+```
+
+# Corrigé de l'Exercice 2 (6 points)
+
+Cet exercice porte sur l'algorithmique, la programmation orientée objet, l'utilisation de structures de données comme la file, et la simulation d'un ordonnanceur de tâches.
+
+### Question 1
+
+Donner le code Python qui permet d'instancier deux variables `tache1` et `tache2` représentant les tâches.
+
+Le constructeur de la classe `Tache` est `__init__(self, numero, nom, duree)`. Il suffit de l'appeler avec les bonnes valeurs pour chaque tâche.
+
+```python
+tache1 = Tache(1, "Répondre aux e-mails", 45)
+tache2 = Tache(2, "Ranger ma chambre", 60)
+```
+
+### Question 2
+
+Recopier et compléter le code de la méthode `avancer` de la classe `Tache`.
+
+La méthode `avancer` doit diminuer l'attribut `duree_restante` de la valeur `n` passée en paramètre.
+
+```python
+def avancer(self, n):
+    self.duree_restante -= n
+```
+
+### Question 3
+
+Recopier et compléter le code de la méthode `est_terminee` de la classe `Tache`.
+
+Une tâche est terminée si sa durée restante est négative ou nulle. La méthode doit donc renvoyer le résultat de la comparaison `self.duree_restante <= 0`.
+
+```python
+def est_terminee(self):
+    return self.duree_restante <= 0
+```
+
+### Question 4
+
+Représenter l'état de la file `f` lorsqu'on lui ajoute successivement la tâche numéro 6 avec la priorité 2, puis la tâche numéro 7 avec la priorité 4.
+
+La file initiale est :
+`[début] (<t3>, 4) (<t1>, 3) (<t2>, 3) (<t4>, 1) (<t5>, 1) [fin]`
+
+1.  **Ajout de `(<t6>, 2)` :** La priorité 2 est inférieure à 3 et supérieure à 1. L'élément s'insère donc après tous les éléments de priorité 3 et avant tous ceux de priorité 1.
+    État intermédiaire :
+    `[début] (<t3>, 4) (<t1>, 3) (<t2>, 3) (<t6>, 2) (<t4>, 1) (<t5>, 1) [fin]`
+
+2.  **Ajout de `(<t7>, 4)` :** La priorité 4 est la même que celle de `<t3>`. Selon la condition 2, les éléments de même priorité sont rangés par ordre d'insertion. `<t7>` est inséré après `<t3>`, qui était déjà dans la file.
+    État final :
+    `[début] (<t3>, 4) (<t7>, 4) (<t1>, 3) (<t2>, 3) (<t6>, 2) (<t4>, 1) (<t5>, 1) [fin]`
+
+::: {.callout-tip}
+#### Rappel : File (Queue)
+Une file est une structure de données de type FIFO (First-In, First-Out, ou "premier entré, premier sorti"). Les nouveaux éléments sont ajoutés à la fin (enfiler) et les éléments sont retirés depuis le début (défiler). Dans cet exercice, la file est utilisée pour implémenter une file de priorité, où l'ordre est maintenu par une fonction d'ajout spécifique.
+:::
+
+### Question 5
+
+En repartant de la file `f` suivante :
+`[début](<t3>, 4)(<t1>, 3)(<t2>, 3)(<t4>, 1)(<t5>, 1)[fin]`
+donner la valeur de `f.defiler()[0]` et représenter le contenu de la file `f` après l'exécution de cette instruction.
+
+-   `f.defiler()` retire et renvoie le premier élément de la file, qui est le tuple `(<t3>, 4)`.
+-   L'opérateur `[0]` sélectionne le premier élément de ce tuple, soit `<t3>`.
+-   Après cette opération, la file ne contient plus cet élément.
+
+**Valeur renvoyée :** `<t3>`
+
+**Contenu de la file `f` après :**
+`[début] (<t1>, 3) (<t2>, 3) (<t4>, 1) (<t5>, 1) [fin]`
+
+### Question 6
+
+En repartant de la file `f` suivante :
+`[début](<t3>, 4)(<t1>, 3)(<t2>, 3)(<t4>, 1)(<t5>, 1)[fin]`
+donner la valeur de `f.examiner()[1]` et représenter le contenu de la file `f` après l'exécution de cette instruction.
+
+-   `f.examiner()` renvoie le premier élément de la file sans le retirer. Cet élément est le tuple `(<t3>, 4)`.
+-   L'opérateur `[1]` sélectionne le deuxième élément de ce tuple, soit `4`.
+-   La file reste inchangée.
+
+**Valeur renvoyée :** `4`
+
+**Contenu de la file `f` après :**
+`[début] (<t3>, 4) (<t1>, 3) (<t2>, 3) (<t4>, 1) (<t5>, 1) [fin]`
+
+### Question 7
+
+Recopier et compléter le code de la fonction `ajouter_file_prio`.
+
+L'algorithme consiste à transférer les éléments de `f` vers `f_aux` jusqu'à trouver le bon emplacement pour `(t, p)`, insérer `(t, p)`, transférer le reste de `f`, puis tout retransférer dans `f`.
+
+```python
+def ajouter_file_prio(f, t, p):
+    f_aux = File()
+    # 1. Défiler les éléments de f de priorité >= p vers f_aux
+    while not f.est_vide() and f.examiner()[1] >= p:
+        f_aux.enfiler(f.defiler())
+    
+    # 2. Enfiler le nouvel élément dans f_aux
+    f_aux.enfiler((t, p))
+
+    # 3. Défiler le reste de f vers f_aux
+    while not f.est_vide():
+        f_aux.enfiler(f.defiler())
+
+    # 4. Reconstruire f en défilant f_aux
+    while not f_aux.est_vide():
+        f.enfiler(f_aux.defiler())
+```
+
+### Question 8
+
+Donner le coût d'exécution temporel dans le pire des cas de la fonction `ajouter_file_prio`, en fonction du nombre `m` d'éléments de la file `f`.
+
+::: {.callout-tip}
+#### Rappel : Complexité temporelle
+La complexité temporelle mesure l'évolution du temps d'exécution d'un algorithme en fonction de la taille de ses données d'entrée. On l'exprime souvent avec la notation "Grand O", notée $O(...)$. Une complexité $O(m)$ signifie que le temps est proportionnel à la taille $m$ des données.
+:::
+
+Dans le pire des cas (par exemple, lors de l'insertion d'un élément de la plus faible priorité), la fonction parcourt la totalité de la file `f` plusieurs fois :
+
+1.  La première boucle `while` parcourt les `m` éléments de `f`.
+2.  La deuxième boucle `while` (qui défile le reste de `f`) ne s'exécute pas.
+3.  La troisième boucle `while` parcourt les `m + 1` éléments de `f_aux` pour les remettre dans `f`.
+
+Chaque élément est donc défilé et enfilé un nombre constant de fois. Le nombre total d'opérations (`enfiler`, `defiler`) est proportionnel à `m`. Le coût d'exécution est donc linéaire par rapport au nombre d'éléments `m` dans la file.
+
+La complexité temporelle est en $O(m)$.
+
+### Question 9
+
+Indiquer pour chaque bloc de 25 minutes la tâche qui avance, en suivant le modèle proposé, jusqu'à la fin de toutes les tâches.
+
+Le point important à ne pas oublier est le fonctionnement de la file de priorité et de l'ordonnanceur :
+
+1.  **Priorité absolue :** L'ordonnanceur choisit **toujours** la tâche qui est en tête de file, c'est-à-dire celle qui a la plus haute priorité. Tant qu'il reste des tâches de priorité 4, aucune tâche de priorité 3 ne sera exécutée.
+2.  **Règle de ré-insertion (FIFO pour les priorités égales) :** Lorsqu'une tâche non terminée est ré-insérée dans la file, elle est placée **après** toutes les autres tâches ayant la même priorité. C'est la condition 2 de l'énoncé.
+
+Cela signifie que les tâches de même priorité seront traitées en mode "tourniquet" (Round-Robin), mais seulement une fois que toutes les tâches de priorité supérieure sont terminées.
+
+#### Déroulement détaillé de l'ordonnancement
+
+Recréons la table de suivi de l'état de la file et des tâches, pas à pas.
+
+**État initial :**
+
+- **Tâches et durées restantes :** t3(90), t7(20), t1(45), t2(60), t6(60), t4(30), t5(30).
+- **File `f` :** `[ (t3, 4), (t7, 4), (t1, 3), (t2, 3), (t6, 2), (t4, 1), (t5, 1) ]`
+- **Planning :** `[]`
+
+| Session | Tâche traitée | Durée restante avant | Opération | Durée restante après | File après ré-insertion |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **1** | `<t3>` | 90 | Avance de 25. Non terminée. Ré-insérée après `<t7>`. | 65 | `[ (t7, 4), (t3, 4), (t1, 3), ... ]` |
+| **2** | `<t7>` | 20 | Avance de 25. **Terminée**. | -5 | `[ (t3, 4), (t1, 3), (t2, 3), ... ]` |
+| **3** | `<t3>` | 65 | Avance de 25. Non terminée. Seule P4, revient en tête. | 40 | `[ (t3, 4), (t1, 3), (t2, 3), ... ]` |
+| **4** | `<t3>` | 40 | Avance de 25. Non terminée. Seule P4, revient en tête. | 15 | `[ (t3, 4), (t1, 3), (t2, 3), ... ]` |
+| **5** | `<t3>` | 15 | Avance de 25. **Terminée**. | -10 | `[ (t1, 3), (t2, 3), (t6, 2), ... ]` |
+| --- | --- | --- | *Toutes les tâches de priorité 4 sont finies.* | --- | --- |
+| **6** | `<t1>` | 45 | Avance de 25. Non terminée. Ré-insérée après `<t2>`. | 20 | `[ (t2, 3), (t1, 3), (t6, 2), ... ]` |
+| **7** | `<t2>` | 60 | Avance de 25. Non terminée. Ré-insérée après `<t1>`. | 35 | `[ (t1, 3), (t2, 3), (t6, 2), ... ]` |
+| **8** | `<t1>` | 20 | Avance de 25. **Terminée**. | -5 | `[ (t2, 3), (t6, 2), (t4, 1), ... ]` |
+| **9** | `<t2>` | 35 | Avance de 25. Non terminée. Seule P3, revient en tête. | 10 | `[ (t2, 3), (t6, 2), (t4, 1), ... ]` |
+| **10**| `<t2>` | 10 | Avance de 25. **Terminée**. | -15 | `[ (t6, 2), (t4, 1), (t5, 1) ]` |
+| --- | --- | --- | *Toutes les tâches de priorité 3 sont finies.* | --- | --- |
+| **11**| `<t6>` | 60 | Avance de 25. Non terminée. Seule P2, revient en tête. | 35 | `[ (t6, 2), (t4, 1), (t5, 1) ]` |
+| **12**| `<t6>` | 35 | Avance de 25. Non terminée. Seule P2, revient en tête. | 10 | `[ (t6, 2), (t4, 1), (t5, 1) ]` |
+| **13**| `<t6>` | 10 | Avance de 25. **Terminée**. | -15 | `[ (t4, 1), (t5, 1) ]` |
+| --- | --- | --- | *Toutes les tâches de priorité 2 sont finies.* | --- | --- |
+| **14**| `<t4>` | 30 | Avance de 25. Non terminée. Ré-insérée après `<t5>`. | 5 | `[ (t5, 1), (t4, 1) ]` |
+| **15**| `<t5>` | 30 | Avance de 25. Non terminée. Ré-insérée après `<t4>`. | 5 | `[ (t4, 1), (t5, 1) ]` |
+| **16**| `<t4>` | 5 | Avance de 25. **Terminée**. | -20 | `[ (t5, 1) ]` |
+| **17**| `<t5>` | 5 | Avance de 25. **Terminée**. | -20 | `[ ]` (File vide) |
+
+#### Résultat final
+
+La séquence correcte des tâches effectuées par tranche de 25 minutes est donc :
+
+`t3`, `t7`, `t3`, `t3`, `t3`, `t1`, `t2`, `t1`, `t2`, `t2`, `t6`, `t6`, `t6`, `t4`, `t5`, `t4`, `t5`.
+
+### Question 10
+
+Écrire le code d'une fonction `planning` qui prend en paramètre une file de priorité `f` et qui renvoie une liste de tâches, dans l'ordre où elles vont être effectuées.
+
+Cette fonction doit implémenter l'algorithme Pomodoro décrit précédemment.
+
+```python
+def planning(f):
+    """
+    Simule l'ordonnancement Pomodoro et renvoie la liste des tâches
+    traitées à chaque session.
+    """
+    plan = []
+    while not f.est_vide():
+        # 1. Défiler la tâche la plus prioritaire
+        element = f.defiler()
+        tache = element[0]
+        priorite = element[1]
+
+        # 2. L'ajouter au planning de la session
+        plan.append(tache)
+
+        # 3. Avancer la tâche
+        tache.avancer(25)
+
+        # 4. Si elle n'est pas terminée, la ré-insérer dans la file
+        if not tache.est_terminee():
+            ajouter_file_prio(f, tache, priorite)
+            
+    return plan 
+```
+
+# Corrigé de l'Exercice 3 (8 points)
+
+Cet exercice aborde l'architecture réseau (adressage IP, routage) et les structures de données (arbres binaires de recherche).
+
+## Partie A : Réseau local
+
+### Question 1
+
+Indiquer les deux seules adresses IP valides pour cette nouvelle borne, parmi les quatre adresses IP proposées.
+
+::: {.callout-tip}
+#### Rappel : Adressage IP et Masque de sous-réseau
+Le réseau du café 1 est `192.168.20.0` avec un masque `255.255.255.0` (ou `/24`).
+
+- L'**adresse du réseau** est `192.168.20.0`. Elle ne peut pas être attribuée à une machine.
+- L'**adresse de diffusion** (broadcast) est `192.168.20.255`. Elle ne peut pas être attribuée à une machine.
+- Les **adresses valides pour les hôtes** vont donc de `192.168.20.1` à `192.168.20.254`.
+Le dernier octet d'une adresse IPv4 doit être compris entre 0 et 255.
+:::
+
+Analysons les propositions :
+
+- (a) `192.168.20.2` : Valide. Elle est dans la plage `192.168.20.1` - `192.168.20.254`.
+- (b) `192.168.20.157` : Valide. Elle est dans la plage `192.168.20.1` - `192.168.20.254`.
+- (c) `192.168.20.261` : Invalide. Le dernier octet (261) est supérieur à 255.
+- (d) `192.168.24.10` : Invalide. Elle n'appartient pas au réseau `192.168.20.0` car le troisième octet (24) est différent.
+
+Les deux adresses valides sont **(a) `192.168.20.2`** et **(b) `192.168.20.157`**.
+
+### Question 2
+
+Déterminer l'adresse de diffusion du réseau du café 1.
+
+Pour un réseau d'adresse `192.168.20.0` et de masque `255.255.255.0`, l'adresse de diffusion est celle où tous les bits de la partie hôte (le dernier octet ici) sont à 1.
+En binaire, `11111111` correspond à 255 en décimal.
+L'adresse de diffusion est donc **`192.168.20.255`**.
+
+### Question 3
+
+Déterminer combien de machines informatiques il est encore possible de connecter au réseau du café 1 après l'installation de la troisième borne de commande.
+
+Un masque `/24` laisse 8 bits pour la partie hôte, ce qui permet $2^8 = 256$ adresses au total. En retirant l'adresse réseau et l'adresse de diffusion, il y a $256 - 2 = 254$ adresses disponibles pour les machines.
+
+Machines déjà connectées sur le réseau `192.168.20.0` (d'après le schéma) :
+
+- L'interface du routeur 2 : `192.168.20.1`
+- Borne de commande 1 : `192.168.20.10`
+- Borne de commande 2 : `192.168.20.11`
+
+Cela fait 3 adresses utilisées. Si on ajoute une troisième borne, il y aura 4 adresses utilisées.
+Le nombre de machines qu'il est encore possible de connecter est donc : $254 - 4 = 250$.
+
+Il est encore possible de connecter **250** machines.
+
+### Question 4
+
+Expliquer quelle est la longueur maximale du masque de sous-réseau que l'on pourrait choisir pour le réseau local du café 1.
+
+Le réseau a besoin de 8 adresses IP (ce qui inclut l'adresse de réseau et de diffusion). Il nous faut donc trouver le plus petit nombre de bits `n` pour la partie hôte tel que $2^n \ge 8$.
+
+- $2^2 = 4$ (insuffisant)
+- $2^3 = 8$ (suffisant)
+
+Il faut donc réserver **3 bits** pour la partie hôte. La longueur du masque sera alors $32 - 3 = 29$ bits.
+La longueur maximale du masque est **29 bits**.
+
+## Partie B : Routage RIP
+
+### Question 5
+
+Recopier et compléter les deux dernières lignes de la table de routage du routeur 2.
+
+::: {.callout-tip}
+#### Rappel : Protocole RIP (Routing Information Protocol)
+Le protocole RIP utilise le **nombre de sauts** (hops) comme métrique pour choisir le meilleur chemin. Un saut correspond au passage d'un routeur. Le chemin avec le moins de sauts est privilégié.
+:::
+
+- **Destination `192.168.30.0` (Réseau Café 2) :**
+    - Chemin : Routeur 2 $\rightarrow$ Routeur 3.
+    - Le prochain routeur est le R3. Son interface sur le lien est `172.16.4.2`.
+    - L'interface de sortie sur R2 est `172.16.4.1`.
+    - Nombre de sauts pour atteindre un réseau directement connecté au routeur suivant : 1.
+- **Destination `172.16.1.0` (lien entre R1 et R4) :**
+    - Chemin : Routeur 2 $\rightarrow$ Routeur 1.
+    - Le prochain routeur est le R1. Son interface sur le lien est `172.16.3.2`.
+    - L'interface de sortie sur R2 est `172.16.3.1`.
+    - Nombre de sauts : 1.
+
+Table complétée :
+
+| Réseau destination | Interface de sortie | Prochain routeur | Nombre de sauts |
+| :--- | :--- | :--- | :--- |
+| **`192.168.30.0`** | `172.16.4.1` | `172.16.4.2` | 1 |
+| **`172.16.1.0`** | `172.16.3.1` | `172.16.3.2` | 1 |
+
+### Question 6
+
+Identifier, dans la table de routage du routeur 2, le réseau de destination que l'on peut atteindre d'une autre façon et indiquer comment cette ligne pourrait être modifiée.
+
+Le réseau `192.168.10.0` (Siège Social) est atteint en 2 sauts via le chemin R2 $\rightarrow$ R1 $\rightarrow$ R4.
+Il existe un chemin alternatif : R2 $\rightarrow$ R3 $\rightarrow$ R4. Ce chemin a également 2 sauts.
+Le protocole RIP considère ces deux chemins comme équivalents en coût. La ligne pourrait donc être modifiée pour utiliser cette seconde route.
+
+- **Réseau de destination :** `192.168.10.0`
+- **Modification possible :**
+
+    - Interface de sortie : `172.16.4.1` (vers le routeur 3)
+    - Prochain routeur : `172.16.4.2` (l'adresse du routeur 3)
+    - Nombre de sauts : 2 (inchangé)
+
+### Question 7
+
+Recopier et compléter la ligne à ajouter à la table de routage du routeur 2.
+
+Une adresse non référencée doit être routée par défaut vers Internet. Le routeur connecté à Internet est le R1. Le routeur 2 doit donc envoyer ces paquets au routeur 1. La destination "autre" correspond à la route par défaut `0.0.0.0`.
+
+| Réseau destination | Interface de sortie | Prochain routeur |
+| :--- | :--- | :--- |
+| autre (`0.0.0.0/0`) | `172.16.3.1` | `172.16.3.2` |
+
+## Partie C : Routage OSPF
+
+### Question 8
+
+Recopier et compléter la dernière colonne du tableau ci-dessous.
+
+::: {.callout-tip}
+#### Rappel : Protocole OSPF (Open Shortest Path First)
+Le protocole OSPF utilise un **coût** comme métrique, qui est généralement inversement proportionnel au débit de la liaison. Le chemin avec le coût total le plus faible est choisi. La formule donnée est : $\text{coût} = \frac{10^9}{\text{débit}}$.
+:::
+
+- **Fast Ethernet (100 Mbit/s = $10^8$ bit/s) :**
+  $\text{coût} = \frac{10^9}{10^8} = 10$
+- **Fibre optique (1 Gbit/s = $10^9$ bit/s) :**
+  $\text{coût} = \frac{10^9}{10^9} = 1$
+
+Tableau complété :
+
+| Type de connexion | Débit en bit.s⁻¹ | coût |
+| :--- | :--- | :--- |
+| Ethernet | 10 Mbit.s⁻¹ = $10^7$ bit.s⁻¹ | 100 |
+| Fast Ethernet | 100 Mbit.s⁻¹ = $10^8$ bit.s⁻¹ | **10** |
+| Fibre optique | 1 Gbit.s⁻¹ = $10^9$ bit.s⁻¹ | **1** |
+
+### Question 9
+
+Déterminer la route dont le coût est minimal pour aller du routeur 1 jusqu'au routeur 4 et calculer son coût au sens du protocole OSPF.
+
+Calculons le coût des routes possibles de R1 à R4 en utilisant le schéma de la Figure 2 et les coûts de la question 8 :
+
+- **Route 1 (directe) :** R1 $\rightarrow$ R4.
+
+    - Liaison : Ethernet.
+    - Coût = 100.
+- **Route 2 (indirecte) :** R1 $\rightarrow$ R2 $\rightarrow$ R3 $\rightarrow$ R4.
+
+    - Liaisons : R1-R2 (Fast Ethernet) + R2-R3 (Fast Ethernet) + R3-R4 (Fibre).
+    - Coût = $10 + 10 + 1 = 21$.
+
+La route au coût minimal est **R1 $\rightarrow$ R2 $\rightarrow$ R3 $\rightarrow$ R4**, avec un coût total de **21**.
+
+## Partie D : Arbres binaires de recherche
+
+### Question 10
+
+Donner la chaîne de caractères renvoyée par `ip_bin('192.168.20.12')`.
+
+Il faut convertir chaque octet en binaire sur 8 bits :
+
+- `192` = `11000000`
+- `168` = `10101000`
+- `20` = `00010100`
+- `12` = `00001100`
+
+La chaîne renvoyée est : **`'11000000.10101000.00010100.00001100'`**
+
+### Question 11
+
+Expliquer dans quel cas la fonction `precede` exécutera la dernière instruction `return` de la ligne 7.
+
+L'instruction `return` de la ligne 7 est exécutée uniquement si la boucle `for` se termine sans qu'aucune des conditions `if` ou `elif` ne soit jamais vraie. Cela signifie que pour tous les indices `i` de 0 à 34, `ip_1[i]` est égal à `ip_2[i]`.
+
+Ce cas se produit donc lorsque les deux chaînes de caractères `ip_1` et `ip_2` sont **strictement identiques**.
+
+### Question 12
+
+Recopier et compléter les lignes 4, 6 et 7 du code de la fonction `precede`.
+
+```python
+def precede(ip_1, ip_2):
+    for i in range(35):
+        if ip_1[i] < ip_2[i]:
+            return True   # ligne 4
+        elif ip_1[i] > ip_2[i]:
+            return False  # ligne 6
+    return False          # ligne 7 (si les IPs sont égales)
+```
+
+### Question 13
+
+Citer un attribut et citer une méthode de la classe `Abr`.
+
+- **Attribut :** `adresse_ip` (ou `interface`, `passerelle`, `cout`, `gauche`, `droite`).
+- **Méthode :** `est_vide` (ou `__init__`, `modifie`).
+
+### Question 14
+
+Recopier et compléter la ligne 14 du code de la classe `Abr`.
+
+Par convention, un arbre vide est une instance où `adresse_ip` est une chaîne vide.
+
+```python
+def est_vide(self):
+    return self.adresse_ip == '' # ligne 14
+```
+
+### Question 15
+
+Justifier, en mobilisant des connaissances de cours, l'intérêt qu'il peut y avoir à représenter la table de routage par un arbre binaire de recherche.
+
+::: {.callout-tip}
+#### Rappel : Arbre binaire de recherche (ABR)
+Un ABR est une structure de données qui permet des opérations de recherche, d'insertion et de suppression efficaces. Dans un ABR équilibré contenant $n$ éléments, la complexité de ces opérations est en moyenne de $O(\log n)$.
+:::
+
+L'intérêt principal d'utiliser un arbre binaire de recherche (ABR) pour une table de routage est la **rapidité de la recherche**. Un routeur doit consulter sa table de routage pour chaque paquet qu'il traite, une opération qui doit être extrêmement rapide.
+Dans un ABR équilibré, la recherche d'une adresse de destination a une complexité temporelle de $O(\log n)$, où $n$ est le nombre de routes dans la table. C'est beaucoup plus efficace qu'une recherche dans une liste non triée, qui aurait une complexité de $O(n)$. Pour les grands routeurs d'Internet qui gèrent des centaines de milliers de routes, cette différence est importante pour les performances.
+
+### Question 16
+
+Réécrire le code de la fonction `modifie` en évitant cette répétition.
+
+Les lignes d'affectation des attributs sont exécutées que le nœud soit vide ou non. On peut donc les factoriser.
+
+```python
+def modifie(self, adresse_ip, interface, passerelle, cout):
+    
+    # On mémorise si le nœud était vide avant la modification.
+    etait_vide = self.est_vide()
+
+    # Opérations de mise à jour des données, qui ont lieu dans tous les cas.
+    self.adresse_ip = adresse_ip
+    self.interface = interface
+    self.passerelle = passerelle
+    self.cout = cout
+    
+    # Opération de création des enfants, qui n'a lieu QUE si le nœud
+    # était initialement vide.
+    if etait_vide:
+        self.gauche = Abr('', '', '', 0)
+        self.droite = Abr('', '', '', 0)
+```
+
+### Question 17
+
+Recopier et compléter la ligne 35 du code de la fonction `rechercher`.
+
+La fonction `rechercher` navigue dans l'ABR. Si l'adresse cherchée (`adresse_ip`) précède l'adresse du nœud courant (`self.adresse_ip`), il faut chercher dans le sous-arbre gauche.
+
+```python
+def rechercher(self, adresse_ip):
+    if self.est_vide() or adresse_ip == self.adresse_ip:
+        return self
+    elif precede(adresse_ip, self.adresse_ip): # ligne 35
+        return self.gauche.rechercher(adresse_ip)
+    else:
+        return self.droite.rechercher(adresse_ip)
+```
