@@ -1,0 +1,775 @@
+---
+title: 'Corrigé du sujet de mathématiques du baccalauréat 2025 - Métropole Jour 1'
+date: "2025-06-17"
+categories: [Mathématiques, Annales]
+image: "img1.png"
+---
+
+## L'énoncé
+
+Le sujet de mathématiques du baccalauréat 2025 pour la Métropole, Jour 1, est désormais disponible. Vous pouvez le télécharger en cliquant sur le lien ci-dessous :
+
+[**Télécharger le sujet de mathématiques - Bac 2025 Métropole Jour 1**](25-MATJ1ME1.pdf){target="_blank"}
+
+#### **Exercice 1 : Probabilités**
+
+Cet exercice aborde plusieurs notions du chapitre sur les probabilités à partir d'une situation basée sur les groupes sanguins.
+
+*   **Contenu de l'exercice :** L'exercice débute par la construction d'un **arbre pondéré** et l'application de la **formule des probabilités totales**. La suite de l'exercice porte sur l'échantillonnage, la **loi binomiale**, son espérance, sa variance, et se termine par une application de l'**inégalité de Bienaymé-Tchebychev**.
+
+---
+
+#### **Exercice 2 : Analyse de fonction**
+
+Cet exercice est une étude de fonction composée d'un polynôme et d'un **logarithme népérien**. Il est structuré en trois parties.
+
+*   **Contenu de l'exercice :**
+    1.  **Partie A (Lecture graphique) :** Interprétation graphique du **nombre dérivé**, du signe de la dérivée et du nombre de solutions d'une équation.
+    2.  **Partie B (Étude analytique) :** Calcul de **limites**, de **dérivées première et seconde**, étude de la **convexité** et de la position relative d'une courbe par rapport à sa tangente.
+    3.  **Partie C (Calcul d'aire) :** Calcul d'une **intégrale** à l'aide d'une **intégration par parties**.
+
+---
+
+#### **Exercice 3 : Géométrie dans l'espace**
+
+Cet exercice est un "Vrai ou Faux" où chaque affirmation nécessite une **justification mathématique**.
+
+*   **Contenu de l'exercice :** Les notions abordées sont les **représentations paramétriques** de droites, la colinéarité de vecteurs, le **vecteur normal** à un plan, la position relative de deux droites et le calcul de la **distance d'un point à un plan**.
+
+---
+
+#### **Exercice 4 : Modélisation (Suites et Équations Différentielles)**
+
+Cet exercice de modélisation compare deux approches pour décrire l'évolution d'une population d'algues.
+
+*   **Contenu de l'exercice :**
+    1.  **Partie A (Modèle discret) :** Étude d'une **suite définie par récurrence** ($u_{n+1} = h(u_n)$), incluant la démonstration de sa monotonie et de sa convergence par **récurrence**, la recherche de sa limite et la complétion d'un **algorithme**.
+    2.  **Partie B (Modèle continu) :** Résolution d'une **équation différentielle** non linéaire via un **changement de variable**.
+
+Voilà pour ce tour d'horizon ! Un sujet riche et bien équilibré.
+
+## Corrigé de l'exercice 1
+
+Cet exercice porte sur les probabilités conditionnelles, la formule des probabilités totales, la loi binomiale et se termine par une application de l'inégalité de Bienaymé-Tchebychev.
+
+#### 1. Arbre de probabilités
+
+Pour compléter l'arbre, nous devons d'abord déterminer la probabilité de l'événement O. Les événements A, B, AB et O forment une **partition** de l'univers, c'est-à-dire que ce sont des événements incompatibles deux à deux et dont la réunion est l'univers. La somme de leurs probabilités est donc égale à 1.
+
+$$ P(A) + P(B) + P(AB) + P(O) = 1 $$
+
+On en déduit $P(O)$ :
+$$ P(O) = 1 - P(A) - P(B) - P(AB) $$
+$$ P(O) = 1 - 0,45 - 0,10 - 0,03 = 0,42 $$
+
+Ensuite, pour chaque branche, la somme des probabilités des événements conditionnels doit valoir 1. Par exemple, $P_A(R) + P_A(\overline{R}) = 1$.
+
+L'énoncé nous donne :
+
+*   $P_A(R) = 0,85$, donc $P_A(\overline{R}) = 1 - 0,85 = 0,15$.
+*   $P_B(R) = 0,84$, donc $P_B(\overline{R}) = 1 - 0,84 = 0,16$.
+*   $P_{AB}(R) = 0,82$, donc $P_{AB}(\overline{R}) = 1 - 0,82 = 0,18$.
+
+La probabilité $P_O(R)$ sera calculée à la question 3.
+
+L'arbre complété est le suivant :
+
+![](arbre.png){width="50%"}
+
+#### 2. Calcul de $P(B \cap R)$ et interprétation
+
+::: {.callout-tip title="Rappel de cours : Probabilité d'une intersection"}
+Pour deux événements A et B, la probabilité de leur intersection est donnée par la formule :
+$$ P(A \cap B) = P(A) \times P_A(B) $$
+Cette formule se lit directement sur un arbre pondéré en multipliant les probabilités le long du chemin correspondant.
+:::
+
+En appliquant cette formule, on a :
+$$ P(B \cap R) = P(B) \times P_B(R) $$
+$$ P(B \cap R) = 0,10 \times 0,84 = 0,084 $$
+
+**Interprétation :** La probabilité que la personne choisie au hasard dans la population française soit du groupe sanguin B et de rhésus positif est de 0,084 (soit 8,4 %).
+
+#### 3. Calcul de $P_O(R)$
+
+::: {.callout-tip title="Rappel de cours : Formule des probabilités totales"}
+Si les événements $E_1, E_2, \dots, E_n$ forment une partition de l'univers, alors pour tout événement F, on a :
+$$ P(F) = P(E_1 \cap F) + P(E_2 \cap F) + \dots + P(E_n \cap F) $$
+$$ P(F) = P(E_1)P_{E_1}(F) + P(E_2)P_{E_2}(F) + \dots + P(E_n)P_{E_n}(F) $$
+:::
+
+Ici, les événements A, B, AB et O forment une partition de l'univers. On peut donc appliquer la formule des probabilités totales pour calculer $P(R)$ :
+$$ P(R) = P(A \cap R) + P(B \cap R) + P(AB \cap R) + P(O \cap R) $$
+$$ P(R) = P(A)P_A(R) + P(B)P_B(R) + P(AB)P_{AB}(R) + P(O)P_O(R) $$
+
+L'énoncé nous donne $P(R)=0,8397$. On peut donc isoler l'inconnue $P_O(R)$ :
+$$ 0,8397 = (0,45 \times 0,85) + (0,10 \times 0,84) + (0,03 \times 0,82) + (0,42 \times P_O(R)) $$
+$$ 0,8397 = 0,3825 + 0,084 + 0,0246 + 0,42 \times P_O(R) $$
+$$ 0,8397 = 0,4911 + 0,42 \times P_O(R) $$
+$$ 0,42 \times P_O(R) = 0,8397 - 0,4911 $$
+$$ 0,42 \times P_O(R) = 0,3486 $$
+$$ P_O(R) = \frac{0,3486}{0,42} = 0,83 $$
+On a bien montré que $P_O(R) = 0,83$.
+
+#### 4. Probabilité d'être donneur universel
+
+Un "donneur universel" est un individu du groupe O et de rhésus négatif. On cherche donc à calculer la probabilité de l'événement $O \cap \overline{R}$.
+En utilisant la règle de l'intersection :
+$$ P(O \cap \overline{R}) = P(O) \times P_O(\overline{R}) $$
+Nous savons que $P(O) = 0,42$. De plus, comme $P_O(R) = 0,83$, on en déduit :
+$$ P_O(\overline{R}) = 1 - P_O(R) = 1 - 0,83 = 0,17 $$
+Donc :
+$$ P(O \cap \overline{R}) = 0,42 \times 0,17 = 0,0714 $$
+La probabilité qu'un individu choisi au hasard soit donneur universel est bien de 0,0714.
+
+---
+
+#### 5. Étude d'un échantillon de 100 personnes
+
+**a. Justification de la loi binomiale**
+
+::: {.callout-tip title="Rappel de cours : Loi binomiale"}
+Une variable aléatoire $X$ suit une loi binomiale $\mathcal{B}(n, p)$ si elle compte le nombre de succès dans une série de $n$ épreuves de Bernoulli identiques et indépendantes, où $p$ est la probabilité de succès à chaque épreuve.
+:::
+
+Considérons l'épreuve de Bernoulli suivante : "on choisit une personne au hasard dans la population et on regarde si elle est donneur universel".
+
+*   Le **succès** est l'événement "la personne est un donneur universel". La probabilité de succès est $p = P(O \cap \overline{R}) = 0,0714$ (calculée en 4.).
+*   L'**échec** est l'événement contraire, de probabilité $1-p$.
+
+On répète cette épreuve $n=100$ fois. L'énoncé précise que "la population est suffisamment grande pour assimiler ce choix à un tirage avec remise". Cette condition garantit que les tirages sont **identiques et indépendants**.
+
+La variable aléatoire $X$, qui compte le nombre de donneurs universels (nombre de succès) dans l'échantillon de 100 personnes, suit donc une **loi binomiale de paramètres $n=100$ et $p=0,0714$**. On note $X \sim \mathcal{B}(100; 0,0714)$.
+
+**b. Probabilité d'avoir au plus 7 donneurs universels**
+
+On cherche à calculer $P(X \leqslant 7)$.
+$$ P(X \leqslant 7) = \sum_{k=0}^{7} P(X=k) = \sum_{k=0}^{7} \binom{100}{k} (0,0714)^k (1-0,0714)^{100-k} $$
+À l'aide de la fonction de répartition de la loi binomiale de la calculatrice (`binomFRep` ou `BinomialCD`), on obtient :
+$$ P(X \leqslant 7) \approx 0,5735 $$
+Arrondie à $10^{-3}$ près, la probabilité est de **0,574**.
+
+**c. Espérance et variance de X**
+
+::: {.callout-tip title="Formules : Espérance et Variance de la loi binomiale"}
+Si $X \sim \mathcal{B}(n, p)$, alors :
+*   Espérance : $E(X) = n \times p$
+*   Variance : $V(X) = n \times p \times (1-p)$
+:::
+
+Appliquons ces formules :
+
+*   **Espérance :**
+    $$ E(X) = 100 \times 0,0714 = 7,14 $$
+*   **Variance :**
+    $$ V(X) = 100 \times 0,0714 \times (1 - 0,0714) = 7,14 \times 0,9286 = 6,630444 $$
+    Arrondie à $10^{-2}$ près, la variance est bien $V(X) \approx 6,63$.
+
+#### 6. Étude sur N villes
+
+**a. Représentation de la variable aléatoire $M_N$**
+
+$X_i$ est le nombre de donneurs universels dans un échantillon de 100 personnes de la ville $i$.
+La variable aléatoire $M_N = \frac{X_1 + X_2 + \dots + X_N}{N}$ est la **moyenne arithmétique** des nombres de donneurs universels observés dans les échantillons des $N$ villes. Elle représente donc le **nombre moyen de donneurs universels par échantillon de 100 personnes** sur l'ensemble des $N$ collectes.
+
+**b. Espérance de $M_N$**
+
+Par linéarité de l'espérance, on a :
+$$ E(M_N) = E\left(\frac{1}{N}\sum_{i=1}^{N} X_i\right) = \frac{1}{N} \sum_{i=1}^{N} E(X_i) $$
+On nous dit que pour tout $i$, $E(X_i) = 7,14$. Donc :
+$$ E(M_N) = \frac{1}{N} \sum_{i=1}^{N} 7,14 = \frac{1}{N} \times (N \times 7,14) = 7,14 $$
+L'espérance de la moyenne est égale à l'espérance de la variable de départ.
+
+**c. Variance de $M_N$**
+
+Les variables $X_i$ sont supposées indépendantes. Pour la variance, on a $V(aY) = a^2 V(Y)$ et la variance d'une somme de variables indépendantes est la somme de leurs variances.
+$$ V(M_N) = V\left(\frac{1}{N}\sum_{i=1}^{N} X_i\right) = \left(\frac{1}{N}\right)^2 V\left(\sum_{i=1}^{N} X_i\right) $$
+$$ V(M_N) = \frac{1}{N^2} \sum_{i=1}^{N} V(X_i) \quad \text{(car les } X_i \text{ sont indépendantes)} $$
+On nous dit que pour tout $i$, $V(X_i) = 6,63$. Donc :
+$$ V(M_N) = \frac{1}{N^2} \sum_{i=1}^{N} 6,63 = \frac{1}{N^2} \times (N \times 6,63) = \frac{6,63}{N} $$
+
+**d. Inégalité de Bienaymé-Tchebychev**
+
+::: {.callout-tip title="Rappel de cours : Inégalité de Bienaymé-Tchebychev"}
+Pour une variable aléatoire $Y$ d'espérance $E(Y)$ et de variance $V(Y)$, et pour tout réel $\epsilon > 0$, on a :
+$$ P(|Y - E(Y)| \geqslant \epsilon) \leqslant \frac{V(Y)}{\epsilon^2} $$
+Ou, sous sa forme complémentaire souvent plus utile :
+$$ P(|Y - E(Y)| < \epsilon) \geqslant 1 - \frac{V(Y)}{\epsilon^2} $$
+Cette inégalité donne une borne inférieure pour la probabilité que la variable aléatoire se trouve dans un intervalle centré sur son espérance.
+:::
+
+On cherche la plus petite valeur de $N$ telle que $P(7 < M_N < 7,28) \geqslant 0,95$.
+L'espérance de $M_N$ est $E(M_N) = 7,14$. Réécrivons l'inégalité autour de cette espérance :
+$$ 7 < M_N < 7,28 \iff 7,14 - 0,14 < M_N < 7,14 + 0,14 $$
+Ceci est équivalent à :
+$$ |M_N - 7,14| < 0,14 \quad \text{ou} \quad |M_N - E(M_N)| < 0,14 $$
+On peut donc appliquer l'inégalité de Bienaymé-Tchebychev avec $Y=M_N$ et $\epsilon = 0,14$.
+$$ P(|M_N - E(M_N)| < 0,14) \geqslant 1 - \frac{V(M_N)}{0,14^2} $$
+On sait que $V(M_N) = \frac{6,63}{N}$. Donc :
+$$ P(7 < M_N < 7,28) \geqslant 1 - \frac{6,63/N}{0,14^2} = 1 - \frac{6,63}{N \times 0,0196} $$
+Pour que la condition $P(7 < M_N < 7,28) \geqslant 0,95$ soit vérifiée, il suffit que la borne inférieure que nous avons trouvée soit supérieure ou égale à 0,95. On cherche donc $N$ tel que :
+$$ 1 - \frac{6,63}{0,0196 \times N} \geqslant 0,95 $$
+$$ 0,05 \geqslant \frac{6,63}{0,0196 \times N} $$
+Comme $N$ est un entier positif, on peut multiplier les deux côtés par $0,0196 \times N$ sans changer le sens de l'inégalité :
+$$ 0,05 \times 0,0196 \times N \geqslant 6,63 $$
+$$ 0,00098 \times N \geqslant 6,63 $$
+$$ N \geqslant \frac{6,63}{0,00098} $$
+$$ N \geqslant 6765,306... $$
+Puisque $N$ doit être un entier, la plus petite valeur de $N$ qui satisfait cette condition est $N = 6766$.
+
+La plus petite valeur de $N$ est **6766**.
+
+
+## Corrigé de l'exercice 2
+
+### Partie A : Lectures graphiques
+
+On répond aux questions en s'appuyant sur les informations visuelles fournies par le graphique.
+
+**1. Déterminer le nombre dérivé $f'(1)$.**
+
+::: {.callout-tip title="Rappel de cours : Interprétation graphique du nombre dérivé"}
+Le nombre dérivé $f'(a)$ d'une fonction $f$ en un point d'abscisse $a$ est égal au coefficient directeur (la pente) de la tangente à la courbe de $f$ en ce point.
+:::
+
+Le nombre $f'(1)$ est le coefficient directeur de la tangente $T_A$ à la courbe $C_f$ au point $A(1; 2)$.
+Pour calculer ce coefficient directeur, on utilise les coordonnées de deux points par lesquels passe la droite $T_A$. Le graphique nous indique que $T_A$ passe par les points $A(1; 2)$ et $C(3; 0)$.
+Le coefficient directeur est donc :
+$$ m = \frac{y_C - y_A}{x_C - x_A} = \frac{0 - 2}{3 - 1} = \frac{-2}{2} = -1 $$
+
+Ainsi, **$f'(1) = -1$**.
+
+**2. Combien de solutions l'équation $f'(x) = 0$ admet-elle dans l'intervalle $]0; 3]$ ?**
+
+L'équation $f'(x) = 0$ a pour solutions les abscisses des points de la courbe $C_f$ où la tangente est horizontale.
+
+En observant le graphique sur l'intervalle $]0; 3]$, on voit que la fonction $f$ est d'abord croissante, puis décroissante. Elle admet donc un maximum local entre $x=0,2$ et $x=1$. En ce point, la tangente à la courbe $C_f$ est horizontale.
+
+De plus, la fonction est à nouveau croissante ensuite. Elle admet donc un minimum local entre $x=1$ et $x=e$. En ce point, la tangente est également horizontale.
+
+L'équation $f'(x) = 0$ admet donc **deux solutions** dans l'intervalle $]0; 3]$.
+
+**3. Quel est le signe de $f''(0,2)$ ?**
+
+::: {.callout-tip title="Rappel de cours : Lien entre signe de $f''$ et convexité"}
+-   Si $f''(x) > 0$, la fonction $f$ est convexe en $x$.
+-   Si $f''(x) < 0$, la fonction $f$ est concave en $x$.
+-   Si $f''$ s'annule en $x$ en changeant de signe, il y a un point d'inflexion en $x$.
+:::
+
+Sur le graphique, pour $x=0,2$, on observe que la courbe $C_f$ est concave.
+
+Donc, le signe de la dérivée seconde $f''(0,2)$ est négatif.
+
+---
+
+### Partie B : Étude de la fonction f
+
+On admet que $f(x) = x(2(\ln x)^2 - 3 \ln x + 2)$.
+
+**1. Résoudre l'équation $2X^2 - 3X + 2 = 0$ et en déduire que $C_f$ ne coupe pas l'axe des abscisses.**
+
+Pour résoudre l'équation du second degré $2X^2 - 3X + 2 = 0$, on calcule le discriminant $\Delta$.
+$$ \Delta = b^2 - 4ac = (-3)^2 - 4(2)(2) = 9 - 16 = -7 $$
+
+Comme $\Delta < 0$, l'équation n'a pas de solution réelle. Le polynôme $P(X) = 2X^2 - 3X + 2$ est donc de signe constant. Son signe est celui de son coefficient dominant $a=2$, qui est positif.
+
+Ainsi, pour tout réel $X$, $2X^2 - 3X + 2 > 0$.
+
+Pour déduire que $C_f$ ne coupe pas l'axe des abscisses, on étudie le signe de $f(x)$.
+$$ f(x) = x(2(\ln x)^2 - 3 \ln x + 2) $$
+
+La fonction est définie sur $]0; +\infty[$, donc $x > 0$.
+
+Le second facteur, $2(\ln x)^2 - 3 \ln x + 2$, peut s'écrire $P(\ln x)$. Comme nous avons montré que $P(X) > 0$ pour tout $X$, on a $2(\ln x)^2 - 3 \ln x + 2 > 0$ pour tout $x \in ]0; +\infty[$.
+
+$f(x)$ est le produit de deux termes strictement positifs, donc $f(x) > 0$ pour tout $x \in ]0; +\infty[$.
+
+Puisque $f(x)$ ne s'annule jamais et est toujours positive, **la courbe $C_f$ ne coupe pas l'axe des abscisses**.
+
+**2. Déterminer la limite de $f$ en $+\infty$.**
+
+On cherche $\lim_{x \to +\infty} x(2(\ln x)^2 - 3 \ln x + 2)$.
+
+On a :
+
+-   $\lim_{x \to +\infty} x = +\infty$
+-   Pour le second facteur, on pose $X = \ln x$. Quand $x \to +\infty$, $X \to +\infty$.
+
+    $\lim_{x \to +\infty} (2(\ln x)^2 - 3 \ln x + 2) = \lim_{X \to +\infty} (2X^2 - 3X + 2)$.
+
+    La limite d'un polynôme en l'infini est celle de son terme de plus haut degré.
+
+    $\lim_{X \to +\infty} (2X^2) = +\infty$.
+
+Par produit des limites, on obtient :
+$$ \lim_{x \to +\infty} f(x) = (+\infty) \times (+\infty) = +\infty $$
+
+**3. On admet que $f'(x) = 2(\ln x)^2 + \ln x - 1$.**
+
+**a. Montrer que $f''(x) = \frac{1}{x}(4 \ln x + 1)$.**
+
+Pour trouver $f''(x)$, on dérive $f'(x)$.
+
+En utilisant la dérivée de $u^2$ qui est $2uu'$ et la dérivée de $\ln x$ qui est $1/x$ :
+$$ f''(x) = 2 \times (2(\ln x) \times \frac{1}{x}) + \frac{1}{x} - 0 $$
+$$ f''(x) = \frac{4 \ln x}{x} + \frac{1}{x} = \frac{4 \ln x + 1}{x} $$
+
+Ce qui est bien l'expression attendue.
+
+**b. Étudier la convexité de $f$ et préciser l'abscisse du point d'inflexion.**
+
+On étudie le signe de $f''(x) = \frac{4 \ln x + 1}{x}$ sur $]0; +\infty[$.
+
+Sur cet intervalle, le dénominateur $x$ est toujours positif. Le signe de $f''(x)$ est donc le même que celui de son numérateur $4 \ln x + 1$.
+
+-   $4 \ln x + 1 = 0 \iff \ln x = -\frac{1}{4} \iff x = e^{-1/4}$
+-   $4 \ln x + 1 > 0 \iff \ln x > -\frac{1}{4} \iff x > e^{-1/4}$
+
+On peut dresser un tableau de signes :
+
+| $x$ | $0$ | | $e^{-1/4}$ | | $+\infty$ |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Signe de $f''(x)$ | | $-$ | $0$ | $+$ | |
+| Convexité de $f$ | | Concave | Point d'inflexion | Convexe | |
+
+-   La fonction $f$ est **concave** sur $]0, e^{-1/4}]$.
+-   La fonction $f$ est **convexe** sur $[e^{-1/4}, +\infty[$.
+-   La dérivée seconde s'annule et change de signe en $x = e^{-1/4}$. La courbe $C_f$ admet donc un **point d'inflexion d'abscisse $e^{-1/4}$**.
+
+**c. Montrer que $C_f$ est au-dessus de $T_B$ sur $[1; +\infty[$.**
+
+Une propriété des fonctions convexes est que leur courbe représentative est située au-dessus de chacune de leurs tangentes.
+
+D'après la question précédente, la fonction $f$ est convexe sur l'intervalle $[e^{-1/4}, +\infty[$.
+
+On a $e \approx 2,718$, donc $e^{-1/4} < 1$.
+
+L'intervalle $[1, +\infty[$ est donc inclus dans l'intervalle de convexité $[e^{-1/4}, +\infty[$.
+
+Puisque $f$ est convexe sur $[1, +\infty[$, sa courbe $C_f$ est au-dessus de toutes ses tangentes sur cet intervalle. La droite $T_B$ est la tangente au point d'abscisse $e$, et $e \in [1, +\infty[$.
+
+Par conséquent, **la courbe $C_f$ est au-dessus de la tangente $T_B$ sur l'intervalle $[1; +\infty[$**.
+
+---
+
+### Partie C : Calcul d'aire
+
+**1. Justifier que la tangente $T_B$ a pour équation réduite $y = 2x - e$.**
+
+L'équation de la tangente à $C_f$ au point d'abscisse $a$ est $y = f'(a)(x-a) + f(a)$.
+
+Ici, le point est $B(e; e)$, donc $a=e$.
+
+-   Calculons $f(e)$:
+    $f(e) = e(2(\ln e)^2 - 3 \ln e + 2) = e(2(1)^2 - 3(1) + 2) = e(2-3+2) = e$.
+-   Calculons $f'(e)$:
+    $f'(e) = 2(\ln e)^2 + \ln e - 1 = 2(1)^2 + 1 - 1 = 2$.
+
+L'équation de la tangente $T_B$ est donc :
+$$ y = 2(x - e) + e $$
+
+$$ y = 2x - 2e + e $$
+
+$$ y = 2x - e $$
+Ceci justifie l'équation donnée.
+
+**2. Montrer que $\int_1^e x \ln x \, dx = \frac{e^2+1}{4}$.**
+
+::: {.callout-tip title="Formule : Intégration par parties"}
+Soient $u$ et $v$ deux fonctions dérivables et de dérivée continue sur un intervalle $[a, b]$.
+
+$$ \int_a^b u(x)v'(x) \, dx = [u(x)v(x)]_a^b - \int_a^b u'(x)v(x) \, dx $$
+:::
+
+On pose :
+
+-   $u(x) = \ln x \implies u'(x) = \frac{1}{x}$
+-   $v'(x) = x \implies v(x) = \frac{x^2}{2}$
+
+Les fonctions $u$ et $v$ sont bien dérivables sur $[1, e]$. En appliquant la formule :
+
+$$ \int_1^e x \ln x \, dx = \left[ (\ln x) \frac{x^2}{2} \right]_1^e - \int_1^e \frac{1}{x} \frac{x^2}{2} \, dx $$
+
+$$ = \left( (\ln e) \frac{e^2}{2} - (\ln 1) \frac{1^2}{2} \right) - \int_1^e \frac{x}{2} \, dx $$
+
+$$ = \left( 1 \times \frac{e^2}{2} - 0 \times \frac{1}{2} \right) - \left[ \frac{1}{2} \frac{x^2}{2} \right]_1^e $$
+
+$$ = \frac{e^2}{2} - \left[ \frac{x^2}{4} \right]_1^e $$
+
+$$ = \frac{e^2}{2} - \left( \frac{e^2}{4} - \frac{1^2}{4} \right) $$
+
+$$ = \frac{e^2}{2} - \frac{e^2}{4} + \frac{1}{4} = \frac{2e^2 - e^2 + 1}{4} = \frac{e^2+1}{4} $$
+
+**3. En déduire la valeur exacte de $\mathcal{A}$ en unité d'aire.**
+
+L'aire $\mathcal{A}$ est celle du domaine délimité par $C_f$, $T_B$, et les droites $x=1$ et $x=e$.
+
+Comme $C_f$ est au-dessus de $T_B$ sur $[1, e]$, l'aire est donnée par l'intégrale :
+
+$$ \mathcal{A} = \int_1^e (f(x) - y_{T_B}) \, dx = \int_1^e (f(x) - (2x-e)) \, dx $$
+
+$$ \mathcal{A} = \int_1^e (x(2(\ln x)^2 - 3\ln x + 2) - 2x + e) \, dx $$
+
+$$ \mathcal{A} = \int_1^e (2x(\ln x)^2 - 3x\ln x + 2x - 2x + e) \, dx $$
+
+$$ \mathcal{A} = \int_1^e (2x(\ln x)^2 - 3x\ln x + e) \, dx $$
+
+Par linéarité de l'intégrale :
+
+$$ \mathcal{A} = 2 \int_1^e x(\ln x)^2 \, dx - 3 \int_1^e x\ln x \, dx + \int_1^e e \, dx $$
+
+On utilise les résultats admis et calculés :
+
+-   $\int_1^e x(\ln x)^2 \, dx = \frac{e^2-1}{4}$ (admis)
+-   $\int_1^e x\ln x \, dx = \frac{e^2+1}{4}$ (calculé en C.2)
+-   $\int_1^e e \, dx = [ex]_1^e = e \times e - e \times 1 = e^2 - e$
+
+On remplace :
+
+$$ \mathcal{A} = 2 \left( \frac{e^2-1}{4} \right) - 3 \left( \frac{e^2+1}{4} \right) + (e^2 - e) $$
+
+$$ \mathcal{A} = \frac{2e^2 - 2}{4} - \frac{3e^2 + 3}{4} + \frac{4(e^2 - e)}{4} $$
+
+$$ \mathcal{A} = \frac{(2e^2 - 2) - (3e^2 + 3) + (4e^2 - 4e)}{4} $$
+
+$$ \mathcal{A} = \frac{2e^2 - 2 - 3e^2 - 3 + 4e^2 - 4e}{4} $$
+
+$$ \mathcal{A} = \frac{(2-3+4)e^2 - 4e + (-2-3)}{4} $$
+
+$$ \mathcal{A} = \frac{3e^2 - 4e - 5}{4} \text{ unités d'aire.} $$
+
+## Corrigé de l'exercice 3
+
+**1. On considère les points A(−1 ; 0 ; 5) et B(3; 2; −1).**
+
+**Affirmation 1 : Une représentation paramétrique de la droite (AB) est $\begin{cases} x = 3 - 2t \\ y = 2 - t \\ z = -1 + 3t \end{cases}$ avec $t \in \mathbb{R}$.**
+
+**Affirmation 1 : VRAIE**
+
+**Justification :**
+
+::: {.callout-tip title="Rappel de cours : Représentation paramétrique d'une droite"}
+Une représentation paramétrique d'une droite est définie par un point appartenant à cette droite et un vecteur directeur de cette droite. La droite passant par un point $P_0(x_0; y_0; z_0)$ et dirigée par un vecteur $\overrightarrow{u}(a; b; c)$ a pour représentation $\begin{cases} x = x_0 + at \\ y = y_0 + bt \\ z = z_0 + ct \end{cases}$ avec $t \in \mathbb{R}$.
+:::
+
+La représentation paramétrique donnée est associée au point de coordonnées $(3; 2; -1)$, qui est le point B, et au vecteur directeur $\overrightarrow{u}(-2; -1; 3)$.
+
+Pour vérifier si cette représentation est correcte pour la droite (AB), il suffit de s'assurer que le vecteur directeur $\overrightarrow{u}$ est bien colinéaire au vecteur $\overrightarrow{AB}$.
+
+Calculons les coordonnées du vecteur $\overrightarrow{AB}$ :
+$$ \overrightarrow{AB} \begin{pmatrix} x_B - x_A \\ y_B - y_A \\ z_B - z_A \end{pmatrix} = \begin{pmatrix} 3 - (-1) \\ 2 - 0 \\ -1 - 5 \end{pmatrix} = \begin{pmatrix} 4 \\ 2 \\ -6 \end{pmatrix} $$
+
+Comparons les vecteurs $\overrightarrow{u}(-2; -1; 3)$ et $\overrightarrow{AB}(4; 2; -6)$.
+
+On remarque que $\overrightarrow{AB} = -2 \times \overrightarrow{u}$, car :
+$$ -2 \times (-2) = 4 $$
+$$ -2 \times (-1) = 2 $$
+$$ -2 \times 3 = -6 $$
+Les vecteurs $\overrightarrow{u}$ et $\overrightarrow{AB}$ sont donc colinéaires.
+
+La représentation donnée utilise un point de la droite (le point B) et un vecteur directeur de la droite (le vecteur $\overrightarrow{u}$). Elle est donc bien une représentation paramétrique de la droite (AB).
+
+---
+
+**Affirmation 2 : Le vecteur $\overrightarrow{n}(5; -2; 1)$ est normal au plan (OAB).**
+
+**Affirmation 2 : FAUSSE**
+
+**Justification :**
+
+::: {.callout-tip title="Rappel de cours : Vecteur normal à un plan"}
+Un vecteur $\overrightarrow{n}$ est normal à un plan s'il est orthogonal à deux vecteurs non colinéaires de ce plan. On vérifie l'orthogonalité à l'aide du produit scalaire : deux vecteurs sont orthogonaux si leur produit scalaire est nul.
+:::
+
+Le plan (OAB) est dirigé par les vecteurs $\overrightarrow{OA}$ et $\overrightarrow{OB}$ (puisque O, A et B définissent le plan).
+
+Calculons les coordonnées de ces vecteurs :
+
+-   Le point O est l'origine, donc $O(0; 0; 0)$.
+-   $\overrightarrow{OA} \begin{pmatrix} -1 - 0 \\ 0 - 0 \\ 5 - 0 \end{pmatrix} = \begin{pmatrix} -1 \\ 0 \\ 5 \end{pmatrix}$
+-   $\overrightarrow{OB} \begin{pmatrix} 3 - 0 \\ 2 - 0 \\ -1 - 0 \end{pmatrix} = \begin{pmatrix} 3 \\ 2 \\ -1 \end{pmatrix}$
+
+Ces deux vecteurs ne sont pas colinéaires. Vérifions si le vecteur $\overrightarrow{n}(5; -2; 1)$ est orthogonal à $\overrightarrow{OA}$ et $\overrightarrow{OB}$ en calculant les produits scalaires.
+
+-   Produit scalaire avec $\overrightarrow{OA}$ :
+    $$ \overrightarrow{n} \cdot \overrightarrow{OA} = (5)(-1) + (-2)(0) + (1)(5) = -5 + 0 + 5 = 0 $$
+    Le vecteur $\overrightarrow{n}$ est bien orthogonal à $\overrightarrow{OA}$.
+
+-   Produit scalaire avec $\overrightarrow{OB}$ :
+    $$ \overrightarrow{n} \cdot \overrightarrow{OB} = (5)(3) + (-2)(2) + (1)(-1) = 15 - 4 - 1 = 10 $$
+    Le produit scalaire $\overrightarrow{n} \cdot \overrightarrow{OB}$ n'est pas nul.
+
+Puisque le vecteur $\overrightarrow{n}$ n'est pas orthogonal au vecteur $\overrightarrow{OB}$, il n'est pas normal au plan (OAB).
+
+---
+
+**2. On considère les droites $d$ et $d'$.**
+
+**Affirmation 3 : Les droites $d$ et $d'$ ne sont pas coplanaires.**
+
+**Affirmation 3 : FAUSSE**
+
+**Justification :**
+Deux droites sont coplanaires si elles sont parallèles ou sécantes. Elles sont non coplanaires si elles ne sont ni parallèles ni sécantes.
+
+-   **Étape 1 : Vérifier si les droites sont parallèles.**
+
+    Un vecteur directeur de la droite $d$ est $\overrightarrow{v_d}(1; -1; 2)$.
+
+    Un vecteur directeur de la droite $d'$ est $\overrightarrow{v_{d'}}(4; 4; -6)$.
+
+    Pour que les droites soient parallèles, leurs vecteurs directeurs doivent être colinéaires. Vérifions s'il existe un réel $\lambda$ tel que $\overrightarrow{v_{d'}} = \lambda \overrightarrow{v_d}$.
+    $$ \begin{cases} 4 = \lambda \times 1 \\ 4 = \lambda \times (-1) \\ -6 = \lambda \times 2 \end{cases} \implies \begin{cases} \lambda = 4 \\ \lambda = -4 \\ \lambda = -3 \end{cases} $$
+    Le système n'a pas de solution. Les vecteurs ne sont pas colinéaires, donc les droites $d$ et $d'$ ne sont pas parallèles.
+
+-   **Étape 2 : Vérifier si les droites sont sécantes.**
+
+    On cherche s'il existe un point d'intersection, c'est-à-dire un couple de réels $(k, s)$ tel que :
+
+    $$ \begin{cases} 15 + k = 1 + 4s \quad (L_1) \\ 8 - k = 2 + 4s \quad (L_2) \\ -6 + 2k = 1 - 6s \quad (L_3) \end{cases} $$
+    Simplifions les deux premières lignes :
+    $$ \begin{cases} k - 4s = -14 \\ -k - 4s = -6 \end{cases} $$
+    En additionnant ces deux lignes $(L_1+L_2)$, on obtient :
+    $$ -8s = -20 \implies s = \frac{-20}{-8} = \frac{5}{2} $$
+    En remplaçant $s$ dans la première ligne :
+    $$ k - 4\left(\frac{5}{2}\right) = -14 \implies k - 10 = -14 \implies k = -4 $$
+    Nous avons trouvé un unique couple solution $(k, s) = (-4, 5/2)$ pour les deux premières équations. Vérifions s'il satisfait la troisième équation $(L_3)$ :
+
+    -   Membre de gauche : $-6 + 2k = -6 + 2(-4) = -6 - 8 = -14$.
+    -   Membre de droite : $1 - 6s = 1 - 6\left(\frac{5}{2}\right) = 1 - 15 = -14$.
+
+    Les deux membres sont égaux. Le système a une solution.
+
+Les droites $d$ et $d'$ ont un point d'intersection, elles sont donc sécantes. Si elles sont sécantes, elles sont coplanaires. L'affirmation qu'elles ne sont pas coplanaires est donc fausse.
+
+---
+
+**Affirmation 4 : La distance du point C(2; -1; 2) au plan $\mathcal{P}$ d'équation $x - y + z + 1 = 0$ est égale à $2\sqrt{3}$.**
+
+**Affirmation 4 : VRAIE**
+
+Nous allons déterminer les coordonnées du point H, projeté orthogonal du point C sur le plan $\mathcal{P}$. La distance du point C au plan $\mathcal{P}$ est alors la longueur du segment [CH], c'est-à-dire la norme du vecteur $\overrightarrow{CH}$.
+
+::: {.callout-tip title="Rappel de cours : Projection orthogonale sur un plan"}
+Le projeté orthogonal H d'un point C sur un plan $\mathcal{P}$ est le point d'intersection entre le plan $\mathcal{P}$ et la droite $\Delta$ qui est perpendiculaire à $\mathcal{P}$ et qui passe par C.
+
+Le vecteur $\overrightarrow{CH}$ est alors un vecteur normal au plan $\mathcal{P}$.
+:::
+
+La démarche se décompose en trois étapes :
+
+1.  Déterminer une représentation paramétrique de la droite $\Delta$ passant par C et orthogonale à $\mathcal{P}$.
+2.  Calculer les coordonnées du point H, intersection de $\Delta$ et $\mathcal{P}$.
+3.  Calculer la norme du vecteur $\overrightarrow{CH}$.
+
+**Étape 1 : Représentation paramétrique de la droite $\Delta$**
+
+La droite $\Delta$ est orthogonale au plan $\mathcal{P}$. Un vecteur directeur de $\Delta$ est donc un vecteur normal à $\mathcal{P}$.
+
+L'équation du plan $\mathcal{P}$ est $1x - 1y + 1z + 1 = 0$. Un vecteur normal à $\mathcal{P}$ est donc $\overrightarrow{n}(1; -1; 1)$.
+
+Ce vecteur $\overrightarrow{n}$ est un vecteur directeur pour notre droite $\Delta$.
+
+La droite $\Delta$ passe par le point $C(2; -1; 2)$ et est dirigée par le vecteur $\overrightarrow{n}(1; -1; 1)$.
+
+Une représentation paramétrique de $\Delta$ est donc :
+$$ \begin{cases} x = 2 + 1 \cdot t \\ y = -1 - 1 \cdot t \\ z = 2 + 1 \cdot t \end{cases} \quad \text{avec } t \in \mathbb{R} \quad \iff \quad \begin{cases} x = 2 + t \\ y = -1 - t \\ z = 2 + t \end{cases} $$
+
+**Étape 2 : Coordonnées du point d'intersection H**
+
+Le point $H(x_H; y_H; z_H)$ appartient à la fois à la droite $\Delta$ et au plan $\mathcal{P}$. Ses coordonnées vérifient donc le système d'équations composé de la représentation paramétrique de $\Delta$ et de l'équation cartésienne de $\mathcal{P}$.
+
+Il existe un réel $t$ tel que :
+$$ \begin{cases} x_H = 2 + t \\ y_H = -1 - t \\ z_H = 2 + t \\ x_H - y_H + z_H + 1 = 0 \end{cases} $$
+On substitue les expressions de $x_H, y_H, z_H$ en fonction de $t$ dans l'équation du plan :
+$$ (2+t) - (-1-t) + (2+t) + 1 = 0 $$
+$$ 2 + t + 1 + t + 2 + t + 1 = 0 $$
+$$ 3t + 6 = 0 $$
+$$ 3t = -6 $$
+$$ t = -2 $$
+Maintenant que nous avons la valeur du paramètre $t$ correspondant au point H, nous pouvons calculer ses coordonnées en remplaçant $t$ par $-2$ dans la représentation paramétrique de $\Delta$ :
+$$ \begin{cases} x_H = 2 + (-2) = 0 \\ y_H = -1 - (-2) = 1 \\ z_H = 2 + (-2) = 0 \end{cases} $$
+Le projeté orthogonal de C sur le plan $\mathcal{P}$ est le point $H(0; 1; 0)$.
+
+**Étape 3 : Calcul de la distance CH**
+
+La distance du point C au plan $\mathcal{P}$ est la norme du vecteur $\overrightarrow{CH}$.
+
+Calculons d'abord les coordonnées du vecteur $\overrightarrow{CH}$ :
+$$ \overrightarrow{CH} \begin{pmatrix} x_H - x_C \\ y_H - y_C \\ z_H - z_C \end{pmatrix} = \begin{pmatrix} 0 - 2 \\ 1 - (-1) \\ 0 - 2 \end{pmatrix} = \begin{pmatrix} -2 \\ 2 \\ -2 \end{pmatrix} $$
+Calculons maintenant sa norme :
+$$ \text{dist}(C, \mathcal{P}) = ||\overrightarrow{CH}|| = \sqrt{(-2)^2 + 2^2 + (-2)^2} $$
+$$ = \sqrt{4 + 4 + 4} = \sqrt{12} $$
+On simplifie la racine carrée :
+$$ \sqrt{12} = \sqrt{4 \times 3} = \sqrt{4} \times \sqrt{3} = 2\sqrt{3} $$
+La distance du point C au plan $\mathcal{P}$ est bien égale à $2\sqrt{3}$.
+
+## Corrigé de l'exercice 4
+
+Cet exercice propose d'étudier l'évolution d'une population biologique par deux approches complémentaires : un modèle discret basé sur une suite récurrente, et un modèle continu régi par une équation différentielle.
+
+### Partie A : Étude d'un modèle discret
+
+On étudie la suite $(u_n)$ définie par $u_0 = 1$ et, pour tout entier naturel $n$, $u_{n+1} = -0,02u_n^2 + 1,3u_n$.
+
+**1. Calculer la superficie au premier juillet 2025.**
+
+Le premier juillet 2024 correspond à l'année de départ, soit $n=0$, avec $u_0=1$ ha.
+Le premier juillet 2025 correspond à $n=1$. On calcule donc $u_1$ :
+$$ u_1 = -0,02u_0^2 + 1,3u_0 $$
+$$ u_1 = -0,02(1)^2 + 1,3(1) = -0,02 + 1,3 = 1,28 $$
+D'après ce modèle, la superficie recouverte au premier juillet 2025 sera de **1,28 hectare**.
+
+**2. On note $h$ la fonction définie sur $[0; 20]$ par $h(x) = -0,02x^2 + 1,3x$.**
+
+**a. Démontrer que pour tout entier naturel $n$, $1 \leqslant u_n \leqslant u_{n+1} \leqslant 20$.**
+
+Nous allons procéder par récurrence. Soit $P(n)$ la propriété : "$1 \leqslant u_n \leqslant u_{n+1} \leqslant 20$".
+
+**Initialisation (pour n=0) :**
+-   $u_0 = 1$
+-   $u_1 = 1,28$
+On a bien $1 \leqslant 1 \leqslant 1,28 \leqslant 20$, c'est-à-dire $1 \leqslant u_0 \leqslant u_1 \leqslant 20$.
+La propriété $P(0)$ est vraie.
+
+**Hérédité :**
+Supposons que la propriété $P(k)$ est vraie pour un certain entier naturel $k \geqslant 0$.
+C'est notre hypothèse de récurrence : $1 \leqslant u_k \leqslant u_{k+1} \leqslant 20$.
+Nous voulons montrer que $P(k+1)$ est vraie, c'est-à-dire : $1 \leqslant u_{k+1} \leqslant u_{k+2} \leqslant 20$.
+
+D'après l'hypothèse de récurrence, nous avons $1 \leqslant u_k \leqslant u_{k+1} \leqslant 20$.
+On nous admet que la fonction $h$ est croissante sur l'intervalle $[0; 20]$. Puisque les termes $u_k$ et $u_{k+1}$ appartiennent à cet intervalle, on peut appliquer la fonction $h$ à l'inégalité en conservant l'ordre :
+$$ h(1) \leqslant h(u_k) \leqslant h(u_{k+1}) \leqslant h(20) $$
+On a $u_{n+1} = h(u_n)$. L'inégalité devient :
+$$ h(1) \leqslant u_{k+1} \leqslant u_{k+2} \leqslant h(20) $$
+Calculons les valeurs des bornes :
+-   $h(1) = -0,02(1)^2 + 1,3(1) = 1,28$.
+-   $h(20) = -0,02(20)^2 + 1,3(20) = -0,02(400) + 26 = -8 + 26 = 18$.
+L'inégalité devient donc :
+$$ 1,28 \leqslant u_{k+1} \leqslant u_{k+2} \leqslant 18 $$
+Puisque $1 \leqslant 1,28$ et $18 \leqslant 20$, on peut en conclure que :
+$$ 1 \leqslant u_{k+1} \leqslant u_{k+2} \leqslant 20 $$
+La propriété $P(k+1)$ est donc vraie.
+
+**Conclusion :**
+Par le principe de récurrence, la propriété $P(n)$ est vraie pour tout entier naturel $n$.
+
+**b. En déduire que la suite $(u_n)$ converge.**
+
+::: {.callout-tip title="Rappel de cours : Théorème de la convergence monotone"}
+-   Toute suite croissante et majorée est convergente.
+-   Toute suite décroissante et minorée est convergente.
+:::
+
+D'après la question précédente, nous avons montré que $u_n \leqslant u_{n+1}$ pour tout $n$. La suite $(u_n)$ est donc **croissante**.
+Nous avons également montré que $u_n \leqslant 20$ pour tout $n$. La suite $(u_n)$ est donc **majorée** par 20.
+Étant croissante et majorée, la suite $(u_n)$ est convergente. On note $L$ sa limite.
+
+**c. Justifier que $L=15$.**
+
+La suite $(u_n)$ est définie par la relation de récurrence $u_{n+1} = h(u_n)$, où $h$ est une fonction continue sur $[0; 20]$.
+Comme la suite $(u_n)$ converge vers une limite $L$, cette limite doit être un point fixe de la fonction $h$, c'est-à-dire qu'elle doit vérifier l'équation $h(L)=L$.
+Résolvons l'équation $h(x)=x$ :
+$$ -0,02x^2 + 1,3x = x $$
+$$ -0,02x^2 + 0,3x = 0 $$
+On factorise par $x$ :
+$$ x(-0,02x + 0,3) = 0 $$
+Cette équation a deux solutions :
+
+-   $x = 0$
+-   $-0,02x + 0,3 = 0 \iff 0,02x = 0,3 \iff x = \frac{0,3}{0,02} = 15$
+
+La suite $(u_n)$ est croissante et son premier terme est $u_0=1$. Tous les termes de la suite sont donc supérieurs ou égaux à 1. Sa limite $L$ ne peut donc pas être 0.
+On en conclut que la limite de la suite est **$L=15$**.
+
+**3. Dépassement d'un seuil.**
+
+**a. Justifier que la surface recouverte dépassera les 14 hectares.**
+La suite $(u_n)$ est croissante et converge vers 15. Par définition de la convergence, les termes de la suite se rapprochent de 15. Comme la suite est croissante, les termes se rapprochent de 15 par valeurs inférieures. Puisque $14 < 15$, il existera nécessairement un rang $N$ à partir duquel tous les termes $u_n$ seront dans l'intervalle $]14; 15]$. La superficie recouverte dépassera donc un jour les 14 hectares.
+
+**b. Recopier et compléter l'algorithme.**
+L'algorithme doit calculer les termes successifs de la suite jusqu'à ce que la valeur de `u` dépasse (ou soit égale à) 14. À chaque étape, il faut incrémenter le compteur d'années `n`.
+
+```python
+def seuil():
+    n = 0
+    u = 1
+    while u <= 14:
+        n = n + 1
+        u = -0.02 * u * u + 1.3 * u
+    return n
+```
+
+---
+
+### Partie B : Étude d'un modèle continu
+
+On étudie la fonction $f$ solution de l'équation différentielle $(E_1) : y' = 0,02y(15-y)$, avec la condition initiale $f(0)=1$.
+
+**1. Montrer que $g = 1/f$ est solution de $(E_2) : y' = -0,3y + 0,02$.**
+
+La fonction $f$ ne s'annule pas, donc la fonction $g=1/f$ est bien définie et dérivable.
+Calculons la dérivée $g'(t)$ :
+$$ g'(t) = \left(\frac{1}{f(t)}\right)' = -\frac{f'(t)}{(f(t))^2} $$
+On sait que $f$ est solution de $(E_1)$, donc $f'(t) = 0,02f(t)(15-f(t))$. On substitue cette expression dans celle de $g'(t)$ :
+$$ g'(t) = -\frac{0,02f(t)(15-f(t))}{(f(t))^2} = -0,02 \frac{15-f(t)}{f(t)} $$
+On sépare la fraction en deux :
+$$ g'(t) = -0,02 \left( \frac{15}{f(t)} - \frac{f(t)}{f(t)} \right) = -0,02 \left( 15 \times \frac{1}{f(t)} - 1 \right) $$
+Puisque $g(t) = 1/f(t)$, on obtient :
+$$ g'(t) = -0,02 (15g(t) - 1) = -0,3g(t) + 0,02 $$
+La fonction $g$ est donc bien solution de l'équation différentielle $(E_2)$.
+
+**2. Donner les solutions de l'équation différentielle $(E_2)$.**
+
+::: {.callout-tip title="Formule : Solutions d'une équation différentielle linéaire"}
+Les solutions de l'équation différentielle $y' = ay + b$ (où $a \neq 0$) sont les fonctions de la forme :
+$$ y(t) = C e^{at} - \frac{b}{a} \quad \text{avec } C \in \mathbb{R} $$
+:::
+
+L'équation $(E_2)$ est $y' = -0,3y + 0,02$. C'est une équation de la forme $y'=ay+b$ avec $a=-0,3$ et $b=0,02$.
+Les solutions sont donc les fonctions $g$ définies par :
+$$ g(t) = C e^{-0,3t} - \frac{0,02}{-0,3} = C e^{-0,3t} + \frac{2}{30} = C e^{-0,3t} + \frac{1}{15} $$
+où $C$ est une constante réelle.
+
+**3. En déduire l'expression de $f(t)$.**
+On utilise la condition initiale $f(0)=1$ pour déterminer la constante $C$.
+On sait que $g(0) = 1/f(0) = 1/1 = 1$.
+En utilisant l'expression de $g(t)$ trouvée à la question précédente :
+$$ g(0) = C e^{-0,3 \times 0} + \frac{1}{15} = C e^0 + \frac{1}{15} = C + \frac{1}{15} $$
+On a donc l'équation $C + \frac{1}{15} = 1$, ce qui donne $C = 1 - \frac{1}{15} = \frac{14}{15}$.
+L'expression de $g(t)$ est :
+$$ g(t) = \frac{14}{15}e^{-0,3t} + \frac{1}{15} $$
+Maintenant, on trouve $f(t)$ en calculant l'inverse de $g(t)$ :
+$$ f(t) = \frac{1}{g(t)} = \frac{1}{\frac{14}{15}e^{-0,3t} + \frac{1}{15}} $$
+En multipliant le numérateur et le dénominateur par 15 pour simplifier :
+$$ f(t) = \frac{15}{14e^{-0,3t} + 1} $$
+
+**4. Déterminer la limite de $f$ en $+\infty$.**
+On cherche $\lim_{t \to +\infty} f(t)$.
+On a $\lim_{t \to +\infty} -0,3t = -\infty$.
+Par composition, $\lim_{t \to +\infty} e^{-0,3t} = 0$.
+Donc, la limite du dénominateur est :
+$$ \lim_{t \to +\infty} (14e^{-0,3t} + 1) = 14 \times 0 + 1 = 1 $$
+Par quotient, la limite de $f$ est :
+$$ \lim_{t \to +\infty} f(t) = \frac{15}{1} = 15 $$
+Le modèle continu prédit que la superficie recouverte tendra vers 15 hectares à long terme, ce qui est cohérent avec le modèle discret.
+
+**5. Résoudre l'inéquation $f(t) > 14$ et interpréter.**
+On résout dans $[0; +\infty[$ :
+$$ \frac{15}{14e^{-0,3t} + 1} > 14 $$
+Comme le dénominateur $14e^{-0,3t} + 1$ est strictement positif, on peut multiplier les deux membres par ce terme sans changer le sens de l'inégalité :
+$$ 15 > 14(14e^{-0,3t} + 1) $$
+$$ 15 > 196e^{-0,3t} + 14 $$
+$$ 1 > 196e^{-0,3t} $$
+$$ \frac{1}{196} > e^{-0,3t} $$
+On applique la fonction logarithme népérien, qui est strictement croissante, des deux côtés :
+$$ \ln\left(\frac{1}{196}\right) > \ln(e^{-0,3t}) $$
+$$ -\ln(196) > -0,3t $$
+On divise par $-0,3$, qui est un nombre négatif, ce qui inverse le sens de l'inégalité :
+$$ \frac{-\ln(196)}{-0,3} < t \implies t > \frac{\ln(196)}{0,3} $$
+Calculons une valeur approchée :
+$$ t > \frac{5,278...}{0,3} \approx 17,59 $$
+**Interprétation :** La superficie recouverte par la posidonie dépassera 14 hectares après environ 17,6 ans à compter du premier juillet 2024. Cela se produira donc au cours de l'année 2042 ($2024 + 18$).
+
+**Remarque :** L'algorithme python de la partie A retourne $n=18$ : les résultats sont cohérents.

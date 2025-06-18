@@ -10,7 +10,628 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Sun, 15 Jun 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 16 Jun 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Corrigé du sujet de mathématiques du baccalauréat 2025 - Métropole Jour 1</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/2025-06-16-MathsMétropoleJ1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="lénoncé" class="level2">
+<h2 class="anchored" data-anchor-id="lénoncé">L’énoncé</h2>
+<p>Le sujet de mathématiques du baccalauréat 2025 pour la Métropole, Jour 1, est désormais disponible. Vous pouvez le télécharger en cliquant sur le lien ci-dessous :</p>
+<p><a href="25-MATJ1ME1.pdf" target="_blank"><strong>Télécharger le sujet de mathématiques - Bac 2025 Métropole Jour 1</strong></a></p>
+<section id="exercice-1-probabilités" class="level4">
+<h4 class="anchored" data-anchor-id="exercice-1-probabilités"><strong>Exercice 1 : Probabilités</strong></h4>
+<p>Cet exercice aborde plusieurs notions du chapitre sur les probabilités à partir d’une situation basée sur les groupes sanguins.</p>
+<ul>
+<li><strong>Contenu de l’exercice :</strong> L’exercice débute par la construction d’un <strong>arbre pondéré</strong> et l’application de la <strong>formule des probabilités totales</strong>. La suite de l’exercice porte sur l’échantillonnage, la <strong>loi binomiale</strong>, son espérance, sa variance, et se termine par une application de l’<strong>inégalité de Bienaymé-Tchebychev</strong>.</li>
+</ul>
+<hr>
+</section>
+<section id="exercice-2-analyse-de-fonction" class="level4">
+<h4 class="anchored" data-anchor-id="exercice-2-analyse-de-fonction"><strong>Exercice 2 : Analyse de fonction</strong></h4>
+<p>Cet exercice est une étude de fonction composée d’un polynôme et d’un <strong>logarithme népérien</strong>. Il est structuré en trois parties.</p>
+<ul>
+<li><strong>Contenu de l’exercice :</strong>
+<ol type="1">
+<li><strong>Partie A (Lecture graphique) :</strong> Interprétation graphique du <strong>nombre dérivé</strong>, du signe de la dérivée et du nombre de solutions d’une équation.</li>
+<li><strong>Partie B (Étude analytique) :</strong> Calcul de <strong>limites</strong>, de <strong>dérivées première et seconde</strong>, étude de la <strong>convexité</strong> et de la position relative d’une courbe par rapport à sa tangente.</li>
+<li><strong>Partie C (Calcul d’aire) :</strong> Calcul d’une <strong>intégrale</strong> à l’aide d’une <strong>intégration par parties</strong>.</li>
+</ol></li>
+</ul>
+<hr>
+</section>
+<section id="exercice-3-géométrie-dans-lespace" class="level4">
+<h4 class="anchored" data-anchor-id="exercice-3-géométrie-dans-lespace"><strong>Exercice 3 : Géométrie dans l’espace</strong></h4>
+<p>Cet exercice est un “Vrai ou Faux” où chaque affirmation nécessite une <strong>justification mathématique</strong>.</p>
+<ul>
+<li><strong>Contenu de l’exercice :</strong> Les notions abordées sont les <strong>représentations paramétriques</strong> de droites, la colinéarité de vecteurs, le <strong>vecteur normal</strong> à un plan, la position relative de deux droites et le calcul de la <strong>distance d’un point à un plan</strong>.</li>
+</ul>
+<hr>
+</section>
+<section id="exercice-4-modélisation-suites-et-équations-différentielles" class="level4">
+<h4 class="anchored" data-anchor-id="exercice-4-modélisation-suites-et-équations-différentielles"><strong>Exercice 4 : Modélisation (Suites et Équations Différentielles)</strong></h4>
+<p>Cet exercice de modélisation compare deux approches pour décrire l’évolution d’une population d’algues.</p>
+<ul>
+<li><strong>Contenu de l’exercice :</strong>
+<ol type="1">
+<li><strong>Partie A (Modèle discret) :</strong> Étude d’une <strong>suite définie par récurrence</strong> (<img src="https://latex.codecogs.com/png.latex?u_%7Bn+1%7D%20=%20h(u_n)">), incluant la démonstration de sa monotonie et de sa convergence par <strong>récurrence</strong>, la recherche de sa limite et la complétion d’un <strong>algorithme</strong>.</li>
+<li><strong>Partie B (Modèle continu) :</strong> Résolution d’une <strong>équation différentielle</strong> non linéaire via un <strong>changement de variable</strong>.</li>
+</ol></li>
+</ul>
+<p>Voilà pour ce tour d’horizon ! Un sujet riche et bien équilibré.</p>
+</section>
+</section>
+<section id="corrigé-de-lexercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="corrigé-de-lexercice-1">Corrigé de l’exercice 1</h2>
+<p>Cet exercice porte sur les probabilités conditionnelles, la formule des probabilités totales, la loi binomiale et se termine par une application de l’inégalité de Bienaymé-Tchebychev.</p>
+<section id="arbre-de-probabilités" class="level4">
+<h4 class="anchored" data-anchor-id="arbre-de-probabilités">1. Arbre de probabilités</h4>
+<p>Pour compléter l’arbre, nous devons d’abord déterminer la probabilité de l’événement O. Les événements A, B, AB et O forment une <strong>partition</strong> de l’univers, c’est-à-dire que ce sont des événements incompatibles deux à deux et dont la réunion est l’univers. La somme de leurs probabilités est donc égale à 1.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20P(A)%20+%20P(B)%20+%20P(AB)%20+%20P(O)%20=%201%20"></p>
+<p>On en déduit <img src="https://latex.codecogs.com/png.latex?P(O)"> : <img src="https://latex.codecogs.com/png.latex?%20P(O)%20=%201%20-%20P(A)%20-%20P(B)%20-%20P(AB)%20"> <img src="https://latex.codecogs.com/png.latex?%20P(O)%20=%201%20-%200,45%20-%200,10%20-%200,03%20=%200,42%20"></p>
+<p>Ensuite, pour chaque branche, la somme des probabilités des événements conditionnels doit valoir 1. Par exemple, <img src="https://latex.codecogs.com/png.latex?P_A(R)%20+%20P_A(%5Coverline%7BR%7D)%20=%201">.</p>
+<p>L’énoncé nous donne :</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?P_A(R)%20=%200,85">, donc <img src="https://latex.codecogs.com/png.latex?P_A(%5Coverline%7BR%7D)%20=%201%20-%200,85%20=%200,15">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?P_B(R)%20=%200,84">, donc <img src="https://latex.codecogs.com/png.latex?P_B(%5Coverline%7BR%7D)%20=%201%20-%200,84%20=%200,16">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?P_%7BAB%7D(R)%20=%200,82">, donc <img src="https://latex.codecogs.com/png.latex?P_%7BAB%7D(%5Coverline%7BR%7D)%20=%201%20-%200,82%20=%200,18">.</li>
+</ul>
+<p>La probabilité <img src="https://latex.codecogs.com/png.latex?P_O(R)"> sera calculée à la question 3.</p>
+<p>L’arbre complété est le suivant :</p>
+<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/2025-06-16-MathsMétropoleJ1/arbre.png" class="img-fluid" style="width:50.0%"></a></p>
+</section>
+<section id="calcul-de-pb-cap-r-et-interprétation" class="level4">
+<h4 class="anchored" data-anchor-id="calcul-de-pb-cap-r-et-interprétation">2. Calcul de <img src="https://latex.codecogs.com/png.latex?P(B%20%5Ccap%20R)"> et interprétation</h4>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Probabilité d'une intersection">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Probabilité d’une intersection
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour deux événements A et B, la probabilité de leur intersection est donnée par la formule : <img src="https://latex.codecogs.com/png.latex?%20P(A%20%5Ccap%20B)%20=%20P(A)%20%5Ctimes%20P_A(B)%20"> Cette formule se lit directement sur un arbre pondéré en multipliant les probabilités le long du chemin correspondant.</p>
+</div>
+</div>
+<p>En appliquant cette formule, on a : <img src="https://latex.codecogs.com/png.latex?%20P(B%20%5Ccap%20R)%20=%20P(B)%20%5Ctimes%20P_B(R)%20"> <img src="https://latex.codecogs.com/png.latex?%20P(B%20%5Ccap%20R)%20=%200,10%20%5Ctimes%200,84%20=%200,084%20"></p>
+<p><strong>Interprétation :</strong> La probabilité que la personne choisie au hasard dans la population française soit du groupe sanguin B et de rhésus positif est de 0,084 (soit 8,4 %).</p>
+</section>
+<section id="calcul-de-p_or" class="level4">
+<h4 class="anchored" data-anchor-id="calcul-de-p_or">3. Calcul de <img src="https://latex.codecogs.com/png.latex?P_O(R)"></h4>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Formule des probabilités totales">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Formule des probabilités totales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si les événements <img src="https://latex.codecogs.com/png.latex?E_1,%20E_2,%20%5Cdots,%20E_n"> forment une partition de l’univers, alors pour tout événement F, on a : <img src="https://latex.codecogs.com/png.latex?%20P(F)%20=%20P(E_1%20%5Ccap%20F)%20+%20P(E_2%20%5Ccap%20F)%20+%20%5Cdots%20+%20P(E_n%20%5Ccap%20F)%20"> <img src="https://latex.codecogs.com/png.latex?%20P(F)%20=%20P(E_1)P_%7BE_1%7D(F)%20+%20P(E_2)P_%7BE_2%7D(F)%20+%20%5Cdots%20+%20P(E_n)P_%7BE_n%7D(F)%20"></p>
+</div>
+</div>
+<p>Ici, les événements A, B, AB et O forment une partition de l’univers. On peut donc appliquer la formule des probabilités totales pour calculer <img src="https://latex.codecogs.com/png.latex?P(R)"> : <img src="https://latex.codecogs.com/png.latex?%20P(R)%20=%20P(A%20%5Ccap%20R)%20+%20P(B%20%5Ccap%20R)%20+%20P(AB%20%5Ccap%20R)%20+%20P(O%20%5Ccap%20R)%20"> <img src="https://latex.codecogs.com/png.latex?%20P(R)%20=%20P(A)P_A(R)%20+%20P(B)P_B(R)%20+%20P(AB)P_%7BAB%7D(R)%20+%20P(O)P_O(R)%20"></p>
+<p>L’énoncé nous donne <img src="https://latex.codecogs.com/png.latex?P(R)=0,8397">. On peut donc isoler l’inconnue <img src="https://latex.codecogs.com/png.latex?P_O(R)"> : <img src="https://latex.codecogs.com/png.latex?%200,8397%20=%20(0,45%20%5Ctimes%200,85)%20+%20(0,10%20%5Ctimes%200,84)%20+%20(0,03%20%5Ctimes%200,82)%20+%20(0,42%20%5Ctimes%20P_O(R))%20"> <img src="https://latex.codecogs.com/png.latex?%200,8397%20=%200,3825%20+%200,084%20+%200,0246%20+%200,42%20%5Ctimes%20P_O(R)%20"> <img src="https://latex.codecogs.com/png.latex?%200,8397%20=%200,4911%20+%200,42%20%5Ctimes%20P_O(R)%20"> <img src="https://latex.codecogs.com/png.latex?%200,42%20%5Ctimes%20P_O(R)%20=%200,8397%20-%200,4911%20"> <img src="https://latex.codecogs.com/png.latex?%200,42%20%5Ctimes%20P_O(R)%20=%200,3486%20"> <img src="https://latex.codecogs.com/png.latex?%20P_O(R)%20=%20%5Cfrac%7B0,3486%7D%7B0,42%7D%20=%200,83%20"> On a bien montré que <img src="https://latex.codecogs.com/png.latex?P_O(R)%20=%200,83">.</p>
+</section>
+<section id="probabilité-dêtre-donneur-universel" class="level4">
+<h4 class="anchored" data-anchor-id="probabilité-dêtre-donneur-universel">4. Probabilité d’être donneur universel</h4>
+<p>Un “donneur universel” est un individu du groupe O et de rhésus négatif. On cherche donc à calculer la probabilité de l’événement <img src="https://latex.codecogs.com/png.latex?O%20%5Ccap%20%5Coverline%7BR%7D">. En utilisant la règle de l’intersection : <img src="https://latex.codecogs.com/png.latex?%20P(O%20%5Ccap%20%5Coverline%7BR%7D)%20=%20P(O)%20%5Ctimes%20P_O(%5Coverline%7BR%7D)%20"> Nous savons que <img src="https://latex.codecogs.com/png.latex?P(O)%20=%200,42">. De plus, comme <img src="https://latex.codecogs.com/png.latex?P_O(R)%20=%200,83">, on en déduit : <img src="https://latex.codecogs.com/png.latex?%20P_O(%5Coverline%7BR%7D)%20=%201%20-%20P_O(R)%20=%201%20-%200,83%20=%200,17%20"> Donc : <img src="https://latex.codecogs.com/png.latex?%20P(O%20%5Ccap%20%5Coverline%7BR%7D)%20=%200,42%20%5Ctimes%200,17%20=%200,0714%20"> La probabilité qu’un individu choisi au hasard soit donneur universel est bien de 0,0714.</p>
+<hr>
+</section>
+<section id="étude-dun-échantillon-de-100-personnes" class="level4">
+<h4 class="anchored" data-anchor-id="étude-dun-échantillon-de-100-personnes">5. Étude d’un échantillon de 100 personnes</h4>
+<p><strong>a. Justification de la loi binomiale</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Loi binomiale">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Loi binomiale
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une variable aléatoire <img src="https://latex.codecogs.com/png.latex?X"> suit une loi binomiale <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BB%7D(n,%20p)"> si elle compte le nombre de succès dans une série de <img src="https://latex.codecogs.com/png.latex?n"> épreuves de Bernoulli identiques et indépendantes, où <img src="https://latex.codecogs.com/png.latex?p"> est la probabilité de succès à chaque épreuve.</p>
+</div>
+</div>
+<p>Considérons l’épreuve de Bernoulli suivante : “on choisit une personne au hasard dans la population et on regarde si elle est donneur universel”.</p>
+<ul>
+<li>Le <strong>succès</strong> est l’événement “la personne est un donneur universel”. La probabilité de succès est <img src="https://latex.codecogs.com/png.latex?p%20=%20P(O%20%5Ccap%20%5Coverline%7BR%7D)%20=%200,0714"> (calculée en 4.).</li>
+<li>L’<strong>échec</strong> est l’événement contraire, de probabilité <img src="https://latex.codecogs.com/png.latex?1-p">.</li>
+</ul>
+<p>On répète cette épreuve <img src="https://latex.codecogs.com/png.latex?n=100"> fois. L’énoncé précise que “la population est suffisamment grande pour assimiler ce choix à un tirage avec remise”. Cette condition garantit que les tirages sont <strong>identiques et indépendants</strong>.</p>
+<p>La variable aléatoire <img src="https://latex.codecogs.com/png.latex?X">, qui compte le nombre de donneurs universels (nombre de succès) dans l’échantillon de 100 personnes, suit donc une <strong>loi binomiale de paramètres <img src="https://latex.codecogs.com/png.latex?n=100"> et <img src="https://latex.codecogs.com/png.latex?p=0,0714"></strong>. On note <img src="https://latex.codecogs.com/png.latex?X%20%5Csim%20%5Cmathcal%7BB%7D(100;%200,0714)">.</p>
+<p><strong>b. Probabilité d’avoir au plus 7 donneurs universels</strong></p>
+<p>On cherche à calculer <img src="https://latex.codecogs.com/png.latex?P(X%20%5Cleqslant%207)">. <img src="https://latex.codecogs.com/png.latex?%20P(X%20%5Cleqslant%207)%20=%20%5Csum_%7Bk=0%7D%5E%7B7%7D%20P(X=k)%20=%20%5Csum_%7Bk=0%7D%5E%7B7%7D%20%5Cbinom%7B100%7D%7Bk%7D%20(0,0714)%5Ek%20(1-0,0714)%5E%7B100-k%7D%20"> À l’aide de la fonction de répartition de la loi binomiale de la calculatrice (<code>binomFRep</code> ou <code>BinomialCD</code>), on obtient : <img src="https://latex.codecogs.com/png.latex?%20P(X%20%5Cleqslant%207)%20%5Capprox%200,5735%20"> Arrondie à <img src="https://latex.codecogs.com/png.latex?10%5E%7B-3%7D"> près, la probabilité est de <strong>0,574</strong>.</p>
+<p><strong>c.&nbsp;Espérance et variance de X</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Formules : Espérance et Variance de la loi binomiale">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Formules : Espérance et Variance de la loi binomiale
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <img src="https://latex.codecogs.com/png.latex?X%20%5Csim%20%5Cmathcal%7BB%7D(n,%20p)">, alors : * Espérance : <img src="https://latex.codecogs.com/png.latex?E(X)%20=%20n%20%5Ctimes%20p"> * Variance : <img src="https://latex.codecogs.com/png.latex?V(X)%20=%20n%20%5Ctimes%20p%20%5Ctimes%20(1-p)"></p>
+</div>
+</div>
+<p>Appliquons ces formules :</p>
+<ul>
+<li><strong>Espérance :</strong> <img src="https://latex.codecogs.com/png.latex?%20E(X)%20=%20100%20%5Ctimes%200,0714%20=%207,14%20"></li>
+<li><strong>Variance :</strong> <img src="https://latex.codecogs.com/png.latex?%20V(X)%20=%20100%20%5Ctimes%200,0714%20%5Ctimes%20(1%20-%200,0714)%20=%207,14%20%5Ctimes%200,9286%20=%206,630444%20"> Arrondie à <img src="https://latex.codecogs.com/png.latex?10%5E%7B-2%7D"> près, la variance est bien <img src="https://latex.codecogs.com/png.latex?V(X)%20%5Capprox%206,63">.</li>
+</ul>
+</section>
+<section id="étude-sur-n-villes" class="level4">
+<h4 class="anchored" data-anchor-id="étude-sur-n-villes">6. Étude sur N villes</h4>
+<p><strong>a. Représentation de la variable aléatoire <img src="https://latex.codecogs.com/png.latex?M_N"></strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?X_i"> est le nombre de donneurs universels dans un échantillon de 100 personnes de la ville <img src="https://latex.codecogs.com/png.latex?i">. La variable aléatoire <img src="https://latex.codecogs.com/png.latex?M_N%20=%20%5Cfrac%7BX_1%20+%20X_2%20+%20%5Cdots%20+%20X_N%7D%7BN%7D"> est la <strong>moyenne arithmétique</strong> des nombres de donneurs universels observés dans les échantillons des <img src="https://latex.codecogs.com/png.latex?N"> villes. Elle représente donc le <strong>nombre moyen de donneurs universels par échantillon de 100 personnes</strong> sur l’ensemble des <img src="https://latex.codecogs.com/png.latex?N"> collectes.</p>
+<p><strong>b. Espérance de <img src="https://latex.codecogs.com/png.latex?M_N"></strong></p>
+<p>Par linéarité de l’espérance, on a : <img src="https://latex.codecogs.com/png.latex?%20E(M_N)%20=%20E%5Cleft(%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bi=1%7D%5E%7BN%7D%20X_i%5Cright)%20=%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum_%7Bi=1%7D%5E%7BN%7D%20E(X_i)%20"> On nous dit que pour tout <img src="https://latex.codecogs.com/png.latex?i">, <img src="https://latex.codecogs.com/png.latex?E(X_i)%20=%207,14">. Donc : <img src="https://latex.codecogs.com/png.latex?%20E(M_N)%20=%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum_%7Bi=1%7D%5E%7BN%7D%207,14%20=%20%5Cfrac%7B1%7D%7BN%7D%20%5Ctimes%20(N%20%5Ctimes%207,14)%20=%207,14%20"> L’espérance de la moyenne est égale à l’espérance de la variable de départ.</p>
+<p><strong>c.&nbsp;Variance de <img src="https://latex.codecogs.com/png.latex?M_N"></strong></p>
+<p>Les variables <img src="https://latex.codecogs.com/png.latex?X_i"> sont supposées indépendantes. Pour la variance, on a <img src="https://latex.codecogs.com/png.latex?V(aY)%20=%20a%5E2%20V(Y)"> et la variance d’une somme de variables indépendantes est la somme de leurs variances. <img src="https://latex.codecogs.com/png.latex?%20V(M_N)%20=%20V%5Cleft(%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bi=1%7D%5E%7BN%7D%20X_i%5Cright)%20=%20%5Cleft(%5Cfrac%7B1%7D%7BN%7D%5Cright)%5E2%20V%5Cleft(%5Csum_%7Bi=1%7D%5E%7BN%7D%20X_i%5Cright)%20"> <img src="https://latex.codecogs.com/png.latex?%20V(M_N)%20=%20%5Cfrac%7B1%7D%7BN%5E2%7D%20%5Csum_%7Bi=1%7D%5E%7BN%7D%20V(X_i)%20%5Cquad%20%5Ctext%7B(car%20les%20%7D%20X_i%20%5Ctext%7B%20sont%20ind%C3%A9pendantes)%7D%20"> On nous dit que pour tout <img src="https://latex.codecogs.com/png.latex?i">, <img src="https://latex.codecogs.com/png.latex?V(X_i)%20=%206,63">. Donc : <img src="https://latex.codecogs.com/png.latex?%20V(M_N)%20=%20%5Cfrac%7B1%7D%7BN%5E2%7D%20%5Csum_%7Bi=1%7D%5E%7BN%7D%206,63%20=%20%5Cfrac%7B1%7D%7BN%5E2%7D%20%5Ctimes%20(N%20%5Ctimes%206,63)%20=%20%5Cfrac%7B6,63%7D%7BN%7D%20"></p>
+<p><strong>d.&nbsp;Inégalité de Bienaymé-Tchebychev</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Inégalité de Bienaymé-Tchebychev">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Inégalité de Bienaymé-Tchebychev
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour une variable aléatoire <img src="https://latex.codecogs.com/png.latex?Y"> d’espérance <img src="https://latex.codecogs.com/png.latex?E(Y)"> et de variance <img src="https://latex.codecogs.com/png.latex?V(Y)">, et pour tout réel <img src="https://latex.codecogs.com/png.latex?%5Cepsilon%20%3E%200">, on a : <img src="https://latex.codecogs.com/png.latex?%20P(%7CY%20-%20E(Y)%7C%20%5Cgeqslant%20%5Cepsilon)%20%5Cleqslant%20%5Cfrac%7BV(Y)%7D%7B%5Cepsilon%5E2%7D%20"> Ou, sous sa forme complémentaire souvent plus utile : <img src="https://latex.codecogs.com/png.latex?%20P(%7CY%20-%20E(Y)%7C%20%3C%20%5Cepsilon)%20%5Cgeqslant%201%20-%20%5Cfrac%7BV(Y)%7D%7B%5Cepsilon%5E2%7D%20"> Cette inégalité donne une borne inférieure pour la probabilité que la variable aléatoire se trouve dans un intervalle centré sur son espérance.</p>
+</div>
+</div>
+<p>On cherche la plus petite valeur de <img src="https://latex.codecogs.com/png.latex?N"> telle que <img src="https://latex.codecogs.com/png.latex?P(7%20%3C%20M_N%20%3C%207,28)%20%5Cgeqslant%200,95">. L’espérance de <img src="https://latex.codecogs.com/png.latex?M_N"> est <img src="https://latex.codecogs.com/png.latex?E(M_N)%20=%207,14">. Réécrivons l’inégalité autour de cette espérance : <img src="https://latex.codecogs.com/png.latex?%207%20%3C%20M_N%20%3C%207,28%20%5Ciff%207,14%20-%200,14%20%3C%20M_N%20%3C%207,14%20+%200,14%20"> Ceci est équivalent à : <img src="https://latex.codecogs.com/png.latex?%20%7CM_N%20-%207,14%7C%20%3C%200,14%20%5Cquad%20%5Ctext%7Bou%7D%20%5Cquad%20%7CM_N%20-%20E(M_N)%7C%20%3C%200,14%20"> On peut donc appliquer l’inégalité de Bienaymé-Tchebychev avec <img src="https://latex.codecogs.com/png.latex?Y=M_N"> et <img src="https://latex.codecogs.com/png.latex?%5Cepsilon%20=%200,14">. <img src="https://latex.codecogs.com/png.latex?%20P(%7CM_N%20-%20E(M_N)%7C%20%3C%200,14)%20%5Cgeqslant%201%20-%20%5Cfrac%7BV(M_N)%7D%7B0,14%5E2%7D%20"> On sait que <img src="https://latex.codecogs.com/png.latex?V(M_N)%20=%20%5Cfrac%7B6,63%7D%7BN%7D">. Donc : <img src="https://latex.codecogs.com/png.latex?%20P(7%20%3C%20M_N%20%3C%207,28)%20%5Cgeqslant%201%20-%20%5Cfrac%7B6,63/N%7D%7B0,14%5E2%7D%20=%201%20-%20%5Cfrac%7B6,63%7D%7BN%20%5Ctimes%200,0196%7D%20"> Pour que la condition <img src="https://latex.codecogs.com/png.latex?P(7%20%3C%20M_N%20%3C%207,28)%20%5Cgeqslant%200,95"> soit vérifiée, il suffit que la borne inférieure que nous avons trouvée soit supérieure ou égale à 0,95. On cherche donc <img src="https://latex.codecogs.com/png.latex?N"> tel que : <img src="https://latex.codecogs.com/png.latex?%201%20-%20%5Cfrac%7B6,63%7D%7B0,0196%20%5Ctimes%20N%7D%20%5Cgeqslant%200,95%20"> <img src="https://latex.codecogs.com/png.latex?%200,05%20%5Cgeqslant%20%5Cfrac%7B6,63%7D%7B0,0196%20%5Ctimes%20N%7D%20"> Comme <img src="https://latex.codecogs.com/png.latex?N"> est un entier positif, on peut multiplier les deux côtés par <img src="https://latex.codecogs.com/png.latex?0,0196%20%5Ctimes%20N"> sans changer le sens de l’inégalité : <img src="https://latex.codecogs.com/png.latex?%200,05%20%5Ctimes%200,0196%20%5Ctimes%20N%20%5Cgeqslant%206,63%20"> <img src="https://latex.codecogs.com/png.latex?%200,00098%20%5Ctimes%20N%20%5Cgeqslant%206,63%20"> <img src="https://latex.codecogs.com/png.latex?%20N%20%5Cgeqslant%20%5Cfrac%7B6,63%7D%7B0,00098%7D%20"> <img src="https://latex.codecogs.com/png.latex?%20N%20%5Cgeqslant%206765,306...%20"> Puisque <img src="https://latex.codecogs.com/png.latex?N"> doit être un entier, la plus petite valeur de <img src="https://latex.codecogs.com/png.latex?N"> qui satisfait cette condition est <img src="https://latex.codecogs.com/png.latex?N%20=%206766">.</p>
+<p>La plus petite valeur de <img src="https://latex.codecogs.com/png.latex?N"> est <strong>6766</strong>.</p>
+</section>
+</section>
+<section id="corrigé-de-lexercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="corrigé-de-lexercice-2">Corrigé de l’exercice 2</h2>
+<section id="partie-a-lectures-graphiques" class="level3">
+<h3 class="anchored" data-anchor-id="partie-a-lectures-graphiques">Partie A : Lectures graphiques</h3>
+<p>On répond aux questions en s’appuyant sur les informations visuelles fournies par le graphique.</p>
+<p><strong>1. Déterminer le nombre dérivé <img src="https://latex.codecogs.com/png.latex?f'(1)">.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Interprétation graphique du nombre dérivé">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Interprétation graphique du nombre dérivé
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le nombre dérivé <img src="https://latex.codecogs.com/png.latex?f'(a)"> d’une fonction <img src="https://latex.codecogs.com/png.latex?f"> en un point d’abscisse <img src="https://latex.codecogs.com/png.latex?a"> est égal au coefficient directeur (la pente) de la tangente à la courbe de <img src="https://latex.codecogs.com/png.latex?f"> en ce point.</p>
+</div>
+</div>
+<p>Le nombre <img src="https://latex.codecogs.com/png.latex?f'(1)"> est le coefficient directeur de la tangente <img src="https://latex.codecogs.com/png.latex?T_A"> à la courbe <img src="https://latex.codecogs.com/png.latex?C_f"> au point <img src="https://latex.codecogs.com/png.latex?A(1;%202)">. Pour calculer ce coefficient directeur, on utilise les coordonnées de deux points par lesquels passe la droite <img src="https://latex.codecogs.com/png.latex?T_A">. Le graphique nous indique que <img src="https://latex.codecogs.com/png.latex?T_A"> passe par les points <img src="https://latex.codecogs.com/png.latex?A(1;%202)"> et <img src="https://latex.codecogs.com/png.latex?C(3;%200)">. Le coefficient directeur est donc : <img src="https://latex.codecogs.com/png.latex?%20m%20=%20%5Cfrac%7By_C%20-%20y_A%7D%7Bx_C%20-%20x_A%7D%20=%20%5Cfrac%7B0%20-%202%7D%7B3%20-%201%7D%20=%20%5Cfrac%7B-2%7D%7B2%7D%20=%20-1%20"></p>
+<p>Ainsi, <strong><img src="https://latex.codecogs.com/png.latex?f'(1)%20=%20-1"></strong>.</p>
+<p><strong>2. Combien de solutions l’équation <img src="https://latex.codecogs.com/png.latex?f'(x)%20=%200"> admet-elle dans l’intervalle <img src="https://latex.codecogs.com/png.latex?%5D0;%203%5D"> ?</strong></p>
+<p>L’équation <img src="https://latex.codecogs.com/png.latex?f'(x)%20=%200"> a pour solutions les abscisses des points de la courbe <img src="https://latex.codecogs.com/png.latex?C_f"> où la tangente est horizontale.</p>
+<p>En observant le graphique sur l’intervalle <img src="https://latex.codecogs.com/png.latex?%5D0;%203%5D">, on voit que la fonction <img src="https://latex.codecogs.com/png.latex?f"> est d’abord croissante, puis décroissante. Elle admet donc un maximum local entre <img src="https://latex.codecogs.com/png.latex?x=0,2"> et <img src="https://latex.codecogs.com/png.latex?x=1">. En ce point, la tangente à la courbe <img src="https://latex.codecogs.com/png.latex?C_f"> est horizontale.</p>
+<p>De plus, la fonction est à nouveau croissante ensuite. Elle admet donc un minimum local entre <img src="https://latex.codecogs.com/png.latex?x=1"> et <img src="https://latex.codecogs.com/png.latex?x=e">. En ce point, la tangente est également horizontale.</p>
+<p>L’équation <img src="https://latex.codecogs.com/png.latex?f'(x)%20=%200"> admet donc <strong>deux solutions</strong> dans l’intervalle <img src="https://latex.codecogs.com/png.latex?%5D0;%203%5D">.</p>
+<p><strong>3. Quel est le signe de <img src="https://latex.codecogs.com/png.latex?f''(0,2)"> ?</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Lien entre signe de $f''$ et convexité">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Lien entre signe de <img src="https://latex.codecogs.com/png.latex?f''"> et convexité
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Si <img src="https://latex.codecogs.com/png.latex?f''(x)%20%3E%200">, la fonction <img src="https://latex.codecogs.com/png.latex?f"> est convexe en <img src="https://latex.codecogs.com/png.latex?x">.</li>
+<li>Si <img src="https://latex.codecogs.com/png.latex?f''(x)%20%3C%200">, la fonction <img src="https://latex.codecogs.com/png.latex?f"> est concave en <img src="https://latex.codecogs.com/png.latex?x">.</li>
+<li>Si <img src="https://latex.codecogs.com/png.latex?f''"> s’annule en <img src="https://latex.codecogs.com/png.latex?x"> en changeant de signe, il y a un point d’inflexion en <img src="https://latex.codecogs.com/png.latex?x">.</li>
+</ul>
+</div>
+</div>
+<p>Sur le graphique, pour <img src="https://latex.codecogs.com/png.latex?x=0,2">, on observe que la courbe <img src="https://latex.codecogs.com/png.latex?C_f"> est concave.</p>
+<p>Donc, le signe de la dérivée seconde <img src="https://latex.codecogs.com/png.latex?f''(0,2)"> est négatif.</p>
+<hr>
+</section>
+<section id="partie-b-étude-de-la-fonction-f" class="level3">
+<h3 class="anchored" data-anchor-id="partie-b-étude-de-la-fonction-f">Partie B : Étude de la fonction f</h3>
+<p>On admet que <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20x(2(%5Cln%20x)%5E2%20-%203%20%5Cln%20x%20+%202)">.</p>
+<p><strong>1. Résoudre l’équation <img src="https://latex.codecogs.com/png.latex?2X%5E2%20-%203X%20+%202%20=%200"> et en déduire que <img src="https://latex.codecogs.com/png.latex?C_f"> ne coupe pas l’axe des abscisses.</strong></p>
+<p>Pour résoudre l’équation du second degré <img src="https://latex.codecogs.com/png.latex?2X%5E2%20-%203X%20+%202%20=%200">, on calcule le discriminant <img src="https://latex.codecogs.com/png.latex?%5CDelta">. <img src="https://latex.codecogs.com/png.latex?%20%5CDelta%20=%20b%5E2%20-%204ac%20=%20(-3)%5E2%20-%204(2)(2)%20=%209%20-%2016%20=%20-7%20"></p>
+<p>Comme <img src="https://latex.codecogs.com/png.latex?%5CDelta%20%3C%200">, l’équation n’a pas de solution réelle. Le polynôme <img src="https://latex.codecogs.com/png.latex?P(X)%20=%202X%5E2%20-%203X%20+%202"> est donc de signe constant. Son signe est celui de son coefficient dominant <img src="https://latex.codecogs.com/png.latex?a=2">, qui est positif.</p>
+<p>Ainsi, pour tout réel <img src="https://latex.codecogs.com/png.latex?X">, <img src="https://latex.codecogs.com/png.latex?2X%5E2%20-%203X%20+%202%20%3E%200">.</p>
+<p>Pour déduire que <img src="https://latex.codecogs.com/png.latex?C_f"> ne coupe pas l’axe des abscisses, on étudie le signe de <img src="https://latex.codecogs.com/png.latex?f(x)">. <img src="https://latex.codecogs.com/png.latex?%20f(x)%20=%20x(2(%5Cln%20x)%5E2%20-%203%20%5Cln%20x%20+%202)%20"></p>
+<p>La fonction est définie sur <img src="https://latex.codecogs.com/png.latex?%5D0;%20+%5Cinfty%5B">, donc <img src="https://latex.codecogs.com/png.latex?x%20%3E%200">.</p>
+<p>Le second facteur, <img src="https://latex.codecogs.com/png.latex?2(%5Cln%20x)%5E2%20-%203%20%5Cln%20x%20+%202">, peut s’écrire <img src="https://latex.codecogs.com/png.latex?P(%5Cln%20x)">. Comme nous avons montré que <img src="https://latex.codecogs.com/png.latex?P(X)%20%3E%200"> pour tout <img src="https://latex.codecogs.com/png.latex?X">, on a <img src="https://latex.codecogs.com/png.latex?2(%5Cln%20x)%5E2%20-%203%20%5Cln%20x%20+%202%20%3E%200"> pour tout <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5D0;%20+%5Cinfty%5B">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?f(x)"> est le produit de deux termes strictement positifs, donc <img src="https://latex.codecogs.com/png.latex?f(x)%20%3E%200"> pour tout <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5D0;%20+%5Cinfty%5B">.</p>
+<p>Puisque <img src="https://latex.codecogs.com/png.latex?f(x)"> ne s’annule jamais et est toujours positive, <strong>la courbe <img src="https://latex.codecogs.com/png.latex?C_f"> ne coupe pas l’axe des abscisses</strong>.</p>
+<p><strong>2. Déterminer la limite de <img src="https://latex.codecogs.com/png.latex?f"> en <img src="https://latex.codecogs.com/png.latex?+%5Cinfty">.</strong></p>
+<p>On cherche <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bx%20%5Cto%20+%5Cinfty%7D%20x(2(%5Cln%20x)%5E2%20-%203%20%5Cln%20x%20+%202)">.</p>
+<p>On a :</p>
+<ul>
+<li><p><img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bx%20%5Cto%20+%5Cinfty%7D%20x%20=%20+%5Cinfty"></p></li>
+<li><p>Pour le second facteur, on pose <img src="https://latex.codecogs.com/png.latex?X%20=%20%5Cln%20x">. Quand <img src="https://latex.codecogs.com/png.latex?x%20%5Cto%20+%5Cinfty">, <img src="https://latex.codecogs.com/png.latex?X%20%5Cto%20+%5Cinfty">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bx%20%5Cto%20+%5Cinfty%7D%20(2(%5Cln%20x)%5E2%20-%203%20%5Cln%20x%20+%202)%20=%20%5Clim_%7BX%20%5Cto%20+%5Cinfty%7D%20(2X%5E2%20-%203X%20+%202)">.</p>
+<p>La limite d’un polynôme en l’infini est celle de son terme de plus haut degré.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Clim_%7BX%20%5Cto%20+%5Cinfty%7D%20(2X%5E2)%20=%20+%5Cinfty">.</p></li>
+</ul>
+<p>Par produit des limites, on obtient : <img src="https://latex.codecogs.com/png.latex?%20%5Clim_%7Bx%20%5Cto%20+%5Cinfty%7D%20f(x)%20=%20(+%5Cinfty)%20%5Ctimes%20(+%5Cinfty)%20=%20+%5Cinfty%20"></p>
+<p><strong>3. On admet que <img src="https://latex.codecogs.com/png.latex?f'(x)%20=%202(%5Cln%20x)%5E2%20+%20%5Cln%20x%20-%201">.</strong></p>
+<p><strong>a. Montrer que <img src="https://latex.codecogs.com/png.latex?f''(x)%20=%20%5Cfrac%7B1%7D%7Bx%7D(4%20%5Cln%20x%20+%201)">.</strong></p>
+<p>Pour trouver <img src="https://latex.codecogs.com/png.latex?f''(x)">, on dérive <img src="https://latex.codecogs.com/png.latex?f'(x)">.</p>
+<p>En utilisant la dérivée de <img src="https://latex.codecogs.com/png.latex?u%5E2"> qui est <img src="https://latex.codecogs.com/png.latex?2uu'"> et la dérivée de <img src="https://latex.codecogs.com/png.latex?%5Cln%20x"> qui est <img src="https://latex.codecogs.com/png.latex?1/x"> : <img src="https://latex.codecogs.com/png.latex?%20f''(x)%20=%202%20%5Ctimes%20(2(%5Cln%20x)%20%5Ctimes%20%5Cfrac%7B1%7D%7Bx%7D)%20+%20%5Cfrac%7B1%7D%7Bx%7D%20-%200%20"> <img src="https://latex.codecogs.com/png.latex?%20f''(x)%20=%20%5Cfrac%7B4%20%5Cln%20x%7D%7Bx%7D%20+%20%5Cfrac%7B1%7D%7Bx%7D%20=%20%5Cfrac%7B4%20%5Cln%20x%20+%201%7D%7Bx%7D%20"></p>
+<p>Ce qui est bien l’expression attendue.</p>
+<p><strong>b. Étudier la convexité de <img src="https://latex.codecogs.com/png.latex?f"> et préciser l’abscisse du point d’inflexion.</strong></p>
+<p>On étudie le signe de <img src="https://latex.codecogs.com/png.latex?f''(x)%20=%20%5Cfrac%7B4%20%5Cln%20x%20+%201%7D%7Bx%7D"> sur <img src="https://latex.codecogs.com/png.latex?%5D0;%20+%5Cinfty%5B">.</p>
+<p>Sur cet intervalle, le dénominateur <img src="https://latex.codecogs.com/png.latex?x"> est toujours positif. Le signe de <img src="https://latex.codecogs.com/png.latex?f''(x)"> est donc le même que celui de son numérateur <img src="https://latex.codecogs.com/png.latex?4%20%5Cln%20x%20+%201">.</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?4%20%5Cln%20x%20+%201%20=%200%20%5Ciff%20%5Cln%20x%20=%20-%5Cfrac%7B1%7D%7B4%7D%20%5Ciff%20x%20=%20e%5E%7B-1/4%7D"></li>
+<li><img src="https://latex.codecogs.com/png.latex?4%20%5Cln%20x%20+%201%20%3E%200%20%5Ciff%20%5Cln%20x%20%3E%20-%5Cfrac%7B1%7D%7B4%7D%20%5Ciff%20x%20%3E%20e%5E%7B-1/4%7D"></li>
+</ul>
+<p>On peut dresser un tableau de signes :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?x"></th>
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?0"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?e%5E%7B-1/4%7D"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?+%5Cinfty"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Signe de <img src="https://latex.codecogs.com/png.latex?f''(x)"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?-"></td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?0"></td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?+"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Convexité de <img src="https://latex.codecogs.com/png.latex?f"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Concave</td>
+<td style="text-align: center;">Point d’inflexion</td>
+<td style="text-align: center;">Convexe</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>La fonction <img src="https://latex.codecogs.com/png.latex?f"> est <strong>concave</strong> sur <img src="https://latex.codecogs.com/png.latex?%5D0,%20e%5E%7B-1/4%7D%5D">.</li>
+<li>La fonction <img src="https://latex.codecogs.com/png.latex?f"> est <strong>convexe</strong> sur <img src="https://latex.codecogs.com/png.latex?%5Be%5E%7B-1/4%7D,%20+%5Cinfty%5B">.</li>
+<li>La dérivée seconde s’annule et change de signe en <img src="https://latex.codecogs.com/png.latex?x%20=%20e%5E%7B-1/4%7D">. La courbe <img src="https://latex.codecogs.com/png.latex?C_f"> admet donc un <strong>point d’inflexion d’abscisse <img src="https://latex.codecogs.com/png.latex?e%5E%7B-1/4%7D"></strong>.</li>
+</ul>
+<p><strong>c.&nbsp;Montrer que <img src="https://latex.codecogs.com/png.latex?C_f"> est au-dessus de <img src="https://latex.codecogs.com/png.latex?T_B"> sur <img src="https://latex.codecogs.com/png.latex?%5B1;%20+%5Cinfty%5B">.</strong></p>
+<p>Une propriété des fonctions convexes est que leur courbe représentative est située au-dessus de chacune de leurs tangentes.</p>
+<p>D’après la question précédente, la fonction <img src="https://latex.codecogs.com/png.latex?f"> est convexe sur l’intervalle <img src="https://latex.codecogs.com/png.latex?%5Be%5E%7B-1/4%7D,%20+%5Cinfty%5B">.</p>
+<p>On a <img src="https://latex.codecogs.com/png.latex?e%20%5Capprox%202,718">, donc <img src="https://latex.codecogs.com/png.latex?e%5E%7B-1/4%7D%20%3C%201">.</p>
+<p>L’intervalle <img src="https://latex.codecogs.com/png.latex?%5B1,%20+%5Cinfty%5B"> est donc inclus dans l’intervalle de convexité <img src="https://latex.codecogs.com/png.latex?%5Be%5E%7B-1/4%7D,%20+%5Cinfty%5B">.</p>
+<p>Puisque <img src="https://latex.codecogs.com/png.latex?f"> est convexe sur <img src="https://latex.codecogs.com/png.latex?%5B1,%20+%5Cinfty%5B">, sa courbe <img src="https://latex.codecogs.com/png.latex?C_f"> est au-dessus de toutes ses tangentes sur cet intervalle. La droite <img src="https://latex.codecogs.com/png.latex?T_B"> est la tangente au point d’abscisse <img src="https://latex.codecogs.com/png.latex?e">, et <img src="https://latex.codecogs.com/png.latex?e%20%5Cin%20%5B1,%20+%5Cinfty%5B">.</p>
+<p>Par conséquent, <strong>la courbe <img src="https://latex.codecogs.com/png.latex?C_f"> est au-dessus de la tangente <img src="https://latex.codecogs.com/png.latex?T_B"> sur l’intervalle <img src="https://latex.codecogs.com/png.latex?%5B1;%20+%5Cinfty%5B"></strong>.</p>
+<hr>
+</section>
+<section id="partie-c-calcul-daire" class="level3">
+<h3 class="anchored" data-anchor-id="partie-c-calcul-daire">Partie C : Calcul d’aire</h3>
+<p><strong>1. Justifier que la tangente <img src="https://latex.codecogs.com/png.latex?T_B"> a pour équation réduite <img src="https://latex.codecogs.com/png.latex?y%20=%202x%20-%20e">.</strong></p>
+<p>L’équation de la tangente à <img src="https://latex.codecogs.com/png.latex?C_f"> au point d’abscisse <img src="https://latex.codecogs.com/png.latex?a"> est <img src="https://latex.codecogs.com/png.latex?y%20=%20f'(a)(x-a)%20+%20f(a)">.</p>
+<p>Ici, le point est <img src="https://latex.codecogs.com/png.latex?B(e;%20e)">, donc <img src="https://latex.codecogs.com/png.latex?a=e">.</p>
+<ul>
+<li>Calculons <img src="https://latex.codecogs.com/png.latex?f(e)">: <img src="https://latex.codecogs.com/png.latex?f(e)%20=%20e(2(%5Cln%20e)%5E2%20-%203%20%5Cln%20e%20+%202)%20=%20e(2(1)%5E2%20-%203(1)%20+%202)%20=%20e(2-3+2)%20=%20e">.</li>
+<li>Calculons <img src="https://latex.codecogs.com/png.latex?f'(e)">: <img src="https://latex.codecogs.com/png.latex?f'(e)%20=%202(%5Cln%20e)%5E2%20+%20%5Cln%20e%20-%201%20=%202(1)%5E2%20+%201%20-%201%20=%202">.</li>
+</ul>
+<p>L’équation de la tangente <img src="https://latex.codecogs.com/png.latex?T_B"> est donc : <img src="https://latex.codecogs.com/png.latex?%20y%20=%202(x%20-%20e)%20+%20e%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20y%20=%202x%20-%202e%20+%20e%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20y%20=%202x%20-%20e%20"> Ceci justifie l’équation donnée.</p>
+<p><strong>2. Montrer que <img src="https://latex.codecogs.com/png.latex?%5Cint_1%5Ee%20x%20%5Cln%20x%20%5C,%20dx%20=%20%5Cfrac%7Be%5E2+1%7D%7B4%7D">.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Formule : Intégration par parties">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Formule : Intégration par parties
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Soient <img src="https://latex.codecogs.com/png.latex?u"> et <img src="https://latex.codecogs.com/png.latex?v"> deux fonctions dérivables et de dérivée continue sur un intervalle <img src="https://latex.codecogs.com/png.latex?%5Ba,%20b%5D">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cint_a%5Eb%20u(x)v'(x)%20%5C,%20dx%20=%20%5Bu(x)v(x)%5D_a%5Eb%20-%20%5Cint_a%5Eb%20u'(x)v(x)%20%5C,%20dx%20"></p>
+</div>
+</div>
+<p>On pose :</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?u(x)%20=%20%5Cln%20x%20%5Cimplies%20u'(x)%20=%20%5Cfrac%7B1%7D%7Bx%7D"></li>
+<li><img src="https://latex.codecogs.com/png.latex?v'(x)%20=%20x%20%5Cimplies%20v(x)%20=%20%5Cfrac%7Bx%5E2%7D%7B2%7D"></li>
+</ul>
+<p>Les fonctions <img src="https://latex.codecogs.com/png.latex?u"> et <img src="https://latex.codecogs.com/png.latex?v"> sont bien dérivables sur <img src="https://latex.codecogs.com/png.latex?%5B1,%20e%5D">. En appliquant la formule :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cint_1%5Ee%20x%20%5Cln%20x%20%5C,%20dx%20=%20%5Cleft%5B%20(%5Cln%20x)%20%5Cfrac%7Bx%5E2%7D%7B2%7D%20%5Cright%5D_1%5Ee%20-%20%5Cint_1%5Ee%20%5Cfrac%7B1%7D%7Bx%7D%20%5Cfrac%7Bx%5E2%7D%7B2%7D%20%5C,%20dx%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20=%20%5Cleft(%20(%5Cln%20e)%20%5Cfrac%7Be%5E2%7D%7B2%7D%20-%20(%5Cln%201)%20%5Cfrac%7B1%5E2%7D%7B2%7D%20%5Cright)%20-%20%5Cint_1%5Ee%20%5Cfrac%7Bx%7D%7B2%7D%20%5C,%20dx%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20=%20%5Cleft(%201%20%5Ctimes%20%5Cfrac%7Be%5E2%7D%7B2%7D%20-%200%20%5Ctimes%20%5Cfrac%7B1%7D%7B2%7D%20%5Cright)%20-%20%5Cleft%5B%20%5Cfrac%7B1%7D%7B2%7D%20%5Cfrac%7Bx%5E2%7D%7B2%7D%20%5Cright%5D_1%5Ee%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20=%20%5Cfrac%7Be%5E2%7D%7B2%7D%20-%20%5Cleft%5B%20%5Cfrac%7Bx%5E2%7D%7B4%7D%20%5Cright%5D_1%5Ee%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20=%20%5Cfrac%7Be%5E2%7D%7B2%7D%20-%20%5Cleft(%20%5Cfrac%7Be%5E2%7D%7B4%7D%20-%20%5Cfrac%7B1%5E2%7D%7B4%7D%20%5Cright)%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20=%20%5Cfrac%7Be%5E2%7D%7B2%7D%20-%20%5Cfrac%7Be%5E2%7D%7B4%7D%20+%20%5Cfrac%7B1%7D%7B4%7D%20=%20%5Cfrac%7B2e%5E2%20-%20e%5E2%20+%201%7D%7B4%7D%20=%20%5Cfrac%7Be%5E2+1%7D%7B4%7D%20"></p>
+<p><strong>3. En déduire la valeur exacte de <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BA%7D"> en unité d’aire.</strong></p>
+<p>L’aire <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BA%7D"> est celle du domaine délimité par <img src="https://latex.codecogs.com/png.latex?C_f">, <img src="https://latex.codecogs.com/png.latex?T_B">, et les droites <img src="https://latex.codecogs.com/png.latex?x=1"> et <img src="https://latex.codecogs.com/png.latex?x=e">.</p>
+<p>Comme <img src="https://latex.codecogs.com/png.latex?C_f"> est au-dessus de <img src="https://latex.codecogs.com/png.latex?T_B"> sur <img src="https://latex.codecogs.com/png.latex?%5B1,%20e%5D">, l’aire est donnée par l’intégrale :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cint_1%5Ee%20(f(x)%20-%20y_%7BT_B%7D)%20%5C,%20dx%20=%20%5Cint_1%5Ee%20(f(x)%20-%20(2x-e))%20%5C,%20dx%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cint_1%5Ee%20(x(2(%5Cln%20x)%5E2%20-%203%5Cln%20x%20+%202)%20-%202x%20+%20e)%20%5C,%20dx%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cint_1%5Ee%20(2x(%5Cln%20x)%5E2%20-%203x%5Cln%20x%20+%202x%20-%202x%20+%20e)%20%5C,%20dx%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cint_1%5Ee%20(2x(%5Cln%20x)%5E2%20-%203x%5Cln%20x%20+%20e)%20%5C,%20dx%20"></p>
+<p>Par linéarité de l’intégrale :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%202%20%5Cint_1%5Ee%20x(%5Cln%20x)%5E2%20%5C,%20dx%20-%203%20%5Cint_1%5Ee%20x%5Cln%20x%20%5C,%20dx%20+%20%5Cint_1%5Ee%20e%20%5C,%20dx%20"></p>
+<p>On utilise les résultats admis et calculés :</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cint_1%5Ee%20x(%5Cln%20x)%5E2%20%5C,%20dx%20=%20%5Cfrac%7Be%5E2-1%7D%7B4%7D"> (admis)</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cint_1%5Ee%20x%5Cln%20x%20%5C,%20dx%20=%20%5Cfrac%7Be%5E2+1%7D%7B4%7D"> (calculé en C.2)</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Cint_1%5Ee%20e%20%5C,%20dx%20=%20%5Bex%5D_1%5Ee%20=%20e%20%5Ctimes%20e%20-%20e%20%5Ctimes%201%20=%20e%5E2%20-%20e"></li>
+</ul>
+<p>On remplace :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%202%20%5Cleft(%20%5Cfrac%7Be%5E2-1%7D%7B4%7D%20%5Cright)%20-%203%20%5Cleft(%20%5Cfrac%7Be%5E2+1%7D%7B4%7D%20%5Cright)%20+%20(e%5E2%20-%20e)%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cfrac%7B2e%5E2%20-%202%7D%7B4%7D%20-%20%5Cfrac%7B3e%5E2%20+%203%7D%7B4%7D%20+%20%5Cfrac%7B4(e%5E2%20-%20e)%7D%7B4%7D%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cfrac%7B(2e%5E2%20-%202)%20-%20(3e%5E2%20+%203)%20+%20(4e%5E2%20-%204e)%7D%7B4%7D%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cfrac%7B2e%5E2%20-%202%20-%203e%5E2%20-%203%20+%204e%5E2%20-%204e%7D%7B4%7D%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cfrac%7B(2-3+4)e%5E2%20-%204e%20+%20(-2-3)%7D%7B4%7D%20"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cmathcal%7BA%7D%20=%20%5Cfrac%7B3e%5E2%20-%204e%20-%205%7D%7B4%7D%20%5Ctext%7B%20unit%C3%A9s%20d'aire.%7D%20"></p>
+</section>
+</section>
+<section id="corrigé-de-lexercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="corrigé-de-lexercice-3">Corrigé de l’exercice 3</h2>
+<p><strong>1. On considère les points A(−1 ; 0 ; 5) et B(3; 2; −1).</strong></p>
+<p><strong>Affirmation 1 : Une représentation paramétrique de la droite (AB) est <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bcases%7D%20x%20=%203%20-%202t%20%5C%5C%20y%20=%202%20-%20t%20%5C%5C%20z%20=%20-1%20+%203t%20%5Cend%7Bcases%7D"> avec <img src="https://latex.codecogs.com/png.latex?t%20%5Cin%20%5Cmathbb%7BR%7D">.</strong></p>
+<p><strong>Affirmation 1 : VRAIE</strong></p>
+<p><strong>Justification :</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Représentation paramétrique d'une droite">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Représentation paramétrique d’une droite
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une représentation paramétrique d’une droite est définie par un point appartenant à cette droite et un vecteur directeur de cette droite. La droite passant par un point <img src="https://latex.codecogs.com/png.latex?P_0(x_0;%20y_0;%20z_0)"> et dirigée par un vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bu%7D(a;%20b;%20c)"> a pour représentation <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bcases%7D%20x%20=%20x_0%20+%20at%20%5C%5C%20y%20=%20y_0%20+%20bt%20%5C%5C%20z%20=%20z_0%20+%20ct%20%5Cend%7Bcases%7D"> avec <img src="https://latex.codecogs.com/png.latex?t%20%5Cin%20%5Cmathbb%7BR%7D">.</p>
+</div>
+</div>
+<p>La représentation paramétrique donnée est associée au point de coordonnées <img src="https://latex.codecogs.com/png.latex?(3;%202;%20-1)">, qui est le point B, et au vecteur directeur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bu%7D(-2;%20-1;%203)">.</p>
+<p>Pour vérifier si cette représentation est correcte pour la droite (AB), il suffit de s’assurer que le vecteur directeur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bu%7D"> est bien colinéaire au vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D">.</p>
+<p>Calculons les coordonnées du vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D"> : <img src="https://latex.codecogs.com/png.latex?%20%5Coverrightarrow%7BAB%7D%20%5Cbegin%7Bpmatrix%7D%20x_B%20-%20x_A%20%5C%5C%20y_B%20-%20y_A%20%5C%5C%20z_B%20-%20z_A%20%5Cend%7Bpmatrix%7D%20=%20%5Cbegin%7Bpmatrix%7D%203%20-%20(-1)%20%5C%5C%202%20-%200%20%5C%5C%20-1%20-%205%20%5Cend%7Bpmatrix%7D%20=%20%5Cbegin%7Bpmatrix%7D%204%20%5C%5C%202%20%5C%5C%20-6%20%5Cend%7Bpmatrix%7D%20"></p>
+<p>Comparons les vecteurs <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bu%7D(-2;%20-1;%203)"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D(4;%202;%20-6)">.</p>
+<p>On remarque que <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D%20=%20-2%20%5Ctimes%20%5Coverrightarrow%7Bu%7D">, car : <img src="https://latex.codecogs.com/png.latex?%20-2%20%5Ctimes%20(-2)%20=%204%20"> <img src="https://latex.codecogs.com/png.latex?%20-2%20%5Ctimes%20(-1)%20=%202%20"> <img src="https://latex.codecogs.com/png.latex?%20-2%20%5Ctimes%203%20=%20-6%20"> Les vecteurs <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bu%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D"> sont donc colinéaires.</p>
+<p>La représentation donnée utilise un point de la droite (le point B) et un vecteur directeur de la droite (le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bu%7D">). Elle est donc bien une représentation paramétrique de la droite (AB).</p>
+<hr>
+<p><strong>Affirmation 2 : Le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D(5;%20-2;%201)"> est normal au plan (OAB).</strong></p>
+<p><strong>Affirmation 2 : FAUSSE</strong></p>
+<p><strong>Justification :</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Vecteur normal à un plan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Vecteur normal à un plan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> est normal à un plan s’il est orthogonal à deux vecteurs non colinéaires de ce plan. On vérifie l’orthogonalité à l’aide du produit scalaire : deux vecteurs sont orthogonaux si leur produit scalaire est nul.</p>
+</div>
+</div>
+<p>Le plan (OAB) est dirigé par les vecteurs <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOA%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOB%7D"> (puisque O, A et B définissent le plan).</p>
+<p>Calculons les coordonnées de ces vecteurs :</p>
+<ul>
+<li>Le point O est l’origine, donc <img src="https://latex.codecogs.com/png.latex?O(0;%200;%200)">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOA%7D%20%5Cbegin%7Bpmatrix%7D%20-1%20-%200%20%5C%5C%200%20-%200%20%5C%5C%205%20-%200%20%5Cend%7Bpmatrix%7D%20=%20%5Cbegin%7Bpmatrix%7D%20-1%20%5C%5C%200%20%5C%5C%205%20%5Cend%7Bpmatrix%7D"></li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOB%7D%20%5Cbegin%7Bpmatrix%7D%203%20-%200%20%5C%5C%202%20-%200%20%5C%5C%20-1%20-%200%20%5Cend%7Bpmatrix%7D%20=%20%5Cbegin%7Bpmatrix%7D%203%20%5C%5C%202%20%5C%5C%20-1%20%5Cend%7Bpmatrix%7D"></li>
+</ul>
+<p>Ces deux vecteurs ne sont pas colinéaires. Vérifions si le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D(5;%20-2;%201)"> est orthogonal à <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOA%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOB%7D"> en calculant les produits scalaires.</p>
+<ul>
+<li><p>Produit scalaire avec <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOA%7D"> : <img src="https://latex.codecogs.com/png.latex?%20%5Coverrightarrow%7Bn%7D%20%5Ccdot%20%5Coverrightarrow%7BOA%7D%20=%20(5)(-1)%20+%20(-2)(0)%20+%20(1)(5)%20=%20-5%20+%200%20+%205%20=%200%20"> Le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> est bien orthogonal à <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOA%7D">.</p></li>
+<li><p>Produit scalaire avec <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOB%7D"> : <img src="https://latex.codecogs.com/png.latex?%20%5Coverrightarrow%7Bn%7D%20%5Ccdot%20%5Coverrightarrow%7BOB%7D%20=%20(5)(3)%20+%20(-2)(2)%20+%20(1)(-1)%20=%2015%20-%204%20-%201%20=%2010%20"> Le produit scalaire <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D%20%5Ccdot%20%5Coverrightarrow%7BOB%7D"> n’est pas nul.</p></li>
+</ul>
+<p>Puisque le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> n’est pas orthogonal au vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BOB%7D">, il n’est pas normal au plan (OAB).</p>
+<hr>
+<p><strong>2. On considère les droites <img src="https://latex.codecogs.com/png.latex?d"> et <img src="https://latex.codecogs.com/png.latex?d'">.</strong></p>
+<p><strong>Affirmation 3 : Les droites <img src="https://latex.codecogs.com/png.latex?d"> et <img src="https://latex.codecogs.com/png.latex?d'"> ne sont pas coplanaires.</strong></p>
+<p><strong>Affirmation 3 : FAUSSE</strong></p>
+<p><strong>Justification :</strong> Deux droites sont coplanaires si elles sont parallèles ou sécantes. Elles sont non coplanaires si elles ne sont ni parallèles ni sécantes.</p>
+<ul>
+<li><p><strong>Étape 1 : Vérifier si les droites sont parallèles.</strong></p>
+<p>Un vecteur directeur de la droite <img src="https://latex.codecogs.com/png.latex?d"> est <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bv_d%7D(1;%20-1;%202)">.</p>
+<p>Un vecteur directeur de la droite <img src="https://latex.codecogs.com/png.latex?d'"> est <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bv_%7Bd'%7D%7D(4;%204;%20-6)">.</p>
+<p>Pour que les droites soient parallèles, leurs vecteurs directeurs doivent être colinéaires. Vérifions s’il existe un réel <img src="https://latex.codecogs.com/png.latex?%5Clambda"> tel que <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bv_%7Bd'%7D%7D%20=%20%5Clambda%20%5Coverrightarrow%7Bv_d%7D">. <img src="https://latex.codecogs.com/png.latex?%20%5Cbegin%7Bcases%7D%204%20=%20%5Clambda%20%5Ctimes%201%20%5C%5C%204%20=%20%5Clambda%20%5Ctimes%20(-1)%20%5C%5C%20-6%20=%20%5Clambda%20%5Ctimes%202%20%5Cend%7Bcases%7D%20%5Cimplies%20%5Cbegin%7Bcases%7D%20%5Clambda%20=%204%20%5C%5C%20%5Clambda%20=%20-4%20%5C%5C%20%5Clambda%20=%20-3%20%5Cend%7Bcases%7D%20"> Le système n’a pas de solution. Les vecteurs ne sont pas colinéaires, donc les droites <img src="https://latex.codecogs.com/png.latex?d"> et <img src="https://latex.codecogs.com/png.latex?d'"> ne sont pas parallèles.</p></li>
+<li><p><strong>Étape 2 : Vérifier si les droites sont sécantes.</strong></p>
+<p>On cherche s’il existe un point d’intersection, c’est-à-dire un couple de réels <img src="https://latex.codecogs.com/png.latex?(k,%20s)"> tel que :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Cbegin%7Bcases%7D%2015%20+%20k%20=%201%20+%204s%20%5Cquad%20(L_1)%20%5C%5C%208%20-%20k%20=%202%20+%204s%20%5Cquad%20(L_2)%20%5C%5C%20-6%20+%202k%20=%201%20-%206s%20%5Cquad%20(L_3)%20%5Cend%7Bcases%7D%20"> Simplifions les deux premières lignes : <img src="https://latex.codecogs.com/png.latex?%20%5Cbegin%7Bcases%7D%20k%20-%204s%20=%20-14%20%5C%5C%20-k%20-%204s%20=%20-6%20%5Cend%7Bcases%7D%20"> En additionnant ces deux lignes <img src="https://latex.codecogs.com/png.latex?(L_1+L_2)">, on obtient : <img src="https://latex.codecogs.com/png.latex?%20-8s%20=%20-20%20%5Cimplies%20s%20=%20%5Cfrac%7B-20%7D%7B-8%7D%20=%20%5Cfrac%7B5%7D%7B2%7D%20"> En remplaçant <img src="https://latex.codecogs.com/png.latex?s"> dans la première ligne : <img src="https://latex.codecogs.com/png.latex?%20k%20-%204%5Cleft(%5Cfrac%7B5%7D%7B2%7D%5Cright)%20=%20-14%20%5Cimplies%20k%20-%2010%20=%20-14%20%5Cimplies%20k%20=%20-4%20"> Nous avons trouvé un unique couple solution <img src="https://latex.codecogs.com/png.latex?(k,%20s)%20=%20(-4,%205/2)"> pour les deux premières équations. Vérifions s’il satisfait la troisième équation <img src="https://latex.codecogs.com/png.latex?(L_3)"> :</p>
+<ul>
+<li>Membre de gauche : <img src="https://latex.codecogs.com/png.latex?-6%20+%202k%20=%20-6%20+%202(-4)%20=%20-6%20-%208%20=%20-14">.</li>
+<li>Membre de droite : <img src="https://latex.codecogs.com/png.latex?1%20-%206s%20=%201%20-%206%5Cleft(%5Cfrac%7B5%7D%7B2%7D%5Cright)%20=%201%20-%2015%20=%20-14">.</li>
+</ul>
+<p>Les deux membres sont égaux. Le système a une solution.</p></li>
+</ul>
+<p>Les droites <img src="https://latex.codecogs.com/png.latex?d"> et <img src="https://latex.codecogs.com/png.latex?d'"> ont un point d’intersection, elles sont donc sécantes. Si elles sont sécantes, elles sont coplanaires. L’affirmation qu’elles ne sont pas coplanaires est donc fausse.</p>
+<hr>
+<p><strong>Affirmation 4 : La distance du point C(2; -1; 2) au plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> d’équation <img src="https://latex.codecogs.com/png.latex?x%20-%20y%20+%20z%20+%201%20=%200"> est égale à <img src="https://latex.codecogs.com/png.latex?2%5Csqrt%7B3%7D">.</strong></p>
+<p><strong>Affirmation 4 : VRAIE</strong></p>
+<p>Nous allons déterminer les coordonnées du point H, projeté orthogonal du point C sur le plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D">. La distance du point C au plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> est alors la longueur du segment [CH], c’est-à-dire la norme du vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCH%7D">.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Projection orthogonale sur un plan">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Projection orthogonale sur un plan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le projeté orthogonal H d’un point C sur un plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> est le point d’intersection entre le plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> et la droite <img src="https://latex.codecogs.com/png.latex?%5CDelta"> qui est perpendiculaire à <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> et qui passe par C.</p>
+<p>Le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCH%7D"> est alors un vecteur normal au plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D">.</p>
+</div>
+</div>
+<p>La démarche se décompose en trois étapes :</p>
+<ol type="1">
+<li>Déterminer une représentation paramétrique de la droite <img src="https://latex.codecogs.com/png.latex?%5CDelta"> passant par C et orthogonale à <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D">.</li>
+<li>Calculer les coordonnées du point H, intersection de <img src="https://latex.codecogs.com/png.latex?%5CDelta"> et <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D">.</li>
+<li>Calculer la norme du vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCH%7D">.</li>
+</ol>
+<p><strong>Étape 1 : Représentation paramétrique de la droite <img src="https://latex.codecogs.com/png.latex?%5CDelta"></strong></p>
+<p>La droite <img src="https://latex.codecogs.com/png.latex?%5CDelta"> est orthogonale au plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D">. Un vecteur directeur de <img src="https://latex.codecogs.com/png.latex?%5CDelta"> est donc un vecteur normal à <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D">.</p>
+<p>L’équation du plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> est <img src="https://latex.codecogs.com/png.latex?1x%20-%201y%20+%201z%20+%201%20=%200">. Un vecteur normal à <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> est donc <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D(1;%20-1;%201)">.</p>
+<p>Ce vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> est un vecteur directeur pour notre droite <img src="https://latex.codecogs.com/png.latex?%5CDelta">.</p>
+<p>La droite <img src="https://latex.codecogs.com/png.latex?%5CDelta"> passe par le point <img src="https://latex.codecogs.com/png.latex?C(2;%20-1;%202)"> et est dirigée par le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D(1;%20-1;%201)">.</p>
+<p>Une représentation paramétrique de <img src="https://latex.codecogs.com/png.latex?%5CDelta"> est donc : <img src="https://latex.codecogs.com/png.latex?%20%5Cbegin%7Bcases%7D%20x%20=%202%20+%201%20%5Ccdot%20t%20%5C%5C%20y%20=%20-1%20-%201%20%5Ccdot%20t%20%5C%5C%20z%20=%202%20+%201%20%5Ccdot%20t%20%5Cend%7Bcases%7D%20%5Cquad%20%5Ctext%7Bavec%20%7D%20t%20%5Cin%20%5Cmathbb%7BR%7D%20%5Cquad%20%5Ciff%20%5Cquad%20%5Cbegin%7Bcases%7D%20x%20=%202%20+%20t%20%5C%5C%20y%20=%20-1%20-%20t%20%5C%5C%20z%20=%202%20+%20t%20%5Cend%7Bcases%7D%20"></p>
+<p><strong>Étape 2 : Coordonnées du point d’intersection H</strong></p>
+<p>Le point <img src="https://latex.codecogs.com/png.latex?H(x_H;%20y_H;%20z_H)"> appartient à la fois à la droite <img src="https://latex.codecogs.com/png.latex?%5CDelta"> et au plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D">. Ses coordonnées vérifient donc le système d’équations composé de la représentation paramétrique de <img src="https://latex.codecogs.com/png.latex?%5CDelta"> et de l’équation cartésienne de <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D">.</p>
+<p>Il existe un réel <img src="https://latex.codecogs.com/png.latex?t"> tel que : <img src="https://latex.codecogs.com/png.latex?%20%5Cbegin%7Bcases%7D%20x_H%20=%202%20+%20t%20%5C%5C%20y_H%20=%20-1%20-%20t%20%5C%5C%20z_H%20=%202%20+%20t%20%5C%5C%20x_H%20-%20y_H%20+%20z_H%20+%201%20=%200%20%5Cend%7Bcases%7D%20"> On substitue les expressions de <img src="https://latex.codecogs.com/png.latex?x_H,%20y_H,%20z_H"> en fonction de <img src="https://latex.codecogs.com/png.latex?t"> dans l’équation du plan : <img src="https://latex.codecogs.com/png.latex?%20(2+t)%20-%20(-1-t)%20+%20(2+t)%20+%201%20=%200%20"> <img src="https://latex.codecogs.com/png.latex?%202%20+%20t%20+%201%20+%20t%20+%202%20+%20t%20+%201%20=%200%20"> <img src="https://latex.codecogs.com/png.latex?%203t%20+%206%20=%200%20"> <img src="https://latex.codecogs.com/png.latex?%203t%20=%20-6%20"> <img src="https://latex.codecogs.com/png.latex?%20t%20=%20-2%20"> Maintenant que nous avons la valeur du paramètre <img src="https://latex.codecogs.com/png.latex?t"> correspondant au point H, nous pouvons calculer ses coordonnées en remplaçant <img src="https://latex.codecogs.com/png.latex?t"> par <img src="https://latex.codecogs.com/png.latex?-2"> dans la représentation paramétrique de <img src="https://latex.codecogs.com/png.latex?%5CDelta"> : <img src="https://latex.codecogs.com/png.latex?%20%5Cbegin%7Bcases%7D%20x_H%20=%202%20+%20(-2)%20=%200%20%5C%5C%20y_H%20=%20-1%20-%20(-2)%20=%201%20%5C%5C%20z_H%20=%202%20+%20(-2)%20=%200%20%5Cend%7Bcases%7D%20"> Le projeté orthogonal de C sur le plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> est le point <img src="https://latex.codecogs.com/png.latex?H(0;%201;%200)">.</p>
+<p><strong>Étape 3 : Calcul de la distance CH</strong></p>
+<p>La distance du point C au plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> est la norme du vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCH%7D">.</p>
+<p>Calculons d’abord les coordonnées du vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCH%7D"> : <img src="https://latex.codecogs.com/png.latex?%20%5Coverrightarrow%7BCH%7D%20%5Cbegin%7Bpmatrix%7D%20x_H%20-%20x_C%20%5C%5C%20y_H%20-%20y_C%20%5C%5C%20z_H%20-%20z_C%20%5Cend%7Bpmatrix%7D%20=%20%5Cbegin%7Bpmatrix%7D%200%20-%202%20%5C%5C%201%20-%20(-1)%20%5C%5C%200%20-%202%20%5Cend%7Bpmatrix%7D%20=%20%5Cbegin%7Bpmatrix%7D%20-2%20%5C%5C%202%20%5C%5C%20-2%20%5Cend%7Bpmatrix%7D%20"> Calculons maintenant sa norme : <img src="https://latex.codecogs.com/png.latex?%20%5Ctext%7Bdist%7D(C,%20%5Cmathcal%7BP%7D)%20=%20%7C%7C%5Coverrightarrow%7BCH%7D%7C%7C%20=%20%5Csqrt%7B(-2)%5E2%20+%202%5E2%20+%20(-2)%5E2%7D%20"> <img src="https://latex.codecogs.com/png.latex?%20=%20%5Csqrt%7B4%20+%204%20+%204%7D%20=%20%5Csqrt%7B12%7D%20"> On simplifie la racine carrée : <img src="https://latex.codecogs.com/png.latex?%20%5Csqrt%7B12%7D%20=%20%5Csqrt%7B4%20%5Ctimes%203%7D%20=%20%5Csqrt%7B4%7D%20%5Ctimes%20%5Csqrt%7B3%7D%20=%202%5Csqrt%7B3%7D%20"> La distance du point C au plan <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BP%7D"> est bien égale à <img src="https://latex.codecogs.com/png.latex?2%5Csqrt%7B3%7D">.</p>
+</section>
+<section id="corrigé-de-lexercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="corrigé-de-lexercice-4">Corrigé de l’exercice 4</h2>
+<p>Cet exercice propose d’étudier l’évolution d’une population biologique par deux approches complémentaires : un modèle discret basé sur une suite récurrente, et un modèle continu régi par une équation différentielle.</p>
+<section id="partie-a-étude-dun-modèle-discret" class="level3">
+<h3 class="anchored" data-anchor-id="partie-a-étude-dun-modèle-discret">Partie A : Étude d’un modèle discret</h3>
+<p>On étudie la suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> définie par <img src="https://latex.codecogs.com/png.latex?u_0%20=%201"> et, pour tout entier naturel <img src="https://latex.codecogs.com/png.latex?n">, <img src="https://latex.codecogs.com/png.latex?u_%7Bn+1%7D%20=%20-0,02u_n%5E2%20+%201,3u_n">.</p>
+<p><strong>1. Calculer la superficie au premier juillet 2025.</strong></p>
+<p>Le premier juillet 2024 correspond à l’année de départ, soit <img src="https://latex.codecogs.com/png.latex?n=0">, avec <img src="https://latex.codecogs.com/png.latex?u_0=1"> ha. Le premier juillet 2025 correspond à <img src="https://latex.codecogs.com/png.latex?n=1">. On calcule donc <img src="https://latex.codecogs.com/png.latex?u_1"> : <img src="https://latex.codecogs.com/png.latex?%20u_1%20=%20-0,02u_0%5E2%20+%201,3u_0%20"> <img src="https://latex.codecogs.com/png.latex?%20u_1%20=%20-0,02(1)%5E2%20+%201,3(1)%20=%20-0,02%20+%201,3%20=%201,28%20"> D’après ce modèle, la superficie recouverte au premier juillet 2025 sera de <strong>1,28 hectare</strong>.</p>
+<p><strong>2. On note <img src="https://latex.codecogs.com/png.latex?h"> la fonction définie sur <img src="https://latex.codecogs.com/png.latex?%5B0;%2020%5D"> par <img src="https://latex.codecogs.com/png.latex?h(x)%20=%20-0,02x%5E2%20+%201,3x">.</strong></p>
+<p><strong>a. Démontrer que pour tout entier naturel <img src="https://latex.codecogs.com/png.latex?n">, <img src="https://latex.codecogs.com/png.latex?1%20%5Cleqslant%20u_n%20%5Cleqslant%20u_%7Bn+1%7D%20%5Cleqslant%2020">.</strong></p>
+<p>Nous allons procéder par récurrence. Soit <img src="https://latex.codecogs.com/png.latex?P(n)"> la propriété : “<img src="https://latex.codecogs.com/png.latex?1%20%5Cleqslant%20u_n%20%5Cleqslant%20u_%7Bn+1%7D%20%5Cleqslant%2020">”.</p>
+<p><strong>Initialisation (pour n=0) :</strong> - <img src="https://latex.codecogs.com/png.latex?u_0%20=%201"> - <img src="https://latex.codecogs.com/png.latex?u_1%20=%201,28"> On a bien <img src="https://latex.codecogs.com/png.latex?1%20%5Cleqslant%201%20%5Cleqslant%201,28%20%5Cleqslant%2020">, c’est-à-dire <img src="https://latex.codecogs.com/png.latex?1%20%5Cleqslant%20u_0%20%5Cleqslant%20u_1%20%5Cleqslant%2020">. La propriété <img src="https://latex.codecogs.com/png.latex?P(0)"> est vraie.</p>
+<p><strong>Hérédité :</strong> Supposons que la propriété <img src="https://latex.codecogs.com/png.latex?P(k)"> est vraie pour un certain entier naturel <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeqslant%200">. C’est notre hypothèse de récurrence : <img src="https://latex.codecogs.com/png.latex?1%20%5Cleqslant%20u_k%20%5Cleqslant%20u_%7Bk+1%7D%20%5Cleqslant%2020">. Nous voulons montrer que <img src="https://latex.codecogs.com/png.latex?P(k+1)"> est vraie, c’est-à-dire : <img src="https://latex.codecogs.com/png.latex?1%20%5Cleqslant%20u_%7Bk+1%7D%20%5Cleqslant%20u_%7Bk+2%7D%20%5Cleqslant%2020">.</p>
+<p>D’après l’hypothèse de récurrence, nous avons <img src="https://latex.codecogs.com/png.latex?1%20%5Cleqslant%20u_k%20%5Cleqslant%20u_%7Bk+1%7D%20%5Cleqslant%2020">. On nous admet que la fonction <img src="https://latex.codecogs.com/png.latex?h"> est croissante sur l’intervalle <img src="https://latex.codecogs.com/png.latex?%5B0;%2020%5D">. Puisque les termes <img src="https://latex.codecogs.com/png.latex?u_k"> et <img src="https://latex.codecogs.com/png.latex?u_%7Bk+1%7D"> appartiennent à cet intervalle, on peut appliquer la fonction <img src="https://latex.codecogs.com/png.latex?h"> à l’inégalité en conservant l’ordre : <img src="https://latex.codecogs.com/png.latex?%20h(1)%20%5Cleqslant%20h(u_k)%20%5Cleqslant%20h(u_%7Bk+1%7D)%20%5Cleqslant%20h(20)%20"> On a <img src="https://latex.codecogs.com/png.latex?u_%7Bn+1%7D%20=%20h(u_n)">. L’inégalité devient : <img src="https://latex.codecogs.com/png.latex?%20h(1)%20%5Cleqslant%20u_%7Bk+1%7D%20%5Cleqslant%20u_%7Bk+2%7D%20%5Cleqslant%20h(20)%20"> Calculons les valeurs des bornes : - <img src="https://latex.codecogs.com/png.latex?h(1)%20=%20-0,02(1)%5E2%20+%201,3(1)%20=%201,28">. - <img src="https://latex.codecogs.com/png.latex?h(20)%20=%20-0,02(20)%5E2%20+%201,3(20)%20=%20-0,02(400)%20+%2026%20=%20-8%20+%2026%20=%2018">. L’inégalité devient donc : <img src="https://latex.codecogs.com/png.latex?%201,28%20%5Cleqslant%20u_%7Bk+1%7D%20%5Cleqslant%20u_%7Bk+2%7D%20%5Cleqslant%2018%20"> Puisque <img src="https://latex.codecogs.com/png.latex?1%20%5Cleqslant%201,28"> et <img src="https://latex.codecogs.com/png.latex?18%20%5Cleqslant%2020">, on peut en conclure que : <img src="https://latex.codecogs.com/png.latex?%201%20%5Cleqslant%20u_%7Bk+1%7D%20%5Cleqslant%20u_%7Bk+2%7D%20%5Cleqslant%2020%20"> La propriété <img src="https://latex.codecogs.com/png.latex?P(k+1)"> est donc vraie.</p>
+<p><strong>Conclusion :</strong> Par le principe de récurrence, la propriété <img src="https://latex.codecogs.com/png.latex?P(n)"> est vraie pour tout entier naturel <img src="https://latex.codecogs.com/png.latex?n">.</p>
+<p><strong>b. En déduire que la suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> converge.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Théorème de la convergence monotone">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Théorème de la convergence monotone
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Toute suite croissante et majorée est convergente.</li>
+<li>Toute suite décroissante et minorée est convergente.</li>
+</ul>
+</div>
+</div>
+<p>D’après la question précédente, nous avons montré que <img src="https://latex.codecogs.com/png.latex?u_n%20%5Cleqslant%20u_%7Bn+1%7D"> pour tout <img src="https://latex.codecogs.com/png.latex?n">. La suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> est donc <strong>croissante</strong>. Nous avons également montré que <img src="https://latex.codecogs.com/png.latex?u_n%20%5Cleqslant%2020"> pour tout <img src="https://latex.codecogs.com/png.latex?n">. La suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> est donc <strong>majorée</strong> par 20. Étant croissante et majorée, la suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> est convergente. On note <img src="https://latex.codecogs.com/png.latex?L"> sa limite.</p>
+<p><strong>c.&nbsp;Justifier que <img src="https://latex.codecogs.com/png.latex?L=15">.</strong></p>
+<p>La suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> est définie par la relation de récurrence <img src="https://latex.codecogs.com/png.latex?u_%7Bn+1%7D%20=%20h(u_n)">, où <img src="https://latex.codecogs.com/png.latex?h"> est une fonction continue sur <img src="https://latex.codecogs.com/png.latex?%5B0;%2020%5D">. Comme la suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> converge vers une limite <img src="https://latex.codecogs.com/png.latex?L">, cette limite doit être un point fixe de la fonction <img src="https://latex.codecogs.com/png.latex?h">, c’est-à-dire qu’elle doit vérifier l’équation <img src="https://latex.codecogs.com/png.latex?h(L)=L">. Résolvons l’équation <img src="https://latex.codecogs.com/png.latex?h(x)=x"> : <img src="https://latex.codecogs.com/png.latex?%20-0,02x%5E2%20+%201,3x%20=%20x%20"> <img src="https://latex.codecogs.com/png.latex?%20-0,02x%5E2%20+%200,3x%20=%200%20"> On factorise par <img src="https://latex.codecogs.com/png.latex?x"> : <img src="https://latex.codecogs.com/png.latex?%20x(-0,02x%20+%200,3)%20=%200%20"> Cette équation a deux solutions :</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?x%20=%200"></li>
+<li><img src="https://latex.codecogs.com/png.latex?-0,02x%20+%200,3%20=%200%20%5Ciff%200,02x%20=%200,3%20%5Ciff%20x%20=%20%5Cfrac%7B0,3%7D%7B0,02%7D%20=%2015"></li>
+</ul>
+<p>La suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> est croissante et son premier terme est <img src="https://latex.codecogs.com/png.latex?u_0=1">. Tous les termes de la suite sont donc supérieurs ou égaux à 1. Sa limite <img src="https://latex.codecogs.com/png.latex?L"> ne peut donc pas être 0. On en conclut que la limite de la suite est <strong><img src="https://latex.codecogs.com/png.latex?L=15"></strong>.</p>
+<p><strong>3. Dépassement d’un seuil.</strong></p>
+<p><strong>a. Justifier que la surface recouverte dépassera les 14 hectares.</strong> La suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> est croissante et converge vers 15. Par définition de la convergence, les termes de la suite se rapprochent de 15. Comme la suite est croissante, les termes se rapprochent de 15 par valeurs inférieures. Puisque <img src="https://latex.codecogs.com/png.latex?14%20%3C%2015">, il existera nécessairement un rang <img src="https://latex.codecogs.com/png.latex?N"> à partir duquel tous les termes <img src="https://latex.codecogs.com/png.latex?u_n"> seront dans l’intervalle <img src="https://latex.codecogs.com/png.latex?%5D14;%2015%5D">. La superficie recouverte dépassera donc un jour les 14 hectares.</p>
+<p><strong>b. Recopier et compléter l’algorithme.</strong> L’algorithme doit calculer les termes successifs de la suite jusqu’à ce que la valeur de <code>u</code> dépasse (ou soit égale à) 14. À chaque étape, il faut incrémenter le compteur d’années <code>n</code>.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> seuil():</span>
+<span id="cb1-2">    n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb1-3">    u <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-4">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">while</span> u <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span>:</span>
+<span id="cb1-5">        n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-6">        u <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.02</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> u <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> u <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.3</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> u</span>
+<span id="cb1-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> n</span></code></pre></div>
+<hr>
+</section>
+<section id="partie-b-étude-dun-modèle-continu" class="level3">
+<h3 class="anchored" data-anchor-id="partie-b-étude-dun-modèle-continu">Partie B : Étude d’un modèle continu</h3>
+<p>On étudie la fonction <img src="https://latex.codecogs.com/png.latex?f"> solution de l’équation différentielle <img src="https://latex.codecogs.com/png.latex?(E_1)%20:%20y'%20=%200,02y(15-y)">, avec la condition initiale <img src="https://latex.codecogs.com/png.latex?f(0)=1">.</p>
+<p><strong>1. Montrer que <img src="https://latex.codecogs.com/png.latex?g%20=%201/f"> est solution de <img src="https://latex.codecogs.com/png.latex?(E_2)%20:%20y'%20=%20-0,3y%20+%200,02">.</strong></p>
+<p>La fonction <img src="https://latex.codecogs.com/png.latex?f"> ne s’annule pas, donc la fonction <img src="https://latex.codecogs.com/png.latex?g=1/f"> est bien définie et dérivable. Calculons la dérivée <img src="https://latex.codecogs.com/png.latex?g'(t)"> : <img src="https://latex.codecogs.com/png.latex?%20g'(t)%20=%20%5Cleft(%5Cfrac%7B1%7D%7Bf(t)%7D%5Cright)'%20=%20-%5Cfrac%7Bf'(t)%7D%7B(f(t))%5E2%7D%20"> On sait que <img src="https://latex.codecogs.com/png.latex?f"> est solution de <img src="https://latex.codecogs.com/png.latex?(E_1)">, donc <img src="https://latex.codecogs.com/png.latex?f'(t)%20=%200,02f(t)(15-f(t))">. On substitue cette expression dans celle de <img src="https://latex.codecogs.com/png.latex?g'(t)"> : <img src="https://latex.codecogs.com/png.latex?%20g'(t)%20=%20-%5Cfrac%7B0,02f(t)(15-f(t))%7D%7B(f(t))%5E2%7D%20=%20-0,02%20%5Cfrac%7B15-f(t)%7D%7Bf(t)%7D%20"> On sépare la fraction en deux : <img src="https://latex.codecogs.com/png.latex?%20g'(t)%20=%20-0,02%20%5Cleft(%20%5Cfrac%7B15%7D%7Bf(t)%7D%20-%20%5Cfrac%7Bf(t)%7D%7Bf(t)%7D%20%5Cright)%20=%20-0,02%20%5Cleft(%2015%20%5Ctimes%20%5Cfrac%7B1%7D%7Bf(t)%7D%20-%201%20%5Cright)%20"> Puisque <img src="https://latex.codecogs.com/png.latex?g(t)%20=%201/f(t)">, on obtient : <img src="https://latex.codecogs.com/png.latex?%20g'(t)%20=%20-0,02%20(15g(t)%20-%201)%20=%20-0,3g(t)%20+%200,02%20"> La fonction <img src="https://latex.codecogs.com/png.latex?g"> est donc bien solution de l’équation différentielle <img src="https://latex.codecogs.com/png.latex?(E_2)">.</p>
+<p><strong>2. Donner les solutions de l’équation différentielle <img src="https://latex.codecogs.com/png.latex?(E_2)">.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Formule : Solutions d'une équation différentielle linéaire">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Formule : Solutions d’une équation différentielle linéaire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les solutions de l’équation différentielle <img src="https://latex.codecogs.com/png.latex?y'%20=%20ay%20+%20b"> (où <img src="https://latex.codecogs.com/png.latex?a%20%5Cneq%200">) sont les fonctions de la forme : <img src="https://latex.codecogs.com/png.latex?%20y(t)%20=%20C%20e%5E%7Bat%7D%20-%20%5Cfrac%7Bb%7D%7Ba%7D%20%5Cquad%20%5Ctext%7Bavec%20%7D%20C%20%5Cin%20%5Cmathbb%7BR%7D%20"></p>
+</div>
+</div>
+<p>L’équation <img src="https://latex.codecogs.com/png.latex?(E_2)"> est <img src="https://latex.codecogs.com/png.latex?y'%20=%20-0,3y%20+%200,02">. C’est une équation de la forme <img src="https://latex.codecogs.com/png.latex?y'=ay+b"> avec <img src="https://latex.codecogs.com/png.latex?a=-0,3"> et <img src="https://latex.codecogs.com/png.latex?b=0,02">. Les solutions sont donc les fonctions <img src="https://latex.codecogs.com/png.latex?g"> définies par : <img src="https://latex.codecogs.com/png.latex?%20g(t)%20=%20C%20e%5E%7B-0,3t%7D%20-%20%5Cfrac%7B0,02%7D%7B-0,3%7D%20=%20C%20e%5E%7B-0,3t%7D%20+%20%5Cfrac%7B2%7D%7B30%7D%20=%20C%20e%5E%7B-0,3t%7D%20+%20%5Cfrac%7B1%7D%7B15%7D%20"> où <img src="https://latex.codecogs.com/png.latex?C"> est une constante réelle.</p>
+<p><strong>3. En déduire l’expression de <img src="https://latex.codecogs.com/png.latex?f(t)">.</strong> On utilise la condition initiale <img src="https://latex.codecogs.com/png.latex?f(0)=1"> pour déterminer la constante <img src="https://latex.codecogs.com/png.latex?C">. On sait que <img src="https://latex.codecogs.com/png.latex?g(0)%20=%201/f(0)%20=%201/1%20=%201">. En utilisant l’expression de <img src="https://latex.codecogs.com/png.latex?g(t)"> trouvée à la question précédente : <img src="https://latex.codecogs.com/png.latex?%20g(0)%20=%20C%20e%5E%7B-0,3%20%5Ctimes%200%7D%20+%20%5Cfrac%7B1%7D%7B15%7D%20=%20C%20e%5E0%20+%20%5Cfrac%7B1%7D%7B15%7D%20=%20C%20+%20%5Cfrac%7B1%7D%7B15%7D%20"> On a donc l’équation <img src="https://latex.codecogs.com/png.latex?C%20+%20%5Cfrac%7B1%7D%7B15%7D%20=%201">, ce qui donne <img src="https://latex.codecogs.com/png.latex?C%20=%201%20-%20%5Cfrac%7B1%7D%7B15%7D%20=%20%5Cfrac%7B14%7D%7B15%7D">. L’expression de <img src="https://latex.codecogs.com/png.latex?g(t)"> est : <img src="https://latex.codecogs.com/png.latex?%20g(t)%20=%20%5Cfrac%7B14%7D%7B15%7De%5E%7B-0,3t%7D%20+%20%5Cfrac%7B1%7D%7B15%7D%20"> Maintenant, on trouve <img src="https://latex.codecogs.com/png.latex?f(t)"> en calculant l’inverse de <img src="https://latex.codecogs.com/png.latex?g(t)"> : <img src="https://latex.codecogs.com/png.latex?%20f(t)%20=%20%5Cfrac%7B1%7D%7Bg(t)%7D%20=%20%5Cfrac%7B1%7D%7B%5Cfrac%7B14%7D%7B15%7De%5E%7B-0,3t%7D%20+%20%5Cfrac%7B1%7D%7B15%7D%7D%20"> En multipliant le numérateur et le dénominateur par 15 pour simplifier : <img src="https://latex.codecogs.com/png.latex?%20f(t)%20=%20%5Cfrac%7B15%7D%7B14e%5E%7B-0,3t%7D%20+%201%7D%20"></p>
+<p><strong>4. Déterminer la limite de <img src="https://latex.codecogs.com/png.latex?f"> en <img src="https://latex.codecogs.com/png.latex?+%5Cinfty">.</strong> On cherche <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20f(t)">. On a <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20-0,3t%20=%20-%5Cinfty">. Par composition, <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20e%5E%7B-0,3t%7D%20=%200">. Donc, la limite du dénominateur est : <img src="https://latex.codecogs.com/png.latex?%20%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20(14e%5E%7B-0,3t%7D%20+%201)%20=%2014%20%5Ctimes%200%20+%201%20=%201%20"> Par quotient, la limite de <img src="https://latex.codecogs.com/png.latex?f"> est : <img src="https://latex.codecogs.com/png.latex?%20%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20f(t)%20=%20%5Cfrac%7B15%7D%7B1%7D%20=%2015%20"> Le modèle continu prédit que la superficie recouverte tendra vers 15 hectares à long terme, ce qui est cohérent avec le modèle discret.</p>
+<p><strong>5. Résoudre l’inéquation <img src="https://latex.codecogs.com/png.latex?f(t)%20%3E%2014"> et interpréter.</strong> On résout dans <img src="https://latex.codecogs.com/png.latex?%5B0;%20+%5Cinfty%5B"> : <img src="https://latex.codecogs.com/png.latex?%20%5Cfrac%7B15%7D%7B14e%5E%7B-0,3t%7D%20+%201%7D%20%3E%2014%20"> Comme le dénominateur <img src="https://latex.codecogs.com/png.latex?14e%5E%7B-0,3t%7D%20+%201"> est strictement positif, on peut multiplier les deux membres par ce terme sans changer le sens de l’inégalité : <img src="https://latex.codecogs.com/png.latex?%2015%20%3E%2014(14e%5E%7B-0,3t%7D%20+%201)%20"> <img src="https://latex.codecogs.com/png.latex?%2015%20%3E%20196e%5E%7B-0,3t%7D%20+%2014%20"> <img src="https://latex.codecogs.com/png.latex?%201%20%3E%20196e%5E%7B-0,3t%7D%20"> <img src="https://latex.codecogs.com/png.latex?%20%5Cfrac%7B1%7D%7B196%7D%20%3E%20e%5E%7B-0,3t%7D%20"> On applique la fonction logarithme népérien, qui est strictement croissante, des deux côtés : <img src="https://latex.codecogs.com/png.latex?%20%5Cln%5Cleft(%5Cfrac%7B1%7D%7B196%7D%5Cright)%20%3E%20%5Cln(e%5E%7B-0,3t%7D)%20"> <img src="https://latex.codecogs.com/png.latex?%20-%5Cln(196)%20%3E%20-0,3t%20"> On divise par <img src="https://latex.codecogs.com/png.latex?-0,3">, qui est un nombre négatif, ce qui inverse le sens de l’inégalité : <img src="https://latex.codecogs.com/png.latex?%20%5Cfrac%7B-%5Cln(196)%7D%7B-0,3%7D%20%3C%20t%20%5Cimplies%20t%20%3E%20%5Cfrac%7B%5Cln(196)%7D%7B0,3%7D%20"> Calculons une valeur approchée : <img src="https://latex.codecogs.com/png.latex?%20t%20%3E%20%5Cfrac%7B5,278...%7D%7B0,3%7D%20%5Capprox%2017,59%20"> <strong>Interprétation :</strong> La superficie recouverte par la posidonie dépassera 14 hectares après environ 17,6 ans à compter du premier juillet 2024. Cela se produira donc au cours de l’année 2042 (<img src="https://latex.codecogs.com/png.latex?2024%20+%2018">).</p>
+<p><strong>Remarque :</strong> L’algorithme python de la partie A retourne <img src="https://latex.codecogs.com/png.latex?n=18"> : les résultats sont cohérents.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>Annales</category>
+  <guid>https://flallemand.fr/blog/posts/2025-06-16-MathsMétropoleJ1/</guid>
+  <pubDate>Mon, 16 Jun 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/2025-06-16-MathsMétropoleJ1/img1.png" medium="image" type="image/png" height="89" width="144"/>
+</item>
 <item>
   <title>Tableaux de variations faciles en LaTeX</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -5033,615 +5654,6 @@ Utilisation de Pyxelstudio
   <guid>https://flallemand.fr/blog/posts/pyxel_tuto1_base/</guid>
   <pubDate>Sat, 17 Jun 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto1_base/pyxel.png" medium="image" type="image/png" height="61" width="144"/>
-</item>
-<item>
-  <title>Python match</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/python_match/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>La version 3.10 de python est sortie le 4 octobre 2021 et apporte parmi d’autres améliorations, une nouvelle structure conditionnelle : la structure <code>match ... case</code>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="python310.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/python_match/python310.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></a></p>
-</figure>
-</div>
-<section id="un-cas-simple" class="level2">
-<h2 class="anchored" data-anchor-id="un-cas-simple">Un cas simple</h2>
-<p>Une instruction de ce type existe déjà dans d’autres langages de programmation comme le JavaScript ou le C. Elle permet de tester une valeur et d’exécuter un bloc de code en fonction de la valeur testée. Dans ces deux langages, l’instruction s’appelle <code>switch ... case</code>. En python, elle s’appelle <code>match ... case</code>.</p>
-<p>Voici un exemple d’utilisation de l’instruction <code>switch ... case</code> en JavaScript :</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Langage JavaScript</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="Langage JavaScript" style="background: #f1f3f5;"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">let</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">switch</span> (x) {</span>
-<span id="cb1-4">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-5">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 1"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-6">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-7">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-8">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 2"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-9">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-10">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-11">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 3"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-12">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-13">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-14">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 4"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-15">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-16">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-17">    <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">console</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">log</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb1-18">}</span></code></pre></div>
-</div>
-<p>Et maintenant de C :</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Langage C</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="Langage C" style="background: #f1f3f5;"><pre class="sourceCode C code-with-copy"><code class="sourceCode c"><span id="cb2-1"><span class="dt" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">int</span> x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-2"></span>
-<span id="cb2-3"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">switch</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span>x<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span></span>
-<span id="cb2-4">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-5">    printf<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 1"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">);</span></span>
-<span id="cb2-6">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-7">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-8">    printf<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 2"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">);</span></span>
-<span id="cb2-9">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-10">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-11">    printf<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 3"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">);</span></span>
-<span id="cb2-12">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-13">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-14">    printf<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 4"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">);</span></span>
-<span id="cb2-15">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">break</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">;</span></span>
-<span id="cb2-16">  <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">default</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-17">    printf<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">(</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x n'est pas égal à 1, 2, 3 ou 4"</span><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">);</span></span>
-<span id="cb2-18"><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span></span></code></pre></div>
-</div>
-<p>C’est la même chose ! On retrouve la même structure dans les deux langages. En python, c’est la même chose :</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Python</strong></pre>
-</div>
-<div class="sourceCode" id="cb3" data-filename="Python" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"></span>
-<span id="cb3-2">x <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span></span>
-<span id="cb3-3"></span>
-<span id="cb3-4"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">match</span> x:</span>
-<span id="cb3-5">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>:</span>
-<span id="cb3-6">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 1"</span>)</span>
-<span id="cb3-7">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>:</span>
-<span id="cb3-8">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 2"</span>)</span>
-<span id="cb3-9">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>:</span>
-<span id="cb3-10">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 3"</span>)</span>
-<span id="cb3-11">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>:</span>
-<span id="cb3-12">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x est égal à 4"</span>)</span>
-<span id="cb3-13">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">case</span> _:</span>
-<span id="cb3-14">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"x n'est pas égal à 1, 2, 3 ou 4"</span>)</span></code></pre></div>
-</div>
-<p>On peut voir que l’instruction <code>match ... case</code> est très proche de l’instruction <code>if ... elif ... else</code> en python. La différence est que l’instruction <code>match ... case</code> permet de tester plusieurs valeurs d’une variable en une seule instruction. C’est très pratique pour vérifier les valeurs d’une variable.</p>
-<p>Par rapport aux autres langages mentionnés, on remarquera qu’il n’est pas nécessaire en python d’utiliser l’instruction <code>break</code>, c’est comme d’habitude l’indentation qui délimite les blocs de code.</p>
-<p>Par ailleurs, pas d’instruction <code>default</code> en python, on utilise l’instruction <code>case _</code> pour gérer le cas par défaut.</p>
-</section>
-<section id="un-cas-plus-complexe" class="level2">
-<h2 class="anchored" data-anchor-id="un-cas-plus-complexe">Un cas plus complexe</h2>
-<p>L’instruction <code>match ... case</code> permet de faire des choses beaucoup plus complexes, on peut par exemple ajouter des conditions à chaque cas (source : <span class="citation" data-cites="linuxmag249">Sumner (2021)</span>) :</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Python</strong></pre>
-</div>
-<div class="sourceCode" id="cb4" data-filename="Python" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> random</span>
-<span id="cb4-2">cible <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> random.randint (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>)</span>
-<span id="cb4-3"></span>
-<span id="cb4-4">nbEssai <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb4-5">gameOver <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">False</span></span>
-<span id="cb4-6"></span>
-<span id="cb4-7"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">while</span> gameOver <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">False</span>:</span>
-<span id="cb4-8">   <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span> ( <span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"Vous avez essayé </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>nbEssai<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;"> fois"</span>)</span>
-<span id="cb4-9">   proposition <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">int</span> (<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">input</span> (<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Votre essai : "</span>))</span>
-<span id="cb4-10">   <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">match</span> proposition:</span>
-<span id="cb4-11">      case ( i ) <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span> <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">or</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">100</span>:</span>
-<span id="cb4-12">         <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Le nombre doit être compris entre 0 et 100 "</span>)</span>
-<span id="cb4-13">      case ( i ) <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span> cible:</span>
-<span id="cb4-14">         <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Trop petit !"</span>)</span>
-<span id="cb4-15">         nbEssai <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb4-16">      case ( i ) <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;</span> cible:</span>
-<span id="cb4-17">         <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Trop grand!"</span>)</span>
-<span id="cb4-18">         nbEssai <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb4-19">      case ( i ) <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> cible:</span>
-<span id="cb4-20">         <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Gagné !"</span>)</span>
-<span id="cb4-21">         gameOver <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span></span></code></pre></div>
-</div>
-<p>Dans ce jeu de devinette, la variable <code>proposition</code> est remplacées dans les conditions <code>case</code> par la variable <code>i</code>. C’est une variable temporaire qui prend la valeur de <code>proposition</code> pour chaque cas. On peut donc utiliser <code>i</code> dans les conditions <code>if</code> pour tester la valeur de <code>proposition</code>.</p>
-<p>Un dernier exemple pour terminer (source : <span class="citation" data-cites="pythonpep636">Moisset (2020)</span>):</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Python</strong></pre>
-</div>
-<div class="sourceCode" id="cb5" data-filename="Python" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">reponse <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">input</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Entrez votre prénom et votre nom : "</span>)</span>
-<span id="cb5-2"></span>
-<span id="cb5-3"><span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">match</span> reponse.split():</span>
-<span id="cb5-4">    case [prenom, nom]:</span>
-<span id="cb5-5">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>prenom<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>nom<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;"> !"</span>)</span>
-<span id="cb5-6">    case [mot_unique]:</span>
-<span id="cb5-7">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>mot_unique<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;"> ! Il me manque votre nom complet."</span>)</span>
-<span id="cb5-8">    case [prenom, nom, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span>_]:</span>
-<span id="cb5-9">        <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"Bonjour </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>prenom<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;"> </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>nom<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;"> ! Vous m'avez donné trop d'informations."</span>)</span></code></pre></div>
-</div>
-<p>Dans cet exemple, on utilise la méthode <code>split</code> pour découper la chaîne de caractères <code>reponse</code> en une liste de mots. On utilise ensuite cette liste dans les conditions <code>case</code> pour tester le nombre de mots dans la chaîne de caractères. Le symbole <code>*_</code> est utilisé pour représenter un nombre quelconque de mots.</p>
-<p>Voici par exemple le résultat de l’exécution de ce programme dans la console python :</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Console python</strong></pre>
-</div>
-<div class="sourceCode" id="cb6" data-filename="Console python" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont</span>
-<span id="cb6-2">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">!</span></span>
-<span id="cb6-3"><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean</span>
-<span id="cb6-4">Bonjour Jean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">!</span> Il me manque votre nom complet.</span>
-<span id="cb6-5"><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&gt;&gt;&gt;</span> Entrez votre prénom et votre nom : Jean Dupont et je suis un génie</span>
-<span id="cb6-6">Bonjour Jean Dupont <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">!</span> Vous m<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">'avez donné trop d'</span>informations.</span></code></pre></div>
-</div>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>L’instruction <code>match ... case</code> est une instruction très puissante qui permet de simplifier le code et de le rendre plus lisible. Elle permet de tester plusieurs valeurs d’une variable en une seule instruction, mais il est aussi possible de tester des conditions plus complexes, comme le type de variable ou la longueur d’une liste, en ajoutant des conditions.</p>
-<p>Pour un aperçu complet de toutes les possibilités de l’instruction <code>match ... case</code>, je vous invite à consulter la documentation officielle : <a href="https://docs.python.org/fr/3/tutorial/controlflow.html?highlight=match#match-statements">https://docs.python.org/fr/3/tutorial/controlflow.html?highlight=match#match-statements</a> et les références ci-dessous.</p>
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Les références</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
-<div id="ref-pythonpep636" class="csl-entry">
-Moisset, Daniel F. 2020. <span>«&nbsp;Structural Pattern Matching: Tutorial&nbsp;»</span>. <em>Python Enhancement Proposals</em>, nᵒ 636. <a href="https://peps.python.org/pep-0636/">https://peps.python.org/pep-0636/</a>.
-</div>
-<div id="ref-linuxmag249" class="csl-entry">
-Sumner, Scott. 2021. <span>«&nbsp;The new Python match&nbsp;»</span>. <em>Linux Magazine</em>, nᵒ 249. <a href="https://www.linux-magazine.com/Issues/2021/249/Python-match/(tagID)/32">https://www.linux-magazine.com/Issues/2021/249/Python-match/(tagID)/32</a>.
-</div>
-</div></section></div> ]]></description>
-  <category>Python</category>
-  <category>NSI</category>
-  <category>Programmation</category>
-  <guid>https://flallemand.fr/blog/posts/python_match/</guid>
-  <pubDate>Sun, 29 Jan 2023 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/python_match/python_laptop.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 </channel>
 </rss>
