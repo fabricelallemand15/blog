@@ -10,7 +10,1374 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Tue, 17 Jun 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 22 Jun 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 2</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/2025-06-23-NSIMetropoleJ2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="exercice-1-6-points" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1-6-points">Exercice 1 (6 points)</h2>
+<p>Cet exercice porte sur les arbres binaires et la programmation Python dans le contexte du codage de Shannon-Fano.</p>
+<section id="partie-a" class="level4">
+<h4 class="anchored" data-anchor-id="partie-a">Partie A</h4>
+<ol type="1">
+<li><p>Pour obtenir le mot binaire qui encode le caractère espace, représenté par le symbole <code>_</code>, il faut parcourir l’arbre de la Figure 1 de la racine jusqu’à la feuille contenant ce symbole.</p>
+<ul>
+<li>On part de la racine et on prend la branche de droite, étiquetée <code>0</code>.</li>
+<li>Du nœud suivant, on prend la branche de gauche, étiquetée <code>1</code>.</li>
+<li>Du nœud suivant, on prend la branche de droite, étiquetée <code>0</code>. On arrive à la feuille <code>_</code>.</li>
+</ul>
+<p>Le mot binaire correspondant est donc <strong><code>010</code></strong>.</p></li>
+<li><p>Pour décoder le mot binaire <code>0001110101111110011001</code>, on parcourt l’arbre depuis la racine pour chaque symbole.</p>
+<ul>
+<li><code>00</code> : racine -&gt; droite (<code>0</code>) -&gt; droite (<code>0</code>) -&gt; feuille <strong><code>e</code></strong>.</li>
+<li>Il reste <code>01110101111110011001</code>. On repart de la racine.</li>
+<li><code>011</code> : racine -&gt; droite (<code>0</code>) -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; feuille <strong><code>s</code></strong>.</li>
+<li>Il reste <code>1010111110011001</code>. On repart de la racine.</li>
+<li><code>1010</code> : racine -&gt; gauche (<code>1</code>) -&gt; droite (<code>0</code>) -&gt; gauche (<code>1</code>) -&gt; droite (<code>0</code>) -&gt; feuille <strong><code>p</code></strong>.</li>
+<li>Il reste <code>11110011001</code>. On repart de la racine.</li>
+<li><code>1111</code> : racine -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; feuille <strong><code>i</code></strong>.</li>
+<li>Il reste <code>110011001</code>. On repart de la racine.</li>
+<li><code>11001</code> : racine -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; droite (<code>0</code>) -&gt; droite (<code>0</code>) -&gt; gauche (<code>1</code>) -&gt; feuille <strong><code>o</code></strong>.</li>
+<li>Il reste <code>1001</code>. On repart de la racine.</li>
+<li><code>1001</code> : racine -&gt; gauche (<code>1</code>) -&gt; droite (<code>0</code>) -&gt; droite (<code>0</code>) -&gt; gauche (<code>1</code>) -&gt; feuille <strong><code>n</code></strong>.</li>
+</ul>
+<p>Le texte décodé est <strong><code>espion</code></strong>.</p></li>
+<li><p>Pour obtenir les symboles classés par taille d’encodage croissante, il faut lister les symboles en fonction de leur profondeur dans l’arbre. Les symboles les plus proches de la racine ont les codes les plus courts. Le parcours qui explore un arbre niveau par niveau est le <strong>parcours en largeur</strong>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Parcours d'arbre">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Parcours d’arbre
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un <strong>parcours en largeur</strong> (ou <em>Breadth-First Search</em>, BFS) explore un arbre niveau par niveau. On visite d’abord la racine, puis tous ses enfants, puis tous les nœuds du niveau suivant, et ainsi de suite. Ce parcours est souvent mis en œuvre à l’aide d’une file.</p>
+</div>
+</div>
+</section>
+<section id="partie-b" class="level4">
+<h4 class="anchored" data-anchor-id="partie-b">Partie B</h4>
+<ol start="4" type="1">
+<li><p>L’étape 2 de l’algorithme de Shannon-Fano consiste à séparer la liste ordonnée des symboles en deux groupes dont les sommes des occurrences sont les plus proches possibles.</p>
+<p>Le tableau des symboles triés par nombre d’occurrences est : <code>i(1), u(1), c(1), o(1), d(1), ,(1), p(1), n(2), j(2), s(3), _(4), e(4)</code>. La somme totale des occurrences est : <img src="https://latex.codecogs.com/png.latex?7%20%5Ctimes%201%20+%202%20%5Ctimes%202%20+%201%20%5Ctimes%203%20+%202%20%5Ctimes%204%20=%207%20+%204%20+%203%20+%208%20=%2022">.</p>
+<p>Il faut donc chercher une coupure qui sépare ce total en deux sommes aussi proches que possible de <img src="https://latex.codecogs.com/png.latex?22%20/%202%20=%2011">.</p>
+<p>La figure 2 propose la coupure suivante :</p>
+<ul>
+<li><strong>Groupe 1 (gauche)</strong> : <code>i, u, c, o, d, ,, p, n, j</code>. La somme de leurs occurrences est : <img src="https://latex.codecogs.com/png.latex?1+1+1+1+1+1+1+2+2%20=%2011">.</li>
+<li><strong>Groupe 2 (droite)</strong> : <code>s, _, e</code>. La somme de leurs occurrences est : <img src="https://latex.codecogs.com/png.latex?3+4+4%20=%2011">.</li>
+</ul>
+<p>Les deux sommes étant égales à 11, cette séparation est optimale. La justification est donc validée par ce calcul.</p></li>
+<li><p>La <strong>hauteur</strong> d’un arbre est la longueur du plus long chemin de la racine à une feuille. Dans la figure 3, les feuilles les plus profondes sont <code>o</code> et <code>d</code>. Le chemin pour atteindre <code>d</code> est <code>1 -&gt; 0 -&gt; 1 -&gt; 1 -&gt; 0</code>. Ce chemin est de longueur 5.</p>
+<p>La hauteur de l’arbre est <strong>5</strong>.</p>
+<p>Dans le contexte de l’exercice, cette hauteur représente <strong>la longueur du plus long mot de code binaire</strong> utilisé pour encoder un symbole.</p></li>
+<li><p>Pour justifier que le codage de Shannon-Fano est plus efficace que l’ASCII pour le texte <code>je pense, donc je suis</code>, nous devons comparer le nombre total de bits nécessaires dans chaque cas.</p>
+<ul>
+<li><p><strong>Codage ASCII</strong> : Le texte contient 22 caractères (en se basant sur la somme des occurrences du tableau de la page 3). En ASCII, chaque caractère est codé sur un octet, soit 8 bits. Taille totale en ASCII = <img src="https://latex.codecogs.com/png.latex?22%20%5Ctext%7B%20caract%C3%A8res%7D%20%5Ctimes%208%20%5Ctext%7B%20bits/caract%C3%A8re%7D%20=%20176%20%5Ctext%7B%20bits%7D">.</p></li>
+<li><p><strong>Codage de Shannon-Fano</strong> : On utilise les longueurs de code données par la profondeur de chaque symbole dans l’arbre de la figure 3 et les fréquences du tableau.</p>
+<ul>
+<li>Profondeur 2 : <code>e</code> (4), <code>_</code> (4). Coût : <img src="https://latex.codecogs.com/png.latex?(4+4)%20%5Ctimes%202%20=%2016"> bits.</li>
+<li>Profondeur 3 : <code>s</code> (3). Coût : <img src="https://latex.codecogs.com/png.latex?3%20%5Ctimes%203%20=%209"> bits.</li>
+<li>Profondeur 4 : <code>j</code> (2), <code>n</code> (2), <code>p</code> (1), <code>c</code> (1), <code>u</code> (1), <code>i</code> (1). Coût : <img src="https://latex.codecogs.com/png.latex?(2+2+1+1+1+1)%20%5Ctimes%204%20=%208%20%5Ctimes%204%20=%2032"> bits.</li>
+<li>Profondeur 5 : <code>,</code> (1), <code>d</code> (1), <code>o</code> (1). Coût : <img src="https://latex.codecogs.com/png.latex?(1+1+1)%20%5Ctimes%205%20=%203%20%5Ctimes%205%20=%2015"> bits.</li>
+</ul>
+<p>Taille totale Shannon-Fano = <img src="https://latex.codecogs.com/png.latex?16%20+%209%20+%2032%20+%2015%20=%2072"> bits.</p></li>
+</ul>
+<p><strong>Comparaison</strong> :</p>
+<p>Le rapport des tailles est <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5Ctext%7BTaille%20ASCII%7D%7D%7B%5Ctext%7BTaille%20Shannon-Fano%7D%7D%20=%20%5Cfrac%7B176%7D%7B72%7D%20%5Capprox%202,44">. Le codage de Shannon-Fano utilise donc bien environ deux fois moins de bits (et donc d’octets) que le codage ASCII pour ce texte.</p></li>
+<li><p>Pour construire l’arbre de codage du mot « chiffrer » :</p>
+<ol type="1">
+<li><p><strong>Fréquences</strong> : <code>c(1), h(1), i(1), e(1), f(2), r(2)</code>. Total : 8.</p></li>
+<li><p><strong>Liste triée</strong> : <code>(c,1), (h,1), (i,1), (e,1), (f,2), (r,2)</code>.</p></li>
+<li><p><strong>Construction récursive</strong> :</p>
+<ul>
+<li><p><strong>Étape 1</strong> : Somme totale = 8. On coupe en deux groupes de somme 4.</p>
+<ul>
+<li>Groupe 1 (étiquette <code>1</code>): <code>(c,1), (h,1), (i,1), (e,1)</code>. Somme = 4.</li>
+<li>Groupe 2 (étiquette <code>0</code>): <code>(f,2), (r,2)</code>. Somme = 4.</li>
+</ul></li>
+<li><p><strong>Étape 2 (sur Groupe 1)</strong> : Somme = 4. On coupe en deux groupes de somme 2.</p>
+<ul>
+<li>Groupe 1.1 (<code>1</code>): <code>(c,1), (h,1)</code>.</li>
+<li>Groupe 1.2 (<code>0</code>): <code>(i,1), (e,1)</code>.</li>
+</ul></li>
+<li><p><strong>Étape 3 (sur Groupe 1.1)</strong> :</p>
+<ul>
+<li>Feuille <code>c</code> (étiquette <code>1</code>). Code: <code>111</code>.</li>
+<li>Feuille <code>h</code> (étiquette <code>0</code>). Code: <code>110</code>.</li>
+</ul></li>
+<li><p><strong>Étape 4 (sur Groupe 1.2)</strong> :</p>
+<ul>
+<li>Feuille <code>i</code> (étiquette <code>1</code>). Code: <code>101</code>.</li>
+<li>Feuille <code>e</code> (étiquette <code>0</code>). Code: <code>100</code>.</li>
+</ul></li>
+<li><p><strong>Étape 5 (sur Groupe 2)</strong> :</p>
+<ul>
+<li>Feuille <code>f</code> (étiquette <code>1</code>). Code: <code>01</code>.</li>
+<li>Feuille <code>r</code> (étiquette <code>0</code>). Code: <code>00</code>.</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>L’arbre de codage obtenu est le suivant :</p></li>
+</ol>
+<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/2025-06-23-NSIMetropoleJ2/arbre.png" class="img-fluid"></a></p>
+</section>
+<section id="partie-c" class="level4">
+<h4 class="anchored" data-anchor-id="partie-c">Partie C</h4>
+<ol start="8" type="1">
+<li><p>Voici les lignes 8 et 10 complétées pour la fonction <code>creer_dico_occ</code> :</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ...</span></span>
+<span id="cb1-2"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>     <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> symbole <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> dico:</span>
+<span id="cb1-3"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>         dico[symbole] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-4"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span>     <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb1-5"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>        dico[symbole] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb1-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ...</span></span></code></pre></div></li>
+<li><p>Voici une proposition pour la fonction <code>somme_occ</code> :</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> somme_occ(tab):</span>
+<span id="cb2-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb2-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    Renvoie la somme des nombres d'occurrences</span></span>
+<span id="cb2-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    contenus dans un tableau de tuples (symbole, nb_occ).</span></span>
+<span id="cb2-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    """</span></span>
+<span id="cb2-6">    somme <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span></span>
+<span id="cb2-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> symbole, nb <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> tab:</span>
+<span id="cb2-8">        somme <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> nb</span>
+<span id="cb2-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> somme</span></code></pre></div>
+<p>Une écriture plus concise utilisant une compréhension de liste est aussi possible :</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> somme_occ(tab):</span>
+<span id="cb3-2">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">sum</span>([nb <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> symbole, nb <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> tab])</span></code></pre></div></li>
+<li><p>Voici les lignes 9 et 11 complétées pour la fonction <code>shannon</code> :</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ...</span></span>
+<span id="cb4-2"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">8</span>     <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> symbole <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> [elt[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> elt <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> t1]:</span>
+<span id="cb4-3"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span>         <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"1"</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> shannon(symbole, t1)</span>
+<span id="cb4-4"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb4-5"><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"0"</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> shannon(symbole, t2)</span></code></pre></div></li>
+<li><p>La terminaison de la fonction récursive <code>shannon</code> est garantie par deux points :</p>
+<ul>
+<li><strong>Cas de base</strong> : La fonction s’arrête lorsque la condition <code>len(tab) == 1</code> est vraie.</li>
+<li><strong>Convergence</strong> : À chaque appel récursif, la fonction <code>separe</code> divise le tableau <code>tab</code> en deux sous-tableaux non vides <code>t1</code> et <code>t2</code>. La taille du tableau passé en paramètre à l’appel suivant (<code>t1</code> ou <code>t2</code>) est donc strictement inférieure à la taille du tableau <code>tab</code> de l’appel courant. La taille de l’argument décroissant strictement à chaque étape, elle atteindra nécessairement la valeur 1, ce qui déclenchera le cas de base et mettra fin à la récursion.</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Terminaison d'une fonction récursive">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Terminaison d’une fonction récursive
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour qu’une fonction récursive se termine, elle doit comporter :</p>
+<ol type="1">
+<li>Un ou plusieurs <strong>cas de base</strong> qui ne génèrent pas d’appel récursif.</li>
+<li>Un ou plusieurs <strong>cas récursifs</strong> où la fonction s’appelle elle-même avec des arguments qui la rapprochent systématiquement d’un cas de base. On appelle cela le <strong>variant de boucle</strong> (ou de récursion) : une quantité entière positive qui décroît strictement à chaque appel.</li>
+</ol>
+</div>
+</div>
+<ol start="12" type="1">
+<li><p>Voici une proposition pour la fonction <code>encode_shannon</code> :</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> encode_shannon(texte):</span>
+<span id="cb5-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb5-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    Prend un texte en paramètre et renvoie le mot binaire</span></span>
+<span id="cb5-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    correspondant après encodage par l'algorithme de Shannon-Fano.</span></span>
+<span id="cb5-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    """</span></span>
+<span id="cb5-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">not</span> texte:</span>
+<span id="cb5-7">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb5-8"></span>
+<span id="cb5-9">    dico_occurrences <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> creer_dico_occ(texte)</span>
+<span id="cb5-10">    tableau_trie <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> creer_tab_trie(dico_occurrences)</span>
+<span id="cb5-11"></span>
+<span id="cb5-12">    mot_binaire_final <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb5-13">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> caractere <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> texte:</span>
+<span id="cb5-14">        code_caractere <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> shannon(caractere, tableau_trie)</span>
+<span id="cb5-15">        mot_binaire_final <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> code_caractere</span>
+<span id="cb5-16"></span>
+<span id="cb5-17">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> mot_binaire_final</span></code></pre></div></li>
+</ol>
+</section>
+</section>
+<section id="exercice-2-6-points" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2-6-points">Exercice 2 (6 points)</h2>
+<p>Cet exercice porte sur les bases de données relationnelles, le langage SQL et la programmation Python.</p>
+<ol type="1">
+<li>L’attribut <code>nom</code> ne peut pas être utilisé comme clé primaire pour la relation <code>adherent</code> car il n’assure pas l’unicité de chaque enregistrement. Plusieurs personnes peuvent avoir le même nom de famille (homonymes). La clé primaire doit être un identifiant unique pour chaque adhérent.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Clé primaire">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Clé primaire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une <strong>clé primaire</strong> (<em>primary key</em>) est un attribut ou un ensemble d’attributs qui permet d’identifier de manière unique chaque enregistrement (ou ligne) dans une table. Sa valeur doit être unique pour chaque ligne et ne peut pas être <code>NULL</code>.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li><p>La requête SQL <code>SELECT nomJeu, editeur FROM jeu ORDER BY nomJeu;</code> a pour effet de :</p>
+<ul>
+<li>Sélectionner les colonnes <code>nomJeu</code> et <code>editeur</code> de la table <code>jeu</code>.</li>
+<li>Trier les résultats obtenus par ordre alphabétique croissant en se basant sur la colonne <code>nomJeu</code>.</li>
+</ul>
+<p>Cette requête renvoie donc la liste de tous les jeux et de leur éditeur, classée par ordre alphabétique des noms de jeu.</p></li>
+<li><p>Pour connaître le nom des jeux en cours d’emprunt, il faut sélectionner les jeux dans la table <code>emprunt</code> dont l’attribut <code>dateRendu</code> a la valeur <code>NULL</code>. Comme un jeu ne peut être emprunté qu’une seule fois à un instant donné (un seul exemplaire), l’utilisation de <code>DISTINCT</code> est facultative mais reste une bonne pratique.</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">SELECT</span> nomJeu</span>
+<span id="cb6-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">FROM</span> emprunt</span>
+<span id="cb6-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">WHERE</span> dateRendu <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">IS</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">NULL</span>;</span></code></pre></div></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : La valeur NULL">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : La valeur NULL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En SQL, <code>NULL</code> représente une valeur inconnue ou absente. Pour tester si une colonne a la valeur <code>NULL</code>, on doit utiliser les opérateurs <code>IS NULL</code> ou <code>IS NOT NULL</code>, et non l’opérateur d’égalité <code>=</code>.</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li><p>Pour afficher le nom et le prénom des adhérents ayant emprunté le jeu “Catan”, il faut lier les tables <code>adherent</code> et <code>emprunt</code> via leur clé commune (<code>idAdherent</code>).</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">SELECT</span> adherent.nom, adherent.prenom</span>
+<span id="cb7-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">FROM</span> adherent</span>
+<span id="cb7-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">JOIN</span> emprunt <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">ON</span> adherent.idAdherent <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> emprunt.idAdherent</span>
+<span id="cb7-4"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">WHERE</span> emprunt.nomJeu <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Catan'</span>;</span></code></pre></div></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Les jointures">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Les jointures
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une <strong>jointure</strong> (clause <code>JOIN</code>) permet de combiner des lignes de deux ou plusieurs tables en se basant sur une colonne commune entre elles. La clause <code>ON</code> spécifie la condition de jointure.</p>
+</div>
+</div>
+<ol start="5" type="1">
+<li><p>Pour mettre à jour la base de données après le retour du jeu, il faut utiliser une requête <code>UPDATE</code> pour renseigner la <code>dateRendu</code> de l’emprunt concerné, identifié par son <code>idEmprunt</code>.</p>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">UPDATE</span> emprunt</span>
+<span id="cb8-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">SET</span> dateRendu <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'2025-06-03'</span></span>
+<span id="cb8-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">WHERE</span> idEmprunt <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1538</span>;</span></code></pre></div></li>
+<li><p>Pour trouver le nom et la catégorie des jeux sortis à partir de 2010 et dont l’âge minimum est strictement inférieur à 10 ans, on utilise une clause <code>WHERE</code> avec deux conditions reliées par l’opérateur <code>AND</code>.</p>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">SELECT</span> nomJeu, categorie</span>
+<span id="cb9-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">FROM</span> jeu</span>
+<span id="cb9-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">WHERE</span> anneeSortie <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2010</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">AND</span> ageMinimum <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>;</span></code></pre></div></li>
+<li><p>La table <code>participation</code> sert à lier les événements aux adhérents. Il s’agit d’une table de jointure pour une relation de type “plusieurs à plusieurs” (un adhérent peut participer à plusieurs événements, un événement accueille plusieurs adhérents). Elle doit donc contenir une clé étrangère vers la table <code>evenement</code> et une clé étrangère vers la table <code>adherent</code>.</p>
+<p>La clé primaire de la table <code>evenement</code> est <code>nom</code>, les clés étrangères de la table <code>participation</code> sont :</p>
+<ul>
+<li><code>#nomEvenement</code> qui fait référence à l’attribut <code>nom</code> de la table <code>evenement</code>.</li>
+<li><code>#idAdherent</code> qui fait référence à l’attribut <code>idAdherent</code> de la table <code>adherent</code>.</li>
+</ul></li>
+<li><p>Le script Python suivant reprend le code fourni, récupère la liste des jeux empruntés et construit le dictionnaire <code>dict_emprunts</code> qui associe à chaque nom de jeu son nombre total d’emprunts.</p>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> sqlite3</span>
+<span id="cb10-2"></span>
+<span id="cb10-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Connexion à la base de données</span></span>
+<span id="cb10-4">connection <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> sqlite3.<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">connect</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ludotheque.db"</span>)</span>
+<span id="cb10-5">curseur <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> connection.cursor()</span>
+<span id="cb10-6"></span>
+<span id="cb10-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Exécution de la requête</span></span>
+<span id="cb10-8">curseur.execute(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SELECT nomJeu FROM emprunt"</span>)</span>
+<span id="cb10-9"></span>
+<span id="cb10-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Récupération des résultats</span></span>
+<span id="cb10-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># curseur.fetchall() renvoie une liste de tuples, ex: [('Catan',), ('Agricola',)]</span></span>
+<span id="cb10-12">jeux_empruntes_tuples <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> curseur.fetchall()</span>
+<span id="cb10-13"></span>
+<span id="cb10-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Création de la liste des noms de jeux</span></span>
+<span id="cb10-15">liste_jeux <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb10-16"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> jeu_tuple <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> jeux_empruntes_tuples:</span>
+<span id="cb10-17">    liste_jeux.append(jeu_tuple[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>])</span>
+<span id="cb10-18"></span>
+<span id="cb10-19"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Création du dictionnaire des occurrences</span></span>
+<span id="cb10-20">dict_emprunts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {}</span>
+<span id="cb10-21"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> nom_jeu <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> liste_jeux:</span>
+<span id="cb10-22">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> nom_jeu <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> dict_emprunts:</span>
+<span id="cb10-23">        dict_emprunts[nom_jeu] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb10-24">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">else</span>:</span>
+<span id="cb10-25">        dict_emprunts[nom_jeu] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb10-26"></span>
+<span id="cb10-27"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Affichage du dictionnaire (pour vérification)</span></span>
+<span id="cb10-28"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(dict_emprunts)</span>
+<span id="cb10-29"></span>
+<span id="cb10-30"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Fermeture de la connexion</span></span>
+<span id="cb10-31">curseur.close()</span>
+<span id="cb10-32">connection.close()</span></code></pre></div></li>
+<li></li>
+</ol>
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On suppose que dict_emprunts est déjà créé.</span></span>
+<span id="cb11-2">dict_emprunts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb11-3">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Terraforming Mars"</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span>,</span>
+<span id="cb11-4">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Codenames"</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">22</span>,</span>
+<span id="cb11-5">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Agricola"</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>,</span>
+<span id="cb11-6">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Puerto Rico"</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>,</span>
+<span id="cb11-7">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Caylus"</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>,</span>
+<span id="cb11-8">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Dominion"</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">22</span>,</span>
+<span id="cb11-9">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Dixit"</span>: <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span></span>
+<span id="cb11-10">}</span>
+<span id="cb11-11"></span>
+<span id="cb11-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># --- Étape 1 : Regrouper les jeux par score dans un dictionnaire ---</span></span>
+<span id="cb11-13"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># (Cette étape reste identique et très utile)</span></span>
+<span id="cb11-14">scores_podium <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {}</span>
+<span id="cb11-15"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> jeu, score <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> dict_emprunts.items():</span>
+<span id="cb11-16">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> score <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">not</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> scores_podium:</span>
+<span id="cb11-17">        scores_podium[score] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb11-18">    scores_podium[score].append(jeu)</span>
+<span id="cb11-19"></span>
+<span id="cb11-20"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># --- Étape 2 : Trouver les 3 meilleurs scores en cherchant le maximum 3 fois ---</span></span>
+<span id="cb11-21"></span>
+<span id="cb11-22"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On récupère la liste des scores uniques à traiter.</span></span>
+<span id="cb11-23">scores_a_traiter <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">list</span>(scores_podium.keys())</span>
+<span id="cb11-24"></span>
+<span id="cb11-25"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On va stocker les listes du podium dans l'ordre où on les trouve (du meilleur au moins bon).</span></span>
+<span id="cb11-26">podium_ordre_inverse <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb11-27"></span>
+<span id="cb11-28"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On répète l'opération 3 fois pour les 3 places du podium.</span></span>
+<span id="cb11-29"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On vérifie aussi qu'il reste des scores à traiter.</span></span>
+<span id="cb11-30"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>):</span>
+<span id="cb11-31">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(scores_a_traiter) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb11-32">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">break</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Arrête la boucle s'il y a moins de 3 scores uniques.</span></span>
+<span id="cb11-33"></span>
+<span id="cb11-34">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On cherche le score le plus élevé parmi ceux qui restent.</span></span>
+<span id="cb11-35">    score_maximum <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On initialise avec une valeur très basse</span></span>
+<span id="cb11-36">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> score <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> scores_a_traiter:</span>
+<span id="cb11-37">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> score <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> score_maximum:</span>
+<span id="cb11-38">            score_maximum <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> score</span>
+<span id="cb11-39">    </span>
+<span id="cb11-40">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On ajoute la liste des jeux correspondants à notre podium temporaire.</span></span>
+<span id="cb11-41">    podium_ordre_inverse.append(scores_podium[score_maximum])</span>
+<span id="cb11-42">    </span>
+<span id="cb11-43">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On retire ce score de la liste pour ne pas le retrouver au tour suivant.</span></span>
+<span id="cb11-44">    scores_a_traiter.remove(score_maximum)</span>
+<span id="cb11-45"></span>
+<span id="cb11-46"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># --- Étape 3 : Inverser la liste pour avoir le podium dans l'ordre croissant des scores ---</span></span>
+<span id="cb11-47"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># podium_ordre_inverse contient [liste_score_25, liste_score_22, liste_score_18]</span></span>
+<span id="cb11-48"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># L'énoncé veut [liste_score_18, liste_score_22, liste_score_25]</span></span>
+<span id="cb11-49"></span>
+<span id="cb11-50">podium_final <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb11-51"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On parcourt la liste temporaire de la fin vers le début.</span></span>
+<span id="cb11-52"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(podium_ordre_inverse) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb11-53">    podium_final.append(podium_ordre_inverse[i])</span>
+<span id="cb11-54"></span>
+<span id="cb11-55"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Affichage du podium final</span></span>
+<span id="cb11-56"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(podium_final)</span>
+<span id="cb11-57"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Affiche : [['Agricola', 'Puerto Rico', 'Caylus'], ['Codenames', 'Dominion'], ['Terraforming Mars']]</span></span></code></pre></div>
+</section>
+<section id="exercice-3-8-points" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3-8-points">Exercice 3 (8 points)</h2>
+<p>Cet exercice porte sur la programmation Python, la sécurisation des communications et les réseaux.</p>
+<section id="partie-a---la-méthode-du-masque-jetable" class="level4">
+<h4 class="anchored" data-anchor-id="partie-a---la-méthode-du-masque-jetable">Partie A - La méthode du masque jetable</h4>
+<ol type="1">
+<li><p>Pour chiffrer le message <code>LIBRE</code> avec la clé <code>EYQMT</code>, on suit la méthode décrite :</p>
+<ol type="1">
+<li>Convertir les lettres en rangs (de 0 à 25).</li>
+<li>Additionner les rangs du message et de la clé.</li>
+<li>Appliquer le modulo 26 au résultat.</li>
+<li>Reconvertir les rangs obtenus en lettres.</li>
+</ol></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Opération</th>
+<th style="text-align: center;">L</th>
+<th style="text-align: center;">I</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">R</th>
+<th style="text-align: center;">E</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rang du message</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clé</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">Y</td>
+<td style="text-align: center;">Q</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rang de la clé</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Somme</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Somme mod 26</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lettre chiffrée</td>
+<td style="text-align: center;"><strong>P</strong></td>
+<td style="text-align: center;"><strong>G</strong></td>
+<td style="text-align: center;"><strong>R</strong></td>
+<td style="text-align: center;"><strong>D</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Le message chiffré est <strong><code>PGRDX</code></strong>.</p>
+<ol start="2" type="1">
+<li><p>La fonction <code>indice</code> peut être écrite en utilisant la méthode <code>.index()</code> des listes en Python.</p>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> indice(element, L):</span>
+<span id="cb12-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb12-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    Renvoie l'indice de element dans la liste L.</span></span>
+<span id="cb12-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    """</span></span>
+<span id="cb12-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> L.index(element)</span></code></pre></div>
+<p>Autre solution possible, plus simple :</p>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> indice(element, L):</span>
+<span id="cb13-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb13-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    Renvoie l'indice de element dans la liste L.</span></span>
+<span id="cb13-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    """</span></span>
+<span id="cb13-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(L)):</span>
+<span id="cb13-6">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> L[i] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> element:</span>
+<span id="cb13-7">            <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> i</span>
+<span id="cb13-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Si l'élément n'est pas trouvé, on renvoie -1.</span></span></code></pre></div></li>
+<li><p>La fonction <code>lettres_vers_indices</code> parcourt la chaîne de caractères et utilise la liste globale <code>alphabet</code> pour trouver l’indice de chaque lettre.</p>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># On suppose que la variable 'alphabet' est définie globalement.</span></span>
+<span id="cb14-2">alphabet <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'A'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'B'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'C'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'D'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'E'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'F'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'G'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'H'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'I'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'J'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'K'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'L'</span>, </span>
+<span id="cb14-3">            <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'M'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'N'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'O'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'P'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Q'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'R'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'S'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'T'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'U'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'V'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'W'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'X'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Y'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Z'</span>]</span>
+<span id="cb14-4"></span>
+<span id="cb14-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> lettres_vers_indices(chaine):</span>
+<span id="cb14-6">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb14-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    Renvoie la liste des indices des caractères de la chaîne.</span></span>
+<span id="cb14-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">    """</span></span>
+<span id="cb14-9">    indices <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb14-10">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> caractere <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> chaine:</span>
+<span id="cb14-11">        indices.append(indice(caractere, alphabet))</span>
+<span id="cb14-12">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> indices</span>
+<span id="cb14-13"></span>
+<span id="cb14-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Une version plus concise avec une liste en compréhension :</span></span>
+<span id="cb14-15"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># def lettres_vers_indices(chaine):</span></span>
+<span id="cb14-16"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#     return [indice(c, alphabet) for c in chaine]</span></span></code></pre></div></li>
+<li><p>Voici le code complété de la fonction <code>chiffrement</code>.</p>
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> chiffrement(msg, cle):</span>
+<span id="cb15-2">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">assert</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(cle) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(msg), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'impossible'</span></span>
+<span id="cb15-3">    indices_msg <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> lettres_vers_indices(msg)</span>
+<span id="cb15-4">    indices_cle <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> lettres_vers_indices(cle)</span>
+<span id="cb15-5">    n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(msg)</span>
+<span id="cb15-6">    indices_msg_chiffre <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb15-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(n):</span>
+<span id="cb15-8">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 8 : Addition des indices du message et de la clé</span></span>
+<span id="cb15-9">        ind <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> indices_msg[k] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> indices_cle[k]</span>
+<span id="cb15-10">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 9 : Application du modulo 26 si nécessaire</span></span>
+<span id="cb15-11">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> ind <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">26</span>:</span>
+<span id="cb15-12">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 10 : L'opération est une soustraction de 26</span></span>
+<span id="cb15-13">            ind <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ind <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">26</span></span>
+<span id="cb15-14">        indices_msg_chiffre.append(ind)</span>
+<span id="cb15-15">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 12 : Conversion de la liste d'indices en chaîne de caractères</span></span>
+<span id="cb15-16">    msg_chiffre <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> indices_vers_lettres(indices_msg_chiffre)</span>
+<span id="cb15-17">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 13</span></span>
+<span id="cb15-18">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> msg_chiffre</span></code></pre></div></li>
+<li><p>Lors de l’appel <code>chiffrement('RESEAU', 'GFTZ')</code>, la condition de l’instruction <code>assert</code> est évaluée. <code>len('RESEAU')</code> vaut 6 et <code>len('GFTZ')</code> vaut 4. La condition <code>len(cle) &gt;= len(msg)</code> (soit <code>4 &gt;= 6</code>) est fausse.</p>
+<p>L’exécution du programme s’arrête et une erreur de type <code>AssertionError</code> est levée, affichant le message <code>'impossible'</code>.</p></li>
+<li><p>Pour déchiffrer <code>GMEDH</code> avec la clé <code>FVEIT</code>, on effectue l’opération inverse : la soustraction modulo 26. <img src="https://latex.codecogs.com/png.latex?C_%7Bdechiffr%C3%A9%7D%20=%20(C_%7Bchiffr%C3%A9%7D%20-%20C_%7Bcl%C3%A9%7D)%20%5Cpmod%7B26%7D">.</p></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Opération</th>
+<th style="text-align: center;">G</th>
+<th style="text-align: center;">M</th>
+<th style="text-align: center;">E</th>
+<th style="text-align: center;">D</th>
+<th style="text-align: center;">H</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rang chiffré</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clé</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">I</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rang de la clé</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Différence</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">-9</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-5</td>
+<td style="text-align: center;">-12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Différence mod 26</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lettre déchiffrée</td>
+<td style="text-align: center;"><strong>B</strong></td>
+<td style="text-align: center;"><strong>R</strong></td>
+<td style="text-align: center;"><strong>A</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>O</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Le message déchiffré est <strong><code>BRAVO</code></strong>.</p>
+<ol start="7" type="1">
+<li><p>Pour déchiffrer un message, il faut effectuer l’opération mathématique inverse de celle du chiffrement. Le chiffrement est une addition modulo 26. Son inverse est donc une <strong>soustraction modulo 26</strong>.</p>
+<p>Pour chaque caractère, on soustrait le rang de la lettre de la clé au rang de la lettre du message chiffré, et on prend le résultat modulo 26.</p>
+<p>Mathématiquement : si <img src="https://latex.codecogs.com/png.latex?Chiffr%C3%A9%20=%20(Message%20+%20Cl%C3%A9)%20%5Cpmod%7B26%7D">, alors <img src="https://latex.codecogs.com/png.latex?Message%20=%20(Chiffr%C3%A9%20-%20Cl%C3%A9)%20%5Cpmod%7B26%7D">.</p></li>
+<li><p>Pour obtenir la fonction <code>dechiffrement</code>, on adapte la fonction <code>chiffrement</code> en remplaçant l’addition par une soustraction.</p>
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> dechiffrement(msg_chiffre, cle):</span>
+<span id="cb16-2">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">assert</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(cle) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(msg_chiffre), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'impossible'</span></span>
+<span id="cb16-3">    indices_msg <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> lettres_vers_indices(msg_chiffre)</span>
+<span id="cb16-4">    indices_cle <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> lettres_vers_indices(cle)</span>
+<span id="cb16-5">    n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(msg_chiffre)</span>
+<span id="cb16-6">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 6 adaptée</span></span>
+<span id="cb16-7">    indices_msg_dechiffre <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> []</span>
+<span id="cb16-8">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> k <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(n):</span>
+<span id="cb16-9">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 8 adaptée : Soustraction des indices</span></span>
+<span id="cb16-10">        ind <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> indices_msg[k] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> indices_cle[k]</span>
+<span id="cb16-11">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 9 adaptée : Gestion des résultats négatifs</span></span>
+<span id="cb16-12">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> ind <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>:</span>
+<span id="cb16-13">            <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 10 adaptée : Ajout de 26</span></span>
+<span id="cb16-14">            ind <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ind <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">26</span></span>
+<span id="cb16-15">        indices_msg_dechiffre.append(ind)</span>
+<span id="cb16-16">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 12 adaptée</span></span>
+<span id="cb16-17">    msg_dechiffre <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> indices_vers_lettres(indices_msg_dechiffre)</span>
+<span id="cb16-18">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ligne 13 adaptée</span></span>
+<span id="cb16-19">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> msg_dechiffre</span></code></pre></div></li>
+</ol>
+</section>
+<section id="partie-b---sécurisation-des-communications" class="level4">
+<h4 class="anchored" data-anchor-id="partie-b---sécurisation-des-communications">Partie B - Sécurisation des communications</h4>
+<ol start="9" type="1">
+<li><p>La différence fondamentale entre un algorithme de chiffrement symétrique et asymétrique réside dans la gestion des clés :</p>
+<ul>
+<li><strong>Chiffrement symétrique</strong> : utilise <strong>une seule et même clé secrète</strong> pour chiffrer et déchiffrer le message. Cette clé doit être partagée de manière sécurisée entre l’émetteur et le destinataire avant la communication.</li>
+<li><strong>Chiffrement asymétrique</strong> : utilise une <strong>paire de clés</strong> pour chaque utilisateur : une <strong>clé publique</strong>, que l’on peut distribuer librement, et une <strong>clé privée</strong>, qui doit rester secrète. Ce qui est chiffré avec la clé publique ne peut être déchiffré qu’avec la clé privée correspondante.</li>
+</ul></li>
+<li><p>Alice chiffre son message avec la clé publique de Bob. Pour déchiffrer le message reçu, Bob utilise sa <strong>clé privée</strong>, qui est la seule capable d’inverser l’opération de chiffrement effectuée par sa clé publique.</p></li>
+<li><p>Dans le scénario décrit, n’importe qui (une tierce personne, Eve par exemple) peut obtenir la clé publique de Bob. Eve peut alors chiffrer un message avec cette clé et l’envoyer à Bob en se faisant passer pour Alice. Bob pourra déchiffrer le message, mais n’aura aucun moyen de vérifier que l’expéditeur est bien Alice. Ce protocole simple ne garantit pas <strong>l’authentification</strong> de l’émetteur.</p></li>
+<li><p><strong>HTTPS</strong> (HyperText Transfer Protocol Secure) est la version sécurisée du protocole HTTP. Il combine HTTP avec un protocole de sécurité comme TLS (Transport Layer Security). HTTPS assure trois garanties de sécurité principales :</p>
+<ul>
+<li><strong>Confidentialité</strong> : Les données échangées sont chiffrées, les rendant illisibles pour un attaquant qui les intercepterait.</li>
+<li><strong>Intégrité</strong> : Les données ne peuvent pas être modifiées durant leur transit sans que la modification soit détectée.</li>
+<li><strong>Authentification</strong> : Il permet de vérifier l’identité du serveur web auquel on se connecte, grâce à un système de certificats numériques.</li>
+</ul></li>
+<li><p>On utilise le protocole HTTPS (qui est un système hybride) plutôt qu’un chiffrement purement asymétrique pour des raisons de <strong>performance</strong>. Le chiffrement asymétrique est beaucoup plus lent et gourmand en ressources de calcul que le chiffrement symétrique. Il est donc mal adapté pour chiffrer de grandes quantités de données. HTTPS utilise le chiffrement asymétrique uniquement au début de la connexion pour authentifier le serveur et négocier une clé de session secrète. Ensuite, toute la communication est chiffrée avec un algorithme symétrique, beaucoup plus rapide, utilisant cette clé de session.</p></li>
+</ol>
+</section>
+<section id="partie-c---réseaux" class="level4">
+<h4 class="anchored" data-anchor-id="partie-c---réseaux">Partie C - Réseaux</h4>
+<ol start="14" type="1">
+<li><p>L’affichage <code>100% packet loss</code> indique que la machine de Marc a envoyé 4 paquets <code>ping</code> à l’adresse IP <code>192.168.100.115</code>, mais n’a reçu aucune réponse. L’erreur de Marc est une faute de frappe dans l’adresse IP du poste de Bob. L’adresse correcte est <code>192.168.110.115</code>. Marc a tapé <code>100</code> au lieu de <code>110</code> dans le troisième octet. Il a donc tenté de contacter une machine sur un autre réseau (<code>192.168.100.0/24</code>), qui est probablement inaccessible depuis son poste.</p></li>
+<li><p>Pour obtenir la représentation décimale du masque <code>11111111.11111111.11111111.11100000</code>, on convertit chaque octet binaire en décimal :</p>
+<ul>
+<li><code>11111111</code> en binaire correspond à <img src="https://latex.codecogs.com/png.latex?2%5E8-1%20=%20255"> en décimal.</li>
+<li><code>11100000</code> en binaire correspond à <img src="https://latex.codecogs.com/png.latex?1%20%5Ctimes%202%5E7%20+%201%20%5Ctimes%202%5E6%20+%201%20%5Ctimes%202%5E5%20=%20128%20+%2064%20+%2032%20=%20224"> en décimal.</li>
+</ul>
+<p>Le masque de sous-réseau en décimal est <strong><code>255.255.255.224</code></strong>.</p></li>
+<li><p>Le masque <code>255.255.255.224</code> a 27 bits à 1 pour la partie réseau (<img src="https://latex.codecogs.com/png.latex?8+8+8+3=27">). La partie hôte est donc sur les <img src="https://latex.codecogs.com/png.latex?32%20-%2027%20=%205"> bits restants. Le nombre total d’adresses IPv4 sur ce sous-réseau est <img src="https://latex.codecogs.com/png.latex?2%5E5%20=%20%5Ctextbf%7B32%7D">.</p>
+<p>(Note : parmi ces 32 adresses, 2 sont réservées : l’adresse du sous-réseau lui-même et l’adresse de diffusion. Il y a donc <img src="https://latex.codecogs.com/png.latex?32%20-%202%20=%2030"> adresses attribuables à des hôtes).</p></li>
+<li><p>Pour convertir le nombre 134 en binaire, on utilise la méthode des divisions successives par 2 ou par décomposition en puissances de 2. <img src="https://latex.codecogs.com/png.latex?134%20=%20128%20+%206%20=%20128%20+%204%20+%202%20=%201%20%5Ccdot%202%5E7%20+%200%20%5Ccdot%202%5E6%20+%200%20%5Ccdot%202%5E5%20+%200%20%5Ccdot%202%5E4%20+%200%20%5Ccdot%202%5E3%20+%201%20%5Ccdot%202%5E2%20+%201%20%5Ccdot%202%5E1%20+%200%20%5Ccdot%202%5E0">.</p>
+<p>La représentation binaire de 134 sur un octet est <strong><code>10000110</code></strong>.</p></li>
+<li><p>Pour savoir quelle commande a fonctionné, il faut déterminer si les machines cibles sont dans le même sous-réseau que Zoé. Deux machines peuvent communiquer directement si elles sont sur le même sous-réseau.</p>
+<ul>
+<li><p>Masque : <code>255.255.255.224</code> (<code>11100000</code> pour le dernier octet).</p></li>
+<li><p>IP de Zoé : <code>192.168.110.134</code> (<code>10000110</code> pour le dernier octet).</p>
+<ul>
+<li>Adresse du sous-réseau de Zoé : <code>134 ET 224</code> -&gt; <code>10000110 ET 11100000</code> = <code>10000000</code> (soit 128). Le sous-réseau est <code>192.168.110.128</code>.</li>
+</ul></li>
+<li><p><strong>Commande n°1</strong> : <code>ping 192.168.110.115</code> (Bob)</p>
+<ul>
+<li>Le dernier octet de l’IP de Bob est 115 (<code>01110011</code>).</li>
+<li>Adresse du sous-réseau de Bob : <code>115 ET 224</code> -&gt; <code>01110011 ET 11100000</code> = <code>01100000</code> (soit 96). Le sous-réseau est <code>192.168.110.96</code>.</li>
+</ul></li>
+<li><p><strong>Commande n°2</strong> : <code>ping 192.168.110.153</code> (Marc)</p>
+<ul>
+<li>Le dernier octet de l’IP de Marc est 153 (<code>10011001</code>).</li>
+<li>Adresse du sous-réseau de Marc : <code>153 ET 224</code> -&gt; <code>10011001 ET 11100000</code> = <code>10000000</code> (soit 128). Le sous-réseau est <code>192.168.110.128</code>.</li>
+</ul></li>
+</ul>
+<p><strong>Conclusion</strong> : Zoé et Marc sont sur le même sous-réseau (<code>192.168.110.128</code>), alors que Bob est sur un sous-réseau différent (<code>192.168.110.96</code>). La communication directe est possible entre Zoé et Marc.</p>
+<p>C’est donc la <strong>commande n°2</strong> qui a produit l’affichage indiquant une réussite de la communication.</p></li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>NSI</category>
+  <category>Annales</category>
+  <guid>https://flallemand.fr/blog/posts/2025-06-23-NSIMetropoleJ2/</guid>
+  <pubDate>Sun, 22 Jun 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/2025-06-23-NSIMetropoleJ2/arbre.png" medium="image" type="image/png" height="67" width="144"/>
+</item>
 <item>
   <title>Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 1</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -6753,177 +8120,6 @@ En conclusion
   <guid>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/</guid>
   <pubDate>Fri, 01 Sep 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" medium="image" type="image/png" height="59" width="144"/>
-</item>
-<item>
-  <title>Utiliser pyxelstudio.net pour créer des jeux en python avec pyxel</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxelstudio/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Dans cet article, je vais vous présenter le site pyxelstudio.net et le module pyxel, qui vous permettent de créer facilement des jeux rétro avec python. Je vais vous montrer comment utiliser le site pyxelstudio.net pour éditer et exécuter du code en ligne, sans avoir besoin d’installer python ou pyxel sur votre ordinateur.</p>
-<section id="quest-ce-que-pyxelstudio.net" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-que-pyxelstudio.net">Qu’est-ce que pyxelstudio.net ?</h2>
-<p>Pyxelstudio.net est un site web qui vous permet d’écrire et d’exécuter du code python avec le module pyxel directement dans votre navigateur. C’est très pratique si vous voulez rapidement tester vos idées de jeux sans avoir à installer python ou pyxel sur votre ordinateur. Pour accéder au site, il suffit de taper l’adresse <a href="https://www.pyxelstudio.net/">https://www.pyxelstudio.net/</a> dans la barre d’adresse de votre navigateur. Vous arrivez alors sur la page d’accueil du site, qui vous propose plusieurs options. Je vous conseille de créer un compte (en cliquant sur “register”), car cela vous permettra de retrouver vos projets très facilement quand vous passez d’une machine à une autre. Ainsi, vous pouvez créer un nouveau projet, ouvrir un projet existant, ou encore consulter les exemples de jeux réalisés avec pyxel. Ce site a été développé par <a href="https://twitter.com/laurentabbal">Laurent Abbal</a>, professeur de NSI au lycée français international de Tokyo.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="pyxelstudio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Page d’accueil de pyxelstudio.net"><img src="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" class="img-fluid figure-img" alt="Page d’accueil de pyxelstudio.net"></a></p>
-<figcaption>Page d’accueil de <a href="https://www.pyxelstudio.net">pyxelstudio.net</a></figcaption>
-</figure>
-</div>
-</section>
-<section id="comment-créer-un-nouveau-projet" class="level2">
-<h2 class="anchored" data-anchor-id="comment-créer-un-nouveau-projet">Comment créer un nouveau projet ?</h2>
-<p>Pour créer un nouveau projet, cliquez sur le bouton “Create”. Vous arrivez alors sur l’interface principale du site, qui se compose de deux parties : à gauche, l’éditeur de code et à droite la fenêtre d’exécution.</p>
-<ul>
-<li>L’éditeur de code vous permet d’écrire votre code python avec pyxel. Il dispose de la coloration syntaxique pour vous faciliter la tâche.</li>
-<li>La fenêtre d’exécution vous permet de voir le résultat de votre code, après avoir cliqué sur le bouton jaune situé au-dessus de la zone.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="interface.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Vue d’ensemble de la page d’édition de www.pyxelstudio.net"><img src="https://flallemand.fr/blog/posts/pyxelstudio/interface.png" class="img-fluid figure-img" alt="Vue d’ensemble de la page d’édition de www.pyxelstudio.net"></a></p>
-<figcaption>Vue d’ensemble de la page d’édition de www.pyxelstudio.net</figcaption>
-</figure>
-</div>
-</section>
-<section id="linterface-de-la-zone-dédition" class="level2">
-<h2 class="anchored" data-anchor-id="linterface-de-la-zone-dédition">L’interface de la zone d’édition</h2>
-<p>Outre l’édition du code et son exécution, différentes actions sont possibles depuis cet écran.</p>
-<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig1.png" class="img-fluid"></a></p>
-<ol type="1">
-<li>Accès au dashboard : liste des projets créés, avec la possibilité de les éditer et de les supprimer.</li>
-<li>Définition du nom du projet.</li>
-<li>Liste des fichiers (fichiers python, fichiers de ressources, etc.) composant le projet.</li>
-<li>Afficher la zone d’édition du code. 5.Éditer le fichier de ressources : par défaut, c’est un fichier nommé res.pyxres, qui permet de définir des graphismes, des sons et de la musique pour le projet.</li>
-<li>Accès à l’édition de la description et de la documentation de votre projet.</li>
-<li>Déclaration des modules python utilisés par votre projet.</li>
-<li>Accès aux paramètres : permet, par exemple, de rendre votre projet public ou privé.</li>
-<li>Afficher un résumé des commandes pyxel existantes.</li>
-<li>Enregistrer le fichier en cours d’édition.</li>
-<li>Générer un lien pour partager le projet.</li>
-</ol>
-<p>Lorsqu’un programme est en cours d’exécution, on trouve deux boutons au-dessus de la zone d’exécution.</p>
-<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig2.png" class="img-fluid"></a></p>
-<ol type="1">
-<li>Mettre le jeu en plein écran.</li>
-<li>Afficher la console : utile pour l’affichage de certaines variables en phase de débogage.</li>
-</ol>
-<p>Pour finir ce petit tour de l’interface du site, regardons de plus près l’affichage de la liste des fichiers d’un projet :</p>
-<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig3.png" class="img-fluid"></a></p>
-<ol type="1">
-<li>Ces deux boutons permettent respectivement de créer un nouveau fichier et de téléverser un fichier existant.</li>
-<li>Le fichier python de l’application. C’est lui qui contient le code du jeu et le bouton permet de l’éditer.</li>
-<li>Le fichier de ressource, créé automatiquement à la création d’un projet. Initialement vide. Le bouton permet de l’éditer.</li>
-<li>Ces boutons permettent de télécharger les fichiers python et pyxres.</li>
-</ol>
-</section>
-<section id="démonstration" class="level2">
-<h2 class="anchored" data-anchor-id="démonstration">Démonstration</h2>
-<p>Pour vous montrer comment fonctionne le site <a href="https://www.pyxelstudio.net">pyxelstudio.net</a>, écrivons un exemple simple de code pyxel, qui affiche un message “Hello Pyxel!” à l’écran. Ce code est tiré du fichier 01_hello_pyxel.py, qui fait partie des exemples fournis avec le module pyxel. Voici le code :</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pyxel</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">class</span> App:</span>
-<span id="cb1-4">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-5">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># initialisation de l'écran avec une taille de 160 x 120 pixels</span></span>
-<span id="cb1-6">        pyxel.init(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">120</span>)</span>
-<span id="cb1-7">        pyxel.run(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.draw)</span>
-<span id="cb1-8">        </span>
-<span id="cb1-9">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># définition de la fonction update, qui est appelée à chaque frame</span></span>
-<span id="cb1-10">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-11">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">pass</span></span>
-<span id="cb1-12"></span>
-<span id="cb1-13">    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># définition de la fonction draw, qui est appelée à chaque frame après la fonction update</span></span>
-<span id="cb1-14">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-15">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on efface l'écran avec la couleur 0 (noir)</span></span>
-<span id="cb1-16">        pyxel.cls(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb1-17">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on affiche le texte "Hello Pyxel!" à la position (55, 41) avec la couleur 7 (blanc)</span></span>
-<span id="cb1-18">        pyxel.text(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">55</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">41</span>, <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Hello Pyxel!"</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">7</span>)</span>
-<span id="cb1-19">        </span>
-<span id="cb1-20"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on exécute le programme avec les fonctions update et draw</span></span>
-<span id="cb1-21">App()</span></code></pre></div>
-<p>Nous allons copier ce code dans l’éditeur de code du site pyxelstudio.net, puis cliquer sur le bouton “Run” pour l’exécuter. Nous voyons alors apparaître le message “Hello Pyxel!” à l’écran, comme prévu. Voilà, nous venons de réaliser notre première application avec pyxel ! C’était facile, non ?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Copie d’écran de la sortie pyxel du code d’exemple"><img src="https://flallemand.fr/blog/posts/pyxelstudio/fig4.png" class="img-fluid figure-img" alt="Copie d’écran de la sortie pyxel du code d’exemple"></a></p>
-<figcaption>Copie d’écran de la sortie pyxel du code d’exemple</figcaption>
-</figure>
-</div>
-</section>
-<section id="quelles-sont-les-autres-fonctionnalités-du-site" class="level2">
-<h2 class="anchored" data-anchor-id="quelles-sont-les-autres-fonctionnalités-du-site">Quelles sont les autres fonctionnalités du site ?</h2>
-<p>Le site pyxelstudio.net vous offre d’autres possibilités intéressantes, comme le partage de code (voir ci-dessus), la sauvegarde de projets, la visualisation des exemples, etc.</p>
-<p>Si vous voulez partager votre code avec d’autres personnes, vous pouvez cliquer sur le bouton de partage en haut à droite de la zone d’édition. Vous obtenez alors un lien que vous pouvez copier et envoyer à qui vous voulez. La personne qui reçoit le lien peut ainsi ouvrir votre code dans son navigateur et l’exécuter sans avoir à le télécharger. C’est très pratique pour montrer vos créations ou demander de l’aide. Je donnerai dans des articles suivants des conseils et des tutoriels pour la création de jeux avec pyxel dans pyxelstudio.</p>
-
-
-</section>
-
- ]]></description>
-  <category>Python</category>
-  <category>NSI</category>
-  <category>Programmation</category>
-  <category>Pyxel</category>
-  <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxelstudio/</guid>
-  <pubDate>Thu, 31 Aug 2023 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/pyxelstudio/pyxelstudio.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 </channel>
 </rss>

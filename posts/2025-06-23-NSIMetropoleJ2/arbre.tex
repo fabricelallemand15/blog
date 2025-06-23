@@ -1,0 +1,89 @@
+\documentclass[standalone, border=5pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[
+    % Style pour les noeuds internes (rectangles)
+    inode/.style={
+        rectangle, 
+        draw, 
+        align=center,
+        inner sep=1pt
+    },
+    % Style pour les feuilles (cercles)
+    leaf/.style={
+        circle, 
+        draw, 
+        align=center,
+        minimum size=0.8cm
+    },
+    % Style pour les flèches
+    -Stealth,
+    % Distance entre les niveaux et les noeuds
+    node distance=1cm and 1cm 
+]
+
+% --- NIVEAU 0 : Racine ---
+\node[inode] (root) {
+    \begin{tabular}{*{6}{c}}
+        c & h & i & e & f & r \\
+        \tiny 1 & \tiny 1 & \tiny 1 & \tiny 1 & \tiny 2 & \tiny 2 \\
+    \end{tabular}
+};
+
+% --- NIVEAU 1 ---
+\node[inode, below left=of root, xshift=1.5cm] (n1_left) {
+    \begin{tabular}{*{4}{c}}
+        c & h & i & e \\
+        \tiny 1 & \tiny 1 & \tiny 1 & \tiny 1 \\
+    \end{tabular}
+};
+\node[inode, below right=of root, xshift=.5cm] (n1_right) {
+    \begin{tabular}{cc}
+        f & r \\
+        \tiny 2 & \tiny 2 \\
+    \end{tabular}
+};
+
+% --- NIVEAU 2 ---
+\node[inode, below left=of n1_left] (n2_ll) {
+    \begin{tabular}{cc}
+        c & h \\
+        \tiny 1 & \tiny 1 \\
+    \end{tabular}
+};
+\node[inode, below right=of n1_left] (n2_lr) {
+    \begin{tabular}{cc}
+        i & e \\
+        \tiny 1 & \tiny 1 \\
+    \end{tabular}
+};
+\node[leaf, below left=of n1_right] (leaf_f) {f};
+\node[leaf, below right=of n1_right] (leaf_r) {r};
+
+% --- NIVEAU 3 ---
+\node[leaf, below left=of n2_ll] (leaf_c) {c};
+\node[leaf, below right=of n2_ll] (leaf_h) {h};
+\node[leaf, below left=of n2_lr] (leaf_i) {i};
+\node[leaf, below right=of n2_lr] (leaf_e) {e};
+
+% --- DESSIN DES ARÊTES ---
+% Niveau 0 -> 1
+\draw (root) -- node[midway, left, xshift=-2pt] {1} (n1_left);
+\draw (root) -- node[midway, right, xshift=2pt] {0} (n1_right);
+
+% Niveau 1 -> 2
+\draw (n1_left) -- node[midway, left, xshift=-2pt] {1} (n2_ll);
+\draw (n1_left) -- node[midway, right, xshift=2pt] {0} (n2_lr);
+\draw (n1_right) -- node[midway, left, xshift=-2pt] {1} (leaf_f);
+\draw (n1_right) -- node[midway, right, xshift=2pt] {0} (leaf_r);
+
+% Niveau 2 -> 3
+\draw (n2_ll) -- node[midway, left, xshift=-2pt] {1} (leaf_c);
+\draw (n2_ll) -- node[midway, right, xshift=2pt] {0} (leaf_h);
+\draw (n2_lr) -- node[midway, left, xshift=-2pt] {1} (leaf_i);
+\draw (n2_lr) -- node[midway, right, xshift=2pt] {0} (leaf_e);
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="F. LALLEMAND">
+
+<title>Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 2 – Le bloc-notes Maths, Info, Lycée</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"fr"
+  });
+});
+</script> 
+  
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #BCD2E8;
+      }
+</style>
+<script src="https://kit.fontawesome.com/4010eb68d9.js" crossorigin="anonymous"></script>
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//sitelf.fr/matomo/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript></noscript></head><body class="nav-fixed quarto-light"><p><img referrerpolicy="no-referrer-when-downgrade" src="//sitelf.fr/matomo/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt=""></p>
+  <!-- End Matomo Code -->
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.mim-libre.fr/@lallemandfabrice"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@flallemandmath"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 2</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">NSI</div>
+                <div class="quarto-category">Annales</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Auteur·rice</div>
+      <div class="quarto-title-meta-contents">
+               <p>F. LALLEMAND </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Date de publication</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">23 juin 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#exercice-1-6-points" id="toc-exercice-1-6-points" class="nav-link active" data-scroll-target="#exercice-1-6-points">Exercice 1 (6 points)</a></li>
+  <li><a href="#exercice-2-6-points" id="toc-exercice-2-6-points" class="nav-link" data-scroll-target="#exercice-2-6-points">Exercice 2 (6 points)</a></li>
+  <li><a href="#exercice-3-8-points" id="toc-exercice-3-8-points" class="nav-link" data-scroll-target="#exercice-3-8-points">Exercice 3 (8 points)</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2025-06-23-NSIMetropoleJ2/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="exercice-1-6-points" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-1-6-points">Exercice 1 (6 points)</h2>
+<p>Cet exercice porte sur les arbres binaires et la programmation Python dans le contexte du codage de Shannon-Fano.</p>
+<section id="partie-a" class="level4">
+<h4 class="anchored" data-anchor-id="partie-a">Partie A</h4>
+<ol type="1">
+<li><p>Pour obtenir le mot binaire qui encode le caractère espace, représenté par le symbole <code>_</code>, il faut parcourir l’arbre de la Figure 1 de la racine jusqu’à la feuille contenant ce symbole.</p>
+<ul>
+<li>On part de la racine et on prend la branche de droite, étiquetée <code>0</code>.</li>
+<li>Du nœud suivant, on prend la branche de gauche, étiquetée <code>1</code>.</li>
+<li>Du nœud suivant, on prend la branche de droite, étiquetée <code>0</code>. On arrive à la feuille <code>_</code>.</li>
+</ul>
+<p>Le mot binaire correspondant est donc <strong><code>010</code></strong>.</p></li>
+<li><p>Pour décoder le mot binaire <code>0001110101111110011001</code>, on parcourt l’arbre depuis la racine pour chaque symbole.</p>
+<ul>
+<li><code>00</code> : racine -&gt; droite (<code>0</code>) -&gt; droite (<code>0</code>) -&gt; feuille <strong><code>e</code></strong>.</li>
+<li>Il reste <code>01110101111110011001</code>. On repart de la racine.</li>
+<li><code>011</code> : racine -&gt; droite (<code>0</code>) -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; feuille <strong><code>s</code></strong>.</li>
+<li>Il reste <code>1010111110011001</code>. On repart de la racine.</li>
+<li><code>1010</code> : racine -&gt; gauche (<code>1</code>) -&gt; droite (<code>0</code>) -&gt; gauche (<code>1</code>) -&gt; droite (<code>0</code>) -&gt; feuille <strong><code>p</code></strong>.</li>
+<li>Il reste <code>11110011001</code>. On repart de la racine.</li>
+<li><code>1111</code> : racine -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; feuille <strong><code>i</code></strong>.</li>
+<li>Il reste <code>110011001</code>. On repart de la racine.</li>
+<li><code>11001</code> : racine -&gt; gauche (<code>1</code>) -&gt; gauche (<code>1</code>) -&gt; droite (<code>0</code>) -&gt; droite (<code>0</code>) -&gt; gauche (<code>1</code>) -&gt; feuille <strong><code>o</code></strong>.</li>
+<li>Il reste <code>1001</code>. On repart de la racine.</li>
+<li><code>1001</code> : racine -&gt; gauche (<code>1</code>) -&gt; droite (<code>0</code>) -&gt; droite (<code>0</code>) -&gt; gauche (<code>1</code>) -&gt; feuille <strong><code>n</code></strong>.</li>
+</ul>
+<p>Le texte décodé est <strong><code>espion</code></strong>.</p></li>
+<li><p>Pour obtenir les symboles classés par taille d’encodage croissante, il faut lister les symboles en fonction de leur profondeur dans l’arbre. Les symboles les plus proches de la racine ont les codes les plus courts. Le parcours qui explore un arbre niveau par niveau est le <strong>parcours en largeur</strong>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Parcours d'arbre">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Parcours d’arbre
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un <strong>parcours en largeur</strong> (ou <em>Breadth-First Search</em>, BFS) explore un arbre niveau par niveau. On visite d’abord la racine, puis tous ses enfants, puis tous les nœuds du niveau suivant, et ainsi de suite. Ce parcours est souvent mis en œuvre à l’aide d’une file.</p>
+</div>
+</div>
+</section>
+<section id="partie-b" class="level4">
+<h4 class="anchored" data-anchor-id="partie-b">Partie B</h4>
+<ol start="4" type="1">
+<li><p>L’étape 2 de l’algorithme de Shannon-Fano consiste à séparer la liste ordonnée des symboles en deux groupes dont les sommes des occurrences sont les plus proches possibles.</p>
+<p>Le tableau des symboles triés par nombre d’occurrences est : <code>i(1), u(1), c(1), o(1), d(1), ,(1), p(1), n(2), j(2), s(3), _(4), e(4)</code>. La somme totale des occurrences est : <span class="math inline">\(7 \times 1 + 2 \times 2 + 1 \times 3 + 2 \times 4 = 7 + 4 + 3 + 8 = 22\)</span>.</p>
+<p>Il faut donc chercher une coupure qui sépare ce total en deux sommes aussi proches que possible de <span class="math inline">\(22 / 2 = 11\)</span>.</p>
+<p>La figure 2 propose la coupure suivante :</p>
+<ul>
+<li><strong>Groupe 1 (gauche)</strong> : <code>i, u, c, o, d, ,, p, n, j</code>. La somme de leurs occurrences est : <span class="math inline">\(1+1+1+1+1+1+1+2+2 = 11\)</span>.</li>
+<li><strong>Groupe 2 (droite)</strong> : <code>s, _, e</code>. La somme de leurs occurrences est : <span class="math inline">\(3+4+4 = 11\)</span>.</li>
+</ul>
+<p>Les deux sommes étant égales à 11, cette séparation est optimale. La justification est donc validée par ce calcul.</p></li>
+<li><p>La <strong>hauteur</strong> d’un arbre est la longueur du plus long chemin de la racine à une feuille. Dans la figure 3, les feuilles les plus profondes sont <code>o</code> et <code>d</code>. Le chemin pour atteindre <code>d</code> est <code>1 -&gt; 0 -&gt; 1 -&gt; 1 -&gt; 0</code>. Ce chemin est de longueur 5.</p>
+<p>La hauteur de l’arbre est <strong>5</strong>.</p>
+<p>Dans le contexte de l’exercice, cette hauteur représente <strong>la longueur du plus long mot de code binaire</strong> utilisé pour encoder un symbole.</p></li>
+<li><p>Pour justifier que le codage de Shannon-Fano est plus efficace que l’ASCII pour le texte <code>je pense, donc je suis</code>, nous devons comparer le nombre total de bits nécessaires dans chaque cas.</p>
+<ul>
+<li><p><strong>Codage ASCII</strong> : Le texte contient 22 caractères (en se basant sur la somme des occurrences du tableau de la page 3). En ASCII, chaque caractère est codé sur un octet, soit 8 bits. Taille totale en ASCII = <span class="math inline">\(22 \text{ caractères} \times 8 \text{ bits/caractère} = 176 \text{ bits}\)</span>.</p></li>
+<li><p><strong>Codage de Shannon-Fano</strong> : On utilise les longueurs de code données par la profondeur de chaque symbole dans l’arbre de la figure 3 et les fréquences du tableau.</p>
+<ul>
+<li>Profondeur 2 : <code>e</code> (4), <code>_</code> (4). Coût : <span class="math inline">\((4+4) \times 2 = 16\)</span> bits.</li>
+<li>Profondeur 3 : <code>s</code> (3). Coût : <span class="math inline">\(3 \times 3 = 9\)</span> bits.</li>
+<li>Profondeur 4 : <code>j</code> (2), <code>n</code> (2), <code>p</code> (1), <code>c</code> (1), <code>u</code> (1), <code>i</code> (1). Coût : <span class="math inline">\((2+2+1+1+1+1) \times 4 = 8 \times 4 = 32\)</span> bits.</li>
+<li>Profondeur 5 : <code>,</code> (1), <code>d</code> (1), <code>o</code> (1). Coût : <span class="math inline">\((1+1+1) \times 5 = 3 \times 5 = 15\)</span> bits.</li>
+</ul>
+<p>Taille totale Shannon-Fano = <span class="math inline">\(16 + 9 + 32 + 15 = 72\)</span> bits.</p></li>
+</ul>
+<p><strong>Comparaison</strong> :</p>
+<p>Le rapport des tailles est <span class="math inline">\(\frac{\text{Taille ASCII}}{\text{Taille Shannon-Fano}} = \frac{176}{72} \approx 2,44\)</span>. Le codage de Shannon-Fano utilise donc bien environ deux fois moins de bits (et donc d’octets) que le codage ASCII pour ce texte.</p></li>
+<li><p>Pour construire l’arbre de codage du mot « chiffrer » :</p>
+<ol type="1">
+<li><p><strong>Fréquences</strong> : <code>c(1), h(1), i(1), e(1), f(2), r(2)</code>. Total : 8.</p></li>
+<li><p><strong>Liste triée</strong> : <code>(c,1), (h,1), (i,1), (e,1), (f,2), (r,2)</code>.</p></li>
+<li><p><strong>Construction récursive</strong> :</p>
+<ul>
+<li><p><strong>Étape 1</strong> : Somme totale = 8. On coupe en deux groupes de somme 4.</p>
+<ul>
+<li>Groupe 1 (étiquette <code>1</code>): <code>(c,1), (h,1), (i,1), (e,1)</code>. Somme = 4.</li>
+<li>Groupe 2 (étiquette <code>0</code>): <code>(f,2), (r,2)</code>. Somme = 4.</li>
+</ul></li>
+<li><p><strong>Étape 2 (sur Groupe 1)</strong> : Somme = 4. On coupe en deux groupes de somme 2.</p>
+<ul>
+<li>Groupe 1.1 (<code>1</code>): <code>(c,1), (h,1)</code>.</li>
+<li>Groupe 1.2 (<code>0</code>): <code>(i,1), (e,1)</code>.</li>
+</ul></li>
+<li><p><strong>Étape 3 (sur Groupe 1.1)</strong> :</p>
+<ul>
+<li>Feuille <code>c</code> (étiquette <code>1</code>). Code: <code>111</code>.</li>
+<li>Feuille <code>h</code> (étiquette <code>0</code>). Code: <code>110</code>.</li>
+</ul></li>
+<li><p><strong>Étape 4 (sur Groupe 1.2)</strong> :</p>
+<ul>
+<li>Feuille <code>i</code> (étiquette <code>1</code>). Code: <code>101</code>.</li>
+<li>Feuille <code>e</code> (étiquette <code>0</code>). Code: <code>100</code>.</li>
+</ul></li>
+<li><p><strong>Étape 5 (sur Groupe 2)</strong> :</p>
+<ul>
+<li>Feuille <code>f</code> (étiquette <code>1</code>). Code: <code>01</code>.</li>
+<li>Feuille <code>r</code> (étiquette <code>0</code>). Code: <code>00</code>.</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>L’arbre de codage obtenu est le suivant :</p></li>
+</ol>
+<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="arbre.png" class="img-fluid"></a></p>
+</section>
+<section id="partie-c" class="level4">
+<h4 class="anchored" data-anchor-id="partie-c">Partie C</h4>
+<ol start="8" type="1">
+<li><p>Voici les lignes 8 et 10 complétées pour la fonction <code>creer_dico_occ</code> :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>     <span class="cf">if</span> symbole <span class="kw">in</span> dico:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>         dico[symbole] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>     <span class="cf">else</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span>        dico[symbole] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Voici une proposition pour la fonction <code>somme_occ</code> :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme_occ(tab):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie la somme des nombres d'occurrences</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">    contenus dans un tableau de tuples (symbole, nb_occ).</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    somme <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> symbole, nb <span class="kw">in</span> tab:</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        somme <span class="op">+=</span> nb</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> somme</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Une écriture plus concise utilisant une compréhension de liste est aussi possible :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme_occ(tab):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>([nb <span class="cf">for</span> symbole, nb <span class="kw">in</span> tab])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Voici les lignes 9 et 11 complétées pour la fonction <code>shannon</code> :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>     <span class="cf">if</span> symbole <span class="kw">in</span> [elt[<span class="dv">0</span>] <span class="cf">for</span> elt <span class="kw">in</span> t1]:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>         <span class="cf">return</span> <span class="st">"1"</span> <span class="op">+</span> shannon(symbole, t1)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span>    <span class="cf">else</span>:</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span>        <span class="cf">return</span> <span class="st">"0"</span> <span class="op">+</span> shannon(symbole, t2)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>La terminaison de la fonction récursive <code>shannon</code> est garantie par deux points :</p>
+<ul>
+<li><strong>Cas de base</strong> : La fonction s’arrête lorsque la condition <code>len(tab) == 1</code> est vraie.</li>
+<li><strong>Convergence</strong> : À chaque appel récursif, la fonction <code>separe</code> divise le tableau <code>tab</code> en deux sous-tableaux non vides <code>t1</code> et <code>t2</code>. La taille du tableau passé en paramètre à l’appel suivant (<code>t1</code> ou <code>t2</code>) est donc strictement inférieure à la taille du tableau <code>tab</code> de l’appel courant. La taille de l’argument décroissant strictement à chaque étape, elle atteindra nécessairement la valeur 1, ce qui déclenchera le cas de base et mettra fin à la récursion.</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Terminaison d'une fonction récursive">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Terminaison d’une fonction récursive
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour qu’une fonction récursive se termine, elle doit comporter :</p>
+<ol type="1">
+<li>Un ou plusieurs <strong>cas de base</strong> qui ne génèrent pas d’appel récursif.</li>
+<li>Un ou plusieurs <strong>cas récursifs</strong> où la fonction s’appelle elle-même avec des arguments qui la rapprochent systématiquement d’un cas de base. On appelle cela le <strong>variant de boucle</strong> (ou de récursion) : une quantité entière positive qui décroît strictement à chaque appel.</li>
+</ol>
+</div>
+</div>
+<ol start="12" type="1">
+<li><p>Voici une proposition pour la fonction <code>encode_shannon</code> :</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode_shannon(texte):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Prend un texte en paramètre et renvoie le mot binaire</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">    correspondant après encodage par l'algorithme de Shannon-Fano.</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> texte:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    dico_occurrences <span class="op">=</span> creer_dico_occ(texte)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    tableau_trie <span class="op">=</span> creer_tab_trie(dico_occurrences)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    mot_binaire_final <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> caractere <span class="kw">in</span> texte:</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        code_caractere <span class="op">=</span> shannon(caractere, tableau_trie)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        mot_binaire_final <span class="op">+=</span> code_caractere</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mot_binaire_final</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+</section>
+<section id="exercice-2-6-points" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-2-6-points">Exercice 2 (6 points)</h2>
+<p>Cet exercice porte sur les bases de données relationnelles, le langage SQL et la programmation Python.</p>
+<ol type="1">
+<li>L’attribut <code>nom</code> ne peut pas être utilisé comme clé primaire pour la relation <code>adherent</code> car il n’assure pas l’unicité de chaque enregistrement. Plusieurs personnes peuvent avoir le même nom de famille (homonymes). La clé primaire doit être un identifiant unique pour chaque adhérent.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Clé primaire">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Clé primaire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une <strong>clé primaire</strong> (<em>primary key</em>) est un attribut ou un ensemble d’attributs qui permet d’identifier de manière unique chaque enregistrement (ou ligne) dans une table. Sa valeur doit être unique pour chaque ligne et ne peut pas être <code>NULL</code>.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li><p>La requête SQL <code>SELECT nomJeu, editeur FROM jeu ORDER BY nomJeu;</code> a pour effet de :</p>
+<ul>
+<li>Sélectionner les colonnes <code>nomJeu</code> et <code>editeur</code> de la table <code>jeu</code>.</li>
+<li>Trier les résultats obtenus par ordre alphabétique croissant en se basant sur la colonne <code>nomJeu</code>.</li>
+</ul>
+<p>Cette requête renvoie donc la liste de tous les jeux et de leur éditeur, classée par ordre alphabétique des noms de jeu.</p></li>
+<li><p>Pour connaître le nom des jeux en cours d’emprunt, il faut sélectionner les jeux dans la table <code>emprunt</code> dont l’attribut <code>dateRendu</code> a la valeur <code>NULL</code>. Comme un jeu ne peut être emprunté qu’une seule fois à un instant donné (un seul exemplaire), l’utilisation de <code>DISTINCT</code> est facultative mais reste une bonne pratique.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nomJeu</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> emprunt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> dateRendu <span class="kw">IS</span> <span class="kw">NULL</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : La valeur NULL">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : La valeur NULL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En SQL, <code>NULL</code> représente une valeur inconnue ou absente. Pour tester si une colonne a la valeur <code>NULL</code>, on doit utiliser les opérateurs <code>IS NULL</code> ou <code>IS NOT NULL</code>, et non l’opérateur d’égalité <code>=</code>.</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li><p>Pour afficher le nom et le prénom des adhérents ayant emprunté le jeu “Catan”, il faut lier les tables <code>adherent</code> et <code>emprunt</code> via leur clé commune (<code>idAdherent</code>).</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> adherent.nom, adherent.prenom</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> adherent</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> emprunt <span class="kw">ON</span> adherent.idAdherent <span class="op">=</span> emprunt.idAdherent</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> emprunt.nomJeu <span class="op">=</span> <span class="st">'Catan'</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Les jointures">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel de cours : Les jointures
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une <strong>jointure</strong> (clause <code>JOIN</code>) permet de combiner des lignes de deux ou plusieurs tables en se basant sur une colonne commune entre elles. La clause <code>ON</code> spécifie la condition de jointure.</p>
+</div>
+</div>
+<ol start="5" type="1">
+<li><p>Pour mettre à jour la base de données après le retour du jeu, il faut utiliser une requête <code>UPDATE</code> pour renseigner la <code>dateRendu</code> de l’emprunt concerné, identifié par son <code>idEmprunt</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> emprunt</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> dateRendu <span class="op">=</span> <span class="st">'2025-06-03'</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> idEmprunt <span class="op">=</span> <span class="dv">1538</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Pour trouver le nom et la catégorie des jeux sortis à partir de 2010 et dont l’âge minimum est strictement inférieur à 10 ans, on utilise une clause <code>WHERE</code> avec deux conditions reliées par l’opérateur <code>AND</code>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nomJeu, categorie</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> jeu</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> anneeSortie <span class="op">&gt;=</span> <span class="dv">2010</span> <span class="kw">AND</span> ageMinimum <span class="op">&lt;</span> <span class="dv">10</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>La table <code>participation</code> sert à lier les événements aux adhérents. Il s’agit d’une table de jointure pour une relation de type “plusieurs à plusieurs” (un adhérent peut participer à plusieurs événements, un événement accueille plusieurs adhérents). Elle doit donc contenir une clé étrangère vers la table <code>evenement</code> et une clé étrangère vers la table <code>adherent</code>.</p>
+<p>La clé primaire de la table <code>evenement</code> est <code>nom</code>, les clés étrangères de la table <code>participation</code> sont :</p>
+<ul>
+<li><code>#nomEvenement</code> qui fait référence à l’attribut <code>nom</code> de la table <code>evenement</code>.</li>
+<li><code>#idAdherent</code> qui fait référence à l’attribut <code>idAdherent</code> de la table <code>adherent</code>.</li>
+</ul></li>
+<li><p>Le script Python suivant reprend le code fourni, récupère la liste des jeux empruntés et construit le dictionnaire <code>dict_emprunts</code> qui associe à chaque nom de jeu son nombre total d’emprunts.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Connexion à la base de données</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>connection <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"ludotheque.db"</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>curseur <span class="op">=</span> connection.cursor()</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Exécution de la requête</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>curseur.execute(<span class="st">"SELECT nomJeu FROM emprunt"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Récupération des résultats</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># curseur.fetchall() renvoie une liste de tuples, ex: [('Catan',), ('Agricola',)]</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>jeux_empruntes_tuples <span class="op">=</span> curseur.fetchall()</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Création de la liste des noms de jeux</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>liste_jeux <span class="op">=</span> []</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> jeu_tuple <span class="kw">in</span> jeux_empruntes_tuples:</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    liste_jeux.append(jeu_tuple[<span class="dv">0</span>])</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Création du dictionnaire des occurrences</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>dict_emprunts <span class="op">=</span> {}</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> nom_jeu <span class="kw">in</span> liste_jeux:</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> nom_jeu <span class="kw">in</span> dict_emprunts:</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>        dict_emprunts[nom_jeu] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>        dict_emprunts[nom_jeu] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du dictionnaire (pour vérification)</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(dict_emprunts)</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture de la connexion</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>curseur.close()</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>connection.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li></li>
+</ol>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On suppose que dict_emprunts est déjà créé.</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dict_emprunts <span class="op">=</span> {</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Terraforming Mars"</span>: <span class="dv">25</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Codenames"</span>: <span class="dv">22</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Agricola"</span>: <span class="dv">18</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Puerto Rico"</span>: <span class="dv">18</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Caylus"</span>: <span class="dv">18</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Dominion"</span>: <span class="dv">22</span>,</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Dixit"</span>: <span class="dv">12</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Étape 1 : Regrouper les jeux par score dans un dictionnaire ---</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># (Cette étape reste identique et très utile)</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>scores_podium <span class="op">=</span> {}</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> jeu, score <span class="kw">in</span> dict_emprunts.items():</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> score <span class="kw">not</span> <span class="kw">in</span> scores_podium:</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>        scores_podium[score] <span class="op">=</span> []</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    scores_podium[score].append(jeu)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Étape 2 : Trouver les 3 meilleurs scores en cherchant le maximum 3 fois ---</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co"># On récupère la liste des scores uniques à traiter.</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>scores_a_traiter <span class="op">=</span> <span class="bu">list</span>(scores_podium.keys())</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co"># On va stocker les listes du podium dans l'ordre où on les trouve (du meilleur au moins bon).</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>podium_ordre_inverse <span class="op">=</span> []</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="co"># On répète l'opération 3 fois pour les 3 places du podium.</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co"># On vérifie aussi qu'il reste des scores à traiter.</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(scores_a_traiter) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span> <span class="co"># Arrête la boucle s'il y a moins de 3 scores uniques.</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On cherche le score le plus élevé parmi ceux qui restent.</span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>    score_maximum <span class="op">=</span> <span class="op">-</span><span class="dv">1</span> <span class="co"># On initialise avec une valeur très basse</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> score <span class="kw">in</span> scores_a_traiter:</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> score <span class="op">&gt;</span> score_maximum:</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>            score_maximum <span class="op">=</span> score</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On ajoute la liste des jeux correspondants à notre podium temporaire.</span></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>    podium_ordre_inverse.append(scores_podium[score_maximum])</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On retire ce score de la liste pour ne pas le retrouver au tour suivant.</span></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>    scores_a_traiter.remove(score_maximum)</span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Étape 3 : Inverser la liste pour avoir le podium dans l'ordre croissant des scores ---</span></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a><span class="co"># podium_ordre_inverse contient [liste_score_25, liste_score_22, liste_score_18]</span></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a><span class="co"># L'énoncé veut [liste_score_18, liste_score_22, liste_score_25]</span></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>podium_final <span class="op">=</span> []</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a><span class="co"># On parcourt la liste temporaire de la fin vers le début.</span></span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(podium_ordre_inverse) <span class="op">-</span> <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>    podium_final.append(podium_ordre_inverse[i])</span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du podium final</span></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(podium_final)</span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Affiche : [['Agricola', 'Puerto Rico', 'Caylus'], ['Codenames', 'Dominion'], ['Terraforming Mars']]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="exercice-3-8-points" class="level2">
+<h2 class="anchored" data-anchor-id="exercice-3-8-points">Exercice 3 (8 points)</h2>
+<p>Cet exercice porte sur la programmation Python, la sécurisation des communications et les réseaux.</p>
+<section id="partie-a---la-méthode-du-masque-jetable" class="level4">
+<h4 class="anchored" data-anchor-id="partie-a---la-méthode-du-masque-jetable">Partie A - La méthode du masque jetable</h4>
+<ol type="1">
+<li><p>Pour chiffrer le message <code>LIBRE</code> avec la clé <code>EYQMT</code>, on suit la méthode décrite :</p>
+<ol type="1">
+<li>Convertir les lettres en rangs (de 0 à 25).</li>
+<li>Additionner les rangs du message et de la clé.</li>
+<li>Appliquer le modulo 26 au résultat.</li>
+<li>Reconvertir les rangs obtenus en lettres.</li>
+</ol></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Opération</th>
+<th style="text-align: center;">L</th>
+<th style="text-align: center;">I</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">R</th>
+<th style="text-align: center;">E</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rang du message</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clé</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">Y</td>
+<td style="text-align: center;">Q</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rang de la clé</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Somme</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Somme mod 26</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lettre chiffrée</td>
+<td style="text-align: center;"><strong>P</strong></td>
+<td style="text-align: center;"><strong>G</strong></td>
+<td style="text-align: center;"><strong>R</strong></td>
+<td style="text-align: center;"><strong>D</strong></td>
+<td style="text-align: center;"><strong>X</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Le message chiffré est <strong><code>PGRDX</code></strong>.</p>
+<ol start="2" type="1">
+<li><p>La fonction <code>indice</code> peut être écrite en utilisant la méthode <code>.index()</code> des listes en Python.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice(element, L):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie l'indice de element dans la liste L.</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L.index(element)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Autre solution possible, plus simple :</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice(element, L):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie l'indice de element dans la liste L.</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(L)):</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> L[i] <span class="op">==</span> element:</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> i</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span>  <span class="co"># Si l'élément n'est pas trouvé, on renvoie -1.</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>La fonction <code>lettres_vers_indices</code> parcourt la chaîne de caractères et utilise la liste globale <code>alphabet</code> pour trouver l’indice de chaque lettre.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On suppose que la variable 'alphabet' est définie globalement.</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>alphabet <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>, <span class="st">'F'</span>, <span class="st">'G'</span>, <span class="st">'H'</span>, <span class="st">'I'</span>, <span class="st">'J'</span>, <span class="st">'K'</span>, <span class="st">'L'</span>, </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">'M'</span>, <span class="st">'N'</span>, <span class="st">'O'</span>, <span class="st">'P'</span>, <span class="st">'Q'</span>, <span class="st">'R'</span>, <span class="st">'S'</span>, <span class="st">'T'</span>, <span class="st">'U'</span>, <span class="st">'V'</span>, <span class="st">'W'</span>, <span class="st">'X'</span>, <span class="st">'Y'</span>, <span class="st">'Z'</span>]</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lettres_vers_indices(chaine):</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie la liste des indices des caractères de la chaîne.</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    indices <span class="op">=</span> []</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> caractere <span class="kw">in</span> chaine:</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        indices.append(indice(caractere, alphabet))</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> indices</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Une version plus concise avec une liste en compréhension :</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co"># def lettres_vers_indices(chaine):</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">#     return [indice(c, alphabet) for c in chaine]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Voici le code complété de la fonction <code>chiffrement</code>.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> chiffrement(msg, cle):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(cle) <span class="op">&gt;=</span> <span class="bu">len</span>(msg), <span class="st">'impossible'</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    indices_msg <span class="op">=</span> lettres_vers_indices(msg)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    indices_cle <span class="op">=</span> lettres_vers_indices(cle)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(msg)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    indices_msg_chiffre <span class="op">=</span> []</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Ligne 8 : Addition des indices du message et de la clé</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        ind <span class="op">=</span> indices_msg[k] <span class="op">+</span> indices_cle[k]</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Ligne 9 : Application du modulo 26 si nécessaire</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ind <span class="op">&gt;=</span> <span class="dv">26</span>:</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Ligne 10 : L'opération est une soustraction de 26</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>            ind <span class="op">=</span> ind <span class="op">-</span> <span class="dv">26</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        indices_msg_chiffre.append(ind)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 12 : Conversion de la liste d'indices en chaîne de caractères</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    msg_chiffre <span class="op">=</span> indices_vers_lettres(indices_msg_chiffre)</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 13</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> msg_chiffre</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Lors de l’appel <code>chiffrement('RESEAU', 'GFTZ')</code>, la condition de l’instruction <code>assert</code> est évaluée. <code>len('RESEAU')</code> vaut 6 et <code>len('GFTZ')</code> vaut 4. La condition <code>len(cle) &gt;= len(msg)</code> (soit <code>4 &gt;= 6</code>) est fausse.</p>
+<p>L’exécution du programme s’arrête et une erreur de type <code>AssertionError</code> est levée, affichant le message <code>'impossible'</code>.</p></li>
+<li><p>Pour déchiffrer <code>GMEDH</code> avec la clé <code>FVEIT</code>, on effectue l’opération inverse : la soustraction modulo 26. <span class="math inline">\(C_{dechiffré} = (C_{chiffré} - C_{clé}) \pmod{26}\)</span>.</p></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Opération</th>
+<th style="text-align: center;">G</th>
+<th style="text-align: center;">M</th>
+<th style="text-align: center;">E</th>
+<th style="text-align: center;">D</th>
+<th style="text-align: center;">H</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rang chiffré</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Clé</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;">I</td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rang de la clé</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">19</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Différence</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">-9</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-5</td>
+<td style="text-align: center;">-12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Différence mod 26</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lettre déchiffrée</td>
+<td style="text-align: center;"><strong>B</strong></td>
+<td style="text-align: center;"><strong>R</strong></td>
+<td style="text-align: center;"><strong>A</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>O</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Le message déchiffré est <strong><code>BRAVO</code></strong>.</p>
+<ol start="7" type="1">
+<li><p>Pour déchiffrer un message, il faut effectuer l’opération mathématique inverse de celle du chiffrement. Le chiffrement est une addition modulo 26. Son inverse est donc une <strong>soustraction modulo 26</strong>.</p>
+<p>Pour chaque caractère, on soustrait le rang de la lettre de la clé au rang de la lettre du message chiffré, et on prend le résultat modulo 26.</p>
+<p>Mathématiquement : si <span class="math inline">\(Chiffré = (Message + Clé) \pmod{26}\)</span>, alors <span class="math inline">\(Message = (Chiffré - Clé) \pmod{26}\)</span>.</p></li>
+<li><p>Pour obtenir la fonction <code>dechiffrement</code>, on adapte la fonction <code>chiffrement</code> en remplaçant l’addition par une soustraction.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dechiffrement(msg_chiffre, cle):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(cle) <span class="op">&gt;=</span> <span class="bu">len</span>(msg_chiffre), <span class="st">'impossible'</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    indices_msg <span class="op">=</span> lettres_vers_indices(msg_chiffre)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    indices_cle <span class="op">=</span> lettres_vers_indices(cle)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(msg_chiffre)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 6 adaptée</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    indices_msg_dechiffre <span class="op">=</span> []</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Ligne 8 adaptée : Soustraction des indices</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        ind <span class="op">=</span> indices_msg[k] <span class="op">-</span> indices_cle[k]</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Ligne 9 adaptée : Gestion des résultats négatifs</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ind <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Ligne 10 adaptée : Ajout de 26</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>            ind <span class="op">=</span> ind <span class="op">+</span> <span class="dv">26</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>        indices_msg_dechiffre.append(ind)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 12 adaptée</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    msg_dechiffre <span class="op">=</span> indices_vers_lettres(indices_msg_dechiffre)</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 13 adaptée</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> msg_dechiffre</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+<section id="partie-b---sécurisation-des-communications" class="level4">
+<h4 class="anchored" data-anchor-id="partie-b---sécurisation-des-communications">Partie B - Sécurisation des communications</h4>
+<ol start="9" type="1">
+<li><p>La différence fondamentale entre un algorithme de chiffrement symétrique et asymétrique réside dans la gestion des clés :</p>
+<ul>
+<li><strong>Chiffrement symétrique</strong> : utilise <strong>une seule et même clé secrète</strong> pour chiffrer et déchiffrer le message. Cette clé doit être partagée de manière sécurisée entre l’émetteur et le destinataire avant la communication.</li>
+<li><strong>Chiffrement asymétrique</strong> : utilise une <strong>paire de clés</strong> pour chaque utilisateur : une <strong>clé publique</strong>, que l’on peut distribuer librement, et une <strong>clé privée</strong>, qui doit rester secrète. Ce qui est chiffré avec la clé publique ne peut être déchiffré qu’avec la clé privée correspondante.</li>
+</ul></li>
+<li><p>Alice chiffre son message avec la clé publique de Bob. Pour déchiffrer le message reçu, Bob utilise sa <strong>clé privée</strong>, qui est la seule capable d’inverser l’opération de chiffrement effectuée par sa clé publique.</p></li>
+<li><p>Dans le scénario décrit, n’importe qui (une tierce personne, Eve par exemple) peut obtenir la clé publique de Bob. Eve peut alors chiffrer un message avec cette clé et l’envoyer à Bob en se faisant passer pour Alice. Bob pourra déchiffrer le message, mais n’aura aucun moyen de vérifier que l’expéditeur est bien Alice. Ce protocole simple ne garantit pas <strong>l’authentification</strong> de l’émetteur.</p></li>
+<li><p><strong>HTTPS</strong> (HyperText Transfer Protocol Secure) est la version sécurisée du protocole HTTP. Il combine HTTP avec un protocole de sécurité comme TLS (Transport Layer Security). HTTPS assure trois garanties de sécurité principales :</p>
+<ul>
+<li><strong>Confidentialité</strong> : Les données échangées sont chiffrées, les rendant illisibles pour un attaquant qui les intercepterait.</li>
+<li><strong>Intégrité</strong> : Les données ne peuvent pas être modifiées durant leur transit sans que la modification soit détectée.</li>
+<li><strong>Authentification</strong> : Il permet de vérifier l’identité du serveur web auquel on se connecte, grâce à un système de certificats numériques.</li>
+</ul></li>
+<li><p>On utilise le protocole HTTPS (qui est un système hybride) plutôt qu’un chiffrement purement asymétrique pour des raisons de <strong>performance</strong>. Le chiffrement asymétrique est beaucoup plus lent et gourmand en ressources de calcul que le chiffrement symétrique. Il est donc mal adapté pour chiffrer de grandes quantités de données. HTTPS utilise le chiffrement asymétrique uniquement au début de la connexion pour authentifier le serveur et négocier une clé de session secrète. Ensuite, toute la communication est chiffrée avec un algorithme symétrique, beaucoup plus rapide, utilisant cette clé de session.</p></li>
+</ol>
+</section>
+<section id="partie-c---réseaux" class="level4">
+<h4 class="anchored" data-anchor-id="partie-c---réseaux">Partie C - Réseaux</h4>
+<ol start="14" type="1">
+<li><p>L’affichage <code>100% packet loss</code> indique que la machine de Marc a envoyé 4 paquets <code>ping</code> à l’adresse IP <code>192.168.100.115</code>, mais n’a reçu aucune réponse. L’erreur de Marc est une faute de frappe dans l’adresse IP du poste de Bob. L’adresse correcte est <code>192.168.110.115</code>. Marc a tapé <code>100</code> au lieu de <code>110</code> dans le troisième octet. Il a donc tenté de contacter une machine sur un autre réseau (<code>192.168.100.0/24</code>), qui est probablement inaccessible depuis son poste.</p></li>
+<li><p>Pour obtenir la représentation décimale du masque <code>11111111.11111111.11111111.11100000</code>, on convertit chaque octet binaire en décimal :</p>
+<ul>
+<li><code>11111111</code> en binaire correspond à <span class="math inline">\(2^8-1 = 255\)</span> en décimal.</li>
+<li><code>11100000</code> en binaire correspond à <span class="math inline">\(1 \times 2^7 + 1 \times 2^6 + 1 \times 2^5 = 128 + 64 + 32 = 224\)</span> en décimal.</li>
+</ul>
+<p>Le masque de sous-réseau en décimal est <strong><code>255.255.255.224</code></strong>.</p></li>
+<li><p>Le masque <code>255.255.255.224</code> a 27 bits à 1 pour la partie réseau (<span class="math inline">\(8+8+8+3=27\)</span>). La partie hôte est donc sur les <span class="math inline">\(32 - 27 = 5\)</span> bits restants. Le nombre total d’adresses IPv4 sur ce sous-réseau est <span class="math inline">\(2^5 = \textbf{32}\)</span>.</p>
+<p>(Note : parmi ces 32 adresses, 2 sont réservées : l’adresse du sous-réseau lui-même et l’adresse de diffusion. Il y a donc <span class="math inline">\(32 - 2 = 30\)</span> adresses attribuables à des hôtes).</p></li>
+<li><p>Pour convertir le nombre 134 en binaire, on utilise la méthode des divisions successives par 2 ou par décomposition en puissances de 2. <span class="math inline">\(134 = 128 + 6 = 128 + 4 + 2 = 1 \cdot 2^7 + 0 \cdot 2^6 + 0 \cdot 2^5 + 0 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0\)</span>.</p>
+<p>La représentation binaire de 134 sur un octet est <strong><code>10000110</code></strong>.</p></li>
+<li><p>Pour savoir quelle commande a fonctionné, il faut déterminer si les machines cibles sont dans le même sous-réseau que Zoé. Deux machines peuvent communiquer directement si elles sont sur le même sous-réseau.</p>
+<ul>
+<li><p>Masque : <code>255.255.255.224</code> (<code>11100000</code> pour le dernier octet).</p></li>
+<li><p>IP de Zoé : <code>192.168.110.134</code> (<code>10000110</code> pour le dernier octet).</p>
+<ul>
+<li>Adresse du sous-réseau de Zoé : <code>134 ET 224</code> -&gt; <code>10000110 ET 11100000</code> = <code>10000000</code> (soit 128). Le sous-réseau est <code>192.168.110.128</code>.</li>
+</ul></li>
+<li><p><strong>Commande n°1</strong> : <code>ping 192.168.110.115</code> (Bob)</p>
+<ul>
+<li>Le dernier octet de l’IP de Bob est 115 (<code>01110011</code>).</li>
+<li>Adresse du sous-réseau de Bob : <code>115 ET 224</code> -&gt; <code>01110011 ET 11100000</code> = <code>01100000</code> (soit 96). Le sous-réseau est <code>192.168.110.96</code>.</li>
+</ul></li>
+<li><p><strong>Commande n°2</strong> : <code>ping 192.168.110.153</code> (Marc)</p>
+<ul>
+<li>Le dernier octet de l’IP de Marc est 153 (<code>10011001</code>).</li>
+<li>Adresse du sous-réseau de Marc : <code>153 ET 224</code> -&gt; <code>10011001 ET 11100000</code> = <code>10000000</code> (soit 128). Le sous-réseau est <code>192.168.110.128</code>.</li>
+</ul></li>
+</ul>
+<p><strong>Conclusion</strong> : Zoé et Marc sont sur le même sous-réseau (<code>192.168.110.128</code>), alors que Bob est sur un sous-réseau différent (<code>192.168.110.96</code>). La communication directe est possible entre Zoé et Marc.</p>
+<p>C’est donc la <strong>commande n°2</strong> qui a produit l’affichage indiquant une réussite de la communication.</p></li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/flallemand\.fr\/blog");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "fabricelallemand15/blog";
+    script.dataset.repoId = "R_kgDOI4abBQ";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOI4abBc4CT8OX";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2025-06-23-NSIMetropoleJ2/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>Mentions légales</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
