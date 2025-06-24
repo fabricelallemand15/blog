@@ -816,11 +816,10 @@ Cet exercice est de type vrai/faux où chaque affirmation doit être validée ou
     Ce qui est bien la formule demandée.
 
 2.  Le dispositif d'arrêt se déclenche à l'instant $t=\alpha$ où la vitesse atteint 1 m/s. On cherche donc la distance parcourue à cet instant, soit $d(\alpha)$.
-    On utilise la valeur approchée $\alpha \approx 4,704$ pour plus de précision.
 
-    On calcule $d(4,704)$ :
-    $$d(4,704) = e^{-0,6 \times 4,704} \left(-\frac{5}{3} \times 4,704 - \frac{205}{9}\right) + \frac{205}{9}$$
-    $$d(4,704) \approx e^{-2,8224} (-7,84 - 22,7778) + 22,7778$$
-    $$d(4,704) \approx 0,05946 \times (-30,6178) + 22,7778$$
-    $$d(4,704) \approx -1,8206 + 22,7778 \approx 20,9572$$
-    Arrondie au centième, la distance parcourue par le chariot avant le déclenchement du dispositif est de **20,96 mètres**.
+    On utilise la valeur approchée $\alpha \approx 4,7$ obtenue précédemment.
+
+    On calcule $d(4,7)$ :
+    $$d(4,7) = e^{-0,6 \times 4,7} \left(-\frac{5}{3} \times 4,7 - \frac{205}{9}\right) + \frac{205}{9} \approx 20,95$$
+
+    Arrondie au centième, la distance parcourue par le chariot avant le déclenchement du dispositif est de **20,95 mètres**.

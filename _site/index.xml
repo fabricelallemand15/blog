@@ -638,8 +638,10 @@ Rappel : Intégration par parties
 <p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20e%5E%7B-0,6t%7D%20(-%5Cfrac%7B15%7D%7B9%7Dt%20-%20%5Cfrac%7B180%7D%7B9%7D%20-%20%5Cfrac%7B25%7D%7B9%7D)%20+%20(%5Cfrac%7B180%7D%7B9%7D%20+%20%5Cfrac%7B25%7D%7B9%7D)"></p>
 <p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20e%5E%7B-0,6t%7D%20(-%5Cfrac%7B5%7D%7B3%7Dt%20-%20%5Cfrac%7B205%7D%7B9%7D)%20+%20%5Cfrac%7B205%7D%7B9%7D"></p>
 <p>Ce qui est bien la formule demandée.</p></li>
-<li><p>Le dispositif d’arrêt se déclenche à l’instant <img src="https://latex.codecogs.com/png.latex?t=%5Calpha"> où la vitesse atteint 1 m/s. On cherche donc la distance parcourue à cet instant, soit <img src="https://latex.codecogs.com/png.latex?d(%5Calpha)">. On utilise la valeur approchée <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Capprox%204,704"> pour plus de précision.</p>
-<p>On calcule <img src="https://latex.codecogs.com/png.latex?d(4,704)"> : <img src="https://latex.codecogs.com/png.latex?d(4,704)%20=%20e%5E%7B-0,6%20%5Ctimes%204,704%7D%20%5Cleft(-%5Cfrac%7B5%7D%7B3%7D%20%5Ctimes%204,704%20-%20%5Cfrac%7B205%7D%7B9%7D%5Cright)%20+%20%5Cfrac%7B205%7D%7B9%7D"> <img src="https://latex.codecogs.com/png.latex?d(4,704)%20%5Capprox%20e%5E%7B-2,8224%7D%20(-7,84%20-%2022,7778)%20+%2022,7778"> <img src="https://latex.codecogs.com/png.latex?d(4,704)%20%5Capprox%200,05946%20%5Ctimes%20(-30,6178)%20+%2022,7778"> <img src="https://latex.codecogs.com/png.latex?d(4,704)%20%5Capprox%20-1,8206%20+%2022,7778%20%5Capprox%2020,9572"> Arrondie au centième, la distance parcourue par le chariot avant le déclenchement du dispositif est de <strong>20,96 mètres</strong>.</p></li>
+<li><p>Le dispositif d’arrêt se déclenche à l’instant <img src="https://latex.codecogs.com/png.latex?t=%5Calpha"> où la vitesse atteint 1 m/s. On cherche donc la distance parcourue à cet instant, soit <img src="https://latex.codecogs.com/png.latex?d(%5Calpha)">.</p>
+<p>On utilise la valeur approchée <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Capprox%204,7"> obtenue précédemment.</p>
+<p>On calcule <img src="https://latex.codecogs.com/png.latex?d(4,7)"> : <img src="https://latex.codecogs.com/png.latex?d(4,7)%20=%20e%5E%7B-0,6%20%5Ctimes%204,7%7D%20%5Cleft(-%5Cfrac%7B5%7D%7B3%7D%20%5Ctimes%204,7%20-%20%5Cfrac%7B205%7D%7B9%7D%5Cright)%20+%20%5Cfrac%7B205%7D%7B9%7D%20%5Capprox%2020,95"></p>
+<p>Arrondie au centième, la distance parcourue par le chariot avant le déclenchement du dispositif est de <strong>20,95 mètres</strong>.</p></li>
 </ol>
 
 
