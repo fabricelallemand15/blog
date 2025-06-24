@@ -1,0 +1,826 @@
+---
+title: 'Corrigé du sujet de Mathématiques du baccalauréat 2025 - Métropole Jour 2'
+date: "2025-06-24"
+categories: [Mathématiques, Annales]
+image: "arbre.png"
+---
+
+[Lien vers l'énoncé en PDF](spe_mathematiques_2025_metropole_2_sujet_officiel_1_.pdf)
+
+## Corrigé de l'exercice 1
+
+#### Partie A
+
+1.  **Représenter la situation par un arbre pondéré.**
+
+    On traduit les données de l'énoncé.
+
+    Soient les événements $A$ : « La personne chute pendant la première séance » et $B$ : « La personne chute pendant la deuxième séance ».
+
+    On a $P(A) = 0,6$. Par conséquent, la probabilité de l'événement contraire $\overline{ A}$ est $P(\overline{ A}) = 1 - P(A) = 1 - 0,6 = 0,4$.
+
+    L'énoncé nous donne les probabilités conditionnelles suivantes :
+
+    *   La probabilité que la personne chute pendant la deuxième séance sachant qu'elle a chuté pendant la première est $P_A(B) = 0,3$.
+    *   La probabilité que la personne chute pendant la deuxième séance sachant qu'elle n'a pas chuté pendant la première est $P_{\overline{ A}}(B) = 0,4$.
+
+    On peut en déduire les probabilités des événements contraires :
+
+    *   $P_A(\overline{ B}) = 1 - P_A(B) = 1 - 0,3 = 0,7$.
+    *   $P_{\overline{ A}}(\overline{ B}) = 1 - P_{\overline{ A}}(B) = 1 - 0,4 = 0,6$.
+
+    L'arbre pondéré représentant la situation est le suivant :
+
+    ![](arbre.png){width="50%"}
+
+2.  **Calculer la probabilité $P(\overline{ A} \cap \overline{ B})$ et interpréter le résultat.**
+
+    ::: {.callout-tip}
+    ## Rappel : Probabilité d'une intersection
+    Pour deux événements $A$ et $E$, la probabilité de leur intersection est donnée par la formule :
+    $P(A \cap E) = P(A) \times P_A(E)$.
+
+    Cette valeur correspond à la probabilité du chemin passant par $A$ puis $E$ dans un arbre pondéré.
+    :::
+
+    On cherche la probabilité de l'événement $\overline{ A} \cap \overline{ B}$ : « La personne ne chute ni pendant la première séance ni pendant la deuxième séance ».
+
+    D'après la formule des probabilités composées, on a :
+    $$P(\overline{ A} \cap \overline{ B}) = P(\overline{ A}) \times P_{\overline{ A}}(\overline{ B})$$
+    $$P(\overline{ A} \cap \overline{ B}) = 0,4 \times 0,6 = 0,24$$
+
+    La probabilité que la personne choisie au hasard ne chute lors d'aucune des deux séances est de 0,24.
+
+3.  **Montrer que $P(B) = 0,34$.**
+
+    ::: {.callout-tip}
+    ## Rappel : Formule des probabilités totales
+    Si les événements $A_1, A_2, ..., A_n$ forment une partition de l'univers, alors pour tout événement $E$, on a :
+    $P(E) = P(A_1 \cap E) + P(A_2 \cap E) + ... + P(A_n \cap E)$.
+
+    Dans le cas d'un événement $A$ et de son contraire $\overline{ A}$, la formule se simplifie en :
+    $P(E) = P(A \cap E) + P(\overline{ A} \cap E)$.
+    :::
+
+    L'événement $B$ peut se réaliser de deux manières exclusives : soit la personne a chuté à la première séance et à la deuxième ($A \cap B$), soit elle n'a pas chuté à la première mais a chuté à la deuxième ($\overline{ A} \cap B$).
+
+    Les événements $A$ et $\overline{ A}$ formant une partition de l'univers, on peut utiliser la formule des probabilités totales :
+    $$P(B) = P(A \cap B) + P(\overline{ A} \cap B)$$
+
+    On calcule $P(A \cap B)$ :
+
+    $$P(A \cap B) = P(A) \times P_A(B) = 0,6 \times 0,3 = 0,18$$
+
+    On calcule $P(\overline{ A} \cap B)$ :
+    $$P(\overline{ A} \cap B) = P(\overline{ A}) \times P_{\overline{ A}}(B) = 0,4 \times 0,4 = 0,16$$
+    On peut maintenant calculer $P(B)$ :
+    $$P(B) = 0,18 + 0,16 = 0,34$$
+    On a bien montré que $P(B) = 0,34$.
+
+4.  **La personne ne chute pas pendant la deuxième séance de cours. Calculer la probabilité qu'elle n'ait pas chuté lors de la première séance.**
+
+    On cherche à calculer la probabilité que la personne n'ait pas chuté lors de la première séance, sachant qu'elle n'a pas chuté lors de la deuxième. Il s'agit de la probabilité conditionnelle $P_{\overline{ B}}(\overline{ A})$.
+
+    ::: {.callout-tip}
+    ## Rappel : Probabilité conditionnelle
+    La probabilité de l'événement $E$ sachant l'événement $F$ est donnée par :
+    $$P_F(E) = \frac{P(E \cap F)}{P(F)}$$
+    :::
+    
+    La formule est donc :
+    $$P_{\overline{ B}}(\overline{ A}) = \frac{P(\overline{ A} \cap \overline{ B})}{P(\overline{ B})}$$
+    Calculons les deux termes :
+
+    *   Le numérateur, en suivant la branche correspondante de l'arbre :
+        $P(\overline{ A} \cap \overline{ B}) = P(\overline{ A}) \times P_{\overline{ A}}(\overline{ B}) = 0,4 \times 0,6 = 0,24$.
+    *   Le dénominateur, en utilisant l'événement contraire de $B$ :
+        $P(\overline{ B}) = 1 - P(B) = 1 - 0,34 = 0,66$.
+
+    On obtient alors :
+    $$P_{\overline{ B}}(\overline{ A}) = \frac{0,24}{0,66} = \frac{24}{66} = \frac{4}{11}$$
+    En arrondissant au millième, on a :
+    $$P_{\overline{ B}}(\overline{ A}) \approx 0,364$$
+    La probabilité que la personne n'ait pas chuté à la première séance sachant qu'elle n'a pas chuté à la deuxième est d'environ 0,364.
+
+5.  **Étude d'une variable aléatoire $X$.**
+
+    a. **Montrer que la variable aléatoire $X$ suit une loi binomiale dont on précisera les paramètres.**
+
+    Soit l'événement $S$ : « la personne n'a chuté ni lors de la première ni lors de la deuxième séance ». Cet événement correspond à $\overline{ A} \cap \overline{ B}$.
+    L'énoncé admet que la probabilité de cet événement est $p = P(S) = P(\overline{ A} \cap \overline{ B}) = 0,24$. (Nous l'avions calculé à la question précédente).
+
+    On répète $n=100$ fois de manière identique et indépendante une épreuve de Bernoulli (le choix d'une personne est assimilé à un tirage avec remise).
+
+    *   L'épreuve de Bernoulli consiste à choisir une personne et à regarder si l'événement $S$ est réalisé (succès) ou non (échec).
+    *   La probabilité du succès est constante et vaut $p=0,24$.
+    *   Les épreuves sont indépendantes.
+
+    La variable aléatoire $X$, qui compte le nombre de succès (le nombre de personnes n'ayant pas chuté) au cours de ces 100 répétitions, suit donc une loi binomiale de paramètres $n=100$ et $p=0,24$.
+
+    On note $X \sim \mathcal{B}(100 \,;\, 0,24)$.
+
+    b. **Quelle est la probabilité d'avoir, dans un échantillon de 100 personnes, au moins 20 personnes qui ne chutent ni lors de la première ni lors de la deuxième séance ?**
+
+    On cherche à calculer $P(X \geqslant 20)$.
+
+    Il est plus simple de passer par l'événement contraire :
+    $$P(X \geqslant 20) = 1 - P(X < 20) = 1 - P(X \leqslant 19)$$
+    À l'aide de la calculatrice, on utilise la fonction de répartition de la loi binomiale pour calculer $P(X \leqslant 19)$. Avec les paramètres $n=100$ et $p=0,24$, on obtient :
+    $$P(X \leqslant 19) \approx 0,1453$$
+    Donc,
+    $$P(X \geqslant 20) \approx 1 - 0,1453 = 0,8547$$
+    Arrondie au millième, la probabilité est d'environ 0,855.
+
+    c. **Calculer l'espérance $E(X)$ et interpréter le résultat dans le contexte de l'exercice.**
+
+    ::: {.callout-tip}
+    ## Rappel : Espérance d'une loi binomiale
+    Si une variable aléatoire $X$ suit une loi binomiale $\mathcal{B}(n, p)$, son espérance est donnée par :
+    $E(X) = n \times p$.
+    :::
+
+    Pour $X \sim \mathcal{B}(100 \,;\, 0,24)$, l'espérance est :
+    $$E(X) = 100 \times 0,24 = 24$$
+    **Interprétation :** L'espérance représente la valeur moyenne que l'on peut espérer obtenir si l'on répète l'expérience (le tirage d'un échantillon de 100 personnes) un grand nombre de fois.
+
+    Ainsi, sur un grand nombre d'échantillons de 100 personnes, on peut s'attendre à ce qu'en moyenne, 24 personnes n'aient chuté au cours d'aucune des deux séances.
+
+#### Partie B
+
+1.  **Déterminer l'espérance $E(T)$ de la variable aléatoire $T$. Interpréter le résultat dans le contexte de l'exercice.**
+
+    La variable aléatoire $T$ est définie comme la somme des variables aléatoires $T_1$ et $T_2$, soit $T = T_1 + T_2$.
+
+    ::: {.callout-tip}
+    ## Rappel : Linéarité de l'espérance
+    Pour deux variables aléatoires $X$ et $Y$, l'espérance de leur somme est la somme de leurs espérances :
+    $$E(X+Y) = E(X) + E(Y)$$
+    Cette propriété est toujours vraie, que les variables soient indépendantes ou non.
+    :::
+
+    En appliquant cette propriété, on obtient :
+    $$E(T) = E(T_1 + T_2) = E(T_1) + E(T_2)$$
+    En utilisant les valeurs données dans l'énoncé :
+    $$E(T) = 40 + 60 = 100$$
+    **Interprétation :** L'espérance de $T$ représente le temps d'attente total moyen. En moyenne, une personne choisie au hasard attendra **100 minutes** au total sur l'ensemble du week-end pour accéder aux activités sportives.
+
+2.  **Montrer que la variance $V(T)$ de la variable aléatoire $T$ est égale à 356.**
+
+    ::: {.callout-tip}
+    ## Rappel : Variance d'une somme de variables indépendantes
+    Si deux variables aléatoires $X$ et $Y$ sont **indépendantes**, la variance de leur somme est la somme de leurs variances :
+    $$V(X+Y) = V(X) + V(Y)$$
+    De plus, la variance est le carré de l'écart-type : $V(X) = (\sigma(X))^2$.
+    :::
+
+    L'énoncé précise que les variables aléatoires $T_1$ et $T_2$ sont indépendantes. On peut donc appliquer la formule de la variance d'une somme.
+
+    Nous devons d'abord calculer les variances de $T_1$ et $T_2$ à partir de leurs écarts-types :
+
+    *   $V(T_1) = (\sigma(T_1))^2 = 10^2 = 100$
+    *   $V(T_2) = (\sigma(T_2))^2 = 16^2 = 256$
+
+    On peut maintenant calculer la variance de $T$ :
+    $$V(T) = V(T_1) + V(T_2) = 100 + 256 = 356$$
+    On a bien montré que $V(T) = 356$.
+
+3.  **À l'aide de l'inégalité de Bienaymé-Tchebychev, montrer que la probabilité que le temps total d'attente $T$ soit strictement compris entre 60 et 140 minutes est supérieure à 0,77.**
+
+    ::: {.callout-tip}
+    ## Rappel : Inégalité de Bienaymé-Tchebychev
+    Pour une variable aléatoire $X$ d'espérance $E(X)$ et de variance $V(X)$, et pour tout réel $\delta > 0$, l'inégalité s'écrit :
+    $$P(|X - E(X)| \geqslant\delta) \le \frac{V(X)}{\delta^2}$$
+    La forme complémentaire, souvent plus utile pour borner une probabilité d'être *proche* de la moyenne, est :
+    $$P(|X - E(X)| < \delta) \geqslant1 - \frac{V(X)}{\delta^2}$$
+    :::
+
+    On cherche à minorer la probabilité $P(60 < T < 140)$.
+    Nous avons calculé $E(T) = 100$ et $V(T) = 356$.
+
+    L'intervalle $]60, 140[$ est centré sur l'espérance $E(T)=100$. On peut le réécrire sous la forme $|T - E(T)| < \delta$.
+
+    $60 < T < 140 \Leftrightarrow 60 - 100 < T - 100 < 140 - 100$
+
+    $\Leftrightarrow -40 < T - 100 < 40$
+
+    $\Leftrightarrow |T - 100| < 40$
+
+    L'événement est donc $|T - E(T)| < 40$, ce qui correspond à la forme de l'inégalité de Bienaymé-Tchebychev avec $\delta = 40$.
+
+    Appliquons la forme complémentaire de l'inégalité :
+    $$P(|T - 100| < 40) \geqslant1 - \frac{V(T)}{40^2}$$
+    En remplaçant par les valeurs connues :
+    $$P(60 < T < 140) \geqslant1 - \frac{356}{40^2}$$
+    $$P(60 < T < 140) \geqslant1 - \frac{356}{1600}$$
+    Calculons la valeur du minorant :
+    $$1 - \frac{356}{1600} = 1 - 0,2225 = 0,7775$$
+    On a donc :
+    $$P(60 < T < 140) \geqslant0,7775$$
+    Puisque $0,7775 > 0,77$, on a bien montré que la probabilité que le temps total d'attente soit strictement compris entre 60 et 140 minutes est supérieure à 0,77.
+
+## Corrigé de l'exercice 2
+
+#### Partie A
+
+1.  **Montrer que les droites $d$ et $d'$ sont sécantes au point $S(-\frac{1}{2} \,;\, 1 \,;\, 4)$.**
+
+    Pour montrer que les droites $d$ et $d'$ sont sécantes au point $S$, nous devons vérifier deux conditions :
+
+    *   Le point $S$ appartient à la droite $d$.
+    *   Le point $S$ appartient à la droite $d'$.
+    *   Les droites ne sont pas parallèles.
+
+    **Vérifions si $S$ appartient à $d$ :**
+
+    On remplace les coordonnées de $S$ dans la représentation paramétrique de $d$ et on vérifie s'il existe une valeur unique du paramètre $t$.
+    $$
+    \begin{cases}
+    -\frac{1}{2} = \frac{3}{2} + 2t \\
+    1 = 2 + t \\
+    4 = 3 - t
+    \end{cases}
+    \Leftrightarrow
+    \begin{cases}
+    2t = -\frac{1}{2} - \frac{3}{2} = -2 \\
+    t = 1 - 2 = -1 \\
+    t = 3 - 4 = -1
+    \end{cases}
+    \Leftrightarrow
+    \begin{cases}
+    t = -1 \\
+    t = -1 \\
+    t = -1
+    \end{cases}
+    $$
+    Le système a une solution unique $t=-1$. Le point $S$ appartient donc à la droite $d$.
+
+    **Vérifions si $S$ appartient à $d'$ :**
+
+    On procède de même avec la représentation paramétrique de $d'$.
+    $$
+    \begin{cases}
+    -\frac{1}{2} = s \\
+    1 = \frac{3}{2} + s \\
+    4 = 3 - 2s
+    \end{cases}
+    \Leftrightarrow
+    \begin{cases}
+    s = -\frac{1}{2} \\
+    s = 1 - \frac{3}{2} = -\frac{1}{2} \\
+    2s = 3 - 4 = -1 \Rightarrow s = -\frac{1}{2}
+    \end{cases}
+    $$
+    Le système a une solution unique $s=-\frac{1}{2}$. Le point $S$ appartient donc à la droite $d'$.
+
+    **Vérifions si les droites sont parallèles :**
+
+    Un vecteur directeur de $d$ est $\overrightarrow{u}(2 \,;\, 1 \,;\, -1)$.
+
+    Un vecteur directeur de $d'$ est $\overrightarrow{v}(1 \,;\, 1 \,;\, -2)$.
+
+    Les coordonnées de ces vecteurs ne sont pas proportionnelles (par exemple, $2/1 = 2$ mais $1/1 = 1$). Les vecteurs $\overrightarrow{u}$ et $\overrightarrow{v}$ ne sont donc pas colinéaires. Par conséquent, les droites $d$ et $d'$ ne sont pas parallèles.
+
+    Puisque les droites $d$ et $d'$ ne sont pas parallèles et ont un point commun $S$, elles sont sécantes en $S$.
+
+2.  **Étude du plan (ABC).**
+
+    a. **Montrer que le vecteur $\overrightarrow{n}(1 \,;\, 2 \,;\, 4)$ est un vecteur normal au plan (ABC).**
+
+    ::: {.callout-tip}
+    ## Rappel : Vecteur normal à un plan
+    Un vecteur $\overrightarrow{n}$ est normal à un plan $(P)$ s'il est orthogonal à deux vecteurs non colinéaires de ce plan. On utilise le produit scalaire pour vérifier l'orthogonalité.
+    :::
+
+    On considère les points $A(-1 \,;\, 2 \,;\, 1)$, $B(1 \,;\, -1 \,;\, 2)$ et $C(1 \,;\, 1 \,;\, 1)$.
+
+    On calcule les coordonnées des vecteurs $\overrightarrow{AB}$ et $\overrightarrow{AC}$ :
+
+    $\overrightarrow{AB}(1 - (-1) \,;\, -1 - 2 \,;\, 2 - 1)$, soit $\overrightarrow{AB}(2 \,;\, -3 \,;\, 1)$.
+
+    $\overrightarrow{AC}(1 - (-1) \,;\, 1 - 2 \,;\, 1 - 1)$, soit $\overrightarrow{AC}(2 \,;\, -1 \,;\, 0)$.
+
+    Les coordonnées de $\overrightarrow{AB}$ et $\overrightarrow{AC}$ ne sont pas proportionnelles, les vecteurs ne sont donc pas colinéaires et définissent bien le plan (ABC).
+
+    Calculons les produits scalaires de $\overrightarrow{n}$ avec ces deux vecteurs :
+
+    $\overrightarrow{n} \cdot \overrightarrow{AB} = 1 \times 2 + 2 \times (-3) + 4 \times 1 = 2 - 6 + 4 = 0$.
+
+    $\overrightarrow{n} \cdot \overrightarrow{AC} = 1 \times 2 + 2 \times (-1) + 4 \times 0 = 2 - 2 + 0 = 0$.
+
+    Le vecteur $\overrightarrow{n}$ est orthogonal à deux vecteurs non colinéaires du plan (ABC), il est donc bien un vecteur normal à ce plan.
+
+    b. **En déduire qu'une équation cartésienne du plan (ABC) est : $x + 2y + 4z - 7 = 0$.**
+
+    Puisque $\overrightarrow{n}(1 \,;\, 2 \,;\, 4)$ est un vecteur normal au plan (ABC), une équation cartésienne de ce plan est de la forme $1x + 2y + 4z + d = 0$.
+
+    Pour déterminer la constante $d$, on utilise le fait que le point $A(-1 \,;\, 2 \,;\, 1)$ appartient au plan. Ses coordonnées doivent vérifier l'équation :
+
+    $(-1) + 2(2) + 4(1) + d = 0$
+
+    $-1 + 4 + 4 + d = 0$
+
+    $7 + d = 0$
+
+    $d = -7$
+
+    Une équation cartésienne du plan (ABC) est donc bien $x + 2y + 4z - 7 = 0$.
+
+    c. **Démontrer que les points A, B, C et S ne sont pas coplanaires.**
+
+    Pour démontrer que les quatre points ne sont pas coplanaires, il suffit de montrer que le point $S$ n'appartient pas au plan (ABC).
+
+    On utilise les coordonnées de $S(-\frac{1}{2} \,;\, 1 \,;\, 4)$ et l'équation du plan (ABC).
+
+    $x_S + 2y_S + 4z_S - 7 = (-\frac{1}{2}) + 2(1) + 4(4) - 7$
+
+    $= -0,5 + 2 + 16 - 7$
+
+    $= 10,5$
+
+    Comme $10,5 \neq 0$, les coordonnées de $S$ ne vérifient pas l'équation du plan (ABC). Le point $S$ n'appartient donc pas à ce plan.
+
+    Par conséquent, les points A, B, C et S ne sont pas coplanaires.
+
+3.  **Projection orthogonale.**
+
+    a. **Démontrer que le point $H(-1 \,;\, 0 \,;\, 2)$ est le projeté orthogonal de $S$ sur le plan (ABC).**
+
+    Pour que $H$ soit le projeté orthogonal de $S$ sur le plan (ABC), deux conditions doivent être réunies :
+
+    1.  Le point $H$ doit appartenir au plan (ABC).
+    2.  Le vecteur $\overrightarrow{SH}$ doit être colinéaire au vecteur normal $\overrightarrow{n}$ du plan.
+
+    **Condition 1 :**
+
+    Vérifions si les coordonnées de $H(-1 \,;\, 0 \,;\, 2)$ satisfont l'équation du plan (ABC) :
+
+    $x_H + 2y_H + 4z_H - 7 = (-1) + 2(0) + 4(2) - 7 = -1 + 0 + 8 - 7 = 0$.
+
+    Le point $H$ appartient bien au plan (ABC).
+
+    **Condition 2 :**
+
+    Calculons les coordonnées du vecteur $\overrightarrow{SH}$ avec $S(-\frac{1}{2} \,;\, 1 \,;\, 4)$ :
+
+    $\overrightarrow{SH}(-1 - (-\frac{1}{2}) \,;\, 0 - 1 \,;\, 2 - 4)$, soit $\overrightarrow{SH}(-\frac{1}{2} \,;\, -1 \,;\, -2)$.
+
+    Le vecteur normal est $\overrightarrow{n}(1 \,;\, 2 \,;\, 4)$.
+
+    On observe que $1 = -2 \times (-\frac{1}{2})$, $2 = -2 \times (-1)$ et $4 = -2 \times (-2)$.
+
+    On a donc $\overrightarrow{n} = -2 \overrightarrow{SH}$, ce qui montre que les vecteurs $\overrightarrow{n}$ et $\overrightarrow{SH}$ sont colinéaires.
+
+    Les deux conditions étant vérifiées, le point $H$ est bien le projeté orthogonal de $S$ sur le plan (ABC).
+
+    b. **En déduire qu'il n'existe aucun point $M$ du plan (ABC) tel que $SM < \frac{\sqrt{21}}{2}$.**
+    
+    ::: {.callout-tip}
+    ## Rappel : Distance d'un point à un plan
+    La distance d'un point $S$ à un plan $(P)$ est la plus courte distance entre $S$ et n'importe quel point $M$ de $(P)$. Cette distance minimale est atteinte au projeté orthogonal $H$ de $S$ sur $(P)$. On a donc $d(S, (P)) = SH$ et pour tout point $M \in (P)$, $SM \geqslant SH$.
+    :::
+    
+    La distance du point $S$ au plan (ABC) est la distance $SH$. Calculons cette distance :
+
+    $SH = ||\overrightarrow{SH}|| = \sqrt{(-\frac{1}{2})^2 + (-1)^2 + (-2)^2}$
+
+    $SH = \sqrt{\frac{1}{4} + 1 + 4} = \sqrt{\frac{1}{4} + \frac{4}{4} + \frac{16}{4}} = \sqrt{\frac{21}{4}} = \frac{\sqrt{21}}{2}$.
+    
+    Pour tout point $M$ appartenant au plan (ABC), la distance $SM$ est supérieure ou égale à la distance du point $S$ au plan, c'est-à-dire $SM \geqslant SH$.
+
+    On a donc pour tout point $M$ du plan (ABC), $SM \geqslant \frac{\sqrt{21}}{2}$.
+
+    Il n'existe par conséquent aucun point $M$ du plan (ABC) pour lequel la distance $SM$ serait strictement inférieure à $\frac{\sqrt{21}}{2}$.
+
+#### Partie B
+
+1.  **Déterminer les coordonnées du point $M$ en fonction de $k$.**
+
+    Le point $M$ est défini par la relation vectorielle $\overrightarrow{CM} = k \overrightarrow{CS}$ avec $M(x_M, y_M, z_M)$, $C(1,1,1)$ et $S(-\frac{1}{2},1,4)$.
+    
+    Calculons les coordonnées du vecteur $\overrightarrow{CS}$ :
+
+    $\overrightarrow{CS}(-\frac{1}{2} - 1 \,;\, 1 - 1 \,;\, 4 - 1)$, soit $\overrightarrow{CS}(-\frac{3}{2} \,;\, 0 \,;\, 3)$.
+    
+    La relation $\overrightarrow{CM} = k \overrightarrow{CS}$ se traduit en coordonnées :
+
+    $\begin{cases}
+    x_M - x_C = k \times (-\frac{3}{2}) \\
+    y_M - y_C = k \times 0 \\
+    z_M - z_C = k \times 3
+    \end{cases}
+    \Leftrightarrow
+    \begin{cases}
+    x_M - 1 = -\frac{3}{2}k \\
+    y_M - 1 = 0 \\
+    z_M - 1 = 3k
+    \end{cases}
+    \Leftrightarrow
+    \begin{cases}
+    x_M = 1 - \frac{3}{2}k \\
+    y_M = 1 \\
+    z_M = 1 + 3k
+    \end{cases}$
+
+    Les coordonnées de $M$ sont donc $(1 - \frac{3}{2}k \,;\, 1 \,;\, 1 + 3k)$.
+
+2.  **Existe-t-il un point $M$ sur le segment $[CS]$ tel que le triangle $MAB$ soit rectangle en $M$ ?**
+
+    Le triangle $MAB$ est rectangle en $M$ si et seulement si les vecteurs $\overrightarrow{MA}$ et $\overrightarrow{MB}$ sont orthogonaux, c'est-à-dire si leur produit scalaire est nul : $\overrightarrow{MA} \cdot \overrightarrow{MB} = 0$.
+
+    Exprimons les coordonnées des vecteurs $\overrightarrow{MA}$ et $\overrightarrow{MB}$ en fonction de $k$ :
+
+    $A(-1, 2, 1)$ et $B(1, -1, 2)$.
+
+    $\overrightarrow{MA}(x_A - x_M \,;\, y_A - y_M \,;\, z_A - z_M)$
+
+    $\overrightarrow{MA}(-1 - (1 - \frac{3}{2}k) \,;\, 2 - 1 \,;\, 1 - (1 + 3k)) = (-2 + \frac{3}{2}k \,;\, 1 \,;\, -3k)$.
+
+    $\overrightarrow{MB}(x_B - x_M \,;\, y_B - y_M \,;\, z_B - z_M)$
+
+    $\overrightarrow{MB}(1 - (1 - \frac{3}{2}k) \,;\, -1 - 1 \,;\, 2 - (1 + 3k)) = (\frac{3}{2}k \,;\, -2 \,;\, 1 - 3k)$.
+
+    Calculons le produit scalaire :
+
+    $\overrightarrow{MA} \cdot \overrightarrow{MB} = (-2 + \frac{3}{2}k)(\frac{3}{2}k) + (1)(-2) + (-3k)(1 - 3k)$
+
+    $= -3k + \frac{9}{4}k^2 - 2 - 3k + 9k^2$
+
+    $= \frac{9}{4}k^2 + \frac{36}{4}k^2 - 6k - 2$
+
+    $= \frac{45}{4}k^2 - 6k - 2$
+
+    On résout l'équation $\frac{45}{4}k^2 - 6k - 2 = 0$.
+
+    C'est une équation du second degré de la forme $ak^2+bk+c=0$.
+
+    Le discriminant est $\Delta = b^2 - 4ac = (-6)^2 - 4(\frac{45}{4})(-2) = 36 + 90 = 126$.
+
+    $\Delta > 0$, l'équation a deux solutions réelles :
+
+    $k_1 = \frac{-b - \sqrt{\Delta}}{2a} = \frac{6 - \sqrt{126}}{2 \times \frac{45}{4}} = \frac{6 - \sqrt{9 \times 14}}{45/2} = \frac{6 - 3\sqrt{14}}{45/2} = \frac{2(6 - 3\sqrt{14})}{45} = \frac{12 - 6\sqrt{14}}{45} = \frac{4 - 2\sqrt{14}}{15}$.
+
+    $k_2 = \frac{-b + \sqrt{\Delta}}{2a} = \frac{6 + \sqrt{126}}{45/2} = \frac{6 + 3\sqrt{14}}{45/2} = \frac{12 + 6\sqrt{14}}{45} = \frac{4 + 2\sqrt{14}}{15}$.
+
+    Le point $M$ doit appartenir au segment $[CS]$, ce qui impose que le réel $k$ appartienne à l'intervalle $[0 \,;\, 1]$.
+
+    *   Étudions $k_1$:
+
+        On sait que $3 < \sqrt{14} < 4$, donc $6 < 2\sqrt{14} < 8$.
+
+        Ainsi, $4 - 2\sqrt{14} < 4 - 6 = -2$. Le numérateur est négatif, donc $k_1 < 0$. Cette solution n'est pas dans $[0 \,;\, 1]$.
+
+    *   Étudions $k_2$:
+
+        $k_2$ est clairement positif. Vérifions si $k_2 \leqslant 1$.
+
+        $k_2 \leqslant 1 \Leftrightarrow \frac{4 + 2\sqrt{14}}{15} \leqslant 1 \Leftrightarrow 4 + 2\sqrt{14} \leqslant 15 \Leftrightarrow 2\sqrt{14} \leqslant 11$.
+
+        Comme les deux membres sont positifs, on peut élever au carré :
+
+        $(2\sqrt{14})^2 \leqslant 11^2 \Leftrightarrow 4 \times 14 \leqslant 121 \Leftrightarrow 56 \leqslant 121$.
+
+        Cette inégalité est vraie. On a donc $0 < k_2 \leqslant 1$.
+
+    Il existe une unique valeur $k = \frac{4 + 2\sqrt{14}}{15}$ dans l'intervalle $[0 \,;\, 1]$ pour laquelle le triangle $MAB$ est rectangle en $M$.
+
+    Par conséquent, oui, il existe un tel point $M$ sur le segment $[CS]$.
+
+## Corrigé de l'exercice 3
+
+Cet exercice est de type vrai/faux où chaque affirmation doit être validée ou invalidée par une justification.
+
+1.  **Affirmation 1 : La suite $(u_n)$ définie pour tout entier naturel $n$ par $u_n = \frac{1+5^n}{2+3^n}$ converge vers $\frac{5}{3}$.**
+
+    **FAUSSE**
+
+    **Justification :**
+    Nous cherchons la limite de la suite $(u_n)$ en $+\infty$. Nous sommes face à une forme indéterminée du type « $\frac{\infty}{\infty}$ ». Dans le cas de sommes de termes avec des puissances de $n$, la méthode consiste à factoriser par le terme qui croît le plus rapidement (le terme dominant). Ici, le terme dominant est $5^n$ car $5 > 3$.
+
+    On factorise donc le numérateur et le dénominateur par $5^n$ :
+    $$u_n = \frac{5^n \left( \frac{1}{5^n} + 1 \right)}{5^n \left( \frac{2}{5^n} + \frac{3^n}{5^n} \right)}$$
+    Pour tout $n \in \mathbb{N}$, $5^n \neq 0$, on peut donc simplifier :
+    $$u_n = \frac{\frac{1}{5^n} + 1}{\frac{2}{5^n} + \left(\frac{3}{5}\right)^n}$$
+
+    ::: {.callout-tip}
+    ## Rappel : Limite d'une suite géométrique
+    La limite de la suite $(q^n)$ dépend de la valeur de la raison $q$ :
+
+    *   Si $-1 < q < 1$, alors $\lim_{n \to +\infty} q^n = 0$.
+    *   Si $q > 1$, alors $\lim_{n \to +\infty} q^n = +\infty$.
+    :::
+
+    Étudions la limite de chaque terme :
+
+    *   On a $5>1$, donc $\lim_{n \to +\infty} 5^n = +\infty$, et par conséquent $\lim_{n \to +\infty} \frac{1}{5^n} = 0$.
+    *   De même, $\lim_{n \to +\infty} \frac{2}{5^n} = 0$.
+    *   Pour le terme $\left(\frac{3}{5}\right)^n$, la raison est $q = \frac{3}{5}$. 
+    
+    Comme $-1 < \frac{3}{5} < 1$, on a $\lim_{n \to +\infty} \left(\frac{3}{5}\right)^n = 0$.
+
+    On peut maintenant calculer la limite du numérateur et du dénominateur par somme des limites :
+
+    *   $\lim_{n \to +\infty} \left(\frac{1}{5^n} + 1\right) = 0 + 1 = 1$.
+    *   $\lim_{n \to +\infty} \left(\frac{2}{5^n} + \left(\frac{3}{5}\right)^n\right) = 0 + 0 = 0$.
+
+    Le quotient a donc une limite infinie. Pour déterminer s'il s'agit de $+\infty$ ou $-\infty$, il faut connaître le signe du dénominateur. Pour tout entier naturel $n$, $5^n > 0$ et $3^n > 0$, donc le dénominateur $\frac{2}{5^n} + (\frac{3}{5})^n$ est une somme de termes strictement positifs. Il tend donc vers 0 par valeurs positives ($0^+$).
+
+    Finalement, par quotient des limites :
+    $$\lim_{n \to +\infty} u_n = +\infty$$
+
+    La suite $(u_n)$ diverge vers $+\infty$, elle ne converge donc pas vers $\frac{5}{3}$. L'affirmation est fausse.
+
+2.  **Affirmation 2 : On considère la suite $(w_n)$ définie par $w_0=0$ et, pour tout entier naturel $n$, $w_{n+1} = 3w_n - 2n + 3$. Pour tout entier naturel $n$, on a $w_n \geqslant n$.**
+
+    **VRAIE**
+
+    **Justification :**
+
+    Nous allons démontrer cette propriété par récurrence. Soit $P(n)$ la proposition : « $w_n \geqslant n$ ».
+
+    *   **Initialisation :**
+
+        Pour $n=0$, on a $w_0=0$. La proposition $P(0)$ est $w_0 \geqslant 0$, soit $0 \geqslant 0$, ce qui est vrai.
+        $P(0)$ est initialisée.
+
+    *   **Hérédité :**
+
+        Supposons qu'il existe un entier $k \geqslant 0$ tel que $P(k)$ est vraie, c'est-à-dire $w_k \geqslant k$ (hypothèse de récurrence).
+
+        Montrons que $P(k+1)$ est vraie, c'est-à-dire $w_{k+1} \geqslant k+1$.
+
+        Par définition de la suite, $w_{k+1} = 3w_k - 2k + 3$.
+
+        D'après l'hypothèse de récurrence, $w_k \geqslant k$, donc $3w_k \geqslant 3k$.
+
+        En injectant cette inégalité dans l'expression de $w_{k+1}$, on obtient :
+        $$w_{k+1} \geqslant 3k - 2k + 3$$
+        $$w_{k+1} \geqslant k + 3$$
+        Nous voulons montrer que $w_{k+1} \geqslant k+1$. Or, pour tout entier $k \geqslant 0$, on a $k+3 \geqslant k+1$.
+
+        Puisque $w_{k+1} \geqslant k+3$ et que $k+3 \geqslant k+1$, on peut conclure par transitivité que :
+        $$w_{k+1} \geqslant k+1$$
+        La proposition $P(k+1)$ est donc vraie.
+
+    *   **Conclusion :**
+        La proposition est initialisée pour $n=0$ et est héréditaire. Par le principe de récurrence, on peut affirmer que pour tout entier naturel $n$, $w_n \geqslant n$.
+
+3.  **Affirmation 3 : D'après le graphique, la fonction $f$ est convexe sur son ensemble de définition.**
+
+    **FAUSSE**
+
+    **Justification :**
+
+    ::: {.callout-tip}
+    ## Rappel : Convexité et position relative de la courbe et des tangentes
+    Une fonction est dite **convexe** sur un intervalle si sa courbe représentative est située **au-dessus** de chacune de ses tangentes sur cet intervalle.
+    Elle est dite **concave** si sa courbe est située **en dessous** de chacune de ses tangentes.
+    :::
+
+    Le graphique (Fig. 1) montre la courbe $C_f$ et sa tangente $T$ au point A d'abscisse 8.
+
+    On observe que, au voisinage du point A, la courbe $C_f$ est située **en dessous** de sa tangente $T$.
+
+    Ceci est la caractéristique d'une fonction concave. Puisqu'il existe au moins une tangente (la tangente $T$) telle que la courbe n'est pas entièrement au-dessus d'elle, la fonction $f$ n'est pas convexe sur son ensemble de définition $]0; +\infty[$.
+
+    L'affirmation est donc fausse.
+
+4.  **Affirmation 4 : Pour tout réel $x > 0$, $\ln(x) - x + 1 \leqslant 0$.**
+
+    **VRAIE**
+
+    **Justification :**
+    Pour étudier le signe de l'expression, nous pouvons étudier les variations de la fonction $g$ définie sur l'intervalle $]0; +\infty[$ par $g(x) = \ln(x) - x + 1$.
+
+    La fonction $g$ est dérivable sur $]0; +\infty[$ comme somme de fonctions dérivables sur cet intervalle.
+    $$g'(x) = \frac{1}{x} - 1$$
+    Étudions le signe de la dérivée $g'(x)$ :
+    $$g'(x) > 0 \Leftrightarrow \frac{1}{x} - 1 > 0 \Leftrightarrow \frac{1}{x} > 1$$
+    Comme $x > 0$, on peut multiplier par $x$ sans changer le sens de l'inégalité :
+    $$1 > x$$
+    Ainsi, $g'(x) > 0$ pour $x \in ]0, 1[$ et $g'(x) < 0$ pour $x \in ]1, +\infty[$. La dérivée s'annule en $x=1$.
+
+    On peut dresser le tableau de variation de la fonction $g$ :
+
+    | $x$ | 0 | | 1 | | $+\infty$ |
+    | :---: | :---: | :---: | :---: | :---: | :---: |
+    | $g'(x)$ | | + | 0 | - | |
+    | $g(x)$ | | ↗ | $g(1)$ | ↘ | |
+
+    La fonction $g$ admet donc un maximum global sur $]0; +\infty[$ atteint en $x=1$.
+
+    Calculons la valeur de ce maximum :
+
+    $$g(1) = \ln(1) - 1 + 1 = 0 - 1 + 1 = 0$$
+
+    Le maximum de la fonction $g$ sur son ensemble de définition est 0. Par conséquent, pour tout $x \in ]0; +\infty[$, on a $g(x) \leqslant g(1)$, ce qui signifie :
+
+    $$\ln(x) - x + 1 \leqslant 0$$
+
+    L'affirmation est donc vraie.
+
+## Corrigé de l'exercice 4
+
+#### Partie A : Étude graphique
+
+*Dans cette partie, aucune justification n'est attendue.*
+
+1.  Par lecture graphique, on cherche l'abscisse $t$ du point de la courbe $C_d$ ayant pour ordonnée 15. On trouve que le chariot aura parcouru 15 m au bout d'environ **2 secondes**.
+
+2.  La longueur totale de la zone de freinage correspond à la distance maximale parcourue par le chariot, c'est-à-dire à la limite de la fonction $d$ en $+\infty$. Graphiquement, cela correspond à l'ordonnée de l'asymptote horizontale $\Delta$ à la courbe $C_d$.
+
+    On lit que l'équation de l'asymptote $\Delta$ est $y=22,8$.
+
+    La longueur minimale à prévoir pour la zone de freinage est donc de **22,8 mètres**.
+
+3.  La valeur $d'(4,7)$ correspond au coefficient directeur de la tangente à la courbe $C_d$ au point $A$ d'abscisse $t=4,7$. Cette tangente est la droite $T$ tracée sur le graphique.
+
+    Pour estimer ce coefficient directeur, on choisit deux points sur la droite $T$. Prenons le point $A(4,7 \,;\, 21)$ et un autre point, par exemple le point de coordonnées approximatives $(0 \,;\, 16,3)$.
+
+    Le coefficient directeur est :
+    $$m = \frac{y_B - y_A}{x_B - x_A} \approx \frac{21 - 16,3}{4,7 - 0} = \frac{4,7}{4,7} = 1$$
+    On peut arrondir la valeur à **$d'(4,7) \approx 1$**.
+
+    **Interprétation :** La fonction dérivée $d'(t)$ représente la vitesse instantanée du chariot, notée $v(t)$. Ainsi, à l'instant $t=4,7$ secondes, la vitesse du chariot est d'environ **1 m/s**.
+
+#### Partie B : Étude de la vitesse
+
+1.  a. **Résolution de l'équation différentielle $(E') : y' + 0,6y = 0$.**
+
+        Cette équation est de la forme $y' = ay$ avec $a = -0,6$.
+
+    ::: {.callout-tip}        
+    ## Rappel : Équation différentielle $y' = ay$
+    Les solutions de l'équation différentielle $y' = ay$, où $a$ est un réel, sont les fonctions définies sur $\mathbb{R}$ par $t \mapsto Ce^{at}$, où $C$ est une constante réelle quelconque.
+    :::
+
+    Les solutions de l'équation $(E')$ sur $[0; +\infty[$ sont donc les fonctions de la forme $t \mapsto Ce^{-0,6t}$, avec $C \in \mathbb{R}$.
+
+    b. **Vérification d'une solution particulière pour $(E)$.**
+
+
+        Soit $g(t) = te^{-0,6t}$. La fonction $g$ est un produit de fonctions dérivables sur $[0; +\infty[$, elle est donc dérivable.
+
+        Pour dériver $g(t)$, on utilise la formule $(uv)' = u'v + uv'$ avec $u(t)=t$ et $v(t)=e^{-0,6t}$.
+        $u'(t)=1$ et $v'(t)=-0,6e^{-0,6t}$.
+
+        $g'(t) = 1 \times e^{-0,6t} + t \times (-0,6e^{-0,6t}) = e^{-0,6t} - 0,6te^{-0,6t}$.
+
+        Vérifions si $g$ est solution de $(E) : y' + 0,6y = e^{-0,6t}$.
+
+        $g'(t) + 0,6g(t) = (e^{-0,6t} - 0,6te^{-0,6t}) + 0,6(te^{-0,6t})$
+
+        $g'(t) + 0,6g(t) = e^{-0,6t} - 0,6te^{-0,6t} + 0,6te^{-0,6t} = e^{-0,6t}$.
+
+        L'égalité est vérifiée, donc la fonction $g$ est bien une solution de l'équation différentielle $(E)$.
+
+    c. **Déduction des solutions de $(E)$.**
+
+        La solution générale de l'équation différentielle $(E)$ est la somme de la solution générale de l'équation homogène associée $(E')$ et d'une solution particulière de $(E)$.
+
+        Les solutions de $(E)$ sont donc les fonctions de la forme :
+
+        $$y(t) = Ce^{-0,6t} + te^{-0,6t} = (C+t)e^{-0,6t}$$
+
+        où $C$ est une constante réelle.
+
+    d. **Détermination de la fonction $v(t)$.**
+
+        La fonction $v$ est une solution de $(E)$, donc $v(t) = (C+t)e^{-0,6t}$.
+
+        On sait que la vitesse initiale est $v(0) = 12$. On utilise cette condition pour déterminer la constante $C$.
+
+        $v(0) = (C+0)e^{-0,6 \times 0} = C \times e^0 = C$.
+
+        On a donc $C = 12$.
+
+        La fonction vitesse est donc définie pour tout $t \in [0; +\infty[$ par :
+
+        $$v(t) = (12+t)e^{-0,6t}$$
+
+2.  a. **Calcul de la dérivée $v'(t)$.**
+
+        La fonction $v(t) = (12+t)e^{-0,6t}$ est un produit de fonctions.
+
+        En posant $u(t)=12+t$ et $w(t)=e^{-0,6t}$, on a $u'(t)=1$ et $w'(t)=-0,6e^{-0,6t}$.
+
+        $v'(t) = u'(t)w(t) + u(t)w'(t) = 1 \times e^{-0,6t} + (12+t)(-0,6e^{-0,6t})$
+
+        $v'(t) = e^{-0,6t}(1 - 0,6(12+t)) = e^{-0,6t}(1 - 7,2 - 0,6t)$
+
+        $v'(t) = (-6,2 - 0,6t)e^{-0,6t}$.
+
+    b. **Limite de $v$ en $+\infty$.**
+
+        On utilise l'expression $v(t) = 12e^{-0,6t} + t \times \frac{1}{e^{0,6t}}$.
+
+        On sait que $\lim_{t \to +\infty} -0,6t = -\infty$, donc par composition $\lim_{t \to +\infty} e^{-0,6t} = 0$.
+
+        Pour le second terme, on peut écrire $t \times \frac{1}{e^{0,6t}} = \frac{t}{e^{0,6t}} = \frac{1}{0,6} \times \frac{0,6t}{e^{0,6t}}$.
+
+        Par croissance comparée, on sait que $\lim_{X \to +\infty} \frac{X}{e^X} = 0$.
+
+        En posant $X=0,6t$, on a $\lim_{t \to +\infty} \frac{0,6t}{e^{0,6t}} = 0$.
+
+        Ainsi, $\lim_{t \to +\infty} t e^{-0,6t} = 0$.
+
+        Par somme des limites, on obtient :
+
+        $$\lim_{t \to +\infty} v(t) = 12 \times 0 + 0 = 0$$
+
+    c. **Sens de variation de $v$.**
+
+        On étudie le signe de la dérivée $v'(t) = (-6,2 - 0,6t)e^{-0,6t}$ sur $[0; +\infty[$.
+
+        Pour tout $t \geqslant 0$, $e^{-0,6t}$ est strictement positif.
+
+        Le signe de $v'(t)$ est donc celui de $(-6,2 - 0,6t)$.
+
+        Pour $t \geqslant 0$, on a $0,6t \geqslant 0$, donc $-0,6t \leqslant 0$.
+
+        Ainsi, $-6,2 - 0,6t \leqslant -6,2 < 0$.
+
+        La dérivée $v'(t)$ est donc strictement négative sur $[0; +\infty[$.
+
+        La fonction $v$ est strictement décroissante sur $[0; +\infty[$.
+
+        On dresse le tableau de variation complet :
+
+        $v(0) = (12+0)e^0 = 12$.
+
+        | $t$ | 0 | | $+\infty$ |
+        | :---: | :---: | :---: | :---: |
+        | $v'(t)$ | | - | |
+        | $v(t)$ | 12 | ↘ | 0 |
+
+    d. **Résolution de l'équation $v(t)=1$.**
+
+        La fonction $v$ est continue (car dérivable) et strictement décroissante sur l'intervalle $[0; +\infty[$.
+
+        De plus, $v(0)=12$ et $\lim_{t \to +\infty} v(t) = 0$.
+
+        Le nombre 1 est compris dans l'intervalle image $]0; 12]$.
+
+        D'après le corollaire du théorème des valeurs intermédiaires pour les fonctions strictement monotones, l'équation $v(t)=1$ admet une solution unique $\alpha$ sur l'intervalle $[0; +\infty[$.
+
+        À l'aide de la calculatrice, on peut trouver une valeur approchée de $\alpha$.
+
+        En utilisant la fonction table ou un solveur, on trouve :
+
+        $v(4,7) \approx 1,003$
+        
+        $v(4,71) \approx 0,996$
+
+        Une valeur approchée de $\alpha$ au dixième est donc **$\alpha \approx 4,7$**.
+
+3.  Le système mécanique d'arrêt se déclenche lorsque la vitesse est inférieure ou égale à 1 m/s. Comme la fonction $v$ est strictement décroissante, la condition $v(t) \leqslant 1$ est équivalente à $v(t) \leqslant v(\alpha)$, ce qui signifie $t \geqslant \alpha$.
+
+    Le système entre donc en action à partir de l'instant $t=\alpha$.
+
+    Cela se produit au bout d'environ **4,7 secondes**.
+
+#### Partie C : Calcul de la distance parcourue
+
+1.  **Démonstration par intégration par parties.**
+
+    On doit calculer $d(t) = \int_0^t v(x) dx = \int_0^t (12+x)e^{-0,6x} dx$.
+
+    ::: {.callout-tip}
+    ## Rappel : Intégration par parties
+    Si $u$ et $f$ sont deux fonctions dérivables sur un intervalle $I$, alors pour tous $a, b \in I$ :
+    $\int_a^b u(x)f'(x) dx = [u(x)f(x)]_a^b - \int_a^b u'(x)f(x) dx$.
+    :::
+
+    On pose :
+
+    *   $u(x) = 12+x \quad \implies \quad u'(x) = 1$
+    *   $f'(x) = e^{-0,6x} \quad \implies \quad f(x) = \frac{1}{-0,6}e^{-0,6x} = -\frac{5}{3}e^{-0,6x}$
+
+    Appliquons la formule :
+
+    $d(t) = \left[ (12+x)(-\frac{5}{3}e^{-0,6x}) \right]_0^t - \int_0^t 1 \times (-\frac{5}{3}e^{-0,6x}) dx$
+
+    $d(t) = \left( (12+t)(-\frac{5}{3}e^{-0,6t}) - (12+0)(-\frac{5}{3}e^0) \right) + \frac{5}{3} \int_0^t e^{-0,6x} dx$
+
+    $d(t) = (-\frac{5}{3}t - 20)e^{-0,6t} + 20 + \frac{5}{3} \left[ -\frac{5}{3}e^{-0,6x} \right]_0^t$
+
+    $d(t) = (-\frac{5}{3}t - 20)e^{-0,6t} + 20 + \frac{5}{3} \left( -\frac{5}{3}e^{-0,6t} - (-\frac{5}{3}e^0) \right)$
+
+    $d(t) = (-\frac{5}{3}t - 20)e^{-0,6t} + 20 - \frac{25}{9}e^{-0,6t} + \frac{25}{9}$
+
+    $d(t) = e^{-0,6t} (-\frac{5}{3}t - 20 - \frac{25}{9}) + (20 + \frac{25}{9})$
+
+    $d(t) = e^{-0,6t} (-\frac{15}{9}t - \frac{180}{9} - \frac{25}{9}) + (\frac{180}{9} + \frac{25}{9})$
+
+    $d(t) = e^{-0,6t} (-\frac{5}{3}t - \frac{205}{9}) + \frac{205}{9}$
+
+    Ce qui est bien la formule demandée.
+
+2.  Le dispositif d'arrêt se déclenche à l'instant $t=\alpha$ où la vitesse atteint 1 m/s. On cherche donc la distance parcourue à cet instant, soit $d(\alpha)$.
+    On utilise la valeur approchée $\alpha \approx 4,704$ pour plus de précision.
+
+    On calcule $d(4,704)$ :
+    $$d(4,704) = e^{-0,6 \times 4,704} \left(-\frac{5}{3} \times 4,704 - \frac{205}{9}\right) + \frac{205}{9}$$
+    $$d(4,704) \approx e^{-2,8224} (-7,84 - 22,7778) + 22,7778$$
+    $$d(4,704) \approx 0,05946 \times (-30,6178) + 22,7778$$
+    $$d(4,704) \approx -1,8206 + 22,7778 \approx 20,9572$$
+    Arrondie au centième, la distance parcourue par le chariot avant le déclenchement du dispositif est de **20,96 mètres**.

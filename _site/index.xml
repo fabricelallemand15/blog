@@ -10,7 +10,649 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Sun, 22 Jun 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 23 Jun 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Corrigé du sujet de Mathématiques du baccalauréat 2025 - Métropole Jour 2</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/2025-06-24-MathsMetropoleJ2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><a href="spe_mathematiques_2025_metropole_2_sujet_officiel_1_.pdf">Lien vers l’énoncé en PDF</a></p>
+<section id="corrigé-de-lexercice-1" class="level2">
+<h2 class="anchored" data-anchor-id="corrigé-de-lexercice-1">Corrigé de l’exercice 1</h2>
+<section id="partie-a" class="level4">
+<h4 class="anchored" data-anchor-id="partie-a">Partie A</h4>
+<ol type="1">
+<li><p><strong>Représenter la situation par un arbre pondéré.</strong></p>
+<p>On traduit les données de l’énoncé.</p>
+<p>Soient les événements <img src="https://latex.codecogs.com/png.latex?A"> : « La personne chute pendant la première séance » et <img src="https://latex.codecogs.com/png.latex?B"> : « La personne chute pendant la deuxième séance ».</p>
+<p>On a <img src="https://latex.codecogs.com/png.latex?P(A)%20=%200,6">. Par conséquent, la probabilité de l’événement contraire <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%20A%7D"> est <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20A%7D)%20=%201%20-%20P(A)%20=%201%20-%200,6%20=%200,4">.</p>
+<p>L’énoncé nous donne les probabilités conditionnelles suivantes :</p>
+<ul>
+<li>La probabilité que la personne chute pendant la deuxième séance sachant qu’elle a chuté pendant la première est <img src="https://latex.codecogs.com/png.latex?P_A(B)%20=%200,3">.</li>
+<li>La probabilité que la personne chute pendant la deuxième séance sachant qu’elle n’a pas chuté pendant la première est <img src="https://latex.codecogs.com/png.latex?P_%7B%5Coverline%7B%20A%7D%7D(B)%20=%200,4">.</li>
+</ul>
+<p>On peut en déduire les probabilités des événements contraires :</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?P_A(%5Coverline%7B%20B%7D)%20=%201%20-%20P_A(B)%20=%201%20-%200,3%20=%200,7">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?P_%7B%5Coverline%7B%20A%7D%7D(%5Coverline%7B%20B%7D)%20=%201%20-%20P_%7B%5Coverline%7B%20A%7D%7D(B)%20=%201%20-%200,4%20=%200,6">.</li>
+</ul>
+<p>L’arbre pondéré représentant la situation est le suivant :</p>
+<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/2025-06-24-MathsMetropoleJ2/arbre.png" class="img-fluid" style="width:50.0%"></a></p></li>
+<li><p><strong>Calculer la probabilité <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D)"> et interpréter le résultat.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Probabilité d’une intersection
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour deux événements <img src="https://latex.codecogs.com/png.latex?A"> et <img src="https://latex.codecogs.com/png.latex?E">, la probabilité de leur intersection est donnée par la formule : <img src="https://latex.codecogs.com/png.latex?P(A%20%5Ccap%20E)%20=%20P(A)%20%5Ctimes%20P_A(E)">.</p>
+<p>Cette valeur correspond à la probabilité du chemin passant par <img src="https://latex.codecogs.com/png.latex?A"> puis <img src="https://latex.codecogs.com/png.latex?E"> dans un arbre pondéré.</p>
+</div>
+</div>
+<p>On cherche la probabilité de l’événement <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D"> : « La personne ne chute ni pendant la première séance ni pendant la deuxième séance ».</p>
+<p>D’après la formule des probabilités composées, on a : <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D)%20=%20P(%5Coverline%7B%20A%7D)%20%5Ctimes%20P_%7B%5Coverline%7B%20A%7D%7D(%5Coverline%7B%20B%7D)"> <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D)%20=%200,4%20%5Ctimes%200,6%20=%200,24"></p>
+<p>La probabilité que la personne choisie au hasard ne chute lors d’aucune des deux séances est de 0,24.</p></li>
+<li><p><strong>Montrer que <img src="https://latex.codecogs.com/png.latex?P(B)%20=%200,34">.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Formule des probabilités totales
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si les événements <img src="https://latex.codecogs.com/png.latex?A_1,%20A_2,%20...,%20A_n"> forment une partition de l’univers, alors pour tout événement <img src="https://latex.codecogs.com/png.latex?E">, on a : <img src="https://latex.codecogs.com/png.latex?P(E)%20=%20P(A_1%20%5Ccap%20E)%20+%20P(A_2%20%5Ccap%20E)%20+%20...%20+%20P(A_n%20%5Ccap%20E)">.</p>
+<p>Dans le cas d’un événement <img src="https://latex.codecogs.com/png.latex?A"> et de son contraire <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%20A%7D">, la formule se simplifie en : <img src="https://latex.codecogs.com/png.latex?P(E)%20=%20P(A%20%5Ccap%20E)%20+%20P(%5Coverline%7B%20A%7D%20%5Ccap%20E)">.</p>
+</div>
+</div>
+<p>L’événement <img src="https://latex.codecogs.com/png.latex?B"> peut se réaliser de deux manières exclusives : soit la personne a chuté à la première séance et à la deuxième (<img src="https://latex.codecogs.com/png.latex?A%20%5Ccap%20B">), soit elle n’a pas chuté à la première mais a chuté à la deuxième (<img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%20A%7D%20%5Ccap%20B">).</p>
+<p>Les événements <img src="https://latex.codecogs.com/png.latex?A"> et <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%20A%7D"> formant une partition de l’univers, on peut utiliser la formule des probabilités totales : <img src="https://latex.codecogs.com/png.latex?P(B)%20=%20P(A%20%5Ccap%20B)%20+%20P(%5Coverline%7B%20A%7D%20%5Ccap%20B)"></p>
+<p>On calcule <img src="https://latex.codecogs.com/png.latex?P(A%20%5Ccap%20B)"> :</p>
+<p><img src="https://latex.codecogs.com/png.latex?P(A%20%5Ccap%20B)%20=%20P(A)%20%5Ctimes%20P_A(B)%20=%200,6%20%5Ctimes%200,3%20=%200,18"></p>
+<p>On calcule <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20A%7D%20%5Ccap%20B)"> : <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20A%7D%20%5Ccap%20B)%20=%20P(%5Coverline%7B%20A%7D)%20%5Ctimes%20P_%7B%5Coverline%7B%20A%7D%7D(B)%20=%200,4%20%5Ctimes%200,4%20=%200,16"> On peut maintenant calculer <img src="https://latex.codecogs.com/png.latex?P(B)"> : <img src="https://latex.codecogs.com/png.latex?P(B)%20=%200,18%20+%200,16%20=%200,34"> On a bien montré que <img src="https://latex.codecogs.com/png.latex?P(B)%20=%200,34">.</p></li>
+<li><p><strong>La personne ne chute pas pendant la deuxième séance de cours. Calculer la probabilité qu’elle n’ait pas chuté lors de la première séance.</strong></p>
+<p>On cherche à calculer la probabilité que la personne n’ait pas chuté lors de la première séance, sachant qu’elle n’a pas chuté lors de la deuxième. Il s’agit de la probabilité conditionnelle <img src="https://latex.codecogs.com/png.latex?P_%7B%5Coverline%7B%20B%7D%7D(%5Coverline%7B%20A%7D)">.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Probabilité conditionnelle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La probabilité de l’événement <img src="https://latex.codecogs.com/png.latex?E"> sachant l’événement <img src="https://latex.codecogs.com/png.latex?F"> est donnée par : <img src="https://latex.codecogs.com/png.latex?P_F(E)%20=%20%5Cfrac%7BP(E%20%5Ccap%20F)%7D%7BP(F)%7D"></p>
+</div>
+</div>
+<p>La formule est donc : <img src="https://latex.codecogs.com/png.latex?P_%7B%5Coverline%7B%20B%7D%7D(%5Coverline%7B%20A%7D)%20=%20%5Cfrac%7BP(%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D)%7D%7BP(%5Coverline%7B%20B%7D)%7D"> Calculons les deux termes :</p>
+<ul>
+<li>Le numérateur, en suivant la branche correspondante de l’arbre : <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D)%20=%20P(%5Coverline%7B%20A%7D)%20%5Ctimes%20P_%7B%5Coverline%7B%20A%7D%7D(%5Coverline%7B%20B%7D)%20=%200,4%20%5Ctimes%200,6%20=%200,24">.</li>
+<li>Le dénominateur, en utilisant l’événement contraire de <img src="https://latex.codecogs.com/png.latex?B"> : <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20B%7D)%20=%201%20-%20P(B)%20=%201%20-%200,34%20=%200,66">.</li>
+</ul>
+<p>On obtient alors : <img src="https://latex.codecogs.com/png.latex?P_%7B%5Coverline%7B%20B%7D%7D(%5Coverline%7B%20A%7D)%20=%20%5Cfrac%7B0,24%7D%7B0,66%7D%20=%20%5Cfrac%7B24%7D%7B66%7D%20=%20%5Cfrac%7B4%7D%7B11%7D"> En arrondissant au millième, on a : <img src="https://latex.codecogs.com/png.latex?P_%7B%5Coverline%7B%20B%7D%7D(%5Coverline%7B%20A%7D)%20%5Capprox%200,364"> La probabilité que la personne n’ait pas chuté à la première séance sachant qu’elle n’a pas chuté à la deuxième est d’environ 0,364.</p></li>
+<li><p><strong>Étude d’une variable aléatoire <img src="https://latex.codecogs.com/png.latex?X">.</strong></p>
+<ol type="a">
+<li><strong>Montrer que la variable aléatoire <img src="https://latex.codecogs.com/png.latex?X"> suit une loi binomiale dont on précisera les paramètres.</strong></li>
+</ol>
+<p>Soit l’événement <img src="https://latex.codecogs.com/png.latex?S"> : « la personne n’a chuté ni lors de la première ni lors de la deuxième séance ». Cet événement correspond à <img src="https://latex.codecogs.com/png.latex?%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D">. L’énoncé admet que la probabilité de cet événement est <img src="https://latex.codecogs.com/png.latex?p%20=%20P(S)%20=%20P(%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D)%20=%200,24">. (Nous l’avions calculé à la question précédente).</p>
+<p>On répète <img src="https://latex.codecogs.com/png.latex?n=100"> fois de manière identique et indépendante une épreuve de Bernoulli (le choix d’une personne est assimilé à un tirage avec remise).</p>
+<ul>
+<li>L’épreuve de Bernoulli consiste à choisir une personne et à regarder si l’événement <img src="https://latex.codecogs.com/png.latex?S"> est réalisé (succès) ou non (échec).</li>
+<li>La probabilité du succès est constante et vaut <img src="https://latex.codecogs.com/png.latex?p=0,24">.</li>
+<li>Les épreuves sont indépendantes.</li>
+</ul>
+<p>La variable aléatoire <img src="https://latex.codecogs.com/png.latex?X">, qui compte le nombre de succès (le nombre de personnes n’ayant pas chuté) au cours de ces 100 répétitions, suit donc une loi binomiale de paramètres <img src="https://latex.codecogs.com/png.latex?n=100"> et <img src="https://latex.codecogs.com/png.latex?p=0,24">.</p>
+<p>On note <img src="https://latex.codecogs.com/png.latex?X%20%5Csim%20%5Cmathcal%7BB%7D(100%20%5C,;%5C,%200,24)">.</p>
+<ol start="2" type="a">
+<li><strong>Quelle est la probabilité d’avoir, dans un échantillon de 100 personnes, au moins 20 personnes qui ne chutent ni lors de la première ni lors de la deuxième séance ?</strong></li>
+</ol>
+<p>On cherche à calculer <img src="https://latex.codecogs.com/png.latex?P(X%20%5Cgeqslant%2020)">.</p>
+<p>Il est plus simple de passer par l’événement contraire : <img src="https://latex.codecogs.com/png.latex?P(X%20%5Cgeqslant%2020)%20=%201%20-%20P(X%20%3C%2020)%20=%201%20-%20P(X%20%5Cleqslant%2019)"> À l’aide de la calculatrice, on utilise la fonction de répartition de la loi binomiale pour calculer <img src="https://latex.codecogs.com/png.latex?P(X%20%5Cleqslant%2019)">. Avec les paramètres <img src="https://latex.codecogs.com/png.latex?n=100"> et <img src="https://latex.codecogs.com/png.latex?p=0,24">, on obtient : <img src="https://latex.codecogs.com/png.latex?P(X%20%5Cleqslant%2019)%20%5Capprox%200,1453"> Donc, <img src="https://latex.codecogs.com/png.latex?P(X%20%5Cgeqslant%2020)%20%5Capprox%201%20-%200,1453%20=%200,8547"> Arrondie au millième, la probabilité est d’environ 0,855.</p>
+<ol start="3" type="a">
+<li><strong>Calculer l’espérance <img src="https://latex.codecogs.com/png.latex?E(X)"> et interpréter le résultat dans le contexte de l’exercice.</strong></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Espérance d’une loi binomiale
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si une variable aléatoire <img src="https://latex.codecogs.com/png.latex?X"> suit une loi binomiale <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BB%7D(n,%20p)">, son espérance est donnée par : <img src="https://latex.codecogs.com/png.latex?E(X)%20=%20n%20%5Ctimes%20p">.</p>
+</div>
+</div>
+<p>Pour <img src="https://latex.codecogs.com/png.latex?X%20%5Csim%20%5Cmathcal%7BB%7D(100%20%5C,;%5C,%200,24)">, l’espérance est : <img src="https://latex.codecogs.com/png.latex?E(X)%20=%20100%20%5Ctimes%200,24%20=%2024"> <strong>Interprétation :</strong> L’espérance représente la valeur moyenne que l’on peut espérer obtenir si l’on répète l’expérience (le tirage d’un échantillon de 100 personnes) un grand nombre de fois.</p>
+<p>Ainsi, sur un grand nombre d’échantillons de 100 personnes, on peut s’attendre à ce qu’en moyenne, 24 personnes n’aient chuté au cours d’aucune des deux séances.</p></li>
+</ol>
+</section>
+<section id="partie-b" class="level4">
+<h4 class="anchored" data-anchor-id="partie-b">Partie B</h4>
+<ol type="1">
+<li><p><strong>Déterminer l’espérance <img src="https://latex.codecogs.com/png.latex?E(T)"> de la variable aléatoire <img src="https://latex.codecogs.com/png.latex?T">. Interpréter le résultat dans le contexte de l’exercice.</strong></p>
+<p>La variable aléatoire <img src="https://latex.codecogs.com/png.latex?T"> est définie comme la somme des variables aléatoires <img src="https://latex.codecogs.com/png.latex?T_1"> et <img src="https://latex.codecogs.com/png.latex?T_2">, soit <img src="https://latex.codecogs.com/png.latex?T%20=%20T_1%20+%20T_2">.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Linéarité de l’espérance
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour deux variables aléatoires <img src="https://latex.codecogs.com/png.latex?X"> et <img src="https://latex.codecogs.com/png.latex?Y">, l’espérance de leur somme est la somme de leurs espérances : <img src="https://latex.codecogs.com/png.latex?E(X+Y)%20=%20E(X)%20+%20E(Y)"> Cette propriété est toujours vraie, que les variables soient indépendantes ou non.</p>
+</div>
+</div>
+<p>En appliquant cette propriété, on obtient : <img src="https://latex.codecogs.com/png.latex?E(T)%20=%20E(T_1%20+%20T_2)%20=%20E(T_1)%20+%20E(T_2)"> En utilisant les valeurs données dans l’énoncé : <img src="https://latex.codecogs.com/png.latex?E(T)%20=%2040%20+%2060%20=%20100"> <strong>Interprétation :</strong> L’espérance de <img src="https://latex.codecogs.com/png.latex?T"> représente le temps d’attente total moyen. En moyenne, une personne choisie au hasard attendra <strong>100 minutes</strong> au total sur l’ensemble du week-end pour accéder aux activités sportives.</p></li>
+<li><p><strong>Montrer que la variance <img src="https://latex.codecogs.com/png.latex?V(T)"> de la variable aléatoire <img src="https://latex.codecogs.com/png.latex?T"> est égale à 356.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Variance d’une somme de variables indépendantes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si deux variables aléatoires <img src="https://latex.codecogs.com/png.latex?X"> et <img src="https://latex.codecogs.com/png.latex?Y"> sont <strong>indépendantes</strong>, la variance de leur somme est la somme de leurs variances : <img src="https://latex.codecogs.com/png.latex?V(X+Y)%20=%20V(X)%20+%20V(Y)"> De plus, la variance est le carré de l’écart-type : <img src="https://latex.codecogs.com/png.latex?V(X)%20=%20(%5Csigma(X))%5E2">.</p>
+</div>
+</div>
+<p>L’énoncé précise que les variables aléatoires <img src="https://latex.codecogs.com/png.latex?T_1"> et <img src="https://latex.codecogs.com/png.latex?T_2"> sont indépendantes. On peut donc appliquer la formule de la variance d’une somme.</p>
+<p>Nous devons d’abord calculer les variances de <img src="https://latex.codecogs.com/png.latex?T_1"> et <img src="https://latex.codecogs.com/png.latex?T_2"> à partir de leurs écarts-types :</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?V(T_1)%20=%20(%5Csigma(T_1))%5E2%20=%2010%5E2%20=%20100"></li>
+<li><img src="https://latex.codecogs.com/png.latex?V(T_2)%20=%20(%5Csigma(T_2))%5E2%20=%2016%5E2%20=%20256"></li>
+</ul>
+<p>On peut maintenant calculer la variance de <img src="https://latex.codecogs.com/png.latex?T"> : <img src="https://latex.codecogs.com/png.latex?V(T)%20=%20V(T_1)%20+%20V(T_2)%20=%20100%20+%20256%20=%20356"> On a bien montré que <img src="https://latex.codecogs.com/png.latex?V(T)%20=%20356">.</p></li>
+<li><p><strong>À l’aide de l’inégalité de Bienaymé-Tchebychev, montrer que la probabilité que le temps total d’attente <img src="https://latex.codecogs.com/png.latex?T"> soit strictement compris entre 60 et 140 minutes est supérieure à 0,77.</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Inégalité de Bienaymé-Tchebychev
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour une variable aléatoire <img src="https://latex.codecogs.com/png.latex?X"> d’espérance <img src="https://latex.codecogs.com/png.latex?E(X)"> et de variance <img src="https://latex.codecogs.com/png.latex?V(X)">, et pour tout réel <img src="https://latex.codecogs.com/png.latex?%5Cdelta%20%3E%200">, l’inégalité s’écrit : <img src="https://latex.codecogs.com/png.latex?P(%7CX%20-%20E(X)%7C%20%5Cgeqslant%5Cdelta)%20%5Cle%20%5Cfrac%7BV(X)%7D%7B%5Cdelta%5E2%7D"> La forme complémentaire, souvent plus utile pour borner une probabilité d’être <em>proche</em> de la moyenne, est : <img src="https://latex.codecogs.com/png.latex?P(%7CX%20-%20E(X)%7C%20%3C%20%5Cdelta)%20%5Cgeqslant1%20-%20%5Cfrac%7BV(X)%7D%7B%5Cdelta%5E2%7D"></p>
+</div>
+</div>
+<p>On cherche à minorer la probabilité <img src="https://latex.codecogs.com/png.latex?P(60%20%3C%20T%20%3C%20140)">. Nous avons calculé <img src="https://latex.codecogs.com/png.latex?E(T)%20=%20100"> et <img src="https://latex.codecogs.com/png.latex?V(T)%20=%20356">.</p>
+<p>L’intervalle <img src="https://latex.codecogs.com/png.latex?%5D60,%20140%5B"> est centré sur l’espérance <img src="https://latex.codecogs.com/png.latex?E(T)=100">. On peut le réécrire sous la forme <img src="https://latex.codecogs.com/png.latex?%7CT%20-%20E(T)%7C%20%3C%20%5Cdelta">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?60%20%3C%20T%20%3C%20140%20%5CLeftrightarrow%2060%20-%20100%20%3C%20T%20-%20100%20%3C%20140%20-%20100"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CLeftrightarrow%20-40%20%3C%20T%20-%20100%20%3C%2040"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CLeftrightarrow%20%7CT%20-%20100%7C%20%3C%2040"></p>
+<p>L’événement est donc <img src="https://latex.codecogs.com/png.latex?%7CT%20-%20E(T)%7C%20%3C%2040">, ce qui correspond à la forme de l’inégalité de Bienaymé-Tchebychev avec <img src="https://latex.codecogs.com/png.latex?%5Cdelta%20=%2040">.</p>
+<p>Appliquons la forme complémentaire de l’inégalité : <img src="https://latex.codecogs.com/png.latex?P(%7CT%20-%20100%7C%20%3C%2040)%20%5Cgeqslant1%20-%20%5Cfrac%7BV(T)%7D%7B40%5E2%7D"> En remplaçant par les valeurs connues : <img src="https://latex.codecogs.com/png.latex?P(60%20%3C%20T%20%3C%20140)%20%5Cgeqslant1%20-%20%5Cfrac%7B356%7D%7B40%5E2%7D"> <img src="https://latex.codecogs.com/png.latex?P(60%20%3C%20T%20%3C%20140)%20%5Cgeqslant1%20-%20%5Cfrac%7B356%7D%7B1600%7D"> Calculons la valeur du minorant : <img src="https://latex.codecogs.com/png.latex?1%20-%20%5Cfrac%7B356%7D%7B1600%7D%20=%201%20-%200,2225%20=%200,7775"> On a donc : <img src="https://latex.codecogs.com/png.latex?P(60%20%3C%20T%20%3C%20140)%20%5Cgeqslant0,7775"> Puisque <img src="https://latex.codecogs.com/png.latex?0,7775%20%3E%200,77">, on a bien montré que la probabilité que le temps total d’attente soit strictement compris entre 60 et 140 minutes est supérieure à 0,77.</p></li>
+</ol>
+</section>
+</section>
+<section id="corrigé-de-lexercice-2" class="level2">
+<h2 class="anchored" data-anchor-id="corrigé-de-lexercice-2">Corrigé de l’exercice 2</h2>
+<section id="partie-a-1" class="level4">
+<h4 class="anchored" data-anchor-id="partie-a-1">Partie A</h4>
+<ol type="1">
+<li><p><strong>Montrer que les droites <img src="https://latex.codecogs.com/png.latex?d"> et <img src="https://latex.codecogs.com/png.latex?d'"> sont sécantes au point <img src="https://latex.codecogs.com/png.latex?S(-%5Cfrac%7B1%7D%7B2%7D%20%5C,;%5C,%201%20%5C,;%5C,%204)">.</strong></p>
+<p>Pour montrer que les droites <img src="https://latex.codecogs.com/png.latex?d"> et <img src="https://latex.codecogs.com/png.latex?d'"> sont sécantes au point <img src="https://latex.codecogs.com/png.latex?S">, nous devons vérifier deux conditions :</p>
+<ul>
+<li>Le point <img src="https://latex.codecogs.com/png.latex?S"> appartient à la droite <img src="https://latex.codecogs.com/png.latex?d">.</li>
+<li>Le point <img src="https://latex.codecogs.com/png.latex?S"> appartient à la droite <img src="https://latex.codecogs.com/png.latex?d'">.</li>
+<li>Les droites ne sont pas parallèles.</li>
+</ul>
+<p><strong>Vérifions si <img src="https://latex.codecogs.com/png.latex?S"> appartient à <img src="https://latex.codecogs.com/png.latex?d"> :</strong></p>
+<p>On remplace les coordonnées de <img src="https://latex.codecogs.com/png.latex?S"> dans la représentation paramétrique de <img src="https://latex.codecogs.com/png.latex?d"> et on vérifie s’il existe une valeur unique du paramètre <img src="https://latex.codecogs.com/png.latex?t">. <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A-%5Cfrac%7B1%7D%7B2%7D%20=%20%5Cfrac%7B3%7D%7B2%7D%20+%202t%20%5C%5C%0A1%20=%202%20+%20t%20%5C%5C%0A4%20=%203%20-%20t%0A%5Cend%7Bcases%7D%0A%5CLeftrightarrow%0A%5Cbegin%7Bcases%7D%0A2t%20=%20-%5Cfrac%7B1%7D%7B2%7D%20-%20%5Cfrac%7B3%7D%7B2%7D%20=%20-2%20%5C%5C%0At%20=%201%20-%202%20=%20-1%20%5C%5C%0At%20=%203%20-%204%20=%20-1%0A%5Cend%7Bcases%7D%0A%5CLeftrightarrow%0A%5Cbegin%7Bcases%7D%0At%20=%20-1%20%5C%5C%0At%20=%20-1%20%5C%5C%0At%20=%20-1%0A%5Cend%7Bcases%7D%0A"> Le système a une solution unique <img src="https://latex.codecogs.com/png.latex?t=-1">. Le point <img src="https://latex.codecogs.com/png.latex?S"> appartient donc à la droite <img src="https://latex.codecogs.com/png.latex?d">.</p>
+<p><strong>Vérifions si <img src="https://latex.codecogs.com/png.latex?S"> appartient à <img src="https://latex.codecogs.com/png.latex?d'"> :</strong></p>
+<p>On procède de même avec la représentation paramétrique de <img src="https://latex.codecogs.com/png.latex?d'">. <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A-%5Cfrac%7B1%7D%7B2%7D%20=%20s%20%5C%5C%0A1%20=%20%5Cfrac%7B3%7D%7B2%7D%20+%20s%20%5C%5C%0A4%20=%203%20-%202s%0A%5Cend%7Bcases%7D%0A%5CLeftrightarrow%0A%5Cbegin%7Bcases%7D%0As%20=%20-%5Cfrac%7B1%7D%7B2%7D%20%5C%5C%0As%20=%201%20-%20%5Cfrac%7B3%7D%7B2%7D%20=%20-%5Cfrac%7B1%7D%7B2%7D%20%5C%5C%0A2s%20=%203%20-%204%20=%20-1%20%5CRightarrow%20s%20=%20-%5Cfrac%7B1%7D%7B2%7D%0A%5Cend%7Bcases%7D%0A"> Le système a une solution unique <img src="https://latex.codecogs.com/png.latex?s=-%5Cfrac%7B1%7D%7B2%7D">. Le point <img src="https://latex.codecogs.com/png.latex?S"> appartient donc à la droite <img src="https://latex.codecogs.com/png.latex?d'">.</p>
+<p><strong>Vérifions si les droites sont parallèles :</strong></p>
+<p>Un vecteur directeur de <img src="https://latex.codecogs.com/png.latex?d"> est <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bu%7D(2%20%5C,;%5C,%201%20%5C,;%5C,%20-1)">.</p>
+<p>Un vecteur directeur de <img src="https://latex.codecogs.com/png.latex?d'"> est <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bv%7D(1%20%5C,;%5C,%201%20%5C,;%5C,%20-2)">.</p>
+<p>Les coordonnées de ces vecteurs ne sont pas proportionnelles (par exemple, <img src="https://latex.codecogs.com/png.latex?2/1%20=%202"> mais <img src="https://latex.codecogs.com/png.latex?1/1%20=%201">). Les vecteurs <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bu%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bv%7D"> ne sont donc pas colinéaires. Par conséquent, les droites <img src="https://latex.codecogs.com/png.latex?d"> et <img src="https://latex.codecogs.com/png.latex?d'"> ne sont pas parallèles.</p>
+<p>Puisque les droites <img src="https://latex.codecogs.com/png.latex?d"> et <img src="https://latex.codecogs.com/png.latex?d'"> ne sont pas parallèles et ont un point commun <img src="https://latex.codecogs.com/png.latex?S">, elles sont sécantes en <img src="https://latex.codecogs.com/png.latex?S">.</p></li>
+<li><p><strong>Étude du plan (ABC).</strong></p>
+<ol type="a">
+<li><strong>Montrer que le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D(1%20%5C,;%5C,%202%20%5C,;%5C,%204)"> est un vecteur normal au plan (ABC).</strong></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Vecteur normal à un plan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> est normal à un plan <img src="https://latex.codecogs.com/png.latex?(P)"> s’il est orthogonal à deux vecteurs non colinéaires de ce plan. On utilise le produit scalaire pour vérifier l’orthogonalité.</p>
+</div>
+</div>
+<p>On considère les points <img src="https://latex.codecogs.com/png.latex?A(-1%20%5C,;%5C,%202%20%5C,;%5C,%201)">, <img src="https://latex.codecogs.com/png.latex?B(1%20%5C,;%5C,%20-1%20%5C,;%5C,%202)"> et <img src="https://latex.codecogs.com/png.latex?C(1%20%5C,;%5C,%201%20%5C,;%5C,%201)">.</p>
+<p>On calcule les coordonnées des vecteurs <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAC%7D"> :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D(1%20-%20(-1)%20%5C,;%5C,%20-1%20-%202%20%5C,;%5C,%202%20-%201)">, soit <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D(2%20%5C,;%5C,%20-3%20%5C,;%5C,%201)">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAC%7D(1%20-%20(-1)%20%5C,;%5C,%201%20-%202%20%5C,;%5C,%201%20-%201)">, soit <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAC%7D(2%20%5C,;%5C,%20-1%20%5C,;%5C,%200)">.</p>
+<p>Les coordonnées de <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAB%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BAC%7D"> ne sont pas proportionnelles, les vecteurs ne sont donc pas colinéaires et définissent bien le plan (ABC).</p>
+<p>Calculons les produits scalaires de <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> avec ces deux vecteurs :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D%20%5Ccdot%20%5Coverrightarrow%7BAB%7D%20=%201%20%5Ctimes%202%20+%202%20%5Ctimes%20(-3)%20+%204%20%5Ctimes%201%20=%202%20-%206%20+%204%20=%200">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D%20%5Ccdot%20%5Coverrightarrow%7BAC%7D%20=%201%20%5Ctimes%202%20+%202%20%5Ctimes%20(-1)%20+%204%20%5Ctimes%200%20=%202%20-%202%20+%200%20=%200">.</p>
+<p>Le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> est orthogonal à deux vecteurs non colinéaires du plan (ABC), il est donc bien un vecteur normal à ce plan.</p>
+<ol start="2" type="a">
+<li><strong>En déduire qu’une équation cartésienne du plan (ABC) est : <img src="https://latex.codecogs.com/png.latex?x%20+%202y%20+%204z%20-%207%20=%200">.</strong></li>
+</ol>
+<p>Puisque <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D(1%20%5C,;%5C,%202%20%5C,;%5C,%204)"> est un vecteur normal au plan (ABC), une équation cartésienne de ce plan est de la forme <img src="https://latex.codecogs.com/png.latex?1x%20+%202y%20+%204z%20+%20d%20=%200">.</p>
+<p>Pour déterminer la constante <img src="https://latex.codecogs.com/png.latex?d">, on utilise le fait que le point <img src="https://latex.codecogs.com/png.latex?A(-1%20%5C,;%5C,%202%20%5C,;%5C,%201)"> appartient au plan. Ses coordonnées doivent vérifier l’équation :</p>
+<p><img src="https://latex.codecogs.com/png.latex?(-1)%20+%202(2)%20+%204(1)%20+%20d%20=%200"></p>
+<p><img src="https://latex.codecogs.com/png.latex?-1%20+%204%20+%204%20+%20d%20=%200"></p>
+<p><img src="https://latex.codecogs.com/png.latex?7%20+%20d%20=%200"></p>
+<p><img src="https://latex.codecogs.com/png.latex?d%20=%20-7"></p>
+<p>Une équation cartésienne du plan (ABC) est donc bien <img src="https://latex.codecogs.com/png.latex?x%20+%202y%20+%204z%20-%207%20=%200">.</p>
+<ol start="3" type="a">
+<li><strong>Démontrer que les points A, B, C et S ne sont pas coplanaires.</strong></li>
+</ol>
+<p>Pour démontrer que les quatre points ne sont pas coplanaires, il suffit de montrer que le point <img src="https://latex.codecogs.com/png.latex?S"> n’appartient pas au plan (ABC).</p>
+<p>On utilise les coordonnées de <img src="https://latex.codecogs.com/png.latex?S(-%5Cfrac%7B1%7D%7B2%7D%20%5C,;%5C,%201%20%5C,;%5C,%204)"> et l’équation du plan (ABC).</p>
+<p><img src="https://latex.codecogs.com/png.latex?x_S%20+%202y_S%20+%204z_S%20-%207%20=%20(-%5Cfrac%7B1%7D%7B2%7D)%20+%202(1)%20+%204(4)%20-%207"></p>
+<p><img src="https://latex.codecogs.com/png.latex?=%20-0,5%20+%202%20+%2016%20-%207"></p>
+<p><img src="https://latex.codecogs.com/png.latex?=%2010,5"></p>
+<p>Comme <img src="https://latex.codecogs.com/png.latex?10,5%20%5Cneq%200">, les coordonnées de <img src="https://latex.codecogs.com/png.latex?S"> ne vérifient pas l’équation du plan (ABC). Le point <img src="https://latex.codecogs.com/png.latex?S"> n’appartient donc pas à ce plan.</p>
+<p>Par conséquent, les points A, B, C et S ne sont pas coplanaires.</p></li>
+<li><p><strong>Projection orthogonale.</strong></p>
+<ol type="a">
+<li><strong>Démontrer que le point <img src="https://latex.codecogs.com/png.latex?H(-1%20%5C,;%5C,%200%20%5C,;%5C,%202)"> est le projeté orthogonal de <img src="https://latex.codecogs.com/png.latex?S"> sur le plan (ABC).</strong></li>
+</ol>
+<p>Pour que <img src="https://latex.codecogs.com/png.latex?H"> soit le projeté orthogonal de <img src="https://latex.codecogs.com/png.latex?S"> sur le plan (ABC), deux conditions doivent être réunies :</p>
+<ol type="1">
+<li>Le point <img src="https://latex.codecogs.com/png.latex?H"> doit appartenir au plan (ABC).</li>
+<li>Le vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BSH%7D"> doit être colinéaire au vecteur normal <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> du plan.</li>
+</ol>
+<p><strong>Condition 1 :</strong></p>
+<p>Vérifions si les coordonnées de <img src="https://latex.codecogs.com/png.latex?H(-1%20%5C,;%5C,%200%20%5C,;%5C,%202)"> satisfont l’équation du plan (ABC) :</p>
+<p><img src="https://latex.codecogs.com/png.latex?x_H%20+%202y_H%20+%204z_H%20-%207%20=%20(-1)%20+%202(0)%20+%204(2)%20-%207%20=%20-1%20+%200%20+%208%20-%207%20=%200">.</p>
+<p>Le point <img src="https://latex.codecogs.com/png.latex?H"> appartient bien au plan (ABC).</p>
+<p><strong>Condition 2 :</strong></p>
+<p>Calculons les coordonnées du vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BSH%7D"> avec <img src="https://latex.codecogs.com/png.latex?S(-%5Cfrac%7B1%7D%7B2%7D%20%5C,;%5C,%201%20%5C,;%5C,%204)"> :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BSH%7D(-1%20-%20(-%5Cfrac%7B1%7D%7B2%7D)%20%5C,;%5C,%200%20-%201%20%5C,;%5C,%202%20-%204)">, soit <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BSH%7D(-%5Cfrac%7B1%7D%7B2%7D%20%5C,;%5C,%20-1%20%5C,;%5C,%20-2)">.</p>
+<p>Le vecteur normal est <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D(1%20%5C,;%5C,%202%20%5C,;%5C,%204)">.</p>
+<p>On observe que <img src="https://latex.codecogs.com/png.latex?1%20=%20-2%20%5Ctimes%20(-%5Cfrac%7B1%7D%7B2%7D)">, <img src="https://latex.codecogs.com/png.latex?2%20=%20-2%20%5Ctimes%20(-1)"> et <img src="https://latex.codecogs.com/png.latex?4%20=%20-2%20%5Ctimes%20(-2)">.</p>
+<p>On a donc <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D%20=%20-2%20%5Coverrightarrow%7BSH%7D">, ce qui montre que les vecteurs <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7Bn%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BSH%7D"> sont colinéaires.</p>
+<p>Les deux conditions étant vérifiées, le point <img src="https://latex.codecogs.com/png.latex?H"> est bien le projeté orthogonal de <img src="https://latex.codecogs.com/png.latex?S"> sur le plan (ABC).</p>
+<ol start="2" type="a">
+<li><strong>En déduire qu’il n’existe aucun point <img src="https://latex.codecogs.com/png.latex?M"> du plan (ABC) tel que <img src="https://latex.codecogs.com/png.latex?SM%20%3C%20%5Cfrac%7B%5Csqrt%7B21%7D%7D%7B2%7D">.</strong></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Distance d’un point à un plan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La distance d’un point <img src="https://latex.codecogs.com/png.latex?S"> à un plan <img src="https://latex.codecogs.com/png.latex?(P)"> est la plus courte distance entre <img src="https://latex.codecogs.com/png.latex?S"> et n’importe quel point <img src="https://latex.codecogs.com/png.latex?M"> de <img src="https://latex.codecogs.com/png.latex?(P)">. Cette distance minimale est atteinte au projeté orthogonal <img src="https://latex.codecogs.com/png.latex?H"> de <img src="https://latex.codecogs.com/png.latex?S"> sur <img src="https://latex.codecogs.com/png.latex?(P)">. On a donc <img src="https://latex.codecogs.com/png.latex?d(S,%20(P))%20=%20SH"> et pour tout point <img src="https://latex.codecogs.com/png.latex?M%20%5Cin%20(P)">, <img src="https://latex.codecogs.com/png.latex?SM%20%5Cgeqslant%20SH">.</p>
+</div>
+</div>
+<p>La distance du point <img src="https://latex.codecogs.com/png.latex?S"> au plan (ABC) est la distance <img src="https://latex.codecogs.com/png.latex?SH">. Calculons cette distance :</p>
+<p><img src="https://latex.codecogs.com/png.latex?SH%20=%20%7C%7C%5Coverrightarrow%7BSH%7D%7C%7C%20=%20%5Csqrt%7B(-%5Cfrac%7B1%7D%7B2%7D)%5E2%20+%20(-1)%5E2%20+%20(-2)%5E2%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?SH%20=%20%5Csqrt%7B%5Cfrac%7B1%7D%7B4%7D%20+%201%20+%204%7D%20=%20%5Csqrt%7B%5Cfrac%7B1%7D%7B4%7D%20+%20%5Cfrac%7B4%7D%7B4%7D%20+%20%5Cfrac%7B16%7D%7B4%7D%7D%20=%20%5Csqrt%7B%5Cfrac%7B21%7D%7B4%7D%7D%20=%20%5Cfrac%7B%5Csqrt%7B21%7D%7D%7B2%7D">.</p>
+<p>Pour tout point <img src="https://latex.codecogs.com/png.latex?M"> appartenant au plan (ABC), la distance <img src="https://latex.codecogs.com/png.latex?SM"> est supérieure ou égale à la distance du point <img src="https://latex.codecogs.com/png.latex?S"> au plan, c’est-à-dire <img src="https://latex.codecogs.com/png.latex?SM%20%5Cgeqslant%20SH">.</p>
+<p>On a donc pour tout point <img src="https://latex.codecogs.com/png.latex?M"> du plan (ABC), <img src="https://latex.codecogs.com/png.latex?SM%20%5Cgeqslant%20%5Cfrac%7B%5Csqrt%7B21%7D%7D%7B2%7D">.</p>
+<p>Il n’existe par conséquent aucun point <img src="https://latex.codecogs.com/png.latex?M"> du plan (ABC) pour lequel la distance <img src="https://latex.codecogs.com/png.latex?SM"> serait strictement inférieure à <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5Csqrt%7B21%7D%7D%7B2%7D">.</p></li>
+</ol>
+</section>
+<section id="partie-b-1" class="level4">
+<h4 class="anchored" data-anchor-id="partie-b-1">Partie B</h4>
+<ol type="1">
+<li><p><strong>Déterminer les coordonnées du point <img src="https://latex.codecogs.com/png.latex?M"> en fonction de <img src="https://latex.codecogs.com/png.latex?k">.</strong></p>
+<p>Le point <img src="https://latex.codecogs.com/png.latex?M"> est défini par la relation vectorielle <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCM%7D%20=%20k%20%5Coverrightarrow%7BCS%7D"> avec <img src="https://latex.codecogs.com/png.latex?M(x_M,%20y_M,%20z_M)">, <img src="https://latex.codecogs.com/png.latex?C(1,1,1)"> et <img src="https://latex.codecogs.com/png.latex?S(-%5Cfrac%7B1%7D%7B2%7D,1,4)">.</p>
+<p>Calculons les coordonnées du vecteur <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCS%7D"> :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCS%7D(-%5Cfrac%7B1%7D%7B2%7D%20-%201%20%5C,;%5C,%201%20-%201%20%5C,;%5C,%204%20-%201)">, soit <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCS%7D(-%5Cfrac%7B3%7D%7B2%7D%20%5C,;%5C,%200%20%5C,;%5C,%203)">.</p>
+<p>La relation <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BCM%7D%20=%20k%20%5Coverrightarrow%7BCS%7D"> se traduit en coordonnées :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bcases%7D%0Ax_M%20-%20x_C%20=%20k%20%5Ctimes%20(-%5Cfrac%7B3%7D%7B2%7D)%20%5C%5C%0Ay_M%20-%20y_C%20=%20k%20%5Ctimes%200%20%5C%5C%0Az_M%20-%20z_C%20=%20k%20%5Ctimes%203%0A%5Cend%7Bcases%7D%0A%5CLeftrightarrow%0A%5Cbegin%7Bcases%7D%0Ax_M%20-%201%20=%20-%5Cfrac%7B3%7D%7B2%7Dk%20%5C%5C%0Ay_M%20-%201%20=%200%20%5C%5C%0Az_M%20-%201%20=%203k%0A%5Cend%7Bcases%7D%0A%5CLeftrightarrow%0A%5Cbegin%7Bcases%7D%0Ax_M%20=%201%20-%20%5Cfrac%7B3%7D%7B2%7Dk%20%5C%5C%0Ay_M%20=%201%20%5C%5C%0Az_M%20=%201%20+%203k%0A%5Cend%7Bcases%7D"></p>
+<p>Les coordonnées de <img src="https://latex.codecogs.com/png.latex?M"> sont donc <img src="https://latex.codecogs.com/png.latex?(1%20-%20%5Cfrac%7B3%7D%7B2%7Dk%20%5C,;%5C,%201%20%5C,;%5C,%201%20+%203k)">.</p></li>
+<li><p><strong>Existe-t-il un point <img src="https://latex.codecogs.com/png.latex?M"> sur le segment <img src="https://latex.codecogs.com/png.latex?%5BCS%5D"> tel que le triangle <img src="https://latex.codecogs.com/png.latex?MAB"> soit rectangle en <img src="https://latex.codecogs.com/png.latex?M"> ?</strong></p>
+<p>Le triangle <img src="https://latex.codecogs.com/png.latex?MAB"> est rectangle en <img src="https://latex.codecogs.com/png.latex?M"> si et seulement si les vecteurs <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMA%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMB%7D"> sont orthogonaux, c’est-à-dire si leur produit scalaire est nul : <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMA%7D%20%5Ccdot%20%5Coverrightarrow%7BMB%7D%20=%200">.</p>
+<p>Exprimons les coordonnées des vecteurs <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMA%7D"> et <img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMB%7D"> en fonction de <img src="https://latex.codecogs.com/png.latex?k"> :</p>
+<p><img src="https://latex.codecogs.com/png.latex?A(-1,%202,%201)"> et <img src="https://latex.codecogs.com/png.latex?B(1,%20-1,%202)">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMA%7D(x_A%20-%20x_M%20%5C,;%5C,%20y_A%20-%20y_M%20%5C,;%5C,%20z_A%20-%20z_M)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMA%7D(-1%20-%20(1%20-%20%5Cfrac%7B3%7D%7B2%7Dk)%20%5C,;%5C,%202%20-%201%20%5C,;%5C,%201%20-%20(1%20+%203k))%20=%20(-2%20+%20%5Cfrac%7B3%7D%7B2%7Dk%20%5C,;%5C,%201%20%5C,;%5C,%20-3k)">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMB%7D(x_B%20-%20x_M%20%5C,;%5C,%20y_B%20-%20y_M%20%5C,;%5C,%20z_B%20-%20z_M)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMB%7D(1%20-%20(1%20-%20%5Cfrac%7B3%7D%7B2%7Dk)%20%5C,;%5C,%20-1%20-%201%20%5C,;%5C,%202%20-%20(1%20+%203k))%20=%20(%5Cfrac%7B3%7D%7B2%7Dk%20%5C,;%5C,%20-2%20%5C,;%5C,%201%20-%203k)">.</p>
+<p>Calculons le produit scalaire :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Coverrightarrow%7BMA%7D%20%5Ccdot%20%5Coverrightarrow%7BMB%7D%20=%20(-2%20+%20%5Cfrac%7B3%7D%7B2%7Dk)(%5Cfrac%7B3%7D%7B2%7Dk)%20+%20(1)(-2)%20+%20(-3k)(1%20-%203k)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?=%20-3k%20+%20%5Cfrac%7B9%7D%7B4%7Dk%5E2%20-%202%20-%203k%20+%209k%5E2"></p>
+<p><img src="https://latex.codecogs.com/png.latex?=%20%5Cfrac%7B9%7D%7B4%7Dk%5E2%20+%20%5Cfrac%7B36%7D%7B4%7Dk%5E2%20-%206k%20-%202"></p>
+<p><img src="https://latex.codecogs.com/png.latex?=%20%5Cfrac%7B45%7D%7B4%7Dk%5E2%20-%206k%20-%202"></p>
+<p>On résout l’équation <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B45%7D%7B4%7Dk%5E2%20-%206k%20-%202%20=%200">.</p>
+<p>C’est une équation du second degré de la forme <img src="https://latex.codecogs.com/png.latex?ak%5E2+bk+c=0">.</p>
+<p>Le discriminant est <img src="https://latex.codecogs.com/png.latex?%5CDelta%20=%20b%5E2%20-%204ac%20=%20(-6)%5E2%20-%204(%5Cfrac%7B45%7D%7B4%7D)(-2)%20=%2036%20+%2090%20=%20126">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5CDelta%20%3E%200">, l’équation a deux solutions réelles :</p>
+<p><img src="https://latex.codecogs.com/png.latex?k_1%20=%20%5Cfrac%7B-b%20-%20%5Csqrt%7B%5CDelta%7D%7D%7B2a%7D%20=%20%5Cfrac%7B6%20-%20%5Csqrt%7B126%7D%7D%7B2%20%5Ctimes%20%5Cfrac%7B45%7D%7B4%7D%7D%20=%20%5Cfrac%7B6%20-%20%5Csqrt%7B9%20%5Ctimes%2014%7D%7D%7B45/2%7D%20=%20%5Cfrac%7B6%20-%203%5Csqrt%7B14%7D%7D%7B45/2%7D%20=%20%5Cfrac%7B2(6%20-%203%5Csqrt%7B14%7D)%7D%7B45%7D%20=%20%5Cfrac%7B12%20-%206%5Csqrt%7B14%7D%7D%7B45%7D%20=%20%5Cfrac%7B4%20-%202%5Csqrt%7B14%7D%7D%7B15%7D">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?k_2%20=%20%5Cfrac%7B-b%20+%20%5Csqrt%7B%5CDelta%7D%7D%7B2a%7D%20=%20%5Cfrac%7B6%20+%20%5Csqrt%7B126%7D%7D%7B45/2%7D%20=%20%5Cfrac%7B6%20+%203%5Csqrt%7B14%7D%7D%7B45/2%7D%20=%20%5Cfrac%7B12%20+%206%5Csqrt%7B14%7D%7D%7B45%7D%20=%20%5Cfrac%7B4%20+%202%5Csqrt%7B14%7D%7D%7B15%7D">.</p>
+<p>Le point <img src="https://latex.codecogs.com/png.latex?M"> doit appartenir au segment <img src="https://latex.codecogs.com/png.latex?%5BCS%5D">, ce qui impose que le réel <img src="https://latex.codecogs.com/png.latex?k"> appartienne à l’intervalle <img src="https://latex.codecogs.com/png.latex?%5B0%20%5C,;%5C,%201%5D">.</p>
+<ul>
+<li><p>Étudions <img src="https://latex.codecogs.com/png.latex?k_1">:</p>
+<p>On sait que <img src="https://latex.codecogs.com/png.latex?3%20%3C%20%5Csqrt%7B14%7D%20%3C%204">, donc <img src="https://latex.codecogs.com/png.latex?6%20%3C%202%5Csqrt%7B14%7D%20%3C%208">.</p>
+<p>Ainsi, <img src="https://latex.codecogs.com/png.latex?4%20-%202%5Csqrt%7B14%7D%20%3C%204%20-%206%20=%20-2">. Le numérateur est négatif, donc <img src="https://latex.codecogs.com/png.latex?k_1%20%3C%200">. Cette solution n’est pas dans <img src="https://latex.codecogs.com/png.latex?%5B0%20%5C,;%5C,%201%5D">.</p></li>
+<li><p>Étudions <img src="https://latex.codecogs.com/png.latex?k_2">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?k_2"> est clairement positif. Vérifions si <img src="https://latex.codecogs.com/png.latex?k_2%20%5Cleqslant%201">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?k_2%20%5Cleqslant%201%20%5CLeftrightarrow%20%5Cfrac%7B4%20+%202%5Csqrt%7B14%7D%7D%7B15%7D%20%5Cleqslant%201%20%5CLeftrightarrow%204%20+%202%5Csqrt%7B14%7D%20%5Cleqslant%2015%20%5CLeftrightarrow%202%5Csqrt%7B14%7D%20%5Cleqslant%2011">.</p>
+<p>Comme les deux membres sont positifs, on peut élever au carré :</p>
+<p><img src="https://latex.codecogs.com/png.latex?(2%5Csqrt%7B14%7D)%5E2%20%5Cleqslant%2011%5E2%20%5CLeftrightarrow%204%20%5Ctimes%2014%20%5Cleqslant%20121%20%5CLeftrightarrow%2056%20%5Cleqslant%20121">.</p>
+<p>Cette inégalité est vraie. On a donc <img src="https://latex.codecogs.com/png.latex?0%20%3C%20k_2%20%5Cleqslant%201">.</p></li>
+</ul>
+<p>Il existe une unique valeur <img src="https://latex.codecogs.com/png.latex?k%20=%20%5Cfrac%7B4%20+%202%5Csqrt%7B14%7D%7D%7B15%7D"> dans l’intervalle <img src="https://latex.codecogs.com/png.latex?%5B0%20%5C,;%5C,%201%5D"> pour laquelle le triangle <img src="https://latex.codecogs.com/png.latex?MAB"> est rectangle en <img src="https://latex.codecogs.com/png.latex?M">.</p>
+<p>Par conséquent, oui, il existe un tel point <img src="https://latex.codecogs.com/png.latex?M"> sur le segment <img src="https://latex.codecogs.com/png.latex?%5BCS%5D">.</p></li>
+</ol>
+</section>
+</section>
+<section id="corrigé-de-lexercice-3" class="level2">
+<h2 class="anchored" data-anchor-id="corrigé-de-lexercice-3">Corrigé de l’exercice 3</h2>
+<p>Cet exercice est de type vrai/faux où chaque affirmation doit être validée ou invalidée par une justification.</p>
+<ol type="1">
+<li><p><strong>Affirmation 1 : La suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> définie pour tout entier naturel <img src="https://latex.codecogs.com/png.latex?n"> par <img src="https://latex.codecogs.com/png.latex?u_n%20=%20%5Cfrac%7B1+5%5En%7D%7B2+3%5En%7D"> converge vers <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B5%7D%7B3%7D">.</strong></p>
+<p><strong>FAUSSE</strong></p>
+<p><strong>Justification :</strong> Nous cherchons la limite de la suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> en <img src="https://latex.codecogs.com/png.latex?+%5Cinfty">. Nous sommes face à une forme indéterminée du type « <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B%5Cinfty%7D%7B%5Cinfty%7D"> ». Dans le cas de sommes de termes avec des puissances de <img src="https://latex.codecogs.com/png.latex?n">, la méthode consiste à factoriser par le terme qui croît le plus rapidement (le terme dominant). Ici, le terme dominant est <img src="https://latex.codecogs.com/png.latex?5%5En"> car <img src="https://latex.codecogs.com/png.latex?5%20%3E%203">.</p>
+<p>On factorise donc le numérateur et le dénominateur par <img src="https://latex.codecogs.com/png.latex?5%5En"> : <img src="https://latex.codecogs.com/png.latex?u_n%20=%20%5Cfrac%7B5%5En%20%5Cleft(%20%5Cfrac%7B1%7D%7B5%5En%7D%20+%201%20%5Cright)%7D%7B5%5En%20%5Cleft(%20%5Cfrac%7B2%7D%7B5%5En%7D%20+%20%5Cfrac%7B3%5En%7D%7B5%5En%7D%20%5Cright)%7D"> Pour tout <img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BN%7D">, <img src="https://latex.codecogs.com/png.latex?5%5En%20%5Cneq%200">, on peut donc simplifier : <img src="https://latex.codecogs.com/png.latex?u_n%20=%20%5Cfrac%7B%5Cfrac%7B1%7D%7B5%5En%7D%20+%201%7D%7B%5Cfrac%7B2%7D%7B5%5En%7D%20+%20%5Cleft(%5Cfrac%7B3%7D%7B5%7D%5Cright)%5En%7D"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Limite d’une suite géométrique
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La limite de la suite <img src="https://latex.codecogs.com/png.latex?(q%5En)"> dépend de la valeur de la raison <img src="https://latex.codecogs.com/png.latex?q"> :</p>
+<ul>
+<li>Si <img src="https://latex.codecogs.com/png.latex?-1%20%3C%20q%20%3C%201">, alors <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%20q%5En%20=%200">.</li>
+<li>Si <img src="https://latex.codecogs.com/png.latex?q%20%3E%201">, alors <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%20q%5En%20=%20+%5Cinfty">.</li>
+</ul>
+</div>
+</div>
+<p>Étudions la limite de chaque terme :</p>
+<ul>
+<li>On a <img src="https://latex.codecogs.com/png.latex?5%3E1">, donc <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%205%5En%20=%20+%5Cinfty">, et par conséquent <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%20%5Cfrac%7B1%7D%7B5%5En%7D%20=%200">.</li>
+<li>De même, <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%20%5Cfrac%7B2%7D%7B5%5En%7D%20=%200">.</li>
+<li>Pour le terme <img src="https://latex.codecogs.com/png.latex?%5Cleft(%5Cfrac%7B3%7D%7B5%7D%5Cright)%5En">, la raison est <img src="https://latex.codecogs.com/png.latex?q%20=%20%5Cfrac%7B3%7D%7B5%7D">.</li>
+</ul>
+<p>Comme <img src="https://latex.codecogs.com/png.latex?-1%20%3C%20%5Cfrac%7B3%7D%7B5%7D%20%3C%201">, on a <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%20%5Cleft(%5Cfrac%7B3%7D%7B5%7D%5Cright)%5En%20=%200">.</p>
+<p>On peut maintenant calculer la limite du numérateur et du dénominateur par somme des limites :</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%20%5Cleft(%5Cfrac%7B1%7D%7B5%5En%7D%20+%201%5Cright)%20=%200%20+%201%20=%201">.</li>
+<li><img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%20%5Cleft(%5Cfrac%7B2%7D%7B5%5En%7D%20+%20%5Cleft(%5Cfrac%7B3%7D%7B5%7D%5Cright)%5En%5Cright)%20=%200%20+%200%20=%200">.</li>
+</ul>
+<p>Le quotient a donc une limite infinie. Pour déterminer s’il s’agit de <img src="https://latex.codecogs.com/png.latex?+%5Cinfty"> ou <img src="https://latex.codecogs.com/png.latex?-%5Cinfty">, il faut connaître le signe du dénominateur. Pour tout entier naturel <img src="https://latex.codecogs.com/png.latex?n">, <img src="https://latex.codecogs.com/png.latex?5%5En%20%3E%200"> et <img src="https://latex.codecogs.com/png.latex?3%5En%20%3E%200">, donc le dénominateur <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B2%7D%7B5%5En%7D%20+%20(%5Cfrac%7B3%7D%7B5%7D)%5En"> est une somme de termes strictement positifs. Il tend donc vers 0 par valeurs positives (<img src="https://latex.codecogs.com/png.latex?0%5E+">).</p>
+<p>Finalement, par quotient des limites : <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bn%20%5Cto%20+%5Cinfty%7D%20u_n%20=%20+%5Cinfty"></p>
+<p>La suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> diverge vers <img src="https://latex.codecogs.com/png.latex?+%5Cinfty">, elle ne converge donc pas vers <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B5%7D%7B3%7D">. L’affirmation est fausse.</p></li>
+<li><p><strong>Affirmation 2 : On considère la suite <img src="https://latex.codecogs.com/png.latex?(w_n)"> définie par <img src="https://latex.codecogs.com/png.latex?w_0=0"> et, pour tout entier naturel <img src="https://latex.codecogs.com/png.latex?n">, <img src="https://latex.codecogs.com/png.latex?w_%7Bn+1%7D%20=%203w_n%20-%202n%20+%203">. Pour tout entier naturel <img src="https://latex.codecogs.com/png.latex?n">, on a <img src="https://latex.codecogs.com/png.latex?w_n%20%5Cgeqslant%20n">.</strong></p>
+<p><strong>VRAIE</strong></p>
+<p><strong>Justification :</strong></p>
+<p>Nous allons démontrer cette propriété par récurrence. Soit <img src="https://latex.codecogs.com/png.latex?P(n)"> la proposition : « <img src="https://latex.codecogs.com/png.latex?w_n%20%5Cgeqslant%20n"> ».</p>
+<ul>
+<li><p><strong>Initialisation :</strong></p>
+<p>Pour <img src="https://latex.codecogs.com/png.latex?n=0">, on a <img src="https://latex.codecogs.com/png.latex?w_0=0">. La proposition <img src="https://latex.codecogs.com/png.latex?P(0)"> est <img src="https://latex.codecogs.com/png.latex?w_0%20%5Cgeqslant%200">, soit <img src="https://latex.codecogs.com/png.latex?0%20%5Cgeqslant%200">, ce qui est vrai. <img src="https://latex.codecogs.com/png.latex?P(0)"> est initialisée.</p></li>
+<li><p><strong>Hérédité :</strong></p>
+<p>Supposons qu’il existe un entier <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeqslant%200"> tel que <img src="https://latex.codecogs.com/png.latex?P(k)"> est vraie, c’est-à-dire <img src="https://latex.codecogs.com/png.latex?w_k%20%5Cgeqslant%20k"> (hypothèse de récurrence).</p>
+<p>Montrons que <img src="https://latex.codecogs.com/png.latex?P(k+1)"> est vraie, c’est-à-dire <img src="https://latex.codecogs.com/png.latex?w_%7Bk+1%7D%20%5Cgeqslant%20k+1">.</p>
+<p>Par définition de la suite, <img src="https://latex.codecogs.com/png.latex?w_%7Bk+1%7D%20=%203w_k%20-%202k%20+%203">.</p>
+<p>D’après l’hypothèse de récurrence, <img src="https://latex.codecogs.com/png.latex?w_k%20%5Cgeqslant%20k">, donc <img src="https://latex.codecogs.com/png.latex?3w_k%20%5Cgeqslant%203k">.</p>
+<p>En injectant cette inégalité dans l’expression de <img src="https://latex.codecogs.com/png.latex?w_%7Bk+1%7D">, on obtient : <img src="https://latex.codecogs.com/png.latex?w_%7Bk+1%7D%20%5Cgeqslant%203k%20-%202k%20+%203"> <img src="https://latex.codecogs.com/png.latex?w_%7Bk+1%7D%20%5Cgeqslant%20k%20+%203"> Nous voulons montrer que <img src="https://latex.codecogs.com/png.latex?w_%7Bk+1%7D%20%5Cgeqslant%20k+1">. Or, pour tout entier <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeqslant%200">, on a <img src="https://latex.codecogs.com/png.latex?k+3%20%5Cgeqslant%20k+1">.</p>
+<p>Puisque <img src="https://latex.codecogs.com/png.latex?w_%7Bk+1%7D%20%5Cgeqslant%20k+3"> et que <img src="https://latex.codecogs.com/png.latex?k+3%20%5Cgeqslant%20k+1">, on peut conclure par transitivité que : <img src="https://latex.codecogs.com/png.latex?w_%7Bk+1%7D%20%5Cgeqslant%20k+1"> La proposition <img src="https://latex.codecogs.com/png.latex?P(k+1)"> est donc vraie.</p></li>
+<li><p><strong>Conclusion :</strong> La proposition est initialisée pour <img src="https://latex.codecogs.com/png.latex?n=0"> et est héréditaire. Par le principe de récurrence, on peut affirmer que pour tout entier naturel <img src="https://latex.codecogs.com/png.latex?n">, <img src="https://latex.codecogs.com/png.latex?w_n%20%5Cgeqslant%20n">.</p></li>
+</ul></li>
+<li><p><strong>Affirmation 3 : D’après le graphique, la fonction <img src="https://latex.codecogs.com/png.latex?f"> est convexe sur son ensemble de définition.</strong></p>
+<p><strong>FAUSSE</strong></p>
+<p><strong>Justification :</strong></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Convexité et position relative de la courbe et des tangentes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une fonction est dite <strong>convexe</strong> sur un intervalle si sa courbe représentative est située <strong>au-dessus</strong> de chacune de ses tangentes sur cet intervalle. Elle est dite <strong>concave</strong> si sa courbe est située <strong>en dessous</strong> de chacune de ses tangentes.</p>
+</div>
+</div>
+<p>Le graphique (Fig. 1) montre la courbe <img src="https://latex.codecogs.com/png.latex?C_f"> et sa tangente <img src="https://latex.codecogs.com/png.latex?T"> au point A d’abscisse 8.</p>
+<p>On observe que, au voisinage du point A, la courbe <img src="https://latex.codecogs.com/png.latex?C_f"> est située <strong>en dessous</strong> de sa tangente <img src="https://latex.codecogs.com/png.latex?T">.</p>
+<p>Ceci est la caractéristique d’une fonction concave. Puisqu’il existe au moins une tangente (la tangente <img src="https://latex.codecogs.com/png.latex?T">) telle que la courbe n’est pas entièrement au-dessus d’elle, la fonction <img src="https://latex.codecogs.com/png.latex?f"> n’est pas convexe sur son ensemble de définition <img src="https://latex.codecogs.com/png.latex?%5D0;%20+%5Cinfty%5B">.</p>
+<p>L’affirmation est donc fausse.</p></li>
+<li><p><strong>Affirmation 4 : Pour tout réel <img src="https://latex.codecogs.com/png.latex?x%20%3E%200">, <img src="https://latex.codecogs.com/png.latex?%5Cln(x)%20-%20x%20+%201%20%5Cleqslant%200">.</strong></p>
+<p><strong>VRAIE</strong></p>
+<p><strong>Justification :</strong> Pour étudier le signe de l’expression, nous pouvons étudier les variations de la fonction <img src="https://latex.codecogs.com/png.latex?g"> définie sur l’intervalle <img src="https://latex.codecogs.com/png.latex?%5D0;%20+%5Cinfty%5B"> par <img src="https://latex.codecogs.com/png.latex?g(x)%20=%20%5Cln(x)%20-%20x%20+%201">.</p>
+<p>La fonction <img src="https://latex.codecogs.com/png.latex?g"> est dérivable sur <img src="https://latex.codecogs.com/png.latex?%5D0;%20+%5Cinfty%5B"> comme somme de fonctions dérivables sur cet intervalle. <img src="https://latex.codecogs.com/png.latex?g'(x)%20=%20%5Cfrac%7B1%7D%7Bx%7D%20-%201"> Étudions le signe de la dérivée <img src="https://latex.codecogs.com/png.latex?g'(x)"> : <img src="https://latex.codecogs.com/png.latex?g'(x)%20%3E%200%20%5CLeftrightarrow%20%5Cfrac%7B1%7D%7Bx%7D%20-%201%20%3E%200%20%5CLeftrightarrow%20%5Cfrac%7B1%7D%7Bx%7D%20%3E%201"> Comme <img src="https://latex.codecogs.com/png.latex?x%20%3E%200">, on peut multiplier par <img src="https://latex.codecogs.com/png.latex?x"> sans changer le sens de l’inégalité : <img src="https://latex.codecogs.com/png.latex?1%20%3E%20x"> Ainsi, <img src="https://latex.codecogs.com/png.latex?g'(x)%20%3E%200"> pour <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5D0,%201%5B"> et <img src="https://latex.codecogs.com/png.latex?g'(x)%20%3C%200"> pour <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5D1,%20+%5Cinfty%5B">. La dérivée s’annule en <img src="https://latex.codecogs.com/png.latex?x=1">.</p>
+<p>On peut dresser le tableau de variation de la fonction <img src="https://latex.codecogs.com/png.latex?g"> :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?x"></th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?+%5Cinfty"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?g'(x)"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?g(x)"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">↗</td>
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?g(1)"></td>
+<td style="text-align: center;">↘</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>La fonction <img src="https://latex.codecogs.com/png.latex?g"> admet donc un maximum global sur <img src="https://latex.codecogs.com/png.latex?%5D0;%20+%5Cinfty%5B"> atteint en <img src="https://latex.codecogs.com/png.latex?x=1">.</p>
+<p>Calculons la valeur de ce maximum :</p>
+<p><img src="https://latex.codecogs.com/png.latex?g(1)%20=%20%5Cln(1)%20-%201%20+%201%20=%200%20-%201%20+%201%20=%200"></p>
+<p>Le maximum de la fonction <img src="https://latex.codecogs.com/png.latex?g"> sur son ensemble de définition est 0. Par conséquent, pour tout <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5D0;%20+%5Cinfty%5B">, on a <img src="https://latex.codecogs.com/png.latex?g(x)%20%5Cleqslant%20g(1)">, ce qui signifie :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cln(x)%20-%20x%20+%201%20%5Cleqslant%200"></p>
+<p>L’affirmation est donc vraie.</p></li>
+</ol>
+</section>
+<section id="corrigé-de-lexercice-4" class="level2">
+<h2 class="anchored" data-anchor-id="corrigé-de-lexercice-4">Corrigé de l’exercice 4</h2>
+<section id="partie-a-étude-graphique" class="level4">
+<h4 class="anchored" data-anchor-id="partie-a-étude-graphique">Partie A : Étude graphique</h4>
+<p><em>Dans cette partie, aucune justification n’est attendue.</em></p>
+<ol type="1">
+<li><p>Par lecture graphique, on cherche l’abscisse <img src="https://latex.codecogs.com/png.latex?t"> du point de la courbe <img src="https://latex.codecogs.com/png.latex?C_d"> ayant pour ordonnée 15. On trouve que le chariot aura parcouru 15 m au bout d’environ <strong>2 secondes</strong>.</p></li>
+<li><p>La longueur totale de la zone de freinage correspond à la distance maximale parcourue par le chariot, c’est-à-dire à la limite de la fonction <img src="https://latex.codecogs.com/png.latex?d"> en <img src="https://latex.codecogs.com/png.latex?+%5Cinfty">. Graphiquement, cela correspond à l’ordonnée de l’asymptote horizontale <img src="https://latex.codecogs.com/png.latex?%5CDelta"> à la courbe <img src="https://latex.codecogs.com/png.latex?C_d">.</p>
+<p>On lit que l’équation de l’asymptote <img src="https://latex.codecogs.com/png.latex?%5CDelta"> est <img src="https://latex.codecogs.com/png.latex?y=22,8">.</p>
+<p>La longueur minimale à prévoir pour la zone de freinage est donc de <strong>22,8 mètres</strong>.</p></li>
+<li><p>La valeur <img src="https://latex.codecogs.com/png.latex?d'(4,7)"> correspond au coefficient directeur de la tangente à la courbe <img src="https://latex.codecogs.com/png.latex?C_d"> au point <img src="https://latex.codecogs.com/png.latex?A"> d’abscisse <img src="https://latex.codecogs.com/png.latex?t=4,7">. Cette tangente est la droite <img src="https://latex.codecogs.com/png.latex?T"> tracée sur le graphique.</p>
+<p>Pour estimer ce coefficient directeur, on choisit deux points sur la droite <img src="https://latex.codecogs.com/png.latex?T">. Prenons le point <img src="https://latex.codecogs.com/png.latex?A(4,7%20%5C,;%5C,%2021)"> et un autre point, par exemple le point de coordonnées approximatives <img src="https://latex.codecogs.com/png.latex?(0%20%5C,;%5C,%2016,3)">.</p>
+<p>Le coefficient directeur est : <img src="https://latex.codecogs.com/png.latex?m%20=%20%5Cfrac%7By_B%20-%20y_A%7D%7Bx_B%20-%20x_A%7D%20%5Capprox%20%5Cfrac%7B21%20-%2016,3%7D%7B4,7%20-%200%7D%20=%20%5Cfrac%7B4,7%7D%7B4,7%7D%20=%201"> On peut arrondir la valeur à <strong><img src="https://latex.codecogs.com/png.latex?d'(4,7)%20%5Capprox%201"></strong>.</p>
+<p><strong>Interprétation :</strong> La fonction dérivée <img src="https://latex.codecogs.com/png.latex?d'(t)"> représente la vitesse instantanée du chariot, notée <img src="https://latex.codecogs.com/png.latex?v(t)">. Ainsi, à l’instant <img src="https://latex.codecogs.com/png.latex?t=4,7"> secondes, la vitesse du chariot est d’environ <strong>1 m/s</strong>.</p></li>
+</ol>
+</section>
+<section id="partie-b-étude-de-la-vitesse" class="level4">
+<h4 class="anchored" data-anchor-id="partie-b-étude-de-la-vitesse">Partie B : Étude de la vitesse</h4>
+<ol type="1">
+<li><ol type="a">
+<li><p><strong>Résolution de l’équation différentielle <img src="https://latex.codecogs.com/png.latex?(E')%20:%20y'%20+%200,6y%20=%200">.</strong></p>
+<p>Cette équation est de la forme <img src="https://latex.codecogs.com/png.latex?y'%20=%20ay"> avec <img src="https://latex.codecogs.com/png.latex?a%20=%20-0,6">.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Équation différentielle <img src="https://latex.codecogs.com/png.latex?y'%20=%20ay">
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les solutions de l’équation différentielle <img src="https://latex.codecogs.com/png.latex?y'%20=%20ay">, où <img src="https://latex.codecogs.com/png.latex?a"> est un réel, sont les fonctions définies sur <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D"> par <img src="https://latex.codecogs.com/png.latex?t%20%5Cmapsto%20Ce%5E%7Bat%7D">, où <img src="https://latex.codecogs.com/png.latex?C"> est une constante réelle quelconque.</p>
+</div>
+</div>
+<p>Les solutions de l’équation <img src="https://latex.codecogs.com/png.latex?(E')"> sur <img src="https://latex.codecogs.com/png.latex?%5B0;%20+%5Cinfty%5B"> sont donc les fonctions de la forme <img src="https://latex.codecogs.com/png.latex?t%20%5Cmapsto%20Ce%5E%7B-0,6t%7D">, avec <img src="https://latex.codecogs.com/png.latex?C%20%5Cin%20%5Cmathbb%7BR%7D">.</p>
+<ol start="2" type="a">
+<li><p><strong>Vérification d’une solution particulière pour <img src="https://latex.codecogs.com/png.latex?(E)">.</strong></p>
+<p>Soit <img src="https://latex.codecogs.com/png.latex?g(t)%20=%20te%5E%7B-0,6t%7D">. La fonction <img src="https://latex.codecogs.com/png.latex?g"> est un produit de fonctions dérivables sur <img src="https://latex.codecogs.com/png.latex?%5B0;%20+%5Cinfty%5B">, elle est donc dérivable.</p>
+<p>Pour dériver <img src="https://latex.codecogs.com/png.latex?g(t)">, on utilise la formule <img src="https://latex.codecogs.com/png.latex?(uv)'%20=%20u'v%20+%20uv'"> avec <img src="https://latex.codecogs.com/png.latex?u(t)=t"> et <img src="https://latex.codecogs.com/png.latex?v(t)=e%5E%7B-0,6t%7D">. <img src="https://latex.codecogs.com/png.latex?u'(t)=1"> et <img src="https://latex.codecogs.com/png.latex?v'(t)=-0,6e%5E%7B-0,6t%7D">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?g'(t)%20=%201%20%5Ctimes%20e%5E%7B-0,6t%7D%20+%20t%20%5Ctimes%20(-0,6e%5E%7B-0,6t%7D)%20=%20e%5E%7B-0,6t%7D%20-%200,6te%5E%7B-0,6t%7D">.</p>
+<p>Vérifions si <img src="https://latex.codecogs.com/png.latex?g"> est solution de <img src="https://latex.codecogs.com/png.latex?(E)%20:%20y'%20+%200,6y%20=%20e%5E%7B-0,6t%7D">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?g'(t)%20+%200,6g(t)%20=%20(e%5E%7B-0,6t%7D%20-%200,6te%5E%7B-0,6t%7D)%20+%200,6(te%5E%7B-0,6t%7D)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?g'(t)%20+%200,6g(t)%20=%20e%5E%7B-0,6t%7D%20-%200,6te%5E%7B-0,6t%7D%20+%200,6te%5E%7B-0,6t%7D%20=%20e%5E%7B-0,6t%7D">.</p>
+<p>L’égalité est vérifiée, donc la fonction <img src="https://latex.codecogs.com/png.latex?g"> est bien une solution de l’équation différentielle <img src="https://latex.codecogs.com/png.latex?(E)">.</p></li>
+<li><p><strong>Déduction des solutions de <img src="https://latex.codecogs.com/png.latex?(E)">.</strong></p>
+<p>La solution générale de l’équation différentielle <img src="https://latex.codecogs.com/png.latex?(E)"> est la somme de la solution générale de l’équation homogène associée <img src="https://latex.codecogs.com/png.latex?(E')"> et d’une solution particulière de <img src="https://latex.codecogs.com/png.latex?(E)">.</p>
+<p>Les solutions de <img src="https://latex.codecogs.com/png.latex?(E)"> sont donc les fonctions de la forme :</p>
+<p><img src="https://latex.codecogs.com/png.latex?y(t)%20=%20Ce%5E%7B-0,6t%7D%20+%20te%5E%7B-0,6t%7D%20=%20(C+t)e%5E%7B-0,6t%7D"></p>
+<p>où <img src="https://latex.codecogs.com/png.latex?C"> est une constante réelle.</p></li>
+<li><p><strong>Détermination de la fonction <img src="https://latex.codecogs.com/png.latex?v(t)">.</strong></p>
+<p>La fonction <img src="https://latex.codecogs.com/png.latex?v"> est une solution de <img src="https://latex.codecogs.com/png.latex?(E)">, donc <img src="https://latex.codecogs.com/png.latex?v(t)%20=%20(C+t)e%5E%7B-0,6t%7D">.</p>
+<p>On sait que la vitesse initiale est <img src="https://latex.codecogs.com/png.latex?v(0)%20=%2012">. On utilise cette condition pour déterminer la constante <img src="https://latex.codecogs.com/png.latex?C">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?v(0)%20=%20(C+0)e%5E%7B-0,6%20%5Ctimes%200%7D%20=%20C%20%5Ctimes%20e%5E0%20=%20C">.</p>
+<p>On a donc <img src="https://latex.codecogs.com/png.latex?C%20=%2012">.</p>
+<p>La fonction vitesse est donc définie pour tout <img src="https://latex.codecogs.com/png.latex?t%20%5Cin%20%5B0;%20+%5Cinfty%5B"> par :</p>
+<p><img src="https://latex.codecogs.com/png.latex?v(t)%20=%20(12+t)e%5E%7B-0,6t%7D"></p></li>
+</ol></li>
+<li><ol type="a">
+<li><p><strong>Calcul de la dérivée <img src="https://latex.codecogs.com/png.latex?v'(t)">.</strong></p>
+<p>La fonction <img src="https://latex.codecogs.com/png.latex?v(t)%20=%20(12+t)e%5E%7B-0,6t%7D"> est un produit de fonctions.</p>
+<p>En posant <img src="https://latex.codecogs.com/png.latex?u(t)=12+t"> et <img src="https://latex.codecogs.com/png.latex?w(t)=e%5E%7B-0,6t%7D">, on a <img src="https://latex.codecogs.com/png.latex?u'(t)=1"> et <img src="https://latex.codecogs.com/png.latex?w'(t)=-0,6e%5E%7B-0,6t%7D">.</p>
+<p><img src="https://latex.codecogs.com/png.latex?v'(t)%20=%20u'(t)w(t)%20+%20u(t)w'(t)%20=%201%20%5Ctimes%20e%5E%7B-0,6t%7D%20+%20(12+t)(-0,6e%5E%7B-0,6t%7D)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?v'(t)%20=%20e%5E%7B-0,6t%7D(1%20-%200,6(12+t))%20=%20e%5E%7B-0,6t%7D(1%20-%207,2%20-%200,6t)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?v'(t)%20=%20(-6,2%20-%200,6t)e%5E%7B-0,6t%7D">.</p></li>
+<li><p><strong>Limite de <img src="https://latex.codecogs.com/png.latex?v"> en <img src="https://latex.codecogs.com/png.latex?+%5Cinfty">.</strong></p>
+<p>On utilise l’expression <img src="https://latex.codecogs.com/png.latex?v(t)%20=%2012e%5E%7B-0,6t%7D%20+%20t%20%5Ctimes%20%5Cfrac%7B1%7D%7Be%5E%7B0,6t%7D%7D">.</p>
+<p>On sait que <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20-0,6t%20=%20-%5Cinfty">, donc par composition <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20e%5E%7B-0,6t%7D%20=%200">.</p>
+<p>Pour le second terme, on peut écrire <img src="https://latex.codecogs.com/png.latex?t%20%5Ctimes%20%5Cfrac%7B1%7D%7Be%5E%7B0,6t%7D%7D%20=%20%5Cfrac%7Bt%7D%7Be%5E%7B0,6t%7D%7D%20=%20%5Cfrac%7B1%7D%7B0,6%7D%20%5Ctimes%20%5Cfrac%7B0,6t%7D%7Be%5E%7B0,6t%7D%7D">.</p>
+<p>Par croissance comparée, on sait que <img src="https://latex.codecogs.com/png.latex?%5Clim_%7BX%20%5Cto%20+%5Cinfty%7D%20%5Cfrac%7BX%7D%7Be%5EX%7D%20=%200">.</p>
+<p>En posant <img src="https://latex.codecogs.com/png.latex?X=0,6t">, on a <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20%5Cfrac%7B0,6t%7D%7Be%5E%7B0,6t%7D%7D%20=%200">.</p>
+<p>Ainsi, <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20t%20e%5E%7B-0,6t%7D%20=%200">.</p>
+<p>Par somme des limites, on obtient :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20v(t)%20=%2012%20%5Ctimes%200%20+%200%20=%200"></p></li>
+<li><p><strong>Sens de variation de <img src="https://latex.codecogs.com/png.latex?v">.</strong></p>
+<p>On étudie le signe de la dérivée <img src="https://latex.codecogs.com/png.latex?v'(t)%20=%20(-6,2%20-%200,6t)e%5E%7B-0,6t%7D"> sur <img src="https://latex.codecogs.com/png.latex?%5B0;%20+%5Cinfty%5B">.</p>
+<p>Pour tout <img src="https://latex.codecogs.com/png.latex?t%20%5Cgeqslant%200">, <img src="https://latex.codecogs.com/png.latex?e%5E%7B-0,6t%7D"> est strictement positif.</p>
+<p>Le signe de <img src="https://latex.codecogs.com/png.latex?v'(t)"> est donc celui de <img src="https://latex.codecogs.com/png.latex?(-6,2%20-%200,6t)">.</p>
+<p>Pour <img src="https://latex.codecogs.com/png.latex?t%20%5Cgeqslant%200">, on a <img src="https://latex.codecogs.com/png.latex?0,6t%20%5Cgeqslant%200">, donc <img src="https://latex.codecogs.com/png.latex?-0,6t%20%5Cleqslant%200">.</p>
+<p>Ainsi, <img src="https://latex.codecogs.com/png.latex?-6,2%20-%200,6t%20%5Cleqslant%20-6,2%20%3C%200">.</p>
+<p>La dérivée <img src="https://latex.codecogs.com/png.latex?v'(t)"> est donc strictement négative sur <img src="https://latex.codecogs.com/png.latex?%5B0;%20+%5Cinfty%5B">.</p>
+<p>La fonction <img src="https://latex.codecogs.com/png.latex?v"> est strictement décroissante sur <img src="https://latex.codecogs.com/png.latex?%5B0;%20+%5Cinfty%5B">.</p>
+<p>On dresse le tableau de variation complet :</p>
+<p><img src="https://latex.codecogs.com/png.latex?v(0)%20=%20(12+0)e%5E0%20=%2012">.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?t"></th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?+%5Cinfty"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?v'(t)"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><img src="https://latex.codecogs.com/png.latex?v(t)"></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">↘</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Résolution de l’équation <img src="https://latex.codecogs.com/png.latex?v(t)=1">.</strong></p>
+<p>La fonction <img src="https://latex.codecogs.com/png.latex?v"> est continue (car dérivable) et strictement décroissante sur l’intervalle <img src="https://latex.codecogs.com/png.latex?%5B0;%20+%5Cinfty%5B">.</p>
+<p>De plus, <img src="https://latex.codecogs.com/png.latex?v(0)=12"> et <img src="https://latex.codecogs.com/png.latex?%5Clim_%7Bt%20%5Cto%20+%5Cinfty%7D%20v(t)%20=%200">.</p>
+<p>Le nombre 1 est compris dans l’intervalle image <img src="https://latex.codecogs.com/png.latex?%5D0;%2012%5D">.</p>
+<p>D’après le corollaire du théorème des valeurs intermédiaires pour les fonctions strictement monotones, l’équation <img src="https://latex.codecogs.com/png.latex?v(t)=1"> admet une solution unique <img src="https://latex.codecogs.com/png.latex?%5Calpha"> sur l’intervalle <img src="https://latex.codecogs.com/png.latex?%5B0;%20+%5Cinfty%5B">.</p>
+<p>À l’aide de la calculatrice, on peut trouver une valeur approchée de <img src="https://latex.codecogs.com/png.latex?%5Calpha">.</p>
+<p>En utilisant la fonction table ou un solveur, on trouve :</p>
+<p><img src="https://latex.codecogs.com/png.latex?v(4,7)%20%5Capprox%201,003"></p>
+<p><img src="https://latex.codecogs.com/png.latex?v(4,71)%20%5Capprox%200,996"></p>
+<p>Une valeur approchée de <img src="https://latex.codecogs.com/png.latex?%5Calpha"> au dixième est donc <strong><img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Capprox%204,7"></strong>.</p></li>
+</ol></li>
+<li><p>Le système mécanique d’arrêt se déclenche lorsque la vitesse est inférieure ou égale à 1 m/s. Comme la fonction <img src="https://latex.codecogs.com/png.latex?v"> est strictement décroissante, la condition <img src="https://latex.codecogs.com/png.latex?v(t)%20%5Cleqslant%201"> est équivalente à <img src="https://latex.codecogs.com/png.latex?v(t)%20%5Cleqslant%20v(%5Calpha)">, ce qui signifie <img src="https://latex.codecogs.com/png.latex?t%20%5Cgeqslant%20%5Calpha">.</p>
+<p>Le système entre donc en action à partir de l’instant <img src="https://latex.codecogs.com/png.latex?t=%5Calpha">.</p>
+<p>Cela se produit au bout d’environ <strong>4,7 secondes</strong>.</p></li>
+</ol>
+</section>
+<section id="partie-c-calcul-de-la-distance-parcourue" class="level4">
+<h4 class="anchored" data-anchor-id="partie-c-calcul-de-la-distance-parcourue">Partie C : Calcul de la distance parcourue</h4>
+<ol type="1">
+<li><p><strong>Démonstration par intégration par parties.</strong></p>
+<p>On doit calculer <img src="https://latex.codecogs.com/png.latex?d(t)%20=%20%5Cint_0%5Et%20v(x)%20dx%20=%20%5Cint_0%5Et%20(12+x)e%5E%7B-0,6x%7D%20dx">.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rappel : Intégration par parties
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <img src="https://latex.codecogs.com/png.latex?u"> et <img src="https://latex.codecogs.com/png.latex?f"> sont deux fonctions dérivables sur un intervalle <img src="https://latex.codecogs.com/png.latex?I">, alors pour tous <img src="https://latex.codecogs.com/png.latex?a,%20b%20%5Cin%20I"> : <img src="https://latex.codecogs.com/png.latex?%5Cint_a%5Eb%20u(x)f'(x)%20dx%20=%20%5Bu(x)f(x)%5D_a%5Eb%20-%20%5Cint_a%5Eb%20u'(x)f(x)%20dx">.</p>
+</div>
+</div>
+<p>On pose :</p>
+<ul>
+<li><img src="https://latex.codecogs.com/png.latex?u(x)%20=%2012+x%20%5Cquad%20%5Cimplies%20%5Cquad%20u'(x)%20=%201"></li>
+<li><img src="https://latex.codecogs.com/png.latex?f'(x)%20=%20e%5E%7B-0,6x%7D%20%5Cquad%20%5Cimplies%20%5Cquad%20f(x)%20=%20%5Cfrac%7B1%7D%7B-0,6%7De%5E%7B-0,6x%7D%20=%20-%5Cfrac%7B5%7D%7B3%7De%5E%7B-0,6x%7D"></li>
+</ul>
+<p>Appliquons la formule :</p>
+<p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20%5Cleft%5B%20(12+x)(-%5Cfrac%7B5%7D%7B3%7De%5E%7B-0,6x%7D)%20%5Cright%5D_0%5Et%20-%20%5Cint_0%5Et%201%20%5Ctimes%20(-%5Cfrac%7B5%7D%7B3%7De%5E%7B-0,6x%7D)%20dx"></p>
+<p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20%5Cleft(%20(12+t)(-%5Cfrac%7B5%7D%7B3%7De%5E%7B-0,6t%7D)%20-%20(12+0)(-%5Cfrac%7B5%7D%7B3%7De%5E0)%20%5Cright)%20+%20%5Cfrac%7B5%7D%7B3%7D%20%5Cint_0%5Et%20e%5E%7B-0,6x%7D%20dx"></p>
+<p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20(-%5Cfrac%7B5%7D%7B3%7Dt%20-%2020)e%5E%7B-0,6t%7D%20+%2020%20+%20%5Cfrac%7B5%7D%7B3%7D%20%5Cleft%5B%20-%5Cfrac%7B5%7D%7B3%7De%5E%7B-0,6x%7D%20%5Cright%5D_0%5Et"></p>
+<p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20(-%5Cfrac%7B5%7D%7B3%7Dt%20-%2020)e%5E%7B-0,6t%7D%20+%2020%20+%20%5Cfrac%7B5%7D%7B3%7D%20%5Cleft(%20-%5Cfrac%7B5%7D%7B3%7De%5E%7B-0,6t%7D%20-%20(-%5Cfrac%7B5%7D%7B3%7De%5E0)%20%5Cright)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20(-%5Cfrac%7B5%7D%7B3%7Dt%20-%2020)e%5E%7B-0,6t%7D%20+%2020%20-%20%5Cfrac%7B25%7D%7B9%7De%5E%7B-0,6t%7D%20+%20%5Cfrac%7B25%7D%7B9%7D"></p>
+<p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20e%5E%7B-0,6t%7D%20(-%5Cfrac%7B5%7D%7B3%7Dt%20-%2020%20-%20%5Cfrac%7B25%7D%7B9%7D)%20+%20(20%20+%20%5Cfrac%7B25%7D%7B9%7D)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20e%5E%7B-0,6t%7D%20(-%5Cfrac%7B15%7D%7B9%7Dt%20-%20%5Cfrac%7B180%7D%7B9%7D%20-%20%5Cfrac%7B25%7D%7B9%7D)%20+%20(%5Cfrac%7B180%7D%7B9%7D%20+%20%5Cfrac%7B25%7D%7B9%7D)"></p>
+<p><img src="https://latex.codecogs.com/png.latex?d(t)%20=%20e%5E%7B-0,6t%7D%20(-%5Cfrac%7B5%7D%7B3%7Dt%20-%20%5Cfrac%7B205%7D%7B9%7D)%20+%20%5Cfrac%7B205%7D%7B9%7D"></p>
+<p>Ce qui est bien la formule demandée.</p></li>
+<li><p>Le dispositif d’arrêt se déclenche à l’instant <img src="https://latex.codecogs.com/png.latex?t=%5Calpha"> où la vitesse atteint 1 m/s. On cherche donc la distance parcourue à cet instant, soit <img src="https://latex.codecogs.com/png.latex?d(%5Calpha)">. On utilise la valeur approchée <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Capprox%204,704"> pour plus de précision.</p>
+<p>On calcule <img src="https://latex.codecogs.com/png.latex?d(4,704)"> : <img src="https://latex.codecogs.com/png.latex?d(4,704)%20=%20e%5E%7B-0,6%20%5Ctimes%204,704%7D%20%5Cleft(-%5Cfrac%7B5%7D%7B3%7D%20%5Ctimes%204,704%20-%20%5Cfrac%7B205%7D%7B9%7D%5Cright)%20+%20%5Cfrac%7B205%7D%7B9%7D"> <img src="https://latex.codecogs.com/png.latex?d(4,704)%20%5Capprox%20e%5E%7B-2,8224%7D%20(-7,84%20-%2022,7778)%20+%2022,7778"> <img src="https://latex.codecogs.com/png.latex?d(4,704)%20%5Capprox%200,05946%20%5Ctimes%20(-30,6178)%20+%2022,7778"> <img src="https://latex.codecogs.com/png.latex?d(4,704)%20%5Capprox%20-1,8206%20+%2022,7778%20%5Capprox%2020,9572"> Arrondie au centième, la distance parcourue par le chariot avant le déclenchement du dispositif est de <strong>20,96 mètres</strong>.</p></li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>Annales</category>
+  <guid>https://flallemand.fr/blog/posts/2025-06-24-MathsMetropoleJ2/</guid>
+  <pubDate>Mon, 23 Jun 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/2025-06-24-MathsMetropoleJ2/arbre.png" medium="image" type="image/png" height="202" width="144"/>
+</item>
 <item>
   <title>Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 2</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -7224,902 +7866,6 @@ Avertissement
   <guid>https://flallemand.fr/blog/posts/intel_verre/</guid>
   <pubDate>Wed, 20 Sep 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Tuto pyxel : Animer un personnage</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Objectifs du tutoriel
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Créer une application Pyxel avec fond coloré uni ;</li>
-<li>Créer un personnage qui se déplace avec les touches du clavier ;</li>
-</ul>
-</div>
-</div>
-<p>Nous utiliserons <a href="../../posts/pyxelstudio/index.html">pyxelstudio.net</a> pour coder ce tuto.</p>
-<section id="géométrie-générale-de-la-fenêtre" class="level2">
-<h2 class="anchored" data-anchor-id="géométrie-générale-de-la-fenêtre">Géométrie générale de la fenêtre</h2>
-<p>La fenêtre de jeu est un rectangle de 256 pixels de large sur 128 pixels de haut. L’origine du repère est située en haut à gauche de la fenêtre. Les coordonnées des points sont donc comprises entre 0 et 255 pour les abscisses et entre 0 et 127 pour les ordonnées.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./repere.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Géométrie de la fenêtre"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/repere.png" class="img-fluid figure-img" alt="Géométrie de la fenêtre"></a></p>
-<figcaption>Géométrie de la fenêtre</figcaption>
-</figure>
-</div>
-</section>
-<section id="le-fichier-de-ressource-pyxres" class="level2">
-<h2 class="anchored" data-anchor-id="le-fichier-de-ressource-pyxres">Le fichier de ressource pyxres</h2>
-<p>Pour ce tuto, nous utiliserons le fichier de ressource <a href="jump_game.pyxres"><code>jump_games.pyxres</code></a> issu des exemples de Pyxel.</p>
-<p>Pour ouvrir, modifier ou consulter le contenu d’un tel fichier, il faut utiliser l’éditeur de ressource de Pyxel. Pour cela, il faut d’abord charger ce fichier dans pyxelstudio : voir <a href="../../posts/pyxelstudio/index.html">la page dédiée</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./fenetre_pyxres.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Editeur de ressource"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres.png" class="img-fluid figure-img" style="width:50.0%" alt="Editeur de ressource"></a></p>
-<figcaption>Editeur de ressource</figcaption>
-</figure>
-</div>
-<p>On peut voir et faire défiler l’ensemble des images du fichier de ressources dans la partie droite de l’éditeur. Dans la partie gauche, on zoome sur un carré de 16 pixels de côté, avec possibilité de modifier l’image à la souris.</p>
-<p><strong>Astuce utile</strong> : quand on déplace la souris sur l’image, les coordonnées du pointeur sont affichées en haut à droite de la fenêtre. Cela permet de repérer facilement les coordonnées des points.</p>
-<p>Sous l’image se trouve la palette de couleur. Nous disposons de 16 couleurs, numérotées de 0 à 15.</p>
-</section>
-<section id="affichage-du-personnage-et-du-fond-coloré" class="level2">
-<h2 class="anchored" data-anchor-id="affichage-du-personnage-et-du-fond-coloré">Affichage du personnage et du fond coloré</h2>
-<p>Nous constatons que le dessin du personnage occupe le carré de coordonnées (0, 0) à (15, 15). Nous allons donc afficher le personnage en bas à gauche de la fenêtre, avec la commande <code>pyxel.blt(x, y, img, u, v, w, h, [colkey])</code> :</p>
-<ul>
-<li><code>x</code> et <code>y</code> sont les coordonnées du point en haut à gauche de l’image <strong>dans la fenêtre de l’application</strong> ;</li>
-<li><code>img</code> est le numéro de l’image dans le fichier de ressource (ici, il n’y en a qu’une seule, numéro 0) ;</li>
-<li><code>u</code> et <code>v</code> sont les coordonnées du point en haut à gauche de l’image <strong>dans le fichier de ressource</strong> ;</li>
-<li><code>w</code> et <code>h</code> sont la largeur et la hauteur de l’image dans le fichier de ressource.</li>
-<li><code>colkey</code> est le numéro de la couleur que l’on souhaite rendre transparente. Si on ne souhaite pas rendre de couleur transparente, on peut ne pas renseigner ce paramètre.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./blt_figure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Paramètres de blt"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" class="img-fluid figure-img" alt="Paramètres de blt"></a></p>
-<figcaption>Paramètres de <code>blt</code></figcaption>
-</figure>
-</div>
-<p>Voici le code obtenu :</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pyxel</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">class</span> App:</span>
-<span id="cb1-4">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-5">        pyxel.init(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>, fps<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>)</span>
-<span id="cb1-6">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on charge le fichier de ressources</span></span>
-<span id="cb1-7">        pyxel.load(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"jump_game.pyxres"</span>)</span>
-<span id="cb1-8">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable définissant l'abscisse initiale du personnage</span></span>
-<span id="cb1-9">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb1-10">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on lance l'application</span></span>
-<span id="cb1-11">        pyxel.run(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.draw)</span>
-<span id="cb1-12">        </span>
-<span id="cb1-13">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-14">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">pass</span></span>
-<span id="cb1-15"></span>
-<span id="cb1-16">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb1-17">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu (code 12)</span></span>
-<span id="cb1-18">        pyxel.cls(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb1-19">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 127 - 16</span></span>
-<span id="cb1-20">        pyxel.blt(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb1-21"></span>
-<span id="cb1-22">App()</span></code></pre></div>
-<p>On obtient :</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./fenetre_personnage.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Personnage en bas à gauche"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_personnage.png" class="img-fluid figure-img" style="width:50.0%" alt="Personnage en bas à gauche"></a></p>
-<figcaption>Personnage en bas à gauche</figcaption>
-</figure>
-</div>
-</section>
-<section id="déplacement-du-personnage" class="level2">
-<h2 class="anchored" data-anchor-id="déplacement-du-personnage">Déplacement du personnage</h2>
-<p>Nous allons maintenant faire bouger le personnage avec les touches du clavier. Pour cela, nous allons utiliser la méthode <code>update</code> de la classe <code>App</code>. Cette méthode est appelée automatiquement par Pyxel à chaque image. Nous allons donc modifier la valeur de <code>self.x_personnage</code> en fonction des touches du clavier qui sont pressées.</p>
-<p>Cependant, l’abscisse du personnage doit toujours rester comprise entre 0 et 255 pour qu’il ne disparaissent pas de l’écran. Nous allons donc utiliser la fonction <code>min</code> pour que <code>self.x_personnage</code> ne puisse pas être inférieur à 0 et la fonction <code>max</code> pour qu’il ne puisse pas être supérieur à 255.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pyxel</span>
-<span id="cb2-2"></span>
-<span id="cb2-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">class</span> App:</span>
-<span id="cb2-4">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb2-5">        pyxel.init(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>, fps<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>)</span>
-<span id="cb2-6">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on charge le fichier de ressources</span></span>
-<span id="cb2-7">        pyxel.load(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"jump_game.pyxres"</span>)</span>
-<span id="cb2-8">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable définissant l'abscisse initiale du personnage</span></span>
-<span id="cb2-9">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb2-10">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable définissant la vitesse du personnage</span></span>
-<span id="cb2-11">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span></span>
-<span id="cb2-12">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on lance l'application</span></span>
-<span id="cb2-13">        pyxel.run(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.draw)</span>
-<span id="cb2-14">        </span>
-<span id="cb2-15">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb2-16">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
-<span id="cb2-17">            <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># si on appuie sur la touche gauche, on déplace le personnage vers la gauche</span></span>
-<span id="cb2-18">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">max</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb2-19">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
-<span id="cb2-20">            <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># si on appuie sur la touche droite, on déplace le personnage vers la droite</span></span>
-<span id="cb2-21">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">min</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse, pyxel.width <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb2-22"></span>
-<span id="cb2-23">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb2-24">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
-<span id="cb2-25">        pyxel.cls(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb2-26">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
-<span id="cb2-27">        pyxel.blt(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb2-28"></span>
-<span id="cb2-29">App()</span></code></pre></div>
-<p><strong>Remarque</strong> : nous avons également défini un attribut <code>vitesse</code> qui permet de modifier la vitesse de déplacement du personnage : il s’agit du nombre de pixels à ajouter, ou à retrancher, à chaque fois que l’on appuie sur une touche fléchée.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./tuto2-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-1.gif" class="img-fluid figure-img" style="width:50.0%" alt="Personnage qui se déplace"></a></p>
-<figcaption>Personnage qui se déplace</figcaption>
-</figure>
-</div>
-</section>
-<section id="animation-du-déplacement" class="level2">
-<h2 class="anchored" data-anchor-id="animation-du-déplacement">Animation du déplacement</h2>
-<p>Pour donner une impression d’animation lors du déplacement du personnage, on peut alterner l’affichage de deux images du personnage. Le fichier ressources contient en effet une image du personnage avec les jambes positionnées différemment, comme on peut le voir ci-dessous.</p>
-<p>Pour ce faire, on peut utiliser la fonction <code>pyxel.frame_count</code> pour alterner l’affichage des deux images à chaque image. Cette fonction renvoie le nombre d’images affichées depuis le début de l’application. Dans le code ci-dessous, on a de plus défini une variable booléenne <code>self.personnage_marche</code> qui vaut <code>True</code> si le personnage est en train de marcher et <code>False</code> sinon (ce qui permet dans ce cas d’arrêter l’animation).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./fenetre_pyxres_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Animation du personnage"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/fenetre_pyxres_2.png" class="img-fluid figure-img" alt="Animation du personnage"></a></p>
-<figcaption>Animation du personnage</figcaption>
-</figure>
-</div>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pyxel</span>
-<span id="cb3-2"></span>
-<span id="cb3-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">class</span> App:</span>
-<span id="cb3-4">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb3-5">        pyxel.init(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>, fps<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>)</span>
-<span id="cb3-6">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on charge le fichier de ressources</span></span>
-<span id="cb3-7">        pyxel.load(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"jump_game.pyxres"</span>)</span>
-<span id="cb3-8">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable définissant l'abscisse initiale du personnage</span></span>
-<span id="cb3-9">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb3-10">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable définissant la vitesse du personnage</span></span>
-<span id="cb3-11">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span></span>
-<span id="cb3-12">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable indiquant si un déplacement est en cours</span></span>
-<span id="cb3-13">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">False</span></span>
-<span id="cb3-14">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on lance l'application</span></span>
-<span id="cb3-15">        pyxel.run(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.draw)</span>
-<span id="cb3-16">        </span>
-<span id="cb3-17">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb3-18">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
-<span id="cb3-19">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">max</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb3-20">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span></span>
-<span id="cb3-21">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
-<span id="cb3-22">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">min</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse, pyxel.width <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb3-23">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span></span>
-<span id="cb3-24"></span>
-<span id="cb3-25">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb3-26">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
-<span id="cb3-27">        pyxel.cls(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb3-28">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
-<span id="cb3-29">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche:</span>
-<span id="cb3-30">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>:</span>
-<span id="cb3-31">                pyxel.blt(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb3-32">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">else</span>:</span>
-<span id="cb3-33">                pyxel.blt(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb3-34">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">False</span></span>
-<span id="cb3-35">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">else</span>:</span>
-<span id="cb3-36">            pyxel.blt(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.height <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb3-37"></span>
-<span id="cb3-38">App()</span></code></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./tuto2-3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-3.gif" class="img-fluid figure-img" style="width:50.0%" alt="Personnage qui se déplace"></a></p>
-<figcaption>Personnage qui se déplace</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Explications
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>frame_count</code> est le nombre d’images affichées depuis le lancement du jeu. On calcule <code>frame_count % 6</code> pour obtenir le reste de la division euclidienne de <code>frame_count</code> par 6. On obtient donc un nombre entre 0 et 5. On affiche le premier personnage si ce nombre est inférieur à 3 et le second sinon. On obtient donc un changement d’image <strong>toutes les 3 images</strong>.</p>
-</div>
-</div>
-<p>Une dernière amélioration serait souhaitable : lorsque le personnage se déplace vers la gauche, il semble reculer. On peut modifier le code de telle façon qu’il se retourne vers la gauche et regarde toujours dans la direction où il se déplace. Pour cela, il suffit de modifier le paramètre <code>w</code> de la fonction <code>pyxel.blt</code> en lui donnant la valeur <code>-16</code> lorsque le personnage se déplace vers la gauche.</p>
-<p>On définit pour cela encore un nouvel attribut “direction” qui vaut 1 lorsque le personnage se déplace vers la droite et -1 lorsqu’il se déplace vers la gauche. On multiplie donc <code>self.direction</code> par <code>16</code> pour obtenir la valeur de <code>w</code> à donner à la fonction <code>pyxel.blt</code>.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> pyxel</span>
-<span id="cb4-2"></span>
-<span id="cb4-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">class</span> App:</span>
-<span id="cb4-4">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb4-5">        pyxel.init(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">256</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">128</span>, fps<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">30</span>)</span>
-<span id="cb4-6">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on charge le fichier de ressources</span></span>
-<span id="cb4-7">        pyxel.load(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"jump_game.pyxres"</span>)</span>
-<span id="cb4-8">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable définissant l'abscisse initiale du personnage</span></span>
-<span id="cb4-9">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span></span>
-<span id="cb4-10">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable définissant la vitesse du personnage</span></span>
-<span id="cb4-11">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span></span>
-<span id="cb4-12">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable indiquant si un déplacement est en cours</span></span>
-<span id="cb4-13">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">False</span></span>
-<span id="cb4-14">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># variable indiquant la direction du personnage</span></span>
-<span id="cb4-15">        <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb4-16">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on lance l'application</span></span>
-<span id="cb4-17">        pyxel.run(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.draw)</span>
-<span id="cb4-18">        </span>
-<span id="cb4-19">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb4-20">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_LEFT):</span>
-<span id="cb4-21">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">max</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>)</span>
-<span id="cb4-22">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb4-23">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span></span>
-<span id="cb4-24">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pyxel.btn(pyxel.KEY_RIGHT):</span>
-<span id="cb4-25">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">min</span>(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.vitesse, pyxel.width <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb4-26">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.direction <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span></span>
-<span id="cb4-27">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">True</span></span>
-<span id="cb4-28"></span>
-<span id="cb4-29">    <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>):</span>
-<span id="cb4-30">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on efface l'écran et on remplit la fenêtre de bleu</span></span>
-<span id="cb4-31">        pyxel.cls(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">12</span>)</span>
-<span id="cb4-32">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 255 - 16</span></span>
-<span id="cb4-33">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche:</span>
-<span id="cb4-34">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pyxel.frame_count <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>:</span>
-<span id="cb4-35">                pyxel.blt(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.height<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb4-36">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">else</span>:</span>
-<span id="cb4-37">                pyxel.blt(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.height<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb4-38">            <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.personnage_marche <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">False</span></span>
-<span id="cb4-39">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">else</span>:</span>
-<span id="cb4-40">            pyxel.blt(<span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.x_personnage, pyxel.height<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="va" style="color: #111111;
-background-color: null;
-font-style: inherit;">self</span>.direction<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">16</span>)</span>
-<span id="cb4-41"></span>
-<span id="cb4-42">App()</span></code></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="./tuto2-4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Personnage qui se déplace"><img src="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/tuto2-4.gif" class="img-fluid figure-img" style="width:50.0%" alt="Personnage qui se déplace"></a></p>
-<figcaption>Personnage qui se déplace</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-En conclusion
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Nous avons vu dans ce tuto comment animer un personnage dans une application Pyxel en utilisant les touches du clavier. Nous avons également vu comment utiliser le fichier de ressources pour afficher une image du personnage avec les jambes positionnées différemment et ainsi donner une impression de marche. Nous avons enfin vu comment faire en sorte que le personnage regarde toujours dans la direction où il se déplace.</p>
-</div>
-</div>
-
-
-</section>
-
- ]]></description>
-  <category>Python</category>
-  <category>NSI</category>
-  <category>Programmation</category>
-  <category>Pyxel</category>
-  <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/</guid>
-  <pubDate>Fri, 01 Sep 2023 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto2_personnage/blt_figure.png" medium="image" type="image/png" height="59" width="144"/>
 </item>
 </channel>
 </rss>

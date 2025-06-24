@@ -1,0 +1,56 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{amsmath} % Nécessaire pour la commande \bar
+
+\begin{document}
+
+\begin{tikzpicture}
+% Définition des styles pour les niveaux et les étiquettes
+\tikzset{
+  grow'=right,
+  level distance=4cm, % Distance entre les niveaux
+  % Style général pour les arêtes (flèches)
+  edge from parent/.style={draw, thick, ->},
+  % Style pour le premier niveau de l'arbre
+  level 1/.style={
+    sibling distance=3cm
+  },
+  % Style pour le deuxième niveau de l'arbre
+  level 2/.style={
+    sibling distance=3.5cm, 
+  },
+  % Style personnalisé pour les étiquettes de probabilité (boîte blanche)
+  prob/.style={
+    fill=white,       % Fond blanc
+    inner sep=2pt,    % Marge interne
+    midway            % Positionné au milieu de la branche
+  }
+}
+
+% Construction de l'arbre
+\Tree
+  [.{ }
+    % Première branche principale
+    \edge node[prob, above] {$P(A)=0,6$} ;
+    [.{A}
+        % Sous-branches de A
+        \edge node[prob, above] {$P_A(B)=0,3$} ;
+        [.{B} ]
+        \edge node[prob, below] {$P_A(\overline{B})=0,7$}; % Corrigé de l'image
+        [.{$\overline{B}$} ]
+    ]
+    % Deuxième branche principale
+    \edge node[prob, below] {$P(\overline{A})=0,4$} ;
+    [.{$\overline{A}$}
+        % Sous-branches de A-barre
+        \edge node[prob, above] {$P_{\overline{A}}(B)=0,4$} ;
+        [.{B} ]
+        \edge node[prob, below] {$P_{\overline{A}}(\overline{B})=0,6$} ;
+        [.{$\overline{B}$} ]
+    ]
+  ]
+
+\end{tikzpicture}
+
+\end{document}
