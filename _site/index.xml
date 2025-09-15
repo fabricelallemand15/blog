@@ -10,7 +10,96 @@
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Mon, 23 Jun 2025 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 09 Sep 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>John von Neumann: Le polymathe architecte du numérique</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>L’objectif de cet article est de faire découvrir une figure incontournable de l’histoire des sciences et de l’informatique, souvent méconnue du grand public, mais dont les travaux sont absolument fondamentaux : John von Neumann.</p>
+<p>Sans lui, nos ordinateurs n’auraient pas la même tête, et de nombreux concepts que nous utilisons aujourd’hui n’existeraient peut-être pas. On peut dire de lui qu’il était un <strong>polymathe</strong> – c’est-à-dire une personne possédant une connaissance approfondie dans un grand nombre de domaines, notamment en sciences, en art et en philosophie – un vrai génie aux multiples contributions !</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="800px-JohnvonNeumann-LosAlamos.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="John von Neumann à Los Alamos en 1945 (source : Wikimedia Commons, domaine public)"><img src="https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/800px-JohnvonNeumann-LosAlamos.jpg" class="img-fluid figure-img" style="width:30.0%" alt="John von Neumann à Los Alamos en 1945 (source : Wikimedia Commons, domaine public)"></a></p>
+<figcaption>John von Neumann à Los Alamos en 1945 (source : Wikimedia Commons, domaine public)</figcaption>
+</figure>
+</div>
+<section id="lenfant-prodige-de-budapest-un-martien-avant-lheure" class="level2">
+<h2 class="anchored" data-anchor-id="lenfant-prodige-de-budapest-un-martien-avant-lheure">L’enfant prodige de Budapest : Un “Martien” avant l’heure</h2>
+<p>John von Neumann, né Neumann János Lajos, voit le jour le <strong>28 décembre 1903 à Budapest</strong>, dans une famille juive aisée et cultivée de l’Empire austro-hongrois. Son père, banquier, obtient un titre de noblesse en 1913, ajoutant le célèbre “von” à leur nom.</p>
+<p>Dès son plus jeune âge, János est un <strong>enfant prodige</strong>. À six ans, il converse en grec ancien avec son père et est capable de faire des divisions de nombres à huit chiffres de tête. À huit ans, il aurait déjà lu et mémorisé les quarante-quatre volumes de l’histoire universelle de la bibliothèque familiale. Il apprend l’allemand et le français très jeune, en plus du hongrois. À seulement 22 ans, il obtient son <strong>doctorat en mathématiques</strong> (avec la physique expérimentale et la chimie comme matières secondaires) de l’université Loránd-Eötvös. En parallèle, et à la demande de son père qui souhaitait le voir dans un secteur plus rémunérateur que les mathématiques, il obtient un diplôme en génie chimique de l’École polytechnique fédérale de Zurich. Entre 1926 et 1930, à 25 ans, il est le plus jeune au monde à obtenir le titre de privat-docent (habilitation universitaire) à Berlin et à Hambourg.</p>
+<p>Von Neumann fait partie d’une génération exceptionnelle d’intellectuels hongrois qui ont fui les persécutions et ont marqué la science du XXe siècle, comme Eugene Wigner, Edward Teller, Leó Szilárd ou Paul Erdős. Ils seront surnommés avec humour les “<strong>Martiens hongrois</strong>” en raison de leur intelligence hors du commun et de leur capacité d’intégration dans les milieux universitaires américains.</p>
+<p>L’enfance dorée de von Neumann est marquée par les troubles politiques en Hongrie après la Première Guerre mondiale, notamment la République des conseils hongrois de Béla Kun et la montée des totalitarismes. Cette expérience forge son <strong>anticommunisme viscéral</strong> et sa conviction que les régimes oppressifs sont une négation de la pensée libre. Cela influencera plus tard ses engagements aux États-Unis, où il émigre dans les années 1930 et est naturalisé américain en 1937.</p>
+</section>
+<section id="des-théories-abstraites-aux-applications-concrètes-le-savant-universel" class="level2">
+<h2 class="anchored" data-anchor-id="des-théories-abstraites-aux-applications-concrètes-le-savant-universel">Des théories abstraites aux applications concrètes : Le savant universel</h2>
+<p>John von Neumann est un véritable pont entre les mathématiques pures et leurs applications les plus concrètes.</p>
+<section id="logique-et-théorie-des-ensembles" class="level3">
+<h3 class="anchored" data-anchor-id="logique-et-théorie-des-ensembles">1. Logique et théorie des ensembles</h3>
+<p>Nous savons que la logique est la base de tout ce qui est informatique. Von Neumann a apporté des contributions majeures à la <strong>logique mathématique</strong> et à la <strong>théorie des ensembles</strong>. Il a par exemple proposé l’axiome de fondation dans sa thèse de doctorat, qui permet de structurer l’univers des ensembles et d’éviter des paradoxes. Il est également l’auteur de la <strong>théorie des classes de von Neumann-Bernays-Gödel</strong> (NBG), une reformulation essentielle de la théorie des ensembles. Ses travaux ont aussi permis de définir la notion de nombre ordinal, connue sous le nom d’<strong>ordinal de von Neumann</strong>.</p>
+<p>Il fut aussi l’un des rares à comprendre immédiatement les implications des <strong>théorèmes d’incomplétude de Gödel</strong> en 1930, montrant qu’aucun système axiomatique assez puissant ne peut démontrer sa propre cohérence.</p>
+</section>
+<section id="mécanique-quantique-et-analyse-fonctionnelle" class="level3">
+<h3 class="anchored" data-anchor-id="mécanique-quantique-et-analyse-fonctionnelle">2. Mécanique quantique et analyse fonctionnelle</h3>
+<p>Dans les années 1920-1930, il s’attaque à l’<strong>axiomatisation de la mécanique quantique</strong>. Il réalise qu’un système quantique peut être modélisé comme un vecteur dans un espace de Hilbert, et que les quantités physiques sont des opérateurs linéaires dans ces espaces. Cette approche mathématique rigoureuse réconcilie les différentes formalisations existantes et est exposée dans son ouvrage classique <em>Les Fondements mathématiques de la mécanique quantique</em> (1932). Il a aussi inventé les algèbres de von Neumann, des structures abstraites utilisées en physique, en logique et en théorie des opérateurs.</p>
+</section>
+<section id="économie-et-théorie-des-jeux" class="level3">
+<h3 class="anchored" data-anchor-id="économie-et-théorie-des-jeux">3. Économie et théorie des jeux</h3>
+<p>La <strong>théorie des jeux</strong> est un domaine qui combine maths, logique et prise de décision, avec des applications en IA et en algorithmique. Von Neumann est l’un des pères fondateurs de la théorie des jeux moderne.</p>
+<p>En 1928, il formule <strong>le théorème du minimax</strong>, qui établit que dans un jeu à somme nulle avec information parfaite, chaque joueur rationnel dispose de stratégies optimales. Il a ensuite étendu cette théorie aux jeux avec asymétrie d’information et à plus de deux joueurs, culminant avec la publication de la célèbre <em>Théorie des jeux et comportements économiques</em> en collaboration avec Oskar Morgenstern en 1944. Cette théorie permet de modéliser les conflits, les négociations, les alliances et même le comportement des missiles.</p>
+<p>Le principe de la dissuasion nucléaire trouve ses racines dans le minimax et influencera même le personnage du <strong>Docteur Folamour</strong> de Stanley Kubrick, qui emprunte beaucoup à von Neumann.</p>
+</section>
+<section id="armement-atomique-et-la-seconde-guerre-mondiale" class="level3">
+<h3 class="anchored" data-anchor-id="armement-atomique-et-la-seconde-guerre-mondiale">4. Armement atomique et la Seconde Guerre mondiale</h3>
+<p>Son expertise en mathématiques appliquées (balistique, dynamique des chocs, hydrodynamique) le conduit à collaborer avec l’armée américaine dès les années 1930. En 1943, il rejoint le <strong>Projet Manhatta</strong>n à Los Alamos, le programme ultra-secret visant à concevoir la bombe atomique.</p>
+<p>Von Neumann est crucial pour les calculs d’implosion nécessaires à la bombe au plutonium (comme “Fat Man” larguée sur Nagasaki) et pour déterminer la <strong>hauteur optimale d’explosion</strong> pour maximiser les dégâts. Il assiste même au test “Trinity” en juillet 1945. Son approche était d’une froideur scientifique impressionnante, et il ne semblait pas avoir de doutes moraux, convaincu de la nécessité de vaincre les nazis, puis de contenir les Soviétiques. Son anticommunisme était notoire, et il a même milité pour une frappe préventive contre l’URSS, considérant ce régime comme un danger absolu.</p>
+</section>
+<section id="informatique" class="level3">
+<h3 class="anchored" data-anchor-id="informatique">5. Informatique</h3>
+<p>Le développement des bombes atomiques a nécessité un nombre colossal de calculs, rendant les ordinateurs essentiels. Von Neumann a donné son nom à l’<strong>architecture de von Neumann</strong>, le modèle utilisé dans la quasi-totalité des ordinateurs modernes. Ce modèle, dont il fut le rapporteur en 1945 avec le <em>First Draft of a Report on the EDVAC</em>, est à la base de la conception de la plupart des machines que nous utilisons aujourd’hui, y compris vos téléphones portables.</p>
+<p>Cette architecture repose sur quatre composants principaux :</p>
+<ol type="1">
+<li>L’Unité Arithmétique et Logique (UAL), qui effectue les opérations de base.</li>
+<li>L’unité de contrôle, qui séquence les opérations.</li>
+<li>La mémoire, qui stocke à la fois les données ET les instructions du programme (c’est l’idée révolutionnaire d’un programme enregistré !).</li>
+<li>Les dispositifs d’entrées-sorties, pour communiquer avec le monde extérieur.</li>
+</ol>
+<p>Précisons que la paternité de cette architecture est débattue, avec des contributions d’autres pionniers comme J. Presper Eckert, John William Mauchly, et Alan Turing. Cependant, von Neumann a été le premier à la formaliser de manière aussi complète.</p>
+<p>Mais ce n’est pas tout ! Il est aussi, avec Stanislaw Ulam, à l’origine du concept d’<strong>automates cellulaires</strong>. Incapable de concevoir physiquement des automates auto-reproducteurs, il a travaillé sur le problème de manière purement mathématique, simulant un processus d’auto-reproduction sur une grille discrète. Ces travaux, publiés dans son œuvre posthume <em>Theory of Self-Reproducing Automata</em>, ont inspiré des modèles comme le célèbre <em>Jeu de la vie</em> de Conway, qui simule l’évolution de systèmes complexes à partir de règles simples. C’est une porte ouverte sur la simulation numérique et l’intelligence artificielle !</p>
+<p>Enfin, John von Neumann a été le premier à envisager la notion de singularité technologique dans les années 1950, l’idée que le progrès technologique pourrait devenir incontrôlable et irréversible, entraînant des changements imprévisibles pour la civilisation humaine.</p>
+</section>
+</section>
+<section id="lhomme-derrière-le-génie-entre-cynisme-et-bon-vivant" class="level2">
+<h2 class="anchored" data-anchor-id="lhomme-derrière-le-génie-entre-cynisme-et-bon-vivant">L’homme derrière le génie : Entre cynisme et bon vivant</h2>
+<p>Derrière ce cerveau aux “options illimitées”, se cachait un homme complexe. Von Neumann n’était pas le stéréotype du savant enfermé dans sa tour d’ivoire. C’était un bon vivant, un raconteur d’histoires, gourmand et parfois grivois. Il organisait des fêtes mémorables où il côtoyait le gratin scientifique, y compris Albert Einstein. Son humour était légendaire, de temps en temps cruel, souvent brillant. On lui attribue cette célèbre phrase : « Si les gens ne croient pas que les mathématiques sont simples, c’est uniquement parce qu’ils ne réalisent pas à quel point la vie est compliquée ».</p>
+<p>Pourtant, sous cette aisance se cachait un pessimisme croissant et une vision cynique du monde, notamment face à l’inéluctabilité d’un holocauste nucléaire. Il ne manifesta jamais de regrets en public concernant son travail sur l’armement nucléaire. Sa trop grande rapidité d’esprit le laissait souvent seul, peu de gens pouvant réellement converser à son niveau.</p>
+<p>John von Neumann décède en 1957 à l’âge de 53 ans d’un cancer, probablement lié à son exposition aux radiations lors de ses travaux sur les armes nucléaires à Los Alamos ou durant des essais nucléaires. Son lit d’hôpital était même sous haute surveillance militaire par crainte qu’il ne divulgue accidentellement des secrets.</p>
+</section>
+<section id="son-héritage-un-architecte-du-monde-moderne" class="level2">
+<h2 class="anchored" data-anchor-id="son-héritage-un-architecte-du-monde-moderne">Son héritage : Un architecte du monde moderne</h2>
+<p>Aujourd’hui encore, son nom est invoqué dans les laboratoires d’IA, les modèles climatiques, les débats sur la guerre algorithmique ou l’éthique des machines. Son héritage est partout, comme une architecture invisible du monde moderne. Il est sans doute l’un des derniers universalistes à avoir cru qu’un esprit humain, bien entraîné et curieux, pouvait encore tout embrasser et tout relier. C’est l’un des esprits qui a véritablement façonné le monde numérique dans lequel nous vivons !</p>
+<p>Cet article est un rapide résumé de la vie et des contributions de John von Neumann, en grande partie rédigé à partir de l’épisode du podcast <em>Maths en têtes</em> qui lui est consacré et que vous pouvez écouter ci-dessous.</p>
+<iframe name="Ausha Podcast Player" frameborder="0" loading="lazy" id="ausha-RV3j" height="220" style="border: none; width:100%; height:220px" src="https://player.ausha.co/?podcastId=b7vZYSVDqP2M&amp;v=3&amp;playerId=ausha-RV3j">
+</iframe>
+<script src="https://player.ausha.co/ausha-player.js"></script>
+
+
+</section>
+
+ ]]></description>
+  <category>Histoire</category>
+  <category>Informatique</category>
+  <category>Mathématiques</category>
+  <category>Science</category>
+  <guid>https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/</guid>
+  <pubDate>Tue, 09 Sep 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/800px-JohnvonNeumann-LosAlamos.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Corrigé du sujet de Mathématiques du baccalauréat 2025 - Métropole Jour 2</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -7832,42 +7921,6 @@ Avertissement
   <guid>https://flallemand.fr/blog/posts/fsf-history/</guid>
   <pubDate>Fri, 22 Sep 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/membermeeting.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Intel veut révolutionner les microprocesseurs avec un substrat en verre</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/intel_verre/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Les microprocesseurs sont au cœur de nos ordinateurs, smartphones, tablettes et autres appareils électroniques. Ils sont composés de millions, voire de milliards, de transistors qui réalisent des opérations logiques et arithmétiques à une vitesse vertigineuse. Mais ces transistors sont de plus en plus petits et difficiles à fabriquer, ce qui menace la loi de Moore, qui prédit que la puissance des microprocesseurs double tous les deux ans (<a href="https://pnsi.flallemand.fr/10_vonNeumann/neumann_cours_1.html" target="_blank">voir cours de première NSI</a>).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="cpu-3061923_640.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="CPU"><img src="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" class="img-fluid figure-img" style="width:50.0%" alt="CPU"></a></p>
-<figcaption>CPU</figcaption>
-</figure>
-</div>
-<p>Pour relever ce défi, Intel, le géant américain des semi-conducteurs, a annoncé avoir développé un nouveau substrat en verre pour remplacer le plastique actuellement utilisé. Le substrat est la base sur laquelle sont gravés les circuits des microprocesseurs. Il doit être plat, rigide et résistant à la chaleur et aux contraintes mécaniques.</p>
-<p>Le verre présente plusieurs avantages par rapport au plastique. Il est plus stable et supporte des températures plus élevées, ce qui permet de serrer davantage de puces sur un seul substrat sans qu’il se déforme. Il offre aussi une meilleure distribution de l’énergie et une transmission plus rapide des signaux, grâce à l’intégration d’interconnexions optiques qui remplacent le cuivre. Le verre permettrait ainsi de multiplier par dix la densité des interconnexions entre les puces.</p>
-<p>Avec ce nouveau substrat en verre, Intel espère pouvoir augmenter considérablement la densité des transistors au sein des microprocesseurs et créer le premier paquet contenant mille milliards de transistors d’ici 2030. Un paquet est un système sur un seul substrat composé de plusieurs puces qui peuvent avoir des fonctions différentes, comme la mémoire, le calcul ou la communication.</p>
-<p>Ce projet ambitieux pourrait révolutionner le domaine des microprocesseurs et donner un nouveau souffle à la loi de Moore. Intel prévoit de lancer ses premiers produits commerciaux basés sur ce substrat en verre avant la fin de la décennie. Il faudra toutefois attendre les résultats des tests et des validations pour confirmer les performances et la fiabilité de cette technologie.</p>
-<p>La vidéo ci-dessous explique cette innovation (vous pouvez afficher les sous-titres en français) :</p>
-<iframe width="840" height="472" src="https://www.youtube.com/embed/_T-mh72VRIY?si=bldJkxFypd7TgN2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<p>Source : <a href="https://www.futura-sciences.com/tech/actualites/processeur-intel-transforme-plafond-verre-tremplin-avenir-processeurs-107780" target="_blank">Futura Sciences</a></p>
-<p>Image : <a href="https://pixabay.com/fr/users/zathris-7597199/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3061923" target="_blank">Dan Williams</a> de <a href="https://pixabay.com/fr//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3061923" target="_blank">Pixabay</a></p>
-
-
-
- ]]></description>
-  <category>NSI</category>
-  <category>Actualités</category>
-  <guid>https://flallemand.fr/blog/posts/intel_verre/</guid>
-  <pubDate>Wed, 20 Sep 2023 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/intel_verre/cpu-3061923_640.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
