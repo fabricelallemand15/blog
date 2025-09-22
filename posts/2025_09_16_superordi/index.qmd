@@ -1,0 +1,71 @@
+---
+title: "Superordinateurs : pour quoi faire ?"
+date : "2025-09-22"
+categories: [Informatique, IA, Actualités]
+image: "Le_supercalculateur_Jean_Zay_.jpg"
+---
+
+Quand on parle d'ordinateur, on pense souvent à notre ordinateur personnel, celui que l'on utilise pour naviguer sur internet ou pour faire du traitement de texte, ou encore pour jouer à Minecraft... 
+
+Et ceux qui ont un peu de culture informatique savent que les premiers ordinateurs, dans les années 40 ou 50, étaient de gigantesques machines occupant des pièces entières et coûtant des millions de dollars. Ce temps semble bien loin aujourd'hui, mais il existe encore des ordinateurs de cette taille : **les superordinateurs**.
+
+## Qu'est-ce qu'un superordinateur ?
+
+Un superordinateur est un ordinateur extrêmement puissant, capable de réaliser des calculs à une vitesse phénoménale. Ils sont utilisés pour des tâches qui nécessitent une puissance de calcul bien au-delà de ce que les ordinateurs personnels ou même les serveurs peuvent offrir. On parle aussi de **supercalculateur**.
+
+La science des superordinateurs (HPC, pour High Performance Computing) nécessite une conception matérielle dédiée, avec des processeurs très rapides, une mémoire vive (RAM) énorme, et souvent des systèmes de refroidissement sophistiqués pour éviter la surchauffe, mais aussi le développement de logiciels optimisés et adaptés à ces architectures très spécifiques.
+
+## À quoi servent les superordinateurs ?
+
+Les superordinateurs sont utilisés dans de nombreux domaines scientifiques et industriels qui demandent une grande puissance de calcul : les prévisions météorologiques, la modélisation climatique, la recherche en astrophysique, la simulation de réactions chimiques, simulation d'essais nucléaires, le développement de nouveaux médicaments, la cryptanalyse et bien d'autres encore. Ils permettent de traiter des quantités massives de données et d'effectuer des simulations complexes en un temps record, ce qui serait impossible avec des ordinateurs classiques.
+
+## Exemple : Jean Zay 4, le supercalculateur français
+
+![Jean Zay 4](Le_supercalculateur_Jean_Zay_.jpg){width=50%}
+
+Un article récent paru dans le journal du CNRS propose une vidéo présentant [Jean Zay 4, le supercalculateur le plus puissant de France pour la recherche](https://lejournal.cnrs.fr/videos/jean-zay-4-supercalculateur-le-plus-puissant-de-france).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8JdjePR9mvo?si=Sq4ZQ1976O9wHdtF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Il est capable de résoudre des milliards d'opérations flottantes par seconde et est mis à la disposition de la communauté scientifique pour la recherche en intelligence artificielle. Ce superordinateur se trouve à l'IDRIS (Institut du Développement et des Ressources en Informatique Scientifique), un centre de calcul du CNRS situé sur le plateau de Saclay, près de Paris.
+
+Depuis sa création en 2019 avec une puissance de 14 pétaflops, Jean Zay 4 a connu quatre extensions et culmine désormais à 126 pétaflops, soit 126 millions de milliards d'opérations flottantes par seconde.
+
+:::{.callout-tip}
+## Unité de mesure
+
+**FLOPS** : FLOPS (Floating Point Operations Per Second) est une unité de mesure de la performance des ordinateurs, en particulier pour les calculs en virgule flottante. Un pétaflop équivaut à $10^{15}$ FLOPS, soit un million de milliards d'opérations par seconde.
+:::
+
+Le supercalculateur se compose de 16 racks, chacun abritant 26 châssis. Chaque châssis est équipé de quatre processeurs graphiques (GPU Nvidia H100) et de deux processeurs CPU, le tout interconnecté. Au total, il compte près de 1500 GPU.
+
+Jean Zay 4 pèse 2,5 tonnes par mètre carré et est traversé par de larges tuyaux d'eau pour refroidir ses composants électroniques. La chaleur récupérée est réutilisée pour chauffer le bâtiment de l'IDRIS et contribue au chauffage des bâtiments du plateau de Saclay, générant environ 6500 MWh par an, l'équivalent du chauffage de 1500 logements neufs.
+
+Les chercheurs doivent soumettre un dossier évalué scientifiquement pour accéder à Jean Zay 4. Ils peuvent ensuite se connecter à distance et réserver des GPU pour leurs simulations numériques, le supercalculateur fonctionnant 24h/24, 7j/7.
+
+Un exemple d'utilisation est présenté dans la vidéo. François Lanusse, chercheur au CNRS, a développé Eon One, un outil d'intelligence artificielle multifonction grâce à Jean Zay 4. Eon One est un modèle de fondation capable de comprendre une grande variété de données et de s'adapter facilement aux besoins des astrophysiciens. Il a été entraîné sur une quantité astronomique de données provenant de divers télescopes, nécessitant la mobilisation de centaines de GPU pendant plusieurs jours.
+
+L'outil peut détecter et classer des objets similaires dans d'énormes jeux de données, par exemple pour trouver des lentilles gravitationnelles parmi des milliards de galaxies.
+
+Eon One sera prochainement disponible en accès libre pour la communauté scientifique, favorisant une recherche plus collaborative.
+
+## Le supercalculateur européen Jupiter
+
+En septembre 2025 a été inauguré à Jülich, en Allemagne, le supercalculateur européen Jupiter.  Il est destiné à la recherche scientifique et à l'innovation industrielle en Europe. Il s'agit de la machine la plus puissante d'Europe et la quatrième au monde, capable d'effectuer un milliard de milliards d'opérations par seconde (1 exaflop/s).
+
+Jupiter a été élaboré par **le groupe français Atos** et financé par l'Union européenne et l'Allemagne.
+
+On peut lire dans l'article du journal Le Monde (5/09/2025, lien en sources) :
+
+> "Jupiter occupe une surface de près de 3 600 mètres carrés – soit environ la moitié d’un terrain de football – avec des rangées de processeurs et environ 24 000 puces du grand groupe américain Nvidia, prisées par l’industrie de l’intelligence artificielle. [...] Jupiter fournit ainsi la puissance de calcul nécessaire pour entraîner efficacement les modèles de langage de grande taille (LLM) produisant d’énormes volumes de textes et utilisés dans des chatbots génératifs, comme ChatGPT ou Gemini."
+
+Cependant, Jupiter n'est pas uniquement destiné à l'intelligence artificielle. Il sera également utilisé pour des applications dans divers domaines scientifiques, tels que la recherche sur les matériaux, la biologie, la médecine, la physique des particules et la climatologie.
+
+![Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)](jupiter.webp){width=50%}
+
+**Sources utilisées pour cet article :**
+
+- [Le supercalculateur Jean Zay 4, le plus puissant de France pour la recherche](https://lejournal.cnrs.fr/videos/jean-zay-4-supercalculateur-le-plus-puissant-de-france){target="_blank"} (CNRS, 12/06/2025)
+- [L’Europe lance Jupiter, son supercalculateur, destiné à rattraper son retard dans l’IA](https://www.lemonde.fr/economie/article/2025/09/05/l-europe-lance-jupiter-son-supercalculateur-destine-a-rattraper-son-retard-dans-l-ia_6639102_3234.html){target="_blank"} (Le Monde, 05/09/2025)
+- [Photo du supercalculateur Jean Zay sur Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Le_supercalculateur_Jean_Zay_.jpg){target="_blank"}
+- [Photo du supercalculateur Jupiter publiée sur le site des Echos](https://www.lesechos.fr/tech-medias/intelligence-artificielle/leurope-devoile-son-plus-puissant-supercalculateur-pour-gagner-la-bataille-de-lia-2184679){target="_blank"}

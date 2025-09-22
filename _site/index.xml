@@ -9,8 +9,96 @@
 <link>https://flallemand.fr/blog/</link>
 <atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.7.31</generator>
-<lastBuildDate>Tue, 09 Sep 2025 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.0</generator>
+<lastBuildDate>Sun, 21 Sep 2025 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Superordinateurs : pour quoi faire ?</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://flallemand.fr/blog/posts/2025_09_16_superordi/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Quand on parle d’ordinateur, on pense souvent à notre ordinateur personnel, celui que l’on utilise pour naviguer sur internet ou pour faire du traitement de texte, ou encore pour jouer à Minecraft…</p>
+<p>Et ceux qui ont un peu de culture informatique savent que les premiers ordinateurs, dans les années 40 ou 50, étaient de gigantesques machines occupant des pièces entières et coûtant des millions de dollars. Ce temps semble bien loin aujourd’hui, mais il existe encore des ordinateurs de cette taille : <strong>les superordinateurs</strong>.</p>
+<section id="quest-ce-quun-superordinateur" class="level2">
+<h2 class="anchored" data-anchor-id="quest-ce-quun-superordinateur">Qu’est-ce qu’un superordinateur ?</h2>
+<p>Un superordinateur est un ordinateur extrêmement puissant, capable de réaliser des calculs à une vitesse phénoménale. Ils sont utilisés pour des tâches qui nécessitent une puissance de calcul bien au-delà de ce que les ordinateurs personnels ou même les serveurs peuvent offrir. On parle aussi de <strong>supercalculateur</strong>.</p>
+<p>La science des superordinateurs (HPC, pour High Performance Computing) nécessite une conception matérielle dédiée, avec des processeurs très rapides, une mémoire vive (RAM) énorme, et souvent des systèmes de refroidissement sophistiqués pour éviter la surchauffe, mais aussi le développement de logiciels optimisés et adaptés à ces architectures très spécifiques.</p>
+</section>
+<section id="à-quoi-servent-les-superordinateurs" class="level2">
+<h2 class="anchored" data-anchor-id="à-quoi-servent-les-superordinateurs">À quoi servent les superordinateurs ?</h2>
+<p>Les superordinateurs sont utilisés dans de nombreux domaines scientifiques et industriels qui demandent une grande puissance de calcul : les prévisions météorologiques, la modélisation climatique, la recherche en astrophysique, la simulation de réactions chimiques, simulation d’essais nucléaires, le développement de nouveaux médicaments, la cryptanalyse et bien d’autres encore. Ils permettent de traiter des quantités massives de données et d’effectuer des simulations complexes en un temps record, ce qui serait impossible avec des ordinateurs classiques.</p>
+</section>
+<section id="exemple-jean-zay-4-le-supercalculateur-français" class="level2">
+<h2 class="anchored" data-anchor-id="exemple-jean-zay-4-le-supercalculateur-français">Exemple : Jean Zay 4, le supercalculateur français</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Le_supercalculateur_Jean_Zay_.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Jean Zay 4"><img src="https://flallemand.fr/blog/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Jean Zay 4"></a></p>
+<figcaption>Jean Zay 4</figcaption>
+</figure>
+</div>
+<p>Un article récent paru dans le journal du CNRS propose une vidéo présentant <a href="https://lejournal.cnrs.fr/videos/jean-zay-4-supercalculateur-le-plus-puissant-de-france">Jean Zay 4, le supercalculateur le plus puissant de France pour la recherche</a>.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8JdjePR9mvo?si=Sq4ZQ1976O9wHdtF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p>Il est capable de résoudre des milliards d’opérations flottantes par seconde et est mis à la disposition de la communauté scientifique pour la recherche en intelligence artificielle. Ce superordinateur se trouve à l’IDRIS (Institut du Développement et des Ressources en Informatique Scientifique), un centre de calcul du CNRS situé sur le plateau de Saclay, près de Paris.</p>
+<p>Depuis sa création en 2019 avec une puissance de 14 pétaflops, Jean Zay 4 a connu quatre extensions et culmine désormais à 126 pétaflops, soit 126 millions de milliards d’opérations flottantes par seconde.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Unité de mesure
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>FLOPS</strong> : FLOPS (Floating Point Operations Per Second) est une unité de mesure de la performance des ordinateurs, en particulier pour les calculs en virgule flottante. Un pétaflop équivaut à <img src="https://latex.codecogs.com/png.latex?10%5E%7B15%7D"> FLOPS, soit un million de milliards d’opérations par seconde.</p>
+</div>
+</div>
+<p>Le supercalculateur se compose de 16 racks, chacun abritant 26 châssis. Chaque châssis est équipé de quatre processeurs graphiques (GPU Nvidia H100) et de deux processeurs CPU, le tout interconnecté. Au total, il compte près de 1500 GPU.</p>
+<p>Jean Zay 4 pèse 2,5 tonnes par mètre carré et est traversé par de larges tuyaux d’eau pour refroidir ses composants électroniques. La chaleur récupérée est réutilisée pour chauffer le bâtiment de l’IDRIS et contribue au chauffage des bâtiments du plateau de Saclay, générant environ 6500 MWh par an, l’équivalent du chauffage de 1500 logements neufs.</p>
+<p>Les chercheurs doivent soumettre un dossier évalué scientifiquement pour accéder à Jean Zay 4. Ils peuvent ensuite se connecter à distance et réserver des GPU pour leurs simulations numériques, le supercalculateur fonctionnant 24h/24, 7j/7.</p>
+<p>Un exemple d’utilisation est présenté dans la vidéo. François Lanusse, chercheur au CNRS, a développé Eon One, un outil d’intelligence artificielle multifonction grâce à Jean Zay 4. Eon One est un modèle de fondation capable de comprendre une grande variété de données et de s’adapter facilement aux besoins des astrophysiciens. Il a été entraîné sur une quantité astronomique de données provenant de divers télescopes, nécessitant la mobilisation de centaines de GPU pendant plusieurs jours.</p>
+<p>L’outil peut détecter et classer des objets similaires dans d’énormes jeux de données, par exemple pour trouver des lentilles gravitationnelles parmi des milliards de galaxies.</p>
+<p>Eon One sera prochainement disponible en accès libre pour la communauté scientifique, favorisant une recherche plus collaborative.</p>
+</section>
+<section id="le-supercalculateur-européen-jupiter" class="level2">
+<h2 class="anchored" data-anchor-id="le-supercalculateur-européen-jupiter">Le supercalculateur européen Jupiter</h2>
+<p>En septembre 2025 a été inauguré à Jülich, en Allemagne, le supercalculateur européen Jupiter. Il est destiné à la recherche scientifique et à l’innovation industrielle en Europe. Il s’agit de la machine la plus puissante d’Europe et la quatrième au monde, capable d’effectuer un milliard de milliards d’opérations par seconde (1 exaflop/s).</p>
+<p>Jupiter a été élaboré par <strong>le groupe français Atos</strong> et financé par l’Union européenne et l’Allemagne.</p>
+<p>On peut lire dans l’article du journal Le Monde (5/09/2025, lien en sources) :</p>
+<blockquote class="blockquote">
+<p>“Jupiter occupe une surface de près de 3 600 mètres carrés – soit environ la moitié d’un terrain de football – avec des rangées de processeurs et environ 24 000 puces du grand groupe américain Nvidia, prisées par l’industrie de l’intelligence artificielle. […] Jupiter fournit ainsi la puissance de calcul nécessaire pour entraîner efficacement les modèles de langage de grande taille (LLM) produisant d’énormes volumes de textes et utilisés dans des chatbots génératifs, comme ChatGPT ou Gemini.”</p>
+</blockquote>
+<p>Cependant, Jupiter n’est pas uniquement destiné à l’intelligence artificielle. Il sera également utilisé pour des applications dans divers domaines scientifiques, tels que la recherche sur les matériaux, la biologie, la médecine, la physique des particules et la climatologie.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="jupiter.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)"><img src="https://flallemand.fr/blog/posts/2025_09_16_superordi/jupiter.webp" class="img-fluid figure-img" style="width:50.0%" alt="Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)"></a></p>
+<figcaption>Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)</figcaption>
+</figure>
+</div>
+<p><strong>Sources utilisées pour cet article :</strong></p>
+<ul>
+<li><a href="https://lejournal.cnrs.fr/videos/jean-zay-4-supercalculateur-le-plus-puissant-de-france" target="_blank">Le supercalculateur Jean Zay 4, le plus puissant de France pour la recherche</a> (CNRS, 12/06/2025)</li>
+<li><a href="https://www.lemonde.fr/economie/article/2025/09/05/l-europe-lance-jupiter-son-supercalculateur-destine-a-rattraper-son-retard-dans-l-ia_6639102_3234.html" target="_blank">L’Europe lance Jupiter, son supercalculateur, destiné à rattraper son retard dans l’IA</a> (Le Monde, 05/09/2025)</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Le_supercalculateur_Jean_Zay_.jpg" target="_blank">Photo du supercalculateur Jean Zay sur Wikimedia Commons</a></li>
+<li><a href="https://www.lesechos.fr/tech-medias/intelligence-artificielle/leurope-devoile-son-plus-puissant-supercalculateur-pour-gagner-la-bataille-de-lia-2184679" target="_blank">Photo du supercalculateur Jupiter publiée sur le site des Echos</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Informatique</category>
+  <category>IA</category>
+  <category>Actualités</category>
+  <guid>https://flallemand.fr/blog/posts/2025_09_16_superordi/</guid>
+  <pubDate>Sun, 21 Sep 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://flallemand.fr/blog/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>John von Neumann: Le polymathe architecte du numérique</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -7868,59 +7956,6 @@ Avertissement
   <guid>https://flallemand.fr/blog/posts/tribuneMS/</guid>
   <pubDate>Wed, 18 Oct 2023 22:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/tribuneMS/larecherche.png" medium="image" type="image/png" height="152" width="144"/>
-</item>
-<item>
-  <title>L’histoire de la Free Software Foundation (FSF)</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/fsf-history/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Si vous êtes passionné par le logiciel libre et open source, vous avez probablement entendu parler de la Free Software Foundation (FSF). Cette organisation emblématique a joué un rôle central dans la promotion et la défense du logiciel libre depuis sa création en 1985 par Richard Stallman. Dans cet article, je vous propose un résumé de la page officielle de la FSF dédiée à son histoire, que vous pouvez consulter ici : <a href="https://www.fsf.org/history/" target="_blank">Lien vers la page officielle de la FSF sur son histoire</a>.</p>
-<p><strong>Vous trouverez aussi sur ce site une traduction de cette page en français, que vous pouvez consulter ici : <a href="https://flallemand.fr/divers/fsf-history/index.html" target="_blank">Lien vers la version traduite de la page d’histoire de la FSF</a>.</strong></p>
-<section id="les-débuts-de-la-fsf" class="level3">
-<h3 class="anchored" data-anchor-id="les-débuts-de-la-fsf">Les débuts de la FSF</h3>
-<p>La page d’histoire de la FSF nous emmène tout d’abord dans les premiers jours de l’organisation. Nous découvrons comment Richard Stallman, un programmeur visionnaire, a lancé la FSF avec pour objectif de promouvoir et de protéger les logiciels libres. Stallman a posé les bases de ce mouvement en créant la licence publique générale GNU (GPL), qui est devenue la pierre angulaire de la philosophie du logiciel libre.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fsf-history\img\event\rms-bw.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Richard Stallman"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/rms-bw.jpg" class="img-fluid figure-img" alt="Richard Stallman"></a></p>
-<figcaption>Richard Stallman</figcaption>
-</figure>
-</div>
-</section>
-<section id="la-lutte-pour-la-liberté" class="level3">
-<h3 class="anchored" data-anchor-id="la-lutte-pour-la-liberté">La lutte pour la liberté</h3>
-<p>La page de la FSF met également en lumière les nombreuses batailles juridiques et politiques menées par l’organisation pour défendre les droits des utilisateurs de logiciels libres. Les actions de la FSF ont contribué à préserver la liberté des logiciels en luttant contre les brevets logiciels, les DRM et d’autres menaces potentielles pour la communauté du logiciel libre.</p>
-</section>
-<section id="lessor-du-mouvement" class="level3">
-<h3 class="anchored" data-anchor-id="lessor-du-mouvement">L’essor du mouvement</h3>
-<p>Au fil des années, le mouvement du logiciel libre a gagné en popularité et en influence, en grande partie grâce aux efforts inlassables de la FSF. L’article détaille comment l’organisation a collaboré avec d’autres acteurs importants du domaine, notamment la Free Software Community, pour promouvoir la diffusion de logiciels libres et ouvrir la voie à des alternatives gratuites aux logiciels propriétaires.</p>
-</section>
-<section id="limportance-continue-de-la-fsf" class="level3">
-<h3 class="anchored" data-anchor-id="limportance-continue-de-la-fsf">L’importance continue de la FSF</h3>
-<p>Enfin, la page officielle de la FSF souligne l’importance continue de l’organisation dans le paysage actuel du logiciel libre. La FSF continue de jouer un rôle crucial dans la défense des droits des utilisateurs et dans la sensibilisation du public aux enjeux du logiciel libre.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="fsf-history\img\event\01100ryf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Respect your freedom"><img src="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/01100ryf.png" class="img-fluid figure-img" alt="Respect your freedom"></a></p>
-<figcaption>Respect your freedom</figcaption>
-</figure>
-</div>
-<p>Pour une version complète de cette page, entièrement traduite en français, je vous invite à consulter le lien : <a href="https://flallemand.fr/divers/fsf-history/index.html" target="_blank">Lien vers la version traduite de la page d’histoire de la FSF</a>. Les liens vers lesquels la page renvoie, pour en savoir plus, ne sont pas traduits !</p>
-
-
-</section>
-
- ]]></description>
-  <category>NSI</category>
-  <category>Informatique</category>
-  <category>Histoire</category>
-  <category>Linux</category>
-  <guid>https://flallemand.fr/blog/posts/fsf-history/</guid>
-  <pubDate>Fri, 22 Sep 2023 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/fsf-history/fsf-history/img/event/membermeeting.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
