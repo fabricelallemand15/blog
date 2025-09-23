@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,14 +71,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-6333daaf11ee6747566f50451d77e882.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -164,7 +165,8 @@ cookieconsent.run({
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../avatar.png" alt="" class="navbar-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../../avatar.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
@@ -259,7 +261,9 @@ cookieconsent.run({
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/tutoIA_podcast/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
-    </div>
+    <div class="quarto-margin-footer"><div class="margin-footer-item">
+<p><a href="../../avatar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="../../avatar.png" class="img-fluid"></a></p>
+</div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -279,7 +283,7 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="étape-1-télécharger-le-podcast">Étape 1 : Télécharger le podcast</h2>
 <p>Pour permettre à l’IA de travailler sur le podcast, nous devons d’abord le télécharger. Nous allons prendre comme exemple un podcast de France Culture sur l’intelligence artificielle, dont la page est la suivante : <a href="https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100" target="_blank">https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100</a>.</p>
 <p>Le site de France Culture ne permet pas de télécharger directement le podcast, mais vous pouvez utiliser un outil comme <code>youtube-dl</code> pour le faire. Par exemple, pour télécharger le podcast en format mp3, vous pouvez utiliser la commande suivante :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">youtube-dl</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">youtube-dl</span> <span class="at">-x</span> <span class="at">--audio-format</span> mp3 https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Mais il est aussi possible d’utiliser l’IA pour télécharger le podcast. En effet, l’adresse du fichier mp3 est souvent présente dans le code source de la page web. Vous pouvez donc utiliser une IA pour extraire cette adresse et télécharger le fichier. Voici comment procéder.</p>
 <ul>
 <li>Charger la page du podcast dans votre navigateur. Faire un clic droit sur la page, puis sélectionner “Afficher le code source de la page” (ou équivalent).</li>
@@ -292,7 +296,7 @@ cookieconsent.run({
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -321,7 +325,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -351,7 +355,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -369,7 +373,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -386,7 +390,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -455,13 +459,14 @@ Prompt
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -5169,13 +5169,13 @@ All year, in Calculus<br> We’ve learned so many things<br> About which we are 
 <h2 class="anchored" data-anchor-id="étape-1-télécharger-le-podcast">Étape 1 : Télécharger le podcast</h2>
 <p>Pour permettre à l’IA de travailler sur le podcast, nous devons d’abord le télécharger. Nous allons prendre comme exemple un podcast de France Culture sur l’intelligence artificielle, dont la page est la suivante : <a href="https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100" target="_blank">https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100</a>.</p>
 <p>Le site de France Culture ne permet pas de télécharger directement le podcast, mais vous pouvez utiliser un outil comme <code>youtube-dl</code> pour le faire. Par exemple, pour télécharger le podcast en format mp3, vous pouvez utiliser la commande suivante :</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">youtube-dl</span> <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">-x</span> <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100</span></code></pre></div>
+font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franceculture/podcasts/la-science-cqfd/ia-forte-la-paranoia-5901100</span></code></pre></div></div>
 <p>Mais il est aussi possible d’utiliser l’IA pour télécharger le podcast. En effet, l’adresse du fichier mp3 est souvent présente dans le code source de la page web. Vous pouvez donc utiliser une IA pour extraire cette adresse et télécharger le fichier. Voici comment procéder.</p>
 <ul>
 <li>Charger la page du podcast dans votre navigateur. Faire un clic droit sur la page, puis sélectionner “Afficher le code source de la page” (ou équivalent).</li>
@@ -5188,7 +5188,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5217,7 +5217,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5247,7 +5247,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5265,7 +5265,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5282,7 +5282,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Prompt
+<span class="screen-reader-only">Astuce</span>Prompt
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5362,7 +5362,7 @@ Prompt
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-L’algorithme du simplexe : trouver le meilleur chemin
+<span class="screen-reader-only">Astuce</span>L’algorithme du simplexe : trouver le meilleur chemin
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5387,7 +5387,7 @@ L’algorithme du simplexe : trouver le meilleur chemin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Problèmes NP-complets et la grande question P vs NP
+<span class="screen-reader-only">Astuce</span>Problèmes NP-complets et la grande question P vs NP
 </div>
 </div>
 <div class="callout-body-container callout-body">

@@ -13,6 +13,10 @@ website:
     background: light
     logo: avatar.png
     right:
+      - text: 1ère NSI
+        href: https://pnsi.sitelf.fr
+      - text: "Terminale NSI"
+        href: https://tnsi.sitelf.fr
       - about.qmd
       - icon: github
         href: https://github.com/fabricelallemand15/blog
