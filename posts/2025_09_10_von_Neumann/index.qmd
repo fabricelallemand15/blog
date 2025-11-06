@@ -1,5 +1,5 @@
 ---
-title: "John von Neumann: Le polymathe architecte du numérique"
+title: "John von Neumann: Le génie architecte du numérique"
 date : "2025-09-10"
 categories: [Histoire, Informatique, Mathématiques, Science]
 image: "800px-JohnvonNeumann-LosAlamos.jpg"
@@ -80,5 +80,8 @@ Aujourd'hui encore, son nom est invoqué dans les laboratoires d'IA, les modèle
 
 Cet article est un rapide résumé de la vie et des contributions de John von Neumann, en grande partie rédigé à partir de l'épisode du podcast *Maths en têtes* qui lui est consacré et que vous pouvez écouter ci-dessous.
 
-<iframe name="Ausha Podcast Player" frameborder="0" loading="lazy" id="ausha-RV3j" height="220" style="border: none; width:100%; height:220px" src="https://player.ausha.co/?podcastId=b7vZYSVDqP2M&v=3&playerId=ausha-RV3j"></iframe><script src="https://player.ausha.co/ausha-player.js"></script>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5SAvrGAEM68?si=XQZw_pmhmBW4HPDG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+Je vous conseille également la lecture du très bon roman de Benjamin LABATUT, **MANIAC**, dont Von Neumann est l'un des personnages principaux.
+
+![Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)](maniac.jpeg){width="20%"}

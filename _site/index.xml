@@ -100,7 +100,7 @@
   <media:content url="https://flallemand.fr/blog/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>John von Neumann: Le polymathe architecte du numérique</title>
+  <title>John von Neumann: Le génie architecte du numérique</title>
   <dc:creator>F. LALLEMAND</dc:creator>
   <link>https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/</link>
   <description><![CDATA[ 
@@ -172,9 +172,15 @@
 <h2 class="anchored" data-anchor-id="son-héritage-un-architecte-du-monde-moderne">Son héritage : Un architecte du monde moderne</h2>
 <p>Aujourd’hui encore, son nom est invoqué dans les laboratoires d’IA, les modèles climatiques, les débats sur la guerre algorithmique ou l’éthique des machines. Son héritage est partout, comme une architecture invisible du monde moderne. Il est sans doute l’un des derniers universalistes à avoir cru qu’un esprit humain, bien entraîné et curieux, pouvait encore tout embrasser et tout relier. C’est l’un des esprits qui a véritablement façonné le monde numérique dans lequel nous vivons !</p>
 <p>Cet article est un rapide résumé de la vie et des contributions de John von Neumann, en grande partie rédigé à partir de l’épisode du podcast <em>Maths en têtes</em> qui lui est consacré et que vous pouvez écouter ci-dessous.</p>
-<iframe name="Ausha Podcast Player" frameborder="0" loading="lazy" id="ausha-RV3j" height="220" style="border: none; width:100%; height:220px" src="https://player.ausha.co/?podcastId=b7vZYSVDqP2M&amp;v=3&amp;playerId=ausha-RV3j">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5SAvrGAEM68?si=XQZw_pmhmBW4HPDG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
-<script src="https://player.ausha.co/ausha-player.js"></script>
+<p>Je vous conseille également la lecture du très bon roman de Benjamin LABATUT, <strong>MANIAC</strong>, dont Von Neumann est l’un des personnages principaux.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="maniac.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)"><img src="https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/maniac.jpeg" class="img-fluid figure-img" style="width:20.0%" alt="Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)"></a></p>
+<figcaption>Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)</figcaption>
+</figure>
+</div>
 
 
 </section>
