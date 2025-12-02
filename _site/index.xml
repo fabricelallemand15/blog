@@ -85,7 +85,7 @@
   <category>Histoire</category>
   <category>Informatique</category>
   <category>IA</category>
-  <category>vidéothèque</category>
+  <category>Vidéothèque</category>
   <guid>https://flallemand.fr/blog/posts/2025-11-17_histoire_AI/</guid>
   <pubDate>Sun, 16 Nov 2025 23:00:00 GMT</pubDate>
   <media:content url="https://flallemand.fr/blog/posts/2025-11-17_histoire_AI/miniature.png" medium="image" type="image/png" height="81" width="144"/>
@@ -312,7 +312,7 @@
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Probabilité d’une intersection
+<span class="screen-reader-only">Astuce</span>Rappel : Probabilité d’une intersection
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -330,7 +330,7 @@ Rappel : Probabilité d’une intersection
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Formule des probabilités totales
+<span class="screen-reader-only">Astuce</span>Rappel : Formule des probabilités totales
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -351,7 +351,7 @@ Rappel : Formule des probabilités totales
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Probabilité conditionnelle
+<span class="screen-reader-only">Astuce</span>Rappel : Probabilité conditionnelle
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -391,7 +391,7 @@ Rappel : Probabilité conditionnelle
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Espérance d’une loi binomiale
+<span class="screen-reader-only">Astuce</span>Rappel : Espérance d’une loi binomiale
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -413,7 +413,7 @@ Rappel : Espérance d’une loi binomiale
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Linéarité de l’espérance
+<span class="screen-reader-only">Astuce</span>Rappel : Linéarité de l’espérance
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -428,7 +428,7 @@ Rappel : Linéarité de l’espérance
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Variance d’une somme de variables indépendantes
+<span class="screen-reader-only">Astuce</span>Rappel : Variance d’une somme de variables indépendantes
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -449,7 +449,7 @@ Rappel : Variance d’une somme de variables indépendantes
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Inégalité de Bienaymé-Tchebychev
+<span class="screen-reader-only">Astuce</span>Rappel : Inégalité de Bienaymé-Tchebychev
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -497,7 +497,7 @@ Rappel : Inégalité de Bienaymé-Tchebychev
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Vecteur normal à un plan
+<span class="screen-reader-only">Astuce</span>Rappel : Vecteur normal à un plan
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -562,7 +562,7 @@ Rappel : Vecteur normal à un plan
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Distance d’un point à un plan
+<span class="screen-reader-only">Astuce</span>Rappel : Distance d’un point à un plan
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -637,7 +637,7 @@ Rappel : Distance d’un point à un plan
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Limite d’une suite géométrique
+<span class="screen-reader-only">Astuce</span>Rappel : Limite d’une suite géométrique
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -688,7 +688,7 @@ Rappel : Limite d’une suite géométrique
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Convexité et position relative de la courbe et des tangentes
+<span class="screen-reader-only">Astuce</span>Rappel : Convexité et position relative de la courbe et des tangentes
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -771,7 +771,7 @@ Rappel : Convexité et position relative de la courbe et des tangentes
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Équation différentielle <img src="https://latex.codecogs.com/png.latex?y'%20=%20ay">
+<span class="screen-reader-only">Astuce</span>Rappel : Équation différentielle <img src="https://latex.codecogs.com/png.latex?y'%20=%20ay">
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -878,7 +878,7 @@ Rappel : Équation différentielle <img src="https://latex.codecogs.com/png.late
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Intégration par parties
+<span class="screen-reader-only">Astuce</span>Rappel : Intégration par parties
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -963,7 +963,7 @@ Rappel : Intégration par parties
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Parcours d’arbre
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Parcours d’arbre
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1041,7 +1041,7 @@ Rappel de cours : Parcours d’arbre
 <h4 class="anchored" data-anchor-id="partie-c">Partie C</h4>
 <ol start="8" type="1">
 <li><p>Voici les lignes 8 et 10 complétées pour la fonction <code>creer_dico_occ</code> :</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># ...</span></span>
 <span id="cb1-2"><span class="dv" style="color: #AD0000;
@@ -1075,9 +1075,9 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb1-6"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># ...</span></span></code></pre></div></li>
+font-style: inherit;"># ...</span></span></code></pre></div></div></li>
 <li><p>Voici une proposition pour la fonction <code>somme_occ</code> :</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> somme_occ(tab):</span>
@@ -1111,9 +1111,9 @@ font-style: inherit;">+=</span> nb</span>
 <span id="cb2-9">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">return</span> somme</span></code></pre></div>
+font-style: inherit;">return</span> somme</span></code></pre></div></div>
 <p>Une écriture plus concise utilisant une compréhension de liste est aussi possible :</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> somme_occ(tab):</span>
@@ -1128,9 +1128,9 @@ font-weight: bold;
 font-style: inherit;">for</span> symbole, nb <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">in</span> tab])</span></code></pre></div></li>
+font-style: inherit;">in</span> tab])</span></code></pre></div></div></li>
 <li><p>Voici les lignes 9 et 11 complétées pour la fonction <code>shannon</code> :</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># ...</span></span>
 <span id="cb4-2"><span class="dv" style="color: #AD0000;
@@ -1175,7 +1175,7 @@ font-style: inherit;">return</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"0"</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">+</span> shannon(symbole, t2)</span></code></pre></div></li>
+font-style: inherit;">+</span> shannon(symbole, t2)</span></code></pre></div></div></li>
 <li><p>La terminaison de la fonction récursive <code>shannon</code> est garantie par deux points :</p>
 <ul>
 <li><strong>Cas de base</strong> : La fonction s’arrête lorsque la condition <code>len(tab) == 1</code> est vraie.</li>
@@ -1188,7 +1188,7 @@ font-style: inherit;">+</span> shannon(symbole, t2)</span></code></pre></div></l
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Terminaison d’une fonction récursive
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Terminaison d’une fonction récursive
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1201,7 +1201,7 @@ Rappel de cours : Terminaison d’une fonction récursive
 </div>
 <ol start="12" type="1">
 <li><p>Voici une proposition pour la fonction <code>encode_shannon</code> :</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> encode_shannon(texte):</span>
@@ -1260,7 +1260,7 @@ font-style: inherit;">+=</span> code_caractere</span>
 <span id="cb5-17">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">return</span> mot_binaire_final</span></code></pre></div></li>
+font-style: inherit;">return</span> mot_binaire_final</span></code></pre></div></div></li>
 </ol>
 </section>
 </section>
@@ -1276,7 +1276,7 @@ font-style: inherit;">return</span> mot_binaire_final</span></code></pre></div><
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Clé primaire
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Clé primaire
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1291,7 +1291,7 @@ Rappel de cours : Clé primaire
 </ul>
 <p>Cette requête renvoie donc la liste de tous les jeux et de leur éditeur, classée par ordre alphabétique des noms de jeu.</p></li>
 <li><p>Pour connaître le nom des jeux en cours d’emprunt, il faut sélectionner les jeux dans la table <code>emprunt</code> dont l’attribut <code>dateRendu</code> a la valeur <code>NULL</code>. Comme un jeu ne peut être emprunté qu’une seule fois à un instant donné (un seul exemplaire), l’utilisation de <code>DISTINCT</code> est facultative mais reste une bonne pratique.</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">SELECT</span> nomJeu</span>
@@ -1308,7 +1308,7 @@ font-weight: bold;
 font-style: inherit;">IS</span> <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">NULL</span>;</span></code></pre></div></li>
+font-style: inherit;">NULL</span>;</span></code></pre></div></div></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : La valeur NULL">
 <div class="callout-header d-flex align-content-center">
@@ -1316,7 +1316,7 @@ font-style: inherit;">NULL</span>;</span></code></pre></div></li>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : La valeur NULL
+<span class="screen-reader-only">Astuce</span>Rappel de cours : La valeur NULL
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1325,7 +1325,7 @@ Rappel de cours : La valeur NULL
 </div>
 <ol start="4" type="1">
 <li><p>Pour afficher le nom et le prénom des adhérents ayant emprunté le jeu “Catan”, il faut lier les tables <code>adherent</code> et <code>emprunt</code> via leur clé commune (<code>idAdherent</code>).</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">SELECT</span> adherent.nom, adherent.prenom</span>
@@ -1349,7 +1349,7 @@ font-style: inherit;">WHERE</span> emprunt.nomJeu <span class="op" style="color:
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'Catan'</span>;</span></code></pre></div></li>
+font-style: inherit;">'Catan'</span>;</span></code></pre></div></div></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Les jointures">
 <div class="callout-header d-flex align-content-center">
@@ -1357,7 +1357,7 @@ font-style: inherit;">'Catan'</span>;</span></code></pre></div></li>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Les jointures
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Les jointures
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1366,7 +1366,7 @@ Rappel de cours : Les jointures
 </div>
 <ol start="5" type="1">
 <li><p>Pour mettre à jour la base de données après le retour du jeu, il faut utiliser une requête <code>UPDATE</code> pour renseigner la <code>dateRendu</code> de l’emprunt concerné, identifié par son <code>idEmprunt</code>.</p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">UPDATE</span> emprunt</span>
@@ -1385,9 +1385,9 @@ font-style: inherit;">WHERE</span> idEmprunt <span class="op" style="color: #5E5
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1538</span>;</span></code></pre></div></li>
+font-style: inherit;">1538</span>;</span></code></pre></div></div></li>
 <li><p>Pour trouver le nom et la catégorie des jeux sortis à partir de 2010 et dont l’âge minimum est strictement inférieur à 10 ans, on utilise une clause <code>WHERE</code> avec deux conditions reliées par l’opérateur <code>AND</code>.</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">SELECT</span> nomJeu, categorie</span>
@@ -1409,7 +1409,7 @@ font-style: inherit;">AND</span> ageMinimum <span class="op" style="color: #5E5E
 background-color: null;
 font-style: inherit;">&lt;</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">10</span>;</span></code></pre></div></li>
+font-style: inherit;">10</span>;</span></code></pre></div></div></li>
 <li><p>La table <code>participation</code> sert à lier les événements aux adhérents. Il s’agit d’une table de jointure pour une relation de type “plusieurs à plusieurs” (un adhérent peut participer à plusieurs événements, un événement accueille plusieurs adhérents). Elle doit donc contenir une clé étrangère vers la table <code>evenement</code> et une clé étrangère vers la table <code>adherent</code>.</p>
 <p>La clé primaire de la table <code>evenement</code> est <code>nom</code>, les clés étrangères de la table <code>participation</code> sont :</p>
 <ul>
@@ -1417,7 +1417,7 @@ font-style: inherit;">10</span>;</span></code></pre></div></li>
 <li><code>#idAdherent</code> qui fait référence à l’attribut <code>idAdherent</code> de la table <code>adherent</code>.</li>
 </ul></li>
 <li><p>Le script Python suivant reprend le code fourni, récupère la liste des jeux empruntés et construit le dictionnaire <code>dict_emprunts</code> qui associe à chaque nom de jeu son nombre total d’emprunts.</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> sqlite3</span>
 <span id="cb10-2"></span>
@@ -1515,10 +1515,10 @@ font-style: inherit;">print</span>(dict_emprunts)</span>
 background-color: null;
 font-style: inherit;"># Fermeture de la connexion</span></span>
 <span id="cb10-31">curseur.close()</span>
-<span id="cb10-32">connection.close()</span></code></pre></div></li>
+<span id="cb10-32">connection.close()</span></code></pre></div></div></li>
 <li></li>
 </ol>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># On suppose que dict_emprunts est déjà créé.</span></span>
 <span id="cb11-2">dict_emprunts <span class="op" style="color: #5E5E5E;
@@ -1734,7 +1734,7 @@ background-color: null;
 font-style: inherit;">print</span>(podium_final)</span>
 <span id="cb11-57"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Affiche : [['Agricola', 'Puerto Rico', 'Caylus'], ['Codenames', 'Dominion'], ['Terraforming Mars']]</span></span></code></pre></div>
+font-style: inherit;"># Affiche : [['Agricola', 'Puerto Rico', 'Caylus'], ['Codenames', 'Dominion'], ['Terraforming Mars']]</span></span></code></pre></div></div>
 </section>
 <section id="exercice-3-8-points" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-3-8-points">Exercice 3 (8 points)</h2>
@@ -1815,7 +1815,7 @@ font-style: inherit;"># Affiche : [['Agricola', 'Puerto Rico', 'Caylus'], ['Code
 <p>Le message chiffré est <strong><code>PGRDX</code></strong>.</p>
 <ol start="2" type="1">
 <li><p>La fonction <code>indice</code> peut être écrite en utilisant la méthode <code>.index()</code> des listes en Python.</p>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> indice(element, L):</span>
@@ -1831,9 +1831,9 @@ font-style: inherit;">    """</span></span>
 <span id="cb12-5">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">return</span> L.index(element)</span></code></pre></div>
+font-style: inherit;">return</span> L.index(element)</span></code></pre></div></div>
 <p>Autre solution possible, plus simple :</p>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> indice(element, L):</span>
@@ -1876,9 +1876,9 @@ font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>  <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Si l'élément n'est pas trouvé, on renvoie -1.</span></span></code></pre></div></li>
+font-style: inherit;"># Si l'élément n'est pas trouvé, on renvoie -1.</span></span></code></pre></div></div></li>
 <li><p>La fonction <code>lettres_vers_indices</code> parcourt la chaîne de caractères et utilise la liste globale <code>alphabet</code> pour trouver l’indice de chaque lettre.</p>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># On suppose que la variable 'alphabet' est définie globalement.</span></span>
 <span id="cb14-2">alphabet <span class="op" style="color: #5E5E5E;
@@ -1975,9 +1975,9 @@ background-color: null;
 font-style: inherit;"># def lettres_vers_indices(chaine):</span></span>
 <span id="cb14-16"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">#     return [indice(c, alphabet) for c in chaine]</span></span></code></pre></div></li>
+font-style: inherit;">#     return [indice(c, alphabet) for c in chaine]</span></span></code></pre></div></div></li>
 <li><p>Voici le code complété de la fonction <code>chiffrement</code>.</p>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> chiffrement(msg, cle):</span>
@@ -2058,7 +2058,7 @@ font-style: inherit;"># Ligne 13</span></span>
 <span id="cb15-18">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">return</span> msg_chiffre</span></code></pre></div></li>
+font-style: inherit;">return</span> msg_chiffre</span></code></pre></div></div></li>
 <li><p>Lors de l’appel <code>chiffrement('RESEAU', 'GFTZ')</code>, la condition de l’instruction <code>assert</code> est évaluée. <code>len('RESEAU')</code> vaut 6 et <code>len('GFTZ')</code> vaut 4. La condition <code>len(cle) &gt;= len(msg)</code> (soit <code>4 &gt;= 6</code>) est fausse.</p>
 <p>L’exécution du programme s’arrête et une erreur de type <code>AssertionError</code> est levée, affichant le message <code>'impossible'</code>.</p></li>
 <li><p>Pour déchiffrer <code>GMEDH</code> avec la clé <code>FVEIT</code>, on effectue l’opération inverse : la soustraction modulo 26. <img src="https://latex.codecogs.com/png.latex?C_%7Bdechiffr%C3%A9%7D%20=%20(C_%7Bchiffr%C3%A9%7D%20-%20C_%7Bcl%C3%A9%7D)%20%5Cpmod%7B26%7D">.</p></li>
@@ -2131,7 +2131,7 @@ font-style: inherit;">return</span> msg_chiffre</span></code></pre></div></li>
 <p>Pour chaque caractère, on soustrait le rang de la lettre de la clé au rang de la lettre du message chiffré, et on prend le résultat modulo 26.</p>
 <p>Mathématiquement : si <img src="https://latex.codecogs.com/png.latex?Chiffr%C3%A9%20=%20(Message%20+%20Cl%C3%A9)%20%5Cpmod%7B26%7D">, alors <img src="https://latex.codecogs.com/png.latex?Message%20=%20(Chiffr%C3%A9%20-%20Cl%C3%A9)%20%5Cpmod%7B26%7D">.</p></li>
 <li><p>Pour obtenir la fonction <code>dechiffrement</code>, on adapte la fonction <code>chiffrement</code> en remplaçant l’addition par une soustraction.</p>
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> dechiffrement(msg_chiffre, cle):</span>
@@ -2215,7 +2215,7 @@ font-style: inherit;"># Ligne 13 adaptée</span></span>
 <span id="cb16-19">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">return</span> msg_dechiffre</span></code></pre></div></li>
+font-style: inherit;">return</span> msg_dechiffre</span></code></pre></div></div></li>
 </ol>
 </section>
 <section id="partie-b---sécurisation-des-communications" class="level4">
@@ -2309,7 +2309,7 @@ font-style: inherit;">return</span> msg_dechiffre</span></code></pre></div></li>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Clé primaire
+<span class="screen-reader-only">Astuce</span>Rappel : Clé primaire
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2321,7 +2321,7 @@ Rappel : Clé primaire
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
 <p>Donner, sous forme de tableau, le résultat de la requête suivante appliquée à l’extrait de table précédent.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">SELECT</span> marque, modele</span>
@@ -2336,7 +2336,7 @@ font-style: inherit;">WHERE</span> annee <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1956</span></span></code></pre></div>
+font-style: inherit;">1956</span></span></code></pre></div></div>
 <p>La requête sélectionne les attributs <code>marque</code> et <code>modele</code> pour tous les enregistrements où l’année est <code>1956</code>. En examinant la table <code>inventaire</code>, deux lignes correspondent à ce critère : celle avec <code>id=1</code> et celle avec <code>id=7</code>.</p>
 <p>Le résultat est donc :</p>
 <table class="caption-top table">
@@ -2368,14 +2368,14 @@ font-style: inherit;">1956</span></span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Clause <code>DISTINCT</code>
+<span class="screen-reader-only">Astuce</span>Clause <code>DISTINCT</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>La clause <code>DISTINCT</code> s’utilise avec <code>SELECT</code> pour éliminer les lignes en double dans le résultat d’une requête.</p>
 </div>
 </div>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">SELECT</span> <span class="kw" style="color: #003B4F;
@@ -2393,13 +2393,13 @@ font-style: inherit;">WHERE</span> modele <span class="op" style="color: #5E5E5E
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'Les Paul Standard'</span>;</span></code></pre></div>
+font-style: inherit;">'Les Paul Standard'</span>;</span></code></pre></div></div>
 </section>
 <section id="question-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
 <p>Écrire une requête SQL permettant d’obtenir tous les modèles de guitares de la marque Gibson par ordre croissant de l’année dans la collection.</p>
 <p>Il faut filtrer les guitares de marque ‘Gibson’ avec <code>WHERE</code> et trier le résultat par année croissante avec <code>ORDER BY</code>.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">SELECT</span> modele</span>
@@ -2424,7 +2424,7 @@ font-weight: bold;
 font-style: inherit;">BY</span> annee <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">ASC</span>;</span></code></pre></div>
+font-style: inherit;">ASC</span>;</span></code></pre></div></div>
 <p><em>Note : <code>ASC</code> (pour ascendant) est l’ordre de tri par défaut et peut être omis.</em></p>
 </section>
 <section id="question-5" class="level3">
@@ -2437,14 +2437,14 @@ font-style: inherit;">ASC</span>;</span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Syntaxe <code>UPDATE</code>
+<span class="screen-reader-only">Astuce</span>Syntaxe <code>UPDATE</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p><code>UPDATE nom_de_la_table SET colonne1 = valeur1, colonne2 = valeur2, ... WHERE condition;</code> La clause <code>WHERE</code> est importante pour ne pas modifier toutes les lignes de la table.</p>
 </div>
 </div>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">UPDATE</span> inventaire</span>
@@ -2466,7 +2466,7 @@ font-style: inherit;">id</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1</span>;</span></code></pre></div>
+font-style: inherit;">1</span>;</span></code></pre></div></div>
 </section>
 </section>
 <section id="partie-b" class="level2">
@@ -2481,7 +2481,7 @@ font-style: inherit;">1</span>;</span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Clé étrangère
+<span class="screen-reader-only">Astuce</span>Rappel : Clé étrangère
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2499,7 +2499,7 @@ Rappel : Clé étrangère
 <h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
 <p>Écrire une requête SQL permettant d’obtenir le numéro de série et l’année de toutes les guitares Les Paul Standard de la collection.</p>
 <p>Les informations <code>num_ser</code> et <code>annee</code> sont dans la table <code>guitare</code>, mais le nom du modèle ‘Les Paul Standard’ est dans la table <code>modele</code>. Il faut donc effectuer une jointure entre ces deux tables.</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">SELECT</span> G.num_ser, G.annee</span>
@@ -2532,14 +2532,14 @@ font-style: inherit;">WHERE</span> M.nom <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'Les Paul Standard'</span>;</span></code></pre></div>
+font-style: inherit;">'Les Paul Standard'</span>;</span></code></pre></div></div>
 <p><em>Note : l’utilisation d’alias (<code>AS G</code>, <code>AS M</code>) rend la requête plus lisible.</em></p>
 </section>
 <section id="question-8" class="level3">
 <h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
 <p>Écrire une requête SQL permettant de retirer de la collection la guitare d’identifiant <code>id=3</code>.</p>
 <p>La suppression d’un enregistrement se fait avec la commande <code>DELETE FROM</code>. Il est essentiel de spécifier la ligne à supprimer avec une clause <code>WHERE</code>.</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">DELETE</span> <span class="kw" style="color: #003B4F;
@@ -2556,7 +2556,7 @@ font-style: inherit;">id</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span>;</span></code></pre></div>
+font-style: inherit;">3</span>;</span></code></pre></div></div>
 </section>
 <section id="question-9" class="level3">
 <h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
@@ -2571,7 +2571,7 @@ font-style: inherit;">3</span>;</span></code></pre></div>
 <p>L’ajout doit se faire en respectant les contraintes de clés étrangères. On doit d’abord insérer la nouvelle marque, puis le nouveau modèle (en le liant à la marque), et enfin la nouvelle guitare (en la liant au modèle). Les identifiants à utiliser sont fournis.</p>
 <ol type="1">
 <li><p><strong>Insertion de la marque :</strong></p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">INSERT</span> <span class="kw" style="color: #003B4F;
@@ -2587,9 +2587,9 @@ font-style: inherit;">VALUES</span> (<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">3</span>, <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'BC Rich'</span>);</span></code></pre></div></li>
+font-style: inherit;">'BC Rich'</span>);</span></code></pre></div></div></li>
 <li><p><strong>Insertion du modèle :</strong></p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">INSERT</span> <span class="kw" style="color: #003B4F;
@@ -2607,9 +2607,9 @@ font-style: inherit;">5</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'Mockingbird'</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span>);</span></code></pre></div></li>
+font-style: inherit;">3</span>);</span></code></pre></div></div></li>
 <li><p><strong>Insertion de la guitare :</strong></p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">INSERT</span> <span class="kw" style="color: #003B4F;
@@ -2631,14 +2631,14 @@ font-style: inherit;">1992</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'92R'</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">5000</span>);</span></code></pre></div></li>
+font-style: inherit;">5000</span>);</span></code></pre></div></div></li>
 </ol>
 </section>
 <section id="question-10" class="level3">
 <h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
 <p>Écrire une requête SQL permettant de calculer la valeur totale des modèles Stratocaster de la collection de Slash.</p>
 <p>Il faut utiliser la fonction d’agrégation <code>SUM()</code> sur la colonne <code>prix</code> de la table <code>guitare</code>. Comme pour la question 7, une jointure avec la table <code>modele</code> est nécessaire pour filtrer sur le nom du modèle ‘Stratocaster’.</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">SELECT</span> <span class="fu" style="color: #4758AB;
@@ -2673,7 +2673,7 @@ font-style: inherit;">WHERE</span> M.nom <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">'Stratocaster'</span>;</span></code></pre></div>
+font-style: inherit;">'Stratocaster'</span>;</span></code></pre></div></div>
 </section>
 </section>
 </section>
@@ -2684,7 +2684,7 @@ font-style: inherit;">'Stratocaster'</span>;</span></code></pre></div>
 <h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
 <p>Donner le code Python qui permet d’instancier deux variables <code>tache1</code> et <code>tache2</code> représentant les tâches.</p>
 <p>Le constructeur de la classe <code>Tache</code> est <code>__init__(self, numero, nom, duree)</code>. Il suffit de l’appeler avec les bonnes valeurs pour chaque tâche.</p>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">tache1 <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1">tache1 <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> Tache(<span class="dv" style="color: #AD0000;
 background-color: null;
@@ -2701,13 +2701,13 @@ font-style: inherit;">2</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Ranger ma chambre"</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">60</span>)</span></code></pre></div>
+font-style: inherit;">60</span>)</span></code></pre></div></div>
 </section>
 <section id="question-2-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
 <p>Recopier et compléter le code de la méthode <code>avancer</code> de la classe <code>Tache</code>.</p>
 <p>La méthode <code>avancer</code> doit diminuer l’attribut <code>duree_restante</code> de la valeur <code>n</code> passée en paramètre.</p>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> avancer(<span class="va" style="color: #111111;
@@ -2717,13 +2717,13 @@ font-style: inherit;">self</span>, n):</span>
 background-color: null;
 font-style: inherit;">self</span>.duree_restante <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">-=</span> n</span></code></pre></div>
+font-style: inherit;">-=</span> n</span></code></pre></div></div>
 </section>
 <section id="question-3-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-1">Question 3</h3>
 <p>Recopier et compléter le code de la méthode <code>est_terminee</code> de la classe <code>Tache</code>.</p>
 <p>Une tâche est terminée si sa durée restante est négative ou nulle. La méthode doit donc renvoyer le résultat de la comparaison <code>self.duree_restante &lt;= 0</code>.</p>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> est_terminee(<span class="va" style="color: #111111;
@@ -2738,7 +2738,7 @@ font-style: inherit;">self</span>.duree_restante <span class="op" style="color: 
 background-color: null;
 font-style: inherit;">&lt;=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0</span></span></code></pre></div>
+font-style: inherit;">0</span></span></code></pre></div></div>
 </section>
 <section id="question-4-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-4-1">Question 4</h3>
@@ -2754,7 +2754,7 @@ font-style: inherit;">0</span></span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : File (Queue)
+<span class="screen-reader-only">Astuce</span>Rappel : File (Queue)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -2788,7 +2788,7 @@ Rappel : File (Queue)
 <h3 class="anchored" data-anchor-id="question-7-1">Question 7</h3>
 <p>Recopier et compléter le code de la fonction <code>ajouter_file_prio</code>.</p>
 <p>L’algorithme consiste à transférer les éléments de <code>f</code> vers <code>f_aux</code> jusqu’à trouver le bon emplacement pour <code>(t, p)</code>, insérer <code>(t, p)</code>, transférer le reste de <code>f</code>, puis tout retransférer dans <code>f</code>.</p>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> ajouter_file_prio(f, t, p):</span>
@@ -2841,7 +2841,7 @@ font-style: inherit;">while</span> <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">not</span> f_aux.est_vide():</span>
-<span id="cb14-16">        f.enfiler(f_aux.defiler())</span></code></pre></div>
+<span id="cb14-16">        f.enfiler(f_aux.defiler())</span></code></pre></div></div>
 </section>
 <section id="question-8-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-8-1">Question 8</h3>
@@ -2852,7 +2852,7 @@ font-style: inherit;">not</span> f_aux.est_vide():</span>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Complexité temporelle
+<span class="screen-reader-only">Astuce</span>Rappel : Complexité temporelle
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3079,7 +3079,7 @@ Rappel : Complexité temporelle
 <h3 class="anchored" data-anchor-id="question-10-1">Question 10</h3>
 <p>Écrire le code d’une fonction <code>planning</code> qui prend en paramètre une file de priorité <code>f</code> et qui renvoie une liste de tâches, dans l’ordre où elles vont être effectuées.</p>
 <p>Cette fonction doit implémenter l’algorithme Pomodoro décrit précédemment.</p>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> planning(f):</span>
@@ -3149,7 +3149,7 @@ font-style: inherit;">not</span> tache.est_terminee():</span>
 <span id="cb15-23">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">return</span> plan </span></code></pre></div>
+font-style: inherit;">return</span> plan </span></code></pre></div></div>
 </section>
 </section>
 <section id="corrigé-de-lexercice-3-8-points" class="level1">
@@ -3166,7 +3166,7 @@ font-style: inherit;">return</span> plan </span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Adressage IP et Masque de sous-réseau
+<span class="screen-reader-only">Astuce</span>Rappel : Adressage IP et Masque de sous-réseau
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3235,7 +3235,7 @@ Rappel : Adressage IP et Masque de sous-réseau
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Protocole RIP (Routing Information Protocol)
+<span class="screen-reader-only">Astuce</span>Rappel : Protocole RIP (Routing Information Protocol)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3337,7 +3337,7 @@ Rappel : Protocole RIP (Routing Information Protocol)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Protocole OSPF (Open Shortest Path First)
+<span class="screen-reader-only">Astuce</span>Rappel : Protocole OSPF (Open Shortest Path First)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3418,7 +3418,7 @@ Rappel : Protocole OSPF (Open Shortest Path First)
 <section id="question-12" class="level3">
 <h3 class="anchored" data-anchor-id="question-12">Question 12</h3>
 <p>Recopier et compléter les lignes 4, 6 et 7 du code de la fonction <code>precede</code>.</p>
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> precede(ip_1, ip_2):</span>
@@ -3468,7 +3468,7 @@ font-style: inherit;">return</span> <span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">False</span>          <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># ligne 7 (si les IPs sont égales)</span></span></code></pre></div>
+font-style: inherit;"># ligne 7 (si les IPs sont égales)</span></span></code></pre></div></div>
 </section>
 <section id="question-13" class="level3">
 <h3 class="anchored" data-anchor-id="question-13">Question 13</h3>
@@ -3482,7 +3482,7 @@ font-style: inherit;"># ligne 7 (si les IPs sont égales)</span></span></code></
 <h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
 <p>Recopier et compléter la ligne 14 du code de la classe <code>Abr</code>.</p>
 <p>Par convention, un arbre vide est une instance où <code>adresse_ip</code> est une chaîne vide.</p>
-<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> est_vide(<span class="va" style="color: #111111;
@@ -3499,7 +3499,7 @@ font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">''</span> <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># ligne 14</span></span></code></pre></div>
+font-style: inherit;"># ligne 14</span></span></code></pre></div></div>
 </section>
 <section id="question-15" class="level3">
 <h3 class="anchored" data-anchor-id="question-15">Question 15</h3>
@@ -3510,7 +3510,7 @@ font-style: inherit;"># ligne 14</span></span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Arbre binaire de recherche (ABR)
+<span class="screen-reader-only">Astuce</span>Rappel : Arbre binaire de recherche (ABR)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3523,7 +3523,7 @@ Rappel : Arbre binaire de recherche (ABR)
 <h3 class="anchored" data-anchor-id="question-16">Question 16</h3>
 <p>Réécrire le code de la fonction <code>modifie</code> en évitant cette répétition.</p>
 <p>Les lignes d’affectation des attributs sont exécutées que le nœud soit vide ou non. On peut donc les factoriser.</p>
-<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> modifie(<span class="va" style="color: #111111;
@@ -3598,13 +3598,13 @@ font-style: inherit;">''</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">''</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0</span>)</span></code></pre></div>
+font-style: inherit;">0</span>)</span></code></pre></div></div>
 </section>
 <section id="question-17" class="level3">
 <h3 class="anchored" data-anchor-id="question-17">Question 17</h3>
 <p>Recopier et compléter la ligne 35 du code de la fonction <code>rechercher</code>.</p>
 <p>La fonction <code>rechercher</code> navigue dans l’ABR. Si l’adresse cherchée (<code>adresse_ip</code>) précède l’adresse du nœud courant (<code>self.adresse_ip</code>), il faut chercher dans le sous-arbre gauche.</p>
-<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> rechercher(<span class="va" style="color: #111111;
@@ -3652,7 +3652,7 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">return</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.droite.rechercher(adresse_ip)</span></code></pre></div>
+font-style: inherit;">self</span>.droite.rechercher(adresse_ip)</span></code></pre></div></div>
 
 
 </section>
@@ -3749,7 +3749,7 @@ font-style: inherit;">self</span>.droite.rechercher(adresse_ip)</span></code></p
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Probabilité d’une intersection
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Probabilité d’une intersection
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3767,7 +3767,7 @@ Rappel de cours : Probabilité d’une intersection
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Formule des probabilités totales
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Formule des probabilités totales
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3791,7 +3791,7 @@ Rappel de cours : Formule des probabilités totales
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Loi binomiale
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Loi binomiale
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3814,7 +3814,7 @@ Rappel de cours : Loi binomiale
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Formules : Espérance et Variance de la loi binomiale
+<span class="screen-reader-only">Astuce</span>Formules : Espérance et Variance de la loi binomiale
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3842,7 +3842,7 @@ Formules : Espérance et Variance de la loi binomiale
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Inégalité de Bienaymé-Tchebychev
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Inégalité de Bienaymé-Tchebychev
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3865,7 +3865,7 @@ Rappel de cours : Inégalité de Bienaymé-Tchebychev
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Interprétation graphique du nombre dérivé
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Interprétation graphique du nombre dérivé
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -3886,7 +3886,7 @@ Rappel de cours : Interprétation graphique du nombre dérivé
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Lien entre signe de <img src="https://latex.codecogs.com/png.latex?f''"> et convexité
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Lien entre signe de <img src="https://latex.codecogs.com/png.latex?f''"> et convexité
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4000,7 +4000,7 @@ Rappel de cours : Lien entre signe de <img src="https://latex.codecogs.com/png.l
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Formule : Intégration par parties
+<span class="screen-reader-only">Astuce</span>Formule : Intégration par parties
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4056,7 +4056,7 @@ Formule : Intégration par parties
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Représentation paramétrique d’une droite
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Représentation paramétrique d’une droite
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4079,7 +4079,7 @@ Rappel de cours : Représentation paramétrique d’une droite
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Vecteur normal à un plan
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Vecteur normal à un plan
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4129,7 +4129,7 @@ Rappel de cours : Vecteur normal à un plan
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Projection orthogonale sur un plan
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Projection orthogonale sur un plan
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4178,7 +4178,7 @@ Rappel de cours : Projection orthogonale sur un plan
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Théorème de la convergence monotone
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Théorème de la convergence monotone
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4199,7 +4199,7 @@ Rappel de cours : Théorème de la convergence monotone
 <p><strong>3. Dépassement d’un seuil.</strong></p>
 <p><strong>a. Justifier que la surface recouverte dépassera les 14 hectares.</strong> La suite <img src="https://latex.codecogs.com/png.latex?(u_n)"> est croissante et converge vers 15. Par définition de la convergence, les termes de la suite se rapprochent de 15. Comme la suite est croissante, les termes se rapprochent de 15 par valeurs inférieures. Puisque <img src="https://latex.codecogs.com/png.latex?14%20%3C%2015">, il existera nécessairement un rang <img src="https://latex.codecogs.com/png.latex?N"> à partir duquel tous les termes <img src="https://latex.codecogs.com/png.latex?u_n"> seront dans l’intervalle <img src="https://latex.codecogs.com/png.latex?%5D14;%2015%5D">. La superficie recouverte dépassera donc un jour les 14 hectares.</p>
 <p><strong>b. Recopier et compléter l’algorithme.</strong> L’algorithme doit calculer les termes successifs de la suite jusqu’à ce que la valeur de <code>u</code> dépasse (ou soit égale à) 14. À chaque étape, il faut incrémenter le compteur d’années <code>n</code>.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> seuil():</span>
@@ -4248,7 +4248,7 @@ font-style: inherit;">*</span> u</span>
 <span id="cb1-7">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">return</span> n</span></code></pre></div>
+font-style: inherit;">return</span> n</span></code></pre></div></div>
 <hr>
 </section>
 <section id="partie-b-étude-dun-modèle-continu" class="level3">
@@ -4263,7 +4263,7 @@ font-style: inherit;">return</span> n</span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Formule : Solutions d’une équation différentielle linéaire
+<span class="screen-reader-only">Astuce</span>Formule : Solutions d’une équation différentielle linéaire
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4301,11 +4301,11 @@ Formule : Solutions d’une équation différentielle linéaire
 <section id="le-package-tablvar" class="level4">
 <h4 class="anchored" data-anchor-id="le-package-tablvar">Le package <code>tablvar</code></h4>
 <p>Pour commencer, il faut bien sûr appeler le package dans le préambule de votre document. Il est fortement recommandé d’utiliser l’option <code>tikz</code>, qui est le moteur graphique moderne et le plus compatible avec les compilateurs directs en PDF comme <code>pdfLaTeX</code> ou <code>LuaLaTeX</code>.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">\usepackage</span>[tikz]{<span class="ex" style="color: null;
 background-color: null;
-font-style: inherit;">tablvar</span>}</span></code></pre></div>
+font-style: inherit;">tablvar</span>}</span></code></pre></div></div>
 </section>
 <section id="tableau-de-variations-simple" class="level4">
 <h4 class="anchored" data-anchor-id="tableau-de-variations-simple">Tableau de variations simple</h4>
@@ -4313,7 +4313,7 @@ font-style: inherit;">tablvar</span>}</span></code></pre></div>
 <p><strong>La Structure de Base</strong></p>
 <p>Un tableau de variations se crée à l’intérieur d’un environnement <code>tablvar</code>, qui doit être en mode mathématique (entre <code>$$</code> et <code>$$</code> par exemple).</p>
 <p>L’environnement prend un argument obligatoire : le nombre d’intervalles, qui correspond au nombre de flèches que vous souhaitez tracer.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><span class="ss" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">$$</span></span>
 <span id="cb2-2"><span class="kw" style="color: #003B4F;
@@ -4337,11 +4337,11 @@ background-color: null;
 font-style: inherit;">tablvar</span>}</span>
 <span id="cb2-5"><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">$$</span></span></code></pre></div>
+font-style: inherit;">$$</span></span></code></pre></div></div>
 <p><strong>Premier Exemple : Une fonction polynôme</strong></p>
 <p>Étudions une fonction <img src="https://latex.codecogs.com/png.latex?f"> dont la dérivée s’annule en <img src="https://latex.codecogs.com/png.latex?-1"> et <img src="https://latex.codecogs.com/png.latex?2">.</p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><span class="ss" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">$$</span></span>
 <span id="cb3-2"><span class="kw" style="color: #003B4F;
@@ -4434,7 +4434,7 @@ background-color: null;
 font-style: inherit;">tablvar</span>}</span>
 <span id="cb3-14"><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">$$</span></span></code></pre></div>
+font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -4455,7 +4455,7 @@ font-style: inherit;">$$</span></span></code></pre></div>
 <p>Pour un tableau de signes, la structure est très similaire. tablvar fournit la commande <code>\barre</code> pour tracer une barre de séparation verticale. Si un zéro doit être placé sur cette barre, on le passe en argument optionnel : <code>\barre[0]</code>.</p>
 <p><strong>Exemple</strong> : Tableau de signes de <img src="https://latex.codecogs.com/png.latex?f'(x)=(x+1)(-2x+3)"></p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><span class="ss" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">$$</span></span>
 <span id="cb4-2"><span class="kw" style="color: #003B4F;
@@ -4533,7 +4533,7 @@ background-color: null;
 font-style: inherit;">tablvar</span>}</span>
 <span id="cb4-13"><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">$$</span></span></code></pre></div>
+font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -4553,7 +4553,7 @@ font-style: inherit;">$$</span></span></code></pre></div>
 </ul>
 <p><strong>Exemple</strong> : Variations de <img src="https://latex.codecogs.com/png.latex?f(x)=e%5E%7B1/x%7D"> (valeur interdite en 0).</p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><span class="ss" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">$$</span></span>
 <span id="cb5-2"><span class="kw" style="color: #003B4F;
@@ -4637,7 +4637,7 @@ background-color: null;
 font-style: inherit;">tablvar</span>}</span>
 <span id="cb5-11"><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">$$</span></span></code></pre></div>
+font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -4652,7 +4652,7 @@ font-style: inherit;">$$</span></span></code></pre></div>
 <p>Pour ajouter des valeurs remarquables sur la ligne des <img src="https://latex.codecogs.com/png.latex?x">, on utilise <code>\vr{valeur}</code>. Pour indiquer une zone interdite (domaine de définition), on utilise <code>\ZI</code>.</p>
 <p><strong>Exemple</strong> : Variations de l’exponentielle avec des valeurs remarquables.</p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><span class="ss" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">$$</span></span>
 <span id="cb6-2"><span class="kw" style="color: #003B4F;
@@ -4739,7 +4739,7 @@ background-color: null;
 font-style: inherit;">tablvar</span>}</span>
 <span id="cb6-10"><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">$$</span></span></code></pre></div>
+font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -4749,7 +4749,7 @@ font-style: inherit;">$$</span></span></code></pre></div>
 </div>
 <p><strong>Exemple</strong> : Tableau de variations avec une zone interdite.</p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb7-1"><span class="ss" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb7-1"><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">$$</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -4851,7 +4851,7 @@ font-style: inherit;">\end</span>{<span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">$$</span></span></code></pre></div>
+font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -4931,7 +4931,7 @@ font-style: inherit;">$$</span></span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Personnalisation
+<span class="screen-reader-only">Astuce</span>Personnalisation
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -4946,7 +4946,7 @@ Personnalisation
 </section>
 <section id="un-exemple-final" class="level4">
 <h4 class="anchored" data-anchor-id="un-exemple-final">Un exemple final</h4>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><span class="ss" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">$$</span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -5082,7 +5082,7 @@ font-style: inherit;">\end</span>{<span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">tablvar</span>}<span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">$$</span></span></code></pre></div>
+font-style: inherit;">$$</span></span></code></pre></div></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="fig6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Tableau de variations complet"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig6.png" class="img-fluid figure-img" alt="Tableau de variations complet"></a></p>
@@ -5606,7 +5606,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Objectifs du tutoriel
+<span class="screen-reader-only">Astuce</span>Objectifs du tutoriel
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5621,7 +5621,7 @@ Objectifs du tutoriel
 <section id="création-de-lobjet-cerise" class="level2">
 <h2 class="anchored" data-anchor-id="création-de-lobjet-cerise">Création de l’objet Cerise</h2>
 <p>Nous allons commencer par créer une classe <code>Cerise</code> qui permettra de gérer le comportement et l’affichage des cerises. Chaque cerise aura une position <img src="https://latex.codecogs.com/png.latex?(x,%20y)"> et une vitesse de chute.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">class</span> Cerise:</span>
@@ -5693,7 +5693,7 @@ font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">12</span>) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">#Affichage de la cerise</span></span></code></pre></div>
+font-style: inherit;">#Affichage de la cerise</span></span></code></pre></div></div>
 <p>Explications :</p>
 <ul>
 <li>Lignes 2-4 : Le constructeur <code>__init__</code> initialise la position <img src="https://latex.codecogs.com/png.latex?(x,%20y)"> de la cerise et sa vitesse de chute.</li>
@@ -5710,7 +5710,7 @@ font-style: inherit;">#Affichage de la cerise</span></span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Idée à retenir
+<span class="screen-reader-only">Astuce</span>Idée à retenir
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5718,7 +5718,7 @@ Idée à retenir
 </div>
 </div>
 <p>On ajoute ces éléments dans la méthode <code>__init__</code> de la classe <code>App</code>:</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">    <span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
@@ -5749,9 +5749,9 @@ font-style: inherit;">0</span></span>
 background-color: null;
 font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.draw)</span></code></pre></div>
+font-style: inherit;">self</span>.draw)</span></code></pre></div></div>
 <p>Ensuite, on modifie la méthode <code>update</code> pour ajouter une nouvelle cerise à un intervalle aléatoire, mettre à jour chaque cerise, et supprimer celles qui sortent de l’écran :</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">    <span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
@@ -5830,7 +5830,7 @@ background-color: null;
 font-style: inherit;">&gt;</span> pyxel.height:</span>
 <span id="cb3-15">                <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.cerises.remove(cerise)</span></code></pre></div>
+font-style: inherit;">self</span>.cerises.remove(cerise)</span></code></pre></div></div>
 <p>Explications :</p>
 <ul>
 <li>Ligne 8&nbsp;: on génère une nouvelle cerise à un intervalle aléatoire compris entre 30 et 60&nbsp;frames. Sachant que le jeu tourne à 30&nbsp;fps, cela correspond à une nouvelle cerise toutes les 1&nbsp;à 2&nbsp;secondes.</li>
@@ -5841,7 +5841,7 @@ font-style: inherit;">self</span>.cerises.remove(cerise)</span></code></pre></di
 <section id="détection-des-collisions" class="level2">
 <h2 class="anchored" data-anchor-id="détection-des-collisions">Détection des collisions</h2>
 <p>Pour détecter les collisions entre le personnage et les cerises, nous allons ajouter du code dans la méthode <code>update</code> de la classe <code>App</code>.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">    <span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
@@ -5907,7 +5907,7 @@ font-style: inherit;">self</span>.score <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1</span></span></code></pre></div>
+font-style: inherit;">1</span></span></code></pre></div></div>
 <p>Explications :</p>
 <ul>
 <li>Lignes 6 à 8 : On teste si la distance entre le personnage et la cerise est inférieure à 16 pixels, ce qui signifie une collision. Si une collision est détectée, la cerise est retirée de l’écran et le score du joueur est incrémenté.</li>
@@ -5916,7 +5916,7 @@ font-style: inherit;">1</span></span></code></pre></div>
 <section id="affichage-du-score" class="level2">
 <h2 class="anchored" data-anchor-id="affichage-du-score">Affichage du score</h2>
 <p>Enfin, nous allons afficher le score en haut à gauche de l’écran. Pour cela, nous modifions la méthode <code>draw</code> de la classe <code>App</code>.</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">    <span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">    <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
@@ -5963,7 +5963,7 @@ font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"</span>, pyxel.COLOR_WHITE) <span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Affichage du score</span></span></code></pre></div>
+font-style: inherit;"># Affichage du score</span></span></code></pre></div></div>
 <p>Explications :</p>
 <ul>
 <li>Ligne 8: on affiche le score à l’écran en blanc aux coordonnées (5, 5)</li>
@@ -6026,7 +6026,7 @@ font-style: inherit;"># Affichage du score</span></span></code></pre></div>
 <p>Le test de Lucas-Lehmer est particulièrement efficace pour les nombres de Mersenne, car il permet de vérifier leur primalité en un temps polynomial par rapport à la taille du nombre. Cela en fait un outil précieux pour la recherche de nombres premiers de Mersenne.</p>
 <p>Voici une fonction Python qui implémente le test de Lucas-Lehmer pour vérifier si un nombre de Mersenne est premier :</p>
 <div id="eaec5ff4" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> lucas_lehmer(p):</span>
@@ -6157,7 +6157,7 @@ font-style: inherit;">{</span>p<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;"> - 1 n'est pas premier."</span>)</span></code></pre></div>
+font-style: inherit;"> - 1 n'est pas premier."</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Le nombre de Mersenne 2^7 - 1 est premier.
 Le nombre de Mersenne 2^11 - 1 n'est pas premier.</code></pre>
@@ -6280,7 +6280,7 @@ Le nombre de Mersenne 2^11 - 1 n'est pas premier.</code></pre>
 <p>Par exemple, notre système initial :</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x&amp;%20+&amp;%20y&amp;%20-&amp;%20&amp;z&amp;%20=&amp;%208%20%5C%5C%0A-3&amp;x&amp;%20-&amp;%20y&amp;%20+&amp;%202&amp;z&amp;%20=&amp;%20-11%20%5C%5C%0A-2&amp;x&amp;%20+&amp;%20y&amp;%20+&amp;%202&amp;z&amp;%20=&amp;%20-3%0A%5Cend%7Bcases%7D%0A"></p>
 <p>sera représenté par le tableau NumPy suivant :</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1">systeme <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1">systeme <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> np.array([</span>
 <span id="cb1-2">    [<span class="dv" style="color: #AD0000;
@@ -6326,7 +6326,7 @@ font-style: inherit;">3</span>]</span>
 background-color: null;
 font-style: inherit;">=</span><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">float</span>)</span></code></pre></div>
+font-style: inherit;">float</span>)</span></code></pre></div></div>
 </section>
 <section id="accès-aux-coefficients" class="level3">
 <h3 class="anchored" data-anchor-id="accès-aux-coefficients">Accès aux coefficients</h3>
@@ -6349,7 +6349,7 @@ font-style: inherit;">float</span>)</span></code></pre></div>
 <p>Cette représentation nous permet de manipuler facilement notre système d’équations en utilisant les opérations de NumPy, ce qui rend notre implémentation de la méthode du pivot de Gauss à la fois simple et efficace.</p>
 <p>Maintenant que nous avons compris comment représenter et manipuler notre système, passons au code !</p>
 <div id="6739fac9" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
 background-color: null;
@@ -6545,7 +6545,7 @@ background-color: null;
 font-style: inherit;">Système après pivot de Gauss :"</span>)</span>
 <span id="cb2-43"><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">print</span>(resultat)</span></code></pre></div>
+font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Système initial :
 [[  2.   1.  -1.   8.]
@@ -6569,7 +6569,7 @@ Système après pivot de Gauss :
 <p>Résolvons par exemple le système de cinq équations à cinq inconnues suivant :</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x&amp;%20+&amp;%20&amp;y&amp;%20-&amp;%20&amp;z&amp;%20+&amp;%202&amp;w&amp;%20-&amp;%203&amp;v&amp;%20=&amp;%208%20%5C%5C%0A-3&amp;x&amp;%20-&amp;%20&amp;y&amp;%20+&amp;%202&amp;z&amp;%20-&amp;%20&amp;w&amp;%20+&amp;%204&amp;v&amp;%20=&amp;%20-11%20%5C%5C%0A-2&amp;x&amp;%20+&amp;%20&amp;y&amp;%20+&amp;%202&amp;z&amp;%20+&amp;%20&amp;w&amp;%20-&amp;%202&amp;v&amp;%20=&amp;%20-3%20%5C%5C%0A&amp;x&amp;%20-&amp;%20&amp;y&amp;%20+&amp;%20&amp;%20z&amp;%20-&amp;%20&amp;%20w%20&amp;%20+&amp;%20&amp;%20v&amp;%20=&amp;%202%20%5C%5C%0A4&amp;x&amp;%20-&amp;%202&amp;y&amp;%20+&amp;%203&amp;z&amp;%20-&amp;%202&amp;w&amp;%20+&amp;%20&amp;%20v&amp;%20=&amp;%203%0A%5Cend%7Bcases%7D%0A"></p>
 <div id="7b802c41" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">systeme <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">systeme <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> np.array([</span>
 <span id="cb4-2">    [<span class="dv" style="color: #AD0000;
@@ -6679,7 +6679,7 @@ background-color: null;
 font-style: inherit;">"Système après pivot de Gauss :"</span>)</span>
 <span id="cb4-11"><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">print</span>(resultat)</span></code></pre></div>
+font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Système après pivot de Gauss :
 [[ 4.         -2.          3.         -2.          1.          3.        ]
@@ -6968,7 +6968,7 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Objectifs du tutoriel
+<span class="screen-reader-only">Astuce</span>Objectifs du tutoriel
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -6982,7 +6982,7 @@ Objectifs du tutoriel
 <h2 class="anchored" data-anchor-id="préparation">Préparation</h2>
 <p>Nous reprenons le code du tuto précédent comme base de travail, mais nous allons le réorganiser. Plusieurs nouveaux éléments vont en effet devoir être ajoutés au fur et à mesure du développement du jeu, et certains d’entre eux devront, comme le personnage, être animés ou voir certaines de leurs propriétés modifiées au cours du temps. Nous allons donc définir des <strong>classes</strong> pour chacun de ces éléments, afin de pouvoir les manipuler plus facilement et pour rendre notre code plus lisible. Chacune de ces classes comportera au moins trois méthodes : <code>__init__</code> pour initialiser l’objet et ses paramètres de départ, puis <code>update</code> et <code>draw</code>. La première sera appelée à chaque frame pour mettre à jour les propriétés de l’objet, la seconde sera appelée pour afficher l’objet à l’écran.</p>
 <p>Voici donc le code de départ, réorganisé avec la création d’une classe <code>Personnage</code>. Les méthodes <code>update</code> et <code>draw</code> de cette classe sont appelées depuis les méthodes <code>update</code> et <code>draw</code> de l’application.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> pyxel</span>
 <span id="cb1-2"></span>
@@ -7283,7 +7283,7 @@ font-style: inherit;">12</span>)</span>
 background-color: null;
 font-style: inherit;">self</span>.personnage.draw()</span>
 <span id="cb1-47"></span>
-<span id="cb1-48">App()</span></code></pre></div>
+<span id="cb1-48">App()</span></code></pre></div></div>
 </section>
 <section id="fond-statique-montagne-et-ciel" class="level2">
 <h2 class="anchored" data-anchor-id="fond-statique-montagne-et-ciel">Fond statique : Montagne et ciel</h2>
@@ -7300,7 +7300,7 @@ font-style: inherit;">self</span>.personnage.draw()</span>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Idée à retenir
+<span class="screen-reader-only">Astuce</span>Idée à retenir
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -7313,7 +7313,7 @@ Idée à retenir
 <li>Ciel : le coin supérieur gauche a pour coordonnées 0 et 88, l’image a une largeur de 160 pixels et une hauteur de 32 pixels.</li>
 </ul>
 <p>On ajoute donc ces deux éléments à l’arrière plan de la fenêtre de jeu en modifiant comme suit la méthode <code>draw</code> de la classe <code>App</code> :</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
@@ -7393,7 +7393,7 @@ background-color: null;
 font-style: inherit;">12</span>)</span>
 <span id="cb2-8">        <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
+font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div></div>
 <p><strong>Explications</strong> :</p>
 <ul>
 <li>Ligne 4 : <code>pyxel.width//2 - 80</code> est l’abscisse du coin supérieur gauche de l’image dans la fenêtre de jeu. <code>pyxel.width//2</code> est l’abscisse du milieu de la fenêtre, <code>80</code> est la moitié de la largeur de l’image. L’ordonnée <code>pyxel.height-50</code> est choisie par tâtonnement pour que la montagne soit bien positionnée verticalement dans la fenêtre.</li>
@@ -7411,7 +7411,7 @@ font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="animation-des-nuages">Animation des nuages</h2>
 <p>Avec le temps qui passe, les nuages se déplacent lentement vers la gauche et d’autres nuages apparaissent sur la droite. Lorsqu’un nuage a complètement disparu de la fenêtre, il est retiré de la liste des nuages.</p>
 <p>Nous allons définir une classe <code>Nuage</code> qui possède ses propres méthodes <code>update</code> et <code>draw</code>, comme le montre le code ci-dessous.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">class</span> Nuage:</span>
@@ -7493,14 +7493,14 @@ font-style: inherit;">160</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">12</span>)</span></code></pre></div>
+font-style: inherit;">12</span>)</span></code></pre></div></div>
 <p><strong>Explications</strong> :</p>
 <ul>
 <li>Ligne 8 : <code>if pyxel.frame_count % 10 == 0:</code> permet de faire avancer le nuage de 1 pixel vers la gauche trois fois par seconde, puisque notre application a un framerate de 30 fps.</li>
 <li>Ligne 5 : Un attribut booléen <code>replaced</code> est ajouté à la classe <code>Nuage</code> pour indiquer si le nuage a été remplacé par un nouveau nuage. Cela permet de ne pas créer un nouveau nuage à chaque frame (voir plus loin).</li>
 </ul>
 <p>L’idée est de faire apparaître un nouveau nuage dans le ciel dès que le nuage précédent s’approche du bord gauche de l’écran. Pour cela, il sera nécessaire de définir une liste de nuages dans la classe <code>App</code> et de la mettre à jour à chaque frame. Voici le code modifié de la méthode <code>__init__</code> de la classe <code>App</code>, dans lequel on initialise la liste des nuages avec un seul nuage placé au milieu de la fenêtre (lignes 6, 7 et 8).</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
@@ -7561,9 +7561,9 @@ font-style: inherit;">self</span>.nuages.append(premier_nuage)</span>
 background-color: null;
 font-style: inherit;">self</span>.update, <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.draw)</span></code></pre></div>
+font-style: inherit;">self</span>.draw)</span></code></pre></div></div>
 <p>On modifie ensuite la méthode <code>update</code> de la classe <code>App</code> pour mettre à jour la liste des nuages et faire apparaître un nouveau nuage dès que le nuage précédent s’approche du bord gauche de la fenêtre.</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> update(<span class="va" style="color: #111111;
@@ -7625,7 +7625,7 @@ background-color: null;
 font-style: inherit;">160</span>:</span>
 <span id="cb5-10">                <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.nuages.remove(nuage)</span></code></pre></div>
+font-style: inherit;">self</span>.nuages.remove(nuage)</span></code></pre></div></div>
 <p><strong>Explications</strong> :</p>
 <ul>
 <li>Lignes 3 et 4 : la boucle <code>for nuage in self.nuages</code> permet de parcourir la liste des nuages et d’appliquer la méthode <code>update</code> à chacun d’entre eux.</li>
@@ -7633,7 +7633,7 @@ font-style: inherit;">self</span>.nuages.remove(nuage)</span></code></pre></div>
 <li>Lignes 9 et 10 : lorsque le nuage a complètement disparu de la fenêtre, il est retiré de la liste : <code>self.nuages.remove(nuage)</code>.</li>
 </ul>
 <p>Dernière étape, on modifie la méthode <code>draw</code> de la classe <code>App</code> pour afficher tous les nuages de la liste.</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> draw(<span class="va" style="color: #111111;
@@ -7726,7 +7726,7 @@ font-style: inherit;">self</span>.nuages:</span>
 <span id="cb6-10">            nuage.draw()</span>
 <span id="cb6-11">        <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
+font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="tuto3_1_c.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Animation des nuages"><img src="https://flallemand.fr/blog/posts/pyxel_tuto3_fond/tuto3_1_c.gif" class="img-fluid figure-img" style="width:50.0%" alt="Animation des nuages"></a></p>
@@ -7739,7 +7739,7 @@ font-style: inherit;">self</span>.personnage.draw()</span></code></pre></div>
 <p>Pour rendre plus réaliste le déplacement du personnage, on peut provoquer un déplacement de la forêt en sens contraire du déplacement du personnage. La montagne et le ciel, eux, peuvent rester fixes, car situés à une grande distance du personnage. Cela donne un effet de profondeur à la scène.</p>
 <p>Dans le fichier de ressources, la forêt est constituée d’une image de largeur 160 pixels et de hauteur 16 pixels. Nous allons donc avoir besoin de répéter cette image pour remplir toute la largeur de la fenêtre. De plus, comme la forêt est animée, il faut prendre garde à créer une nouvelle copie de l’image à chaque fois que l’image précédente ne rempli plus totalement la largeur de la fenêtre.</p>
 <p>Pour cela, on va créer une classe <code>Foret</code> qui possède ses propres méthodes <code>update</code> et <code>draw</code>, comme le montre le code ci-dessous.</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">class</span> Foret:</span>
@@ -7937,7 +7937,7 @@ font-style: inherit;">=</span> k <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1</span></span></code></pre></div>
+font-style: inherit;">1</span></span></code></pre></div></div>
 <p><strong>Explications</strong> :</p>
 <ul>
 <li>Ligne 3 : <code>self.x</code> est l’abscisse du coin supérieur gauche de l’image dans la fenêtre de jeu. On initialise cette abscisse à 0.</li>
@@ -7948,11 +7948,11 @@ font-style: inherit;">1</span></span></code></pre></div>
 <p>Pour intégrer cet objet <code>Foret</code> à notre application, il faut maintenant ajouter une ligne à chacune des méthodes de la classe <code>App</code> :</p>
 <ul>
 <li><p>Dans la méthode <code>__init__</code>, on crée un objet <code>Foret</code> et on l’ajoute à la liste des attributs de la classe <code>App</code>.</p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="va" style="color: #111111;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">self</span>.foret <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> Foret()</span></code></pre></div></li>
+font-style: inherit;">=</span> Foret()</span></code></pre></div></div></li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -7969,13 +7969,13 @@ Avertissement
 </div>
 <ul>
 <li><p>Dans la méthode <code>update</code>, on met à jour l’objet <code>Foret</code>.</p>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="va" style="color: #111111;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.foret.update()</span></code></pre></div></li>
+font-style: inherit;">self</span>.foret.update()</span></code></pre></div></div></li>
 <li><p>Dans la méthode <code>draw</code>, on affiche l’objet <code>Foret</code>.</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="va" style="color: #111111;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">self</span>.foret.draw()</span></code></pre></div></li>
+font-style: inherit;">self</span>.foret.draw()</span></code></pre></div></div></li>
 </ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">

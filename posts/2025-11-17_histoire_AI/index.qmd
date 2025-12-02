@@ -1,7 +1,7 @@
 ---
 title: "L'histoire de l'Intelligence Artificielle"
 date : "2025-11-17"
-categories: [Histoire, Informatique, IA, vidéothèque]
+categories: [Histoire, Informatique, IA, Vidéothèque]
 image: "miniature.png"
 ---
 

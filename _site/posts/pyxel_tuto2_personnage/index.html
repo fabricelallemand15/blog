@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,14 +72,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-64c5631c8383bb533d2493f64f3da7e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -165,7 +166,8 @@ cookieconsent.run({
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../avatar.png" alt="" class="navbar-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../../avatar.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
@@ -177,6 +179,14 @@ cookieconsent.run({
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pnsi.sitelf.fr"> 
+<span class="menu-text">1ère NSI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://tnsi.sitelf.fr"> 
+<span class="menu-text">Terminale NSI</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">À propos</span></a>
@@ -279,7 +289,7 @@ cookieconsent.run({
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Objectifs du tutoriel
+<span class="screen-reader-only">Important</span>Objectifs du tutoriel
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -331,7 +341,7 @@ Objectifs du tutoriel
 </figure>
 </div>
 <p>Voici le code obtenu :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
@@ -352,7 +362,7 @@ Objectifs du tutoriel
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 127 - 16</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>)</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>App()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>On obtient :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -365,7 +375,7 @@ Objectifs du tutoriel
 <h2 class="anchored" data-anchor-id="déplacement-du-personnage">Déplacement du personnage</h2>
 <p>Nous allons maintenant faire bouger le personnage avec les touches du clavier. Pour cela, nous allons utiliser la méthode <code>update</code> de la classe <code>App</code>. Cette méthode est appelée automatiquement par Pyxel à chaque image. Nous allons donc modifier la valeur de <code>self.x_personnage</code> en fonction des touches du clavier qui sont pressées.</p>
 <p>Cependant, l’abscisse du personnage doit toujours rester comprise entre 0 et 255 pour qu’il ne disparaissent pas de l’écran. Nous allons donc utiliser la fonction <code>min</code> pour que <code>self.x_personnage</code> ne puisse pas être inférieur à 0 et la fonction <code>max</code> pour qu’il ne puisse pas être supérieur à 255.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
@@ -393,7 +403,7 @@ Objectifs du tutoriel
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># on affiche le personnage à l'abscisse x_personnage et à l'ordonnée 128 - 16</span></span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>)</span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>App()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Remarque</strong> : nous avons également défini un attribut <code>vitesse</code> qui permet de modifier la vitesse de déplacement du personnage : il s’agit du nombre de pixels à ajouter, ou à retrancher, à chaque fois que l’on appuie sur une touche fléchée.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -412,7 +422,7 @@ Objectifs du tutoriel
 <figcaption>Animation du personnage</figcaption>
 </figure>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
@@ -449,7 +459,7 @@ Objectifs du tutoriel
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>            pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height <span class="op">-</span> <span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>)</span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>App()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./tuto2-3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Personnage qui se déplace"><img src="./tuto2-3.gif" class="img-fluid figure-img" style="width:50.0%" alt="Personnage qui se déplace"></a></p>
@@ -462,7 +472,7 @@ Objectifs du tutoriel
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Explications
+<span class="screen-reader-only">Astuce</span>Explications
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -471,7 +481,7 @@ Explications
 </div>
 <p>Une dernière amélioration serait souhaitable : lorsque le personnage se déplace vers la gauche, il semble reculer. On peut modifier le code de telle façon qu’il se retourne vers la gauche et regarde toujours dans la direction où il se déplace. Pour cela, il suffit de modifier le paramètre <code>w</code> de la fonction <code>pyxel.blt</code> en lui donnant la valeur <code>-16</code> lorsque le personnage se déplace vers la gauche.</p>
 <p>On définit pour cela encore un nouvel attribut “direction” qui vaut 1 lorsque le personnage se déplace vers la droite et -1 lorsqu’il se déplace vers la gauche. On multiplie donc <code>self.direction</code> par <code>16</code> pour obtenir la valeur de <code>w</code> à donner à la fonction <code>pyxel.blt</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyxel</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> App:</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
@@ -512,7 +522,7 @@ Explications
 <span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
 <span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>            pyxel.blt(<span class="va">self</span>.x_personnage, pyxel.height<span class="op">-</span><span class="dv">16</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="va">self</span>.direction<span class="op">*</span><span class="dv">16</span>, <span class="dv">16</span>)</span>
 <span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>App()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>App()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="./tuto2-4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Personnage qui se déplace"><img src="./tuto2-4.gif" class="img-fluid figure-img" style="width:50.0%" alt="Personnage qui se déplace"></a></p>
@@ -525,7 +535,7 @@ Explications
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-En conclusion
+<span class="screen-reader-only">Note</span>En conclusion
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -588,13 +598,14 @@ En conclusion
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,14 +71,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-64c5631c8383bb533d2493f64f3da7e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -166,7 +167,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -193,7 +194,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../avatar.png" alt="" class="navbar-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../../avatar.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
@@ -205,6 +207,14 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pnsi.sitelf.fr"> 
+<span class="menu-text">1ère NSI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://tnsi.sitelf.fr"> 
+<span class="menu-text">Terminale NSI</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">À propos</span></a>
@@ -374,7 +384,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Probabilité d’une intersection
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Probabilité d’une intersection
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -392,7 +402,7 @@ Rappel de cours : Probabilité d’une intersection
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Formule des probabilités totales
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Formule des probabilités totales
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -416,7 +426,7 @@ Rappel de cours : Formule des probabilités totales
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Loi binomiale
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Loi binomiale
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -439,7 +449,7 @@ Rappel de cours : Loi binomiale
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Formules : Espérance et Variance de la loi binomiale
+<span class="screen-reader-only">Astuce</span>Formules : Espérance et Variance de la loi binomiale
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -467,7 +477,7 @@ Formules : Espérance et Variance de la loi binomiale
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Inégalité de Bienaymé-Tchebychev
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Inégalité de Bienaymé-Tchebychev
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -490,7 +500,7 @@ Rappel de cours : Inégalité de Bienaymé-Tchebychev
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Interprétation graphique du nombre dérivé
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Interprétation graphique du nombre dérivé
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -511,7 +521,7 @@ Rappel de cours : Interprétation graphique du nombre dérivé
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Lien entre signe de <span class="math inline">\(f''\)</span> et convexité
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Lien entre signe de <span class="math inline">\(f''\)</span> et convexité
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -625,7 +635,7 @@ Rappel de cours : Lien entre signe de <span class="math inline">\(f''\)</span> e
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Formule : Intégration par parties
+<span class="screen-reader-only">Astuce</span>Formule : Intégration par parties
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -681,7 +691,7 @@ Formule : Intégration par parties
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Représentation paramétrique d’une droite
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Représentation paramétrique d’une droite
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -704,7 +714,7 @@ Rappel de cours : Représentation paramétrique d’une droite
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Vecteur normal à un plan
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Vecteur normal à un plan
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -754,7 +764,7 @@ Rappel de cours : Vecteur normal à un plan
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Projection orthogonale sur un plan
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Projection orthogonale sur un plan
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -803,7 +813,7 @@ Rappel de cours : Projection orthogonale sur un plan
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Théorème de la convergence monotone
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Théorème de la convergence monotone
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -824,13 +834,13 @@ Rappel de cours : Théorème de la convergence monotone
 <p><strong>3. Dépassement d’un seuil.</strong></p>
 <p><strong>a. Justifier que la surface recouverte dépassera les 14 hectares.</strong> La suite <span class="math inline">\((u_n)\)</span> est croissante et converge vers 15. Par définition de la convergence, les termes de la suite se rapprochent de 15. Comme la suite est croissante, les termes se rapprochent de 15 par valeurs inférieures. Puisque <span class="math inline">\(14 &lt; 15\)</span>, il existera nécessairement un rang <span class="math inline">\(N\)</span> à partir duquel tous les termes <span class="math inline">\(u_n\)</span> seront dans l’intervalle <span class="math inline">\(]14; 15]\)</span>. La superficie recouverte dépassera donc un jour les 14 hectares.</p>
 <p><strong>b. Recopier et compléter l’algorithme.</strong> L’algorithme doit calculer les termes successifs de la suite jusqu’à ce que la valeur de <code>u</code> dépasse (ou soit égale à) 14. À chaque étape, il faut incrémenter le compteur d’années <code>n</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seuil():</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> seuil():</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> <span class="dv">1</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> u <span class="op">&lt;=</span> <span class="dv">14</span>:</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> n <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        u <span class="op">=</span> <span class="op">-</span><span class="fl">0.02</span> <span class="op">*</span> u <span class="op">*</span> u <span class="op">+</span> <span class="fl">1.3</span> <span class="op">*</span> u</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="partie-b-étude-dun-modèle-continu" class="level3">
@@ -845,7 +855,7 @@ Rappel de cours : Théorème de la convergence monotone
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Formule : Solutions d’une équation différentielle linéaire
+<span class="screen-reader-only">Astuce</span>Formule : Solutions d’une équation différentielle linéaire
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -914,13 +924,14 @@ Formule : Solutions d’une équation différentielle linéaire
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

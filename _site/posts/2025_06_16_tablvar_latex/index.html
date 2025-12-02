@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,14 +71,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-64c5631c8383bb533d2493f64f3da7e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -166,7 +167,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -193,7 +194,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../avatar.png" alt="" class="navbar-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../../avatar.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
@@ -205,6 +207,14 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pnsi.sitelf.fr"> 
+<span class="menu-text">1ère NSI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://tnsi.sitelf.fr"> 
+<span class="menu-text">Terminale NSI</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">À propos</span></a>
@@ -287,7 +297,7 @@ window.Quarto = {
 <section id="le-package-tablvar" class="level4">
 <h4 class="anchored" data-anchor-id="le-package-tablvar">Le package <code>tablvar</code></h4>
 <p>Pour commencer, il faut bien sûr appeler le package dans le préambule de votre document. Il est fortement recommandé d’utiliser l’option <code>tikz</code>, qui est le moteur graphique moderne et le plus compatible avec les compilateurs directs en PDF comme <code>pdfLaTeX</code> ou <code>LuaLaTeX</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[tikz]{<span class="ex">tablvar</span>}</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[tikz]{<span class="ex">tablvar</span>}</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="tableau-de-variations-simple" class="level4">
 <h4 class="anchored" data-anchor-id="tableau-de-variations-simple">Tableau de variations simple</h4>
@@ -295,15 +305,15 @@ window.Quarto = {
 <p><strong>La Structure de Base</strong></p>
 <p>Un tableau de variations se crée à l’intérieur d’un environnement <code>tablvar</code>, qui doit être en mode mathématique (entre <code>$$</code> et <code>$$</code> par exemple).</p>
 <p>L’environnement prend un argument obligatoire : le nombre d’intervalles, qui correspond au nombre de flèches que vous souhaitez tracer.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{nombre_de_flèches}</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  </span><span class="co">% Contenu du tableau</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Premier Exemple : Une fonction polynôme</strong></p>
 <p>Étudions une fonction <span class="math inline">\(f\)</span> dont la dérivée s’annule en <span class="math inline">\(-1\)</span> et <span class="math inline">\(2\)</span>.</p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{3} </span><span class="co">% Trois intervalles de variation, donc 3 colonnes</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">x      &amp; -</span><span class="sc">\infty</span><span class="ss"> &amp;&amp; -1 &amp;&amp; 2 &amp;&amp; +</span><span class="sc">\infty</span><span class="ss"> </span><span class="sc">\\</span></span>
@@ -316,7 +326,7 @@ window.Quarto = {
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">}</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -337,7 +347,7 @@ window.Quarto = {
 <p>Pour un tableau de signes, la structure est très similaire. tablvar fournit la commande <code>\barre</code> pour tracer une barre de séparation verticale. Si un zéro doit être placé sur cette barre, on le passe en argument optionnel : <code>\barre[0]</code>.</p>
 <p><strong>Exemple</strong> : Tableau de signes de <span class="math inline">\(f'(x)=(x+1)(-2x+3)\)</span></p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{3} </span><span class="co">% On peut utiliser tablvar pour les signes aussi</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">x             &amp; -</span><span class="sc">\infty</span><span class="ss"> &amp;&amp; -1 &amp;&amp; </span><span class="sc">\frac</span><span class="ss">{3}{2} &amp;&amp; +</span><span class="sc">\infty</span><span class="ss"> </span><span class="sc">\\</span></span>
@@ -349,7 +359,7 @@ window.Quarto = {
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="sc">\mbox</span>{Signe de }<span class="ss">f'(x) &amp; &amp; - &amp; 0 &amp; + &amp; 0 &amp; - &amp; </span><span class="sc">\\</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -369,7 +379,7 @@ window.Quarto = {
 </ul>
 <p><strong>Exemple</strong> : Variations de <span class="math inline">\(f(x)=e^{1/x}\)</span> (valeur interdite en 0).</p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{2}</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">x &amp; -</span><span class="sc">\infty</span><span class="ss"> &amp;&amp; 0 &amp;&amp; +</span><span class="sc">\infty</span><span class="ss"> </span><span class="sc">\\</span></span>
@@ -379,7 +389,7 @@ window.Quarto = {
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ss">}</span></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -394,7 +404,7 @@ window.Quarto = {
 <p>Pour ajouter des valeurs remarquables sur la ligne des <span class="math inline">\(x\)</span>, on utilise <code>\vr{valeur}</code>. Pour indiquer une zone interdite (domaine de définition), on utilise <code>\ZI</code>.</p>
 <p><strong>Exemple</strong> : Variations de l’exponentielle avec des valeurs remarquables.</p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{3}</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ss">x &amp; -</span><span class="sc">\infty</span><span class="ss"> &amp;&amp; </span><span class="sc">\vr</span><span class="ss">{0} &amp;&amp; </span><span class="sc">\vr</span><span class="ss">{1} &amp;&amp; +</span><span class="sc">\infty</span><span class="ss"> </span><span class="sc">\\</span></span>
@@ -403,7 +413,7 @@ window.Quarto = {
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\vr</span><span class="ss">[3]{1} &amp;&amp; </span><span class="sc">\vr</span><span class="ss">{</span><span class="sc">\textrm</span>{e}<span class="ss">} &amp;&amp; </span><span class="sc">\haut</span><span class="ss">{+</span><span class="sc">\infty</span><span class="ss">} }</span></span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -413,7 +423,7 @@ window.Quarto = {
 </div>
 <p><strong>Exemple</strong> : Tableau de variations avec une zone interdite.</p>
 <p>Le code LaTeX :</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{4}</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{4}</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ss">x &amp; -</span><span class="sc">\infty</span><span class="ss"> &amp;&amp; -1 &amp;&amp; 0 &amp;&amp; 1 &amp;&amp; +</span><span class="sc">\infty</span><span class="ss"> </span><span class="sc">\\</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
@@ -421,7 +431,7 @@ window.Quarto = {
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\limg</span><span class="ss">{3}{-</span><span class="sc">\infty</span><span class="ss">} </span><span class="sc">\bb</span><span class="ss"> &amp; </span><span class="sc">\ZI</span><span class="ss"> &amp; </span><span class="sc">\bb</span><span class="ss"> </span><span class="sc">\limd</span><span class="ss">{3}{-</span><span class="sc">\infty</span><span class="ss">} &amp;&amp;</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\haut</span><span class="ss">{</span><span class="sc">\frac</span><span class="ss">{</span><span class="sc">\textrm</span>{e}<span class="ss">^{-1}}{2}} &amp;&amp; </span><span class="sc">\bas</span><span class="ss">{0} }</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}<span class="ss">$$</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}<span class="ss">$$</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -501,7 +511,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Personnalisation
+<span class="screen-reader-only">Astuce</span>Personnalisation
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -516,7 +526,7 @@ Personnalisation
 </section>
 <section id="un-exemple-final" class="level4">
 <h4 class="anchored" data-anchor-id="un-exemple-final">Un exemple final</h4>
-<div class="sourceCode" id="cb8"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{3}</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">tablvar</span>}<span class="ss">{3}</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">x &amp; -</span><span class="sc">\infty</span><span class="ss"> &amp;&amp; -1 &amp;&amp; </span><span class="sc">\frac</span><span class="ss">{3}{2} &amp;&amp; +</span><span class="sc">\infty</span><span class="ss"> </span><span class="sc">\\</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
@@ -530,7 +540,7 @@ Personnalisation
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="sc">\haut</span><span class="ss">{+</span><span class="sc">\infty</span><span class="ss">} &amp;&amp; </span><span class="sc">\bas</span><span class="ss">{-14} &amp;&amp; </span><span class="sc">\haut</span><span class="ss">{</span><span class="sc">\frac</span><span class="ss">{69}{4}} &amp;&amp;</span></span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="sc">\bas</span><span class="ss">{-</span><span class="sc">\infty</span><span class="ss">} }</span></span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="sc">\hline</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}<span class="ss">$$</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tablvar</span>}<span class="ss">$$</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="fig6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Tableau de variations complet"><img src="fig6.png" class="img-fluid figure-img" alt="Tableau de variations complet"></a></p>
@@ -593,13 +603,14 @@ Personnalisation
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

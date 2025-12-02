@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,14 +71,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-64c5631c8383bb533d2493f64f3da7e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -163,7 +164,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -190,7 +191,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../avatar.png" alt="" class="navbar-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../../avatar.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
@@ -202,6 +204,14 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pnsi.sitelf.fr"> 
+<span class="menu-text">1ère NSI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://tnsi.sitelf.fr"> 
+<span class="menu-text">Terminale NSI</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">À propos</span></a>
@@ -363,7 +373,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Clé primaire
+<span class="screen-reader-only">Astuce</span>Rappel : Clé primaire
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -375,9 +385,9 @@ Rappel : Clé primaire
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
 <p>Donner, sous forme de tableau, le résultat de la requête suivante appliquée à l’extrait de table précédent.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> marque, modele</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> marque, modele</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> inventaire</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> annee <span class="op">=</span> <span class="dv">1956</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> annee <span class="op">=</span> <span class="dv">1956</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>La requête sélectionne les attributs <code>marque</code> et <code>modele</code> pour tous les enregistrements où l’année est <code>1956</code>. En examinant la table <code>inventaire</code>, deux lignes correspondent à ce critère : celle avec <code>id=1</code> et celle avec <code>id=7</code>.</p>
 <p>Le résultat est donc :</p>
 <table class="caption-top table">
@@ -409,25 +419,25 @@ Rappel : Clé primaire
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Clause <code>DISTINCT</code>
+<span class="screen-reader-only">Astuce</span>Clause <code>DISTINCT</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>La clause <code>DISTINCT</code> s’utilise avec <code>SELECT</code> pour éliminer les lignes en double dans le résultat d’une requête.</p>
 </div>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> annee</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> annee</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> inventaire</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> modele <span class="op">=</span> <span class="st">'Les Paul Standard'</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> modele <span class="op">=</span> <span class="st">'Les Paul Standard'</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
 <p>Écrire une requête SQL permettant d’obtenir tous les modèles de guitares de la marque Gibson par ordre croissant de l’année dans la collection.</p>
 <p>Il faut filtrer les guitares de marque ‘Gibson’ avec <code>WHERE</code> et trier le résultat par année croissante avec <code>ORDER BY</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> modele</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> modele</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> inventaire</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> marque <span class="op">=</span> <span class="st">'Gibson'</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> annee <span class="kw">ASC</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> annee <span class="kw">ASC</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p><em>Note : <code>ASC</code> (pour ascendant) est l’ordre de tri par défaut et peut être omis.</em></p>
 </section>
 <section id="question-5" class="level3">
@@ -440,16 +450,16 @@ Clause <code>DISTINCT</code>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Syntaxe <code>UPDATE</code>
+<span class="screen-reader-only">Astuce</span>Syntaxe <code>UPDATE</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p><code>UPDATE nom_de_la_table SET colonne1 = valeur1, colonne2 = valeur2, ... WHERE condition;</code> La clause <code>WHERE</code> est importante pour ne pas modifier toutes les lignes de la table.</p>
 </div>
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> inventaire</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> inventaire</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> annee <span class="op">=</span> <span class="dv">1957</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">1</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">1</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="partie-b" class="level2">
@@ -464,7 +474,7 @@ Syntaxe <code>UPDATE</code>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Clé étrangère
+<span class="screen-reader-only">Astuce</span>Rappel : Clé étrangère
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -482,18 +492,18 @@ Rappel : Clé étrangère
 <h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
 <p>Écrire une requête SQL permettant d’obtenir le numéro de série et l’année de toutes les guitares Les Paul Standard de la collection.</p>
 <p>Les informations <code>num_ser</code> et <code>annee</code> sont dans la table <code>guitare</code>, mais le nom du modèle ‘Les Paul Standard’ est dans la table <code>modele</code>. Il faut donc effectuer une jointure entre ces deux tables.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> G.num_ser, G.annee</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> G.num_ser, G.annee</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> guitare <span class="kw">AS</span> G</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> modele <span class="kw">AS</span> M <span class="kw">ON</span> G.id_modele <span class="op">=</span> M.<span class="kw">id</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> M.nom <span class="op">=</span> <span class="st">'Les Paul Standard'</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> M.nom <span class="op">=</span> <span class="st">'Les Paul Standard'</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p><em>Note : l’utilisation d’alias (<code>AS G</code>, <code>AS M</code>) rend la requête plus lisible.</em></p>
 </section>
 <section id="question-8" class="level3">
 <h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
 <p>Écrire une requête SQL permettant de retirer de la collection la guitare d’identifiant <code>id=3</code>.</p>
 <p>La suppression d’un enregistrement se fait avec la commande <code>DELETE FROM</code>. Il est essentiel de spécifier la ligne à supprimer avec une clause <code>WHERE</code>.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> <span class="kw">FROM</span> guitare</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">3</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> <span class="kw">FROM</span> guitare</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">id</span> <span class="op">=</span> <span class="dv">3</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-9" class="level3">
 <h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
@@ -508,21 +518,21 @@ Rappel : Clé étrangère
 <p>L’ajout doit se faire en respectant les contraintes de clés étrangères. On doit d’abord insérer la nouvelle marque, puis le nouveau modèle (en le liant à la marque), et enfin la nouvelle guitare (en la liant au modèle). Les identifiants à utiliser sont fournis.</p>
 <ol type="1">
 <li><p><strong>Insertion de la marque :</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> marque (<span class="kw">id</span>, nom) <span class="kw">VALUES</span> (<span class="dv">3</span>, <span class="st">'BC Rich'</span>);</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> marque (<span class="kw">id</span>, nom) <span class="kw">VALUES</span> (<span class="dv">3</span>, <span class="st">'BC Rich'</span>);</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Insertion du modèle :</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> modele (<span class="kw">id</span>, nom, id_marque) <span class="kw">VALUES</span> (<span class="dv">5</span>, <span class="st">'Mockingbird'</span>, <span class="dv">3</span>);</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> modele (<span class="kw">id</span>, nom, id_marque) <span class="kw">VALUES</span> (<span class="dv">5</span>, <span class="st">'Mockingbird'</span>, <span class="dv">3</span>);</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Insertion de la guitare :</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> guitare (<span class="kw">id</span>, id_modele, annee, num_ser, prix) <span class="kw">VALUES</span> (<span class="dv">9</span>, <span class="dv">5</span>, <span class="dv">1992</span>, <span class="st">'92R'</span>, <span class="dv">5000</span>);</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> guitare (<span class="kw">id</span>, id_modele, annee, num_ser, prix) <span class="kw">VALUES</span> (<span class="dv">9</span>, <span class="dv">5</span>, <span class="dv">1992</span>, <span class="st">'92R'</span>, <span class="dv">5000</span>);</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 </section>
 <section id="question-10" class="level3">
 <h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
 <p>Écrire une requête SQL permettant de calculer la valeur totale des modèles Stratocaster de la collection de Slash.</p>
 <p>Il faut utiliser la fonction d’agrégation <code>SUM()</code> sur la colonne <code>prix</code> de la table <code>guitare</code>. Comme pour la question 7, une jointure avec la table <code>modele</code> est nécessaire pour filtrer sur le nom du modèle ‘Stratocaster’.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">SUM</span>(G.prix)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">SUM</span>(G.prix)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> guitare <span class="kw">AS</span> G</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> modele <span class="kw">AS</span> M <span class="kw">ON</span> G.id_modele <span class="op">=</span> M.<span class="kw">id</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> M.nom <span class="op">=</span> <span class="st">'Stratocaster'</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> M.nom <span class="op">=</span> <span class="st">'Stratocaster'</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 </section>
@@ -533,22 +543,22 @@ Rappel : Clé étrangère
 <h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
 <p>Donner le code Python qui permet d’instancier deux variables <code>tache1</code> et <code>tache2</code> représentant les tâches.</p>
 <p>Le constructeur de la classe <code>Tache</code> est <code>__init__(self, numero, nom, duree)</code>. Il suffit de l’appeler avec les bonnes valeurs pour chaque tâche.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tache1 <span class="op">=</span> Tache(<span class="dv">1</span>, <span class="st">"Répondre aux e-mails"</span>, <span class="dv">45</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>tache2 <span class="op">=</span> Tache(<span class="dv">2</span>, <span class="st">"Ranger ma chambre"</span>, <span class="dv">60</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>tache1 <span class="op">=</span> Tache(<span class="dv">1</span>, <span class="st">"Répondre aux e-mails"</span>, <span class="dv">45</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>tache2 <span class="op">=</span> Tache(<span class="dv">2</span>, <span class="st">"Ranger ma chambre"</span>, <span class="dv">60</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-2-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
 <p>Recopier et compléter le code de la méthode <code>avancer</code> de la classe <code>Tache</code>.</p>
 <p>La méthode <code>avancer</code> doit diminuer l’attribut <code>duree_restante</code> de la valeur <code>n</code> passée en paramètre.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> avancer(<span class="va">self</span>, n):</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.duree_restante <span class="op">-=</span> n</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> avancer(<span class="va">self</span>, n):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>.duree_restante <span class="op">-=</span> n</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-3-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-1">Question 3</h3>
 <p>Recopier et compléter le code de la méthode <code>est_terminee</code> de la classe <code>Tache</code>.</p>
 <p>Une tâche est terminée si sa durée restante est négative ou nulle. La méthode doit donc renvoyer le résultat de la comparaison <code>self.duree_restante &lt;= 0</code>.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> est_terminee(<span class="va">self</span>):</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">self</span>.duree_restante <span class="op">&lt;=</span> <span class="dv">0</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> est_terminee(<span class="va">self</span>):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">self</span>.duree_restante <span class="op">&lt;=</span> <span class="dv">0</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-4-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-4-1">Question 4</h3>
@@ -564,7 +574,7 @@ Rappel : Clé étrangère
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : File (Queue)
+<span class="screen-reader-only">Astuce</span>Rappel : File (Queue)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -598,7 +608,7 @@ Rappel : File (Queue)
 <h3 class="anchored" data-anchor-id="question-7-1">Question 7</h3>
 <p>Recopier et compléter le code de la fonction <code>ajouter_file_prio</code>.</p>
 <p>L’algorithme consiste à transférer les éléments de <code>f</code> vers <code>f_aux</code> jusqu’à trouver le bon emplacement pour <code>(t, p)</code>, insérer <code>(t, p)</code>, transférer le reste de <code>f</code>, puis tout retransférer dans <code>f</code>.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ajouter_file_prio(f, t, p):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ajouter_file_prio(f, t, p):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    f_aux <span class="op">=</span> File()</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. Défiler les éléments de f de priorité &gt;= p vers f_aux</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="kw">not</span> f.est_vide() <span class="kw">and</span> f.examiner()[<span class="dv">1</span>] <span class="op">&gt;=</span> p:</span>
@@ -613,7 +623,7 @@ Rappel : File (Queue)
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. Reconstruire f en défilant f_aux</span></span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="kw">not</span> f_aux.est_vide():</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>        f.enfiler(f_aux.defiler())</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>        f.enfiler(f_aux.defiler())</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-8-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-8-1">Question 8</h3>
@@ -624,7 +634,7 @@ Rappel : File (Queue)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Complexité temporelle
+<span class="screen-reader-only">Astuce</span>Rappel : Complexité temporelle
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -851,7 +861,7 @@ Rappel : Complexité temporelle
 <h3 class="anchored" data-anchor-id="question-10-1">Question 10</h3>
 <p>Écrire le code d’une fonction <code>planning</code> qui prend en paramètre une file de priorité <code>f</code> et qui renvoie une liste de tâches, dans l’ordre où elles vont être effectuées.</p>
 <p>Cette fonction doit implémenter l’algorithme Pomodoro décrit précédemment.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> planning(f):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> planning(f):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Simule l'ordonnancement Pomodoro et renvoie la liste des tâches</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co">    traitées à chaque session.</span></span>
@@ -873,7 +883,7 @@ Rappel : Complexité temporelle
 <span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> tache.est_terminee():</span>
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>            ajouter_file_prio(f, tache, priorite)</span>
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> plan </span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> plan </span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="corrigé-de-lexercice-3-8-points" class="level1">
@@ -890,7 +900,7 @@ Rappel : Complexité temporelle
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Adressage IP et Masque de sous-réseau
+<span class="screen-reader-only">Astuce</span>Rappel : Adressage IP et Masque de sous-réseau
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -959,7 +969,7 @@ Rappel : Adressage IP et Masque de sous-réseau
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Protocole RIP (Routing Information Protocol)
+<span class="screen-reader-only">Astuce</span>Rappel : Protocole RIP (Routing Information Protocol)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1061,7 +1071,7 @@ Rappel : Protocole RIP (Routing Information Protocol)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Protocole OSPF (Open Shortest Path First)
+<span class="screen-reader-only">Astuce</span>Rappel : Protocole OSPF (Open Shortest Path First)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1142,13 +1152,13 @@ Rappel : Protocole OSPF (Open Shortest Path First)
 <section id="question-12" class="level3">
 <h3 class="anchored" data-anchor-id="question-12">Question 12</h3>
 <p>Recopier et compléter les lignes 4, 6 et 7 du code de la fonction <code>precede</code>.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> precede(ip_1, ip_2):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> precede(ip_1, ip_2):</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">35</span>):</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ip_1[i] <span class="op">&lt;</span> ip_2[i]:</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span>   <span class="co"># ligne 4</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> ip_1[i] <span class="op">&gt;</span> ip_2[i]:</span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span>  <span class="co"># ligne 6</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span>          <span class="co"># ligne 7 (si les IPs sont égales)</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">False</span>          <span class="co"># ligne 7 (si les IPs sont égales)</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-13" class="level3">
 <h3 class="anchored" data-anchor-id="question-13">Question 13</h3>
@@ -1162,8 +1172,8 @@ Rappel : Protocole OSPF (Open Shortest Path First)
 <h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
 <p>Recopier et compléter la ligne 14 du code de la classe <code>Abr</code>.</p>
 <p>Par convention, un arbre vide est une instance où <code>adresse_ip</code> est une chaîne vide.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> est_vide(<span class="va">self</span>):</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">self</span>.adresse_ip <span class="op">==</span> <span class="st">''</span> <span class="co"># ligne 14</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> est_vide(<span class="va">self</span>):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">self</span>.adresse_ip <span class="op">==</span> <span class="st">''</span> <span class="co"># ligne 14</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-15" class="level3">
 <h3 class="anchored" data-anchor-id="question-15">Question 15</h3>
@@ -1174,7 +1184,7 @@ Rappel : Protocole OSPF (Open Shortest Path First)
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel : Arbre binaire de recherche (ABR)
+<span class="screen-reader-only">Astuce</span>Rappel : Arbre binaire de recherche (ABR)
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1187,7 +1197,7 @@ Rappel : Arbre binaire de recherche (ABR)
 <h3 class="anchored" data-anchor-id="question-16">Question 16</h3>
 <p>Réécrire le code de la fonction <code>modifie</code> en évitant cette répétition.</p>
 <p>Les lignes d’affectation des attributs sont exécutées que le nœud soit vide ou non. On peut donc les factoriser.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> modifie(<span class="va">self</span>, adresse_ip, interface, passerelle, cout):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> modifie(<span class="va">self</span>, adresse_ip, interface, passerelle, cout):</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># On mémorise si le nœud était vide avant la modification.</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    etait_vide <span class="op">=</span> <span class="va">self</span>.est_vide()</span>
@@ -1202,19 +1212,19 @@ Rappel : Arbre binaire de recherche (ABR)
 <span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># était initialement vide.</span></span>
 <span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> etait_vide:</span>
 <span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.gauche <span class="op">=</span> Abr(<span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="dv">0</span>)</span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.droite <span class="op">=</span> Abr(<span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="dv">0</span>)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.droite <span class="op">=</span> Abr(<span class="st">''</span>, <span class="st">''</span>, <span class="st">''</span>, <span class="dv">0</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="question-17" class="level3">
 <h3 class="anchored" data-anchor-id="question-17">Question 17</h3>
 <p>Recopier et compléter la ligne 35 du code de la fonction <code>rechercher</code>.</p>
 <p>La fonction <code>rechercher</code> navigue dans l’ABR. Si l’adresse cherchée (<code>adresse_ip</code>) précède l’adresse du nœud courant (<code>self.adresse_ip</code>), il faut chercher dans le sous-arbre gauche.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rechercher(<span class="va">self</span>, adresse_ip):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rechercher(<span class="va">self</span>, adresse_ip):</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="va">self</span>.est_vide() <span class="kw">or</span> adresse_ip <span class="op">==</span> <span class="va">self</span>.adresse_ip:</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> precede(adresse_ip, <span class="va">self</span>.adresse_ip): <span class="co"># ligne 35</span></span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.gauche.rechercher(adresse_ip)</span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.droite.rechercher(adresse_ip)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.droite.rechercher(adresse_ip)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
@@ -1273,13 +1283,14 @@ Rappel : Arbre binaire de recherche (ABR)
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

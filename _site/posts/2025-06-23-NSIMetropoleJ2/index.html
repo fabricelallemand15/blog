@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,14 +71,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-64c5631c8383bb533d2493f64f3da7e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -166,7 +167,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -193,7 +194,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../avatar.png" alt="" class="navbar-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../../avatar.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
@@ -205,6 +207,14 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pnsi.sitelf.fr"> 
+<span class="menu-text">1ère NSI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://tnsi.sitelf.fr"> 
+<span class="menu-text">Terminale NSI</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">À propos</span></a>
@@ -326,7 +336,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Parcours d’arbre
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Parcours d’arbre
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -404,14 +414,14 @@ Rappel de cours : Parcours d’arbre
 <h4 class="anchored" data-anchor-id="partie-c">Partie C</h4>
 <ol start="8" type="1">
 <li><p>Voici les lignes 8 et 10 complétées pour la fonction <code>creer_dico_occ</code> :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span>     <span class="cf">if</span> symbole <span class="kw">in</span> dico:</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>         dico[symbole] <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>     <span class="cf">else</span>:</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span>        dico[symbole] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Voici une proposition pour la fonction <code>somme_occ</code> :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme_occ(tab):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme_occ(tab):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie la somme des nombres d'occurrences</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">    contenus dans un tableau de tuples (symbole, nb_occ).</span></span>
@@ -419,16 +429,16 @@ Rappel de cours : Parcours d’arbre
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    somme <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> symbole, nb <span class="kw">in</span> tab:</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        somme <span class="op">+=</span> nb</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> somme</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> somme</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Une écriture plus concise utilisant une compréhension de liste est aussi possible :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme_occ(tab):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>([nb <span class="cf">for</span> symbole, nb <span class="kw">in</span> tab])</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> somme_occ(tab):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>([nb <span class="cf">for</span> symbole, nb <span class="kw">in</span> tab])</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Voici les lignes 9 et 11 complétées pour la fonction <code>shannon</code> :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span>     <span class="cf">if</span> symbole <span class="kw">in</span> [elt[<span class="dv">0</span>] <span class="cf">for</span> elt <span class="kw">in</span> t1]:</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span>         <span class="cf">return</span> <span class="st">"1"</span> <span class="op">+</span> shannon(symbole, t1)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span>    <span class="cf">else</span>:</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span>        <span class="cf">return</span> <span class="st">"0"</span> <span class="op">+</span> shannon(symbole, t2)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span>        <span class="cf">return</span> <span class="st">"0"</span> <span class="op">+</span> shannon(symbole, t2)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>La terminaison de la fonction récursive <code>shannon</code> est garantie par deux points :</p>
 <ul>
 <li><strong>Cas de base</strong> : La fonction s’arrête lorsque la condition <code>len(tab) == 1</code> est vraie.</li>
@@ -441,7 +451,7 @@ Rappel de cours : Parcours d’arbre
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Terminaison d’une fonction récursive
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Terminaison d’une fonction récursive
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -454,7 +464,7 @@ Rappel de cours : Terminaison d’une fonction récursive
 </div>
 <ol start="12" type="1">
 <li><p>Voici une proposition pour la fonction <code>encode_shannon</code> :</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode_shannon(texte):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> encode_shannon(texte):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Prend un texte en paramètre et renvoie le mot binaire</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">    correspondant après encodage par l'algorithme de Shannon-Fano.</span></span>
@@ -470,7 +480,7 @@ Rappel de cours : Terminaison d’une fonction récursive
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        code_caractere <span class="op">=</span> shannon(caractere, tableau_trie)</span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        mot_binaire_final <span class="op">+=</span> code_caractere</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mot_binaire_final</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> mot_binaire_final</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 </section>
 </section>
@@ -486,7 +496,7 @@ Rappel de cours : Terminaison d’une fonction récursive
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Clé primaire
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Clé primaire
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -501,9 +511,9 @@ Rappel de cours : Clé primaire
 </ul>
 <p>Cette requête renvoie donc la liste de tous les jeux et de leur éditeur, classée par ordre alphabétique des noms de jeu.</p></li>
 <li><p>Pour connaître le nom des jeux en cours d’emprunt, il faut sélectionner les jeux dans la table <code>emprunt</code> dont l’attribut <code>dateRendu</code> a la valeur <code>NULL</code>. Comme un jeu ne peut être emprunté qu’une seule fois à un instant donné (un seul exemplaire), l’utilisation de <code>DISTINCT</code> est facultative mais reste une bonne pratique.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nomJeu</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nomJeu</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> emprunt</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> dateRendu <span class="kw">IS</span> <span class="kw">NULL</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> dateRendu <span class="kw">IS</span> <span class="kw">NULL</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : La valeur NULL">
 <div class="callout-header d-flex align-content-center">
@@ -511,7 +521,7 @@ Rappel de cours : Clé primaire
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : La valeur NULL
+<span class="screen-reader-only">Astuce</span>Rappel de cours : La valeur NULL
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -520,10 +530,10 @@ Rappel de cours : La valeur NULL
 </div>
 <ol start="4" type="1">
 <li><p>Pour afficher le nom et le prénom des adhérents ayant emprunté le jeu “Catan”, il faut lier les tables <code>adherent</code> et <code>emprunt</code> via leur clé commune (<code>idAdherent</code>).</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> adherent.nom, adherent.prenom</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> adherent.nom, adherent.prenom</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> adherent</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> emprunt <span class="kw">ON</span> adherent.idAdherent <span class="op">=</span> emprunt.idAdherent</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> emprunt.nomJeu <span class="op">=</span> <span class="st">'Catan'</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> emprunt.nomJeu <span class="op">=</span> <span class="st">'Catan'</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled" title="Rappel de cours : Les jointures">
 <div class="callout-header d-flex align-content-center">
@@ -531,7 +541,7 @@ Rappel de cours : La valeur NULL
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Rappel de cours : Les jointures
+<span class="screen-reader-only">Astuce</span>Rappel de cours : Les jointures
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -540,13 +550,13 @@ Rappel de cours : Les jointures
 </div>
 <ol start="5" type="1">
 <li><p>Pour mettre à jour la base de données après le retour du jeu, il faut utiliser une requête <code>UPDATE</code> pour renseigner la <code>dateRendu</code> de l’emprunt concerné, identifié par son <code>idEmprunt</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> emprunt</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> emprunt</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SET</span> dateRendu <span class="op">=</span> <span class="st">'2025-06-03'</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> idEmprunt <span class="op">=</span> <span class="dv">1538</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> idEmprunt <span class="op">=</span> <span class="dv">1538</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Pour trouver le nom et la catégorie des jeux sortis à partir de 2010 et dont l’âge minimum est strictement inférieur à 10 ans, on utilise une clause <code>WHERE</code> avec deux conditions reliées par l’opérateur <code>AND</code>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nomJeu, categorie</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> nomJeu, categorie</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> jeu</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> anneeSortie <span class="op">&gt;=</span> <span class="dv">2010</span> <span class="kw">AND</span> ageMinimum <span class="op">&lt;</span> <span class="dv">10</span>;</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> anneeSortie <span class="op">&gt;=</span> <span class="dv">2010</span> <span class="kw">AND</span> ageMinimum <span class="op">&lt;</span> <span class="dv">10</span>;</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>La table <code>participation</code> sert à lier les événements aux adhérents. Il s’agit d’une table de jointure pour une relation de type “plusieurs à plusieurs” (un adhérent peut participer à plusieurs événements, un événement accueille plusieurs adhérents). Elle doit donc contenir une clé étrangère vers la table <code>evenement</code> et une clé étrangère vers la table <code>adherent</code>.</p>
 <p>La clé primaire de la table <code>evenement</code> est <code>nom</code>, les clés étrangères de la table <code>participation</code> sont :</p>
 <ul>
@@ -554,7 +564,7 @@ Rappel de cours : Les jointures
 <li><code>#idAdherent</code> qui fait référence à l’attribut <code>idAdherent</code> de la table <code>adherent</code>.</li>
 </ul></li>
 <li><p>Le script Python suivant reprend le code fourni, récupère la liste des jeux empruntés et construit le dictionnaire <code>dict_emprunts</code> qui associe à chaque nom de jeu son nombre total d’emprunts.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Connexion à la base de données</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>connection <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"ludotheque.db"</span>)</span>
@@ -585,10 +595,10 @@ Rappel de cours : Les jointures
 <span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Fermeture de la connexion</span></span>
 <span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>curseur.close()</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>connection.close()</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>connection.close()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li></li>
 </ol>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On suppose que dict_emprunts est déjà créé.</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On suppose que dict_emprunts est déjà créé.</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dict_emprunts <span class="op">=</span> {</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Terraforming Mars"</span>: <span class="dv">25</span>,</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Codenames"</span>: <span class="dv">22</span>,</span>
@@ -644,7 +654,7 @@ Rappel de cours : Les jointures
 <span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Affichage du podium final</span></span>
 <span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(podium_final)</span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Affiche : [['Agricola', 'Puerto Rico', 'Caylus'], ['Codenames', 'Dominion'], ['Terraforming Mars']]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Affiche : [['Agricola', 'Puerto Rico', 'Caylus'], ['Codenames', 'Dominion'], ['Terraforming Mars']]</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercice-3-8-points" class="level2">
 <h2 class="anchored" data-anchor-id="exercice-3-8-points">Exercice 3 (8 points)</h2>
@@ -725,22 +735,22 @@ Rappel de cours : Les jointures
 <p>Le message chiffré est <strong><code>PGRDX</code></strong>.</p>
 <ol start="2" type="1">
 <li><p>La fonction <code>indice</code> peut être écrite en utilisant la méthode <code>.index()</code> des listes en Python.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice(element, L):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice(element, L):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie l'indice de element dans la liste L.</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L.index(element)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L.index(element)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Autre solution possible, plus simple :</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice(element, L):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> indice(element, L):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Renvoie l'indice de element dans la liste L.</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(L)):</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> L[i] <span class="op">==</span> element:</span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> i</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span>  <span class="co"># Si l'élément n'est pas trouvé, on renvoie -1.</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span>  <span class="co"># Si l'élément n'est pas trouvé, on renvoie -1.</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>La fonction <code>lettres_vers_indices</code> parcourt la chaîne de caractères et utilise la liste globale <code>alphabet</code> pour trouver l’indice de chaque lettre.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On suppose que la variable 'alphabet' est définie globalement.</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On suppose que la variable 'alphabet' est définie globalement.</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>alphabet <span class="op">=</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>, <span class="st">'D'</span>, <span class="st">'E'</span>, <span class="st">'F'</span>, <span class="st">'G'</span>, <span class="st">'H'</span>, <span class="st">'I'</span>, <span class="st">'J'</span>, <span class="st">'K'</span>, <span class="st">'L'</span>, </span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">'M'</span>, <span class="st">'N'</span>, <span class="st">'O'</span>, <span class="st">'P'</span>, <span class="st">'Q'</span>, <span class="st">'R'</span>, <span class="st">'S'</span>, <span class="st">'T'</span>, <span class="st">'U'</span>, <span class="st">'V'</span>, <span class="st">'W'</span>, <span class="st">'X'</span>, <span class="st">'Y'</span>, <span class="st">'Z'</span>]</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -755,9 +765,9 @@ Rappel de cours : Les jointures
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Une version plus concise avec une liste en compréhension :</span></span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co"># def lettres_vers_indices(chaine):</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">#     return [indice(c, alphabet) for c in chaine]</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">#     return [indice(c, alphabet) for c in chaine]</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Voici le code complété de la fonction <code>chiffrement</code>.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> chiffrement(msg, cle):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> chiffrement(msg, cle):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(cle) <span class="op">&gt;=</span> <span class="bu">len</span>(msg), <span class="st">'impossible'</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    indices_msg <span class="op">=</span> lettres_vers_indices(msg)</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    indices_cle <span class="op">=</span> lettres_vers_indices(cle)</span>
@@ -774,7 +784,7 @@ Rappel de cours : Les jointures
 <span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 12 : Conversion de la liste d'indices en chaîne de caractères</span></span>
 <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    msg_chiffre <span class="op">=</span> indices_vers_lettres(indices_msg_chiffre)</span>
 <span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 13</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> msg_chiffre</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> msg_chiffre</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Lors de l’appel <code>chiffrement('RESEAU', 'GFTZ')</code>, la condition de l’instruction <code>assert</code> est évaluée. <code>len('RESEAU')</code> vaut 6 et <code>len('GFTZ')</code> vaut 4. La condition <code>len(cle) &gt;= len(msg)</code> (soit <code>4 &gt;= 6</code>) est fausse.</p>
 <p>L’exécution du programme s’arrête et une erreur de type <code>AssertionError</code> est levée, affichant le message <code>'impossible'</code>.</p></li>
 <li><p>Pour déchiffrer <code>GMEDH</code> avec la clé <code>FVEIT</code>, on effectue l’opération inverse : la soustraction modulo 26. <span class="math inline">\(C_{dechiffré} = (C_{chiffré} - C_{clé}) \pmod{26}\)</span>.</p></li>
@@ -847,7 +857,7 @@ Rappel de cours : Les jointures
 <p>Pour chaque caractère, on soustrait le rang de la lettre de la clé au rang de la lettre du message chiffré, et on prend le résultat modulo 26.</p>
 <p>Mathématiquement : si <span class="math inline">\(Chiffré = (Message + Clé) \pmod{26}\)</span>, alors <span class="math inline">\(Message = (Chiffré - Clé) \pmod{26}\)</span>.</p></li>
 <li><p>Pour obtenir la fonction <code>dechiffrement</code>, on adapte la fonction <code>chiffrement</code> en remplaçant l’addition par une soustraction.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dechiffrement(msg_chiffre, cle):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dechiffrement(msg_chiffre, cle):</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(cle) <span class="op">&gt;=</span> <span class="bu">len</span>(msg_chiffre), <span class="st">'impossible'</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    indices_msg <span class="op">=</span> lettres_vers_indices(msg_chiffre)</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    indices_cle <span class="op">=</span> lettres_vers_indices(cle)</span>
@@ -865,7 +875,7 @@ Rappel de cours : Les jointures
 <span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 12 adaptée</span></span>
 <span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    msg_dechiffre <span class="op">=</span> indices_vers_lettres(indices_msg_dechiffre)</span>
 <span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ligne 13 adaptée</span></span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> msg_dechiffre</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> msg_dechiffre</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 </section>
 <section id="partie-b---sécurisation-des-communications" class="level4">
@@ -979,13 +989,14 @@ Rappel de cours : Les jointures
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

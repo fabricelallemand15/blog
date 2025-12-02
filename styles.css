@@ -20,7 +20,7 @@ iframe {
     width: fit-content;
     margin-bottom: 1em;
 }
-thead {
+/* thead {
     background-color: rgb(238, 210, 83);
     color: rgb(0, 0, 0);
 }
@@ -35,10 +35,258 @@ table, th, td {
 }
 td {
     padding: 0.5em;
-}
+} */
 .quarto-title-block .quarto-title-banner {
     background: #ffffff;
+    margin-bottom: 0.5rem; /* Réduit l'espace sous la bannière */
+    padding-bottom: 0.5rem; /* Réduit le padding interne */
 }
+
+/* ajouts 12/2025 */
+/* Import de polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --python-blue: #306998;
+  --python-yellow: #FFD43B;
+  --dark-text: #333333;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--dark-text);
+  background-color: #f9fbfd; /* Fond très légèrement bleuté/gris */
+}
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--python-blue);
+  font-weight: 700;
+}
+
+/* Police pour le code */
+code, kbd, pre, samp {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Navbar */
 .navbar {
-    background-color: #fff;
+  background-color: white !important;
+  border-bottom: 3px solid var(--python-blue);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar .navbar-brand {
+  color: var(--python-blue) !important;
+}
+
+.navbar .nav-link {
+  color: #555 !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  color: var(--python-blue) !important;
+  border-bottom: 2px solid var(--python-yellow); /* Petit accent jaune au survol */
+}
+
+/* Cibler le header de la page d'accueil */
+/* .quarto-title {
+  margin-bottom: 2rem;
+} */
+
+.quarto-title .title {
+    font-size: 3rem;
+    background: linear-gradient(to right, var(--python-blue), #646464);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback pour les navigateurs non-webkit */
+}
+  
+.quarto-title .subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Réduire l'espace au-dessus de la grille d'articles */
+div.quarto-listing {
+  margin-top: 0;
+}
+
+/* Style des cartes dans la grille */
+.quarto-grid-item {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 8px; /* Coins arrondis */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+  
+.quarto-grid-item:hover {
+  transform: translateY(-5px); /* Effet "Lift" au survol */
+  box-shadow: 0 10px 20px rgba(48, 105, 152, 0.15); /* Ombre bleutée */
+  border-color: var(--python-blue);
+}
+  
+.quarto-grid-item .card-body {
+  padding: 1.5rem;
+}
+  
+.quarto-grid-item .card-title {
+  color: var(--python-blue);
+  font-size: 1.1rem;
+}
+  
+/* Les catégories (tags) dans les cartes */
+.listing-categories .listing-category {
+  background-color: rgba(48, 105, 152, 0.1); /* Bleu très pâle */
+  color: var(--python-blue);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  transition: all 0.2s;
+}
+
+.listing-categories .listing-category:hover {
+  background-color: var(--python-blue);
+  color: white;
+}
+
+/* La barre latérale à droite */
+.quarto-listing-category-title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Liste des catégories dans la sidebar */
+.quarto-listing-category .category {
+  padding: 5px 10px;
+  display: block;
+  border-radius: 4px;
+}
+
+.quarto-listing-category .category:hover {
+  background-color: var(--python-yellow);
+  color: var(--dark-text);
+  text-decoration: none;
+}
+
+/* --- AMÉLIORATIONS PAGE ARTICLE --- */
+
+/* 1. Zone de métadonnées (Auteur, Date, Tags) */
+.quarto-title-meta {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.quarto-title-meta-heading {
+  color: var(--python-blue);
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.quarto-title-meta-contents {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+}
+
+/* Styliser les tags (catégories) en haut de l'article comme sur l'accueil */
+.quarto-title .quarto-category {
+  display: inline-block;
+  background-color: rgba(48, 105, 152, 0.1);
+  color: var(--python-blue);
+  border-radius: 15px;
+  padding: 2px 10px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid transparent; /* Retire la bordure par défaut */
+  text-transform: uppercase;
+}
+
+.quarto-title .quarto-category:hover {
+  background-color: var(--python-blue);
+  color: white;
+}
+
+/* 2. Table des matières (Sidebar droite) */
+#quarto-margin-sidebar .sidebar-title {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--python-blue);
+}
+
+/* Ligne verticale active */
+#quarto-margin-sidebar nav > ul > li > a.active {
+  border-left-color: var(--python-blue) !important;
+  color: var(--python-blue) !important;
+}
+
+/* Liens de la TOC au survol */
+#quarto-margin-sidebar a:hover {
+  color: var(--python-blue) !important;
+}
+
+/* 3. Contenu de l'article */
+main {
+  line-height: 1.7; /* Améliore la lisibilité */
+  font-size: 1.05rem;
+}
+
+/* Les liens dans le texte */
+main a {
+  color: var(--python-blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+  font-weight: 500;
+}
+
+main a:hover {
+  color: var(--python-blue);
+  border-bottom: 2px solid var(--python-yellow);
+}
+
+/* Titres H2, H3 dans l'article */
+main h2 {
+  border-bottom: 2px solid var(--python-yellow); /* Soulignement jaune sous les titres */
+  padding-bottom: 0.3rem;
+  margin-top: 2.5rem;
+  display: inline-block; /* Le soulignement s'arrête à la fin du texte */
+}
+
+/* 4. Tableaux modernes */
+.table {
+  /* width: 100%; */
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: hidden; /* Pour que les coins arrondis fonctionnent */
+}
+
+thead {
+  background-color: var(--python-blue);
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #eee; /* Bordures très légères */
+}
+
+/* Retire les couleurs orange existantes de votre fichier actuel */
+.th { background-color: transparent; color: inherit; }
+
+/* Lignes alternées (Zebra striping) pour la lisibilité */
+tbody tr:nth-of-type(even) {
+  background-color: #f8f9fa;
 }

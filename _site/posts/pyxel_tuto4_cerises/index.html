@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.0">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,14 +72,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0ed29b1f0e6f007c337b74d6a5232f88.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7041a81017b12d2ca39db3dff5346856.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-64c5631c8383bb533d2493f64f3da7e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -167,7 +168,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -194,7 +195,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../avatar.png" alt="" class="navbar-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../../avatar.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
@@ -206,6 +208,14 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pnsi.sitelf.fr"> 
+<span class="menu-text">1ère NSI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://tnsi.sitelf.fr"> 
+<span class="menu-text">Terminale NSI</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">À propos</span></a>
@@ -309,7 +319,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Objectifs du tutoriel
+<span class="screen-reader-only">Astuce</span>Objectifs du tutoriel
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -324,7 +334,7 @@ Objectifs du tutoriel
 <section id="création-de-lobjet-cerise" class="level2">
 <h2 class="anchored" data-anchor-id="création-de-lobjet-cerise">Création de l’objet Cerise</h2>
 <p>Nous allons commencer par créer une classe <code>Cerise</code> qui permettra de gérer le comportement et l’affichage des cerises. Chaque cerise aura une position <span class="math inline">\((x, y)\)</span> et une vitesse de chute.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Cerise:</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Cerise:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, x, y):</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">=</span> x</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.y <span class="op">=</span> y</span>
@@ -334,7 +344,7 @@ Objectifs du tutoriel
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.y <span class="op">+=</span> <span class="va">self</span>.vitesse <span class="co"># La cerise tombe</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x, <span class="va">self</span>.y, <span class="dv">0</span>, <span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">12</span>) <span class="co">#Affichage de la cerise</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        pyxel.blt(<span class="va">self</span>.x, <span class="va">self</span>.y, <span class="dv">0</span>, <span class="dv">32</span>, <span class="dv">0</span>, <span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">12</span>) <span class="co">#Affichage de la cerise</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Explications :</p>
 <ul>
 <li>Lignes 2-4 : Le constructeur <code>__init__</code> initialise la position <span class="math inline">\((x, y)\)</span> de la cerise et sa vitesse de chute.</li>
@@ -351,7 +361,7 @@ Objectifs du tutoriel
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Idée à retenir
+<span class="screen-reader-only">Astuce</span>Idée à retenir
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -359,13 +369,13 @@ Idée à retenir
 </div>
 </div>
 <p>On ajoute ces éléments dans la méthode <code>__init__</code> de la classe <code>App</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):  <span class="co"># classe App</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):  <span class="co"># classe App</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ... (code précédent)</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.cerises <span class="op">=</span> [] <span class="co"># liste des cerises</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        pyxel.run(<span class="va">self</span>.update, <span class="va">self</span>.draw)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        pyxel.run(<span class="va">self</span>.update, <span class="va">self</span>.draw)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Ensuite, on modifie la méthode <code>update</code> pour ajouter une nouvelle cerise à un intervalle aléatoire, mettre à jour chaque cerise, et supprimer celles qui sortent de l’écran :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):  <span class="co"># classe App</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):  <span class="co"># classe App</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.personnage.update()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.foret.update()</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> nuage <span class="kw">in</span> <span class="va">self</span>.nuages:</span>
@@ -379,7 +389,7 @@ Idée à retenir
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> cerise <span class="kw">in</span> <span class="va">self</span>.cerises:</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            cerise.update()</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> cerise.y <span class="op">&gt;</span> pyxel.height:</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.cerises.remove(cerise)</span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.cerises.remove(cerise)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Explications :</p>
 <ul>
 <li>Ligne 8&nbsp;: on génère une nouvelle cerise à un intervalle aléatoire compris entre 30 et 60&nbsp;frames. Sachant que le jeu tourne à 30&nbsp;fps, cela correspond à une nouvelle cerise toutes les 1&nbsp;à 2&nbsp;secondes.</li>
@@ -390,7 +400,7 @@ Idée à retenir
 <section id="détection-des-collisions" class="level2">
 <h2 class="anchored" data-anchor-id="détection-des-collisions">Détection des collisions</h2>
 <p>Pour détecter les collisions entre le personnage et les cerises, nous allons ajouter du code dans la méthode <code>update</code> de la classe <code>App</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):  <span class="co"># class App</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> update(<span class="va">self</span>):  <span class="co"># class App</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ... (code précédent)</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> cerise <span class="kw">in</span> <span class="va">self</span>.cerises:</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="co">#... (code précédent pour la gestion des cerises)</span></span>
@@ -399,7 +409,7 @@ Idée à retenir
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                <span class="bu">abs</span>(cerise.x <span class="op">-</span> <span class="va">self</span>.personnage.x_personnage) <span class="op">&lt;</span> <span class="dv">16</span> <span class="kw">and</span> <span class="bu">abs</span>(cerise.y <span class="op">-</span> (pyxel.height <span class="op">-</span> <span class="dv">16</span>)) <span class="op">&lt;</span> <span class="dv">16</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            ):  <span class="co"># Collision détectée !</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.cerises.remove(cerise)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.score <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>                <span class="va">self</span>.score <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Explications :</p>
 <ul>
 <li>Lignes 6 à 8 : On teste si la distance entre le personnage et la cerise est inférieure à 16 pixels, ce qui signifie une collision. Si une collision est détectée, la cerise est retirée de l’écran et le score du joueur est incrémenté.</li>
@@ -408,7 +418,7 @@ Idée à retenir
 <section id="affichage-du-score" class="level2">
 <h2 class="anchored" data-anchor-id="affichage-du-score">Affichage du score</h2>
 <p>Enfin, nous allons afficher le score en haut à gauche de l’écran. Pour cela, nous modifions la méthode <code>draw</code> de la classe <code>App</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):  <span class="co"># classe App</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):  <span class="co"># classe App</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        pyxel.cls(<span class="dv">12</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ... (code précédent pour le dessin du fond)</span></span>
@@ -416,7 +426,7 @@ Idée à retenir
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> cerise <span class="kw">in</span> <span class="va">self</span>.cerises:</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>            cerise.draw()</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.personnage.draw()</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        pyxel.text(<span class="dv">5</span>, <span class="dv">5</span>, <span class="ss">f"Score: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>score<span class="sc">}</span><span class="ss">"</span>, pyxel.COLOR_WHITE) <span class="co"># Affichage du score</span></span></code><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        pyxel.text(<span class="dv">5</span>, <span class="dv">5</span>, <span class="ss">f"Score: </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>score<span class="sc">}</span><span class="ss">"</span>, pyxel.COLOR_WHITE) <span class="co"># Affichage du score</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Explications :</p>
 <ul>
 <li>Ligne 8: on affiche le score à l’écran en blanc aux coordonnées (5, 5)</li>
@@ -482,13 +492,14 @@ Idée à retenir
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
