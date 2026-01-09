@@ -85,6 +85,17 @@ Avec $u(x) = 3x-2$, on a $u'(x) = 3$. La forme est exactement $u' e^u$.
 
 Une primitive est **$F(x) = e^{3x-2}$**.
 
+### Forme $\frac{u'}{u}$
+
+Une primitive est **$\ln(u)$** (pour $u > 0$).
+
+**Exemple :** Soit $f(x) = \frac{2x}{x^2+1}$.
+
+Avec $u(x) = x^2+1$, on a $u'(x) = 2x$. La forme est exactement $\frac{u'}{u}$.
+Comme $x^2+1 > 0$ pour tout réel $x$.
+
+Une primitive est **$F(x) = \ln(x^2+1)$**.
+
 ---
 
 ::: {.callout-tip}

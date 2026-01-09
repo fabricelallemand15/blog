@@ -111,6 +111,13 @@
 <p><strong>Exemple :</strong> Soit <img src="https://latex.codecogs.com/png.latex?f(x)%20=%203e%5E%7B3x-2%7D">.</p>
 <p>Avec <img src="https://latex.codecogs.com/png.latex?u(x)%20=%203x-2">, on a <img src="https://latex.codecogs.com/png.latex?u'(x)%20=%203">. La forme est exactement <img src="https://latex.codecogs.com/png.latex?u'%20e%5Eu">.</p>
 <p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20e%5E%7B3x-2%7D"></strong>.</p>
+</section>
+<section id="forme-fracuu" class="level3">
+<h3 class="anchored" data-anchor-id="forme-fracuu">Forme <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bu'%7D%7Bu%7D"></h3>
+<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?%5Cln(u)"></strong> (pour <img src="https://latex.codecogs.com/png.latex?u%20%3E%200">).</p>
+<p><strong>Exemple :</strong> Soit <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20%5Cfrac%7B2x%7D%7Bx%5E2+1%7D">.</p>
+<p>Avec <img src="https://latex.codecogs.com/png.latex?u(x)%20=%20x%5E2+1">, on a <img src="https://latex.codecogs.com/png.latex?u'(x)%20=%202x">. La forme est exactement <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bu'%7D%7Bu%7D">. Comme <img src="https://latex.codecogs.com/png.latex?x%5E2+1%20%3E%200"> pour tout réel <img src="https://latex.codecogs.com/png.latex?x">.</p>
+<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20%5Cln(x%5E2+1)"></strong>.</p>
 <hr>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">

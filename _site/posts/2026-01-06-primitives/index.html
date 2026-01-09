@@ -261,6 +261,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#forme-u-cdot-un" id="toc-forme-u-cdot-un" class="nav-link" data-scroll-target="#forme-u-cdot-un">Forme <span class="math inline">\(u' \cdot u^n\)</span></a></li>
   <li><a href="#forme-u-eu" id="toc-forme-u-eu" class="nav-link" data-scroll-target="#forme-u-eu">Forme <span class="math inline">\(u' e^u\)</span></a></li>
+  <li><a href="#forme-fracuu" id="toc-forme-fracuu" class="nav-link" data-scroll-target="#forme-fracuu">Forme <span class="math inline">\(\frac{u'}{u}\)</span></a></li>
   </ul></li>
   <li><a href="#pourquoi-chercher-des-primitives" id="toc-pourquoi-chercher-des-primitives" class="nav-link" data-scroll-target="#pourquoi-chercher-des-primitives">Pourquoi chercher des primitives ? 🎯</a></li>
   </ul>
@@ -363,6 +364,13 @@ window.Quarto = {
 <p><strong>Exemple :</strong> Soit <span class="math inline">\(f(x) = 3e^{3x-2}\)</span>.</p>
 <p>Avec <span class="math inline">\(u(x) = 3x-2\)</span>, on a <span class="math inline">\(u'(x) = 3\)</span>. La forme est exactement <span class="math inline">\(u' e^u\)</span>.</p>
 <p>Une primitive est <strong><span class="math inline">\(F(x) = e^{3x-2}\)</span></strong>.</p>
+</section>
+<section id="forme-fracuu" class="level3">
+<h3 class="anchored" data-anchor-id="forme-fracuu">Forme <span class="math inline">\(\frac{u'}{u}\)</span></h3>
+<p>Une primitive est <strong><span class="math inline">\(\ln(u)\)</span></strong> (pour <span class="math inline">\(u &gt; 0\)</span>).</p>
+<p><strong>Exemple :</strong> Soit <span class="math inline">\(f(x) = \frac{2x}{x^2+1}\)</span>.</p>
+<p>Avec <span class="math inline">\(u(x) = x^2+1\)</span>, on a <span class="math inline">\(u'(x) = 2x\)</span>. La forme est exactement <span class="math inline">\(\frac{u'}{u}\)</span>. Comme <span class="math inline">\(x^2+1 &gt; 0\)</span> pour tout réel <span class="math inline">\(x\)</span>.</p>
+<p>Une primitive est <strong><span class="math inline">\(F(x) = \ln(x^2+1)\)</span></strong>.</p>
 <hr>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
