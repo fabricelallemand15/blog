@@ -14,5 +14,127 @@
       g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
   </script>
-  <noscript><p><img referrerpolicy="no-referrer-when-downgrade" src="//sitelf.fr/matomo/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
   <!-- End Matomo Code -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var matomoBaseUrl = "https://sitelf.fr/matomo/";
+    var siteId = "2";
+    var domId = "page-views";
+    var pageViewsElement = document.getElementById(domId);
+
+    if (!pageViewsElement) {
+      return;
+    }
+
+    var isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+    var productionHost = "mathsinfolycee.fr";
+    var hostname = isLocal ? productionHost : window.location.hostname;
+    var protocol = isLocal ? "https:" : window.location.protocol;
+    var pathname = window.location.pathname;
+    var targetUrl = protocol + "//" + hostname + pathname;
+    var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
+
+    function formatAndDisplay(hits) {
+      pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + ' vues';
+    }
+
+    function cleanupCallback(callbackName) {
+      delete window[callbackName];
+      var callbackScript = document.getElementById(callbackName);
+      if (callbackScript) {
+        callbackScript.remove();
+      }
+    }
+
+    function requestJsonp(apiUrl, onSuccess, onError) {
+      var callbackName = "matomoPageViewsCallback_" + Math.floor(Math.random() * 1000000);
+      window[callbackName] = function(data) {
+        cleanupCallback(callbackName);
+        onSuccess(data);
+      };
+
+      var scriptElement = document.createElement("script");
+      scriptElement.id = callbackName;
+      scriptElement.src = apiUrl + "&jsoncallback=" + callbackName;
+      scriptElement.onerror = function() {
+        cleanupCallback(callbackName);
+        onError();
+      };
+      document.body.appendChild(scriptElement);
+    }
+
+    function findHitsByLabel(nodes, label) {
+      if (!Array.isArray(nodes)) {
+        return null;
+      }
+      for (var index = 0; index < nodes.length; index += 1) {
+        var node = nodes[index];
+        if (node && node.label === label && typeof node.nb_hits === "number") {
+          return node.nb_hits;
+        }
+        var nestedHits = findHitsByLabel(node && node.subtable, label);
+        if (nestedHits !== null) {
+          return nestedHits;
+        }
+      }
+      return null;
+    }
+
+    function fetchExactUrlFallback() {
+      var exactUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl" +
+        "&idSite=" + siteId +
+        "&pageUrl=" + encodeURIComponent(targetUrl) +
+        "&format=JSON" +
+        "&period=range&date=2018-01-01,today";
+
+      requestJsonp(
+        exactUrl,
+        function(data) {
+          var hits = 0;
+          if (Array.isArray(data) && data.length > 0 && typeof data[0].nb_hits === "number") {
+            hits = data[0].nb_hits;
+          } else if (data && typeof data.nb_hits === "number") {
+            hits = data.nb_hits;
+          }
+          formatAndDisplay(hits);
+        },
+        function() {
+          pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
+        }
+      );
+    }
+
+    var pathParts = normalizedPath.split("/").filter(Boolean);
+    var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
+
+    if (!isPostPage) {
+      fetchExactUrlFallback();
+      return;
+    }
+
+    var postSlug = pathParts[1];
+    var postSegmentPath = "/posts/" + postSlug;
+    var pageUrlsApiUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls" +
+      "&idSite=" + siteId +
+      "&format=JSON" +
+      "&expanded=1" +
+      "&period=range&date=2018-01-01,today" +
+      "&segment=" + encodeURIComponent("pageUrl=@" + postSegmentPath);
+
+    requestJsonp(
+      pageUrlsApiUrl,
+      function(data) {
+        var hits = findHitsByLabel(data, postSlug);
+        if (typeof hits === "number") {
+          formatAndDisplay(hits);
+        } else {
+          fetchExactUrlFallback();
+        }
+      },
+      function() {
+        fetchExactUrlFallback();
+      }
+    );
+  });
+</script>

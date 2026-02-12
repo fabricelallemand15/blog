@@ -12,7 +12,7 @@ image: "DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in
 
 
 
-<p><em>Dans cette première partie de l'interview, nous abordons des généralités et quelques questions éthiques. Dans la deuxième partie (<a href="https://www.flallemand.fr/wp/2022/interview-exclusive-du-chatgpt-de-openai-partie-2/">article suivant</a>), nous aborderons les aspects techniques et informatiques.</em></p>
+<p><em>Dans cette première partie de l'interview, nous abordons des généralités et quelques questions éthiques. Dans la deuxième partie (<a href="https://www.sitelf.fr/wp/2022/interview-exclusive-du-chatgpt-de-openai-partie-2/">article suivant</a>), nous aborderons les aspects techniques et informatiques.</em></p>
 
 
 
@@ -76,4 +76,4 @@ image: "DALL·E-2022-12-08-21.42.10-an-oil-pastel-drawing-of-a-humanoid-robot-in
 <p><em>Interview à suivre ...</em></p>
 
 
-![An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2](https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png){width="50%"}
+![An oil pastel drawing of a humanoid robot in a desert landscape, par Dall-E 2](https://www.sitelf.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-21.44.08-an-oil-pastel-drawing-of-a-humanoid-robot-in-a-desertic-landscape-1024x1024.png){width="50%"}

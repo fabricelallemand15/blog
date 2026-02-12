@@ -7,7 +7,7 @@ categories: [NSI, Actualités]
 image: "cpu-3061923_640.jpg"
 ---
 
-Les microprocesseurs sont au cœur de nos ordinateurs, smartphones, tablettes et autres appareils électroniques. Ils sont composés de millions, voire de milliards, de transistors qui réalisent des opérations logiques et arithmétiques à une vitesse vertigineuse. Mais ces transistors sont de plus en plus petits et difficiles à fabriquer, ce qui menace la loi de Moore, qui prédit que la puissance des microprocesseurs double tous les deux ans ([voir cours de première NSI](https://pnsi.flallemand.fr/10_vonNeumann/neumann_cours_1.html){target="_blank"}).
+Les microprocesseurs sont au cœur de nos ordinateurs, smartphones, tablettes et autres appareils électroniques. Ils sont composés de millions, voire de milliards, de transistors qui réalisent des opérations logiques et arithmétiques à une vitesse vertigineuse. Mais ces transistors sont de plus en plus petits et difficiles à fabriquer, ce qui menace la loi de Moore, qui prédit que la puissance des microprocesseurs double tous les deux ans ([voir cours de première NSI](https://pnsi.sitelf.fr/10_vonNeumann/neumann_cours_1.html){target="_blank"}).
 
 ![CPU](cpu-3061923_640.jpg){width=50%}
 

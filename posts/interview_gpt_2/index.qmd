@@ -219,4 +219,4 @@ print(think(np.array([1,0,0])))
 
 <p>Je suis ravi d'avoir pu vous aider. L'apprentissage automatique et les réseaux de neurones sont des domaines fascinants et il y a beaucoup à apprendre. Si vous avez d'autres questions, n'hésitez pas à me les poser. Je ferai de mon mieux pour y répondre.</p>
 
-![Image évoquant un réseau neuronal créée par DALL-E 2](https://www.flallemand.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png){width="50%"}
+![Image évoquant un réseau neuronal créée par DALL-E 2](https://www.sitelf.fr/wp/wp-content/uploads/2022/12/DALL·E-2022-12-08-20.31.30-a-colorfull-imaginary-view-of-a-neural-network-digital-art-1024x1024.png){width="50%"}

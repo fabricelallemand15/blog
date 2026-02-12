@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Le bloc-notes Maths, Info, Lycée</title>
-<link>https://flallemand.fr/blog/</link>
-<atom:link href="https://flallemand.fr/blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://mathsinfolycee.fr/</link>
+<atom:link href="https://mathsinfolycee.fr/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
 <generator>quarto-1.9.16</generator>
 <lastBuildDate>Mon, 05 Jan 2026 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Maîtriser la recherche de primitives : le guide complet</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2026-01-06-primitives/</link>
+  <link>https://mathsinfolycee.fr/posts/2026-01-06-primitives/</link>
   <description><![CDATA[ 
 
 
@@ -158,14 +158,14 @@
   <category>Analyse</category>
   <category>Terminale</category>
   <category>Mathématiques</category>
-  <guid>https://flallemand.fr/blog/posts/2026-01-06-primitives/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2026-01-06-primitives/</guid>
   <pubDate>Mon, 05 Jan 2026 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2026-01-06-primitives/primitives2.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2026-01-06-primitives/primitives2.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>L’histoire de l’Intelligence Artificielle</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025-11-17_histoire_AI/</link>
+  <link>https://mathsinfolycee.fr/posts/2025-11-17_histoire_AI/</link>
   <description><![CDATA[ 
 
 
@@ -194,7 +194,7 @@
 <p>Le passage de la théorie à la pratique survient en <strong>1957</strong> avec Frank Rosenblatt, qui propose le premier modèle de machine capable d’apprendre, fondé sur un réseau de neurones artificiels. Cela a mené au <strong>Mark 1 Perceptron</strong>, une machine composée de 400 cellules photoélectriques et d’une seule couche de neurones, capable de tâches simples comme la reconnaissance de caractères. Cependant, le Perceptron, limité en puissance de calcul et incapable de traiter des problèmes non linéaires (comme distinguer précisément les spams des non-spams), a rapidement atteint ses limites.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Mark_I_Perceptron.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Mark 1 Perceptron - By John C. Hay, Albert E. Murray - https://apps.dtic.mil/sti/tr/pdf/AD0236965.pdf, Public Domain, https://commons.wikimedia.org/w/index.php?curid=143176022"><img src="https://flallemand.fr/blog/posts/2025-11-17_histoire_AI/Mark_I_Perceptron.png" class="img-fluid figure-img" style="width:66.0%" alt="Mark 1 Perceptron - By John C. Hay, Albert E. Murray - https://apps.dtic.mil/sti/tr/pdf/AD0236965.pdf, Public Domain, https://commons.wikimedia.org/w/index.php?curid=143176022"></a></p>
+<p><a href="Mark_I_Perceptron.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Mark 1 Perceptron - By John C. Hay, Albert E. Murray - https://apps.dtic.mil/sti/tr/pdf/AD0236965.pdf, Public Domain, https://commons.wikimedia.org/w/index.php?curid=143176022"><img src="https://mathsinfolycee.fr/posts/2025-11-17_histoire_AI/Mark_I_Perceptron.png" class="img-fluid figure-img" style="width:66.0%" alt="Mark 1 Perceptron - By John C. Hay, Albert E. Murray - https://apps.dtic.mil/sti/tr/pdf/AD0236965.pdf, Public Domain, https://commons.wikimedia.org/w/index.php?curid=143176022"></a></p>
 <figcaption>Mark 1 Perceptron - By John C. Hay, Albert E. Murray - https://apps.dtic.mil/sti/tr/pdf/AD0236965.pdf, Public Domain, https://commons.wikimedia.org/w/index.php?curid=143176022</figcaption>
 </figure>
 </div>
@@ -210,7 +210,7 @@
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Kasparov-29.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Garry Kasparov - By Copyright 2007, S.M.S.I., Inc.&nbsp;- Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4507359"><img src="https://flallemand.fr/blog/posts/2025-11-17_histoire_AI/Kasparov-29.jpg" class="img-fluid figure-img" alt="Garry Kasparov - By Copyright 2007, S.M.S.I., Inc.&nbsp;- Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4507359"></a></p>
+<p><a href="Kasparov-29.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Garry Kasparov - By Copyright 2007, S.M.S.I., Inc.&nbsp;- Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4507359"><img src="https://mathsinfolycee.fr/posts/2025-11-17_histoire_AI/Kasparov-29.jpg" class="img-fluid figure-img" alt="Garry Kasparov - By Copyright 2007, S.M.S.I., Inc.&nbsp;- Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4507359"></a></p>
 <figcaption>Garry Kasparov - By Copyright 2007, S.M.S.I., Inc.&nbsp;- Owen Williams, The Kasparov Agency. - http://www.kasparovagent.com/photo_gallery.php, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4507359</figcaption>
 </figure>
 </div>
@@ -220,7 +220,7 @@
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Lee_Se-Dol.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Lee Sedol - LG Electronics, CC BY 2.0 https://creativecommons.org/licenses/by/2.0, via Wikimedia Commons"><img src="https://flallemand.fr/blog/posts/2025-11-17_histoire_AI/Lee_Se-Dol.jpg" class="img-fluid figure-img" style="width:33.0%" alt="Lee Sedol - LG Electronics, CC BY 2.0 https://creativecommons.org/licenses/by/2.0, via Wikimedia Commons"></a></p>
+<p><a href="Lee_Se-Dol.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Lee Sedol - LG Electronics, CC BY 2.0 https://creativecommons.org/licenses/by/2.0, via Wikimedia Commons"><img src="https://mathsinfolycee.fr/posts/2025-11-17_histoire_AI/Lee_Se-Dol.jpg" class="img-fluid figure-img" style="width:33.0%" alt="Lee Sedol - LG Electronics, CC BY 2.0 https://creativecommons.org/licenses/by/2.0, via Wikimedia Commons"></a></p>
 <figcaption>Lee Sedol - LG Electronics, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0" class="uri">https://creativecommons.org/licenses/by/2.0</a>, via Wikimedia Commons</figcaption>
 </figure>
 </div>
@@ -237,14 +237,14 @@
   <category>Informatique</category>
   <category>IA</category>
   <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/2025-11-17_histoire_AI/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025-11-17_histoire_AI/</guid>
   <pubDate>Sun, 16 Nov 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025-11-17_histoire_AI/miniature.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025-11-17_histoire_AI/miniature.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Superordinateurs : pour quoi faire ?</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025_09_16_superordi/</link>
+  <link>https://mathsinfolycee.fr/posts/2025_09_16_superordi/</link>
   <description><![CDATA[ 
 
 
@@ -266,7 +266,7 @@
 <h2 class="anchored" data-anchor-id="exemple-jean-zay-4-le-supercalculateur-français">Exemple : Jean Zay 4, le supercalculateur français</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Le_supercalculateur_Jean_Zay_.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Jean Zay 4"><img src="https://flallemand.fr/blog/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Jean Zay 4"></a></p>
+<p><a href="Le_supercalculateur_Jean_Zay_.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Jean Zay 4"><img src="https://mathsinfolycee.fr/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Jean Zay 4"></a></p>
 <figcaption>Jean Zay 4</figcaption>
 </figure>
 </div>
@@ -306,7 +306,7 @@
 <p>Cependant, Jupiter n’est pas uniquement destiné à l’intelligence artificielle. Il sera également utilisé pour des applications dans divers domaines scientifiques, tels que la recherche sur les matériaux, la biologie, la médecine, la physique des particules et la climatologie.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="jupiter.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)"><img src="https://flallemand.fr/blog/posts/2025_09_16_superordi/jupiter.webp" class="img-fluid figure-img" style="width:50.0%" alt="Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)"></a></p>
+<p><a href="jupiter.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)"><img src="https://mathsinfolycee.fr/posts/2025_09_16_superordi/jupiter.webp" class="img-fluid figure-img" style="width:50.0%" alt="Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)"></a></p>
 <figcaption>Un salarié travaille sur le superordinateur Jupiter dans le centre de recherche de Jülich, près de Cologne. (Oliver Berg/Dpa/SIPA)</figcaption>
 </figure>
 </div>
@@ -325,14 +325,14 @@
   <category>Informatique</category>
   <category>IA</category>
   <category>Actualités</category>
-  <guid>https://flallemand.fr/blog/posts/2025_09_16_superordi/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025_09_16_superordi/</guid>
   <pubDate>Sun, 21 Sep 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>John von Neumann: Le génie architecte du numérique</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/</link>
+  <link>https://mathsinfolycee.fr/posts/2025_09_10_von_Neumann/</link>
   <description><![CDATA[ 
 
 
@@ -343,7 +343,7 @@
 <p>Sans lui, nos ordinateurs n’auraient pas la même tête, et de nombreux concepts que nous utilisons aujourd’hui n’existeraient peut-être pas. On peut dire de lui qu’il était un <strong>polymathe</strong> – c’est-à-dire une personne possédant une connaissance approfondie dans un grand nombre de domaines, notamment en sciences, en art et en philosophie – un vrai génie aux multiples contributions !</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="800px-JohnvonNeumann-LosAlamos.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="John von Neumann à Los Alamos en 1945 (source : Wikimedia Commons, domaine public)"><img src="https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/800px-JohnvonNeumann-LosAlamos.jpg" class="img-fluid figure-img" style="width:30.0%" alt="John von Neumann à Los Alamos en 1945 (source : Wikimedia Commons, domaine public)"></a></p>
+<p><a href="800px-JohnvonNeumann-LosAlamos.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="John von Neumann à Los Alamos en 1945 (source : Wikimedia Commons, domaine public)"><img src="https://mathsinfolycee.fr/posts/2025_09_10_von_Neumann/800px-JohnvonNeumann-LosAlamos.jpg" class="img-fluid figure-img" style="width:30.0%" alt="John von Neumann à Los Alamos en 1945 (source : Wikimedia Commons, domaine public)"></a></p>
 <figcaption>John von Neumann à Los Alamos en 1945 (source : Wikimedia Commons, domaine public)</figcaption>
 </figure>
 </div>
@@ -407,7 +407,7 @@
 <p>Je vous conseille également la lecture du très bon roman de Benjamin LABATUT, <strong>MANIAC</strong>, dont Von Neumann est l’un des personnages principaux.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="maniac.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)"><img src="https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/maniac.jpeg" class="img-fluid figure-img" style="width:20.0%" alt="Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)"></a></p>
+<p><a href="maniac.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)"><img src="https://mathsinfolycee.fr/posts/2025_09_10_von_Neumann/maniac.jpeg" class="img-fluid figure-img" style="width:20.0%" alt="Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)"></a></p>
 <figcaption>Couverture du roman MANIAC de Benjamin Labatut (éditions Grasset)</figcaption>
 </figure>
 </div>
@@ -420,14 +420,14 @@
   <category>Informatique</category>
   <category>Mathématiques</category>
   <category>Science</category>
-  <guid>https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025_09_10_von_Neumann/</guid>
   <pubDate>Tue, 09 Sep 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025_09_10_von_Neumann/800px-JohnvonNeumann-LosAlamos.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025_09_10_von_Neumann/800px-JohnvonNeumann-LosAlamos.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Corrigé du sujet de Mathématiques du baccalauréat 2025 - Métropole Jour 2</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025-06-24-MathsMetropoleJ2/</link>
+  <link>https://mathsinfolycee.fr/posts/2025-06-24-MathsMetropoleJ2/</link>
   <description><![CDATA[ 
 
 
@@ -455,7 +455,7 @@
 <li><img src="https://latex.codecogs.com/png.latex?P_%7B%5Coverline%7B%20A%7D%7D(%5Coverline%7B%20B%7D)%20=%201%20-%20P_%7B%5Coverline%7B%20A%7D%7D(B)%20=%201%20-%200,4%20=%200,6">.</li>
 </ul>
 <p>L’arbre pondéré représentant la situation est le suivant :</p>
-<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/2025-06-24-MathsMetropoleJ2/arbre.png" class="img-fluid" style="width:50.0%"></a></p></li>
+<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/2025-06-24-MathsMetropoleJ2/arbre.png" class="img-fluid" style="width:50.0%"></a></p></li>
 <li><p><strong>Calculer la probabilité <img src="https://latex.codecogs.com/png.latex?P(%5Coverline%7B%20A%7D%20%5Ccap%20%5Coverline%7B%20B%7D)"> et interpréter le résultat.</strong></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1064,14 +1064,14 @@
  ]]></description>
   <category>Mathématiques</category>
   <category>Annales</category>
-  <guid>https://flallemand.fr/blog/posts/2025-06-24-MathsMetropoleJ2/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025-06-24-MathsMetropoleJ2/</guid>
   <pubDate>Mon, 23 Jun 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025-06-24-MathsMetropoleJ2/arbre.png" medium="image" type="image/png" height="202" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025-06-24-MathsMetropoleJ2/arbre.png" medium="image" type="image/png" height="202" width="144"/>
 </item>
 <item>
   <title>Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 2</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025-06-23-NSIMetropoleJ2/</link>
+  <link>https://mathsinfolycee.fr/posts/2025-06-23-NSIMetropoleJ2/</link>
   <description><![CDATA[ 
 
 
@@ -1186,7 +1186,7 @@
 </ol>
 <p>L’arbre de codage obtenu est le suivant :</p></li>
 </ol>
-<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/2025-06-23-NSIMetropoleJ2/arbre.png" class="img-fluid"></a></p>
+<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/2025-06-23-NSIMetropoleJ2/arbre.png" class="img-fluid"></a></p>
 </section>
 <section id="partie-c" class="level4">
 <h4 class="anchored" data-anchor-id="partie-c">Partie C</h4>
@@ -2431,14 +2431,14 @@ font-style: inherit;">return</span> msg_dechiffre</span></code></pre></div></div
  ]]></description>
   <category>NSI</category>
   <category>Annales</category>
-  <guid>https://flallemand.fr/blog/posts/2025-06-23-NSIMetropoleJ2/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025-06-23-NSIMetropoleJ2/</guid>
   <pubDate>Sun, 22 Jun 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025-06-23-NSIMetropoleJ2/arbre.png" medium="image" type="image/png" height="67" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025-06-23-NSIMetropoleJ2/arbre.png" medium="image" type="image/png" height="67" width="144"/>
 </item>
 <item>
   <title>Corrigé du sujet de NSI du baccalauréat 2025 - Métropole Jour 1</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025-06-18-NSIMetropoleJ1/</link>
+  <link>https://mathsinfolycee.fr/posts/2025-06-18-NSIMetropoleJ1/</link>
   <description><![CDATA[ 
 
 
@@ -3813,14 +3813,14 @@ font-style: inherit;">self</span>.droite.rechercher(adresse_ip)</span></code></p
  ]]></description>
   <category>NSI</category>
   <category>Annales</category>
-  <guid>https://flallemand.fr/blog/posts/2025-06-18-NSIMetropoleJ1/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025-06-18-NSIMetropoleJ1/</guid>
   <pubDate>Tue, 17 Jun 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025-06-18-NSIMetropoleJ1/img1.png" medium="image" type="image/png" height="85" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025-06-18-NSIMetropoleJ1/img1.png" medium="image" type="image/png" height="85" width="144"/>
 </item>
 <item>
   <title>Corrigé du sujet de mathématiques du baccalauréat 2025 - Métropole Jour 1</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025-06-16-MathsMétropoleJ1/</link>
+  <link>https://mathsinfolycee.fr/posts/2025-06-16-MathsMétropoleJ1/</link>
   <description><![CDATA[ 
 
 
@@ -3890,7 +3890,7 @@ font-style: inherit;">self</span>.droite.rechercher(adresse_ip)</span></code></p
 </ul>
 <p>La probabilité <img src="https://latex.codecogs.com/png.latex?P_O(R)"> sera calculée à la question 3.</p>
 <p>L’arbre complété est le suivant :</p>
-<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/2025-06-16-MathsMétropoleJ1/arbre.png" class="img-fluid" style="width:50.0%"></a></p>
+<p><a href="arbre.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/2025-06-16-MathsMétropoleJ1/arbre.png" class="img-fluid" style="width:50.0%"></a></p>
 </section>
 <section id="calcul-de-pb-cap-r-et-interprétation" class="level4">
 <h4 class="anchored" data-anchor-id="calcul-de-pb-cap-r-et-interprétation">2. Calcul de <img src="https://latex.codecogs.com/png.latex?P(B%20%5Ccap%20R)"> et interprétation</h4>
@@ -4434,14 +4434,14 @@ font-style: inherit;">return</span> n</span></code></pre></div></div>
  ]]></description>
   <category>Mathématiques</category>
   <category>Annales</category>
-  <guid>https://flallemand.fr/blog/posts/2025-06-16-MathsMétropoleJ1/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025-06-16-MathsMétropoleJ1/</guid>
   <pubDate>Mon, 16 Jun 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025-06-16-MathsMétropoleJ1/img1.png" medium="image" type="image/png" height="89" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025-06-16-MathsMétropoleJ1/img1.png" medium="image" type="image/png" height="89" width="144"/>
 </item>
 <item>
   <title>Tableaux de variations faciles en LaTeX</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/</link>
+  <link>https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/</link>
   <description><![CDATA[ 
 
 
@@ -4589,7 +4589,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Tableau de variations d’une fonction polynôme"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig1.png" class="img-fluid figure-img" alt="Tableau de variations d’une fonction polynôme"></a></p>
+<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Tableau de variations d’une fonction polynôme"><img src="https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/fig1.png" class="img-fluid figure-img" alt="Tableau de variations d’une fonction polynôme"></a></p>
 <figcaption>Tableau de variations d’une fonction polynôme</figcaption>
 </figure>
 </div>
@@ -4688,7 +4688,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Tableau de signes de la fonction f’"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig2.png" class="img-fluid figure-img" alt="Tableau de signes de la fonction f’"></a></p>
+<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Tableau de signes de la fonction f’"><img src="https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/fig2.png" class="img-fluid figure-img" alt="Tableau de signes de la fonction f’"></a></p>
 <figcaption>Tableau de signes de la fonction f’</figcaption>
 </figure>
 </div>
@@ -4792,7 +4792,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Tableau de variations de f(x)=e^{1/x}"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig3.png" class="img-fluid figure-img" alt="Tableau de variations de f(x)=e^{1/x}"></a></p>
+<p><a href="fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Tableau de variations de f(x)=e^{1/x}"><img src="https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/fig3.png" class="img-fluid figure-img" alt="Tableau de variations de f(x)=e^{1/x}"></a></p>
 <figcaption>Tableau de variations de f(x)=e^{1/x}</figcaption>
 </figure>
 </div>
@@ -4894,7 +4894,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Tableau de variations avec des valeurs remarquables"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig4.png" class="img-fluid figure-img" alt="Tableau de variations avec des valeurs remarquables"></a></p>
+<p><a href="fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Tableau de variations avec des valeurs remarquables"><img src="https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/fig4.png" class="img-fluid figure-img" alt="Tableau de variations avec des valeurs remarquables"></a></p>
 <figcaption>Tableau de variations avec des valeurs remarquables</figcaption>
 </figure>
 </div>
@@ -5006,7 +5006,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le résultat :</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fig5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Tableau de variations avec une zone interdite"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig5.png" class="img-fluid figure-img" alt="Tableau de variations avec une zone interdite"></a></p>
+<p><a href="fig5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Tableau de variations avec une zone interdite"><img src="https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/fig5.png" class="img-fluid figure-img" alt="Tableau de variations avec une zone interdite"></a></p>
 <figcaption>Tableau de variations avec une zone interdite</figcaption>
 </figure>
 </div>
@@ -5236,7 +5236,7 @@ background-color: null;
 font-style: inherit;">$$</span></span></code></pre></div></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="fig6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Tableau de variations complet"><img src="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig6.png" class="img-fluid figure-img" alt="Tableau de variations complet"></a></p>
+<p><a href="fig6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Tableau de variations complet"><img src="https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/fig6.png" class="img-fluid figure-img" alt="Tableau de variations complet"></a></p>
 <figcaption>Tableau de variations complet</figcaption>
 </figure>
 </div>
@@ -5247,14 +5247,14 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
  ]]></description>
   <category>Mathématiques</category>
   <category>LaTeX</category>
-  <guid>https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/</guid>
   <pubDate>Sun, 15 Jun 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025_06_16_tablvar_latex/fig1.png" medium="image" type="image/png" height="69" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025_06_16_tablvar_latex/fig1.png" medium="image" type="image/png" height="69" width="144"/>
 </item>
 <item>
   <title>Le “Nobel des maths” décerné au Japonais Masaki Kashiwara</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2025_03_27_Prix_Abel/</link>
+  <link>https://mathsinfolycee.fr/posts/2025_03_27_Prix_Abel/</link>
   <description><![CDATA[ 
 
 
@@ -5264,7 +5264,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Le monde des mathématiques est en ébullition ! Le prestigieux prix Abel, souvent considéré comme l’équivalent du prix Nobel dans cette discipline, a été attribué au mathématicien japonais Masaki Kashiwara.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Masaki Kashiwara (crédit : Peter Bagde / Typos1 / The Abel Prize)"><img src="https://flallemand.fr/blog/posts/2025_03_27_Prix_Abel/Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Masaki Kashiwara (crédit : Peter Bagde / Typos1 / The Abel Prize)"></a></p>
+<p><a href="Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Masaki Kashiwara (crédit : Peter Bagde / Typos1 / The Abel Prize)"><img src="https://mathsinfolycee.fr/posts/2025_03_27_Prix_Abel/Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" class="img-fluid figure-img" style="width:80.0%" alt="Masaki Kashiwara (crédit : Peter Bagde / Typos1 / The Abel Prize)"></a></p>
 <figcaption>Masaki Kashiwara (crédit : Peter Bagde / Typos1 / The Abel Prize)</figcaption>
 </figure>
 </div>
@@ -5280,14 +5280,14 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
  ]]></description>
   <category>Mathématiques</category>
   <category>Actualités</category>
-  <guid>https://flallemand.fr/blog/posts/2025_03_27_Prix_Abel/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2025_03_27_Prix_Abel/</guid>
   <pubDate>Wed, 26 Mar 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2025_03_27_Prix_Abel/Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025_03_27_Prix_Abel/Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Harold Hotelling : Un mathématicien au service de l’économie</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/Hotelling/</link>
+  <link>https://mathsinfolycee.fr/posts/Hotelling/</link>
   <description><![CDATA[ 
 
 
@@ -5297,7 +5297,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 <p>Voici une ressource qui, je l’espère, élargira votre perspective sur les mathématiques et leur application dans le monde réel. Il s’agit d’un podcast de France Culture consacré à <strong>Harold Hotelling</strong>, un économiste et mathématicien dont l’œuvre, bien que parfois méconnue, a profondément influencé la pensée économique du 20e siècle.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Harold_Hotelling.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Harold Hotelling"><img src="https://flallemand.fr/blog/posts/Hotelling/Harold_Hotelling.jpg" class="img-fluid figure-img" style="width:25.0%" alt="Harold Hotelling"></a></p>
+<p><a href="Harold_Hotelling.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Harold Hotelling"><img src="https://mathsinfolycee.fr/posts/Hotelling/Harold_Hotelling.jpg" class="img-fluid figure-img" style="width:25.0%" alt="Harold Hotelling"></a></p>
 <figcaption>Harold Hotelling</figcaption>
 </figure>
 </div>
@@ -5318,7 +5318,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="640x340_sc_sc_gettyimages-3066394.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Photo d’une exploitation pétrolière californienne en 1925. ©Getty"><img src="https://flallemand.fr/blog/posts/Hotelling/640x340_sc_sc_gettyimages-3066394.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Photo d’une exploitation pétrolière californienne en 1925. ©Getty"></a></p>
+<p><a href="640x340_sc_sc_gettyimages-3066394.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Photo d’une exploitation pétrolière californienne en 1925. ©Getty"><img src="https://mathsinfolycee.fr/posts/Hotelling/640x340_sc_sc_gettyimages-3066394.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Photo d’une exploitation pétrolière californienne en 1925. ©Getty"></a></p>
 <figcaption>Photo d’une exploitation pétrolière californienne en 1925. ©Getty</figcaption>
 </figure>
 </div>
@@ -5337,14 +5337,14 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
   <category>Mathématiques</category>
   <category>Histoire</category>
   <category>Podcast</category>
-  <guid>https://flallemand.fr/blog/posts/Hotelling/</guid>
+  <guid>https://mathsinfolycee.fr/posts/Hotelling/</guid>
   <pubDate>Thu, 27 Feb 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/Hotelling/Harold_Hotelling.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/Hotelling/Harold_Hotelling.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Calculus Rhapsody : Quand l’analyse devient une chanson entraînante !</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/calculusRhapsody/</link>
+  <link>https://mathsinfolycee.fr/posts/calculusRhapsody/</link>
   <description><![CDATA[ 
 
 
@@ -5353,7 +5353,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="image_video.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Calculus Rhapsody"><img src="https://flallemand.fr/blog/posts/calculusRhapsody/image_video.png" class="img-fluid figure-img" style="width:60.0%" alt="Calculus Rhapsody"></a></p>
+<p><a href="image_video.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Calculus Rhapsody"><img src="https://mathsinfolycee.fr/posts/calculusRhapsody/image_video.png" class="img-fluid figure-img" style="width:60.0%" alt="Calculus Rhapsody"></a></p>
 <figcaption>Calculus Rhapsody</figcaption>
 </figure>
 </div>
@@ -5379,14 +5379,14 @@ All year, in Calculus<br> We’ve learned so many things<br> About which we are 
   <category>Mathématiques</category>
   <category>Humour</category>
   <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/calculusRhapsody/</guid>
+  <guid>https://mathsinfolycee.fr/posts/calculusRhapsody/</guid>
   <pubDate>Wed, 05 Feb 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/calculusRhapsody/image_video.png" medium="image" type="image/png" height="73" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/calculusRhapsody/image_video.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
   <title>Tuto IA pour les profs : Créer des exercices à partir de podcasts.</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/tutoIA_podcast/</link>
+  <link>https://mathsinfolycee.fr/posts/tutoIA_podcast/</link>
   <description><![CDATA[ 
 
 
@@ -5399,7 +5399,7 @@ All year, in Calculus<br> We’ve learned so many things<br> About which we are 
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Les podcasts sont un excellent moyen d’apprendre et de s’informer. Ils sont également un excellent moyen de pratiquer l’écoute et la compréhension orale. Dans ce tutoriel, nous allons voir comment utiliser l’intelligence artificielle pour créer des exercices à partir de podcasts.</p>
 <p>Pour ce faire, nous allons utiliser l’IA Gemini de Google, dans sa version “2.0 Flash Thinking”, accessible entièrement gratuitement dans le <a href="https://aistudio.google.com" target="_blank">Google AI Studio</a>.</p>
-<p><a href="Wavy_Tech-07_Single-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/Wavy_Tech-07_Single-03.jpg" class="img-fluid" style="width:40.0%"></a></p>
+<p><a href="Wavy_Tech-07_Single-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/tutoIA_podcast/Wavy_Tech-07_Single-03.jpg" class="img-fluid" style="width:40.0%"></a></p>
 </section>
 <section id="étape-1-télécharger-le-podcast" class="level2">
 <h2 class="anchored" data-anchor-id="étape-1-télécharger-le-podcast">Étape 1 : Télécharger le podcast</h2>
@@ -5432,7 +5432,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 </div>
 </div>
 <p>Sauter une ligne, puis coller le code source copié précédemment avec <code>Ctrl + V</code> et valider avec <code>Ctrl + Entrée</code>.</p>
-<p><a href="reponse_url.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_url.png" class="img-fluid"></a></p>
+<p><a href="reponse_url.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://mathsinfolycee.fr/posts/tutoIA_podcast/reponse_url.png" class="img-fluid"></a></p>
 <ul>
 <li>L’IA va alors extraire l’URL du fichier MP3 du podcast. Vous pouvez ensuite copier-coller cette URL dans votre navigateur internet pour ouvrir et télécharger le fichier (clic droit).</li>
 </ul>
@@ -5468,7 +5468,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 </div>
 <p>Ensuite, charger le fichier MP3 en cliquant sur le petit symbole (+) situé en bas à droite.</p>
 <p>Valider le prompt avec <code>Ctrl + Entrée</code>, puis attendre que l’IA génère la transcription (c’est un peu long).</p>
-<p><a href="reponse_ia_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_ia_1.png" class="img-fluid" style="width:80.0%"></a></p>
+<p><a href="reponse_ia_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://mathsinfolycee.fr/posts/tutoIA_podcast/reponse_ia_1.png" class="img-fluid" style="width:80.0%"></a></p>
 </section>
 <section id="étape-3-création-dexercices" class="level2">
 <h2 class="anchored" data-anchor-id="étape-3-création-dexercices">Étape 3 : Création d’exercices</h2>
@@ -5491,7 +5491,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 </div>
 </div>
 <p>En réponse, l’IA propose des questions qui peuvent être pertinentes ou pas, il faut faire le tri. Lors de mon test, elle a introduit des repères temporels pour quelques questions, mais ces repères sont fantaisistes :</p>
-<p><a href="reponse_ia_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_ia_2.png" class="img-fluid" style="width:80.0%"></a></p>
+<p><a href="reponse_ia_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://mathsinfolycee.fr/posts/tutoIA_podcast/reponse_ia_2.png" class="img-fluid" style="width:80.0%"></a></p>
 <ul>
 <li><strong>Texte à trous</strong> : Créer un texte à trous à partir du résumé du podcast. Les élèves devront compléter les trous avec les mots manquants.</li>
 </ul>
@@ -5508,7 +5508,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <p>Je suis professeur et je veux créer un texte à trous à partir du résumé du podcast. Peux-tu me proposer un texte à trous avec 10 mots manquants ? Indique la solution en dessous du texte.</p>
 </div>
 </div>
-<p><a href="reponse_ia_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_ia_3.png" class="img-fluid" style="width:80.0%"></a></p>
+<p><a href="reponse_ia_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://mathsinfolycee.fr/posts/tutoIA_podcast/reponse_ia_3.png" class="img-fluid" style="width:80.0%"></a></p>
 <ul>
 <li><strong>QCM</strong> : Créer un QCM à partir du résumé du podcast. Les élèves devront choisir la bonne réponse parmi plusieurs propositions.</li>
 </ul>
@@ -5525,7 +5525,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <p>Je suis professeur et je veux créer un QCM à partir du résumé du podcast. Peux-tu me proposer 5 questions avec chacune une unique bonne réponse. Indique quelle est la bonne réponse pour chaque question.</p>
 </div>
 </div>
-<p><a href="reponse_ia_4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://flallemand.fr/blog/posts/tutoIA_podcast/reponse_ia_4.png" class="img-fluid" style="width:80.0%"></a></p>
+<p><a href="reponse_ia_4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://mathsinfolycee.fr/posts/tutoIA_podcast/reponse_ia_4.png" class="img-fluid" style="width:80.0%"></a></p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
@@ -5539,14 +5539,14 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
   <category>IA</category>
   <category>Tutos</category>
   <category>Podcast</category>
-  <guid>https://flallemand.fr/blog/posts/tutoIA_podcast/</guid>
+  <guid>https://mathsinfolycee.fr/posts/tutoIA_podcast/</guid>
   <pubDate>Mon, 03 Feb 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/tutoIA_podcast/Wavy_Tech-07_Single-03.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/tutoIA_podcast/Wavy_Tech-07_Single-03.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Les algorithmes : une épopée à travers le temps</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2024_12_19_algos_interview/</link>
+  <link>https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/</link>
   <description><![CDATA[ 
 
 
@@ -5558,7 +5558,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <p>Les algorithmes, autrefois domaine réservé des mathématiciens, ont connu une ascension fulgurante depuis les années 1970 avec la démocratisation de l’informatique. Aujourd’hui, ils sont omniprésents, façonnant notre quotidien et alimentant les avancées de l’intelligence artificielle. Mais que sont-ils exactement ? Comment ont-ils évolué ? Et quels défis posent-ils à notre société ?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="rb_18131.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image de rawpixel.com sur Freepik"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/rb_18131.png" class="img-fluid figure-img" style="width:50.0%" alt="Image de rawpixel.com sur Freepik"></a></p>
+<p><a href="rb_18131.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Image de rawpixel.com sur Freepik"><img src="https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/rb_18131.png" class="img-fluid figure-img" style="width:50.0%" alt="Image de rawpixel.com sur Freepik"></a></p>
 <figcaption>Image de rawpixel.com sur Freepik</figcaption>
 </figure>
 </div>
@@ -5568,7 +5568,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <p>Comme l’explique Claire Mathieu, directrice de recherche CNRS et experte en algorithmique, dans <a href="https://www.epi.asso.fr/revue/articles/a2410d.htm#_ts1734600136930" target="_blank">une interview pour le site de l’EPI</a>, un algorithme est une méthode, une suite d’instructions élémentaires, qui permet de résoudre un problème pas à pas. C’est un concept simple, mais d’une puissance extraordinaire. Pensez à la méthode d’addition avec retenue que vous avez apprise à l’école primaire : c’est un algorithme qui vous permet de réaliser n’importe quelle addition.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="clairemathieucdf1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Claire MATHIEU"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/clairemathieucdf1.jpg" class="img-fluid figure-img" style="width:30.0%" alt="Claire MATHIEU"></a></p>
+<p><a href="clairemathieucdf1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Claire MATHIEU"><img src="https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/clairemathieucdf1.jpg" class="img-fluid figure-img" style="width:30.0%" alt="Claire MATHIEU"></a></p>
 <figcaption>Claire MATHIEU</figcaption>
 </figure>
 </div>
@@ -5584,7 +5584,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="1983_CPA_5426.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Al-Khwarizmi"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/1983_CPA_5426.jpg" class="img-fluid figure-img" style="width:30.0%" alt="Al-Khwarizmi"></a></p>
+<p><a href="1983_CPA_5426.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Al-Khwarizmi"><img src="https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/1983_CPA_5426.jpg" class="img-fluid figure-img" style="width:30.0%" alt="Al-Khwarizmi"></a></p>
 <figcaption><a href="https://fr.wikipedia.org/wiki/Al-Khw%C3%A2rizm%C3%AE" target="_blank">Al-Khwarizmi</a></figcaption>
 </figure>
 </div>
@@ -5649,7 +5649,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <p>Parmi les avancées plus récentes, l’algorithme de chiffrement RSA, inventé en 1978 par Rivest, Shamir et Adleman, a révolutionné la sécurité des communications sur Internet. Il permet d’échanger des messages chiffrés sans avoir à échanger une clé secrète au préalable, grâce à l’utilisation d’une clé publique et d’une clé privée (pour en savoir plus, suivre le lien situé sous la photo ci-dessous).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="RSA.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source Intersitices.info)"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/RSA.jpg" class="img-fluid figure-img" style="width:50.0%" alt="RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source Intersitices.info)"></a></p>
+<p><a href="RSA.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source Intersitices.info)"><img src="https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/RSA.jpg" class="img-fluid figure-img" style="width:50.0%" alt="RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source Intersitices.info)"></a></p>
 <figcaption>RSA : Ron Rivest, Adi Shamir, Len Adleman Courtesy of Ron Rivest (source <a href="https://interstices.info/nombres-premiers-et-cryptologie-lalgorithme-rsa/" target="_blank">Intersitices.info</a>)</figcaption>
 </figure>
 </div>
@@ -5661,7 +5661,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <p>L’omniprésence des algorithmes dans notre société soulève des questions éthiques et sociétales importantes. Comme le souligne Claire Mathieu, la rapidité et l’efficacité ne suffisent plus. Les algorithmes doivent aussi être transparents et équitables. Mais comment garantir cette transparence ? Ouvrir le code ne suffit pas. Il faut, selon Claire Mathieu, une réflexion approfondie, impliquant scientifiques et citoyens, pour définir ce qu’est un algorithme transparent et quelles garanties sont attendues.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="lemonde.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Article paru dans le journal Le Monde en 2018"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/lemonde.png" class="img-fluid figure-img" style="width:50.0%" alt="Article paru dans le journal Le Monde en 2018"></a></p>
+<p><a href="lemonde.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Article paru dans le journal Le Monde en 2018"><img src="https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/lemonde.png" class="img-fluid figure-img" style="width:50.0%" alt="Article paru dans le journal Le Monde en 2018"></a></p>
 <figcaption><a href="https://www.lemonde.fr/pixels/article/2018/02/12/une-etude-demontre-les-biais-de-la-reconnaissance-faciale-plus-efficace-sur-les-hommes-blancs_5255663_4408996.html" target="_blank">Article paru dans le journal Le Monde en 2018</a></figcaption>
 </figure>
 </div>
@@ -5673,7 +5673,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <p>Enfin, la lutte contre le réchauffement climatique va, selon elle, devenir un domaine d’application crucial pour l’algorithmique. Il faudra inventer des algorithmes moins gourmands en ressources et en énergie, et capables de nous aider à réduire notre empreinte carbone.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="2148884835.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Image de fr.freepik.com"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/2148884835.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Image de fr.freepik.com"></a></p>
+<p><a href="2148884835.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Image de fr.freepik.com"><img src="https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/2148884835.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Image de fr.freepik.com"></a></p>
 <figcaption>Image de fr.freepik.com</figcaption>
 </figure>
 </div>
@@ -5681,7 +5681,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>En conclusion, les algorithmes sont bien plus que de simples outils techniques. Ils sont au cœur d’une épopée scientifique et sociétale qui façonne notre présent et notre futur. Les comprendre, les maîtriser et les utiliser de manière éthique est un défi majeur pour les années à venir. L’interview de Claire Mathieu nous offre un éclairage précieux sur cette histoire et sur les enjeux qui nous attendent.</p>
-<p><a href="futur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/futur.png" class="img-fluid"></a></p>
+<p><a href="futur.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/futur.png" class="img-fluid"></a></p>
 
 
 </section>
@@ -5691,14 +5691,14 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
   <category>Informatique</category>
   <category>IA</category>
   <category>Société</category>
-  <guid>https://flallemand.fr/blog/posts/2024_12_19_algos_interview/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/</guid>
   <pubDate>Wed, 25 Dec 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2024_12_19_algos_interview/rb_18131.png" medium="image" type="image/png" height="90" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2024_12_19_algos_interview/rb_18131.png" medium="image" type="image/png" height="90" width="144"/>
 </item>
 <item>
   <title>Nos amis Google, Wikipédia et ChatGPT sont-ils vraiment impartiaux ?</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/2024_18_12_biais_sites/</link>
+  <link>https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/</link>
   <description><![CDATA[ 
 
 
@@ -5706,12 +5706,12 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 
 
 <p>On vit dans un monde formidable, n’est-ce pas ? Un clic, et hop ! On a accès à une montagne d’informations. Wikipédia, Google, YouTube, et plus récemment ChatGPT, sont devenus nos compagnons inséparables dans la quête du savoir. Mais vous êtes-vous déjà demandé si ces outils étaient vraiment neutres, impartiaux, et nous donnaient une vision objective du monde ? C’est la question que s’est posée une équipe de chercheurs, et leurs conclusions, relayées par Laurent Bloch dans un article passionnant, sont pour le moins… éclairantes, et même un peu dérangeantes !</p>
-<p><a href="article_biais_fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/2024_18_12_biais_sites/article_biais_fig4.png" class="img-fluid" style="width:50.0%"></a></p>
+<p><a href="article_biais_fig4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/article_biais_fig4.png" class="img-fluid" style="width:50.0%"></a></p>
 <p><strong>Un éléphant, six aveugles et plein de malentendus : l’allégorie qui résume tout</strong></p>
 <p>Imaginez six aveugles qui rencontrent un éléphant. L’un touche la trompe et dit “c’est un serpent !”. Un autre touche une défense et s’exclame “mais non, c’est une lance !”. Un troisième palpe l’oreille et déclare : “Vous vous trompez tous les deux, c’est un éventail !”. Le quatrième, les mains sur une patte, affirme : “Pas du tout, c’est un arbre !”. Le cinquième, appuyé contre le flanc de l’animal, insiste : “Mais non, c’est un mur !”. Et le dernier, tenant la queue, conclut : “Vous n’y êtes pas, c’est une corde !”. Vous voyez le topo ? Eh bien, c’est un peu ce qui se passe quand on interroge le web dans différentes langues. Chaque langue nous donne une perspective différente, partielle, et parfois complètement à côté de la plaque, sur un même sujet.</p>
-<p><a href="article_biais_fig2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/2024_18_12_biais_sites/article_biais_fig2.jpg" class="img-fluid" style="width:50.0%"></a></p>
+<p><a href="article_biais_fig2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/article_biais_fig2.jpg" class="img-fluid" style="width:50.0%"></a></p>
 <p>L’étude menée par Queenie Luo, Michael J. Puett et Michael D. Smith, et publiée dans les <em>Communications of the ACM</em> (CACM), le montre clairement. Vous pouvez lire l’article original ici : <a href="https://cacm.acm.org/practice/a-perspectival-mirror-of-the-elephant/" target="_blank">https://cacm.acm.org/practice/a-perspectival-mirror-of-the-elephant/</a>. Ils ont choisi deux thèmes, le bouddhisme et le libéralisme, et ont analysé les réponses fournies par Google, YouTube, Wikipédia et ChatGPT dans douze langues différentes (anglais, français, allemand, chinois, thaï, vietnamien, italien, espagnol, russe, coréen, népalais et japonais). Douze langues, c’est pas mal, ça donne un bon aperçu de la diversité des points de vue ! Laurent Bloch, dans son article disponible ici <a href="https://laurentbloch.net/MySpip3/Biais-selon-la-langue-dans-Wikipedia-Google-ChatGPT-et-YouTube" target="_blank">https://laurentbloch.net/MySpip3/Biais-selon-la-langue-dans-Wikipedia-Google-ChatGPT-et-YouTube</a> en fait un résumé très accessible.</p>
-<p><a href="article_biais_fig1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://flallemand.fr/blog/posts/2024_18_12_biais_sites/article_biais_fig1.jpg" class="img-fluid" style="width:50.0%"></a></p>
+<p><a href="article_biais_fig1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/article_biais_fig1.jpg" class="img-fluid" style="width:50.0%"></a></p>
 <p><strong>Le bouddhisme vu par l’Occident, l’Asie… et les algorithmes : un kaléidoscope de perceptions</strong></p>
 <p>Prenons le bouddhisme. Vaste sujet, n’est-ce pas ? Vous cherchez des infos en français ou en allemand ? Google vous sortira des sites historiques et encyclopédiques. Logique. On est plutôt cartésiens, nous autres ! Vous faites la même recherche en anglais ? Là, surprise, on vous propose plutôt des centres de méditation et de retraites spirituelles. En gros, le bouddhisme “new age” à l’occidentale, un peu comme un produit de consommation courante. En chinois, on vous sert la version officielle du parti, avec un focus sur l’organisation des monastères. Pas de place pour la spiritualité débridée, il faut que ça rentre dans les cases ! Et en thaï, on vous explique la différence entre bouddhisme et culte des fantômes, parce que là-bas, les esprits, c’est du sérieux. Chaque langue reflète la vision dominante de sa communauté. Et c’est là que ça devient intéressant : l’article de recherche nous dit que ces résultats ne sont pas le fruit du hasard. Ils sont “cohérents” avec la manière dont le bouddhisme est perçu dans chaque communauté linguistique. En gros, Google &amp; co nous renvoient un miroir de nos propres préjugés ! Flippant, non ?</p>
 <p>L’étude va plus loin et analyse les résultats pour des requêtes plus précises, comme “Karma dans le bouddhisme” ou “Gautama Bouddha”. Et là, c’est encore plus flagrant. En Europe, on vous explique les concepts de base, comme si vous étiez un débutant. En Asie, on rentre dans le vif du sujet, avec des questions pratiques (comment se débarrasser du mauvais karma, par exemple). Pour le pauvre Chögyam Trungpa, un maître bouddhiste controversé, les anglophones minimisent ses frasques, tandis que les sinophones s’étalent sur les détails croustillants. Le Dalaï Lama ? Un pacifiste pour les uns, un agitateur politique pour les autres. Bref, on est loin d’une vision objective et globale !</p>
@@ -5728,7 +5728,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
 <p>Pas forcément ! Cette étude est un peu flippante, certes. Elle montre que nos outils de recherche préférés ne sont pas de simples fenêtres neutres sur le monde, mais qu’ils sont influencés par les biais culturels et politiques des communautés linguistiques. Le risque, c’est de se retrouver enfermé dans une bulle, à ne voir que ce qui conforte nos préjugés, et de ne jamais être confronté à d’autres points de vue. Imaginez par exemple un jeune qui ferait ses recherches scolaires uniquement sur la base de ces résultats biaisés, sans jamais se douter qu’il n’a qu’une vision tronquée et orientée de la réalité. C’est un peu comme si on regardait le monde par le petit bout de la lorgnette, en pensant qu’on a une vue d’ensemble.</p>
 <p>Mais, comme le souligne Laurent Bloch, tout n’est pas perdu. Le fait que ces plateformes soient accessibles partout dans le monde est aussi une chance. On peut les utiliser pour confronter les points de vue, découvrir d’autres cultures, et se faire une opinion plus nuancée et diversifiée. Il suffit d’être un peu malin et de ne pas se laisser endormir par la facilité.</p>
 <p>Alors, la prochaine fois que vous ferez une recherche en ligne, gardez l’esprit critique ! Changez de langue, comparez les résultats, et n’oubliez pas que la vérité est souvent un éléphant qu’on ne peut appréhender que sous tous les angles. Il faut aller la chercher par nous-mêmes, en croisant les sources, en se méfiant des évidences, et en gardant à l’esprit que nos outils numériques, aussi pratiques soient-ils, ne sont pas infaillibles. Ils ne sont que le reflet de nos propres biais, et c’est à nous de les déjouer pour nous forger une vision du monde plus juste, plus complète, et plus ouverte.</p>
-<p><a href="article_biais_fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://flallemand.fr/blog/posts/2024_18_12_biais_sites/article_biais_fig3.png" class="img-fluid" style="width:50.0%"></a></p>
+<p><a href="article_biais_fig3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/article_biais_fig3.png" class="img-fluid" style="width:50.0%"></a></p>
 
 
 
@@ -5736,14 +5736,14 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
   <category>Informatique</category>
   <category>Internet</category>
   <category>Société</category>
-  <guid>https://flallemand.fr/blog/posts/2024_18_12_biais_sites/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/</guid>
   <pubDate>Wed, 18 Dec 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/2024_18_12_biais_sites/article_biais_fig2.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/article_biais_fig2.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Tuto pyxel : Pluie de cerises et score</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/</link>
+  <link>https://mathsinfolycee.fr/posts/pyxel_tuto4_cerises/</link>
   <description><![CDATA[ 
 
 
@@ -6123,7 +6123,7 @@ font-style: inherit;"># Affichage du score</span></span></code></pre></div></div
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>Dans ce tutoriel, nous avons appris à faire pleuvoir des cerises dans notre application Pyxel. Nous avons créé une classe <code>Cerise</code> pour gérer les cerises, généré une pluie de cerises à intervalles aléatoires, détecté les collisions entre le personnage et les cerises, et affiché le score du joueur. Vous pouvez maintenant tester votre jeu et voir si vous pouvez attraper toutes les cerises !</p>
-<p><a href="image_jeu.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/image_jeu.gif" class="img-fluid" style="width:50.0%"></a></p>
+<p><a href="image_jeu.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/pyxel_tuto4_cerises/image_jeu.gif" class="img-fluid" style="width:50.0%"></a></p>
 
 
 </section>
@@ -6134,14 +6134,14 @@ font-style: inherit;"># Affichage du score</span></span></code></pre></div></div
   <category>Programmation</category>
   <category>Pyxel</category>
   <category>Nuit du code</category>
-  <guid>https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/</guid>
+  <guid>https://mathsinfolycee.fr/posts/pyxel_tuto4_cerises/</guid>
   <pubDate>Mon, 25 Nov 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/pyxel_tuto4_cerises/image_jeu.png" medium="image" type="image/png" height="77" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/pyxel_tuto4_cerises/image_jeu.png" medium="image" type="image/png" height="77" width="144"/>
 </item>
 <item>
   <title>Record battu pour les nombres premiers !</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/</link>
+  <link>https://mathsinfolycee.fr/posts/record-battu-pour-les-nombres-premiers/</link>
   <description><![CDATA[ 
 
 
@@ -6162,7 +6162,7 @@ font-style: inherit;"># Affichage du score</span></span></code></pre></div></div
 <h2 class="anchored" data-anchor-id="que-sont-les-nombres-premiers-de-mersenne">Que sont les nombres premiers de Mersenne ?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Marin_mersenne.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Marin Mersenne"><img src="https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/Marin_mersenne.jpg" class="img-fluid figure-img" alt="Marin Mersenne"></a></p>
+<p><a href="Marin_mersenne.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Marin Mersenne"><img src="https://mathsinfolycee.fr/posts/record-battu-pour-les-nombres-premiers/Marin_mersenne.jpg" class="img-fluid figure-img" alt="Marin Mersenne"></a></p>
 <figcaption>Marin Mersenne</figcaption>
 </figure>
 </div>
@@ -6321,7 +6321,7 @@ Le nombre de Mersenne 2^11 - 1 n'est pas premier.</code></pre>
 <h2 class="anchored" data-anchor-id="vous-aussi-participez-à-la-recherche-de-nombres-premiers">Vous aussi, participez à la recherche de nombres premiers !</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="site_GIMPS.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Le site de GIMPS"><img src="https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/site_GIMPS.png" class="img-fluid figure-img" alt="Le site de GIMPS"></a></p>
+<p><a href="site_GIMPS.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Le site de GIMPS"><img src="https://mathsinfolycee.fr/posts/record-battu-pour-les-nombres-premiers/site_GIMPS.png" class="img-fluid figure-img" alt="Le site de GIMPS"></a></p>
 <figcaption>Le site de GIMPS</figcaption>
 </figure>
 </div>
@@ -6341,14 +6341,14 @@ Le nombre de Mersenne 2^11 - 1 n'est pas premier.</code></pre>
  ]]></description>
   <category>Actualités</category>
   <category>Mathématiques</category>
-  <guid>https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/</guid>
+  <guid>https://mathsinfolycee.fr/posts/record-battu-pour-les-nombres-premiers/</guid>
   <pubDate>Mon, 04 Nov 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/record-battu-pour-les-nombres-premiers/Marin_mersenne.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/record-battu-pour-les-nombres-premiers/Marin_mersenne.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>La méthode du pivot de Gauss : résoudre des systèmes linéaires comme un pro !</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/pivotGauss/</link>
+  <link>https://mathsinfolycee.fr/posts/pivotGauss/</link>
   <description><![CDATA[ 
 
 
@@ -6850,7 +6850,7 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
 <p>Alors, la prochaine fois que quelqu’un vous parle de systèmes d’équations, vous pourrez fièrement dire : “Pas de panique, j’ai Gauss de mon côté !” 😎</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Carl_Friedrich_Gauss_1840_by_Jensen.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Carl Friedrich Gauss"><img src="https://flallemand.fr/blog/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Carl Friedrich Gauss"></a></p>
+<p><a href="Carl_Friedrich_Gauss_1840_by_Jensen.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Carl Friedrich Gauss"><img src="https://mathsinfolycee.fr/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Carl Friedrich Gauss"></a></p>
 <figcaption>Carl Friedrich Gauss</figcaption>
 </figure>
 </div>
@@ -6862,14 +6862,14 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
   <category>Mathématiques</category>
   <category>Python</category>
   <category>Programmation</category>
-  <guid>https://flallemand.fr/blog/posts/pivotGauss/</guid>
+  <guid>https://mathsinfolycee.fr/posts/pivotGauss/</guid>
   <pubDate>Mon, 07 Oct 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Découvrir les liens entre les maths et la musique</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/mathsmusique/</link>
+  <link>https://mathsinfolycee.fr/posts/mathsmusique/</link>
   <description><![CDATA[ 
 
 
@@ -6877,7 +6877,7 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
 
 
 <p>France Musique nous propose une série captivante de huit épisodes explorant les liens surprenants entre la musique et les mathématiques. Diffusée pendant l’été 2024 tous les mercredis à 8 h 10, cette série intitulée « Musique + maths » est animée par Pierre-Yves Georges et promet de réconcilier même les plus réticents avec les mathématiques.</p>
-<p><a href="LogoFranceMusiqueMaths.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://flallemand.fr/blog/posts/mathsmusique/LogoFranceMusiqueMaths.png" class="img-fluid"></a></p>
+<p><a href="LogoFranceMusiqueMaths.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/mathsmusique/LogoFranceMusiqueMaths.png" class="img-fluid"></a></p>
 <section id="un-voyage-à-travers-lhistoire-et-les-concepts" class="level1">
 <h1>Un voyage à travers l’histoire et les concepts</h1>
 <section id="de-la-forge-antique-aux-compositeurs-modernes" class="level2">
@@ -6892,7 +6892,7 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
 <li>Ernest Ansermet, chef d’orchestre renommé qui était initialement professeur de mathématiques.</li>
 <li>Albert Einstein, célèbre physicien, mais aussi mélomane passionné, dont la musique aurait peut-être inspiré certaines théories révolutionnaires.</li>
 </ul>
-<p><a href="EinsteinViolon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://flallemand.fr/blog/posts/mathsmusique/EinsteinViolon.png" class="img-fluid"></a></p>
+<p><a href="EinsteinViolon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://mathsinfolycee.fr/posts/mathsmusique/EinsteinViolon.png" class="img-fluid"></a></p>
 </section>
 </section>
 <section id="des-concepts-mathématiques-en-musique" class="level1">
@@ -6924,14 +6924,14 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
   <category>Histoire</category>
   <category>Mathématiques</category>
   <category>Podcast</category>
-  <guid>https://flallemand.fr/blog/posts/mathsmusique/</guid>
+  <guid>https://mathsinfolycee.fr/posts/mathsmusique/</guid>
   <pubDate>Wed, 02 Oct 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/mathsmusique/LogoFranceMusiqueMaths.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/mathsmusique/LogoFranceMusiqueMaths.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Boby Lapointe, poète mathématicien</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://flallemand.fr/blog/posts/bobylapointe/</link>
+  <link>https://mathsinfolycee.fr/posts/bobylapointe/</link>
   <description><![CDATA[ 
 
 
@@ -6965,7 +6965,7 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
 <p>Ainsi, chaque chiffre hexadécimal est représenté par une syllabe unique.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Table de correspondance entre le Bibinaire et les autres notations"><img src="https://flallemand.fr/blog/posts/bobylapointe/Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" class="img-fluid figure-img" alt="Table de correspondance entre le Bibinaire et les autres notations"></a></p>
+<p><a href="Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Table de correspondance entre le Bibinaire et les autres notations"><img src="https://mathsinfolycee.fr/posts/bobylapointe/Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" class="img-fluid figure-img" alt="Table de correspondance entre le Bibinaire et les autres notations"></a></p>
 <figcaption>Table de correspondance entre le Bibinaire et les autres notations</figcaption>
 </figure>
 </div>
@@ -7098,9 +7098,9 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
   <category>Histoire</category>
   <category>Mathématiques</category>
   <category>Vidéothèque</category>
-  <guid>https://flallemand.fr/blog/posts/bobylapointe/</guid>
+  <guid>https://mathsinfolycee.fr/posts/bobylapointe/</guid>
   <pubDate>Mon, 30 Sep 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://flallemand.fr/blog/posts/bobylapointe/Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" medium="image" type="image/png" height="23" width="144"/>
+  <media:content url="https://mathsinfolycee.fr/posts/bobylapointe/Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" medium="image" type="image/png" height="23" width="144"/>
 </item>
 </channel>
 </rss>

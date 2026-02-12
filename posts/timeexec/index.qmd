@@ -25,7 +25,7 @@ import timeit
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Ces fonctions sont issues d'un <a href="https://flallemand.fr/nsi/terminale/01_langages/recurs_exos/#exercice-2-suite-de-fibonacci" target="_blank" rel="noreferrer noopener">exercice du chapitre "Récursivité" du cours de NSI de terminale</a>. Cependant, l'objectif de cet article est juste de montrer un moyen de comparer et de visualiser les vitesses d'exécution.</p>
+<p>Ces fonctions sont issues d'un <a href="https://sitelf.fr/nsi/terminale/01_langages/recurs_exos/#exercice-2-suite-de-fibonacci" target="_blank" rel="noreferrer noopener">exercice du chapitre "Récursivité" du cours de NSI de terminale</a>. Cependant, l'objectif de cet article est juste de montrer un moyen de comparer et de visualiser les vitesses d'exécution.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
