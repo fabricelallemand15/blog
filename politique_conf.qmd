@@ -22,4 +22,4 @@ Ce site ne recueille aucune donnée personnelle de ses visiteurs.
 
 Ce site participe et est conforme à l'ensemble des Spécifications et Politiques du Transparency & Consent Framework de l'IAB Europe. Il utilise la Consent Management Platform n°92.
 
-Vous pouvez modifier vos choix à tout moment en cliquant bas à droite de l'écran.
+Vous pouvez modifier vos choix à tout moment en cliquant bas à droite de l'écran .
