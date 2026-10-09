@@ -2,14 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.16">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="F. LALLEMAND">
 
-<title>Maîtriser la recherche de primitives : le guide complet – Le bloc-notes Maths, Info, Lycée</title>
+<title>PGCD : une formule explicite – Le bloc-notes Maths, Info, Lycée</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,19 +35,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-a67ac2868200dddf7a4f0e3ae403775c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d665c92d12b347b210e32eed2a5b8532.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e9983660973164803018488ac4775e0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,24 +75,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Recherche"
   }
 }</script>
-
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({
-  "notice_banner_type":"simple",
-  "consent_type":"express",
-  "palette":"light",
-  "language":"en",
-  "page_load_consent_levels":["strictly-necessary"],
-  "notice_banner_reject_button_hide":false,
-  "preferences_center_close_button_hide":false,
-  "website_name":""
-  ,
-"language":"fr"
-  });
-});
-</script> 
-  
 <style>
 
       .quarto-title-block .quarto-title-banner {
@@ -238,7 +223,7 @@ cookieconsent.run({
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -334,11 +319,8 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Maîtriser la recherche de primitives : le guide complet</h1>
-            <p class="subtitle lead">Programme de Mathématiques Complémentaires - Terminale</p>
+      <h1 class="title">PGCD : une formule explicite</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Analyse</div>
-                <div class="quarto-category">Terminale</div>
                 <div class="quarto-category">Mathématiques</div>
               </div>
                   </div>
@@ -357,7 +339,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Date de publication</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">6 janvier 2026</p>
+        <p class="date">24 avril 2026</p>
       </div>
     </div>
     
@@ -368,26 +350,8 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Sur cette page</h2>
-   
-  <ul>
-  <li><a href="#quest-ce-quune-primitive" id="toc-quest-ce-quune-primitive" class="nav-link active" data-scroll-target="#quest-ce-quune-primitive">Qu’est-ce qu’une primitive ?</a>
-  <ul class="collapse">
-  <li><a href="#lensemble-des-primitives-et-la-constante-c" id="toc-lensemble-des-primitives-et-la-constante-c" class="nav-link" data-scroll-target="#lensemble-des-primitives-et-la-constante-c">L’ensemble des primitives et la constante <span class="math inline">\(C\)</span></a></li>
-  </ul></li>
-  <li><a href="#les-propriétés-fondamentales" id="toc-les-propriétés-fondamentales" class="nav-link" data-scroll-target="#les-propriétés-fondamentales">Les propriétés fondamentales</a></li>
-  <li><a href="#tableau-des-primitives-usuelles" id="toc-tableau-des-primitives-usuelles" class="nav-link" data-scroll-target="#tableau-des-primitives-usuelles">Tableau des primitives usuelles 📝</a></li>
-  <li><a href="#primitives-de-fonctions-composées" id="toc-primitives-de-fonctions-composées" class="nav-link" data-scroll-target="#primitives-de-fonctions-composées">Primitives de fonctions composées</a>
-  <ul class="collapse">
-  <li><a href="#forme-u-cdot-un" id="toc-forme-u-cdot-un" class="nav-link" data-scroll-target="#forme-u-cdot-un">Forme <span class="math inline">\(u' \cdot u^n\)</span></a></li>
-  <li><a href="#forme-u-eu" id="toc-forme-u-eu" class="nav-link" data-scroll-target="#forme-u-eu">Forme <span class="math inline">\(u' e^u\)</span></a></li>
-  <li><a href="#forme-fracuu" id="toc-forme-fracuu" class="nav-link" data-scroll-target="#forme-fracuu">Forme <span class="math inline">\(\frac{u'}{u}\)</span></a></li>
-  </ul></li>
-  <li><a href="#pourquoi-chercher-des-primitives" id="toc-pourquoi-chercher-des-primitives" class="nav-link" data-scroll-target="#pourquoi-chercher-des-primitives">Pourquoi chercher des primitives ? 🎯</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2026-01-06-primitives/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -396,138 +360,56 @@ window.Quarto = {
 
 
 
-<p>Bienvenue dans ce nouveau guide ! 📘 Aujourd’hui, nous nous intéressons aux <strong>primitives</strong>, une notion essentielle pour comprendre le calcul intégral.</p>
-<section id="quest-ce-quune-primitive" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-quune-primitive">Qu’est-ce qu’une primitive ?</h2>
-<p>Par définition, soit <span class="math inline">\(f\)</span> une fonction continue sur un intervalle <span class="math inline">\(I\)</span>. On appelle <strong>primitive</strong> de <span class="math inline">\(f\)</span> sur <span class="math inline">\(I\)</span>, toute fonction <span class="math inline">\(F\)</span> dérivable sur <span class="math inline">\(I\)</span> telle que <span class="math inline">\(F' = f\)</span>.</p>
-<blockquote class="blockquote">
-<p><strong>En résumé :</strong> Chercher une primitive, c’est faire l’inverse de la dérivation.</p>
-</blockquote>
-<section id="lensemble-des-primitives-et-la-constante-c" class="level3">
-<h3 class="anchored" data-anchor-id="lensemble-des-primitives-et-la-constante-c">L’ensemble des primitives et la constante <span class="math inline">\(C\)</span></h3>
-<p>Si une fonction admet une primitive <span class="math inline">\(F\)</span>, alors elle en possède une infinité de la forme <span class="math inline">\(G(x) = F(x) + C\)</span>, où <span class="math inline">\(C \in \mathbb{R}\)</span>.</p>
-<p><strong>Exemple d’application (Condition initiale) :</strong></p>
-<p>Soit <span class="math inline">\(f(x) = 2x + 3\)</span>. On cherche la primitive <span class="math inline">\(F\)</span> telle que <span class="math inline">\(F(1) = 5\)</span>.</p>
-<ol type="1">
-<li><p>Les primitives sont de la forme <span class="math inline">\(F(x) = x^2 + 3x + C\)</span>.</p></li>
-<li><p>On impose la condition <span class="math inline">\(F(1) = 5\)</span> : <span class="math display">\[1^2 + 3(1) + C = 5 \implies 4 + C = 5 \implies C = 1\]</span></p></li>
-<li><p>La primitive unique est donc <strong><span class="math inline">\(F(x) = x^2 + 3x + 1\)</span></strong>.</p></li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="les-propriétés-fondamentales" class="level2">
-<h2 class="anchored" data-anchor-id="les-propriétés-fondamentales">Les propriétés fondamentales</h2>
-<p>Pour calculer des primitives de fonctions plus complexes, on utilise la <strong>linéarité</strong> :</p>
-<ul>
-<li><strong>Somme :</strong> Une primitive de <span class="math inline">\(u + v\)</span> est <span class="math inline">\(U + V\)</span>.</li>
-<li><strong>Multiplication par un réel :</strong> Une primitive de <span class="math inline">\(k \cdot u\)</span> est <span class="math inline">\(k \cdot U\)</span>.</li>
-</ul>
-<p><strong>Exemple :</strong></p>
-<p>Soit <span class="math inline">\(f(x) = 3x^2 + 5e^x\)</span>.</p>
-<p>Une primitive de <span class="math inline">\(x^2\)</span> étant <span class="math inline">\(\frac{x^3}{3}\)</span>, celle de <span class="math inline">\(3x^2\)</span> est <span class="math inline">\(3 \cdot \frac{x^3}{3} = x^3\)</span>.</p>
-<p>On obtient : <strong><span class="math inline">\(F(x) = x^3 + 5e^x + C\)</span></strong>.</p>
-<hr>
-</section>
-<section id="tableau-des-primitives-usuelles" class="level2">
-<h2 class="anchored" data-anchor-id="tableau-des-primitives-usuelles">Tableau des primitives usuelles 📝</h2>
-<p>Voici les formules fondamentales à connaître par cœur :</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Fonction <span class="math inline">\(f(x)\)</span></th>
-<th style="text-align: left;">Une primitive <span class="math inline">\(F(x)\)</span></th>
-<th style="text-align: left;">Conditions</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(k\)</span> (constante)</td>
-<td style="text-align: left;"><span class="math inline">\(kx\)</span></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(x^n\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\frac{x^{n+1}}{n+1}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(n \in \mathbb{Z}, n \neq -1\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(e^x\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(e^x\)</span></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\frac{1}{2\sqrt{x}}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\sqrt{x}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(x &gt; 0\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\frac{1}{x}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\ln(x)\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(x &gt; 0\)</span></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="primitives-de-fonctions-composées" class="level2">
-<h2 class="anchored" data-anchor-id="primitives-de-fonctions-composées">Primitives de fonctions composées</h2>
-<p>Le programme attend que vous sachiez reconnaître la dérivée d’une fonction composée.</p>
-<section id="forme-u-cdot-un" class="level3">
-<h3 class="anchored" data-anchor-id="forme-u-cdot-un">Forme <span class="math inline">\(u' \cdot u^n\)</span></h3>
-<p>Une primitive est <strong><span class="math inline">\(\frac{u^{n+1}}{n+1}\)</span></strong>.</p>
-<p><strong>Exemple :</strong> Soit <span class="math inline">\(f(x) = (2x+1)(x^2+x+3)^4\)</span>.</p>
-<p>En posant <span class="math inline">\(u(x) = x^2+x+3\)</span>, on a <span class="math inline">\(u'(x) = 2x+1\)</span>. La fonction est de la forme <span class="math inline">\(u' \cdot u^4\)</span>.</p>
-<p>Une primitive est <strong><span class="math inline">\(F(x) = \frac{1}{5}(x^2+x+3)^5\)</span></strong>.</p>
-</section>
-<section id="forme-u-eu" class="level3">
-<h3 class="anchored" data-anchor-id="forme-u-eu">Forme <span class="math inline">\(u' e^u\)</span></h3>
-<p>Une primitive est <strong><span class="math inline">\(e^u\)</span></strong>.</p>
-<p><strong>Exemple :</strong> Soit <span class="math inline">\(f(x) = 3e^{3x-2}\)</span>.</p>
-<p>Avec <span class="math inline">\(u(x) = 3x-2\)</span>, on a <span class="math inline">\(u'(x) = 3\)</span>. La forme est exactement <span class="math inline">\(u' e^u\)</span>.</p>
-<p>Une primitive est <strong><span class="math inline">\(F(x) = e^{3x-2}\)</span></strong>.</p>
-</section>
-<section id="forme-fracuu" class="level3">
-<h3 class="anchored" data-anchor-id="forme-fracuu">Forme <span class="math inline">\(\frac{u'}{u}\)</span></h3>
-<p>Une primitive est <strong><span class="math inline">\(\ln(u)\)</span></strong> (pour <span class="math inline">\(u &gt; 0\)</span>).</p>
-<p><strong>Exemple :</strong> Soit <span class="math inline">\(f(x) = \frac{2x}{x^2+1}\)</span>.</p>
-<p>Avec <span class="math inline">\(u(x) = x^2+1\)</span>, on a <span class="math inline">\(u'(x) = 2x\)</span>. La forme est exactement <span class="math inline">\(\frac{u'}{u}\)</span>. Comme <span class="math inline">\(x^2+1 &gt; 0\)</span> pour tout réel <span class="math inline">\(x\)</span>.</p>
-<p>Une primitive est <strong><span class="math inline">\(F(x) = \ln(x^2+1)\)</span></strong>.</p>
-<hr>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>💡 L’astuce du prof : Ajuster les constantes
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Il arrive souvent que la dérivée <span class="math inline">\(u'(x)\)</span> ne soit pas parfaitement présente. Si le décalage n’est qu’un nombre multiplicatif, on peut l’ajuster.</p>
-<p><strong>Exemple 1 (Exponentielle) :</strong> <span class="math inline">\(f(x) = e^{5x+2}\)</span>.</p>
-<p>Ici <span class="math inline">\(u(x) = 5x+2\)</span>, donc <span class="math inline">\(u'(x) = \mathbf{5}\)</span>.</p>
-<p>On écrit : <span class="math inline">\(f(x) = \mathbf{\frac{1}{5}} \times \mathbf{5}e^{5x+2}\)</span>.</p>
-<p>Une primitive est <strong><span class="math inline">\(F(x) = \frac{1}{5}e^{5x+2} + C\)</span></strong>.</p>
-<p><strong>Exemple 2 (Logarithme) :</strong> <span class="math inline">\(f(x) = \frac{1}{3x+4}\)</span>.</p>
-<p>Ici <span class="math inline">\(u(x) = 3x+4\)</span>, donc <span class="math inline">\(u'(x) = \mathbf{3}\)</span>.</p>
-<p>On écrit : <span class="math inline">\(f(x) = \mathbf{\frac{1}{3}} \times \frac{\mathbf{3}}{3x+4}\)</span>.</p>
-<p>Une primitive est <strong><span class="math inline">\(F(x) = \frac{1}{3} \ln(3x+4) + C\)</span></strong>.</p>
-</div>
-</div>
-<hr>
-</section>
-</section>
-<section id="pourquoi-chercher-des-primitives" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-chercher-des-primitives">Pourquoi chercher des primitives ? 🎯</h2>
-<p>La recherche de primitives est au cœur de deux piliers du programme :</p>
-<ol type="1">
-<li><strong>Les équations différentielles :</strong> Résoudre <span class="math inline">\(y' = f\)</span> revient à chercher les primitives de <span class="math inline">\(f\)</span>. C’est crucial pour les modèles de croissance de population ou de refroidissement thermique.</li>
-<li><strong>Le calcul d’aires :</strong> Si <span class="math inline">\(F\)</span> est une primitive de <span class="math inline">\(f\)</span> sur <span class="math inline">\([a;b]\)</span>, alors l’intégrale (qui représente l’aire sous la courbe pour une fonction positive) se calcule par : <span class="math display">\[\int_{a}^{b} f(x) \, dx = F(b) - F(a)\]</span></li>
-</ol>
+<p>Un ami m’a récemment fait découvrir une formule étonnante : il s’agit d’une formule explicite pour calculer le PGCD (Plus Grand Commun Diviseur) de deux nombres entiers <span class="math inline">\(a\)</span> et <span class="math inline">\(b\)</span>. La formule est la suivante, pour tous <span class="math inline">\((a,b) \in \mathbb{N}^2\)</span> :</p>
+<p><span class="math display">\[\boxed{pgcd(a,b) = a + b - ab + 2 \sum _{j=1}^{b-1} \left\lfloor \frac{aj}{b} \right\rfloor}\]</span></p>
+<p>où <span class="math inline">\(\lfloor x \rfloor\)</span> désigne la partie entière de <span class="math inline">\(x\)</span>.</p>
+<p>Cette formule est inhabituelle, car on a l’habitude de calculer le PGCD plutôt à l’aide d’un processus itératif, comme l’algorithme d’Euclide ou à l’aide de la décomposition en facteurs premiers.</p>
+<p>Je vais en donner une démonstration très visuelle et amusante.</p>
+<p>Considérons, dans un repère orthonormé <span class="math inline">\((O, \vec{i}, \vec{j})\)</span> du plan, la droite d’équation <span class="math inline">\(y = \dfrac{a}{b}x\)</span> et les points du plan de coordonnées entières situés dans le rectangle <span class="math inline">\([0,b] \times [0,a]\)</span>.</p>
+<p>Il est clair que ce rectangle contient exactement <span class="math inline">\((a+1)(b+1)\)</span> points à coordonnées entières et que ceux-ci sont répartis de façon symétrique de part et d’autre de la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span>.</p>
+<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="fig1.png" class="img-fluid"></a></p>
+<p>Notons <span class="math inline">\(N\)</span> le nombre de points à coordonnées entières situés dans le rectangle (au sens large), on a alors :</p>
+<p><span class="math display">\[N = (a+1)(b+1) = ab + a + b + 1\]</span></p>
+<p>Exploitons maintenant la symétrie de la figure pour obtenir une autre expression de <span class="math inline">\(N\)</span>. Pour cela, nous allons dénombrer les points à coordonnées entières situés au-dessous (au sens large) de la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span> (c’est-à-dire les points <span class="math inline">\((x,y)\)</span> à coordonnées entières tels que <span class="math inline">\(y \leqslant \dfrac{a}{b}x\)</span>).</p>
+<p>Par définition de la partie entière d’un réel, nous savons que, pour tout <span class="math inline">\(y\in\mathbb{R}\)</span>, <span class="math inline">\(y\geqslant 0\)</span>, on a :</p>
+<p><span class="math display">\[0 \leqslant \lfloor y \rfloor \leqslant y &lt; \lfloor y \rfloor + 1\]</span></p>
+<p>On en déduit que, pour tout entier <span class="math inline">\(j\)</span> tel que <span class="math inline">\(0 \leqslant j \leqslant b\)</span>, le nombre de points d’abscisse <span class="math inline">\(j\)</span> situés au-dessous de la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span>, au sens large, est égal à <span class="math inline">\(\left\lfloor \dfrac{aj}{b} \right\rfloor + 1\)</span> : on ajoute 1 pour tenir compte du point d’abscisse <span class="math inline">\(j\)</span> situé sur l’axe des abscisses.</p>
+<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="fig2.png" class="img-fluid"></a></p>
+<p>En sommant sur tous les entiers <span class="math inline">\(j\)</span> tels que <span class="math inline">\(0 \leqslant j \leqslant b\)</span>, on trouve que le nombre de points à coordonnées entières situés au-dessous de la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span> (au sens large) est égal à :</p>
+<p><span class="math display">\[\sum _{j=0}^{b} \left( \left\lfloor \frac{aj}{b} \right\rfloor + 1 \right) = (b+1) + \sum _{j=0}^{b} \left\lfloor \frac{aj}{b} \right\rfloor\]</span></p>
+<p>Remarquons que lorsque <span class="math inline">\(j=0\)</span>, on a <span class="math inline">\(\left\lfloor \frac{aj}{b} \right\rfloor = 0\)</span>, et que lorsque <span class="math inline">\(j=b\)</span>, on a <span class="math inline">\(\left\lfloor \frac{aj}{b} \right\rfloor = a\)</span>. La somme précédente peut donc être réécrite de la manière suivante :</p>
+<p><span class="math display">\[
+(b+1) + \sum _{j=0}^{b} \left\lfloor \frac{aj}{b} \right\rfloor = (b+1) + a + \sum _{j=1}^{b-1} \left\lfloor \frac{aj}{b} \right\rfloor
+\]</span></p>
+<p>En utilisant la symétrie de la figure, on en déduit que le nombre <span class="math inline">\(N\)</span> de points à coordonnées entières dans le rectangle est égal à deux fois le nombre de points situés au-dessous de la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span> (au sens large), en prenant garde à <strong>ne pas compter deux fois les points situés sur la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span></strong>. Notons provisoirement <span class="math inline">\(\delta\)</span> le nombre de points à coordonnées entières situés sur la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span>, on a alors :</p>
+<p><span class="math display">\[N = 2 \left( (b+1) + a + \sum _{j=1}^{b-1} \left\lfloor \frac{aj}{b} \right\rfloor \right) - \delta\]</span></p>
+<p>Il ne reste plus qu’à calculer <span class="math inline">\(\delta\)</span>. Un point à coordonnées entières de la forme <span class="math inline">\((x,y)\)</span> est situé sur la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span> si et seulement si <span class="math inline">\(y = \dfrac{ax}{b}\)</span>, c’est-à-dire si et seulement si <span class="math inline">\(b \mid ax\)</span>.</p>
+<p>Soit <span class="math inline">\(d=pgcd(a,b)\)</span>, il existe alors des entiers <span class="math inline">\(a'\)</span> et <span class="math inline">\(b'\)</span> tels que <span class="math inline">\(a = da'\)</span> et <span class="math inline">\(b = db'\)</span>, avec <span class="math inline">\(pgcd(a',b')=1\)</span>. La condition <span class="math inline">\(b \mid ax\)</span> est alors équivalente à la condition <span class="math inline">\(db' \mid da'x\)</span>, c’est-à-dire à la condition <span class="math inline">\(b' \mid a'x\)</span>. Étant donné que <span class="math inline">\(pgcd(a',b')=1\)</span>, cela équivaut à la condition <span class="math inline">\(b' \mid x\)</span> d’après le théorème de Gauss.</p>
+<p>On a donc <span class="math inline">\(x=kb'\)</span>, avec <span class="math inline">\(0 \leqslant x \leqslant b\)</span>, ce qui équivaut à <span class="math inline">\(0 \leqslant k \leqslant d\)</span> : on en déduit que <span class="math inline">\(k\)</span> peut prendre toutes les valeurs entières de <span class="math inline">\(0\)</span> à <span class="math inline">\(d\)</span>. Il y a donc exactement <span class="math inline">\(d+1\)</span> points à coordonnées entières situés sur la droite <span class="math inline">\(y = \dfrac{a}{b}x\)</span>, ce qui signifie que <span class="math inline">\(\delta = d + 1 = pgcd(a,b) + 1\)</span>.</p>
+<p>En reportant cette valeur de <span class="math inline">\(\delta\)</span> dans l’expression de <span class="math inline">\(N\)</span>, on trouve que :</p>
+<p><span class="math display">\[N = 2 \left( (b+1) + a + \sum _{j=1}^{b-1} \left\lfloor \frac{aj}{b} \right\rfloor \right) - (pgcd(a,b) + 1)\]</span></p>
+<p>En égalant les deux expressions de <span class="math inline">\(N\)</span>, on trouve que :</p>
+<p><span class="math display">\[
+(a+1)(b+1) = 2 \left( (b+1) + a + \sum _{j=1}^{b-1} \left\lfloor \frac{aj}{b} \right\rfloor \right) - (pgcd(a,b) + 1)
+\]</span></p>
+<p>Développons ce qui peut l’être dans l’expression précédente :</p>
+<p><span class="math display">\[ab + a + b + 1 = 2b + 2 + 2a + 2 \sum _{j=1}^{b-1} \left\lfloor \frac{aj}{b} \right\rfloor - pgcd(a,b) - 1\]</span></p>
+<p>En réarrangeant les ter mes, on trouve que :</p>
+<p><span class="math display">\[\boxed{pgcd(a,b) = a + b - ab + 2 \sum _{j=1}^{b-1} \left\lfloor \frac{aj}{b} \right\rfloor}\]</span></p>
+<p>Appliquons cette formule pour calculer le PGCD de <span class="math inline">\(a=3\)</span> et <span class="math inline">\(b=6\)</span>. On trouve que :</p>
+<p><span class="math display">\[
+\begin{aligned}
+pgcd(3,6) &amp;= 3 + 6 - 3 \times 6 + 2 \sum _{j=1}^{5} \left\lfloor \frac{3j}{6} \right\rfloor \\
+&amp;= 9 - 18 + 2 \left( \left\lfloor \frac{3}{6} \right\rfloor + \left\lfloor \frac{6}{6} \right\rfloor + \left\lfloor \frac{9}{6} \right\rfloor + \left\lfloor \frac{12}{6} \right\rfloor + \left\lfloor \frac{15}{6} \right\rfloor \right) \\
+&amp;= -9 + 2 \left( 0 + 1 + 1 + 2 + 2 \right) \\
+&amp;= -9 + 2 \times 6 \\
+&amp;= -9 + 12 \\
+&amp;= 3
+\end{aligned}
+\]</span></p>
+<p>Ce qui est bien égal au PGCD de <span class="math inline">\(3\)</span> et <span class="math inline">\(6\)</span>.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -977,8 +859,8 @@ window.Quarto = {
 </ul>
     </div>   
     <div class="nav-footer-center">
-
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2026-01-06-primitives/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+      &nbsp;
+    <div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2026_04_24_PGCD/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
@@ -996,6 +878,38 @@ window.Quarto = {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

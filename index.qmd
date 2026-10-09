@@ -13,3 +13,5 @@ listing:
 page-layout: full
 title-block-banner: '#BCD2E8'
 ---
+
+Des ressources, des réflexions et des activités autour des mathématiques et de l’informatique au lycée. Retrouvez ici les derniers articles, ou explorez les publications par catégorie.

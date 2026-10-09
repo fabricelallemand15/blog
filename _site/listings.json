@@ -2,7 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/2026-01-06-primitives/index.html",
+      "/posts/2026-10-08-MargaretHamilton/index.html",
+      "/posts/2026_04_24_PGCD/index.html",
       "/posts/2025-11-17_histoire_AI/index.html",
       "/posts/2025_09_16_superordi/index.html",
       "/posts/2025_09_10_von_Neumann/index.html",
@@ -40,9 +41,9 @@
       "/posts/tropheesnsi/index.html",
       "/posts/lumniBDD/index.html",
       "/posts/codeurpro/index.html",
-      "/posts/histoireinfo/index.html",
-      "/posts/histoireSE/index.html",
       "/posts/transistors/index.html",
+      "/posts/histoireSE/index.html",
+      "/posts/histoireinfo/index.html",
       "/posts/mesurerinfo/index.html",
       "/posts/timeexec/index.html",
       "/posts/carmin/index.html"

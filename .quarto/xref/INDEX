@@ -157,5 +157,12 @@
   },
   "posts/2026-01-06-primitives/index.qmd": {
     "index.html": "1ddd0b17"
+  },
+  "posts/2026_04_24_PGCD/index.qmd": {
+    "index.html": "20ab70f1",
+    "index.tex": "f2f7259f"
+  },
+  "posts/2026-10-08-MargaretHamilton/index.qmd": {
+    "index.html": "a8d17204"
   }
 }

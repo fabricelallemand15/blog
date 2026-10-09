@@ -1,292 +1,408 @@
 /* css styles */
-img {
-    display: block;
-    margin: 0 auto;
-}
-figcaption {
-    text-align: center;
-}
-iframe {
-    display: block;
-    margin: 0 auto;
-}
-.video {
-    aspect-ratio: 16/9;
-    width: 100%;
-}
-.table {
-    margin: 0 auto;
-    display: block;
-    width: fit-content;
-    margin-bottom: 1em;
-}
-/* thead {
-    background-color: rgb(238, 210, 83);
-    color: rgb(0, 0, 0);
-}
-table, th, td {
-    border: 1px solid rgb(120, 120, 120);
-    border-collapse: collapse;
-}
-.th {
-    background-color: rgb(238, 153, 83);
-    color: rgb(0, 0, 0);
-    padding: 0.5em;
-}
-td {
-    padding: 0.5em;
-} */
-.quarto-title-block .quarto-title-banner {
-    background: #ffffff;
-    margin-bottom: 0.5rem; /* Réduit l'espace sous la bannière */
-    padding-bottom: 0.5rem; /* Réduit le padding interne */
-}
-
-/* ajouts 12/2025 */
-/* Import de polices Google */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
 :root {
   --python-blue: #306998;
-  --python-yellow: #FFD43B;
-  --dark-text: #333333;
+  --python-blue-dark: #245477;
+  --python-yellow: #e8b844;
+  --dark-text: #27323c;
+  --muted-text: #687582;
+  --page-background: #f7f9fb;
+  --surface: #ffffff;
+  --soft-blue: #eef4f8;
+  --border: #e4e9ee;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  background-color: var(--page-background);
   color: var(--dark-text);
-  background-color: #f9fbfd; /* Fond très légèrement bleuté/gris */
+  font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, .navbar-brand {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--python-blue);
-  font-weight: 700;
-}
-
-/* Police pour le code */
-code, kbd, pre, samp {
-  font-family: 'Fira Code', monospace;
-}
-
-/* Navbar */
-.navbar {
-  background-color: white !important;
-  border-bottom: 3px solid var(--python-blue);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.navbar .navbar-brand {
-  color: var(--python-blue) !important;
-}
-
-.navbar .nav-link {
-  color: #555 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand,
+.quarto-listing-category-title {
+  color: var(--dark-text);
+  font-family: 'Montserrat', 'Avenir Next', 'Segoe UI', Arial, sans-serif;
   font-weight: 600;
 }
 
-.navbar .nav-link:hover {
-  color: var(--python-blue) !important;
-  border-bottom: 2px solid var(--python-yellow); /* Petit accent jaune au survol */
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Fira Code', 'Cascadia Code', Consolas, 'Liberation Mono', monospace;
 }
 
-/* Cibler le header de la page d'accueil */
-/* .quarto-title {
-  margin-bottom: 2rem;
-} */
+.navbar {
+  background-color: var(--surface) !important;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgb(29 47 63 / 4%);
+}
+
+.navbar .navbar-brand {
+  color: var(--python-blue-dark) !important;
+}
+
+.navbar .nav-link {
+  color: #4e5b66 !important;
+  font-weight: 500;
+  transition: color 160ms ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible,
+.navbar .nav-link.active,
+.navbar .nav-link[aria-current="page"] {
+  color: var(--python-blue) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--python-yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.quarto-title-block .quarto-title-banner {
+  background: transparent;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 
 .quarto-title .title {
-    font-size: 3rem;
-    background: linear-gradient(to right, var(--python-blue), #646464);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent; /* Fallback pour les navigateurs non-webkit */
+  color: var(--dark-text);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
 }
-  
+
 .quarto-title .subtitle {
-  color: #666;
-  font-size: 1.2rem;
+  color: var(--muted-text);
+  font-size: 1.15rem;
   margin-top: 0.5rem;
 }
 
-/* Réduire l'espace au-dessus de la grille d'articles */
+#quarto-content main.content > p:first-of-type {
+  color: var(--muted-text);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0 0 2rem;
+  max-width: 68ch;
+}
+
 div.quarto-listing {
   margin-top: 0;
 }
 
-/* Style des cartes dans la grille */
 .quarto-grid-item {
-  background: white;
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 8px; /* Coins arrondis */
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
 }
-  
+
 .quarto-grid-item:hover {
-  transform: translateY(-5px); /* Effet "Lift" au survol */
-  box-shadow: 0 10px 20px rgba(48, 105, 152, 0.15); /* Ombre bleutée */
-  border-color: var(--python-blue);
+  border-color: #c8d8e4;
+  box-shadow: 0 8px 24px rgb(39 65 84 / 8%);
 }
-  
+
+#listing-listing .list > div:first-child .quarto-grid-item {
+  background: linear-gradient(135deg, #f0f6fa 0%, var(--surface) 72%);
+  border-color: #c7d8e5;
+  border-left: 4px solid var(--python-blue);
+}
+
+#listing-listing .list > div:first-child .card-title {
+  color: var(--python-blue-dark);
+  font-size: 1.18rem;
+}
+
 .quarto-grid-item .card-body {
-  padding: 1.5rem;
+  padding: 1.35rem;
 }
-  
+
 .quarto-grid-item .card-title {
-  color: var(--python-blue);
-  font-size: 1.1rem;
-}
-  
-/* Les catégories (tags) dans les cartes */
-.listing-categories .listing-category {
-  background-color: rgba(48, 105, 152, 0.1); /* Bleu très pâle */
-  color: var(--python-blue);
-  border-radius: 20px;
-  padding: 4px 12px;
-  font-size: 0.8rem;
+  color: var(--dark-text);
+  font-size: 1.08rem;
   font-weight: 600;
-  border: none;
-  transition: all 0.2s;
+  line-height: 1.45;
 }
 
-.listing-categories .listing-category:hover {
+.listing-categories .listing-category,
+.quarto-title .quarto-category {
+  background-color: var(--soft-blue);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--python-blue-dark);
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  text-transform: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.listing-categories .listing-category:hover,
+.quarto-title .quarto-category:hover {
   background-color: var(--python-blue);
-  color: white;
+  color: var(--surface);
 }
 
-/* La barre latérale à droite */
 .quarto-listing-category-title {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
 }
 
-/* Liste des catégories dans la sidebar */
 .quarto-listing-category .category {
-  padding: 5px 10px;
+  border-radius: 6px;
   display: block;
-  border-radius: 4px;
+  padding: 0.4rem 0.65rem;
+  transition: background-color 160ms ease, color 160ms ease;
 }
 
 .quarto-listing-category .category:hover {
-  background-color: var(--python-yellow);
-  color: var(--dark-text);
+  background-color: var(--soft-blue);
+  color: var(--python-blue-dark);
   text-decoration: none;
 }
 
-/* --- AMÉLIORATIONS PAGE ARTICLE --- */
+.quarto-listing-category .category.active,
+.quarto-listing-category .category[aria-current="true"] {
+  background-color: var(--soft-blue);
+  color: var(--python-blue-dark);
+  font-weight: 600;
+}
 
-/* 1. Zone de métadonnées (Auteur, Date, Tags) */
 .quarto-title-meta {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 1rem 0;
-  margin-top: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
   margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  padding: 1rem 0;
 }
 
 .quarto-title-meta-heading {
-  color: var(--python-blue);
-  font-family: 'Montserrat', sans-serif;
+  color: var(--muted-text);
+  font-family: 'Montserrat', 'Avenir Next', 'Segoe UI', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  font-weight: 700;
 }
 
 .quarto-title-meta-contents {
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
+  color: var(--muted-text);
 }
 
-/* Styliser les tags (catégories) en haut de l'article comme sur l'accueil */
-.quarto-title .quarto-category {
-  display: inline-block;
-  background-color: rgba(48, 105, 152, 0.1);
-  color: var(--python-blue);
-  border-radius: 15px;
-  padding: 2px 10px;
-  margin-right: 5px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border: 1px solid transparent; /* Retire la bordure par défaut */
-  text-transform: uppercase;
-}
-
-.quarto-title .quarto-category:hover {
-  background-color: var(--python-blue);
-  color: white;
-}
-
-/* 2. Table des matières (Sidebar droite) */
 #quarto-margin-sidebar .sidebar-title {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--python-blue);
+  color: var(--dark-text);
+  font-family: 'Montserrat', 'Avenir Next', 'Segoe UI', Arial, sans-serif;
 }
 
-/* Ligne verticale active */
 #quarto-margin-sidebar nav > ul > li > a.active {
   border-left-color: var(--python-blue) !important;
-  color: var(--python-blue) !important;
+  color: var(--python-blue-dark) !important;
 }
 
-/* Liens de la TOC au survol */
 #quarto-margin-sidebar a:hover {
-  color: var(--python-blue) !important;
+  color: var(--python-blue-dark) !important;
 }
 
-/* 3. Contenu de l'article */
+#quarto-margin-sidebar a:focus-visible,
+.quarto-listing-category .category:focus-visible {
+  border-radius: 4px;
+  outline: 3px solid var(--python-blue);
+  outline-offset: 2px;
+}
+
 main {
-  line-height: 1.7; /* Améliore la lisibilité */
-  font-size: 1.05rem;
+  font-size: 1.02rem;
+  line-height: 1.75;
 }
 
-/* Les liens dans le texte */
+main.content p,
+main.content li,
+main.content blockquote {
+  max-width: 100ch;
+}
+
+main.content p {
+  margin-bottom: 1.1rem;
+}
+
+main.content ul,
+main.content ol {
+  margin-bottom: 1.4rem;
+  margin-top: 1rem;
+}
+
+main.content li + li {
+  margin-top: 0.35rem;
+}
+
+main.content blockquote {
+  border-left: 3px solid #c7d8e5;
+  color: var(--muted-text);
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+}
+
 main a {
-  color: var(--python-blue);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom 0.2s;
+  color: var(--python-blue-dark);
   font-weight: 500;
+  text-decoration-color: #a8c2d4;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 
 main a:hover {
   color: var(--python-blue);
-  border-bottom: 2px solid var(--python-yellow);
+  text-decoration-color: var(--python-yellow);
+  text-decoration-thickness: 2px;
 }
 
-/* Titres H2, H3 dans l'article */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  border-radius: 3px;
+  outline: 3px solid var(--python-blue);
+  outline-offset: 3px;
+}
+
 main h2 {
-  border-bottom: 2px solid var(--python-yellow); /* Soulignement jaune sous les titres */
-  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+  display: block;
   margin-top: 2.5rem;
-  display: inline-block; /* Le soulignement s'arrête à la fin du texte */
+  padding-bottom: 0.55rem;
 }
 
-/* 4. Tableaux modernes */
+main h3 {
+  color: var(--python-blue-dark);
+  margin-top: 1.8rem;
+}
+
+.quarto-figure figure.figure {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: min(70%, 44rem);
+}
+
+.quarto-figure figure.figure > p {
+  margin: 0;
+}
+
+.quarto-figure figure.figure img {
+  border-radius: 8px;
+  height: auto;
+  max-width: 100%;
+  width: 100% !important;
+}
+
+.quarto-figure figure.figure figcaption {
+  box-sizing: border-box;
+  color: var(--muted-text);
+  font-size: 0.9rem;
+  text-align: center;
+  width: 100%;
+}
+
+img,
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.callout {
+  background-color: #f5f8fa;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--python-blue);
+  border-radius: 8px;
+  box-shadow: none;
+  margin: 1.5rem 0;
+}
+
+.callout .callout-header {
+  color: var(--dark-text);
+}
+
 .table {
-  /* width: 100%; */
-  margin-bottom: 1rem;
-  border-collapse: collapse;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  border-radius: 6px;
-  overflow: hidden; /* Pour que les coins arrondis fonctionnent */
+  border-collapse: separate;
+  border-radius: 8px;
+  border-spacing: 0;
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+  width: fit-content;
 }
 
 thead {
-  background-color: var(--python-blue);
-  color: white;
+  background-color: var(--soft-blue);
+  color: var(--dark-text);
 }
 
-th, td {
-  padding: 12px 15px;
-  border: 1px solid #eee; /* Bordures très légères */
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.7rem 0.9rem;
 }
 
-/* Retire les couleurs orange existantes de votre fichier actuel */
-.th { background-color: transparent; color: inherit; }
+th {
+  font-weight: 600;
+}
 
-/* Lignes alternées (Zebra striping) pour la lisibilité */
 tbody tr:nth-of-type(even) {
-  background-color: #f8f9fa;
+  background-color: #f8fafb;
+}
+
+.th {
+  background-color: transparent;
+  color: inherit;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 0.98rem;
+  }
+
+  .quarto-grid-item .card-body {
+    padding: 1rem;
+  }
+
+  .quarto-title-meta {
+    margin-bottom: 1.5rem;
+  }
+
+  main {
+    font-size: 1rem;
+  }
+
+  .quarto-figure figure.figure {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

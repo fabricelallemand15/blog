@@ -36,7 +36,7 @@ website:
         href: about.qmd
       - icon: github
         href: https://github.com/fabricelallemand15/blog
-  cookie-consent: true
+  cookie-consent: false
 
 bibliography: references.bib
 

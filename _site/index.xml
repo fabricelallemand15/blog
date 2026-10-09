@@ -9,158 +9,231 @@
 <link>https://mathsinfolycee.fr/</link>
 <atom:link href="https://mathsinfolycee.fr/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.9.16</generator>
-<lastBuildDate>Mon, 05 Jan 2026 23:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Wed, 07 Oct 2026 22:00:00 GMT</lastBuildDate>
 <item>
-  <title>Maîtriser la recherche de primitives : le guide complet</title>
+  <title>Margaret Hamilton (1936-2026) : la pionnière du génie logiciel</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://mathsinfolycee.fr/posts/2026-01-06-primitives/</link>
+  <link>https://mathsinfolycee.fr/posts/2026-10-08-MargaretHamilton/</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>Bienvenue dans ce nouveau guide ! 📘 Aujourd’hui, nous nous intéressons aux <strong>primitives</strong>, une notion essentielle pour comprendre le calcul intégral.</p>
-<section id="quest-ce-quune-primitive" class="level2">
-<h2 class="anchored" data-anchor-id="quest-ce-quune-primitive">Qu’est-ce qu’une primitive ?</h2>
-<p>Par définition, soit <img src="https://latex.codecogs.com/png.latex?f"> une fonction continue sur un intervalle <img src="https://latex.codecogs.com/png.latex?I">. On appelle <strong>primitive</strong> de <img src="https://latex.codecogs.com/png.latex?f"> sur <img src="https://latex.codecogs.com/png.latex?I">, toute fonction <img src="https://latex.codecogs.com/png.latex?F"> dérivable sur <img src="https://latex.codecogs.com/png.latex?I"> telle que <img src="https://latex.codecogs.com/png.latex?F'%20=%20f">.</p>
-<blockquote class="blockquote">
-<p><strong>En résumé :</strong> Chercher une primitive, c’est faire l’inverse de la dérivation.</p>
-</blockquote>
-<section id="lensemble-des-primitives-et-la-constante-c" class="level3">
-<h3 class="anchored" data-anchor-id="lensemble-des-primitives-et-la-constante-c">L’ensemble des primitives et la constante <img src="https://latex.codecogs.com/png.latex?C"></h3>
-<p>Si une fonction admet une primitive <img src="https://latex.codecogs.com/png.latex?F">, alors elle en possède une infinité de la forme <img src="https://latex.codecogs.com/png.latex?G(x)%20=%20F(x)%20+%20C">, où <img src="https://latex.codecogs.com/png.latex?C%20%5Cin%20%5Cmathbb%7BR%7D">.</p>
-<p><strong>Exemple d’application (Condition initiale) :</strong></p>
-<p>Soit <img src="https://latex.codecogs.com/png.latex?f(x)%20=%202x%20+%203">. On cherche la primitive <img src="https://latex.codecogs.com/png.latex?F"> telle que <img src="https://latex.codecogs.com/png.latex?F(1)%20=%205">.</p>
-<ol type="1">
-<li><p>Les primitives sont de la forme <img src="https://latex.codecogs.com/png.latex?F(x)%20=%20x%5E2%20+%203x%20+%20C">.</p></li>
-<li><p>On impose la condition <img src="https://latex.codecogs.com/png.latex?F(1)%20=%205"> : <img src="https://latex.codecogs.com/png.latex?1%5E2%20+%203(1)%20+%20C%20=%205%20%5Cimplies%204%20+%20C%20=%205%20%5Cimplies%20C%20=%201"></p></li>
-<li><p>La primitive unique est donc <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20x%5E2%20+%203x%20+%201"></strong>.</p></li>
-</ol>
-<hr>
+<p>Margaret Hamilton est décédée le 30 septembre 2026, à l’âge de 90 ans. Le MIT a annoncé la nouvelle le 7 octobre. Dans le grand public, elle reste associée à une photographie célèbre : une jeune femme souriante posant à côté d’une pile de listings aussi haute qu’elle. Cette pile, c’est le code du logiciel de vol des missions Apollo, développé par l’équipe qu’elle dirigeait.</p>
+<p>Derrière l’image, il y a une carrière qui a marqué durablement la manière de concevoir des logiciels fiables. Cet article revient sur son parcours et sur ce qu’elle a apporté à notre discipline.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Margaret_Hamilton.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Margaret Hamilton à côté des listings du logiciel Apollo (source : NASA/MIT, domaine public)"><img src="https://mathsinfolycee.fr/posts/2026-10-08-MargaretHamilton/Margaret_Hamilton.jpg" class="img-fluid figure-img" alt="Margaret Hamilton à côté des listings du logiciel Apollo (source : NASA/MIT, domaine public)"></a></p>
+<figcaption>Margaret Hamilton à côté des listings du logiciel Apollo (source : NASA/MIT, domaine public)</figcaption>
+</figure>
+</div>
+<section id="du-midwest-au-mit" class="level2">
+<h2 class="anchored" data-anchor-id="du-midwest-au-mit">Du Midwest au MIT</h2>
+<p>Margaret Hamilton naît en 1936 à Paoli, dans l’Indiana. Elle commence des études de mathématiques à l’université du Michigan en 1955, puis les poursuit à l’Earlham College, où elle obtient en 1958 une licence de mathématiques avec une mineure en philosophie.</p>
+<p>En 1959, elle s’installe à Boston avec son mari, qui prépare un diplôme de droit. Elle trouve un poste temporaire au département de météorologie du MIT, auprès du professeur Edward Lorenz, pour travailler sur un logiciel de prévision météo. C’est sa première rencontre avec la programmation, et ses travaux alimenteront plus tard les publications de Lorenz sur la théorie du chaos.</p>
+<p>En 1961, elle rejoint le laboratoire Lincoln du MIT et participe au projet SAGE, le premier système de défense aérienne des États-Unis : elle y écrit des programmes pour un prototype d’ordinateur chargé de détecter des avions potentiellement hostiles. C’est là qu’elle commence à s’intéresser à la <strong>fiabilité des logiciels</strong>, une question encore très peu explorée à l’époque.</p>
 </section>
-</section>
-<section id="les-propriétés-fondamentales" class="level2">
-<h2 class="anchored" data-anchor-id="les-propriétés-fondamentales">Les propriétés fondamentales</h2>
-<p>Pour calculer des primitives de fonctions plus complexes, on utilise la <strong>linéarité</strong> :</p>
-<ul>
-<li><strong>Somme :</strong> Une primitive de <img src="https://latex.codecogs.com/png.latex?u%20+%20v"> est <img src="https://latex.codecogs.com/png.latex?U%20+%20V">.</li>
-<li><strong>Multiplication par un réel :</strong> Une primitive de <img src="https://latex.codecogs.com/png.latex?k%20%5Ccdot%20u"> est <img src="https://latex.codecogs.com/png.latex?k%20%5Ccdot%20U">.</li>
-</ul>
-<p><strong>Exemple :</strong></p>
-<p>Soit <img src="https://latex.codecogs.com/png.latex?f(x)%20=%203x%5E2%20+%205e%5Ex">.</p>
-<p>Une primitive de <img src="https://latex.codecogs.com/png.latex?x%5E2"> étant <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bx%5E3%7D%7B3%7D">, celle de <img src="https://latex.codecogs.com/png.latex?3x%5E2"> est <img src="https://latex.codecogs.com/png.latex?3%20%5Ccdot%20%5Cfrac%7Bx%5E3%7D%7B3%7D%20=%20x%5E3">.</p>
-<p>On obtient : <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20x%5E3%20+%205e%5Ex%20+%20C"></strong>.</p>
-<hr>
-</section>
-<section id="tableau-des-primitives-usuelles" class="level2">
-<h2 class="anchored" data-anchor-id="tableau-des-primitives-usuelles">Tableau des primitives usuelles 📝</h2>
-<p>Voici les formules fondamentales à connaître par cœur :</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Fonction <img src="https://latex.codecogs.com/png.latex?f(x)"></th>
-<th style="text-align: left;">Une primitive <img src="https://latex.codecogs.com/png.latex?F(x)"></th>
-<th style="text-align: left;">Conditions</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?k"> (constante)</td>
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?kx"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?x%5En"></td>
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bx%5E%7Bn+1%7D%7D%7Bn+1%7D"></td>
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?n%20%5Cin%20%5Cmathbb%7BZ%7D,%20n%20%5Cneq%20-1"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?e%5Ex"></td>
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?e%5Ex"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B2%5Csqrt%7Bx%7D%7D"></td>
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bx%7D"></td>
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?x%20%3E%200"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7Bx%7D"></td>
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?%5Cln(x)"></td>
-<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?x%20%3E%200"></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="primitives-de-fonctions-composées" class="level2">
-<h2 class="anchored" data-anchor-id="primitives-de-fonctions-composées">Primitives de fonctions composées</h2>
-<p>Le programme attend que vous sachiez reconnaître la dérivée d’une fonction composée.</p>
-<section id="forme-u-cdot-un" class="level3">
-<h3 class="anchored" data-anchor-id="forme-u-cdot-un">Forme <img src="https://latex.codecogs.com/png.latex?u'%20%5Ccdot%20u%5En"></h3>
-<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bu%5E%7Bn+1%7D%7D%7Bn+1%7D"></strong>.</p>
-<p><strong>Exemple :</strong> Soit <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20(2x+1)(x%5E2+x+3)%5E4">.</p>
-<p>En posant <img src="https://latex.codecogs.com/png.latex?u(x)%20=%20x%5E2+x+3">, on a <img src="https://latex.codecogs.com/png.latex?u'(x)%20=%202x+1">. La fonction est de la forme <img src="https://latex.codecogs.com/png.latex?u'%20%5Ccdot%20u%5E4">.</p>
-<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20%5Cfrac%7B1%7D%7B5%7D(x%5E2+x+3)%5E5"></strong>.</p>
-</section>
-<section id="forme-u-eu" class="level3">
-<h3 class="anchored" data-anchor-id="forme-u-eu">Forme <img src="https://latex.codecogs.com/png.latex?u'%20e%5Eu"></h3>
-<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?e%5Eu"></strong>.</p>
-<p><strong>Exemple :</strong> Soit <img src="https://latex.codecogs.com/png.latex?f(x)%20=%203e%5E%7B3x-2%7D">.</p>
-<p>Avec <img src="https://latex.codecogs.com/png.latex?u(x)%20=%203x-2">, on a <img src="https://latex.codecogs.com/png.latex?u'(x)%20=%203">. La forme est exactement <img src="https://latex.codecogs.com/png.latex?u'%20e%5Eu">.</p>
-<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20e%5E%7B3x-2%7D"></strong>.</p>
-</section>
-<section id="forme-fracuu" class="level3">
-<h3 class="anchored" data-anchor-id="forme-fracuu">Forme <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bu'%7D%7Bu%7D"></h3>
-<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?%5Cln(u)"></strong> (pour <img src="https://latex.codecogs.com/png.latex?u%20%3E%200">).</p>
-<p><strong>Exemple :</strong> Soit <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20%5Cfrac%7B2x%7D%7Bx%5E2+1%7D">.</p>
-<p>Avec <img src="https://latex.codecogs.com/png.latex?u(x)%20=%20x%5E2+1">, on a <img src="https://latex.codecogs.com/png.latex?u'(x)%20=%202x">. La forme est exactement <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bu'%7D%7Bu%7D">. Comme <img src="https://latex.codecogs.com/png.latex?x%5E2+1%20%3E%200"> pour tout réel <img src="https://latex.codecogs.com/png.latex?x">.</p>
-<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20%5Cln(x%5E2+1)"></strong>.</p>
-<hr>
+<section id="apollo-un-logiciel-qui-ne-peut-pas-se-tromper" class="level2">
+<h2 class="anchored" data-anchor-id="apollo-un-logiciel-qui-ne-peut-pas-se-tromper">Apollo : un logiciel qui ne peut pas se tromper</h2>
+<p>En 1965, alors qu’elle envisage de reprendre des études, une annonce de journal attire l’attention de son mari : l’Instrumentation Lab du MIT recrute pour développer le logiciel qui doit « envoyer l’homme sur la Lune ». Le laboratoire a remporté le contrat de la NASA pour le logiciel de vol embarqué du programme Apollo. Margaret Hamilton postule et devient la première programmeuse du projet côté MIT.</p>
+<p>Elle travaille d’abord sur les missions non habitées, puis prend la direction de l’équipe chargée du logiciel des missions habitées. En 1968, elle est directrice adjointe en charge de l’équipe du module de commande et de service, et plus de 400 personnes travaillent sur le logiciel d’Apollo.</p>
+<p>Ce logiciel s’exécute sur l’<em>Apollo Guidance Computer</em> (AGC), l’ordinateur de navigation embarqué, parmi les premiers à utiliser des circuits intégrés. Ses ressources sont extrêmement limitées, et le droit à l’erreur est nul. Hamilton le résumera ainsi : il n’y avait pas de seconde chance <a href="https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007" target="_blank">(MIT News, 2009)</a>.</p>
+<section id="lerreur-de-lauren-et-apollo-8" class="level3">
+<h3 class="anchored" data-anchor-id="lerreur-de-lauren-et-apollo-8">« L’erreur de Lauren » et Apollo 8</h3>
+<p>Margaret Hamilton emmenait parfois sa fille Lauren, alors âgée de quatre ans, au laboratoire. Un jour, en jouant avec le simulateur du module de commande, l’enfant lance par erreur le programme P01 (préparation du lancement) alors que le simulateur est « en vol », ce qui fait planter l’ensemble.</p>
+<p>Hamilton propose alors une protection logicielle pour empêcher cette erreur lors d’une vraie mission. Elle est refusée : des astronautes aussi entraînés ne feraient jamais une telle faute. Elle se contente donc d’ajouter un avertissement dans la documentation. Pourtant, lors de la mission Apollo 8, en 1968, Jim Lovell lance accidentellement P01 en plein vol et les données de navigation disparaissent. L’équipe de Hamilton intervient pour résoudre le problème, et la modification qu’elle avait proposée est ensuite intégrée au programme.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>💡 L’astuce du prof : Ajuster les constantes
+<span class="screen-reader-only">Astuce</span>La programmation défensive
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Il arrive souvent que la dérivée <img src="https://latex.codecogs.com/png.latex?u'(x)"> ne soit pas parfaitement présente. Si le décalage n’est qu’un nombre multiplicatif, on peut l’ajuster.</p>
-<p><strong>Exemple 1 (Exponentielle) :</strong> <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20e%5E%7B5x+2%7D">.</p>
-<p>Ici <img src="https://latex.codecogs.com/png.latex?u(x)%20=%205x+2">, donc <img src="https://latex.codecogs.com/png.latex?u'(x)%20=%20%5Cmathbf%7B5%7D">.</p>
-<p>On écrit : <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20%5Cmathbf%7B%5Cfrac%7B1%7D%7B5%7D%7D%20%5Ctimes%20%5Cmathbf%7B5%7De%5E%7B5x+2%7D">.</p>
-<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20%5Cfrac%7B1%7D%7B5%7De%5E%7B5x+2%7D%20+%20C"></strong>.</p>
-<p><strong>Exemple 2 (Logarithme) :</strong> <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20%5Cfrac%7B1%7D%7B3x+4%7D">.</p>
-<p>Ici <img src="https://latex.codecogs.com/png.latex?u(x)%20=%203x+4">, donc <img src="https://latex.codecogs.com/png.latex?u'(x)%20=%20%5Cmathbf%7B3%7D">.</p>
-<p>On écrit : <img src="https://latex.codecogs.com/png.latex?f(x)%20=%20%5Cmathbf%7B%5Cfrac%7B1%7D%7B3%7D%7D%20%5Ctimes%20%5Cfrac%7B%5Cmathbf%7B3%7D%7D%7B3x+4%7D">.</p>
-<p>Une primitive est <strong><img src="https://latex.codecogs.com/png.latex?F(x)%20=%20%5Cfrac%7B1%7D%7B3%7D%20%5Cln(3x+4)%20+%20C"></strong>.</p>
+<p>La <strong>programmation défensive</strong> consiste à écrire un programme en anticipant les erreurs, les dysfonctionnements et les usages imprévus, afin qu’il continue à fonctionner correctement malgré une anomalie. L’épisode de l’erreur de Lauren en est un exemple fondateur.</p>
+<p>Voici une petite illustration (ce n’est évidemment pas le code d’Apollo) :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> lancer_programme(nom, phase_en_cours):</span>
+<span id="cb1-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Refuse d'exécuter un programme incompatible avec la phase de vol."""</span></span>
+<span id="cb1-3">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span> nom <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"P01"</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">and</span> phase_en_cours <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"avant_lancement"</span>:</span>
+<span id="cb1-4">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Programme refusé : P01 ne peut pas être lancé en vol."</span>)</span>
+<span id="cb1-5">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span></span>
+<span id="cb1-6">    <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Programme </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>nom<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> lancé."</span>)</span>
+<span id="cb1-7">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb1-8"></span>
+<span id="cb1-9">lancer_programme(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"P01"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"en_vol"</span>)  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># refusé, les données sont préservées</span></span></code></pre></div></div>
+<p>Plutôt que de supposer que l’utilisateur ne se trompera jamais, on vérifie les conditions d’utilisation et on protège l’état du système.</p>
 </div>
 </div>
-<hr>
 </section>
 </section>
-<section id="pourquoi-chercher-des-primitives" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-chercher-des-primitives">Pourquoi chercher des primitives ? 🎯</h2>
-<p>La recherche de primitives est au cœur de deux piliers du programme :</p>
-<ol type="1">
-<li><strong>Les équations différentielles :</strong> Résoudre <img src="https://latex.codecogs.com/png.latex?y'%20=%20f"> revient à chercher les primitives de <img src="https://latex.codecogs.com/png.latex?f">. C’est crucial pour les modèles de croissance de population ou de refroidissement thermique.</li>
-<li><strong>Le calcul d’aires :</strong> Si <img src="https://latex.codecogs.com/png.latex?F"> est une primitive de <img src="https://latex.codecogs.com/png.latex?f"> sur <img src="https://latex.codecogs.com/png.latex?%5Ba;b%5D">, alors l’intégrale (qui représente l’aire sous la courbe pour une fonction positive) se calcule par : <img src="https://latex.codecogs.com/png.latex?%5Cint_%7Ba%7D%5E%7Bb%7D%20f(x)%20%5C,%20dx%20=%20F(b)%20-%20F(a)"></li>
-</ol>
+<section id="apollo-11-lalarme-1202" class="level2">
+<h2 class="anchored" data-anchor-id="apollo-11-lalarme-1202">Apollo 11 : l’alarme 1202</h2>
+<p>Le 20 juillet 1969, quelques instants avant l’alunissage du module Eagle, l’ordinateur de bord signale une alarme 1202 : il est en situation de surcharge, en raison d’un composant matériel défectueux, et on peut craindre qu’il ne parvienne plus à gérer la procédure d’atterrissage.</p>
+<p>C’est ici que le travail de Hamilton et de son équipe se révèle décisif. Le logiciel était conçu autour d’un <strong>système de priorités</strong> : en cas de surcharge, il interrompt les tâches secondaires pour libérer les ressources nécessaires aux tâches critiques. Le centre de contrôle de Houston a fait confiance au logiciel, la mission a pu se poursuivre, et deux hommes ont marché pour la première fois sur la Lune.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Un lien avec le programme de NSI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ce principe est celui de l’<strong>ordonnancement avec priorités</strong>, que l’on retrouve dans le programme de NSI : un ordonnanceur choisit toujours la tâche la plus prioritaire, et une tâche peut être suspendue au profit d’une autre. Les files de priorité étudiées en Terminale (chapitre sur les processus) en sont la version simplifiée.</p>
+</div>
+</div>
+</section>
+<section id="entrepreneuse-et-théoricienne-du-génie-logiciel" class="level2">
+<h2 class="anchored" data-anchor-id="entrepreneuse-et-théoricienne-du-génie-logiciel">Entrepreneuse et théoricienne du génie logiciel</h2>
+<p>Après Apollo, le laboratoire de l’Instrumentation Lab devient le laboratoire Draper, indépendant du MIT. Margaret Hamilton y travaille jusqu’au milieu des années 1970, puis fonde en 1976 sa première entreprise, <em>Higher Order Software</em>, centrée sur la prévention des erreurs et la tolérance aux pannes. Dix ans plus tard, elle crée <em>Hamilton Technologies</em>, dont le produit phare est l’<em>Universal Systems Language</em> (USL), un langage et une méthodologie de modélisation pour concevoir des systèmes complexes en privilégiant la prévention des erreurs.</p>
+<p>Elle a aussi mené un combat de longue date pour faire reconnaître le logiciel comme une discipline d’ingénierie à part entière. Elle a expliqué avoir employé l’expression « génie logiciel » (<em>software engineering</em>) pour le distinguer du matériel, tout en le considérant comme une composante de l’ingénierie des systèmes. L’expression prêtait d’abord à sourire, avant que le logiciel ne gagne le respect accordé aux autres disciplines. Elle est l’une des personnes qui ont le plus contribué à populariser le terme et le concept. Elle est l’autrice de plus de 130 publications.</p>
+</section>
+<section id="une-reconnaissance-tardive" class="level2">
+<h2 class="anchored" data-anchor-id="une-reconnaissance-tardive">Une reconnaissance tardive</h2>
+<p>Pendant longtemps, le travail de Margaret Hamilton est resté peu connu. Les premières distinctions importantes arrivent au début des années 2000 :</p>
+<ul>
+<li>2003 : <em>NASA Exceptional Space Act Award</em> ;</li>
+<li>2016 : Médaille présidentielle de la liberté, remise par Barack Obama ;</li>
+<li>2017 : <em>Computer History Museum Fellow Award</em> ;</li>
+<li>2019 : <em>Intrepid Lifetime Achievement Award</em> ;</li>
+<li>2022 : intronisation au <em>National Aviation Hall of Fame</em>.</li>
+</ul>
+<p>La diffusion de la photographie des listings, puis la publication en 2015 de l’intégralité du code source d’Apollo sur GitHub, ont élargi sa notoriété. Elle est devenue une figure emblématique de la place des femmes dans les sciences et les technologies, jusqu’à devenir en 2017 une figurine Lego, dans un ensemble consacré à des femmes de l’histoire de la NASA.</p>
+</section>
+<section id="ce-quelle-nous-laisse" class="level2">
+<h2 class="anchored" data-anchor-id="ce-quelle-nous-laisse">Ce qu’elle nous laisse</h2>
+<p>L’héritage de Margaret Hamilton tient en quelques idées simples, mais toujours d’actualité :</p>
+<ul>
+<li><strong>Anticiper l’erreur</strong> plutôt que supposer qu’elle ne se produira pas ;</li>
+<li><strong>Hiérarchiser les tâches</strong> pour que le système reste utilisable en situation de surcharge ;</li>
+<li><strong>Considérer le logiciel comme une ingénierie</strong>, avec ses méthodes, ses tests et sa rigueur.</li>
+</ul>
+<p><strong>Sources utilisées pour cet article :</strong></p>
+<ul>
+<li><a href="https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007" target="_blank">Margaret Hamilton, computing pioneer, dies at 90</a> (MIT News, 07/10/2026)</li>
+<li><a href="https://next.ink/brief-article/margaret-hamilton-genie-de-lingenierie-logicielle-est-morte-a-90-ans/" target="_blank">Margaret Hamilton, génie de l’ingénierie logicielle, est morte à 90 ans</a> (Next, octobre 2026)</li>
+<li><a href="https://linuxfr.org/news/margaret-hamilton-1936-2026" target="_blank">Margaret Hamilton (1936-2026)</a> (LinuxFr.org)</li>
+</ul>
 
 
 </section>
 
  ]]></description>
-  <category>Analyse</category>
-  <category>Terminale</category>
+  <category>Histoire</category>
+  <category>Informatique</category>
+  <category>NSI</category>
+  <category>Actualités</category>
+  <guid>https://mathsinfolycee.fr/posts/2026-10-08-MargaretHamilton/</guid>
+  <pubDate>Wed, 07 Oct 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://mathsinfolycee.fr/posts/2026-10-08-MargaretHamilton/Margaret_Hamilton.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>PGCD : une formule explicite</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://mathsinfolycee.fr/posts/2026_04_24_PGCD/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Un ami m’a récemment fait découvrir une formule étonnante : il s’agit d’une formule explicite pour calculer le PGCD (Plus Grand Commun Diviseur) de deux nombres entiers <img src="https://latex.codecogs.com/png.latex?a"> et <img src="https://latex.codecogs.com/png.latex?b">. La formule est la suivante, pour tous <img src="https://latex.codecogs.com/png.latex?(a,b)%20%5Cin%20%5Cmathbb%7BN%7D%5E2"> :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cboxed%7Bpgcd(a,b)%20=%20a%20+%20b%20-%20ab%20+%202%20%5Csum%20_%7Bj=1%7D%5E%7Bb-1%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%7D"></p>
+<p>où <img src="https://latex.codecogs.com/png.latex?%5Clfloor%20x%20%5Crfloor"> désigne la partie entière de <img src="https://latex.codecogs.com/png.latex?x">.</p>
+<p>Cette formule est inhabituelle, car on a l’habitude de calculer le PGCD plutôt à l’aide d’un processus itératif, comme l’algorithme d’Euclide ou à l’aide de la décomposition en facteurs premiers.</p>
+<p>Je vais en donner une démonstration très visuelle et amusante.</p>
+<p>Considérons, dans un repère orthonormé <img src="https://latex.codecogs.com/png.latex?(O,%20%5Cvec%7Bi%7D,%20%5Cvec%7Bj%7D)"> du plan, la droite d’équation <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx"> et les points du plan de coordonnées entières situés dans le rectangle <img src="https://latex.codecogs.com/png.latex?%5B0,b%5D%20%5Ctimes%20%5B0,a%5D">.</p>
+<p>Il est clair que ce rectangle contient exactement <img src="https://latex.codecogs.com/png.latex?(a+1)(b+1)"> points à coordonnées entières et que ceux-ci sont répartis de façon symétrique de part et d’autre de la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx">.</p>
+<p><a href="fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/2026_04_24_PGCD/fig1.png" class="img-fluid"></a></p>
+<p>Notons <img src="https://latex.codecogs.com/png.latex?N"> le nombre de points à coordonnées entières situés dans le rectangle (au sens large), on a alors :</p>
+<p><img src="https://latex.codecogs.com/png.latex?N%20=%20(a+1)(b+1)%20=%20ab%20+%20a%20+%20b%20+%201"></p>
+<p>Exploitons maintenant la symétrie de la figure pour obtenir une autre expression de <img src="https://latex.codecogs.com/png.latex?N">. Pour cela, nous allons dénombrer les points à coordonnées entières situés au-dessous (au sens large) de la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx"> (c’est-à-dire les points <img src="https://latex.codecogs.com/png.latex?(x,y)"> à coordonnées entières tels que <img src="https://latex.codecogs.com/png.latex?y%20%5Cleqslant%20%5Cdfrac%7Ba%7D%7Bb%7Dx">).</p>
+<p>Par définition de la partie entière d’un réel, nous savons que, pour tout <img src="https://latex.codecogs.com/png.latex?y%5Cin%5Cmathbb%7BR%7D">, <img src="https://latex.codecogs.com/png.latex?y%5Cgeqslant%200">, on a :</p>
+<p><img src="https://latex.codecogs.com/png.latex?0%20%5Cleqslant%20%5Clfloor%20y%20%5Crfloor%20%5Cleqslant%20y%20%3C%20%5Clfloor%20y%20%5Crfloor%20+%201"></p>
+<p>On en déduit que, pour tout entier <img src="https://latex.codecogs.com/png.latex?j"> tel que <img src="https://latex.codecogs.com/png.latex?0%20%5Cleqslant%20j%20%5Cleqslant%20b">, le nombre de points d’abscisse <img src="https://latex.codecogs.com/png.latex?j"> situés au-dessous de la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx">, au sens large, est égal à <img src="https://latex.codecogs.com/png.latex?%5Cleft%5Clfloor%20%5Cdfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20+%201"> : on ajoute 1 pour tenir compte du point d’abscisse <img src="https://latex.codecogs.com/png.latex?j"> situé sur l’axe des abscisses.</p>
+<p><a href="fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://mathsinfolycee.fr/posts/2026_04_24_PGCD/fig2.png" class="img-fluid"></a></p>
+<p>En sommant sur tous les entiers <img src="https://latex.codecogs.com/png.latex?j"> tels que <img src="https://latex.codecogs.com/png.latex?0%20%5Cleqslant%20j%20%5Cleqslant%20b">, on trouve que le nombre de points à coordonnées entières situés au-dessous de la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx"> (au sens large) est égal à :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Csum%20_%7Bj=0%7D%5E%7Bb%7D%20%5Cleft(%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20+%201%20%5Cright)%20=%20(b+1)%20+%20%5Csum%20_%7Bj=0%7D%5E%7Bb%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor"></p>
+<p>Remarquons que lorsque <img src="https://latex.codecogs.com/png.latex?j=0">, on a <img src="https://latex.codecogs.com/png.latex?%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20=%200">, et que lorsque <img src="https://latex.codecogs.com/png.latex?j=b">, on a <img src="https://latex.codecogs.com/png.latex?%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20=%20a">. La somme précédente peut donc être réécrite de la manière suivante :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A(b+1)%20+%20%5Csum%20_%7Bj=0%7D%5E%7Bb%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20=%20(b+1)%20+%20a%20+%20%5Csum%20_%7Bj=1%7D%5E%7Bb-1%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%0A"></p>
+<p>En utilisant la symétrie de la figure, on en déduit que le nombre <img src="https://latex.codecogs.com/png.latex?N"> de points à coordonnées entières dans le rectangle est égal à deux fois le nombre de points situés au-dessous de la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx"> (au sens large), en prenant garde à <strong>ne pas compter deux fois les points situés sur la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx"></strong>. Notons provisoirement <img src="https://latex.codecogs.com/png.latex?%5Cdelta"> le nombre de points à coordonnées entières situés sur la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx">, on a alors :</p>
+<p><img src="https://latex.codecogs.com/png.latex?N%20=%202%20%5Cleft(%20(b+1)%20+%20a%20+%20%5Csum%20_%7Bj=1%7D%5E%7Bb-1%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20%5Cright)%20-%20%5Cdelta"></p>
+<p>Il ne reste plus qu’à calculer <img src="https://latex.codecogs.com/png.latex?%5Cdelta">. Un point à coordonnées entières de la forme <img src="https://latex.codecogs.com/png.latex?(x,y)"> est situé sur la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx"> si et seulement si <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Bax%7D%7Bb%7D">, c’est-à-dire si et seulement si <img src="https://latex.codecogs.com/png.latex?b%20%5Cmid%20ax">.</p>
+<p>Soit <img src="https://latex.codecogs.com/png.latex?d=pgcd(a,b)">, il existe alors des entiers <img src="https://latex.codecogs.com/png.latex?a'"> et <img src="https://latex.codecogs.com/png.latex?b'"> tels que <img src="https://latex.codecogs.com/png.latex?a%20=%20da'"> et <img src="https://latex.codecogs.com/png.latex?b%20=%20db'">, avec <img src="https://latex.codecogs.com/png.latex?pgcd(a',b')=1">. La condition <img src="https://latex.codecogs.com/png.latex?b%20%5Cmid%20ax"> est alors équivalente à la condition <img src="https://latex.codecogs.com/png.latex?db'%20%5Cmid%20da'x">, c’est-à-dire à la condition <img src="https://latex.codecogs.com/png.latex?b'%20%5Cmid%20a'x">. Étant donné que <img src="https://latex.codecogs.com/png.latex?pgcd(a',b')=1">, cela équivaut à la condition <img src="https://latex.codecogs.com/png.latex?b'%20%5Cmid%20x"> d’après le théorème de Gauss.</p>
+<p>On a donc <img src="https://latex.codecogs.com/png.latex?x=kb'">, avec <img src="https://latex.codecogs.com/png.latex?0%20%5Cleqslant%20x%20%5Cleqslant%20b">, ce qui équivaut à <img src="https://latex.codecogs.com/png.latex?0%20%5Cleqslant%20k%20%5Cleqslant%20d"> : on en déduit que <img src="https://latex.codecogs.com/png.latex?k"> peut prendre toutes les valeurs entières de <img src="https://latex.codecogs.com/png.latex?0"> à <img src="https://latex.codecogs.com/png.latex?d">. Il y a donc exactement <img src="https://latex.codecogs.com/png.latex?d+1"> points à coordonnées entières situés sur la droite <img src="https://latex.codecogs.com/png.latex?y%20=%20%5Cdfrac%7Ba%7D%7Bb%7Dx">, ce qui signifie que <img src="https://latex.codecogs.com/png.latex?%5Cdelta%20=%20d%20+%201%20=%20pgcd(a,b)%20+%201">.</p>
+<p>En reportant cette valeur de <img src="https://latex.codecogs.com/png.latex?%5Cdelta"> dans l’expression de <img src="https://latex.codecogs.com/png.latex?N">, on trouve que :</p>
+<p><img src="https://latex.codecogs.com/png.latex?N%20=%202%20%5Cleft(%20(b+1)%20+%20a%20+%20%5Csum%20_%7Bj=1%7D%5E%7Bb-1%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20%5Cright)%20-%20(pgcd(a,b)%20+%201)"></p>
+<p>En égalant les deux expressions de <img src="https://latex.codecogs.com/png.latex?N">, on trouve que :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A(a+1)(b+1)%20=%202%20%5Cleft(%20(b+1)%20+%20a%20+%20%5Csum%20_%7Bj=1%7D%5E%7Bb-1%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20%5Cright)%20-%20(pgcd(a,b)%20+%201)%0A"></p>
+<p>Développons ce qui peut l’être dans l’expression précédente :</p>
+<p><img src="https://latex.codecogs.com/png.latex?ab%20+%20a%20+%20b%20+%201%20=%202b%20+%202%20+%202a%20+%202%20%5Csum%20_%7Bj=1%7D%5E%7Bb-1%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%20-%20pgcd(a,b)%20-%201"></p>
+<p>En réarrangeant les ter mes, on trouve que :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cboxed%7Bpgcd(a,b)%20=%20a%20+%20b%20-%20ab%20+%202%20%5Csum%20_%7Bj=1%7D%5E%7Bb-1%7D%20%5Cleft%5Clfloor%20%5Cfrac%7Baj%7D%7Bb%7D%20%5Cright%5Crfloor%7D"></p>
+<p>Appliquons cette formule pour calculer le PGCD de <img src="https://latex.codecogs.com/png.latex?a=3"> et <img src="https://latex.codecogs.com/png.latex?b=6">. On trouve que :</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0Apgcd(3,6)%20&amp;=%203%20+%206%20-%203%20%5Ctimes%206%20+%202%20%5Csum%20_%7Bj=1%7D%5E%7B5%7D%20%5Cleft%5Clfloor%20%5Cfrac%7B3j%7D%7B6%7D%20%5Cright%5Crfloor%20%5C%5C%0A&amp;=%209%20-%2018%20+%202%20%5Cleft(%20%5Cleft%5Clfloor%20%5Cfrac%7B3%7D%7B6%7D%20%5Cright%5Crfloor%20+%20%5Cleft%5Clfloor%20%5Cfrac%7B6%7D%7B6%7D%20%5Cright%5Crfloor%20+%20%5Cleft%5Clfloor%20%5Cfrac%7B9%7D%7B6%7D%20%5Cright%5Crfloor%20+%20%5Cleft%5Clfloor%20%5Cfrac%7B12%7D%7B6%7D%20%5Cright%5Crfloor%20+%20%5Cleft%5Clfloor%20%5Cfrac%7B15%7D%7B6%7D%20%5Cright%5Crfloor%20%5Cright)%20%5C%5C%0A&amp;=%20-9%20+%202%20%5Cleft(%200%20+%201%20+%201%20+%202%20+%202%20%5Cright)%20%5C%5C%0A&amp;=%20-9%20+%202%20%5Ctimes%206%20%5C%5C%0A&amp;=%20-9%20+%2012%20%5C%5C%0A&amp;=%203%0A%5Cend%7Baligned%7D%0A"></p>
+<p>Ce qui est bien égal au PGCD de <img src="https://latex.codecogs.com/png.latex?3"> et <img src="https://latex.codecogs.com/png.latex?6">.</p>
+
+
+
+ ]]></description>
   <category>Mathématiques</category>
-  <guid>https://mathsinfolycee.fr/posts/2026-01-06-primitives/</guid>
-  <pubDate>Mon, 05 Jan 2026 23:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/2026-01-06-primitives/primitives2.png" medium="image" type="image/png" height="81" width="144"/>
+  <guid>https://mathsinfolycee.fr/posts/2026_04_24_PGCD/</guid>
+  <pubDate>Thu, 23 Apr 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://mathsinfolycee.fr/posts/2026_04_24_PGCD/fig3.png" medium="image" type="image/png" height="94" width="144"/>
 </item>
 <item>
   <title>L’histoire de l’Intelligence Artificielle</title>
@@ -6927,180 +7000,6 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
   <guid>https://mathsinfolycee.fr/posts/mathsmusique/</guid>
   <pubDate>Wed, 02 Oct 2024 22:00:00 GMT</pubDate>
   <media:content url="https://mathsinfolycee.fr/posts/mathsmusique/LogoFranceMusiqueMaths.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Boby Lapointe, poète mathématicien</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://mathsinfolycee.fr/posts/bobylapointe/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Dans une vidéo de France Musique intitulée <em>Boby Lapointe : la science du poète mathématicien</em> (disponible sur YouTube <a href="https://www.youtube.com/watch?v=yNEA-xmxG4A" target="_blank">ici</a>), cet aspect méconnu de son génie est exploré, mettant en lumière son invention et son approche atypique des nombres.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yNEA-xmxG4A?si=QdaNZxqSP9SmiWAW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-<section id="lartiste-des-jeux-de-mots-et-des-jeux-de-nombres" class="level3">
-<h3 class="anchored" data-anchor-id="lartiste-des-jeux-de-mots-et-des-jeux-de-nombres">L’artiste des jeux de mots et des jeux de nombres</h3>
-<p>Le talent de Boby Lapointe en tant que parolier est incontestable : ses chansons telles que « Ta Katie t’a quitté », « Framboise » ou « La maman des poissons » sont de véritables trésors de la chanson française. Ses textes regorgent de calembours, de contrepèteries et de jeux de mots complexes.</p>
-<p>Cette passion pour le langage trouve un parallèle dans sa fascination pour les mathématiques, où il voyait également un jeu d’esprit. Formé à l’École Nationale Supérieure d’Aéronautique, Boby Lapointe était un vrai scientifique. Cette formation explique en partie son goût pour les défis intellectuels.</p>
-</section>
-<section id="le-système-bibi-binaire-une-invention-ludique-et-sérieuse" class="level3">
-<h3 class="anchored" data-anchor-id="le-système-bibi-binaire-une-invention-ludique-et-sérieuse">Le système bibi-binaire : une invention ludique et sérieuse</h3>
-<p>L’une des contributions majeures de Lapointe à la culture mathématique reste sans doute son système de numération « bibi-binaire ». Ce terme, que l’on pourrait croire sorti tout droit de l’un de ses textes absurdes, désigne pourtant un concept bien réel et sérieux.</p>
-<p>La numération bibi-binaire est un jeu sur la représentation des nombres en base 16. Le système bibi-binaire vise à rendre plus accessible la lecture des nombres hexadécimaux pour les néophytes ou à les manipuler plus aisément.</p>
-<p>Dans cette vidéo de France Musique, on comprend mieux comment ce système est né, non pas d’une démarche purement théorique, mais d’un désir ludique de simplifier des concepts complexes et de les rendre accessibles à tous. Pour Lapointe, les mathématiques étaient un terrain de jeu tout aussi fertile que la langue française.</p>
-<p>Boby Lapointe est un artiste à multiples facettes, capable de jongler avec les mots comme avec les chiffres. Son invention du système de numération bibi-binaire témoigne de sa créativité, nourrie par une curiosité intellectuelle et un amour des mathématiques.</p>
-<p>Au-delà des chansons, Boby Lapointe nous laisse une leçon précieuse : les mathématiques et l’art ne sont pas des disciplines opposées. Au contraire, elles peuvent se nourrir mutuellement pour engendrer des créations inédites, porteuses d’une originalité déconcertante.</p>
-</section>
-<section id="principe-du-système-bibi-binaire" class="level3">
-<h3 class="anchored" data-anchor-id="principe-du-système-bibi-binaire">Principe du système bibi-binaire</h3>
-<p>Le système bibi-binaire est basé sur la numération hexadécimale (base 16). L’idée ingénieuse de Boby Lapointe a été d’attribuer à chaque chiffre hexadécimal une syllabe composée d’une consonne et d’une voyelle.</p>
-<p>Voici comment fonctionnent ces attributions :</p>
-<ul>
-<li>Les consonnes H, B, K, D correspondent respectivement aux paires de bits 00, 01, 10, 11 pour les chiffres de poids fort.</li>
-<li>Les voyelles O, A, E, I correspondent à ces mêmes paires de bits pour les chiffres de poids faible.</li>
-</ul>
-<p>Ainsi, chaque chiffre hexadécimal est représenté par une syllabe unique.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Table de correspondance entre le Bibinaire et les autres notations"><img src="https://mathsinfolycee.fr/posts/bobylapointe/Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" class="img-fluid figure-img" alt="Table de correspondance entre le Bibinaire et les autres notations"></a></p>
-<figcaption>Table de correspondance entre le Bibinaire et les autres notations</figcaption>
-</figure>
-</div>
-<section id="tableau-de-conversion" class="level4">
-<h4 class="anchored" data-anchor-id="tableau-de-conversion">Tableau de conversion</h4>
-<p>Voici le tableau complet des correspondances :</p>
-<table class="table-striped table-hover caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Décimal</th>
-<th style="text-align: center;">Hexadécimal</th>
-<th style="text-align: center;">Bibi-binaire</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">HO</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">HA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">HE</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">HI</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">BO</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">BA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">BE</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">BI</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">KO</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">KA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">A</td>
-<td style="text-align: center;">KE</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">B</td>
-<td style="text-align: center;">KI</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">C</td>
-<td style="text-align: center;">DO</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">DA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">14</td>
-<td style="text-align: center;">E</td>
-<td style="text-align: center;">DE</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">DI</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="exemples-dutilisation" class="level2">
-<h2 class="anchored" data-anchor-id="exemples-dutilisation">Exemples d’utilisation</h2>
-<p>Voyons maintenant quelques exemples pour mieux comprendre ce système :</p>
-<ol type="1">
-<li><p>Le nombre 71 en décimal s’écrit 47 en hexadécimal, ce qui donne BOBI en bibi-binaire.</p></li>
-<li><p>L’année 2018 s’écrit 7E2 en hexadécimal, soit BIDEHE en bibi-binaire.</p></li>
-<li><p>Un nombre plus grand comme 584 623 705 671 s’écrit 881E49CE47 en hexadécimal, ce qui donne la phrase mélodieuse “KOKOHADEBOKADODEBOBI” en bibi-binaire.</p></li>
-</ol>
-<p>Le principal intérêt du bibi-binaire est de créer des noms de nombres agréables à l’oreille, dans l’esprit des jeux de mots chers à Boby Lapointe. Il permet également de représenter de grands nombres de manière plus concise que le système décimal.</p>
-<p>Cependant, malgré son originalité, ce système reste peu pratique pour une utilisation quotidienne. Il demeure néanmoins un bel exemple de la créativité mathématique de Boby Lapointe, mêlant rigueur et fantaisie.</p>
-<section id="bonus-la-playlist-boby-lapointe" class="level3">
-<h3 class="anchored" data-anchor-id="bonus-la-playlist-boby-lapointe">Bonus : la playlist Boby Lapointe</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jjD9WzW6dK4?si=afNs9IqkhWi-3VYh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-</section>
-<section id="pour-aller-plus-loin" class="level3">
-<h3 class="anchored" data-anchor-id="pour-aller-plus-loin">Pour aller plus loin :</h3>
-<ul>
-<li><a href="https://www.radiofrance.fr/francemusique/boby-lapointe-du-jeu-de-mots-a-l-equation-mathematique-9184903" target="_blank">Article sur le site de France Musique accompagnant la vidéo mentionnée ici</a></li>
-<li><a href="https://fr.vikidia.org/wiki/Syst%C3%A8me_bibi-binaire" target="_blank">https://fr.vikidia.org/wiki/Syst%C3%A8me_bibi-binaire</a></li>
-<li><a href="https://graner.name/nicolas/nombres/bibibinaire.php" target="_blank">https://graner.name/nicolas/nombres/bibibinaire.php</a></li>
-<li><a href="https://pi.ac3j.fr/boby-lapointe/" target="_blank">https://pi.ac3j.fr/boby-lapointe/</a></li>
-</ul>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>Informatique</category>
-  <category>Histoire</category>
-  <category>Mathématiques</category>
-  <category>Vidéothèque</category>
-  <guid>https://mathsinfolycee.fr/posts/bobylapointe/</guid>
-  <pubDate>Mon, 30 Sep 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/bobylapointe/Table_de_correspondance_entre_le_Bibinaire_et_les_autres_notations.svg.png" medium="image" type="image/png" height="23" width="144"/>
 </item>
 </channel>
 </rss>
