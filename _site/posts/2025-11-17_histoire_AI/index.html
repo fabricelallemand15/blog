@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e9983660973164803018488ac4775e0e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0d5685975c44ec70d963ded4e87a20d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -99,128 +102,6 @@ ul.task-list li input[type="checkbox"] {
   </script>
   <!-- End Matomo Code -->
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var matomoBaseUrl = "https://sitelf.fr/matomo/";
-    var siteId = "2";
-    var domId = "page-views";
-    var pageViewsElement = document.getElementById(domId);
-
-    if (!pageViewsElement) {
-      return;
-    }
-
-    var isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-    var productionHost = "mathsinfolycee.fr";
-    var hostname = isLocal ? productionHost : window.location.hostname;
-    var protocol = isLocal ? "https:" : window.location.protocol;
-    var pathname = window.location.pathname;
-    var targetUrl = protocol + "//" + hostname + pathname;
-    var normalizedPath = pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
-
-    function formatAndDisplay(hits) {
-      pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> ' + hits + ' vues';
-    }
-
-    function cleanupCallback(callbackName) {
-      delete window[callbackName];
-      var callbackScript = document.getElementById(callbackName);
-      if (callbackScript) {
-        callbackScript.remove();
-      }
-    }
-
-    function requestJsonp(apiUrl, onSuccess, onError) {
-      var callbackName = "matomoPageViewsCallback_" + Math.floor(Math.random() * 1000000);
-      window[callbackName] = function(data) {
-        cleanupCallback(callbackName);
-        onSuccess(data);
-      };
-
-      var scriptElement = document.createElement("script");
-      scriptElement.id = callbackName;
-      scriptElement.src = apiUrl + "&jsoncallback=" + callbackName;
-      scriptElement.onerror = function() {
-        cleanupCallback(callbackName);
-        onError();
-      };
-      document.body.appendChild(scriptElement);
-    }
-
-    function findHitsByLabel(nodes, label) {
-      if (!Array.isArray(nodes)) {
-        return null;
-      }
-      for (var index = 0; index < nodes.length; index += 1) {
-        var node = nodes[index];
-        if (node && node.label === label && typeof node.nb_hits === "number") {
-          return node.nb_hits;
-        }
-        var nestedHits = findHitsByLabel(node && node.subtable, label);
-        if (nestedHits !== null) {
-          return nestedHits;
-        }
-      }
-      return null;
-    }
-
-    function fetchExactUrlFallback() {
-      var exactUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrl" +
-        "&idSite=" + siteId +
-        "&pageUrl=" + encodeURIComponent(targetUrl) +
-        "&format=JSON" +
-        "&period=range&date=2018-01-01,today";
-
-      requestJsonp(
-        exactUrl,
-        function(data) {
-          var hits = 0;
-          if (Array.isArray(data) && data.length > 0 && typeof data[0].nb_hits === "number") {
-            hits = data[0].nb_hits;
-          } else if (data && typeof data.nb_hits === "number") {
-            hits = data.nb_hits;
-          }
-          formatAndDisplay(hits);
-        },
-        function() {
-          pageViewsElement.innerHTML = '<i class="fa-solid fa-eye"></i> indisponible';
-        }
-      );
-    }
-
-    var pathParts = normalizedPath.split("/").filter(Boolean);
-    var isPostPage = pathParts.length >= 2 && pathParts[0] === "posts";
-
-    if (!isPostPage) {
-      fetchExactUrlFallback();
-      return;
-    }
-
-    var postSlug = pathParts[1];
-    var postSegmentPath = "/posts/" + postSlug;
-    var pageUrlsApiUrl = matomoBaseUrl + "index.php?module=API&method=Actions.getPageUrls" +
-      "&idSite=" + siteId +
-      "&format=JSON" +
-      "&expanded=1" +
-      "&period=range&date=2018-01-01,today" +
-      "&segment=" + encodeURIComponent("pageUrl=@" + postSegmentPath);
-
-    requestJsonp(
-      pageUrlsApiUrl,
-      function(data) {
-        var hits = findHitsByLabel(data, postSlug);
-        if (typeof hits === "number") {
-          formatAndDisplay(hits);
-        } else {
-          fetchExactUrlFallback();
-        }
-      },
-      function() {
-        fetchExactUrlFallback();
-      }
-    );
-  });
-</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -844,9 +725,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
 <p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
 </a>
-  </li>  
-    <li class="nav-item">
- <span id="page-views"></span>
   </li>  
 </ul>
     </div>   

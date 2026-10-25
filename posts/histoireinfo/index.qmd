@@ -11,4 +11,4 @@ image: "histoireinfo.png"
 <p>Dans la vidéo YouTube ci-dessous, vous trouverez un panorama rapide de l'histoire de l'informatique essentiellement axé sur l'évolution des ordinateurs.</p>
 <!-- /wp:paragraph -->
 
-<iframe class="video" src="https://www.youtube.com/embed/B1QD9FgCOrc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=B1QD9FgCOrc&vignette=https%3A%2F%2Fi.ytimg.com%2Fvi%2FB1QD9FgCOrc%2Fmaxresdefault.jpg&debut=0&fin=187&largeur=16&hauteur=9" allow="picture-in-picture; autoplay; fullscreen" frameborder="0" width="100%" height="auto" style="aspect-ratio: 16/9"></iframe>

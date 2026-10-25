@@ -30,7 +30,6 @@ website:
     left:
       - href: http://creativecommons.org/licenses/by/4.0/
         text: <img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-      - text: '<span id="page-views"></span>'
     right: 
       - text: "Mentions légales"
         href: about.qmd

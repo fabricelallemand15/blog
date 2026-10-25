@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="F. LALLEMAND">
+<meta name="description" content="L’histoire de la formule de résolution des équations du troisième degré est souvent racontée comme un vol.&nbsp;Que sait-on réellement de l’affaire Cardan-Tartaglia ?">
+
+<title>Cardan a-t-il vraiment trompé Tartaglia ? – Le bloc-notes Maths, Info, Lycée</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0d5685975c44ec70d963ded4e87a20d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #BCD2E8;
+      }
+</style>
+<script src="https://kit.fontawesome.com/4010eb68d9.js" crossorigin="anonymous"></script>
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//sitelf.fr/matomo/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../avatar.png" alt="" class="navbar-logo light-content">
+    <img src="../../avatar.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Le bloc-notes Maths, Info, Lycée</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://pnsi.sitelf.fr"> 
+<span class="menu-text">1ère NSI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://tnsi.sitelf.fr"> 
+<span class="menu-text">Terminale NSI</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mastodon.mim-libre.fr/@lallemandfabrice"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@flallemandmath"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Cardan a-t-il vraiment trompé Tartaglia ?</h1>
+            <p class="subtitle lead">Enquête sur une anecdote célèbre de l’histoire des nombres complexes</p>
+                  <div>
+        <div class="description">
+          L’histoire de la formule de résolution des équations du troisième degré est souvent racontée comme un vol.&nbsp;Que sait-on réellement de l’affaire Cardan-Tartaglia ?
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Mathématiques</div>
+                <div class="quarto-category">Histoire</div>
+                <div class="quarto-category">Nombres complexes</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Auteur·rice</div>
+      <div class="quarto-title-meta-contents">
+               <p>F. LALLEMAND </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Date de publication</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">8 octobre 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#lhistoire-telle-quon-la-raconte" id="toc-lhistoire-telle-quon-la-raconte" class="nav-link active" data-scroll-target="#lhistoire-telle-quon-la-raconte">L’histoire telle qu’on la raconte</a></li>
+  <li><a href="#ce-qui-est-solidement-établi" id="toc-ce-qui-est-solidement-établi" class="nav-link" data-scroll-target="#ce-qui-est-solidement-établi">Ce qui est solidement établi</a>
+  <ul class="collapse">
+  <li><a href="#la-formule-ne-vient-pas-de-tartaglia" id="toc-la-formule-ne-vient-pas-de-tartaglia" class="nav-link" data-scroll-target="#la-formule-ne-vient-pas-de-tartaglia">La formule ne vient pas de Tartaglia</a></li>
+  <li><a href="#chronologie" id="toc-chronologie" class="nav-link" data-scroll-target="#chronologie">Chronologie</a></li>
+  </ul></li>
+  <li><a href="#le-point-de-vue-de-tartaglia" id="toc-le-point-de-vue-de-tartaglia" class="nav-link" data-scroll-target="#le-point-de-vue-de-tartaglia">Le point de vue de Tartaglia</a></li>
+  <li><a href="#parole-à-la-défense" id="toc-parole-à-la-défense" class="nav-link" data-scroll-target="#parole-à-la-défense">Parole à la défense</a></li>
+  <li><a href="#le-dossier-à-charge" id="toc-le-dossier-à-charge" class="nav-link" data-scroll-target="#le-dossier-à-charge">Le dossier à charge</a></li>
+  <li><a href="#et-tartaglia" id="toc-et-tartaglia" class="nav-link" data-scroll-target="#et-tartaglia">Et Tartaglia ?</a></li>
+  <li><a href="#alors-que-conclure" id="toc-alors-que-conclure" class="nav-link" data-scroll-target="#alors-que-conclure">Alors, que conclure ?</a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2026_10_09_Cardan/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>Quand j’introduis les nombres complexes en Terminale, je commence par une histoire : celle de la formule de résolution des équations du troisième degré, de la rivalité entre Tartaglia et Cardan, puis de l’apparition, dans cette formule, de racines carrées de nombres négatifs. La version que l’on trouve dans de nombreux ouvrages de vulgarisation est simple : Cardan aurait <strong>trompé</strong> Tartaglia pour lui arracher son secret, avant de le publier sous son propre nom.</p>
+<p>Un article d’Antoine HOULOU-GARCIA lu récemment dans <em>Tangente</em> (<a href="https://tangente-mag.com/magazines/l-infini-existe-t-il-vraiment">N°231 · 8 septembre 2026</a>) présente au contraire Cardan sous un jour beaucoup plus favorable. Qui a raison ? Cet article tente de faire le point à partir de sources historiques accessibles.</p>
+<section id="lhistoire-telle-quon-la-raconte" class="level2">
+<h2 class="anchored" data-anchor-id="lhistoire-telle-quon-la-raconte">L’histoire telle qu’on la raconte</h2>
+<p>La version courante tient en quelques lignes :</p>
+<ol type="1">
+<li>Tartaglia découvre la formule de résolution de certaines équations du troisième degré et la garde secrète.</li>
+<li>Cardan le fait venir à Milan et lui arrache le secret en jurant de ne jamais le divulguer.</li>
+<li>Quelques années plus tard, Cardan publie la formule dans son <em>Ars Magna</em> (1545), en violation de son serment.</li>
+<li>Tartaglia, furieux, est dépossédé de sa découverte, qui porte aujourd’hui le nom de « formule de Cardan ».</li>
+</ol>
+<p>Voici un extrait du roman <em>Le théorème du Perroquet</em>, de Denis Guedj (Seuil, 1998) :</p>
+<blockquote class="blockquote">
+<p>Ayant eu connaissance de la magistrale réussite de Tartaglia, Cardan entra en contact avec lui. Plusieurs années durant, il poussa Tartaglia à lui communiquer ses formules. Tartaglia refusa. Cardan se fit plus insistant. Ruses, prières, tromperies, menaces même. Furieux de ce refus qui durait, il finit par lui écrire une lettre dans laquelle il le traite de présomptueux, disant qu’il se prenait pour « quelqu’un d’important, qui se croyait au sommet de la montagne, alors qu’il n’était que dans la vallée ».</p>
+<p>Changeant subitement de comportement, Cardan se fit doux et parvint à devenir l’ami de Tartaglia. Celui-ci commença par lui communiquer le texte de quelques-uns des problèmes qu’il avait posés à Del Fiore.</p>
+<p>[…] Les formules n’étant toujours pas publiées, l’insistance de Cardan se fit plus grande et la résistance de Tartaglia plus faible. Ce que voyant, Cardan lui fit une promesse : « Si vous m’enseignez vos inventions, non seulement je ne les publierai jamais, mais encore je les noterai pour moi en chiffres, afin qu’après ma mort personne ne puisse les comprendre. »</p>
+<p>Un jour de mars 1539, Tartaglia céda. Cardan sentit son cœur battre plus fort. Il s’assit et écouta. La voix de son ami, dont il perçut les légers heurts de son discret bégaiement, s’éleva :[…]</p>
+<p>Quelque temps après la lecture de ce poème, Cardan publia l’Ars magna. Le Grand Art. Tartaglia s’empressa de lire l’ouvrage de son ami. Qu’y découvrit-il ? Sa propre méthode de résolution de l’équation du troisième degré décrite par le menu ! Cardan l’avait trompé.</p>
+<p>Dans son livre, relatant sa déception et sa tristesse, Tartaglia écrivit « je n’ai plus d’affection pour Cardano ». Puis cette phrase : « Quello que tu non voi che si sappia, nel dire ad alcuno. » Ce que tu ne veux pas que l’on sache, ne le dis à personne !</p>
+</blockquote>
+<p>Sources : Guedj, <em>Le théorème du Perroquet</em>, Points Seuil, 2000, pp.&nbsp;358-362.</p>
+<p><a href="thmperroquet.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="thmperroquet.png" class="img-fluid"></a></p>
+<p>Examinons chacun de ces points.</p>
+</section>
+<section id="ce-qui-est-solidement-établi" class="level2">
+<h2 class="anchored" data-anchor-id="ce-qui-est-solidement-établi">Ce qui est solidement établi</h2>
+<section id="la-formule-ne-vient-pas-de-tartaglia" class="level3">
+<h3 class="anchored" data-anchor-id="la-formule-ne-vient-pas-de-tartaglia">La formule ne vient pas de Tartaglia</h3>
+<p>Le premier fait à rappeler est que Tartaglia n’est pas le premier à avoir résolu ces équations. Scipione del Ferro (1465-1526), professeur à Bologne, avait trouvé une méthode pour les équations de la forme <span class="math inline">\(x^3 + ax = b\)</span>, sans doute dès les années 1510. Il avait confié son secret à son gendre Annibale della Nave et à son élève Antonio Maria Fior (ou Fiore) (Gindikin).</p>
+<p>Fior défie Tartaglia lors d’un duel mathématique public. Les sources s’accordent sur le fait que Tartaglia découvre sa propre méthode juste avant l’échéance du défi, en février 1535, et l’emporte (Gindikin ; APMEP). À l’époque, les nombres négatifs n’étant pas utilisés, on distinguait plusieurs « types » d’équations, ce qui explique que la résolution de l’un ne donne pas celle de l’autre.</p>
+</section>
+<section id="chronologie" class="level3">
+<h3 class="anchored" data-anchor-id="chronologie">Chronologie</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Événement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Février 1535</td>
+<td style="text-align: left;">Tartaglia l’emporte sur Fior</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Janvier-mars 1539</td>
+<td style="text-align: left;">Cardan sollicite Tartaglia à plusieurs reprises ; celui-ci refuse d’abord</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25 mars 1539</td>
+<td style="text-align: left;">Rencontre à Milan, au domicile de Cardan : Tartaglia transmet sa règle sous forme de poème</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mai 1539</td>
+<td style="text-align: left;">Cardan publie sa <em>Practica arithmeticae</em>, <strong>sans</strong> la formule</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1540 environ</td>
+<td style="text-align: left;">Ferrari, élève de Cardan, résout l’équation du quatrième degré</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1543</td>
+<td style="text-align: left;">Cardan et Ferrari consultent à Bologne les papiers de del Ferro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1545</td>
+<td style="text-align: left;">Publication de l’<em>Ars Magna</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1546</td>
+<td style="text-align: left;">Tartaglia publie ses <em>Quesiti et inventioni diverse</em>, où il accuse Cardan de parjure</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1547-1548</td>
+<td style="text-align: left;">Échange de « cartels » avec Ferrari, puis débat public à Milan (10 août 1548)</td>
+</tr>
+</tbody>
+</table>
+<p>Cette chronologie provient essentiellement de Gindikin et de l’APMEP (voir les sources en fin d’article).</p>
+</section>
+</section>
+<section id="le-point-de-vue-de-tartaglia" class="level2">
+<h2 class="anchored" data-anchor-id="le-point-de-vue-de-tartaglia">Le point de vue de Tartaglia</h2>
+<p>Voici le point délicat : <strong>le récit détaillé de l’entrevue de 1539 et du serment provient de Tartaglia lui-même</strong>, dans des notes rédigées après coup. Selon ce récit, Cardan aurait juré sur les Évangiles de ne jamais publier la découverte, et même de la chiffrer pour qu’elle reste illisible après sa mort.</p>
+<p>Or Ferrari, l’élève de Cardan, affirmait que ces notes ne correspondaient pas tout à fait à la réalité (Gindikin). Un article consacré à Cardan résume la situation en notant que l’on dispose de deux récits contradictoires, celui de Tartaglia et celui de Ferrari (arXiv Cardano). Le serment est donc très probablement authentique dans son principe, mais ses termes exacts (portée, durée) restent discutés. Certaines présentations parlent d’une promesse de ne pas publier avant que Tartaglia ne l’ait fait lui-même, d’autres d’un secret absolu.</p>
+<p>Par ailleurs, le mot « tromper » suppose une ruse. Ce que décrivent les sources est plutôt une insistance prolongée : Cardan envoie un intermédiaire, relance par courrier, et invite finalement Tartaglia à Milan en évoquant une présentation au gouverneur espagnol, le marquis del Vasto. Tartaglia finit par céder, puis repart sans avoir rencontré le marquis (Gindikin). C’est de la pression et de la séduction, pas une tromperie établie.</p>
+</section>
+<section id="parole-à-la-défense" class="level2">
+<h2 class="anchored" data-anchor-id="parole-à-la-défense">Parole à la défense</h2>
+<p>Plusieurs éléments plaident en faveur de Cardan.</p>
+<p><strong>Il n’a pas publié tout de suite.</strong> Il publie la <em>Practica arithmeticae</em> en 1539 sans la formule, et il faut attendre 1545 pour l’<em>Ars Magna</em>. Tartaglia, lui, n’a jamais publié sa méthode, alors qu’il avait déjà un résultat depuis 1535.</p>
+<p><strong>Il a découvert que Tartaglia n’était pas le premier.</strong> En 1543, Cardan et Ferrari constatent dans les papiers de del Ferro que la règle y figure bien avant Tartaglia. Cardan en tire la conclusion qu’il est libéré de sa promesse, un argument discutable mais défendable (Gindikin ; APMEP).</p>
+<p><strong>Il a cité ses sources.</strong> Dans l’introduction de l’<em>Ars Magna</em>, Cardan attribue la résolution du cas <span class="math inline">\(x^3 + ax = b\)</span> à del Ferro, puis à Tartaglia, qui l’a retrouvée et la lui a transmise « ému par ses prières ». Il précise aussi que Tartaglia ne lui avait pas donné de démonstration (Gindikin).</p>
+<p><strong>Son apport personnel est considérable.</strong> Tartaglia avait transmis une « recette » sans justification. Cardan a dû en chercher la preuve, et en a tiré beaucoup plus : traitement des différents types d’équations, utilisation décisive des nombres négatifs, changement de variable <span class="math inline">\(x = y - a/3\)</span> pour supprimer le terme en <span class="math inline">\(x^2\)</span>, relations entre racines et coefficients. L’équation du quatrième degré, due à Ferrari, figure aussi dans le livre, avec l’attribution correspondante. Les historiens jugent que Cardan surpasse largement Tartaglia sur ce terrain (Gindikin ; académie de Bordeaux).</p>
+</section>
+<section id="le-dossier-à-charge" class="level2">
+<h2 class="anchored" data-anchor-id="le-dossier-à-charge">Le dossier à charge</h2>
+<p>Tout n’est pas à l’avantage de Cardan pour autant.</p>
+<ul>
+<li>Il a bien publié une méthode qu’il avait promis de ne pas divulguer, et il n’a jamais directement répondu aux attaques de Tartaglia : c’est Ferrari qui s’en est chargé, et Cardan était absent le jour du débat de 1548.</li>
+<li>Il n’a consulté les papiers de del Ferro qu’en 1543, soit <strong>après</strong> avoir obtenu la formule de Tartaglia. On peut se demander s’il aurait harcelé Tartaglia s’il avait su plus tôt qu’il pouvait l’obtenir autrement (Gindikin).</li>
+<li>Dans son autobiographie, il reconnaît avoir emprunté « quelque chose » à Tartaglia en mathématiques, en minimisant l’importance de cet emprunt : une formulation qui laisse penser qu’il n’avait pas la conscience tout à fait tranquille (Gindikin).</li>
+</ul>
+</section>
+<section id="et-tartaglia" class="level2">
+<h2 class="anchored" data-anchor-id="et-tartaglia">Et Tartaglia ?</h2>
+<p>Le personnage est lui aussi plus complexe que la victime idéale. Autodidacte d’origine modeste, marqué par une blessure à la mâchoire dans son enfance, il avait la réputation d’un caractère difficile. Il a gardé sa méthode secrète pendant plus de dix ans sans la publier, et ses propres écrits sont peu fournis sur le sujet.</p>
+<p>Une hypothèse avancée par Ferrari, reprise par l’historien Moritz Cantor au XIX<sup>e</sup> siècle, soutient même que Tartaglia n’aurait pas redécouvert la règle de del Ferro mais l’aurait obtenue de seconde main. Cette thèse a été contestée et n’est pas démontrée (Gindikin). Il faut donc la citer pour ce qu’elle est : une hypothèse.</p>
+</section>
+<section id="alors-que-conclure" class="level2">
+<h2 class="anchored" data-anchor-id="alors-que-conclure">Alors, que conclure ?</h2>
+<p>L’historien Gindikin note que l’histoire, « maintes fois transmise » dans la littérature de vulgarisation, s’est fortement simplifiée, au point de transformer Cardan en scélérat qui aurait volé la découverte et lui aurait donné son nom. Il juge qu’une telle lecture « caricature » la réalité, et que les principaux acteurs ont sans doute partiellement menti (Gindikin).</p>
+<p>Pour résumer :</p>
+<ul>
+<li><strong>Vrai</strong> : Cardan a obtenu la méthode de Tartaglia après avoir (selon Tartaglia) juré le secret, et l’a publiée en 1545.</li>
+<li><strong>Vrai</strong> : il a reconnu publiquement les contributions de del Ferro, de Tartaglia et de Ferrari.</li>
+<li><strong>Faux ou non démontré</strong> : qu’il ait employé une ruse, qu’il ait « volé » la découverte ou prétendu en être l’auteur.</li>
+<li><strong>Incertain</strong> : les termes exacts du serment, et l’originalité de Tartaglia par rapport à del Ferro.</li>
+</ul>
+<p>Le nom « formule de Cardan » est d’ailleurs lui-même un choix de l’histoire : certains auteurs parlent de formules de Tartaglia-Cardan, voire de del Ferro-Tartaglia-Cardan.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Finalement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tartaglia redécouvre en 1535 une formule trouvée avant lui par del Ferro. Cardan la lui arrache en 1539 en promettant, selon Tartaglia, de ne pas la publier. En 1545, il la publie dans l’<em>Ars Magna</em> en citant del Ferro et Tartaglia, après avoir considérablement élargi la méthode. Tartaglia l’accuse de parjure.</p>
+<p>Cette version conserve le côté dramatique de l’histoire tout en distinguant ce qui est établi de ce qui repose sur le seul témoignage de Tartaglia.</p>
+</div>
+</div>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ul>
+<li>Gindikin, S. G., « Ars Magna », chapitre 1 de <em>Histoires de mathématiciens et de physiciens</em> : <a href="https://www.math.ens.psl.eu/histoireproba/GINDIKIN-chap1-Ars-Magna.pdf" target="_blank">texte en ligne</a> (source principale de cet article).</li>
+<li>APMEP, « La formule secrète ou le duel mathématique qui enflamma l’Italie de la Renaissance » : <a href="https://apmep.fr/La-formule-secrete" target="_blank">lien</a>.</li>
+<li>Académie de Bordeaux, <a href="http://mathematiques.ac-bordeaux.fr/viemaths/hist/mthacc/cardan.htm" target="_blank">biographie de Cardan</a>.</li>
+<li>« Complex and Unpredictable Cardano » : <a href="https://arxiv.org/pdf/0806.0485" target="_blank">arXiv:0806.0485</a>.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/mathsinfolycee\.fr");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "fabricelallemand15/blog";
+    script.dataset.repoId = "R_kgDOI4abBQ";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOI4abBc4CT8OX";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "fr";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="http://creativecommons.org/licenses/by/4.0/">
+<p><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fabricelallemand15/blog/edit/main/posts/2026_10_09_Cardan/index.qmd" class="toc-action"><i class="bi bi-github"></i>Modifier cette page</a></li><li><a href="https://github.com/fabricelallemand15/blog/issues/new" class="toc-action"><i class="bi empty"></i>Faire part d'un problème</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+<p>Mentions légales</p>
+</a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fabricelallemand15/blog">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

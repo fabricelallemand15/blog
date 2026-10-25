@@ -9,12 +9,12 @@
 <link>https://mathsinfolycee.fr/</link>
 <atom:link href="https://mathsinfolycee.fr/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.9.37</generator>
+<generator>quarto-1.10.19</generator>
 <lastBuildDate>Wed, 07 Oct 2026 22:00:00 GMT</lastBuildDate>
 <item>
   <title>Margaret Hamilton (1936-2026) : la pionnière du génie logiciel</title>
   <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://mathsinfolycee.fr/posts/2026-10-08-MargaretHamilton/</link>
+  <link>https://mathsinfolycee.fr/posts/2026_10_08_MargaretHamilton/</link>
   <description><![CDATA[ 
 
 
@@ -25,7 +25,7 @@
 <p>Derrière l’image, il y a une carrière qui a marqué durablement la manière de concevoir des logiciels fiables. Cet article revient sur son parcours et sur ce qu’elle a apporté à notre discipline.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Margaret_Hamilton.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Margaret Hamilton à côté des listings du logiciel Apollo (source : NASA/MIT, domaine public)"><img src="https://mathsinfolycee.fr/posts/2026-10-08-MargaretHamilton/Margaret_Hamilton.jpg" class="img-fluid figure-img" alt="Margaret Hamilton à côté des listings du logiciel Apollo (source : NASA/MIT, domaine public)"></a></p>
+<p><a href="Margaret_Hamilton.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Margaret Hamilton à côté des listings du logiciel Apollo (source : NASA/MIT, domaine public)"><img src="https://mathsinfolycee.fr/posts/2026_10_08_MargaretHamilton/Margaret_Hamilton.jpg" class="img-fluid figure-img" alt="Margaret Hamilton à côté des listings du logiciel Apollo (source : NASA/MIT, domaine public)"></a></p>
 <figcaption>Margaret Hamilton à côté des listings du logiciel Apollo (source : NASA/MIT, domaine public)</figcaption>
 </figure>
 </div>
@@ -177,9 +177,179 @@ font-style: inherit;"># refusé, les données sont préservées</span></span></c
   <category>Informatique</category>
   <category>NSI</category>
   <category>Actualités</category>
-  <guid>https://mathsinfolycee.fr/posts/2026-10-08-MargaretHamilton/</guid>
+  <guid>https://mathsinfolycee.fr/posts/2026_10_08_MargaretHamilton/</guid>
   <pubDate>Wed, 07 Oct 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/2026-10-08-MargaretHamilton/Margaret_Hamilton.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2026_10_08_MargaretHamilton/Margaret_Hamilton.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Cardan a-t-il vraiment trompé Tartaglia ?</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://mathsinfolycee.fr/posts/2026_10_09_Cardan/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Quand j’introduis les nombres complexes en Terminale, je commence par une histoire : celle de la formule de résolution des équations du troisième degré, de la rivalité entre Tartaglia et Cardan, puis de l’apparition, dans cette formule, de racines carrées de nombres négatifs. La version que l’on trouve dans de nombreux ouvrages de vulgarisation est simple : Cardan aurait <strong>trompé</strong> Tartaglia pour lui arracher son secret, avant de le publier sous son propre nom.</p>
+<p>Un article d’Antoine HOULOU-GARCIA lu récemment dans <em>Tangente</em> (<a href="https://tangente-mag.com/magazines/l-infini-existe-t-il-vraiment">N°231 · 8 septembre 2026</a>) présente au contraire Cardan sous un jour beaucoup plus favorable. Qui a raison ? Cet article tente de faire le point à partir de sources historiques accessibles.</p>
+<section id="lhistoire-telle-quon-la-raconte" class="level2">
+<h2 class="anchored" data-anchor-id="lhistoire-telle-quon-la-raconte">L’histoire telle qu’on la raconte</h2>
+<p>La version courante tient en quelques lignes :</p>
+<ol type="1">
+<li>Tartaglia découvre la formule de résolution de certaines équations du troisième degré et la garde secrète.</li>
+<li>Cardan le fait venir à Milan et lui arrache le secret en jurant de ne jamais le divulguer.</li>
+<li>Quelques années plus tard, Cardan publie la formule dans son <em>Ars Magna</em> (1545), en violation de son serment.</li>
+<li>Tartaglia, furieux, est dépossédé de sa découverte, qui porte aujourd’hui le nom de « formule de Cardan ».</li>
+</ol>
+<p>Voici un extrait du roman <em>Le théorème du Perroquet</em>, de Denis Guedj (Seuil, 1998) :</p>
+<blockquote class="blockquote">
+<p>Ayant eu connaissance de la magistrale réussite de Tartaglia, Cardan entra en contact avec lui. Plusieurs années durant, il poussa Tartaglia à lui communiquer ses formules. Tartaglia refusa. Cardan se fit plus insistant. Ruses, prières, tromperies, menaces même. Furieux de ce refus qui durait, il finit par lui écrire une lettre dans laquelle il le traite de présomptueux, disant qu’il se prenait pour « quelqu’un d’important, qui se croyait au sommet de la montagne, alors qu’il n’était que dans la vallée ».</p>
+<p>Changeant subitement de comportement, Cardan se fit doux et parvint à devenir l’ami de Tartaglia. Celui-ci commença par lui communiquer le texte de quelques-uns des problèmes qu’il avait posés à Del Fiore.</p>
+<p>[…] Les formules n’étant toujours pas publiées, l’insistance de Cardan se fit plus grande et la résistance de Tartaglia plus faible. Ce que voyant, Cardan lui fit une promesse : « Si vous m’enseignez vos inventions, non seulement je ne les publierai jamais, mais encore je les noterai pour moi en chiffres, afin qu’après ma mort personne ne puisse les comprendre. »</p>
+<p>Un jour de mars 1539, Tartaglia céda. Cardan sentit son cœur battre plus fort. Il s’assit et écouta. La voix de son ami, dont il perçut les légers heurts de son discret bégaiement, s’éleva :[…]</p>
+<p>Quelque temps après la lecture de ce poème, Cardan publia l’Ars magna. Le Grand Art. Tartaglia s’empressa de lire l’ouvrage de son ami. Qu’y découvrit-il ? Sa propre méthode de résolution de l’équation du troisième degré décrite par le menu ! Cardan l’avait trompé.</p>
+<p>Dans son livre, relatant sa déception et sa tristesse, Tartaglia écrivit « je n’ai plus d’affection pour Cardano ». Puis cette phrase : « Quello que tu non voi che si sappia, nel dire ad alcuno. » Ce que tu ne veux pas que l’on sache, ne le dis à personne !</p>
+</blockquote>
+<p>Sources : Guedj, <em>Le théorème du Perroquet</em>, Points Seuil, 2000, pp.&nbsp;358-362.</p>
+<p><a href="thmperroquet.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/2026_10_09_Cardan/thmperroquet.png" class="img-fluid"></a></p>
+<p>Examinons chacun de ces points.</p>
+</section>
+<section id="ce-qui-est-solidement-établi" class="level2">
+<h2 class="anchored" data-anchor-id="ce-qui-est-solidement-établi">Ce qui est solidement établi</h2>
+<section id="la-formule-ne-vient-pas-de-tartaglia" class="level3">
+<h3 class="anchored" data-anchor-id="la-formule-ne-vient-pas-de-tartaglia">La formule ne vient pas de Tartaglia</h3>
+<p>Le premier fait à rappeler est que Tartaglia n’est pas le premier à avoir résolu ces équations. Scipione del Ferro (1465-1526), professeur à Bologne, avait trouvé une méthode pour les équations de la forme <img src="https://latex.codecogs.com/png.latex?x%5E3%20+%20ax%20=%20b">, sans doute dès les années 1510. Il avait confié son secret à son gendre Annibale della Nave et à son élève Antonio Maria Fior (ou Fiore) (Gindikin).</p>
+<p>Fior défie Tartaglia lors d’un duel mathématique public. Les sources s’accordent sur le fait que Tartaglia découvre sa propre méthode juste avant l’échéance du défi, en février 1535, et l’emporte (Gindikin ; APMEP). À l’époque, les nombres négatifs n’étant pas utilisés, on distinguait plusieurs « types » d’équations, ce qui explique que la résolution de l’un ne donne pas celle de l’autre.</p>
+</section>
+<section id="chronologie" class="level3">
+<h3 class="anchored" data-anchor-id="chronologie">Chronologie</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Événement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Février 1535</td>
+<td style="text-align: left;">Tartaglia l’emporte sur Fior</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Janvier-mars 1539</td>
+<td style="text-align: left;">Cardan sollicite Tartaglia à plusieurs reprises ; celui-ci refuse d’abord</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25 mars 1539</td>
+<td style="text-align: left;">Rencontre à Milan, au domicile de Cardan : Tartaglia transmet sa règle sous forme de poème</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mai 1539</td>
+<td style="text-align: left;">Cardan publie sa <em>Practica arithmeticae</em>, <strong>sans</strong> la formule</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1540 environ</td>
+<td style="text-align: left;">Ferrari, élève de Cardan, résout l’équation du quatrième degré</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1543</td>
+<td style="text-align: left;">Cardan et Ferrari consultent à Bologne les papiers de del Ferro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1545</td>
+<td style="text-align: left;">Publication de l’<em>Ars Magna</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1546</td>
+<td style="text-align: left;">Tartaglia publie ses <em>Quesiti et inventioni diverse</em>, où il accuse Cardan de parjure</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1547-1548</td>
+<td style="text-align: left;">Échange de « cartels » avec Ferrari, puis débat public à Milan (10 août 1548)</td>
+</tr>
+</tbody>
+</table>
+<p>Cette chronologie provient essentiellement de Gindikin et de l’APMEP (voir les sources en fin d’article).</p>
+</section>
+</section>
+<section id="le-point-de-vue-de-tartaglia" class="level2">
+<h2 class="anchored" data-anchor-id="le-point-de-vue-de-tartaglia">Le point de vue de Tartaglia</h2>
+<p>Voici le point délicat : <strong>le récit détaillé de l’entrevue de 1539 et du serment provient de Tartaglia lui-même</strong>, dans des notes rédigées après coup. Selon ce récit, Cardan aurait juré sur les Évangiles de ne jamais publier la découverte, et même de la chiffrer pour qu’elle reste illisible après sa mort.</p>
+<p>Or Ferrari, l’élève de Cardan, affirmait que ces notes ne correspondaient pas tout à fait à la réalité (Gindikin). Un article consacré à Cardan résume la situation en notant que l’on dispose de deux récits contradictoires, celui de Tartaglia et celui de Ferrari (arXiv Cardano). Le serment est donc très probablement authentique dans son principe, mais ses termes exacts (portée, durée) restent discutés. Certaines présentations parlent d’une promesse de ne pas publier avant que Tartaglia ne l’ait fait lui-même, d’autres d’un secret absolu.</p>
+<p>Par ailleurs, le mot « tromper » suppose une ruse. Ce que décrivent les sources est plutôt une insistance prolongée : Cardan envoie un intermédiaire, relance par courrier, et invite finalement Tartaglia à Milan en évoquant une présentation au gouverneur espagnol, le marquis del Vasto. Tartaglia finit par céder, puis repart sans avoir rencontré le marquis (Gindikin). C’est de la pression et de la séduction, pas une tromperie établie.</p>
+</section>
+<section id="parole-à-la-défense" class="level2">
+<h2 class="anchored" data-anchor-id="parole-à-la-défense">Parole à la défense</h2>
+<p>Plusieurs éléments plaident en faveur de Cardan.</p>
+<p><strong>Il n’a pas publié tout de suite.</strong> Il publie la <em>Practica arithmeticae</em> en 1539 sans la formule, et il faut attendre 1545 pour l’<em>Ars Magna</em>. Tartaglia, lui, n’a jamais publié sa méthode, alors qu’il avait déjà un résultat depuis 1535.</p>
+<p><strong>Il a découvert que Tartaglia n’était pas le premier.</strong> En 1543, Cardan et Ferrari constatent dans les papiers de del Ferro que la règle y figure bien avant Tartaglia. Cardan en tire la conclusion qu’il est libéré de sa promesse, un argument discutable mais défendable (Gindikin ; APMEP).</p>
+<p><strong>Il a cité ses sources.</strong> Dans l’introduction de l’<em>Ars Magna</em>, Cardan attribue la résolution du cas <img src="https://latex.codecogs.com/png.latex?x%5E3%20+%20ax%20=%20b"> à del Ferro, puis à Tartaglia, qui l’a retrouvée et la lui a transmise « ému par ses prières ». Il précise aussi que Tartaglia ne lui avait pas donné de démonstration (Gindikin).</p>
+<p><strong>Son apport personnel est considérable.</strong> Tartaglia avait transmis une « recette » sans justification. Cardan a dû en chercher la preuve, et en a tiré beaucoup plus : traitement des différents types d’équations, utilisation décisive des nombres négatifs, changement de variable <img src="https://latex.codecogs.com/png.latex?x%20=%20y%20-%20a/3"> pour supprimer le terme en <img src="https://latex.codecogs.com/png.latex?x%5E2">, relations entre racines et coefficients. L’équation du quatrième degré, due à Ferrari, figure aussi dans le livre, avec l’attribution correspondante. Les historiens jugent que Cardan surpasse largement Tartaglia sur ce terrain (Gindikin ; académie de Bordeaux).</p>
+</section>
+<section id="le-dossier-à-charge" class="level2">
+<h2 class="anchored" data-anchor-id="le-dossier-à-charge">Le dossier à charge</h2>
+<p>Tout n’est pas à l’avantage de Cardan pour autant.</p>
+<ul>
+<li>Il a bien publié une méthode qu’il avait promis de ne pas divulguer, et il n’a jamais directement répondu aux attaques de Tartaglia : c’est Ferrari qui s’en est chargé, et Cardan était absent le jour du débat de 1548.</li>
+<li>Il n’a consulté les papiers de del Ferro qu’en 1543, soit <strong>après</strong> avoir obtenu la formule de Tartaglia. On peut se demander s’il aurait harcelé Tartaglia s’il avait su plus tôt qu’il pouvait l’obtenir autrement (Gindikin).</li>
+<li>Dans son autobiographie, il reconnaît avoir emprunté « quelque chose » à Tartaglia en mathématiques, en minimisant l’importance de cet emprunt : une formulation qui laisse penser qu’il n’avait pas la conscience tout à fait tranquille (Gindikin).</li>
+</ul>
+</section>
+<section id="et-tartaglia" class="level2">
+<h2 class="anchored" data-anchor-id="et-tartaglia">Et Tartaglia ?</h2>
+<p>Le personnage est lui aussi plus complexe que la victime idéale. Autodidacte d’origine modeste, marqué par une blessure à la mâchoire dans son enfance, il avait la réputation d’un caractère difficile. Il a gardé sa méthode secrète pendant plus de dix ans sans la publier, et ses propres écrits sont peu fournis sur le sujet.</p>
+<p>Une hypothèse avancée par Ferrari, reprise par l’historien Moritz Cantor au XIX<sup>e</sup> siècle, soutient même que Tartaglia n’aurait pas redécouvert la règle de del Ferro mais l’aurait obtenue de seconde main. Cette thèse a été contestée et n’est pas démontrée (Gindikin). Il faut donc la citer pour ce qu’elle est : une hypothèse.</p>
+</section>
+<section id="alors-que-conclure" class="level2">
+<h2 class="anchored" data-anchor-id="alors-que-conclure">Alors, que conclure ?</h2>
+<p>L’historien Gindikin note que l’histoire, « maintes fois transmise » dans la littérature de vulgarisation, s’est fortement simplifiée, au point de transformer Cardan en scélérat qui aurait volé la découverte et lui aurait donné son nom. Il juge qu’une telle lecture « caricature » la réalité, et que les principaux acteurs ont sans doute partiellement menti (Gindikin).</p>
+<p>Pour résumer :</p>
+<ul>
+<li><strong>Vrai</strong> : Cardan a obtenu la méthode de Tartaglia après avoir (selon Tartaglia) juré le secret, et l’a publiée en 1545.</li>
+<li><strong>Vrai</strong> : il a reconnu publiquement les contributions de del Ferro, de Tartaglia et de Ferrari.</li>
+<li><strong>Faux ou non démontré</strong> : qu’il ait employé une ruse, qu’il ait « volé » la découverte ou prétendu en être l’auteur.</li>
+<li><strong>Incertain</strong> : les termes exacts du serment, et l’originalité de Tartaglia par rapport à del Ferro.</li>
+</ul>
+<p>Le nom « formule de Cardan » est d’ailleurs lui-même un choix de l’histoire : certains auteurs parlent de formules de Tartaglia-Cardan, voire de del Ferro-Tartaglia-Cardan.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Finalement
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tartaglia redécouvre en 1535 une formule trouvée avant lui par del Ferro. Cardan la lui arrache en 1539 en promettant, selon Tartaglia, de ne pas la publier. En 1545, il la publie dans l’<em>Ars Magna</em> en citant del Ferro et Tartaglia, après avoir considérablement élargi la méthode. Tartaglia l’accuse de parjure.</p>
+<p>Cette version conserve le côté dramatique de l’histoire tout en distinguant ce qui est établi de ce qui repose sur le seul témoignage de Tartaglia.</p>
+</div>
+</div>
+</section>
+<section id="sources" class="level2">
+<h2 class="anchored" data-anchor-id="sources">Sources</h2>
+<ul>
+<li>Gindikin, S. G., « Ars Magna », chapitre 1 de <em>Histoires de mathématiciens et de physiciens</em> : <a href="https://www.math.ens.psl.eu/histoireproba/GINDIKIN-chap1-Ars-Magna.pdf" target="_blank">texte en ligne</a> (source principale de cet article).</li>
+<li>APMEP, « La formule secrète ou le duel mathématique qui enflamma l’Italie de la Renaissance » : <a href="https://apmep.fr/La-formule-secrete" target="_blank">lien</a>.</li>
+<li>Académie de Bordeaux, <a href="http://mathematiques.ac-bordeaux.fr/viemaths/hist/mthacc/cardan.htm" target="_blank">biographie de Cardan</a>.</li>
+<li>« Complex and Unpredictable Cardano » : <a href="https://arxiv.org/pdf/0806.0485" target="_blank">arXiv:0806.0485</a>.</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>Histoire</category>
+  <category>Nombres complexes</category>
+  <guid>https://mathsinfolycee.fr/posts/2026_10_09_Cardan/</guid>
+  <pubDate>Wed, 07 Oct 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://mathsinfolycee.fr/posts/2026_10_09_Cardan/Cardano.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>PGCD : une formule explicite</title>
@@ -6938,68 +7108,6 @@ font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
   <guid>https://mathsinfolycee.fr/posts/pivotGauss/</guid>
   <pubDate>Mon, 07 Oct 2024 22:00:00 GMT</pubDate>
   <media:content url="https://mathsinfolycee.fr/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Découvrir les liens entre les maths et la musique</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://mathsinfolycee.fr/posts/mathsmusique/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>France Musique nous propose une série captivante de huit épisodes explorant les liens surprenants entre la musique et les mathématiques. Diffusée pendant l’été 2024 tous les mercredis à 8 h 10, cette série intitulée « Musique + maths » est animée par Pierre-Yves Georges et promet de réconcilier même les plus réticents avec les mathématiques.</p>
-<p><a href="LogoFranceMusiqueMaths.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://mathsinfolycee.fr/posts/mathsmusique/LogoFranceMusiqueMaths.png" class="img-fluid"></a></p>
-<section id="un-voyage-à-travers-lhistoire-et-les-concepts" class="level1">
-<h1>Un voyage à travers l’histoire et les concepts</h1>
-<section id="de-la-forge-antique-aux-compositeurs-modernes" class="level2">
-<h2 class="anchored" data-anchor-id="de-la-forge-antique-aux-compositeurs-modernes">De la forge antique aux compositeurs modernes</h2>
-<p>Le premier épisode nous plonge dans les origines lointaines de cette relation, remontant jusqu’à une forge antique. Ce point de départ inattendu ouvre la voie à une exploration fascinante de l’évolution de ce lien au fil des siècles.</p>
-</section>
-<section id="les-grands-noms-à-la-croisée-des-disciplines" class="level2">
-<h2 class="anchored" data-anchor-id="les-grands-noms-à-la-croisée-des-disciplines">Les grands noms à la croisée des disciplines</h2>
-<p>La série met en lumière des personnalités emblématiques qui ont marqué à la fois le monde de la musique et celui des mathématiques :</p>
-<ul>
-<li>Johann Sebastian Bach, dont l’œuvre continue d’être étudiée pour sa dimension mathématique.</li>
-<li>Ernest Ansermet, chef d’orchestre renommé qui était initialement professeur de mathématiques.</li>
-<li>Albert Einstein, célèbre physicien, mais aussi mélomane passionné, dont la musique aurait peut-être inspiré certaines théories révolutionnaires.</li>
-</ul>
-<p><a href="EinsteinViolon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://mathsinfolycee.fr/posts/mathsmusique/EinsteinViolon.png" class="img-fluid"></a></p>
-</section>
-</section>
-<section id="des-concepts-mathématiques-en-musique" class="level1">
-<h1>Des concepts mathématiques en musique</h1>
-<section id="probabilités-et-hasard-en-composition" class="level2">
-<h2 class="anchored" data-anchor-id="probabilités-et-hasard-en-composition">Probabilités et hasard en composition</h2>
-<p>Plusieurs épisodes explorent comment les concepts mathématiques ont influencé la création musicale :</p>
-<ul>
-<li>Iannis Xenakis, compositeur d’origine grecque, a intégré les probabilités dans ses compositions.</li>
-<li>De Mozart à Pierre Boulez, le hasard, notion mathématique, a joué un rôle important dans la composition.</li>
-</ul>
-</section>
-<section id="la-beauté-des-mathématiques-en-musique" class="level2">
-<h2 class="anchored" data-anchor-id="la-beauté-des-mathématiques-en-musique">La beauté des mathématiques en musique</h2>
-<p>Le pianiste Kit Armstrong, également diplômé en mathématiques fondamentales, partage sa vision sur la beauté et l’émotion présentes tant dans les mathématiques que dans la musique.</p>
-</section>
-</section>
-<section id="un-outil-pédagogique-inattendu" class="level1">
-<h1>Un outil pédagogique inattendu</h1>
-<p>Un épisode particulièrement intéressant pour les parents et les enseignants suggère que la musique pourrait être un excellent moyen d’améliorer les performances en mathématiques des enfants.</p>
-<p>Cette série de podcasts propose une perspective unique sur l’interconnexion entre deux domaines apparemment distincts. Elle invite les auditeurs à découvrir comment la rigueur mathématique et la créativité musicale se complètent et s’enrichissent mutuellement.</p>
-<p>Que vous soyez passionné de musique, de mathématiques, ou simplement curieux, ces huit épisodes promettent des découvertes intéressantes et une nouvelle appréciation de ces deux disciplines.</p>
-<p>Lien : <a href="https://www.radiofrance.fr/francemusique/podcasts/musique-maths" target="_blank">https://www.radiofrance.fr/francemusique/podcasts/musique-maths</a></p>
-
-
-</section>
-
- ]]></description>
-  <category>Histoire</category>
-  <category>Mathématiques</category>
-  <category>Podcast</category>
-  <guid>https://mathsinfolycee.fr/posts/mathsmusique/</guid>
-  <pubDate>Wed, 02 Oct 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/mathsmusique/LogoFranceMusiqueMaths.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 </channel>
 </rss>
