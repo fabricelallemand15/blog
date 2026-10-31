@@ -24,7 +24,7 @@ Voici un extrait du roman *Le théorème du Perroquet*, de Denis Guedj (Seuil, 1
 
 > Ayant eu connaissance de la magistrale réussite de Tartaglia, Cardan entra en contact avec lui. Plusieurs années durant, il poussa Tartaglia à lui communiquer ses formules. Tartaglia refusa. Cardan se fit plus insistant. Ruses, prières, tromperies, menaces même. Furieux de ce refus qui durait, il finit par lui écrire une lettre dans laquelle il le traite de présomptueux, disant qu'il se prenait pour « quelqu'un d'important, qui se croyait au sommet de la montagne, alors qu'il n'était que dans la vallée ».
 > 
-> Changeant subitement de comportement, Cardan se fit doux et parvint à devenir l'ami de Tartaglia. Celui-ci commença par lui communiquer le texte de quelques-uns des problèmes qu'il avait posés à Del Fiore.
+> Changeant subitement de comportement, Cardan se fit doux et parvint à devenir l'ami de Tartaglia. Celui-ci commença par lui communiquer le texte de quelques-uns des problèmes qu'il avait posés à del Fiore.
 > 
 > [...] Les formules n’étant toujours pas publiées, l’insistance de Cardan se fit plus grande et la résistance de Tartaglia plus faible. Ce que voyant, Cardan lui fit une promesse : « Si vous m’enseignez vos inventions, non seulement je ne les publierai jamais, mais encore je les noterai pour moi en chiffres, afin qu’après ma mort personne ne puisse les comprendre. »
 > 
@@ -44,15 +44,15 @@ Examinons chacun de ces points.
 
 ### La formule ne vient pas de Tartaglia
 
-Le premier fait à rappeler est que Tartaglia n'est pas le premier à avoir résolu ces équations. Scipione del Ferro (1465-1526), professeur à Bologne, avait trouvé une méthode pour les équations de la forme $x^3 + ax = b$, sans doute dès les années 1510. Il avait confié son secret à son gendre Annibale della Nave et à son élève Antonio Maria Fior (ou Fiore) (Gindikin).
+Le premier fait à rappeler est que Tartaglia n'est pas le premier à avoir résolu ces équations. Scipione del Ferro (1465-1526), professeur à Bologne, avait trouvé une méthode pour les équations de la forme $x^3 + ax = b$, sans doute dès les années 1510. Il avait confié son secret à son gendre Annibale della Nave et à son élève Antonio Maria del Fiore (Gindikin).
 
-Fior défie Tartaglia lors d'un duel mathématique public. Les sources s'accordent sur le fait que Tartaglia découvre sa propre méthode juste avant l'échéance du défi, en février 1535, et l'emporte (Gindikin ; APMEP). À l'époque, les nombres négatifs n'étant pas utilisés, on distinguait plusieurs « types » d'équations, ce qui explique que la résolution de l'un ne donne pas celle de l'autre.
+Del Fiore défie Tartaglia lors d'un duel mathématique public. Les sources s'accordent sur le fait que Tartaglia découvre sa propre méthode juste avant l'échéance du défi, en février 1535, et l'emporte (Gindikin ; APMEP). À l'époque, les nombres négatifs n'étant pas utilisés, on distinguait plusieurs « types » d'équations, ce qui explique que la résolution de l'un ne donne pas celle de l'autre.
 
 ### Chronologie
 
 | Date | Événement |
 |:--|:--|
-| Février 1535 | Tartaglia l'emporte sur Fior |
+| Février 1535 | Tartaglia l'emporte sur del Fiore |
 | Janvier-mars 1539 | Cardan sollicite Tartaglia à plusieurs reprises ; celui-ci refuse d'abord |
 | 25 mars 1539 | Rencontre à Milan, au domicile de Cardan : Tartaglia transmet sa règle sous forme de poème |
 | Mai 1539 | Cardan publie sa *Practica arithmeticae*, **sans** la formule |
