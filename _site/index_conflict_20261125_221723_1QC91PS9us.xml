@@ -9,8 +9,139 @@
 <link>https://mathsinfolycee.fr/</link>
 <atom:link href="https://mathsinfolycee.fr/index.xml" rel="self" type="application/rss+xml"/>
 <description>Le blog de M. LALLEMAND, professeur de mathématiques</description>
-<generator>quarto-1.10.19</generator>
-<lastBuildDate>Wed, 07 Oct 2026 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.11.9</generator>
+<lastBuildDate>Tue, 24 Nov 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Nicolas Bourbaki : le mathématicien qui n’a jamais existé</title>
+  <dc:creator>F. LALLEMAND</dc:creator>
+  <link>https://mathsinfolycee.fr/posts/2026_11_25_Bourbaki/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Nicolas Bourbaki est l’un des mathématiciens les plus cités du XXe siècle, et pourtant il n’a jamais existé. Ce nom est le pseudonyme collectif d’un groupe de mathématiciens français qui, à partir de 1935, a entrepris de réécrire les fondements des mathématiques dans un langage unifié, rigoureux et abstrait. Son œuvre principale, les <em>Éléments de mathématique</em>, compte une quarantaine de volumes et plusieurs dizaines de milliers de pages. Ces ouvrages, reconnaissables à leur couverture jaune, ont longtemps occupé une place de référence dans les bibliothèques universitaires.</p>
+<p>Cet article s’appuie sur une série de cinq vidéos consacrées à Bourbaki, qui mêlent récit historique, extraits d’archives et témoignages de mathématiciennes et de mathématiciens. Elles sont intégrées en fin d’article. Ces vidéos sont proposées par la <a href="https://savoirs.ens.fr/" target="_blank">plateforme <em>Savoirs</em> de l’Ecole Normale Supérieure</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="NBourbaki_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Congrès Bourbaki de 1951 - Wikimedia Commons"><img src="https://mathsinfolycee.fr/posts/2026_11_25_Bourbaki/NBourbaki_3.png" class="img-fluid figure-img" alt="Congrès Bourbaki de 1951 - Wikimedia Commons"></a></p>
+<figcaption>Congrès Bourbaki de 1951 - Wikimedia Commons</figcaption>
+</figure>
+</div>
+<section id="une-génération-sans-maîtres" class="level2">
+<h2 class="anchored" data-anchor-id="une-génération-sans-maîtres">Une génération sans maîtres</h2>
+<p>L’histoire commence à l’École normale supérieure (ENS), à Paris. Les cinq jeunes hommes à l’origine du groupe y sont entrés entre 1922 et 1926 :</p>
+<ul>
+<li>André Weil, élève très précoce, entré à 16 ans, également latiniste, helléniste et sanskritiste ;</li>
+<li>Jean Delsarte, premier ami de Weil à l’ENS, qui rédigera les comptes rendus des réunions ;</li>
+<li>Henri Cartan, héritier d’une famille de mathématiciens ;</li>
+<li>Jean Dieudonné, connu pour ses colères ;</li>
+<li>Claude Chevalley, le plus jeune du groupe.</li>
+</ul>
+<p>Ces élèves appartiennent à ce que les vidéos appellent une « génération sans maîtres » : beaucoup de ceux qui auraient dû les instruire sont morts pendant la Première Guerre mondiale. Les professeurs en place ignorent en partie les bouleversements en cours, notamment en Allemagne, où l’algèbre et les fondements de la discipline sont profondément renouvelés, en particulier à Göttingen.</p>
+<p>Après des séjours outre-Rhin, les cinq amis sont nommés dans différentes universités françaises. Ils constatent que les manuels utilisés à l’époque où ils étaient étudiants sont toujours en usage, alors qu’ils doivent désormais enseigner. Ils se retrouvent au café Capoulade, à Paris, et décident d’écrire un nouveau manuel. Ce projet, d’abord conçu comme un cours de licence, devient une entreprise bien plus vaste : la réécriture d’une grande partie des mathématiques de l’époque.</p>
+</section>
+<section id="canular-à-lacadémie-des-sciences" class="level2">
+<h2 class="anchored" data-anchor-id="canular-à-lacadémie-des-sciences">Canular à l’Académie des sciences</h2>
+<p>Pour signer l’ouvrage, le groupe invente un auteur. Une biographie fictive lui est même fabriquée : un prénom, une date de naissance, une origine. Bourbaki serait un ancien professeur de l’université royale de <strong>Poldévie</strong>, pays inexistant.</p>
+<p>Le 23 décembre 1935, le canular franchit un cap. Henri Cartan obtient de son père, le mathématicien et académicien Élie Cartan, qu’il présente à l’Académie des sciences une note signée de Bourbaki. La lettre d’accompagnement décrit un ancien professeur ruiné, qui donne désormais des leçons de belote dans un café de Clichy et ne s’occupe plus de mathématiques. Elle précise néanmoins qu’il a accepté de publier un résultat utile à la théorie moderne de l’intégration. L’Académie publie la note : Bourbaki entre ainsi dans l’histoire officielle des mathématiques.</p>
+</section>
+<section id="travail-collectif-et-anonymat" class="level2">
+<h2 class="anchored" data-anchor-id="travail-collectif-et-anonymat">Travail collectif et anonymat</h2>
+<p>Le groupe se réunit en congrès, trois fois par an, pendant une à deux semaines, dans des lieux isolés. Le premier a lieu en 1935 à Besse-en-Chandesse, en Auvergne. Le fonctionnement est resté le même au fil des décennies :</p>
+<ul>
+<li>les rédactions sont préparées avant le congrès et distribuées à tous les membres ;</li>
+<li>elles sont lues à haute voix et discutées en séance, parfois pendant des heures sur une seule page ;</li>
+<li>il n’y a pas de chef, même si certaines voix sont plus fortes que d’autres ;</li>
+<li>les comptes rendus conservent l’ambiance des débats, avec humour, par exemple à propos des démissions répétées (et jamais définitives) de Jean Dieudonné.</li>
+</ul>
+<p>Lors du premier congrès, le groupe estime l’ampleur de l’ensemble à 2 500 à 3 000 pages. Les <em>Éléments de mathématique</em> en compteront finalement beaucoup plus.</p>
+<p>Les membres adoptent aussi une règle fondatrice : <strong>l’anonymat</strong>. Personne ne revendique l’écriture du traité. Selon les mathématiciens interrogés, cette règle évite que l’ouvrage devienne une ligne de plus sur un curriculum vitae et permet de mettre de côté les egos pour produire un texte clair, compréhensible et utilisable par tous.</p>
+</section>
+<section id="la-guerre-et-la-parution-du-premier-tome" class="level2">
+<h2 class="anchored" data-anchor-id="la-guerre-et-la-parution-du-premier-tome">La guerre et la parution du premier tome</h2>
+<p>La dispersion des membres pendant la guerre n’interrompt pas le projet. Selon le récit des vidéos, André Weil, en séjour de recherche à Helsinki, est arrêté par la police finlandaise, qui trouve chez lui des manuscrits en « poldève » et un faire-part de mariage fictif de la fille de Bourbaki. Soupçonné d’espionnage, il est condamné à mort et doit sa grâce à l’intervention d’un collègue mathématicien finlandais.</p>
+<p>En 1940 paraît malgré tout le premier tome des <em>Éléments de mathématique</em>. Dans leur correspondance, une formule revient comme un leitmotiv : « Bourbaki pas mort ».</p>
+</section>
+<section id="les-éléments-de-mathématique" class="level2">
+<h2 class="anchored" data-anchor-id="les-éléments-de-mathématique">Les <em>Éléments de mathématique</em></h2>
+<p>Après la guerre, le projet se développe dans un contexte intellectuel favorable : c’est l’âge d’or du structuralisme, qui cherche, dans de nombreuses disciplines, des structures profondes derrière la diversité des phénomènes. Bourbaki en est l’incarnation mathématique la plus radicale.</p>
+<p>L’objectif du groupe n’est pas tant de démontrer de nouveaux théorèmes que de refonder les bases, de cartographier les mathématiques et de leur donner une langue commune. Cette langue est fournie par la <strong>théorie des ensembles</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Les ensembles, « atomes » des mathématiques
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un intervenant compare le rôle des ensembles au début du XXe siècle à celui des atomes en physique : tous les objets mathématiques peuvent être décrits comme des ensembles. Cela en fait un langage commun et, pour reprendre ses mots, un fondement qu’on a espéré universel.</p>
+</div>
+</div>
+<p>Ce traité a une ambition inédite par l’étendue des domaines couverts, et il se veut précis et complet. Il est souvent décrit comme une sorte de mode d’emploi encyclopédique des mathématiques.</p>
+<p>Le style est particulier : une écriture sèche, sans motivation ni enjolivement, mais très soignée. Un intervenant évoque la beauté du diamant. Cette façon d’écrire a, selon un autre témoin, durablement changé la manière dont on rédige les mathématiques au XXe siècle : définitions, énoncés et démonstrations s’enchaînent de façon très structurée, sans commentaire superflu.</p>
+</section>
+<section id="lapogée-et-la-règle-des-50-ans" class="level2">
+<h2 class="anchored" data-anchor-id="lapogée-et-la-règle-des-50-ans">L’apogée et la règle des 50 ans</h2>
+<p>Dans les années 1960, Bourbaki est au sommet de son influence. Le séminaire Bourbaki, organisé trois jours par mois devant une salle comble, est la vitrine des mathématiques du moment : on y présente les résultats marquants, et y assister revient à prendre le pouls de la discipline.</p>
+<p>Pour rester à l’avant-garde, le groupe se renouvelle selon une règle précise : <strong>les membres doivent partir à 50 ans</strong>. Les recrues potentielles, appelées « cobayes », sont observées et testées avant d’être admises. Plusieurs nouveaux membres obtiendront ensuite la médaille Fields. Les mathématiciens interrogés nuancent toutefois l’idée que la créativité serait réservée aux plus jeunes : l’expérience apporte aussi une meilleure compréhension de nombreux domaines.</p>
+</section>
+<section id="critiques-et-mort-de-bourbaki" class="level2">
+<h2 class="anchored" data-anchor-id="critiques-et-mort-de-bourbaki">Critiques et « mort » de Bourbaki</h2>
+<p>À la fin des années 1960, les critiques se multiplient :</p>
+<ul>
+<li>une puissance institutionnelle jugée excessive ;</li>
+<li>un mépris affiché pour les mathématiques appliquées ;</li>
+<li>une organisation opaque ;</li>
+<li>des séminaires considérés comme de plus en plus difficiles à suivre.</li>
+</ul>
+<p>Le groupe est aussi traversé par les événements de 1968 : certains anciens membres s’engagent aux côtés des étudiants, d’autres estiment que la politique n’est pas leur domaine.</p>
+<p>Les vidéos soulignent un autre point : à la fin des années 1960, le groupe ne compte aucune femme. La mathématicienne Michèle Vergne témoigne de son expérience du séminaire Bourbaki en 1969 et rapporte des remarques désobligeantes sur son exposé. Des étudiantes interrogées aujourd’hui évoquent la faible proportion de filles dans les cursus de mathématiques fondamentales, sans que le sujet soit propre à Bourbaki.</p>
+<p>Le 11 novembre 1968, le groupe fait paraître un faire-part de décès parodique annonçant la mort de Nicolas Bourbaki, truffé de références mathématiques (le « compactifié d’Alexandrov de l’univers », par exemple). Le groupe, lui, a poursuivi son activité.</p>
+</section>
+<section id="bourbaki-aujourdhui" class="level2">
+<h2 class="anchored" data-anchor-id="bourbaki-aujourdhui">Bourbaki aujourd’hui</h2>
+<p>Contrairement à ce que laisse entendre le faire-part de 1968, Bourbaki existe toujours, sous la forme de l’<a href="https://www.bourbaki.fr/" target="_blank">Association des collaborateurs et collaboratrices de Nicolas Bourbaki</a>, créée en 1952. Son activité la plus visible est le <strong>séminaire Bourbaki</strong>, organisé à l’Institut Henri Poincaré, à Paris, depuis 1948 et en général quatre fois par an. À chaque séance, des mathématiciens reconnus présentent les travaux d’autres chercheurs, sur des sujets choisis par les membres de l’association. Une version du vendredi, plus accessible aux non-spécialistes, complète le programme, et les exposés sont enregistrés et mis en ligne.</p>
+<p>La publication des <em>Éléments de mathématique</em> se poursuit également : le site annonce pour 2026 un nouveau volume, consacré aux espaces vectoriels topologiques (chapitres 6 et 7). L’identité des membres, en revanche, reste secrète.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="978-3-032-12156-1.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Couverture du dernier volume des Éléments de mathématique, consacré aux espaces vectoriels topologiques"><img src="https://mathsinfolycee.fr/posts/2026_11_25_Bourbaki/978-3-032-12156-1.webp" class="img-fluid figure-img" width="200" alt="Couverture du dernier volume des Éléments de mathématique, consacré aux espaces vectoriels topologiques"></a></p>
+<figcaption>Couverture du dernier volume des Éléments de mathématique, consacré aux espaces vectoriels topologiques</figcaption>
+</figure>
+</div>
+</section>
+<section id="les-cinq-vidéos" class="level2">
+<h2 class="anchored" data-anchor-id="les-cinq-vidéos">Les cinq vidéos</h2>
+<p><strong>1. Présentation</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zhKLvz4xc0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p><strong>2. Les origines à l’ENS</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x-lkmyk9WNs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p><strong>3. Le canular et le travail collectif</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fJTr742pFzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p><strong>4. La guerre, le structuralisme et le traité</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QeqIcZbtmfY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+<p><strong>5. L’apogée, les critiques et la fin du mythe</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CYxH_1sdGmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+
+
+</section>
+
+ ]]></description>
+  <category>Mathématiques</category>
+  <category>Histoire</category>
+  <category>Vidéothèque</category>
+  <guid>https://mathsinfolycee.fr/posts/2026_11_25_Bourbaki/</guid>
+  <pubDate>Tue, 24 Nov 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://mathsinfolycee.fr/posts/2026_11_25_Bourbaki/NBourbaki_3.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
 <item>
   <title>Margaret Hamilton (1936-2026) : la pionnière du génie logiciel</title>
   <dc:creator>F. LALLEMAND</dc:creator>
@@ -179,7 +310,7 @@ font-style: inherit;"># refusé, les données sont préservées</span></span></c
   <category>Actualités</category>
   <guid>https://mathsinfolycee.fr/posts/2026_10_08_MargaretHamilton/</guid>
   <pubDate>Wed, 07 Oct 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/2026_10_08_MargaretHamilton/Margaret_Hamilton.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2026_10_08_MargaretHamilton/Margaret_Hamilton.jpg" medium="image" type="image/jpeg" height="179" width="144"/>
 </item>
 <item>
   <title>Cardan a-t-il vraiment trompé Tartaglia ?</title>
@@ -349,7 +480,7 @@ font-style: inherit;"># refusé, les données sont préservées</span></span></c
   <category>Nombres complexes</category>
   <guid>https://mathsinfolycee.fr/posts/2026_10_09_Cardan/</guid>
   <pubDate>Wed, 07 Oct 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/2026_10_09_Cardan/Cardano.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2026_10_09_Cardan/Cardano.jpg" medium="image" type="image/jpeg" height="175" width="144"/>
 </item>
 <item>
   <title>PGCD : une formule explicite</title>
@@ -570,7 +701,7 @@ font-style: inherit;"># refusé, les données sont préservées</span></span></c
   <category>Actualités</category>
   <guid>https://mathsinfolycee.fr/posts/2025_09_16_superordi/</guid>
   <pubDate>Sun, 21 Sep 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025_09_16_superordi/Le_supercalculateur_Jean_Zay_.jpg" medium="image" type="image/jpeg" height="96" width="144"/>
 </item>
 <item>
   <title>John von Neumann: Le génie architecte du numérique</title>
@@ -665,7 +796,7 @@ font-style: inherit;"># refusé, les données sont préservées</span></span></c
   <category>Science</category>
   <guid>https://mathsinfolycee.fr/posts/2025_09_10_von_Neumann/</guid>
   <pubDate>Tue, 09 Sep 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/2025_09_10_von_Neumann/800px-JohnvonNeumann-LosAlamos.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025_09_10_von_Neumann/800px-JohnvonNeumann-LosAlamos.jpg" medium="image" type="image/jpeg" height="187" width="144"/>
 </item>
 <item>
   <title>Corrigé du sujet de Mathématiques du baccalauréat 2025 - Métropole Jour 2</title>
@@ -5525,7 +5656,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
   <category>Actualités</category>
   <guid>https://mathsinfolycee.fr/posts/2025_03_27_Prix_Abel/</guid>
   <pubDate>Wed, 26 Mar 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/2025_03_27_Prix_Abel/Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2025_03_27_Prix_Abel/Masaki_Kashiwara_blackboard_PeterBadge_Typos1_TheAbelPrize.jpg" medium="image" type="image/jpeg" height="89" width="144"/>
 </item>
 <item>
   <title>Harold Hotelling : Un mathématicien au service de l’économie</title>
@@ -5582,7 +5713,7 @@ font-style: inherit;">$$</span></span></code></pre></div></div>
   <category>Podcast</category>
   <guid>https://mathsinfolycee.fr/posts/Hotelling/</guid>
   <pubDate>Thu, 27 Feb 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/Hotelling/Harold_Hotelling.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/Hotelling/Harold_Hotelling.jpg" medium="image" type="image/jpeg" height="177" width="144"/>
 </item>
 <item>
   <title>Calculus Rhapsody : Quand l’analyse devient une chanson entraînante !</title>
@@ -5784,7 +5915,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
   <category>Podcast</category>
   <guid>https://mathsinfolycee.fr/posts/tutoIA_podcast/</guid>
   <pubDate>Mon, 03 Feb 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/tutoIA_podcast/Wavy_Tech-07_Single-03.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/tutoIA_podcast/Wavy_Tech-07_Single-03.jpg" medium="image" type="image/jpeg" height="144" width="144"/>
 </item>
 <item>
   <title>Les algorithmes : une épopée à travers le temps</title>
@@ -5981,7 +6112,7 @@ font-style: inherit;">--audio-format</span> mp3 https://www.radiofrance.fr/franc
   <category>Société</category>
   <guid>https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/</guid>
   <pubDate>Wed, 18 Dec 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/article_biais_fig2.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/2024_18_12_biais_sites/article_biais_fig2.jpg" medium="image" type="image/jpeg" height="144" width="144"/>
 </item>
 <item>
   <title>Tuto pyxel : Pluie de cerises et score</title>
@@ -6586,528 +6717,7 @@ Le nombre de Mersenne 2^11 - 1 n'est pas premier.</code></pre>
   <category>Mathématiques</category>
   <guid>https://mathsinfolycee.fr/posts/record-battu-pour-les-nombres-premiers/</guid>
   <pubDate>Mon, 04 Nov 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/record-battu-pour-les-nombres-premiers/Marin_mersenne.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>La méthode du pivot de Gauss : résoudre des systèmes linéaires comme un pro !</title>
-  <dc:creator>F. LALLEMAND</dc:creator>
-  <link>https://mathsinfolycee.fr/posts/pivotGauss/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="cest-quoi-cette-histoire-de-pivot" class="level2">
-<h2 class="anchored" data-anchor-id="cest-quoi-cette-histoire-de-pivot">C’est quoi cette histoire de pivot ?</h2>
-<p>La méthode du pivot de Gauss, c’est une technique super efficace pour résoudre des systèmes d’équations linéaires. L’idée, c’est de transformer notre système initial en un système équivalent, mais beaucoup plus simple à résoudre. Comment ? En éliminant progressivement les variables, une par une, jusqu’à obtenir un système triangulaire.</p>
-<p>Imaginez que vous essayez de démêler un nœud de câbles. Vous commencez par un bout, vous dégagez un câble, puis un autre, et ainsi de suite jusqu’à ce que tout soit bien ordonné. C’est exactement ce que fait la méthode de Gauss avec nos équations !</p>
-</section>
-<section id="un-exemple-pour-mieux-comprendre" class="level2">
-<h2 class="anchored" data-anchor-id="un-exemple-pour-mieux-comprendre">Un exemple pour mieux comprendre</h2>
-<p>Allez, on se lance dans un exemple concret. On va résoudre un système de trois équations à trois inconnues. Attachez vos ceintures, ça va décoiffer !</p>
-<p>Soit le système suivant :</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x%20&amp;+&amp;%20y%20&amp;-&amp;%20&amp;z%20&amp;=&amp;%208%20%5C%5C%0A-3&amp;x%20&amp;-&amp;%20y%20&amp;+&amp;%202&amp;z%20&amp;=&amp;%20-11%20%5C%5C%0A-2&amp;x%20&amp;+&amp;%20y%20&amp;+&amp;%202&amp;z%20&amp;=&amp;%20-3%0A%5Cend%7Bcases%7D%0A"></p>
-<section id="étape-1-on-choisit-notre-pivot" class="level3">
-<h3 class="anchored" data-anchor-id="étape-1-on-choisit-notre-pivot">Étape 1 : On choisit notre pivot</h3>
-<p>On va utiliser la première équation comme pivot pour éliminer <img src="https://latex.codecogs.com/png.latex?x"> dans les autres équations.</p>
-</section>
-<section id="étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation" class="level3">
-<h3 class="anchored" data-anchor-id="étape-2-on-élimine-x-dans-la-deuxième-et-la-troisième-équation">Étape 2 : On élimine <img src="https://latex.codecogs.com/png.latex?x"> dans la deuxième et la troisième équation</h3>
-<ul>
-<li>Pour la deuxième équation, on ajoute 3/2 fois la première équation</li>
-<li>Pour la troisième équation, on ajoute 1 fois la première équation</li>
-</ul>
-<p>On obtient le système équivalent :</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x%20&amp;+&amp;%20&amp;y%20&amp;-&amp;%20&amp;z%20&amp;=&amp;%208%20%5C%5C%0A&amp;%20&amp;&amp;%5Cfrac%7B1%7D%7B2%7D&amp;y%20&amp;+&amp;%20%5Cfrac%7B1%7D%7B2%7D&amp;z%20&amp;=&amp;%201%20%5C%5C%0A&amp;%20&amp;&amp;2&amp;y%20&amp;+&amp;%20&amp;z%20&amp;=&amp;%205%0A%5Cend%7Bcases%7D%0A"></p>
-</section>
-<section id="étape-3-on-élimine-y-dans-la-troisième-équation" class="level3">
-<h3 class="anchored" data-anchor-id="étape-3-on-élimine-y-dans-la-troisième-équation">Étape 3 : On élimine <img src="https://latex.codecogs.com/png.latex?y"> dans la troisième équation</h3>
-<p>Maintenant, on utilise la deuxième équation comme pivot pour éliminer <img src="https://latex.codecogs.com/png.latex?y"> dans la troisième équation. On multiplie la deuxième équation par <img src="https://latex.codecogs.com/png.latex?-4"> et on l’ajoute à la troisième équation :</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;%20&amp;+%20&amp;&amp;y%20&amp;-%20&amp;&amp;z%20&amp;=%208%20%5C%5C%0A&amp;&amp;&amp;%5Cfrac%7B1%7D%7B2%7D&amp;y%20&amp;+%20&amp;%5Cfrac%7B1%7D%7B2%7D&amp;z%20&amp;=%201%20%5C%5C%0A&amp;&amp;%20&amp;&amp;&amp;-&amp;&amp;z%20&amp;=%201%0A%5Cend%7Bcases%7D%0A"></p>
-</section>
-<section id="étape-4-on-résout" class="level3">
-<h3 class="anchored" data-anchor-id="étape-4-on-résout">Étape 4 : On résout !</h3>
-<p>Et voilà, on a notre système triangulaire ! C’est comme avoir dénoué tous nos câbles. Maintenant, on peut facilement trouver nos inconnues :</p>
-<ol type="1">
-<li>De la dernière équation : <img src="https://latex.codecogs.com/png.latex?z%20=%20-1"></li>
-<li>De la deuxième équation : <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7B2%7Dy%20+%20%5Cfrac%7B1%7D%7B2%7D(-1)%20=%201">, donc <img src="https://latex.codecogs.com/png.latex?y%20=%203"></li>
-<li>De la première équation : <img src="https://latex.codecogs.com/png.latex?2x%20+%203%20+%201%20=%208">, donc <img src="https://latex.codecogs.com/png.latex?x%20=%202"></li>
-</ol>
-<p>Notre solution est donc <img src="https://latex.codecogs.com/png.latex?(x,%20y,%20z)%20=%20(2,%203,%20-1)">.</p>
-</section>
-</section>
-<section id="généralisation-et-équivalence-des-systèmes" class="level2">
-<h2 class="anchored" data-anchor-id="généralisation-et-équivalence-des-systèmes">Généralisation et équivalence des systèmes</h2>
-<p>Maintenant que nous avons vu un exemple concret, parlons un peu de ce qui se passe en coulisses. La magie de la méthode du pivot de Gauss repose sur l’utilisation d’opérations élémentaires qui nous permettent de passer d’un système à un autre équivalent.</p>
-<p>Mais qu’est-ce qu’un système équivalent ? C’est simple : deux systèmes sont équivalents s’ils ont exactement les mêmes solutions. En d’autres termes, peu importe lequel des deux systèmes, vous résolvez, vous obtiendrez le même résultat final.</p>
-<p>Les opérations élémentaires que nous utilisons sont :</p>
-<ol type="1">
-<li>Échanger deux équations</li>
-<li>Multiplier une équation par un nombre non nul</li>
-<li>Ajouter à une équation un multiple d’une autre équation</li>
-</ol>
-<p>Ces opérations sont comme des tours de magie mathématiques : elles transforment notre système, mais sans jamais changer ses solutions. C’est un peu comme si vous réarrangiez les pièces d’un puzzle sans changer l’image finale.</p>
-<p>Pourquoi est-ce si important ? Eh bien, cela signifie que nous pouvons manipuler notre système initial pour le rendre plus simple à résoudre, sans craindre de perdre ou de modifier les solutions en cours de route. C’est ce qui nous permet de passer d’un système compliqué à un système triangulaire facile à résoudre, comme nous l’avons fait dans notre exemple.</p>
-<p>Dans le cas général, pour un système de <img src="https://latex.codecogs.com/png.latex?n"> équations à <img src="https://latex.codecogs.com/png.latex?n"> inconnues, nous appliquons ces opérations de manière systématique :</p>
-<ol type="1">
-<li>On choisit un pivot (généralement le premier coefficient non nul de la première colonne) et on échange l’équation correspondante avec la première équation</li>
-<li>On utilise ce pivot pour éliminer la première variable dans toutes les équations suivantes</li>
-<li>On répète le processus avec la deuxième équation comme nouveau pivot, et ainsi de suite.</li>
-</ol>
-<p>À chaque étape, nous créons un nouveau système équivalent, jusqu’à obtenir un système triangulaire que nous pouvons résoudre facilement par substitution inverse.</p>
-<p>Cette approche nous permet de résoudre des systèmes de plus en plus grands et complexes, tout en gardant la certitude que nos manipulations préservent les solutions originales. C’est la beauté et la puissance de la méthode du pivot de Gauss !</p>
-</section>
-<section id="automatisons-tout-ça-avec-python" class="level2">
-<h2 class="anchored" data-anchor-id="automatisons-tout-ça-avec-python">Automatisons tout ça avec Python !</h2>
-<p>Maintenant que vous êtes des pros du pivot de Gauss, que diriez-vous d’automatiser tout ça avec un peu de code Python ? C’est parti !</p>
-<p>Mais avant de plonger dans le code, parlons un peu de la façon dont nous allons représenter notre système d’équations en Python.</p>
-<section id="représentation-du-système-en-python" class="level3">
-<h3 class="anchored" data-anchor-id="représentation-du-système-en-python">Représentation du système en Python</h3>
-<p>En Python, nous allons utiliser un tableau NumPy pour représenter notre système d’équations. Pourquoi NumPy ? Parce que c’est super efficace pour les calculs numériques et ça nous facilite la vie pour manipuler nos équations.</p>
-<p>Voici comment ça marche :</p>
-<ul>
-<li>Chaque ligne du tableau représente une équation du système.</li>
-<li>Les colonnes représentent les coefficients des variables et le terme constant.</li>
-<li>La dernière colonne contient les termes constants (les nombres à droite du signe égal dans nos équations).</li>
-</ul>
-<p>Par exemple, notre système initial :</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x&amp;%20+&amp;%20y&amp;%20-&amp;%20&amp;z&amp;%20=&amp;%208%20%5C%5C%0A-3&amp;x&amp;%20-&amp;%20y&amp;%20+&amp;%202&amp;z&amp;%20=&amp;%20-11%20%5C%5C%0A-2&amp;x&amp;%20+&amp;%20y&amp;%20+&amp;%202&amp;z&amp;%20=&amp;%20-3%0A%5Cend%7Bcases%7D%0A"></p>
-<p>sera représenté par le tableau NumPy suivant :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1">systeme <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([</span>
-<span id="cb1-2">    [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>,  <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,  <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>],</span>
-<span id="cb1-3">    [<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,  <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">11</span>],</span>
-<span id="cb1-4">    [<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>,  <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,  <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>]</span>
-<span id="cb1-5">], dtype<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">float</span>)</span></code></pre></div></div>
-</section>
-<section id="accès-aux-coefficients" class="level3">
-<h3 class="anchored" data-anchor-id="accès-aux-coefficients">Accès aux coefficients</h3>
-<p>Pour accéder aux différents coefficients dans notre tableau NumPy, on utilise l’indexation. Voici comment ça marche :</p>
-<ul>
-<li><code>systeme[i, j]</code> nous donne l’élément à la i-ème ligne et j-ème colonne.</li>
-<li>Les indices commencent à 0 (comme d’habitude en Python).</li>
-<li>Pour un système de n équations à n inconnues :
-<ul>
-<li><code>systeme[i, j]</code> pour i &lt; n et j &lt; n donne le coefficient de la (j+1)-ème variable dans la (i+1)-ème équation.</li>
-<li><code>systeme[i, n]</code> donne le terme constant de la (i+1)-ème équation.</li>
-</ul></li>
-</ul>
-<p>Par exemple :</p>
-<ul>
-<li><code>systeme[0, 0]</code> vaut 2 (coefficient de <img src="https://latex.codecogs.com/png.latex?x"> dans la première équation)</li>
-<li><code>systeme[1, 2]</code> vaut 2 (coefficient de <img src="https://latex.codecogs.com/png.latex?z"> dans la deuxième équation)</li>
-<li><code>systeme[2, 3]</code> vaut <img src="https://latex.codecogs.com/png.latex?-3"> (terme constant de la troisième équation).</li>
-</ul>
-<p>Cette représentation nous permet de manipuler facilement notre système d’équations en utilisant les opérations de NumPy, ce qui rend notre implémentation de la méthode du pivot de Gauss à la fois simple et efficace.</p>
-<p>Maintenant que nous avons compris comment représenter et manipuler notre système, passons au code !</p>
-<div id="6739fac9" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np</span>
-<span id="cb2-2"></span>
-<span id="cb2-3"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> echanger_equations(systeme, i, j):</span>
-<span id="cb2-4">    systeme[i], systeme[j] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> systeme[j].copy(), systeme[i].copy()</span>
-<span id="cb2-5"></span>
-<span id="cb2-6"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> multiplier_equation(systeme, i, facteur):</span>
-<span id="cb2-7">    systeme[i] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*=</span> facteur</span>
-<span id="cb2-8"></span>
-<span id="cb2-9"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> ajouter_multiple_equation(systeme, i, j, facteur):</span>
-<span id="cb2-10">    systeme[i] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+=</span> facteur <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> systeme[j]</span>
-<span id="cb2-11"></span>
-<span id="cb2-12"><span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">def</span> pivot_gauss(systeme):</span>
-<span id="cb2-13">    n, m <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> systeme.shape</span>
-<span id="cb2-14">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> i <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">min</span>(n, m <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)):</span>
-<span id="cb2-15">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Trouver le pivot maximal</span></span>
-<span id="cb2-16">        pivot <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> np.argmax(np.<span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">abs</span>(systeme[i:, i]))</span>
-<span id="cb2-17">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> systeme[pivot, i] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>:</span>
-<span id="cb2-18">            <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">ValueError</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Le système n'a pas de solution unique!"</span>)</span>
-<span id="cb2-19">        </span>
-<span id="cb2-20">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Échanger les équations</span></span>
-<span id="cb2-21">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">if</span> pivot <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">!=</span> i:</span>
-<span id="cb2-22">            echanger_equations(systeme, i, pivot)</span>
-<span id="cb2-23">        </span>
-<span id="cb2-24">        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Éliminer les variables</span></span>
-<span id="cb2-25">        <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">for</span> j <span class="kw" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">in</span> <span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">range</span>(i <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, n):</span>
-<span id="cb2-26">            facteur <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span>systeme[j, i] <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> systeme[i, i]</span>
-<span id="cb2-27">            ajouter_multiple_equation(systeme, j, i, facteur)</span>
-<span id="cb2-28">    </span>
-<span id="cb2-29">    <span class="cf" style="color: #003B4F;
-background-color: null;
-font-weight: bold;
-font-style: inherit;">return</span> systeme</span>
-<span id="cb2-30"></span>
-<span id="cb2-31"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Exemple d'utilisation</span></span>
-<span id="cb2-32">systeme <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([</span>
-<span id="cb2-33">    [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>],</span>
-<span id="cb2-34">    [<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">11</span>],</span>
-<span id="cb2-35">    [<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>]</span>
-<span id="cb2-36">], dtype<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">float</span>)</span>
-<span id="cb2-37"></span>
-<span id="cb2-38"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Système initial :"</span>)</span>
-<span id="cb2-39"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(systeme)</span>
-<span id="cb2-40"></span>
-<span id="cb2-41">resultat <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pivot_gauss(systeme)</span>
-<span id="cb2-42"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">Système après pivot de Gauss :"</span>)</span>
-<span id="cb2-43"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Système initial :
-[[  2.   1.  -1.   8.]
- [ -3.  -1.   2. -11.]
- [ -2.   1.   2.  -3.]]
-
-Système après pivot de Gauss :
-[[ -3.          -1.           2.         -11.        ]
- [  0.           1.66666667   0.66666667   4.33333333]
- [  0.           0.           0.2         -0.2       ]]</code></pre>
-</div>
-</div>
-<p>Expliquons un peu ce code :</p>
-<ol type="1">
-<li><code>echanger_equations</code>, <code>multiplier_equation</code>, et <code>ajouter_multiple_equation</code> sont nos opérations élémentaires sur les équations. Elles utilisent l’indexation NumPy pour accéder et modifier les coefficients.</li>
-<li><code>pivot_gauss</code> est notre fonction principale qui applique la méthode du pivot de Gauss. Elle utilise <code>systeme.shape</code> pour obtenir les dimensions de notre tableau.</li>
-<li>Dans <code>pivot_gauss</code>, on utilise <code>np.argmax</code> pour trouver l’indice du coefficient de plus grande valeur absolue, ce qui nous donne notre meilleur pivot pour minimiser les erreurs d’arrondi.</li>
-<li>Les opérations d’élimination utilisent l’indexation pour accéder aux coefficients appropriés et les modifier.</li>
-</ol>
-<p>Et voilà ! Avec ce code, vous pouvez résoudre des systèmes linéaires plus rapidement qu’il n’en faut pour dire “Carl Friedrich Gauss” !</p>
-<p>Résolvons par exemple le système de cinq équations à cinq inconnues suivant :</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bcases%7D%0A2&amp;x&amp;%20+&amp;%20&amp;y&amp;%20-&amp;%20&amp;z&amp;%20+&amp;%202&amp;w&amp;%20-&amp;%203&amp;v&amp;%20=&amp;%208%20%5C%5C%0A-3&amp;x&amp;%20-&amp;%20&amp;y&amp;%20+&amp;%202&amp;z&amp;%20-&amp;%20&amp;w&amp;%20+&amp;%204&amp;v&amp;%20=&amp;%20-11%20%5C%5C%0A-2&amp;x&amp;%20+&amp;%20&amp;y&amp;%20+&amp;%202&amp;z&amp;%20+&amp;%20&amp;w&amp;%20-&amp;%202&amp;v&amp;%20=&amp;%20-3%20%5C%5C%0A&amp;x&amp;%20-&amp;%20&amp;y&amp;%20+&amp;%20&amp;%20z&amp;%20-&amp;%20&amp;%20w%20&amp;%20+&amp;%20&amp;%20v&amp;%20=&amp;%202%20%5C%5C%0A4&amp;x&amp;%20-&amp;%202&amp;y&amp;%20+&amp;%203&amp;z&amp;%20-&amp;%202&amp;w&amp;%20+&amp;%20&amp;%20v&amp;%20=&amp;%203%0A%5Cend%7Bcases%7D%0A"></p>
-<div id="7b802c41" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">systeme <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> np.array([</span>
-<span id="cb4-2">    [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8</span>],</span>
-<span id="cb4-3">    [<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">11</span>],</span>
-<span id="cb4-4">    [<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>],</span>
-<span id="cb4-5">    [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>],</span>
-<span id="cb4-6">    [<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>]</span>
-<span id="cb4-7">], dtype<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">float</span>)</span>
-<span id="cb4-8"></span>
-<span id="cb4-9">resultat <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> pivot_gauss(systeme)</span>
-<span id="cb4-10"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Système après pivot de Gauss :"</span>)</span>
-<span id="cb4-11"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(resultat)</span></code></pre></div></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Système après pivot de Gauss :
-[[ 4.         -2.          3.         -2.          1.          3.        ]
- [ 0.         -2.5         4.25       -2.5         4.75       -8.75      ]
- [ 0.          0.          3.5         0.         -1.5        -1.5       ]
- [ 0.          0.          0.          1.          0.68571429 -0.11428571]
- [ 0.          0.          0.          0.         -0.45714286  2.74285714]]</code></pre>
-</div>
-</div>
-<p>Il n’y a plus qu’à remonter les équations pour trouver les valeurs de <img src="https://latex.codecogs.com/png.latex?x">, <img src="https://latex.codecogs.com/png.latex?y">, <img src="https://latex.codecogs.com/png.latex?z">, <img src="https://latex.codecogs.com/png.latex?w">, et <img src="https://latex.codecogs.com/png.latex?v">.</p>
-<p>On trouve en arrondissant les valeurs : <img src="https://latex.codecogs.com/png.latex?x=-2">, <img src="https://latex.codecogs.com/png.latex?y=-17">, <img src="https://latex.codecogs.com/png.latex?z=-3">, <img src="https://latex.codecogs.com/png.latex?w=4">, <img src="https://latex.codecogs.com/png.latex?v=-6">.</p>
-</section>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>La méthode du pivot de Gauss, c’est comme avoir un super-pouvoir pour résoudre des systèmes d’équations. Que vous le fassiez à la main ou avec Python, vous avez maintenant les outils pour dompter ces systèmes linéaires rebelles !</p>
-<p>Alors, la prochaine fois que quelqu’un vous parle de systèmes d’équations, vous pourrez fièrement dire : “Pas de panique, j’ai Gauss de mon côté !” 😎</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Carl_Friedrich_Gauss_1840_by_Jensen.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Carl Friedrich Gauss"><img src="https://mathsinfolycee.fr/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" class="img-fluid figure-img" style="width:50.0%" alt="Carl Friedrich Gauss"></a></p>
-<figcaption>Carl Friedrich Gauss</figcaption>
-</figure>
-</div>
-
-
-</section>
-
- ]]></description>
-  <category>Mathématiques</category>
-  <category>Python</category>
-  <category>Programmation</category>
-  <guid>https://mathsinfolycee.fr/posts/pivotGauss/</guid>
-  <pubDate>Mon, 07 Oct 2024 22:00:00 GMT</pubDate>
-  <media:content url="https://mathsinfolycee.fr/posts/pivotGauss/Carl_Friedrich_Gauss_1840_by_Jensen.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://mathsinfolycee.fr/posts/record-battu-pour-les-nombres-premiers/Marin_mersenne.jpg" medium="image" type="image/jpeg" height="183" width="144"/>
 </item>
 </channel>
 </rss>

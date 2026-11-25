@@ -302,7 +302,10 @@ main h3 {
   border-radius: 8px;
   height: auto;
   max-width: 100%;
-  width: 100% !important;
+}
+
+.quarto-figure figure.figure img:not([width]) {
+  width: 100%;
 }
 
 .quarto-figure figure.figure figcaption {
