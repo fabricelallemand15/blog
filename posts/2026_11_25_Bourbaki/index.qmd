@@ -95,7 +95,7 @@ Contrairement à ce que laisse entendre le faire-part de 1968, Bourbaki existe t
  
 La publication des *Éléments de mathématique* se poursuit également : le site annonce pour 2026 un nouveau volume, consacré aux espaces vectoriels topologiques (chapitres 6 et 7). L'identité des membres, en revanche, reste secrète.
 
-![Couverture du dernier volume des Éléments de mathématique, consacré aux espaces vectoriels topologiques](978-3-032-12156-1.png){width=200}
+<img src="978-3-032-12156-1.png" alt="Couverture du dernier volume des Éléments de mathématique, consacré aux espaces vectoriels topologiques" width="30%" />
 
 ## Les cinq vidéos
 
