@@ -9,7 +9,7 @@ image: "NBourbaki_3.png"
 
 Nicolas Bourbaki est l'un des mathématiciens les plus cités du XXe siècle, et pourtant il n'a jamais existé. Ce nom est le pseudonyme collectif d'un groupe de mathématiciens français qui, à partir de 1935, a entrepris de réécrire les fondements des mathématiques dans un langage unifié, rigoureux et abstrait. Son œuvre principale, les *Éléments de mathématique*, compte une quarantaine de volumes et plusieurs dizaines de milliers de pages. Ces ouvrages, reconnaissables à leur couverture jaune, ont longtemps occupé une place de référence dans les bibliothèques universitaires.
 
-Cet article s'appuie sur une série de cinq vidéos consacrées à Bourbaki, qui mêlent récit historique, extraits d'archives et témoignages de mathématiciennes et de mathématiciens. Elles sont intégrées en fin d'article. Ces vidéos sont proposées par la [plateforme *Savoirs* de l'Ecole Normale Supérieure](https://savoirs.ens.fr/){target=_blank}.
+Cet article s'appuie sur une série de six vidéos consacrées à Bourbaki, qui mêlent récit historique, extraits d'archives et témoignages de mathématiciennes et de mathématiciens. Elles sont intégrées en fin d'article. Ces vidéos sont proposées par la [plateforme *Savoirs* de l'Ecole Normale Supérieure](https://savoirs.ens.fr/){target=_blank}.
 
 ![Congrès Bourbaki de 1951 - Wikimedia Commons](NBourbaki_3.png)
 
@@ -97,7 +97,7 @@ La publication des *Éléments de mathématique* se poursuit également : le sit
 
 <img src="978-3-032-12156-1.png" alt="Couverture du dernier volume des Éléments de mathématique, consacré aux espaces vectoriels topologiques" width="30%" />
 
-## Les cinq vidéos
+## Les six vidéos
 
 **1. Présentation**
 
@@ -118,3 +118,7 @@ La publication des *Éléments de mathématique* se poursuit également : le sit
 **5. L'apogée, les critiques et la fin du mythe**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CYxH_1sdGmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+**6. Bourbaki aujourd'hui**
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=_cZmiBDHA7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
