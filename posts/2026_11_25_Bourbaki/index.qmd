@@ -121,4 +121,4 @@ La publication des *Éléments de mathématique* se poursuit également : le sit
 
 **6. Bourbaki aujourd'hui**
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=_cZmiBDHA7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_cZmiBDHA7U?si=kavOqQiR2hj-J8gq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
